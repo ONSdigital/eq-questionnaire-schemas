@@ -12,8 +12,8 @@ run-validator:
 lint-jsonnet:
 	./scripts/lint_jsonnet.sh
 
-test-schemas:
-	./scripts/test_schemas.sh
+validate-schemas:
+	./scripts/validate_schemas.sh
 
 translate-schemas:
 	pipenv run python -m scripts.translate_schemas
