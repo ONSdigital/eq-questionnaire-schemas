@@ -55,7 +55,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       validator:
-        image: onsdigital/eq-schema-validator:v3
+        image: onsdigital/eq-questionnaire-validator:latest
         ports:
           - 5001:5000
     steps:
