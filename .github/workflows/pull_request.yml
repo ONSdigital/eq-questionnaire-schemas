@@ -50,7 +50,7 @@ jobs:
         run: pipenv install --dev
       - name: Test translation templates
         run: make test-translation-templates
-  test-schemas:
+  validate-schemas:
     needs: build
     runs-on: ubuntu-latest
     services:
