@@ -8,7 +8,7 @@ A number of make targets exist in order to create/test schemas locally:
 | ------- |-------|
 | build | Build schemas using jsonnet and translate them |
 | build-schemas | Build schemas in english using jsonnet |
-| test-schemas | Test schemas using eq-schema-validator docker image |
+| validate-schemas | Validate schemas using eq-schema-validator docker image |
 
 Build commands are only executed for english versions of schemas, due to changes neccessary to validator in order to accomodate characters from other languages.
 
