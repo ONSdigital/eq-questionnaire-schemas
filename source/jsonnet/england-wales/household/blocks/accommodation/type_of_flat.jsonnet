@@ -19,6 +19,11 @@
           description: 'Including bedsits',
         },
         {
+          label: 'Part of another converted building',
+          value: 'Part of another converted building',
+          description: 'For example, former school, church or warehouse',
+        },
+        {
           label: 'In a commercial building',
           value: 'In a commercial building',
           description: 'For example, in an office building, hotel, or over a shop',
