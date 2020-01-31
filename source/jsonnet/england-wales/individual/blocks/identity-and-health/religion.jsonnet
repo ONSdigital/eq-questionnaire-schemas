@@ -97,13 +97,13 @@ function(region_code) {
       goto: {
         block: 'passports',
         when: [
-          rules.under1,
+          rules.under3,
         ],
       },
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'language',
       },
     },
   ],

@@ -31,7 +31,7 @@ local proxyDefinitionDescription = 'Their main language is the language they use
 local routing(region_code) = (
   local regionValue = if region_code == 'GB-WLS' then walesString else englandString;
   {
-    block: 'national-identity',
+    block: 'passports',
     when: [
       {
         id: 'language-answer',

@@ -150,7 +150,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'language',
+        block: 'past-usual-household-address',
       },
     },
   ],

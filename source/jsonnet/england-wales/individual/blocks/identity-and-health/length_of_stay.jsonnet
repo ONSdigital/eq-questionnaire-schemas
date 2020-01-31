@@ -33,7 +33,7 @@ local proxyTitle = {
   ],
 };
 
-function(region_code) {
+{
   type: 'Question',
   id: 'length-of-stay',
   question_variants: [
@@ -51,13 +51,13 @@ function(region_code) {
       goto: {
         block: 'national-identity',
         when: [
-          rules.under3,
+          rules.under1,
         ],
       },
     },
     {
       goto: {
-        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'language',
+        block: 'past-usual-household-address',
       },
     },
   ],
