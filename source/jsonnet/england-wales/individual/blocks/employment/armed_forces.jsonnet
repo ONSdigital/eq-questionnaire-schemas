@@ -23,7 +23,10 @@ local question(title) = {
         hide_guidance: 'Why your answer is important',
         contents: [
           {
-            description: 'We are measuring the number of people who have served in the UK Armed Forces and have now left. Government and councils need this information to carry out their commitments made under the Armed Forces Covenant. This is a promise by the nation ensuring that those who serve or who have served in the armed forces, and their families, are not disadvantaged.',
+            description: 'Your answer will help your local community by providing information needed to support people who used to serve in the UK Armed Forces but have left.',
+          },
+          {
+            description: 'Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation ensuring that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.',
           },
         ],
       },
