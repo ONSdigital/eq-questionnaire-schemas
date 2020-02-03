@@ -64,7 +64,7 @@ local proxyTitle = {
       },
     },
     {
-    goto: {
+      goto: {
         block: 'employer-address-depot',
         when: [
           {
