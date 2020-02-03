@@ -60,24 +60,15 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'employer-address-workplace',
+        block: 'mainly-work-in-uk',
         when: [
           {
             id: 'employer-type-of-address-answer',
-            condition: 'equals',
-            value: 'At a workplace',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        block: 'employer-address-depot',
-        when: [
-          {
-            id: 'employer-type-of-address-answer',
-            condition: 'equals',
-            value: 'Report to a depot',
+            condition: 'equals any',
+            values: [
+              'At a workplace',
+              'Report to a depot',
+            ],
           },
         ],
       },

@@ -98,6 +98,8 @@ local main_employment_block = import 'individual/blocks/employment/main_employme
 local main_job_type = import 'individual/blocks/employment/main_job_type.jsonnet';
 local supervise = import 'individual/blocks/employment/supervise.jsonnet';
 local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
+local mainly_work_uk = import 'individual/blocks/employment/mainly_work_uk.jsonnet';
+local work_outside_uk = import 'individual/blocks/employment/work_outside_uk.jsonnet';
 
 // Visitor
 local visitor_dob = import 'household/blocks/visitor/date_of_birth.jsonnet';
@@ -299,8 +301,10 @@ function(region_code, census_date, census_month_year_date) {
             hours_worked,
             work_travel,
             employer_type_of_address,
+            mainly_work_uk,
             employer_address_workplace,
             employer_address_depot,
+            work_outside_uk,
           ],
         },
         {
