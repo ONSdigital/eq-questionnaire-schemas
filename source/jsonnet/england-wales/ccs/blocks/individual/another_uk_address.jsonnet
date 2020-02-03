@@ -17,7 +17,7 @@ local question(title) = {
   mandatory: false,
   answers: [
     {
-      id: 'another-uk-address-question',
+      id: 'another-uk-address-answer',
       mandatory: false,
       type: 'Checkbox',
       options: [
@@ -92,7 +92,7 @@ local question(title) = {
       goto: {
         block: 'individual-section-summary',
         when: [{
-          id: 'another-uk-address-question',
+          id: 'another-uk-address-answer',
           condition: 'not set',
         }],
       },
