@@ -47,8 +47,8 @@ local question(title) = {
           label: 'No',
           value: 'No',
         },
-      ]
-    }
+      ],
+    },
   ],
 };
 
