@@ -57,7 +57,7 @@
     },
     {
       goto: {
-        group: 'identity-and-health-group',
+        group: 'submit-group',
       },
     },
   ],

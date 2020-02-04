@@ -137,6 +137,18 @@ function(region_code) {
     },
     {
       goto: {
+        group: 'employment-group',
+        when: [
+          {
+            id: 'apprenticeship-answer',
+            condition: 'equals',
+            value: 'Yes',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'other-qualifications',
       },
     },

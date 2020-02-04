@@ -11,11 +11,13 @@ local question(title) = {
       },
     ],
   },
-  type: 'General',
+  type: 'MutuallyExclusive',
+  mandatory: false,
   answers: [
     {
       id: 'armed-forces-answer',
       mandatory: false,
+      type: 'Checkbox',
       guidance: {
         show_guidance: 'Why your answer is important',
         hide_guidance: 'Why your answer is important',
@@ -27,10 +29,6 @@ local question(title) = {
       },
       options: [
         {
-          label: 'No',
-          value: 'No',
-        },
-        {
           label: 'Yes, previously served in Regular Armed Forces',
           value: 'Yes, previously served in Regular Armed Forces',
         },
@@ -39,7 +37,17 @@ local question(title) = {
           value: 'Yes, previously served in Reserve Armed Forces',
         },
       ],
+    },
+    {
+      id: 'armed-forces-answer-exclusive',
       type: 'Checkbox',
+      mandatory: false,
+      options: [
+        {
+          label: 'No',
+          value: 'No',
+        },
+      ],
     },
   ],
 };
