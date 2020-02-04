@@ -144,7 +144,7 @@ function(region_code) {
             condition: 'equals any',
             values: ['Wales', 'England', 'Scotland', 'Northern Ireland'],
           },
-          rules.under3,
+          rules.under1,
         ],
       },
     },
