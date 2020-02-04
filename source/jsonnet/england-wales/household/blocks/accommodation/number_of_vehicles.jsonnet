@@ -31,8 +31,12 @@
           value: '3',
         },
         {
-          label: '4 or more',
-          value: '4 or more',
+          label: '4',
+          value: '4',
+        },
+        {
+          label: '5 or more',
+          value: '5 or more',
           description: 'Select to enter number',
           detail_answer: {
             id: 'number-of-vehicles-answer-other',
