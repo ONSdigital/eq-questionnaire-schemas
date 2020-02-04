@@ -8,7 +8,7 @@ local question(title) = {
   answers: [
     {
       id: 'work-outside-uk-answer',
-      label: '',
+      label: 'Current name of country',
       mandatory: false,
       type: 'TextField',
     },
