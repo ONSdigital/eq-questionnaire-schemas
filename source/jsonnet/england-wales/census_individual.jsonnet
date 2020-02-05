@@ -73,8 +73,8 @@ local jobseeker = import 'individual/blocks/employment/jobseeker.jsonnet';
 local main_employment_block = import 'individual/blocks/employment/main_employment_block.jsonnet';
 local main_job_type = import 'individual/blocks/employment/main_job_type.jsonnet';
 local mainly_work_in_uk = import 'individual/blocks/employment/mainly_work_in_uk.jsonnet';
-local supervise = import 'individual/blocks/employment/supervise.jsonnet';
 local mainly_work_outside_uk = import 'individual/blocks/employment/mainly_work_outside_uk.jsonnet';
+local supervise = import 'individual/blocks/employment/supervise.jsonnet';
 local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
 
 local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [understand_welsh] else [];
