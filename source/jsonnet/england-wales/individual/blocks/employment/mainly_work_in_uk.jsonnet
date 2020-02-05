@@ -82,6 +82,38 @@ local proxyTitle = {
     },
     {
       goto: {
+        block: 'employer-address-workplace',
+        when: [
+          {
+            id: 'employer-type-of-address-answer',
+            condition: 'equals',
+            value: 'At a workplace',
+          },
+          {
+            id: 'mainly-work-in-uk-answer',
+            condition: 'not set',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'employer-address-depot',
+        when: [
+          {
+            id: 'employer-type-of-address-answer',
+            condition: 'equals',
+            value: 'Report to a depot',
+          },
+          {
+            id: 'mainly-work-in-uk-answer',
+            condition: 'not set',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'mainly-work-outside-uk',
       },
     },
