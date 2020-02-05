@@ -60,19 +60,6 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'national-identity',
-        when: [
-          {
-            id: 'when-arrive-in-uk-answer',
-            condition: 'equals',
-            value: 'No',
-          },
-          rules.under3,
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'past-usual-household-address',
         when: [
           {
