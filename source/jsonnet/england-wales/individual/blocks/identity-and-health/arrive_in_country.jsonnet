@@ -73,14 +73,6 @@ function(region_code, census_month_year_date) {
     },
     {
       goto: {
-        block: 'national-identity',
-        when: [
-          rules.under1,
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'length-of-stay',
         when: [
           {
