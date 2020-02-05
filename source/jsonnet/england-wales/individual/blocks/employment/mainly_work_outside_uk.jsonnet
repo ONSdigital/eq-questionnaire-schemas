@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'work-outside-uk-question',
+  id: 'mainly-work-outside-uk-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'work-outside-uk-answer',
+      id: 'mainly-work-outside-uk-answer',
       label: 'Current name of country',
       mandatory: false,
       type: 'TextField',
@@ -25,7 +25,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'work-outside-uk',
+  id: 'mainly-work-outside-uk',
   question_variants: [
     {
       question: question(nonProxyTitle),

@@ -82,7 +82,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'work-outside-uk',
+        block: 'mainly-work-outside-uk',
       },
     },
   ],
