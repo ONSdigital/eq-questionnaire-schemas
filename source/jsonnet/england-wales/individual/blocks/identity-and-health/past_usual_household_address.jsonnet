@@ -95,7 +95,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
     },
     {
       goto: {
-        block: 'passports',
+        block: 'national-identity',
       },
     },
   ],

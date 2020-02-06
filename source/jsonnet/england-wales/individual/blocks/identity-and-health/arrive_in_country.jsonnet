@@ -90,25 +90,7 @@ function(region_code, census_month_year_date) {
     },
     {
       goto: {
-        block: 'national-identity',
-        when: [
-          {
-            id: 'arrive-in-country-answer',
-            condition: 'less than',
-            date_comparison: {
-              value: census_month_year_date,
-              offset_by: {
-                years: -1,
-              },
-            },
-          },
-          rules.under3,
-        ],
-      },
-    },
-    {
-      goto: {
-        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'language',
+        block: 'past-usual-household-address',
       },
     },
   ],

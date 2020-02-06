@@ -144,13 +144,13 @@ function(region_code) {
             condition: 'equals any',
             values: ['Wales', 'England', 'Scotland', 'Northern Ireland'],
           },
-          rules.under3,
+          rules.under1,
         ],
       },
     },
     {
       goto: {
-        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'language',
+        block: 'past-usual-household-address',
       },
     },
   ],
