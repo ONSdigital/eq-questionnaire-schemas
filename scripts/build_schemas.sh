@@ -16,7 +16,7 @@ for region_code in GB-WLS GB-ENG GB-NIR; do
 
         DESTINATION_FILE="schemas/en/census_${census_type}_${FORMATTED_REGION_CODE}.json"
 
-        if [[ "$region_code" = "GB-NIR" ]] ; then
+        if [[ "$region_code" = "GB-NIR" ]] && [[ "$census_type" != "communal_establishment"  ]]; then
             SOURCE_FILE="source/jsonnet/northern-ireland/census_${census_type}.jsonnet"
             ADDITIONAL_LIBRARY_PATH="source/jsonnet/northern-ireland/${census_type}/lib/"
 
