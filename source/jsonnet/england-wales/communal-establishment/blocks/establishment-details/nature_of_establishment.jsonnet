@@ -82,7 +82,7 @@
           {
             id: 'nature-of-establishment-answer',
             condition: 'equals any',
-            value: ['Armed forces', 'Staff or worker accomodation only'],
+            values: ['Armed forces', 'Staff or worker accomodation only'],
           },
         ],
       },
