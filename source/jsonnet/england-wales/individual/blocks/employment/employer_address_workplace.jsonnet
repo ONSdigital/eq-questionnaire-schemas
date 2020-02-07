@@ -31,7 +31,7 @@ local question(title) = {
       type: 'TextField',
     },
     {
-      id: 'employer-adress-workplace-answer-postcode',
+      id: 'employer-address-workplace-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',
