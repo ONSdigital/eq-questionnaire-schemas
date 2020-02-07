@@ -19,7 +19,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         {
           label: 'Hotel, guest house, B&B, youth hostel',
           value: 'Hotel, guest house, B&B, youth hostel',
-          destription: 'Including inns and pubs',
+          description: 'Including inns and pubs',
         },
         {
           label: 'Holiday accommodation',
