@@ -19,7 +19,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         {
           label: 'Prison service establishment',
           value: 'Prison service establishment',
-          destription: 'Including young offender institutions',
+          description: 'Including young offender institutions',
         },
         {
           label: 'Approved premises',
