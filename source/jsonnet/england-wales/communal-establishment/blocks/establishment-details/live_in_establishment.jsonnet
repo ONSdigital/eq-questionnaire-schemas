@@ -4,7 +4,7 @@
   question: {
     id: 'live-in-establishment-question',
     title: 'Do any of the following currently live in this establishment?',
-    type: 'Mutually Exclusive',
+    type: 'MutuallyExclusive',
     mandatory: false,
     answers: [
       {
@@ -50,7 +50,7 @@
   routing_rules: [
     {
       goto: {
-        block: 'temp',
+        block: 'visitors-in-establishment',
         when: [
           {
             id: 'live-in-establishment-exclusive',

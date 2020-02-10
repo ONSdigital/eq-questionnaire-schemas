@@ -13,7 +13,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     type: 'General',
     answers: [{
-      id: 'medical-establishment-answer',
+      id: 'education-establishment-answer',
       mandatory: false,
       options: [
         {

@@ -113,7 +113,7 @@
     },
     {
       goto: {
-        block: 'self-contained',
+        block: 'live-in-establishment',
       },
     },
   ],

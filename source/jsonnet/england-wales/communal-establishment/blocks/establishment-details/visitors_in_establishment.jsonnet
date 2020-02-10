@@ -4,7 +4,7 @@
   question: {
     id: 'visitors-in-establishment-question',
     title: 'Are any of the following visitors staying overnight in this establishment on 21 March 2021?',
-    type: 'Mutually Exclusive',
+    type: 'MutuallyExclusive',
     guidance: {
       contents: [{
         description: '<em>Include</em> shift workers, for example, care workers, hotel porters, who are staying overnight on 21 March 2021 as visitors',
