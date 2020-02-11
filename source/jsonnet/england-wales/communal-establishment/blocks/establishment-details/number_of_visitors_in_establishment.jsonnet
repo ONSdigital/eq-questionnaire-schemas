@@ -3,7 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local question(census_date) = {
   id: 'number-of-visitors-in-establishment-question',
   title: {
-    text: 'How many visitors are staying overnight in this establishment on 21 March 2021?',
+    text: 'How many visitors are staying overnight in this establishment on {census_date}?',
     placeholders: [
       placeholders.censusDate(census_date),
     ],
