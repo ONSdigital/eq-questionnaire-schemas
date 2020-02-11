@@ -1,13 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local alreadySpentAnswer(census_date) = {
+local alreadySpentAnswerLabel(census_date) = {
   text: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
   placeholders: [
     placeholders.censusDate(census_date),
   ],
 };
 
-local alreadyStayingAnswer(census_date) = {
+local alreadyStayingAnswerLabel(census_date) = {
   text: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
   placeholders: [
     placeholders.censusDate(census_date),
@@ -26,12 +26,12 @@ local question(census_date) = {
       type: 'Checkbox',
       options: [
         {
-          label: alreadySpentAnswer(census_date),
-          value: alreadySpentAnswer(census_date),
+          label: alreadySpentAnswerLabel(census_date),
+          value: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
         },
         {
-          label: alreadyStayingAnswer(census_date),
-          value: alreadyStayingAnswer(census_date),
+          label: alreadyStayingAnswerLabel(census_date),
+          value: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
         },
         {
           label: 'People who usually live outside the UK who have stayed, or intend to stay, in the UK for 3 months or more who do not have another UK address',
