@@ -11,7 +11,7 @@ local question(census_date) = {
   type: 'General',
   guidance: {
     contents: [{
-      description: '<em>Include</em> everyone from the groups you selected for the previous question<br>',
+      description: '<em>Include</em> everyone from the groups you selected for the previous question',
     }],
   },
   answers: [
