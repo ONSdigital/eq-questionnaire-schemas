@@ -6,7 +6,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     id: 'education-establishment-question',
     title: {
-      text: 'What type of education establishment <em>{household_address}</em>?',
+      text: 'What type of education establishment is <em>{household_address}</em>?',
       placeholders: [
         placeholders.address,
       ],

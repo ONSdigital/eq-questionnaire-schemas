@@ -19,9 +19,6 @@ function(region_code, census_date, census_month_year_date) {
   description: 'Census Communal Establishment',
   theme: 'census',
   legal_basis: 'Voluntary',
-  navigation: {
-    visible: false,
-  },
   metadata: [
     {
       name: 'user_id',
@@ -51,10 +48,10 @@ function(region_code, census_date, census_month_year_date) {
             education_establishment,
             detention_establishment,
             travel_establishment,
-            live_in_establishment,
+            live_in_establishment(census_date),
             people_in_establishment,
-            visitors_in_establishment,
-            number_of_visitors_in_establishment,
+            visitors_in_establishment(census_date),
+            number_of_visitors_in_establishment(census_date),
           ],
         },
       ],

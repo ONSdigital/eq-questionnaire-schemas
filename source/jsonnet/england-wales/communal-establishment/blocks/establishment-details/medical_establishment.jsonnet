@@ -32,7 +32,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         {
           label: 'General hospital',
           value: 'General hospital',
-          description: 'For example, prisons or approved premises',
         },
         {
           label: 'Mental health hospital or unit',
