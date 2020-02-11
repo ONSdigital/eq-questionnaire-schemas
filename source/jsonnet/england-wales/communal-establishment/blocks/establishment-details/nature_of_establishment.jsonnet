@@ -77,18 +77,6 @@
     },
     {
       goto: {
-        block: 'live-in-establishment',
-        when: [
-          {
-            id: 'nature-of-establishment-answer',
-            condition: 'equals any',
-            values: ['Armed forces', 'Staff or worker accomodation only'],
-          },
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'detention-establishment',
         when: [
           {
