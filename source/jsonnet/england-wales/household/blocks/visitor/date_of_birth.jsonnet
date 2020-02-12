@@ -13,7 +13,7 @@ function(census_date) {
         placeholders.personNamePossessive,
       ],
     },
-    description: 'For example 31 12 1970',
+    description: 'For example 31 3 1980',
     type: 'General',
     answers: [
       {

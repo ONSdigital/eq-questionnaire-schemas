@@ -26,7 +26,7 @@ local question(title) = {
     },
     {
       id: 'employer-address-depot-answer-county',
-      label: 'County (optional)',
+      label: 'County',
       mandatory: false,
       type: 'TextField',
     },
