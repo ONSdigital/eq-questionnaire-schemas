@@ -12,11 +12,11 @@ for region_code in GB-WLS GB-ENG GB-NIR; do
     CENSUS_DATE="2019-10-13"
     CENSUS_MONTH_YEAR_DATE="2019-10"
 
-    for census_type in "individual" "household"; do
+    for census_type in "individual" "household" "communal_establishment"; do
 
         DESTINATION_FILE="schemas/en/census_${census_type}_${FORMATTED_REGION_CODE}.json"
 
-        if [[ "$region_code" = "GB-NIR" ]]; then
+        if [[ "$region_code" = "GB-NIR" ]] && [[ "$census_type" != "communal_establishment"  ]]; then
             SOURCE_FILE="source/jsonnet/northern-ireland/census_${census_type}.jsonnet"
             ADDITIONAL_LIBRARY_PATH="source/jsonnet/northern-ireland/${census_type}/lib/"
 
