@@ -21,6 +21,8 @@ local question(title, census_date) = {
         value: census_date,
         offset_by: {
           years: -115,
+          months: -2,
+          days: -20,
         },
       },
       maximum: {
