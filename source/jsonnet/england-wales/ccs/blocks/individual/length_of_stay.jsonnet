@@ -33,7 +33,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date){
+function(census_date) {
   type: 'Question',
   id: 'length-of-stay',
   question_variants: [

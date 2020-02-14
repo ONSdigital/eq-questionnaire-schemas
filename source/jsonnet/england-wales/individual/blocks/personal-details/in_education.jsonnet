@@ -40,7 +40,7 @@ local proxyOver19Title = {
   ],
 };
 
-function(census_date){
+function(census_date) {
   type: 'Question',
   id: 'in-education',
   question_variants: [

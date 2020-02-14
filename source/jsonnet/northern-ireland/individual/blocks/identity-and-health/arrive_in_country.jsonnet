@@ -28,7 +28,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date){
+function(census_date) {
   type: 'Question',
   id: 'arrive-in-country',
   question_variants: [
