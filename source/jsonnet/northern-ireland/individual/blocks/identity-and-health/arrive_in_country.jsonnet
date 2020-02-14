@@ -28,7 +28,7 @@ local proxyTitle = {
   ],
 };
 
-{
+function(census_date){
   type: 'Question',
   id: 'arrive-in-country',
   question_variants: [
@@ -45,7 +45,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'passports',
-        when: [rules.under1],
+        when: [rules.under1(census_date)],
       },
     },
     {

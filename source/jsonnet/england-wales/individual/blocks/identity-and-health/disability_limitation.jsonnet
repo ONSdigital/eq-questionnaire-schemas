@@ -71,7 +71,7 @@ local proxyDefinition = {
   ],
 };
 
-{
+function(census_date) {
   type: 'Question',
   id: 'disability-limitation',
   question_variants: [
@@ -89,7 +89,7 @@ local proxyDefinition = {
       goto: {
         group: 'submit-group',
         when: [
-          rules.under5,
+          rules.under5(census_date),
         ],
       },
     },

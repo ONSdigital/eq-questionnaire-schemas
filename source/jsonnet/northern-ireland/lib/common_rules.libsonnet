@@ -1,54 +1,64 @@
-{
-  over16: {
+local over16(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -16,
       },
-    },
-  },
-  over5: {
+    }
+};
+
+local over5(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -5,
       },
-    },
-  },
-  under4: {
+    }
+};
+
+local under4(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -4,
       },
     },
-  },
-  under3: {
+};
+
+local under3(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -3,
       },
     },
-  },
-  under1: {
+};
+
+local under1(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -1,
       },
     },
-  },
+};
+
+{
+  over16: over16,
+  over5: over5,
+  under4: under4,
+  under3: under3,
+  under1: under1,
   mainJob: {
     id: 'employment-status-answer-exclusive',
     condition: 'not set',

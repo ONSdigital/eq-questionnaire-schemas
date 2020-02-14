@@ -47,7 +47,7 @@ local question(title) = (
   }
 );
 
-{
+function(census_date) {
   type: 'Question',
   id: 'ethnic-group',
   question_variants: [
@@ -129,7 +129,7 @@ local question(title) = (
             id: 'ethnic-group-answer',
             condition: 'not set',
           },
-          rules.under1,
+          rules.under1(census_date),
         ],
       },
     },
@@ -141,7 +141,7 @@ local question(title) = (
             id: 'ethnic-group-answer',
             condition: 'not set',
           },
-          rules.under4,
+          rules.under4(census_date),
         ],
       },
     },

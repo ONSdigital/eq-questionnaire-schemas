@@ -40,17 +40,17 @@ local proxyOver19Title = {
   ],
 };
 
-{
+function(census_date){
   type: 'Question',
   id: 'in-education',
   question_variants: [
     {
       question: question(nonProxyOver19Title),
-      when: [rules.isNotProxy, rules.over19],
+      when: [rules.isNotProxy, rules.over19(census_date)],
     },
     {
       question: question(proxyOver19Title),
-      when: [rules.isProxy, rules.over19],
+      when: [rules.isProxy, rules.over19(census_date)],
     },
     {
       question: question(nonProxyUnder19Title),

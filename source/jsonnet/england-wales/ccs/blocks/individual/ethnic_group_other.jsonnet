@@ -39,7 +39,7 @@ local proxyTitle = {
   ],
 };
 
-{
+function(census_date) {
   type: 'Question',
   id: 'other-ethnic-group',
   question_variants: [
@@ -56,13 +56,13 @@ local proxyTitle = {
     {
       goto: {
         block: 'another-uk-address',
-        when: [rules.under1],
+        when: [rules.under1(census_date)],
       },
     },
     {
       goto: {
         block: 'past-usual-household-address',
-        when: [rules.under4],
+        when: [rules.under4(census_date)],
       },
     },
     {

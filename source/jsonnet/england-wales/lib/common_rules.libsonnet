@@ -1,84 +1,100 @@
-{
-  over19: {
+local over19(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -19,
       },
     },
-  },
-  over16: {
+};
+
+local over16(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -16,
       },
     },
-  },
-  under16: {
+};
+
+local under16(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -16,
       },
     },
-  },
-  over15: {
+};
+
+local over15(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -15,
       },
     },
-  },
-  under5: {
+};
+
+local under5(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -5,
       },
     },
-  },
-  under4: {
+};
+
+local under4(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -4,
       },
     },
-  },
-  under3: {
+};
+
+local under3(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -3,
       },
     },
-  },
-  under1: {
+};
+
+local under1(census_date) = {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: census_date,
       offset_by: {
         years: -1,
       },
     },
-  },
+};
+
+{
+  over19: over19,
+  over16: over16,
+  under16: under16,
+  over15: over15,
+  under5: under5,
+  under4: under4,
+  under3: under3,
+  under1: under1,
   mainJob: {
     id: 'employment-status-answer-exclusive',
     condition: 'not set',

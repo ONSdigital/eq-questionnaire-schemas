@@ -54,7 +54,7 @@ local proxyDefinitionContent = [
   },
 ];
 
-{
+function(census_date) {
   type: 'Question',
   id: 'disability',
   question_variants: [
@@ -89,7 +89,7 @@ local proxyDefinitionContent = [
             condition: 'equals',
             value: 'No',
           },
-          rules.under5,
+          rules.under5(census_date),
         ],
       },
     },
@@ -101,7 +101,7 @@ local proxyDefinitionContent = [
             id: 'disability-answer',
             condition: 'not set',
           },
-          rules.under5,
+          rules.under5(census_date),
         ],
       },
     },

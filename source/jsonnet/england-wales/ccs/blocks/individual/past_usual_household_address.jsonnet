@@ -42,7 +42,7 @@ local proxyTitle = {
 };
 
 
-{
+function(census_date) {
   type: 'Question',
   id: 'past-usual-household-address',
   question_variants: [
@@ -65,7 +65,7 @@ local proxyTitle = {
             condition: 'not equals',
             value: 'An address outside the UK',
           },
-          rules.under16,
+          rules.under16(census_date),
         ],
       },
     },
@@ -78,7 +78,7 @@ local proxyTitle = {
             condition: 'not equals',
             value: 'An address outside the UK',
           },
-          rules.over16,
+          rules.over16(census_date),
         ],
       },
     },

@@ -92,7 +92,7 @@ local proxyNonUkAddressTitle = {
   ],
 };
 
-{
+function(census_date) {
   type: 'Question',
   id: 'address-type',
   question_variants: [
@@ -120,7 +120,7 @@ local proxyNonUkAddressTitle = {
       goto: {
         group: 'identity-and-health-group',
         when: [
-          rules.under4,
+          rules.under4(census_date),
         ],
       },
     },
