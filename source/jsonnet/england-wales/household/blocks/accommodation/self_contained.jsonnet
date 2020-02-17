@@ -6,9 +6,9 @@
     title: 'Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?',
     type: 'General',
     definitions: [{
-      title: 'What is a “household”?',
+      title: 'What we mean by “household”',
       contents: [{
-        description: 'One person living alone; or a group of people, who are not necessarily related, living at the same address who share cooking facilities and share a living room or sitting room or dining area.',
+        description: 'This is one person living alone or a group of people, not necessarily related, living at the same address, who share cooking facilities and share a living room or sitting room or dining area.',
       }],
     }],
     answers: [{

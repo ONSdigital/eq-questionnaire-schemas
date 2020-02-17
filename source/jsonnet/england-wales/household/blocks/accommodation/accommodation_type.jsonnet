@@ -24,7 +24,7 @@ local rules = import 'rules.libsonnet';
           {
             label: 'Flat, maisonette or apartment',
             value: 'Flat, maisonette or apartment',
-            description: 'Including purpose-built flats and flats within converted and shared houses',
+            description: 'Including purpose-built flats and flats within converted buildings',
           },
           {
             label: 'Caravan or other mobile or temporary structure',

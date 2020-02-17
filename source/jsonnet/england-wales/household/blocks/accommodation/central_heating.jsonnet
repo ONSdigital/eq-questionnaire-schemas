@@ -61,8 +61,8 @@ local rules = import 'rules.libsonnet';
             description: 'For example, solar thermal or heat pumps',
           },
           {
-            label: 'District or communal heat networks',
-            value: 'District or communal heat networks',
+            label: 'District or communal heat network',
+            value: 'District or communal heat network',
           },
           {
             label: 'Other',

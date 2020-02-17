@@ -11,7 +11,7 @@
         title: 'You will need to know',
         list: [
           'Type of property, and if it’s owned or rented',
-          'Type of landlord if rented, for example housing association, council or private',
+          'Type of landlord if rented, for example, housing association, council or private',
           'Type of central heating',
         ],
       },

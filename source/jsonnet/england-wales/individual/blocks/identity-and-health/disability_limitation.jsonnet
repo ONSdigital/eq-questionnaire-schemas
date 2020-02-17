@@ -48,7 +48,7 @@ local nonProxyDefinition = {
   ],
 };
 local proxyTitle = {
-  text: 'Does any of <em>{person_name_possessive}</em> conditions or illnesses reduce their ability to carry out day-to-day activities?',
+  text: 'Do any of <em>{person_name_possessive}</em> conditions or illnesses reduce their ability to carry out day-to-day activities?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
