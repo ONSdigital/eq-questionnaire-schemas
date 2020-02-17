@@ -28,7 +28,7 @@ local dateOfBirthPlaceholder = {
   placeholder: 'age',
   transforms: [
     {
-      transform: 'calculate_difference',
+      transform: 'calculate_date_difference',
       arguments: {
         first_date: {
           source: 'answers',
