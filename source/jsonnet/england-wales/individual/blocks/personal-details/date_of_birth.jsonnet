@@ -7,7 +7,7 @@ local question(title, census_date) = {
   guidance: {
     contents: [
       {
-        description: 'For example 31 12 1970',
+        description: 'For example 31 3 1980',
       },
     ],
   },
@@ -21,6 +21,8 @@ local question(title, census_date) = {
         value: census_date,
         offset_by: {
           years: -115,
+          months: -2,
+          days: -20,
         },
       },
       maximum: {

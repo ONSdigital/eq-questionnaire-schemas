@@ -4,11 +4,11 @@ local common_rules = import '../../lib/common_rules.libsonnet';
   isNotProxy: {
     id: 'proxy-answer',
     condition: 'equals',
-    value: 'No, I’m answering for myself',
+    value: 'For myself',
   },
   isProxy: {
     id: 'proxy-answer',
     condition: 'equals',
-    value: 'Yes',
+    value: 'For someone else',
   },
 } + common_rules
