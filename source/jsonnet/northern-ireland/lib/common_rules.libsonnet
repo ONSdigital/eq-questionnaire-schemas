@@ -3,50 +3,50 @@
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-        value: std.extVar('census_date'),
-        offset_by: {
-            years: -16,
-        },
+      value: std.extVar('census_date'),
+      offset_by: {
+        years: -16,
+      },
     },
   },
   over5: {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-        value: std.extVar('census_date'),
-        offset_by: {
-            years: -5,
-        },
+      value: std.extVar('census_date'),
+      offset_by: {
+        years: -5,
+      },
     },
   },
   under4: {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-        value: std.extVar('census_date'),
-        offset_by: {
+      value: std.extVar('census_date'),
+      offset_by: {
         years: -4,
-        },
+      },
     },
   },
   under3: {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-        value: std.extVar('census_date'),
-        offset_by: {
+      value: std.extVar('census_date'),
+      offset_by: {
         years: -3,
-        },
+      },
     },
   },
   under1: {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-        value: std.extVar('census_date'),
-        offset_by: {
+      value: std.extVar('census_date'),
+      offset_by: {
         years: -1,
-        },
+      },
     },
   },
   mainJob: {
