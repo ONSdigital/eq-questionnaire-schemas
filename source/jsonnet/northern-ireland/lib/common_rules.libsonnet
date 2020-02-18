@@ -1,64 +1,54 @@
-local over16 = {
-  id: 'date-of-birth-answer',
-  condition: 'less than or equal to',
-  date_comparison: {
-    value: std.extVar('census_date'),
-    offset_by: {
-      years: -16,
-    },
-  },
-};
-
-local over5 = {
-  id: 'date-of-birth-answer',
-  condition: 'less than or equal to',
-  date_comparison: {
-    value: std.extVar('census_date'),
-    offset_by: {
-      years: -5,
-    },
-  },
-};
-
-local under4 = {
-  id: 'date-of-birth-answer',
-  condition: 'greater than',
-  date_comparison: {
-    value: std.extVar('census_date'),
-    offset_by: {
-      years: -4,
-    },
-  },
-};
-
-local under3 = {
-  id: 'date-of-birth-answer',
-  condition: 'greater than',
-  date_comparison: {
-    value: std.extVar('census_date'),
-    offset_by: {
-      years: -3,
-    },
-  },
-};
-
-local under1 = {
-  id: 'date-of-birth-answer',
-  condition: 'greater than',
-  date_comparison: {
-    value: std.extVar('census_date'),
-    offset_by: {
-      years: -1,
-    },
-  },
-};
-
 {
-  over16: over16,
-  over5: over5,
-  under4: under4,
-  under3: under3,
-  under1: under1,
+  over16: {
+    id: 'date-of-birth-answer',
+    condition: 'less than or equal to',
+    date_comparison: {
+        value: std.extVar('census_date'),
+        offset_by: {
+            years: -16,
+        },
+    },
+  },
+  over5: {
+    id: 'date-of-birth-answer',
+    condition: 'less than or equal to',
+    date_comparison: {
+        value: std.extVar('census_date'),
+        offset_by: {
+            years: -5,
+        },
+    },
+  },
+  under4: {
+    id: 'date-of-birth-answer',
+    condition: 'greater than',
+    date_comparison: {
+        value: std.extVar('census_date'),
+        offset_by: {
+        years: -4,
+        },
+    },
+  },
+  under3: {
+    id: 'date-of-birth-answer',
+    condition: 'greater than',
+    date_comparison: {
+        value: std.extVar('census_date'),
+        offset_by: {
+        years: -3,
+        },
+    },
+  },
+  under1: {
+    id: 'date-of-birth-answer',
+    condition: 'greater than',
+    date_comparison: {
+        value: std.extVar('census_date'),
+        offset_by: {
+        years: -1,
+        },
+    },
+  },
   mainJob: {
     id: 'employment-status-answer-exclusive',
     condition: 'not set',
