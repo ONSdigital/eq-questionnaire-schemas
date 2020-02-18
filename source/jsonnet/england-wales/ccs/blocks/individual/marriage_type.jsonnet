@@ -53,30 +53,30 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle(census_date) = {
+local nonProxyTitle = {
   text: 'On {census_date}, what was your legal marital or registered civil partnership status?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
-local proxyTitle(census_date) = {
+local proxyTitle = {
   text: 'On {census_date}, what was {person_name_possessive} legal marital or registered civil partnership status?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
     placeholders.personNamePossessive,
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'marriage-type',
   question_variants: [
     {
-      question: question(nonProxyTitle(census_date)),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle(census_date)),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

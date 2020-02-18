@@ -99,7 +99,7 @@ local usual_household_address_details = import 'household/blocks/visitor/usual_h
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
 
-function(region_code, census_date) {
+function(region_code) {
   mime_type: 'application/json/ons/eq',
   schema_version: '0.0.1',
   data_version: '0.0.3',
@@ -138,12 +138,12 @@ function(region_code, census_date) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
-            who_lives_here_interstitial(census_date),
+            who_lives_here_interstitial,
             primary_person_list_collector,
-            anyone_else_list_collector(census_date),
+            anyone_else_list_collector,
             anyone_else_temporarily_away_list_collector,
-            any_visitors(census_date),
-            visitor_list_collector(census_date),
+            any_visitors,
+            visitor_list_collector,
             who_lives_here_section_summary,
             relationships_interstitial,
             relationships_collector,
@@ -207,7 +207,7 @@ function(region_code, census_date) {
           blocks: [
             individual_interstitial,
             proxy,
-            date_of_birth(census_date),
+            date_of_birth,
             confirm_dob,
             sex,
             marriage_type,
@@ -331,8 +331,8 @@ function(region_code, census_date) {
           id: 'visitor-group',
           title: '',
           blocks: [
-            visitor_interstitial(census_date),
-            visitor_dob(census_date),
+            visitor_interstitial,
+            visitor_dob,
             visitor_sex,
             usual_household_address,
             usual_household_address_details,

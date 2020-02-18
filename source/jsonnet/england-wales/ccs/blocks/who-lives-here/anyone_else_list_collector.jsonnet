@@ -76,7 +76,7 @@ local editQuestion(questionTitle) = {
   ],
 };
 
-function(census_date) {
+{
   id: 'anyone-else-list-collector',
   type: 'ListCollector',
   for_list: 'household',

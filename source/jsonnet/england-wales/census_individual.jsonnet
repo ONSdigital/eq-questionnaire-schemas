@@ -79,7 +79,7 @@ local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
 
 local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [understand_welsh] else [];
 
-function(region_code, census_date, census_month_year_date) {
+function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
   schema_version: '0.0.1',
   data_version: '0.0.3',
@@ -118,10 +118,10 @@ function(region_code, census_date, census_month_year_date) {
             proxy,
             name,
             establishment_position,
-            date_of_birth(census_date),
+            date_of_birth,
             confirm_dob,
             sex,
-            marriage_type(census_date),
+            marriage_type,
             current_marriage_status,
             previous_marriage_status,
             current_partnership_status,

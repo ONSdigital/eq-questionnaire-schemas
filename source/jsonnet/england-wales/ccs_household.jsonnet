@@ -57,7 +57,7 @@ local usual_household_address_details = import 'ccs/blocks/visitor/usual_househo
 local visitor_age_last_birthday = import 'ccs/blocks/visitor/visitor_age_last_birthday.jsonnet';
 local visitor_interstitial = import 'ccs/blocks/visitor/visitor_interstitial.jsonnet';
 
-function(region_code, census_date, census_month_year_date) {
+function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
   schema_version: '0.0.1',
   data_version: '0.0.3',
@@ -96,15 +96,15 @@ function(region_code, census_date, census_month_year_date) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
-            who_lives_here_interstitial(census_date),
+            who_lives_here_interstitial,
             primary_person_list_collector,
             anyone_else_usually_living,
             interviewer_note_interstitial,
             another_address_interviewer_note_interstitial,
-            anyone_else_list_collector(census_date),
+            anyone_else_list_collector,
             anyone_else_temp_away_list_collector,
             any_visitors,
-            visitor_list_collector(census_date),
+            visitor_list_collector,
             who_lives_here_section_summary,
             relationships,
           ],
@@ -167,12 +167,12 @@ function(region_code, census_date, census_month_year_date) {
           blocks: [
             individual_interstitial,
             proxy,
-            date_of_birth(census_date),
-            age_last_birthday(census_date),
+            date_of_birth,
+            age_last_birthday,
             confirm_dob,
             sex,
             country_of_birth,
-            marriage_type(census_date),
+            marriage_type,
             ethnic_group,
             ethnic_group_white(region_code),
             ethnic_group_mixed,
@@ -223,8 +223,8 @@ function(region_code, census_date, census_month_year_date) {
           id: 'visitor-group',
           title: '',
           blocks: [
-            visitor_interstitial(census_date),
-            visitor_dob(census_date),
+            visitor_interstitial,
+            visitor_dob,
             visitor_age_last_birthday,
             visitor_sex,
             usual_household_address,

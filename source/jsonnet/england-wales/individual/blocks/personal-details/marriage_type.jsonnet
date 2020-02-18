@@ -65,30 +65,30 @@ local gotoRule(blockId, whenValue) = {
   },
 };
 
-local nonProxyTitle(census_date) = {
+local nonProxyTitle = {
   text: 'On {census_date}, what is your legal marital or registered civil partnership status?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
-local proxyTitle(census_date) = {
+local proxyTitle = {
   text: 'On {census_date}, what is <em>{person_name_possessive}</em> legal marital or registered civil partnership status?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
     placeholders.personNamePossessive,
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'marriage-type',
   question_variants: [
     {
-      question: question(nonProxyTitle(census_date)),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle(census_date)),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

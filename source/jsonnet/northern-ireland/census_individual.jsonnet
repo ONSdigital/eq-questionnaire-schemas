@@ -67,7 +67,7 @@ local work_location = import 'individual/blocks/employment/work_location.jsonnet
 local work_location_type = import 'individual/blocks/employment/work_location_type.jsonnet';
 local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
 
-function(region_code, census_date) {
+function(region_code) {
   mime_type: 'application/json/ons/eq',
   schema_version: '0.0.1',
   data_version: '0.0.3',
@@ -106,7 +106,7 @@ function(region_code, census_date) {
             proxy,
             name,
             establishment_position,
-            date_of_birth(census_date),
+            date_of_birth,
             confirm_dob,
             sex,
             marriage_type,

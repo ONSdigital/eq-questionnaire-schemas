@@ -3,7 +3,7 @@
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: std.extVar('census_date'),
       offset_by: {
         years: -16,
       },
@@ -13,7 +13,7 @@
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {
-      value: 'now',
+      value: std.extVar('census_date'),
       offset_by: {
         years: -5,
       },
@@ -23,7 +23,7 @@
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: std.extVar('census_date'),
       offset_by: {
         years: -4,
       },
@@ -33,7 +33,7 @@
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: std.extVar('census_date'),
       offset_by: {
         years: -3,
       },
@@ -43,7 +43,7 @@
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: 'now',
+      value: std.extVar('census_date'),
       offset_by: {
         years: -1,
       },

@@ -1,11 +1,11 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local question(census_date) = {
+local question = {
   id: 'number-of-visitors-in-establishment-question',
   title: {
     text: 'How many visitors are staying overnight in this establishment on {census_date}?',
     placeholders: [
-      placeholders.censusDate(census_date),
+      placeholders.censusDate,
     ],
   },
   type: 'General',
@@ -27,8 +27,8 @@ local question(census_date) = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'number-of-visitors-in-establishment',
-  question: question(census_date),
+  question: question,
 }

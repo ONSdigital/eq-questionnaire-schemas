@@ -8,7 +8,7 @@ local contentDescription = {
 };
 
 
-function(census_date) {
+{
   type: 'Interstitial',
   id: 'who-lives-here-interstitial',
   content: {

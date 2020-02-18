@@ -1,6 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-function(census_date) {
+{
   type: 'Interstitial',
   id: 'who-lives-here-interstitial',
   content: {

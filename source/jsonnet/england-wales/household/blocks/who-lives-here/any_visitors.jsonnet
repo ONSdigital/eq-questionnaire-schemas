@@ -1,16 +1,16 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle(census_date) = {
+local questionTitle = {
   text: 'Are there any visitors staying overnight on {census_date} at {household_address}?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
     placeholders.address,
   ],
 };
 
 
-function(census_date) {
+{
   type: 'ListCollectorDrivingQuestion',
   for_list: 'visitor',
   id: 'any-visitors',
@@ -18,7 +18,7 @@ function(census_date) {
   question: {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',
-    title: questionTitle(census_date),
+    title: questionTitle,
     mandatory: true,
     answers: [
       {

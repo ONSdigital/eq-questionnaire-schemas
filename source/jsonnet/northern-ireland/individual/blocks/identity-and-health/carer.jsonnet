@@ -70,9 +70,7 @@ local proxyGuidance = 'Exclude anything they do in paid employment';
     {
       goto: {
         block: 'sexual-identity',
-        when: [
-          rules.over16,
-        ],
+        when: [rules.over16],
       },
     },
     {
