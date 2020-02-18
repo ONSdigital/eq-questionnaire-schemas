@@ -25,10 +25,10 @@ local question(title) = {
 };
 
 local dateOfBirthPlaceholder = {
-  placeholder: 'age_in_years',
+  placeholder: 'age',
   transforms: [
     {
-      transform: 'calculate_years_difference',
+      transform: 'calculate_date_difference',
       arguments: {
         first_date: {
           source: 'answers',
@@ -43,14 +43,14 @@ local dateOfBirthPlaceholder = {
 };
 
 local nonProxyTitle = {
-  text: 'You are {age_in_years} years old. Is this correct?',
+  text: 'You are {age} old. Is this correct?',
   placeholders: [
     dateOfBirthPlaceholder,
   ],
 };
 
 local proxyTitle = {
-  text: '{person_name} is {age_in_years} years old. Is this correct?',
+  text: '{person_name} is {age} old. Is this correct?',
   placeholders: [
     placeholders.personName,
     dateOfBirthPlaceholder,

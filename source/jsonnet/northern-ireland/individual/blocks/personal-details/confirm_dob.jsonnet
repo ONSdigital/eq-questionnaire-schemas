@@ -25,10 +25,10 @@ local question(title, yesLabel, yesValue, noLabel, noValue) = {
 };
 
 local dateOfBirthPlaceholder = {
-  placeholder: 'age_in_years',
+  placeholder: 'age',
   transforms: [
     {
-      transform: 'calculate_years_difference',
+      transform: 'calculate_date_difference',
       arguments: {
         first_date: {
           source: 'answers',
@@ -43,32 +43,32 @@ local dateOfBirthPlaceholder = {
 };
 
 local nonProxyTitle = {
-  text: 'You are {age_in_years} years old. Is this correct?',
+  text: 'You are {age} old. Is this correct?',
   placeholders: [
     dateOfBirthPlaceholder,
   ],
 };
 local nonProxyYesLabel = {
-  text: 'Yes, I am {age_in_years} years old',
+  text: 'Yes, I am {age} old',
   placeholders: [
     dateOfBirthPlaceholder,
   ],
 };
-local nonProxyYesValue = 'Yes, I am {age_in_years} years old';
-local proxyYesValue = 'Yes, {person_name} is {age_in_years} years old';
+local nonProxyYesValue = 'Yes, I am {age} old';
+local proxyYesValue = 'Yes, {person_name} is {age} old';
 
 local nonProxyNoLabel = 'No, I need to change my date of birth';
 local nonProxyNoValue = 'No, I need to change my date of birth';
 
 local proxyTitle = {
-  text: '{person_name} is {age_in_years} years old. Is this correct?',
+  text: '{person_name} is {age} old. Is this correct?',
   placeholders: [
     placeholders.personName,
     dateOfBirthPlaceholder,
   ],
 };
 local proxyYesLabel = {
-  text: 'Yes, {person_name} is {age_in_years} years old',
+  text: 'Yes, {person_name} is {age} old',
   placeholders: [
     placeholders.personName,
     dateOfBirthPlaceholder,
