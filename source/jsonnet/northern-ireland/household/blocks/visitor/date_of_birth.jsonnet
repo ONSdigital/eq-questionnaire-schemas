@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 
-function(census_date) {
+{
   type: 'Question',
   id: 'visitor-date-of-birth',
   question: {
@@ -21,7 +21,7 @@ function(census_date) {
         mandatory: false,
         type: 'Date',
         minimum: {
-          value: census_date,
+          value: std.extVar('census_date'),
           offset_by: {
             years: -115,
           },

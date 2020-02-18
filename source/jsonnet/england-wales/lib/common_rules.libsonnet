@@ -1,85 +1,85 @@
-local over19(census_date) = {
+local over19 = {
   id: 'date-of-birth-answer',
   condition: 'less than or equal to',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -19,
     },
   },
 };
 
-local over16(census_date) = {
+local over16 = {
   id: 'date-of-birth-answer',
   condition: 'less than or equal to',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -16,
     },
   },
 };
 
-local under16(census_date) = {
+local under16 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -16,
     },
   },
 };
 
-local over15(census_date) = {
+local over15 = {
   id: 'date-of-birth-answer',
   condition: 'less than or equal to',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -15,
     },
   },
 };
 
-local under5(census_date) = {
+local under5 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -5,
     },
   },
 };
 
-local under4(census_date) = {
+local under4 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -4,
     },
   },
 };
 
-local under3(census_date) = {
+local under3 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -3,
     },
   },
 };
 
-local under1(census_date) = {
+local under1 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -1,
     },

@@ -32,7 +32,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'sex',
   question_variants: [
@@ -49,15 +49,13 @@ function(census_date) {
     {
       goto: {
         block: 'marriage-type',
-        when: [
-          rules.over16(census_date),
-        ],
+        when: [rules.over16],
       },
     },
     {
       goto: {
         group: 'identity-and-health-group',
-        when: [rules.under4(census_date)],
+        when: [rules.under4],
       },
     },
     {

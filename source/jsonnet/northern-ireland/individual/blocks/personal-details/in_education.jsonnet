@@ -40,17 +40,17 @@ local proxyOver16Title = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'in-education',
   question_variants: [
     {
       question: question(nonProxyOver16Title),
-      when: [rules.isNotProxy, rules.over16(census_date)],
+      when: [rules.isNotProxy, rules.over16],
     },
     {
       question: question(proxyOver16Title),
-      when: [rules.isProxy, rules.over16(census_date)],
+      when: [rules.isProxy, rules.over16],
     },
     {
       question: question(nonProxyUnder16Title),

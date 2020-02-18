@@ -57,7 +57,7 @@ local question(title, region_code) = (
   }
 );
 
-function(region_code, census_date) {
+function(region_code) {
   type: 'Question',
   id: 'white-ethnic-group',
   question_variants: [
@@ -74,13 +74,13 @@ function(region_code, census_date) {
     {
       goto: {
         block: 'another-uk-address',
-        when: [rules.under1(census_date)],
+        when: [rules.under1],
       },
     },
     {
       goto: {
         block: 'past-usual-household-address',
-        when: [rules.under4(census_date)],
+        when: [rules.under4],
       },
     },
     {

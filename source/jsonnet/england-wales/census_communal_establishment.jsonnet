@@ -10,7 +10,7 @@ local responsible_for_establishment = import 'communal-establishment/blocks/esta
 local travel_establishment = import 'communal-establishment/blocks/establishment-details/travel_establishment.jsonnet';
 local visitors_in_establishment = import 'communal-establishment/blocks/establishment-details/visitors_in_establishment.jsonnet';
 
-function(region_code, census_date, census_month_year_date) {
+function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
   schema_version: '0.0.1',
   data_version: '0.0.3',
@@ -48,10 +48,10 @@ function(region_code, census_date, census_month_year_date) {
             education_establishment,
             detention_establishment,
             travel_establishment,
-            live_in_establishment(census_date),
+            live_in_establishment,
             people_in_establishment,
-            visitors_in_establishment(census_date),
-            number_of_visitors_in_establishment(census_date),
+            visitors_in_establishment,
+            number_of_visitors_in_establishment,
           ],
         },
       ],

@@ -1,18 +1,18 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle(census_date) = {
+local questionTitle = {
   text: 'Were there any other visitors staying overnight on {census_date} at {household_address}?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
     placeholders.address,
   ],
 };
 
-local summaryTitle(census_date) = {
+local summaryTitle = {
   text: 'Visitors staying overnight on {census_date}',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
 
@@ -23,10 +23,10 @@ local summaryTitlePersonName = {
   ],
 };
 
-local addVisitorQuestionTitle(census_date) = {
+local addVisitorQuestionTitle = {
   text: 'What is the name of the visitor staying overnight on {census_date} at {household_address}?',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
     placeholders.address,
   ],
 };
@@ -46,7 +46,7 @@ local removePersonQuestionTitle = {
 };
 
 
-function(census_date) {
+{
   id: 'visitor-list-collector',
   type: 'ListCollector',
   for_list: 'visitor',
@@ -61,7 +61,7 @@ function(census_date) {
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
-    title: questionTitle(census_date),
+    title: questionTitle,
     answers: [
       {
         id: 'visitor-answer',
@@ -87,7 +87,7 @@ function(census_date) {
     question: {
       id: 'visitor-add-question',
       type: 'General',
-      title: addVisitorQuestionTitle(census_date),
+      title: addVisitorQuestionTitle,
       instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
       answers: [
         {
@@ -160,7 +160,7 @@ function(census_date) {
     },
   },
   summary: {
-    title: summaryTitle(census_date),
+    title: summaryTitle,
     item_title: summaryTitlePersonName,
     add_link_text: 'Add a visitor',
     empty_list_text: 'There are no visitors',

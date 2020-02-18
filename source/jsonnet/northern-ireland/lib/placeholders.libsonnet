@@ -42,13 +42,13 @@
       source: 'metadata',
     },
   },
-  censusDate(census_date): {
+  censusDate: {
     placeholder: 'census_date',
     transforms: [{
       transform: 'format_date',
       arguments: {
         date_to_format: {
-          value: census_date,
+          value: std.extVar('census_date'),
         },
         date_format: 'd MMMM yyyy',
       },

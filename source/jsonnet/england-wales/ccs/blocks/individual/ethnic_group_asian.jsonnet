@@ -51,7 +51,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'asian-ethnic-group',
   question_variants: [
@@ -68,13 +68,13 @@ function(census_date) {
     {
       goto: {
         block: 'another-uk-address',
-        when: [rules.under1(census_date)],
+        when: [rules.under1],
       },
     },
     {
       goto: {
         block: 'past-usual-household-address',
-        when: [rules.under4(census_date)],
+        when: [rules.under4],
       },
     },
     {

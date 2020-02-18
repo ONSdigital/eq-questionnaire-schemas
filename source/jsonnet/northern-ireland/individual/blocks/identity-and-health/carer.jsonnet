@@ -53,7 +53,7 @@ local proxyTitle = {
 };
 local proxyGuidance = 'Exclude anything they do in paid employment';
 
-function(census_date) {
+{
   type: 'Question',
   id: 'carer',
   question_variants: [
@@ -70,9 +70,7 @@ function(census_date) {
     {
       goto: {
         block: 'sexual-identity',
-        when: [
-          rules.over16(census_date),
-        ],
+        when: [rules.over16],
       },
     },
     {

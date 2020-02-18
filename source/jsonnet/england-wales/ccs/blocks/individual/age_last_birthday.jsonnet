@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, census_date) = {
+local question(title) = {
   id: 'age-last-birthday-question',
   description: '',
   type: 'General',
@@ -43,16 +43,16 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'age-last-birthday',
   question_variants: [
     {
-      question: question(nonProxyTitle, census_date),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, census_date),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

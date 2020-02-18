@@ -39,7 +39,7 @@ local guidance = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'sex',
   question_variants: [
@@ -47,13 +47,13 @@ function(census_date) {
       question: question(nonProxyTitle) + {
         guidance: guidance,
       },
-      when: [rules.isNotProxy, rules.over16(census_date)],
+      when: [rules.isNotProxy, rules.over16],
     },
     {
       question: question(proxyTitle) + {
         guidance: guidance,
       },
-      when: [rules.isProxy, rules.over16(census_date)],
+      when: [rules.isProxy, rules.over16],
     },
     {
       question: question(nonProxyTitle),
@@ -69,7 +69,7 @@ function(census_date) {
       goto: {
         block: 'marriage-type',
         when: [
-          rules.over15(census_date),
+          rules.over15,
         ],
       },
     },

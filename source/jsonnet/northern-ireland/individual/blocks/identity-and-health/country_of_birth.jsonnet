@@ -54,7 +54,7 @@ local question(title) = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'country-of-birth',
   question_variants: [
@@ -83,7 +83,7 @@ function(census_date) {
     {
       goto: {
         block: 'passports',
-        when: [rules.under1(census_date)],
+        when: [rules.under1],
       },
     },
     {

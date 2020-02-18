@@ -63,7 +63,7 @@ local question(title) = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'no-religion',
   question_variants: [
@@ -80,7 +80,7 @@ function(census_date) {
     {
       goto: {
         block: 'health',
-        when: [rules.under3(census_date)],
+        when: [rules.under3],
       },
     },
     {

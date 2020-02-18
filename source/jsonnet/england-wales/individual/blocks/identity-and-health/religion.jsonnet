@@ -79,7 +79,7 @@ local question(title, region_code) = (
   }
 );
 
-function(region_code, census_date) {
+function(region_code) {
   type: 'Question',
   id: 'religion',
   question_variants: [
@@ -97,7 +97,7 @@ function(region_code, census_date) {
       goto: {
         block: 'passports',
         when: [
-          rules.under3(census_date),
+          rules.under3,
         ],
       },
     },

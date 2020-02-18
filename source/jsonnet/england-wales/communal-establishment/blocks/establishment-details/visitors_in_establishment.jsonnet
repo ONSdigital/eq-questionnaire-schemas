@@ -1,28 +1,28 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local guidance(census_date) = {
+local guidance = {
   contents: [
     {
       description: {
         text: '<em>Include</em> shift workers, for example, care workers, hotel porters, who are staying overnight on {census_date} as visitors',
         placeholders: [
-          placeholders.censusDate(census_date),
+          placeholders.censusDate,
         ],
       },
     },
   ],
 };
 
-local question(census_date) = {
+local question = {
   id: 'visitors-in-establishment-question',
   title: {
     text: 'Are any of the following visitors staying overnight in this establishment on {census_date}?',
     placeholders: [
-      placeholders.censusDate(census_date),
+      placeholders.censusDate,
     ],
   },
   type: 'MutuallyExclusive',
-  guidance: guidance(census_date),
+  guidance: guidance,
   mandatory: false,
   answers: [
     {
@@ -55,10 +55,10 @@ local question(census_date) = {
 };
 
 
-function(census_date) {
+{
   type: 'Question',
   id: 'visitors-in-establishment',
-  question: question(census_date),
+  question: question,
   routing_rules: [
     {
       goto: {

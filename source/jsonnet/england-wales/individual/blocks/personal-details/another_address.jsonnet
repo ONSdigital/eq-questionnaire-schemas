@@ -54,7 +54,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'another-address',
   question_variants: [
@@ -76,7 +76,7 @@ function(census_date) {
             id: 'another-address-answer',
             condition: 'not set',
           },
-          rules.under4(census_date),
+          rules.under4,
         ],
       },
     },
@@ -89,7 +89,7 @@ function(census_date) {
             condition: 'equals',
             value: 'No',
           },
-          rules.under4(census_date),
+          rules.under4,
         ],
       },
     },

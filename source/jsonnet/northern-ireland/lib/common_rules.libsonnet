@@ -1,52 +1,52 @@
-local over16(census_date) = {
+local over16 = {
   id: 'date-of-birth-answer',
   condition: 'less than or equal to',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -16,
     },
   },
 };
 
-local over5(census_date) = {
+local over5 = {
   id: 'date-of-birth-answer',
   condition: 'less than or equal to',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -5,
     },
   },
 };
 
-local under4(census_date) = {
+local under4 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -4,
     },
   },
 };
 
-local under3(census_date) = {
+local under3 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -3,
     },
   },
 };
 
-local under1(census_date) = {
+local under1 = {
   id: 'date-of-birth-answer',
   condition: 'greater than',
   date_comparison: {
-    value: census_date,
+    value: std.extVar('census_date'),
     offset_by: {
       years: -1,
     },

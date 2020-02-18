@@ -1,10 +1,10 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local anyoneElseOptionDescription(census_date) = {
+local anyoneElseOptionDescription = {
   text: 'Include partners, children, babies born on or before {census_date}, housemates, tenants and lodgers, students and schoolchildren who live away from home during term time, where this is their permanent or family home',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
 
@@ -83,7 +83,7 @@ local editQuestion(questionTitle) = {
   ],
 };
 
-function(census_date) {
+{
   id: 'anyone-else-list-collector',
   type: 'ListCollector',
   for_list: 'household',
@@ -110,7 +110,7 @@ function(census_date) {
               {
                 label: 'Yes, I need to add someone',
                 value: 'Yes, I need to add someone',
-                description: anyoneElseOptionDescription(census_date),
+                description: anyoneElseOptionDescription,
               },
               {
                 label: 'No, no one usually lives here',
@@ -137,7 +137,7 @@ function(census_date) {
               {
                 label: 'Yes, I need to add someone',
                 value: 'Yes, I need to add someone',
-                description: anyoneElseOptionDescription(census_date),
+                description: anyoneElseOptionDescription,
               },
               {
                 label: 'No, I do not need to add anyone',

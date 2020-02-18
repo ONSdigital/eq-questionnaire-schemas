@@ -1,20 +1,20 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local alreadySpentAnswerLabel(census_date) = {
+local alreadySpentAnswerLabel = {
   text: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
 
-local alreadyStayingAnswerLabel(census_date) = {
+local alreadyStayingAnswerLabel = {
   text: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
   placeholders: [
-    placeholders.censusDate(census_date),
+    placeholders.censusDate,
   ],
 };
 
-local question(census_date) = {
+local question = {
   id: 'live-in-establishment-question',
   title: 'Do any of the following currently live in this establishment?',
   type: 'MutuallyExclusive',
@@ -26,11 +26,11 @@ local question(census_date) = {
       type: 'Checkbox',
       options: [
         {
-          label: alreadySpentAnswerLabel(census_date),
+          label: alreadySpentAnswerLabel,
           value: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
         },
         {
-          label: alreadyStayingAnswerLabel(census_date),
+          label: alreadyStayingAnswerLabel,
           value: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
         },
         {
@@ -61,10 +61,10 @@ local question(census_date) = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'live-in-establishment',
-  question: question(census_date),
+  question: question,
   routing_rules: [
     {
       goto: {

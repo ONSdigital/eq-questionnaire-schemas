@@ -70,7 +70,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'disability-other',
   question_variants: [
@@ -87,13 +87,13 @@ function(census_date) {
     {
       goto: {
         group: 'submit-group',
-        when: [rules.under4(census_date)],
+        when: [rules.under4],
       },
     },
     {
       goto: {
         block: 'carer',
-        when: [rules.over5(census_date)],
+        when: [rules.over5],
       },
     },
     {

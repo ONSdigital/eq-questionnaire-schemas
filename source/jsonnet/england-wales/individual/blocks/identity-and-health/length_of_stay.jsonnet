@@ -33,7 +33,7 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'length-of-stay',
   question_variants: [
@@ -51,7 +51,7 @@ function(census_date) {
       goto: {
         block: 'national-identity',
         when: [
-          rules.under1(census_date),
+          rules.under1,
         ],
       },
     },

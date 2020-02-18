@@ -97,7 +97,7 @@ local question(title, region_code) = (
   }
 );
 
-function(region_code, census_date) {
+function(region_code) {
   type: 'Question',
   id: 'country-of-birth',
   question_variants: [
@@ -144,7 +144,7 @@ function(region_code, census_date) {
             condition: 'equals any',
             values: ['Wales', 'England', 'Scotland', 'Northern Ireland'],
           },
-          rules.under1(census_date),
+          rules.under1,
         ],
       },
     },

@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, census_date) = {
+local question(title) = {
   id: 'date-of-birth-question',
   description: '',
   type: 'MutuallyExclusive',
@@ -13,7 +13,7 @@ local question(title, census_date) = {
       mandatory: false,
       type: 'Date',
       minimum: {
-        value: census_date,
+        value: std.extVar('census_date'),
         offset_by: {
           years: -115,
         },
@@ -45,16 +45,16 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'date-of-birth',
   question_variants: [
     {
-      question: question(nonProxyTitle, census_date),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, census_date),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

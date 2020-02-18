@@ -32,17 +32,17 @@ local proxyTitle = {
   ],
 };
 
-function(census_date) {
+{
   type: 'Question',
   id: 'sex',
   question_variants: [
     {
       question: question(nonProxyTitle),
-      when: [rules.isNotProxy, rules.over16(census_date)],
+      when: [rules.isNotProxy, rules.over16],
     },
     {
       question: question(proxyTitle),
-      when: [rules.isProxy, rules.over16(census_date)],
+      when: [rules.isProxy, rules.over16],
     },
     {
       question: question(nonProxyTitle),
