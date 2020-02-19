@@ -35,9 +35,12 @@
           value: '4 or more',
           detail_answer: {
             id: 'number-of-vehicles-answer-other',
-            type: 'TextField',
+            type: 'Number',
             mandatory: false,
             label: 'Enter the number of cars or vans',
+            max_value: {
+              value: 20,
+            },
           },
         },
       ],
