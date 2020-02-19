@@ -50,23 +50,4 @@ local proxyTitle = {
       when: [rules.isProxy],
     },
   ],
-  routing_rules: [
-    {
-      goto: {
-        group: 'submit-group',
-        when: [
-          {
-            id: 'term-time-location-answer',
-            condition: 'equals',
-            value: 'At another address',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        group: 'identity-and-health-group',
-      },
-    },
-  ],
 }
