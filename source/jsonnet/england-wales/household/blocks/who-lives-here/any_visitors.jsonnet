@@ -9,6 +9,12 @@ local questionTitle = {
   ],
 };
 
+local exclusiveAnswerText = {
+  text: 'No, there are no visitors staying overnight on {census_date}',
+  placeholders: [
+    placeholders.censusDate,
+  ],
+};
 
 {
   type: 'ListCollectorDrivingQuestion',
@@ -87,8 +93,8 @@ local questionTitle = {
         type: 'Checkbox',
         options: [
           {
-            label: 'No, there are no visitors staying overnight on 13 October 2019',
-            value: 'No, there are no visitors staying overnight on 13 October 2019',
+            label: exclusiveAnswerText,
+            value: exclusiveAnswerText,
           },
         ],
       },
