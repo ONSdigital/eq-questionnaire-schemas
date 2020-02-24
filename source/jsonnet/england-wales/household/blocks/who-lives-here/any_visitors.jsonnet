@@ -94,7 +94,7 @@ local exclusiveAnswerText = {
         options: [
           {
             label: exclusiveAnswerText,
-            value: exclusiveAnswerText,
+            value: 'No, there are no visitors staying overnight on {census_date}',
           },
         ],
       },

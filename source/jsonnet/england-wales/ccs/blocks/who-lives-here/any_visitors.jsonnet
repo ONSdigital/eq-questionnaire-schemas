@@ -9,8 +9,11 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     type: 'General',
     id: 'any-visitors-question',
     title: {
-      text: 'How many visitors were staying in your household at {household_address} on 13 October 2019?',
-      placeholders: [placeholders.address],
+      text: 'How many visitors were staying in your household at {household_address} on {census_date}?',
+      placeholders: [
+        placeholders.address,
+        placeholders.censusDate,
+      ],
     },
     instruction: 'Tell respondent to turn to <strong>Showcard 13</strong>',
     guidance: {

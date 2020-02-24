@@ -25,10 +25,10 @@ local question(title) = {
 };
 
 local nonProxyUnder19Title = {
-   text: 'On {census_date}, were you a schoolchild or student in full-time education?',
-   placeholders: [
-     placeholders.censusDate,
-   ],
+  text: 'On {census_date}, were you a schoolchild or student in full-time education?',
+  placeholders: [
+    placeholders.censusDate,
+  ],
 };
 
 local proxyUnder19Title = {
@@ -41,9 +41,9 @@ local proxyUnder19Title = {
 
 local nonProxyOver19Title = {
   text: 'On {census_date}, were you a student in full-time education?',
-   placeholders: [
-     placeholders.censusDate,
-   ],
+  placeholders: [
+    placeholders.censusDate,
+  ],
 };
 
 local proxyOver19Title = {

@@ -1,9 +1,10 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
 local questionTitle = {
-  text: 'Was anyone in your current household usually living at {household_address} on Sunday 13 October 2019?',
+  text: 'Was anyone in your current household usually living at {household_address} on {census_date}?',
   placeholders: [
     placeholders.address,
+    placeholders.censusDate,
   ],
 };
 

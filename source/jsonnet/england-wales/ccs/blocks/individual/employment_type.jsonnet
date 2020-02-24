@@ -38,11 +38,18 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Which of the following describes what you were doing during the week of 7 to 13 October 2019?';
+local nonProxyTitle = {
+  text: 'Which of the following describes what you were doing during the week of 15 to {census_date}?',
+  placeholders: [
+    placeholders.censusDate,
+  ],
+};
+
 local proxyTitle = {
-  text: 'Which of the following describes what {person_name} was doing during the week of 7 to 13 October 2019?',
+  text: 'Which of the following describes what {person_name} was doing during the week of 15 to {census_date}?',
   placeholders: [
     placeholders.personName,
+    placeholders.censusDate,
   ],
 };
 
