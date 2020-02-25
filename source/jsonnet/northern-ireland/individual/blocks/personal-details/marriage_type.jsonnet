@@ -52,19 +52,6 @@ local question(title) = {
   ],
 };
 
-local gotoRule(blockId, whenValue) = {
-  goto: {
-    block: blockId,
-    when: [
-      {
-        id: 'marriage-type-answer',
-        condition: 'equals',
-        value: whenValue,
-      },
-    ],
-  },
-};
-
 local nonProxyTitle = 'What is your marital or same-sex civil partnership status?';
 
 local proxyTitle = {

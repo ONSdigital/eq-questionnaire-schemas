@@ -49,6 +49,16 @@
       },
     },
   },
+  nisraUnder4: {
+    id: 'date-of-birth-answer',
+    condition: 'greater than',
+    date_comparison: {
+      value: '2020-07-01',
+      offset_by: {
+        years: -4,
+      },
+    },
+  },
   mainJob: {
     id: 'employment-status-answer-exclusive',
     condition: 'not set',

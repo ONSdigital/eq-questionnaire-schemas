@@ -55,7 +55,7 @@ local proxyTitle = {
     {
       goto: {
         group: 'identity-and-health-group',
-        when: [rules.under4],
+        when: [rules.nisraUnder4],
       },
     },
     {
