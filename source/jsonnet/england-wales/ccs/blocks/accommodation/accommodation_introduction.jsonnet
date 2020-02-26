@@ -7,7 +7,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     contents: [
       {
         description: {
-          text: 'In this section, I’m going to ask you about the household and accommodation you were living in on {census_date}.',
+          text: 'In this section, I’m going to ask you about the household and accommodation you were living in on Sunday {census_date}.',
           placeholders: [
             placeholders.censusDate,
           ],

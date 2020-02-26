@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local nonProxyTitle = {
-  text: 'Is there another UK address where you may have been included on a census questionnaire because you were a usual resident, or staying overnight there on {census_date}?',
+  text: 'Is there another UK address where you may have been included on a census questionnaire because you were a usual resident, or staying overnight there on Sunday {census_date}?',
   placeholders: [
     placeholders.censusDate,
   ],
 };
 local proxyTitle = {
-  text: 'Is there another UK address where {person_name} may have been included on a census questionnaire because they were a usual resident, or staying overnight there on {census_date}?',
+  text: 'Is there another UK address where {person_name} may have been included on a census questionnaire because they were a usual resident, or staying overnight there on Sunday {census_date}?',
   placeholders: [
     placeholders.personName,
     placeholders.censusDate,
