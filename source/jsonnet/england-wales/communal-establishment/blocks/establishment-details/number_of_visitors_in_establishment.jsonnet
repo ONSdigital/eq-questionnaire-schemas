@@ -20,7 +20,7 @@ local question = {
       label: 'Number of visitors',
       mandatory: false,
       type: 'Number',
-      min_value: {
+      minimum: {
         value: 0,
       },
     },

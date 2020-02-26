@@ -20,7 +20,7 @@
       label: 'Number of residents',
       mandatory: false,
       type: 'Number',
-      min_value: {
+      minimum: {
         value: 0,
       },
     }],
