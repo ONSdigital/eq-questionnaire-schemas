@@ -21,8 +21,8 @@ local who_lives_here_interstitial = import 'household/blocks/who-lives-here/who_
 local who_lives_here_section_summary = import 'household/blocks/who-lives-here/who_lives_here_section_summary.jsonnet';
 
 // Relationships
-local relationships_collector = import 'household/blocks/who-lives-here/relationships_collector.jsonnet';
-local relationships_interstitial = import 'household/blocks/who-lives-here/relationships_interstitial.jsonnet';
+local relationships_collector = import 'household/blocks/relationships/relationships_collector.jsonnet';
+local relationships_interstitial = import 'household/blocks/relationships/relationships_interstitial.jsonnet';
 
 // Personal Details
 local individual_interstitial = import 'household/blocks/individual/individual_interstitial.jsonnet';
@@ -140,7 +140,7 @@ function(region_code, census_month_year_date) {
   ],
   hub: {
     enabled: true,
-    required_completed_sections: ['who-lives-here-section'],
+    required_completed_sections: ['who-lives-here-section', 'relationships-section'],
   },
   sections: [
     {
@@ -158,6 +158,19 @@ function(region_code, census_month_year_date) {
             any_visitors,
             visitor_list_collector,
             who_lives_here_section_summary,
+          ],
+        },
+      ],
+    },
+    {
+      id: 'relationships-section',
+      title: 'Relationships',
+      show_on_hub: false,
+      groups: [
+        {
+          id: 'relationships-group',
+          title: 'Relationships',
+          blocks: [
             relationships_interstitial,
             relationships_collector,
           ],
