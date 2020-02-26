@@ -14,8 +14,8 @@ local question(title) = {
       minimum: {
         value: {
           source: 'answers',
-          identifier: 'date-of-birth-answer'
-        }
+          identifier: 'date-of-birth-answer',
+        },
       },
       maximum: {
         value: 'now',
