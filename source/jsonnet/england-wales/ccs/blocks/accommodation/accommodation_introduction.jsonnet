@@ -1,4 +1,5 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
+
 {
   type: 'Interstitial',
   id: 'accommodation-introduction',
