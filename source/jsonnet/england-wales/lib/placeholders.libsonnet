@@ -54,4 +54,16 @@
       },
     }],
   },
+  yearBeforeCensusDate: {
+    placeholder: 'year_before_census_date',
+    transforms: [{
+      transform: 'format_date',
+      arguments: {
+        date_to_format: {
+          value: '2020-03-21',
+        },
+        date_format: 'd MMMM yyyy',
+      },
+    }],
+  },
 }

@@ -15,14 +15,6 @@ local proxyTitle = {
   ],
 };
 
-local description = {
-  text: 'Moved since {census_date}',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
-
 local question(title) = {
   id: 'another-uk-address',
   title: title,
@@ -38,7 +30,12 @@ local question(title) = {
         {
           label: 'Previous home',
           value: 'Previous home',
-          description: description,
+          description: {
+            text: 'Moved since {census_date}',
+            placeholders: [
+              placeholders.censusDate,
+            ],
+          },
         },
         {
           label: 'Armed forces base address',

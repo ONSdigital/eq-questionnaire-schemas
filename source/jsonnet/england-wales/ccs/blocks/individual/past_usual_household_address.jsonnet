@@ -33,11 +33,17 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'One year ago, on 21 March 2020, what was your usual address?';
+local nonProxyTitle = {
+  text: 'One year ago, on {year_before_census_date}, what was your usual address?',
+  placeholders: [
+    placeholders.yearBeforeCensusDate,
+  ],
+};
 local proxyTitle = {
-  text: 'One year ago, on 21 March 2020, what was {person_name_possessive} usual address?',
+  text: 'One year ago, on {year_before_census_date}, what was {person_name_possessive} usual address?',
   placeholders: [
     placeholders.personNamePossessive,
+    placeholders.yearBeforeCensusDate,
   ],
 };
 
