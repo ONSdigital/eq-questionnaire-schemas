@@ -21,7 +21,7 @@ local contentDescription = {
         list: [
           'Names of the people living at this address including anyone temporarily away or who has been or intends to be in the UK for 3 months or more.',
           {
-            text: 'Names of visitors staying overnight at this address on {census_date} ',
+            text: 'Names of visitors staying overnight at this address on {census_date}',
             placeholders: [
               placeholders.censusDate,
             ],

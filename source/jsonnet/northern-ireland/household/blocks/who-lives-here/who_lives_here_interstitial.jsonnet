@@ -7,13 +7,6 @@ local contentDescription = {
   ],
 };
 
-local optionDescription = {
-  text: 'Names of visitors staying overnight at this address on {census_date}',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
 {
   type: 'Interstitial',
   id: 'who-lives-here-interstitial',
@@ -27,7 +20,12 @@ local optionDescription = {
         title: 'You will need to know',
         list: [
           'Names of the people living at this address including anyone temporarily away or who has been or intends to be in the UK for 3 months or more.',
-          optionDescription,
+          {
+            text: 'Names of visitors staying overnight at this address on {census_date}',
+            placeholders: [
+              placeholders.censusDate,
+            ],
+          },
         ],
       },
     ],
