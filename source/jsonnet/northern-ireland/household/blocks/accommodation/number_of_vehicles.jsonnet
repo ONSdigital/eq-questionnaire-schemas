@@ -38,7 +38,7 @@
             type: 'Number',
             mandatory: false,
             label: 'Enter the number of cars or vans',
-            max_value: {
+            maximum: {
               value: 20,
             },
           },

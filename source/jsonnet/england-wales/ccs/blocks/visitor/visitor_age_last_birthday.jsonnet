@@ -18,10 +18,10 @@ local rules = import 'rules.libsonnet';
         label: 'Age',
         mandatory: false,
         type: 'Number',
-        min_value: {
+        minimum: {
           value: 0,
         },
-        max_value: {
+        maximum: {
           value: 115,
         },
       },

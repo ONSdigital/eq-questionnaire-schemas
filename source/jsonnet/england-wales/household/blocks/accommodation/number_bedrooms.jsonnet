@@ -15,7 +15,7 @@
       label: 'Number of bedrooms',
       mandatory: false,
       type: 'Number',
-      max_value: {
+      maximum: {
         value: 99,
       },
     }],

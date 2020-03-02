@@ -1,6 +1,6 @@
 name: PR
 
-on: 
+on:
   pull_request
 
 jobs:
@@ -53,16 +53,12 @@ jobs:
   validate-schemas:
     needs: build
     runs-on: ubuntu-latest
-    services:
-      validator:
-        image: onsdigital/eq-questionnaire-validator:remove-hard-coded-census-date
-        ports:
-          - 5001:5000
     steps:
       - uses: actions/checkout@v2
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
+      - run: make run-validator
       - name: Validate schemas
         run: make validate-schemas

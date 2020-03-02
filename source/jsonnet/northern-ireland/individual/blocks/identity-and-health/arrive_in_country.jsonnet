@@ -11,7 +11,10 @@ local question(title) = {
       mandatory: false,
       type: 'YearDate',
       minimum: {
-        answer_id: 'date-of-birth-answer',
+        value: {
+          source: 'answers',
+          identifier: 'date-of-birth-answer',
+        },
       },
       maximum: {
         value: 'now',
