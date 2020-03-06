@@ -31,6 +31,7 @@ local question(title, region_code) = (
       {
         id: 'employers-business-answer',
         label: 'Main activity',
+        max_length: 120,
         mandatory: false,
         type: 'TextField',
       },

@@ -28,6 +28,7 @@ local question(title, label) = {
           value: 'No',
           detail_answer: {
             id: 'birth-gender-answer-other',
+            max_length: 100,
             type: 'TextField',
             mandatory: false,
             label: label,
