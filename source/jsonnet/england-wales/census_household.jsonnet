@@ -176,6 +176,17 @@ function(region_code, census_month_year_date) {
           ],
         },
       ],
+      "enabled": [
+        {
+          "when": [
+            {
+              "list": "household",
+              "condition": "greater than",
+              "value": 1
+            }
+          ]
+        }
+      ],
     },
     {
       id: 'accommodation-section',

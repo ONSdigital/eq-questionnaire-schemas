@@ -70,17 +70,6 @@ local firstPersonNamePossessivePlaceholder = {
   id: 'relationships',
   title: 'Household relationships',
   for_list: 'household',
-  skip_conditions: [
-    {
-      when: [
-        {
-          list: 'household',
-          condition: 'less than',
-          value: 2,
-        },
-      ],
-    },
-  ],
   question_variants: [
     {
       question: {
