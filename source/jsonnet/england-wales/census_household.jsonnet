@@ -176,16 +176,16 @@ function(region_code, census_month_year_date) {
           ],
         },
       ],
-      "enabled": [
+      enabled: [
         {
-          "when": [
+          when: [
             {
-              "list": "household",
-              "condition": "greater than",
-              "value": 1
-            }
-          ]
-        }
+              list: 'household',
+              condition: 'greater than',
+              value: 1,
+            },
+          ],
+        },
       ],
     },
     {
