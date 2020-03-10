@@ -40,7 +40,7 @@ def translate_schemas(runner_directory):
             schema_path = f"{runner_directory}/schemas/en/{schema_file}"
 
             handle_translate_schema(
-                schema_path, f"{language_dir}/{translation_file}", f"{output_dir}"
+                schema_path, f"{language_dir}/{translation_file}", output_dir, language
             )
 
 
