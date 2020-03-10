@@ -1,17 +1,6 @@
 {
   type: 'Interstitial',
   id: 'relationships-interstitial',
-  skip_conditions: [
-    {
-      when: [
-        {
-          list: 'household',
-          condition: 'less than',
-          value: 2,
-        },
-      ],
-    },
-  ],
   content: {
     title: 'Household relationships',
     contents: [

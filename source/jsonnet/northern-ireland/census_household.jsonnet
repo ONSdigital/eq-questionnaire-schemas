@@ -163,6 +163,17 @@ function(region_code) {
           ],
         },
       ],
+      enabled: [
+        {
+          when: [
+            {
+              list: 'household',
+              condition: 'greater than',
+              value: 1,
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'accommodation-section',
