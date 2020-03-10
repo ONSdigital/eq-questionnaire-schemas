@@ -10,6 +10,7 @@ local question(title, description) = {
     {
       id: 'job-title-answer',
       label: 'Job title',
+      max_length: 120,
       mandatory: false,
       type: 'TextField',
     },

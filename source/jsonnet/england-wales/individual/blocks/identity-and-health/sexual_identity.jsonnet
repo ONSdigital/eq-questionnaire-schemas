@@ -36,6 +36,7 @@ local question(title, label) = {
           value: 'Other sexual orientation',
           detail_answer: {
             id: 'sexual-identity-answer-other',
+            max_length: 100,
             type: 'TextField',
             mandatory: false,
             label: label,
