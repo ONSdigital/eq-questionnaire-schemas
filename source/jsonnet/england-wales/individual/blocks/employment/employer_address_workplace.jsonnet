@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, guidanceHeader, guidanceDescription) = {
+local question(title, guidanceHeader, guidanceContent) = {
   id: 'employer-address-workplace-question',
   title: title,
   type: 'General',
@@ -38,19 +38,22 @@ local question(title, guidanceHeader, guidanceDescription) = {
       guidance: {
         show_guidance: guidanceHeader,
         hide_guidance: guidanceHeader,
-        contents: [
-          {
-            description: guidanceDescription,
-          },
-        ],
+        contents: guidanceContent,
       },
     },
   ],
 };
 
 local nonProxyTitle = 'What is the address of your workplace?';
-local nonProxyguidanceHeader = 'Why your answer is important';
-local nonProxyGuidanceDescription = 'Your answer will help your community by allowing the government and councils to understand commuting patterns.<br><br>Information about your workplace address and how you travel to work are used together to work out local public transport needs, develop transport policies and plan services.';
+local nonProxyGuidanceHeader = 'Why your answer is important';
+local nonProxyGuidanceContent = [
+  {
+    description: 'Your answer will help your community by allowing the government and councils to understand commuting patterns.',
+  },
+  {
+    description: 'Information about your workplace address and how you travel to work are used together to work out local public transport needs, develop transport policies and plan services.',
+  },
+];
 
 local proxyTitle = {
   text: 'What is the address of <em>{person_name_possessive}</em> workplace?',
@@ -58,20 +61,26 @@ local proxyTitle = {
     placeholders.personNamePossessive,
   ],
 };
-local proxyguidanceHeader = 'Why their answer is important';
-local proxyGuidanceDescription = 'Their answer will help their community by allowing the government and councils to understand commuting patterns.<br><br>Information about their workplace address and how they travel to work are used together to work out local public transport needs, develop transport policies and plan services.';
-
+local proxyGuidanceHeader = 'Why their answer is important';
+local proxyGuidanceContent = [
+  {
+    description: 'Their answer will help your community by allowing the government and councils to understand commuting patterns.',
+  },
+  {
+    description: 'Information about their workplace address and how they travel to work are used together to work out local public transport needs, develop transport policies and plan services.',
+  },
+];
 
 {
   type: 'Question',
   id: 'employer-address-workplace',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyguidanceHeader, nonProxyGuidanceDescription),
+      question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyGuidanceContent),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyguidanceHeader, proxyGuidanceDescription),
+      question: question(proxyTitle, proxyGuidanceHeader, proxyGuidanceContent),
       when: [rules.isProxy],
     },
   ],
