@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, guidanceHeader, guidanceDescription) = {
   id: 'armed-forces-question',
   title: title,
   guidance: {
@@ -19,11 +19,11 @@ local question(title) = {
       mandatory: false,
       type: 'Checkbox',
       guidance: {
-        show_guidance: 'Why your answer is important',
-        hide_guidance: 'Why your answer is important',
+        show_guidance: guidanceHeader,
+        hide_guidance: guidanceHeader,
         contents: [
           {
-            description: 'We are measuring the number of people who have served in the UK Armed Forces and have now left. Government and councils need this information to carry out their commitments made under the Armed Forces Covenant. This is a promise by the nation ensuring that those who serve or who have served in the armed forces, and their families, are not disadvantaged.',
+            description: guidanceDescription,
           },
         ],
       },
@@ -53,23 +53,28 @@ local question(title) = {
 };
 
 local nonProxyTitle = 'Have you previously served in the UK Armed Forces?';
+local nonProxyGuidanceHeader = 'Why your answer is important';
+local nonProxyGuidanceDescription = 'Your answer will help your local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.<br><br>Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation to ensure that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.';
+
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> previously served in the UK Armed Forces?',
   placeholders: [
     placeholders.personName,
   ],
 };
+local proxyGuidanceHeader = 'Why their answer is important';
+local proxyGuidanceDescription = 'Their answer will help their local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.<br><br>Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation to ensure that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.';
 
 {
   type: 'Question',
   id: 'armed-forces',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyGuidanceDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyGuidanceHeader, proxyGuidanceDescription),
       when: [rules.isProxy],
     },
   ],

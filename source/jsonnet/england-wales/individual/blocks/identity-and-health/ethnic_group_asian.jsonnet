@@ -1,7 +1,10 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+
+local question(title, definitionDescription) = {
   id: 'asian-ethnic-group-question',
   title: title,
   type: 'General',
@@ -12,7 +15,7 @@ local question(title) = {
         hide_guidance: 'Why your answer is important',
         contents: [
           {
-            description: 'Your answer will help to support equality and fairness in your community. Councils and government use information on ethnic group to make sure they',
+            description: definitionDescription,
             list: [
               'provide services and share funding fairly',
               'understand and represent everyone’s interests',
@@ -69,11 +72,11 @@ local proxyTitle = {
   id: 'asian-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyDefinitionDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyDefinitionDescription),
       when: [rules.isProxy],
     },
   ],

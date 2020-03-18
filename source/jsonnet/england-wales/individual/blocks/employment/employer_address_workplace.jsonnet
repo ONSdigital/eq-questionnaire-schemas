@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, guidanceHeader, guidanceDescription) = {
   id: 'employer-address-workplace-question',
   title: title,
   type: 'General',
@@ -36,11 +36,11 @@ local question(title) = {
       mandatory: false,
       type: 'TextField',
       guidance: {
-        show_guidance: 'Why your answer is important',
-        hide_guidance: 'Why your answer is important',
+        show_guidance: guidanceHeader,
+        hide_guidance: guidanceHeader,
         contents: [
           {
-            description: 'The government uses information about workplace address and method of travel to work to form transport policies and plan services. The information helps to work out local transport needs.',
+            description: guidanceDescription,
           },
         ],
       },
@@ -49,23 +49,29 @@ local question(title) = {
 };
 
 local nonProxyTitle = 'What is the address of your workplace?';
+local nonProxyguidanceHeader = 'Why your answer is important';
+local nonProxyGuidanceDescription = 'Your answer will help your community by allowing the government and councils to understand commuting patterns.<br><br>Information about your workplace address and how you travel to work are used together to work out local public transport needs, develop transport policies and plan services.';
+
 local proxyTitle = {
   text: 'What is the address of <em>{person_name_possessive}</em> workplace?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
 };
+local proxyguidanceHeader = 'Why their answer is important';
+local proxyGuidanceDescription = 'Their answer will help their community by allowing the government and councils to understand commuting patterns.<br><br>Information about their workplace address and how they travel to work are used together to work out local public transport needs, develop transport policies and plan services.';
+
 
 {
   type: 'Question',
   id: 'employer-address-workplace',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyguidanceHeader, nonProxyGuidanceDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyguidanceHeader, proxyGuidanceDescription),
       when: [rules.isProxy],
     },
   ],
