@@ -13,7 +13,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     type: 'General',
     definitions: [{
-      title: 'What we mean by "communal establishment?"',
+      title: 'What we mean by “communal establishment”',
       contents: [
         {
           description: 'This is a place providing managed residential accommodation. “Managed” here means full-time or part-time supervision of the accommodation',

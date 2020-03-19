@@ -9,8 +9,8 @@ local proxyTitle = {
   ],
 };
 
-local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
-local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local nonProxyDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local proxyDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
 local englandDescription = 'Includes British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background';
 local walesDescription = 'Includes Welsh, British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background';
@@ -65,7 +65,7 @@ local walesBlackEthnicityRoutingRule = {
   ],
 };
 
-local question(title, region_code, definitionDescription) = (
+local question(title, description, region_code) = (
   local regionDescription = if region_code == 'GB-WLS' then walesDescription else englandDescription;
   local asianEthnicityLabel = if region_code == 'GB-WLS' then walesAsianEthnicityLabel else englandAsianEthnicityLabel;
   local blackEthnicityLabel = if region_code == 'GB-WLS' then walesBlackEthnicityLabel else englandBlackEthnicityLabel;
@@ -80,7 +80,7 @@ local question(title, region_code, definitionDescription) = (
           hide_guidance: 'Why your answer is important',
           contents: [
             {
-              description: definitionDescription,
+              description: description,
               list: [
                 'provide services and share funding fairly',
                 'understand and represent everyone’s interests',
@@ -131,11 +131,11 @@ function(region_code) (
     id: 'ethnic-group',
     question_variants: [
       {
-        question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code),
+        question: question(nonProxyTitle, nonProxyDescription, region_code),
         when: [rules.isNotProxy],
       },
       {
-        question: question(proxyTitle, proxyDefinitionDescription, region_code),
+        question: question(proxyTitle, proxyDescription, region_code),
         when: [rules.isProxy],
       },
     ],

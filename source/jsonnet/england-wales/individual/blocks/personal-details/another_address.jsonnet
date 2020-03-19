@@ -7,7 +7,7 @@ local question(title) = {
   type: 'General',
   definitions: [
     {
-      title: 'What we mean by “another address”?',
+      title: 'What we mean by “another address”',
       contents: [
         {
           description: 'This is a single address that is different to the one at the start of this questionnaire. This might be another parent or guardian’s address, a term-time address, a partner’s address or a holiday home.',
