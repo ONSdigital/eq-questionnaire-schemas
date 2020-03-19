@@ -12,7 +12,10 @@ local proxyTitle = {
 local englandOption = 'English, Welsh, Scottish, Northern Irish or British';
 local walesOption = 'Welsh, English, Scottish, Northern Irish or British';
 
-local question(title, region_code) = (
+local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+
+local question(title, region_code, definitionDescription) = (
   local radioOptions = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'white-ethnic-group-question',
@@ -25,7 +28,7 @@ local question(title, region_code) = (
           hide_guidance: 'Why your answer is important',
           contents: [
             {
-              description: 'Your answer will help to support equality and fairness in your community. Councils and government use information on ethnic group to make sure they',
+              description: definitionDescription,
               list: [
                 'provide services and share funding fairly',
                 'understand and represent everyone’s interests',
@@ -75,11 +78,11 @@ function(region_code) {
   id: 'white-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(proxyTitle, proxyDefinitionDescription, region_code),
       when: [rules.isProxy],
     },
   ],

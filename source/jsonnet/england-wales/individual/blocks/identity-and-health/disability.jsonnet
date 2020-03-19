@@ -33,7 +33,7 @@ local question(title, definitionContent) = {
 local nonProxyTitle = 'Do you have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?';
 local nonProxyDefinitionContent = [
   {
-    description: 'This refers to health conditions, illnesses or impairments you may have.',
+    description: 'This is about to health conditions, illnesses or impairments you may have.',
   },
   {
     description: 'Consider conditions that always affect you and those that flare up from time to time. These may include, for example, sensory conditions, developmental conditions or learning impairments.',
@@ -47,7 +47,7 @@ local proxyTitle = {
 };
 local proxyDefinitionContent = [
   {
-    description: 'This refers to health conditions, illnesses or impairments they may have.',
+    description: 'This is about to health conditions, illnesses or impairments they may have.',
   },
   {
     description: 'Consider conditions that always affect them and those that flare up from time to time. These may include, for example, sensory conditions, developmental conditions or learning impairments.',

@@ -12,7 +12,13 @@ local question(title, guidanceHeader) = {
         hide_guidance: guidanceHeader,
         contents: [
           {
-            description: 'To get a true picture of the UK working population, we ask this question of everyone who is not currently working. We ask people who are retired because the number of people continuing to work after retirement age is increasing. We ask people who are long-term sick or disabled because some intend to go back to work.',
+            description: 'To get a true picture of the working population, we ask this question of everyone who is not currently working.',
+          },
+          {
+            description: 'We ask people who are retired because the number of people continuing to work after retirement is increasing.',
+          },
+          {
+            description: 'We ask people who are not working due to long-term illness or disability because some intend to go back to work.',
           },
         ],
       },
@@ -40,8 +46,9 @@ local proxyTitle = {
     placeholders.personName,
   ],
 };
-local nonProxyGuidanceHeader = 'Why do I need to answer if I am retired or long-term sick or disabled?';
-local proxyGuidanceHeader = 'Why do I need to answer if they have retired or are long-term sick or disabled?';
+
+local nonProxyGuidanceHeader = 'Why we ask this question if you are retired or long-term sick or disabled';
+local proxyGuidanceHeader = 'Why we ask this question if they are retired or long-term sick or disabled';
 
 {
   type: 'Question',
