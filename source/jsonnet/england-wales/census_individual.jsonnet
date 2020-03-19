@@ -81,6 +81,7 @@ local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [under
 
 function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
+  language: 'en',
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'census',

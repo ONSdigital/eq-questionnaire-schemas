@@ -101,6 +101,7 @@ local visitor_interstitial = import 'household/blocks/visitor/visitor_interstiti
 
 function(region_code) {
   mime_type: 'application/json/ons/eq',
+  language: 'en',
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'census',
