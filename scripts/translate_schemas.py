@@ -33,7 +33,7 @@ def translate_schemas(runner_directory):
             output_dir = f"{runner_directory}/schemas/{language}"
             language_dir = f"{runner_directory}/translations/{language}"
 
-            logger.info("\n-------"
+            logger.info("\n-------\n"
                         "Building %s/%s", relative_dir, schema_file)
 
             os.makedirs(relative_dir, exist_ok=True)
