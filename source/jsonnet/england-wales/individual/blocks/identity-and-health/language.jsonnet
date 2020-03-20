@@ -25,8 +25,8 @@ local walesOption = {
   value: walesString,
 };
 
-local nonProxyDefinitionDescription = 'Your main language is the language you use most naturally. It could be the language you use at home.';
-local proxyDefinitionDescription = 'Their main language is the language they use most naturally. It could be the language they use at home.';
+local nonProxyDefinitionDescription = 'This is the language you use most naturally. For example, it could be the language you use at home.';
+local proxyDefinitionDescription = 'This the language they use most naturally. For example, it could be the language they use at home.';
 
 local routing(region_code) = (
   local regionValue = if region_code == 'GB-WLS' then walesString else englandString;
@@ -49,7 +49,7 @@ local question(title, definitionDescription, region_code) = (
     title: title,
     type: 'General',
     definitions: [{
-      title: 'What do we mean by “main language”?',
+      title: 'What we mean by “main language”',
       contents: [
         {
           description: definitionDescription,

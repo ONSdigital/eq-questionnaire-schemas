@@ -1,7 +1,10 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(englandTitle, walesTitle, region_code) = (
+local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+
+local question(englandTitle, walesTitle, region_code, definitionDescription) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
   {
     id: 'black-ethnic-group-question',
@@ -14,7 +17,7 @@ local question(englandTitle, walesTitle, region_code) = (
           hide_guidance: 'Why your answer is important',
           contents: [
             {
-              description: 'Your answer will help to support equality and fairness in your community. Councils and government use information on ethnic group to make sure they',
+              description: definitionDescription,
               list: [
                 'provide services and share funding fairly',
                 'understand and represent everyone’s interests',
@@ -78,11 +81,11 @@ function(region_code) {
   id: 'black-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code),
+      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyEnglandTitle, proxyWalesTitle, region_code),
+      question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription),
       when: [rules.isProxy],
     },
   ],
