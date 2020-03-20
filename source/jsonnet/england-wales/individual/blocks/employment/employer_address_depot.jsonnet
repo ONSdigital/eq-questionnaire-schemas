@@ -64,7 +64,7 @@ local proxyTitle = {
 local proxyGuidanceHeader = 'Why their answer is important';
 local proxyGuidanceContent = [
   {
-    description: 'Their answer will help your community by allowing the government and councils to understand commuting patterns.',
+    description: 'Their answer will help their community by allowing the government and councils to understand commuting patterns.',
   },
   {
     description: 'Information about their workplace address and how they travel to work are used together to work out local public transport needs, develop transport policies and plan services.',

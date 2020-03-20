@@ -26,7 +26,7 @@ local walesOption = {
 };
 
 local nonProxyDefinitionDescription = 'This is the language you use most naturally. For example, it could be the language you use at home.';
-local proxyDefinitionDescription = 'This the language they use most naturally. For example, it could be the language they use at home.';
+local proxyDefinitionDescription = 'This is the language they use most naturally. For example, it could be the language they use at home.';
 
 local routing(region_code) = (
   local regionValue = if region_code == 'GB-WLS' then walesString else englandString;
