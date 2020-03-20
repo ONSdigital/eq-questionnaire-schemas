@@ -12,10 +12,10 @@ local proxyTitle = {
 local englandOption = 'English, Welsh, Scottish, Northern Irish or British';
 local walesOption = 'Welsh, English, Scottish, Northern Irish or British';
 
-local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
-local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local nonProxyDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
+local proxyDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, region_code, definitionDescription) = (
+local question(title, description, region_code) = (
   local radioOptions = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'white-ethnic-group-question',
@@ -28,7 +28,7 @@ local question(title, region_code, definitionDescription) = (
           hide_guidance: 'Why your answer is important',
           contents: [
             {
-              description: definitionDescription,
+              description: description,
               list: [
                 'provide services and share funding fairly',
                 'understand and represent everyone’s interests',
@@ -78,11 +78,11 @@ function(region_code) {
   id: 'white-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code),
+      question: question(nonProxyTitle, nonProxyDescription, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionDescription, region_code),
+      question: question(proxyTitle, proxyDescription, region_code),
       when: [rules.isProxy],
     },
   ],
