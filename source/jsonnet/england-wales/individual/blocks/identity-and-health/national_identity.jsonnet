@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local nonProxyTitle = 'How would you describe your national identity?';
-local nonProxyDescription = 'This relates to where you feel you belong, such as the country or countries you think of as home. <br><br> This could be different from your citizenship or ethnic group.';
+local nonProxyDescription = 'This relates to where you feel you belong, such as the country or countries you think of as home.<br><br>This could be different from your citizenship or ethnic group.';
 
 local proxyTitle = {
   text: 'How would <em>{person_name}</em> describe their national identity?',
