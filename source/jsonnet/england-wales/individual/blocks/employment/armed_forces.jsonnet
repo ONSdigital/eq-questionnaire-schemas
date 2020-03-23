@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, guidanceHeader, guidanceContent) = {
+local question(title, guidanceHeader, description) = {
   id: 'armed-forces-question',
   title: title,
   guidance: {
@@ -21,7 +21,14 @@ local question(title, guidanceHeader, guidanceContent) = {
       guidance: {
         show_guidance: guidanceHeader,
         hide_guidance: guidanceHeader,
-        contents: guidanceContent,
+        contents: [
+          {
+            description: description,
+          },
+          {
+            description: 'Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation to ensure that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.',
+          },
+        ],
       },
       options: [
         {
@@ -50,14 +57,7 @@ local question(title, guidanceHeader, guidanceContent) = {
 
 local nonProxyTitle = 'Have you previously served in the UK Armed Forces?';
 local nonProxyGuidanceHeader = 'Why your answer is important';
-local nonProxyGuidanceContent = [
-  {
-    description: 'Your answer will help your local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.',
-  },
-  {
-    description: 'Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation to ensure that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.',
-  },
-];
+local nonProxyDescription = 'Your answer will help your local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.';
 
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> previously served in the UK Armed Forces?',
@@ -66,25 +66,18 @@ local proxyTitle = {
   ],
 };
 local proxyGuidanceHeader = 'Why their answer is important';
-local proxyGuidanceContent = [
-  {
-    description: 'Their answer will help their local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.',
-  },
-  {
-    description: 'Councils and government will use this information to carry out the commitments they made under the Armed Forces Covenant. This is a promise by the nation to ensure that those who serve or who have served in the UK Armed Forces, and their families, are not disadvantaged.',
-  },
-];
+local proxyDescription = 'Their answer will help their local community by providing information needed to support people who used to serve in the UK Armed Forces but have now left.';
 
 {
   type: 'Question',
   id: 'armed-forces',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyGuidanceContent),
+      question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyGuidanceHeader, proxyGuidanceContent),
+      question: question(proxyTitle, proxyGuidanceHeader, proxyDescription),
       when: [rules.isProxy],
     },
   ],
