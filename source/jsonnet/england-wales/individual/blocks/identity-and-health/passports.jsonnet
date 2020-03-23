@@ -34,13 +34,7 @@ local question(title, label, definitionContent) = {
         {
           label: 'Other',
           value: 'Other',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'passport-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: label,
-          },
+          description: 'You can enter your passports on the next question',
         },
       ],
     },
@@ -81,6 +75,42 @@ local proxyLabel = 'Enter passports held';
     {
       question: question(proxyTitle, proxyLabel, proxyDefinitionContent),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'passports-additional-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains any',
+            value: ['United Kingdom', 'Ireland'],
+          },
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'passports-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'health',
+      },
     },
   ],
 }

@@ -34,13 +34,7 @@ local englandOptions = {
     {
       label: 'Elsewhere',
       value: 'Elsewhere',
-      description: 'Select to enter answer',
-      detail_answer: {
-        id: 'country-of-birth-answer-other',
-        type: 'TextField',
-        mandatory: false,
-        label: 'Enter the current name of the country',
-      },
+      description: 'You can enter your country of birth on the next question',
     },
   ],
 };
@@ -70,13 +64,7 @@ local walesOptions = {
     {
       label: 'Elsewhere',
       value: 'Elsewhere',
-      description: 'Select to enter answer',
-      detail_answer: {
-        id: 'country-of-birth-answer-other',
-        type: 'TextField',
-        mandatory: false,
-        label: 'Enter the current name of the country',
-      },
+      description: 'You can enter your country of birth on the next question',
     },
   ],
 };
@@ -113,7 +101,7 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'arrive-in-country',
+        block: 'country-of-birth-elsewhere',
         when: [
           {
             id: 'country-of-birth-answer',

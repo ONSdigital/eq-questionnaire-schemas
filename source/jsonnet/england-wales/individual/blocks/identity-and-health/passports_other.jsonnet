@@ -2,22 +2,23 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'mainly-work-outside-uk-question',
+  id: 'passports-other-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'mainly-work-outside-uk-answer',
-      label: 'Current name of country',
+      id: 'passports-other-answer',
+      label: 'Passports',
+      description: 'Enter your own answer or select from suggestions',
       mandatory: false,
       type: 'TextField',
     },
   ],
 };
 
-local nonProxyTitle = 'Which country outside of the UK do you mainly work in?';
+local nonProxyTitle = 'You selected "Other". What passports do you hold?';
 local proxyTitle = {
-  text: 'In which country outside the UK does <em>{person_name}</em> mainly work?',
+  text: 'You selected "Other". What passports does {person_name} hold?',
   placeholders: [
     placeholders.personName,
   ],
@@ -25,7 +26,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'mainly-work-outside-uk',
+  id: 'passports-other',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -34,6 +35,13 @@ local proxyTitle = {
     {
       question: question(proxyTitle),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'health',
+      },
     },
   ],
 }

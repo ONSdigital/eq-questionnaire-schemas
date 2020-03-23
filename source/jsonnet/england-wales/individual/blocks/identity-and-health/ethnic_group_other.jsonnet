@@ -30,13 +30,7 @@ local question(title) = {
         {
           label: 'Any other ethnic group',
           value: 'Any other ethnic group',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'other-ethnic-group-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Enter other ethnic group',
-          },
+          description: 'You can enter their ethnic group or background on the next question',
         },
       ],
       type: 'Radio',
@@ -66,6 +60,18 @@ local proxyTitle = {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-other-other',
+        when: [
+          {
+            id: 'other-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other ethnic group',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

@@ -85,13 +85,7 @@ local question(title, definitionContent, detailAnswerLabel, region_code) = (
           {
             label: 'Other',
             value: 'Other',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'national-identity-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: detailAnswerLabel,
-            },
+            description: 'You can enter your national identity on the next question',
           },
         ],
       },
@@ -110,6 +104,25 @@ function(region_code) {
     {
       question: question(proxyTitle, proxyDefinitionContent, proxyDetailAnswerLabel, region_code),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'national-identity-other',
+        when: [
+          {
+            condition: 'contains',
+            id: 'national-identity-answer',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'ethnic-group',
+      },
     },
   ],
 }

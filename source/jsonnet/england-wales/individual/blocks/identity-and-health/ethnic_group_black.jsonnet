@@ -32,24 +32,12 @@ local question(englandTitle, walesTitle, region_code) = (
           {
             label: 'African',
             value: 'African',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'african-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter African background',
-            },
+            description: 'You can enter your ethnic group or background on the next question',
           },
           {
             label: 'Any other Black, Black British or Caribbean background',
             value: 'Any other Black, Black British or Caribbean background',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'black-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter Black, Black British or Caribbean background',
-            },
+            description: 'You can enter your ethnic group or background on the next question',
           },
         ],
         type: 'Radio',
@@ -87,6 +75,30 @@ function(region_code) {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-black-other',
+        when: [
+          {
+            id: 'black-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other Black, Black British or Caribbean background',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'ethnic-group-black-african',
+        when: [
+          {
+            id: 'black-ethnic-group-answer',
+            condition: 'equals',
+            value: 'African',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

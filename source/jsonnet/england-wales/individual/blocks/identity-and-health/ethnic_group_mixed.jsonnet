@@ -38,13 +38,7 @@ local question(title) = {
         {
           label: 'Any other Mixed or Multiple background',
           value: 'Any other Mixed or Multiple background',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'mixed-ethnic-group-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Enter Mixed or Multiple background',
-          },
+          description: 'You can enter your ethnic group or background on the next question',
         },
       ],
       type: 'Radio',
@@ -74,6 +68,18 @@ local proxyTitle = {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-mixed-other',
+        when: [
+          {
+            id: 'mixed-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other Mixed or Multiple background',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

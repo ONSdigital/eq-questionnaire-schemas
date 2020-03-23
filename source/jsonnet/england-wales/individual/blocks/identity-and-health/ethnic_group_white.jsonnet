@@ -55,13 +55,7 @@ local question(title, region_code) = (
           {
             label: 'Any other White background',
             value: 'Any other White background',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'white-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter White background',
-            },
+            description: 'You can enter your ethnic group or background on the next question',
           },
         ],
         type: 'Radio',
@@ -84,6 +78,18 @@ function(region_code) {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-white-other',
+        when: [
+          {
+            id: 'white-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other White background',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

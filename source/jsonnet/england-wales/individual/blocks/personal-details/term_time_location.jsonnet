@@ -98,7 +98,7 @@ local otherNonUkAddressOptions = {
             placeholder: 'thirty_day_address_country',
             value: {
               source: 'answers',
-              identifier: 'another-address-answer-other-country',
+              identifier: 'another-address-outside-uk-answer',
             },
           },
         ],

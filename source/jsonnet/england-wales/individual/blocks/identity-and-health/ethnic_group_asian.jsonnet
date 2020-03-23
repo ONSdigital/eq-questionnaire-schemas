@@ -44,13 +44,7 @@ local question(englandTitle, walesTitle, region_code) = (
           {
             label: 'Any other Asian background',
             value: 'Any other Asian background',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'asian-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter Asian background',
-            },
+            description: 'You can enter your ethnic group or background on the next question',
           },
         ],
         type: 'Radio',
@@ -88,6 +82,18 @@ function(region_code) {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-asian-other',
+        when: [
+          {
+            id: 'asian-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other Asian background',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

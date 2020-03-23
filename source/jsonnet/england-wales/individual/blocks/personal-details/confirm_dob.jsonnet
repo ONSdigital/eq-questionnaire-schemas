@@ -74,7 +74,7 @@ local proxyYesLabel = {
   ],
 };
 
-local proxyYesValue = 'Yes, {person_name} is {age} old';
+local proxyYesValue = 'Yes, <em>{person_name}</em> is {age} old';
 
 local proxyNoLabel = 'No, I need to correct their date of birth';
 local proxyNoValue = 'No, I need to correct their date of birth';

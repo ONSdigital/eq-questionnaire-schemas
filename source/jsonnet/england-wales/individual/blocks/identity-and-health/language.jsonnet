@@ -66,13 +66,7 @@ local question(title, definitionDescription, region_code) = (
           {
             label: 'Other, including British Sign Language',
             value: 'Other, including British Sign Language',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'language-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter main language',
-            },
+            description: 'You can enter your main language on the next question',
           },
         ],
       },
@@ -94,6 +88,18 @@ function(region_code) {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'language-other',
+        when: [
+          {
+            id: 'language-answer',
+            condition: 'equals',
+            value: 'Other, including British Sign Language',
+          },
+        ],
+      },
+    },
     {
       goto:
         routing(region_code),

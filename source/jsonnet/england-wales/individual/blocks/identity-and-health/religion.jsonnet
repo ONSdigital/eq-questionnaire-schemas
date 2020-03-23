@@ -64,13 +64,7 @@ local question(title, region_code) = (
           {
             label: 'Any other religion',
             value: 'Any other religion',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'religion-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter religion',
-            },
+            description: 'You can enter your religion on the next question',
           },
         ],
         type: 'Radio',
@@ -93,6 +87,18 @@ function(region_code) {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'religion-other',
+        when: [
+          {
+            id: 'religion-answer',
+            condition: 'equals',
+            value: 'Any other religion',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'passports',
