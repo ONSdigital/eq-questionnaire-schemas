@@ -69,6 +69,7 @@ local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
 
 function(region_code) {
   mime_type: 'application/json/ons/eq',
+  language: 'en',
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'census',

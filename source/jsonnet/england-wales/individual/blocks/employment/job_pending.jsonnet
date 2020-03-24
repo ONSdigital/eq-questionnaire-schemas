@@ -1,12 +1,27 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, guidanceHeader) = {
   id: 'job-pending-question',
   title: title,
   type: 'General',
   answers: [
     {
+      guidance: {
+        show_guidance: guidanceHeader,
+        hide_guidance: guidanceHeader,
+        contents: [
+          {
+            description: 'To get a true picture of the working population, we ask this question of everyone who is not currently working.',
+          },
+          {
+            description: 'We ask people who are retired because the number of people continuing to work after retirement is increasing.',
+          },
+          {
+            description: 'We ask people who are not working due to long-term illness or disability because some intend to go back to work.',
+          },
+        ],
+      },
       id: 'job-pending-answer',
       mandatory: false,
       options: [
@@ -32,16 +47,19 @@ local proxyTitle = {
   ],
 };
 
+local nonProxyGuidanceHeader = 'Why we ask this question if you are retired or long-term sick or disabled';
+local proxyGuidanceHeader = 'Why we ask this question if they are retired or long-term sick or disabled';
+
 {
   type: 'Question',
   id: 'job-pending',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyGuidanceHeader),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyGuidanceHeader),
       when: [rules.isProxy],
     },
   ],

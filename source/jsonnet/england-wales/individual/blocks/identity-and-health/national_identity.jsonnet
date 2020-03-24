@@ -2,30 +2,15 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local nonProxyTitle = 'How would you describe your national identity?';
+local nonProxyDescription = 'This relates to where you feel you belong, such as the country or countries you think of as home.<br><br>This could be different from your citizenship or ethnic group.';
+
 local proxyTitle = {
   text: 'How would <em>{person_name}</em> describe their national identity?',
   placeholders: [
     placeholders.personName,
   ],
 };
-
-local nonProxyDefinitionContent = [
-  {
-    description: 'National identity is not dependent on your ethnic group or citizenship.',
-  },
-  {
-    description: 'It is about the country or countries where you feel you belong or think of as home.',
-  },
-];
-
-local proxyDefinitionContent = [
-  {
-    description: 'National identity is not dependent on their ethnic group or citizenship.',
-  },
-  {
-    description: 'It is about the country or countries where they feel they belong or think of as home.',
-  },
-];
+local proxyDescription = 'This relates to where they feel they belong, such as the country or countries they think of as home. <br><br> This could be different from their citizenship or ethnic group';
 
 local englandOptions = [
   {
@@ -52,18 +37,13 @@ local walesOptions = [
 local nonProxyDetailAnswerLabel = 'Describe your national identity';
 local proxyDetailAnswerLabel = 'Describe their national identity';
 
-local question(title, definitionContent, detailAnswerLabel, region_code) = (
+local question(title, description, detailAnswerLabel, region_code) = (
   local regionOptions = if region_code == 'GB-WLS' then walesOptions else englandOptions;
   {
     id: 'national-identity-question',
     title: title,
     type: 'General',
-    definitions: [
-      {
-        title: 'What do we mean by “national identity”?',
-        contents: definitionContent,
-      },
-    ],
+    description: description,
     answers: [
       {
         id: 'national-identity-answer',
@@ -98,11 +78,11 @@ function(region_code) {
   id: 'national-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionContent, nonProxyDetailAnswerLabel, region_code),
+      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionContent, proxyDetailAnswerLabel, region_code),
+      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code),
       when: [rules.isProxy],
     },
   ],

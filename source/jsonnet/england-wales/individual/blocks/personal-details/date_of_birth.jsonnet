@@ -7,7 +7,7 @@ local question(title) = {
   guidance: {
     contents: [
       {
-        description: 'For example 31 3 1980',
+        description: 'For example, 31 3 1980',
       },
     ],
   },

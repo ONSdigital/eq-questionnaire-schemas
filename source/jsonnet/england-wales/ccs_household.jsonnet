@@ -59,6 +59,7 @@ local visitor_interstitial = import 'ccs/blocks/visitor/visitor_interstitial.jso
 
 function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
+  language: 'en',
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'ccs',
