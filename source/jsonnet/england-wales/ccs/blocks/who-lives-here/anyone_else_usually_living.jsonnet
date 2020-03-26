@@ -1,20 +1,17 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local questionTitle = {
-  text: 'Was anyone in your current household usually living at {household_address} on Sunday {census_date}?',
-  placeholders: [
-    placeholders.address,
-    placeholders.censusDate,
-  ],
-};
-
 {
   type: 'Question',
   id: 'anyone-else-usually-living',
-  show_on_section_summary: false,
   question: {
     id: 'anyone-else-usually-living-question',
-    title: questionTitle,
+    title: {
+      text: 'Was anyone in your current household usually living at {household_address} on Sunday {census_date}?',
+      placeholders: [
+        placeholders.address,
+        placeholders.censusDate,
+      ],
+    },
     type: 'General',
     answers: [{
       id: 'anyone-else-usually-living-answer',

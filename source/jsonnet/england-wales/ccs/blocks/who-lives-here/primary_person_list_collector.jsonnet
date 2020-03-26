@@ -1,13 +1,5 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local questionTitle = {
-  text: 'Were you usually living at {household_address} on Sunday {census_date}?',
-  placeholders: [
-    placeholders.address,
-    placeholders.censusDate,
-  ],
-};
-
 {
   id: 'primary-person-list-collector',
   type: 'PrimaryPersonListCollector',
@@ -48,7 +40,13 @@ local questionTitle = {
   question: {
     id: 'primary-confirmation-question',
     type: 'General',
-    title: questionTitle,
+    title: {
+      text: 'Were you usually living at {household_address} on Sunday {census_date}?',
+      placeholders: [
+        placeholders.address,
+        placeholders.censusDate,
+      ],
+    },
     instruction: 'Tell respondent to turn to <strong>Showcard 1</strong>',
     answers: [
       {

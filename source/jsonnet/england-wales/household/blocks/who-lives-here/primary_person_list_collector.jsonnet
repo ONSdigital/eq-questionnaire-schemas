@@ -1,12 +1,5 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local questionTitle = {
-  text: 'Do you usually live at {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
-
 {
   id: 'primary-person-list-collector',
   type: 'PrimaryPersonListCollector',
@@ -47,7 +40,12 @@ local questionTitle = {
   question: {
     id: 'primary-confirmation-question',
     type: 'General',
-    title: questionTitle,
+    title: {
+      text: 'Do you usually live at {household_address}?',
+      placeholders: [
+        placeholders.address,
+      ],
+    },
     definitions: [
       {
         title: 'What does “usually live” mean?',

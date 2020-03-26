@@ -228,7 +228,5 @@ local editQuestion(questionTitle) = {
   summary: {
     title: 'Household members',
     item_title: summaryTitlePersonName,
-    add_link_text: 'Add someone to this household',
-    empty_list_text: 'There are no householders',
   },
 }

@@ -216,8 +216,5 @@ local editQuestion(questionTitle) = {
   summary: {
     title: 'Household members',
     item_title: summaryTitlePersonName,
-    add_link_text: 'Add another visitor to this household',
-    empty_list_text: 'There are no visitors',
   },
-  show_on_section_summary: false,
 }

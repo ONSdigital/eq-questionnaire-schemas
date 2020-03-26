@@ -9,28 +9,6 @@ local questionTitle = {
   ],
 };
 
-local questionVariantTitle = {
-  text: 'Did anyone else usually live at {household_address} on Sunday {census_date}?',
-  placeholders: [
-    placeholders.address,
-    placeholders.censusDate,
-  ],
-};
-
-local summaryTitlePersonName = {
-  text: '{person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local addPersonQuestionTitle = {
-  text: 'Who do you need to add to {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
-
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name} (You)',
   placeholders: [
@@ -40,13 +18,6 @@ local primaryEditPersonQuestionTitle = {
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local removePersonQuestionTitle = {
-  text: 'Are you sure you want to remove {person_name}?',
   placeholders: [
     placeholders.personName,
   ],
@@ -128,7 +99,13 @@ local editQuestion(questionTitle) = {
       question: {
         id: 'anyone-usually-live-at-question',
         type: 'General',
-        title: questionVariantTitle,
+        title: {
+          text: 'Did anyone else usually live at {household_address} on Sunday {census_date}?',
+          placeholders: [
+            placeholders.address,
+            placeholders.censusDate,
+          ],
+        },
         guidance: {
           contents: [
             {
@@ -165,7 +142,12 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'add-question',
       type: 'General',
-      title: addPersonQuestionTitle,
+      title: {
+        text: 'Who do you need to add to {household_address}?',
+        placeholders: [
+          placeholders.address,
+        ],
+      },
       instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
       answers: [
         {
@@ -214,7 +196,12 @@ local editQuestion(questionTitle) = {
           title: 'All of the data entered about this person will be deleted',
         }],
       },
-      title: removePersonQuestionTitle,
+      title: {
+        text: 'Are you sure you want to remove {person_name}?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      },
       answers: [
         {
           id: 'remove-confirmation',
@@ -236,8 +223,11 @@ local editQuestion(questionTitle) = {
   },
   summary: {
     title: 'Household members',
-    item_title: summaryTitlePersonName,
-    add_link_text: 'Add someone to this household',
-    empty_list_text: 'There are no householders',
+    item_title: {
+      text: '{person_name}',
+      placeholders: [
+        placeholders.personName,
+      ],
+    },
   },
 }

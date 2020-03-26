@@ -1,23 +1,8 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-
 local questionTitle = {
   text: 'Apart from the people already included, is there anyone who is temporarily away or staying that you need to add to {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
-
-local summaryTitlePersonName = {
-  text: '{person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local addPersonQuestionTitle = {
-  text: 'Who do you need to add to {household_address}?',
   placeholders: [
     placeholders.address,
   ],
@@ -32,13 +17,6 @@ local primaryEditPersonQuestionTitle = {
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local removePersonQuestionTitle = {
-  text: 'Are you sure you want to remove {person_name}?',
   placeholders: [
     placeholders.personName,
   ],
@@ -145,7 +123,12 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'anyone-else-temp-away-add-question',
       type: 'General',
-      title: addPersonQuestionTitle,
+      title: {
+        text: 'Who do you need to add to {household_address}?',
+        placeholders: [
+          placeholders.address,
+        ],
+      },
       answers: [
         {
           id: 'first-name',
@@ -193,7 +176,12 @@ local editQuestion(questionTitle) = {
           title: 'All of the data entered about this person will be deleted',
         }],
       },
-      title: removePersonQuestionTitle,
+      title: {
+        text: 'Are you sure you want to remove {person_name}?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      },
       answers: [
         {
           id: 'anyone-else-temp-away-remove-confirmation',
@@ -215,9 +203,11 @@ local editQuestion(questionTitle) = {
   },
   summary: {
     title: 'Household members',
-    item_title: summaryTitlePersonName,
-    add_link_text: 'Add another visitor to this household',
-    empty_list_text: 'There are no visitors',
+    item_title: {
+      text: '{person_name}',
+      placeholders: [
+        placeholders.personName,
+      ],
+    },
   },
-  show_on_section_summary: false,
 }

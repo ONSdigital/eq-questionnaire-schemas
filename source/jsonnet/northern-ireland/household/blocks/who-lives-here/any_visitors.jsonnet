@@ -18,9 +18,8 @@ local exclusiveAnswerText = {
 
 {
   type: 'ListCollectorDrivingQuestion',
-  for_list: 'visitor',
+  for_list: 'visitors',
   id: 'any-visitors',
-  show_on_section_summary: false,
   question: {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',
@@ -39,7 +38,7 @@ local exclusiveAnswerText = {
               type: 'RedirectToListAddQuestion',
               params: {
                 block_id: 'add-visitor',
-                list_name: 'visitor',
+                list_name: 'visitors',
               },
             },
           },
@@ -50,7 +49,7 @@ local exclusiveAnswerText = {
               type: 'RedirectToListAddQuestion',
               params: {
                 block_id: 'add-visitor',
-                list_name: 'visitor',
+                list_name: 'visitors',
               },
             },
           },
@@ -61,7 +60,7 @@ local exclusiveAnswerText = {
               type: 'RedirectToListAddQuestion',
               params: {
                 block_id: 'add-visitor',
-                list_name: 'visitor',
+                list_name: 'visitors',
               },
             },
           },
@@ -72,7 +71,7 @@ local exclusiveAnswerText = {
               type: 'RedirectToListAddQuestion',
               params: {
                 block_id: 'add-visitor',
-                list_name: 'visitor',
+                list_name: 'visitors',
               },
             },
           },
