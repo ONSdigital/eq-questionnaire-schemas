@@ -28,7 +28,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'visitor-submit-group',
+        group: 'visitor-submit-group',
       },
     },
   ],

@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Any other Asian background". How would you describe your Asian or Asian British ethnic group or background?';
+local nonProxyTitle = 'You selected “Any other Asian background”. How would you describe your Asian or Asian British ethnic group or background?';
 local proxyTitle = {
-  text: 'You selected "Any other Asian background". How would {person_name} describe their Asian or Asian British ethnic group or background?',
+  text: 'You selected “Any other Asian background”. How would {person_name} describe their Asian or Asian British ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],

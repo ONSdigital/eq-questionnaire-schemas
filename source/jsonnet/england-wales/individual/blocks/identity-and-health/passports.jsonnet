@@ -85,7 +85,7 @@ local proxyLabel = 'Enter passports held';
           {
             id: 'passports-answer',
             condition: 'contains any',
-            value: ['United Kingdom', 'Ireland'],
+            values: ['United Kingdom', 'Ireland'],
           },
           {
             id: 'passports-answer',

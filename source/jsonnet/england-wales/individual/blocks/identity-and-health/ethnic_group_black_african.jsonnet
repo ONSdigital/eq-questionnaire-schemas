@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "African". How would you describe your African ethnic group or background?';
+local nonProxyTitle = 'You selected “African”. How would you describe your African ethnic group or background?';
 local proxyTitle = {
-  text: 'You selected "African". How would {person_name} describe their African ethnic group or background?',
+  text: 'You selected “African”. How would {person_name} describe their African ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],

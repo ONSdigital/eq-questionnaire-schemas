@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Any other religion". What is your religion?';
+local nonProxyTitle = 'You selected “Any other religion”. What is your religion?';
 local proxyTitle = {
-  text: 'You selected "Any other religion". What is <em>{person_name_possessive}</em> religion?',
+  text: 'You selected “Any other religion”. What is <em>{person_name_possessive}</em> religion?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

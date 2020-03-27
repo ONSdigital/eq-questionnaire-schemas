@@ -40,7 +40,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'submit-group',
+        group: 'submit-group',
       },
     },
   ],

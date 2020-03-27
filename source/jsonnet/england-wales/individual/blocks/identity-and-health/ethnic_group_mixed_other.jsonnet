@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Any other Mixed or Multiple background". How would your Mixed or Multiple ethnic group or background?';
+local nonProxyTitle = 'You selected “Any other Mixed or Multiple background”. How would your Mixed or Multiple ethnic group or background?';
 local proxyTitle = {
-  text: 'You selected "Any other Mixed or Multiple background". How would {person_name} describe their Mixed or Multiple ethnic group or background?',
+  text: 'You selected “Any other Mixed or Multiple background”. How would {person_name} describe their Mixed or Multiple ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],

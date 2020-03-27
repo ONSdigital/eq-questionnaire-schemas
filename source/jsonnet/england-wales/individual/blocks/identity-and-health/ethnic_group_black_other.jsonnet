@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Any other Black, Black British or Caribbean background". How would you describe your Black, Black British or Caribbean ethnic group or background?';
+local nonProxyTitle = 'You selected “Any other Black, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean ethnic group or background?';
 local proxyTitle = {
-  text: 'You selected "Any other Black, Black British or Caribbean background". How would {person_name} describe their Black, Black British or Caribbean ethnic group or background?',
+  text: 'You selected “Any other Black, Black British or Caribbean background”. How would {person_name} describe their Black, Black British or Caribbean ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],

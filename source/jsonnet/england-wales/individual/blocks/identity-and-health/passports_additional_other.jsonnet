@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Other". What other passports do you hold?';
+local nonProxyTitle = 'You selected “Other”. What other passports do you hold?';
 local proxyTitle = {
-  text: 'You selected "Other". What passports does {person_name} hold?',
+  text: 'You selected “Other”. What passports does {person_name} hold?',
   placeholders: [
     placeholders.personName,
   ],

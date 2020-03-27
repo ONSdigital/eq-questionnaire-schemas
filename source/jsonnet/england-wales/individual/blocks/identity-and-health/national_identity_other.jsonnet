@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Other". How would you describe your national identity?';
+local nonProxyTitle = 'You selected “Other”. How would you describe your national identity?';
 local proxyTitle = {
-  text: 'You selected "Other". How would <em>{person_name}</em> describe their national identity?',
+  text: 'You selected “Other”. How would <em>{person_name}</em> describe their national identity?',
   placeholders: [
     placeholders.personName,
   ],

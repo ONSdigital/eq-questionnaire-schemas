@@ -16,9 +16,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected "Elsewhere". What is your country of birth?';
+local nonProxyTitle = 'You selected “Elsewhere”. What is your country of birth?';
 local proxyTitle = {
-  text: 'You selected "Elsewhere". What is <em>{person_name_possessive}</em> country of birth?',
+  text: 'You selected “Elsewhere”. What is <em>{person_name_possessive}</em> country of birth?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
