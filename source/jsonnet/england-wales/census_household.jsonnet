@@ -321,7 +321,6 @@ function(region_code, census_month_year_date) {
             national_identity(region_code),
             national_identity_other,
             ethnic_group(region_code),
-            ethnic_group_other,
             ethnic_group_white(region_code),
             ethnic_group_white_other,
             ethnic_group_mixed,
