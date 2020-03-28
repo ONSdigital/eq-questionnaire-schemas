@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Any other ethnic group”. How would you describe your ethnic group or background?';
-local proxyTitle = {
-  text: 'You selected “Any other ethnic group”. How would <em>{person_name}</em> describe their ethnic group or background?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'ethnic-group-other-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Any other ethnic group”. How would you describe your ethnic group or background?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Any other ethnic group”. How would <em>{person_name}</em> describe their ethnic group or background?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

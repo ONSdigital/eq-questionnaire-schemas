@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Elsewhere”. What is your country of birth?';
-local proxyTitle = {
-  text: 'You selected “Elsewhere”. What is <em>{person_name_possessive}</em> country of birth?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-
 {
   type: 'Question',
   id: 'country-of-birth-elsewhere',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Elsewhere”. What is your country of birth?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Elsewhere”. What is <em>{person_name_possessive}</em> country of birth?',
+        placeholders: [
+          placeholders.personNamePossessive,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

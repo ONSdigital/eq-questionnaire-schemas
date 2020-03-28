@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Any other Mixed or Multiple background”. How would your Mixed or Multiple ethnic group or background?';
-local proxyTitle = {
-  text: 'You selected “Any other Mixed or Multiple background”. How would {person_name} describe their Mixed or Multiple ethnic group or background?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'ethnic-group-mixed-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Any other Mixed or Multiple background”. How would your Mixed or Multiple ethnic group or background?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Any other Mixed or Multiple background”. How would {person_name} describe their Mixed or Multiple ethnic group or background?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

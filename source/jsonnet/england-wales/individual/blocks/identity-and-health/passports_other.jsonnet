@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Other”. What passports do you hold?';
-local proxyTitle = {
-  text: 'You selected “Other”. What passports does {person_name} hold?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'passports-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Other”. What passports do you hold?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Other”. What passports does {person_name} hold?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

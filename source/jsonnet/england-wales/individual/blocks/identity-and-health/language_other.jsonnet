@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Other, including British Sign Language”. What is your main language?';
-local proxyTitle = {
-  text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-
 {
   type: 'Question',
   id: 'language-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Other, including British Sign Language”. What is your main language?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
+        placeholders: [
+          placeholders.personNamePossessive,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

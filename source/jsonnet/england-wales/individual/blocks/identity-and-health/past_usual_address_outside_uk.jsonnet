@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'In which country outside the UK was your usual address one year ago?';
-local proxyTitle = {
-  text: 'In which country outside of the UK was <em>{person_name_possessive}</em> usual address one year ago?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-
 {
   type: 'Question',
   id: 'past-usual-address-outside-uk',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('In which country outside the UK was your usual address one year ago?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'In which country outside of the UK was <em>{person_name_possessive}</em> usual address one year ago?',
+        placeholders: [
+          placeholders.personNamePossessive,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Any other religion”. What is your religion?';
-local proxyTitle = {
-  text: 'You selected “Any other religion”. What is <em>{person_name_possessive}</em> religion?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-
 {
   type: 'Question',
   id: 'religion-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Any other religion”. What is your religion?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Any other religion”. What is <em>{person_name_possessive}</em> religion?',
+        placeholders: [
+          placeholders.personNamePossessive,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

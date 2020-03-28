@@ -4,8 +4,9 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(englandTitle, walesTitle, region_code, definitionDescription) = (
+local question(englandTitle, walesTitle, region_code, definitionDescription, optionLabelValue) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
+
   {
     id: 'black-ethnic-group-question',
     title: title,
@@ -38,8 +39,8 @@ local question(englandTitle, walesTitle, region_code, definitionDescription) = (
             description: 'You can enter your ethnic group or background on the next question',
           },
           {
-            label: 'Any other Black, Black British or Caribbean background',
-            value: 'Any other Black, Black British or Caribbean background',
+            label: optionLabelValue,
+            value: optionLabelValue,
             description: 'You can enter your ethnic group or background on the next question',
           },
         ],
@@ -64,48 +65,53 @@ local proxyWalesTitle = {
   ],
 };
 
-function(region_code) {
-  type: 'Question',
-  id: 'black-ethnic-group',
-  question_variants: [
-    {
-      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription),
-      when: [rules.isNotProxy],
-    },
-    {
-      question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription),
-      when: [rules.isProxy],
-    },
-  ],
-  routing_rules: [
-    {
-      goto: {
-        block: 'ethnic-group-black-other',
-        when: [
-          {
-            id: 'black-ethnic-group-answer',
-            condition: 'equals',
-            value: 'Any other Black, Black British or Caribbean background',
-          },
-        ],
+
+function(region_code) (
+  local optionLabelValue = if region_code == 'GB-WLS' then 'Any other Black, Black Welsh Black British or Caribbean background'
+  else 'Any other Black, Black British or Caribbean background';
+  {
+    type: 'Question',
+    id: 'black-ethnic-group',
+    question_variants: [
+      {
+        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription, optionLabelValue),
+        when: [rules.isNotProxy],
       },
-    },
-    {
-      goto: {
-        block: 'ethnic-group-black-african',
-        when: [
-          {
-            id: 'black-ethnic-group-answer',
-            condition: 'equals',
-            value: 'African',
-          },
-        ],
+      {
+        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription, optionLabelValue),
+        when: [rules.isProxy],
       },
-    },
-    {
-      goto: {
-        block: 'religion',
+    ],
+    routing_rules: [
+      {
+        goto: {
+          block: 'ethnic-group-black-other',
+          when: [
+            {
+              id: 'black-ethnic-group-answer',
+              condition: 'equals',
+              value: optionLabelValue,
+            },
+          ],
+        },
       },
-    },
-  ],
-}
+      {
+        goto: {
+          block: 'ethnic-group-black-african',
+          when: [
+            {
+              id: 'black-ethnic-group-answer',
+              condition: 'equals',
+              value: 'African',
+            },
+          ],
+        },
+      },
+      {
+        goto: {
+          block: 'religion',
+        },
+      },
+    ],
+  }
+)

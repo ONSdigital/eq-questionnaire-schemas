@@ -15,25 +15,21 @@ local question(title) = {
     },
   ],
 };
-
-local nonProxyTitle = 'You selected “African”. How would you describe your African ethnic group or background?';
-local proxyTitle = {
-  text: 'You selected “African”. How would {person_name} describe their African ethnic group or background?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'ethnic-group-black-african',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “African”. How would you describe your African ethnic group or background?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “African”. How would {person_name} describe their African ethnic group or background?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

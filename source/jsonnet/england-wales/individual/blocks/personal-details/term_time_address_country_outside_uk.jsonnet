@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'During term time, in which country outside the UK do you usually live?';
-local proxyTitle = {
-  text: 'During term time, in which country outside the UK does {person_name} usually live?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'term-time-address-country-outside-uk',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('During term time, in which country outside the UK do you usually live?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'During term time, in which country outside the UK does {person_name} usually live?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],

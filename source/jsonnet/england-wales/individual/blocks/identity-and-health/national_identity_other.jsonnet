@@ -16,24 +16,21 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'You selected “Other”. How would you describe your national identity?';
-local proxyTitle = {
-  text: 'You selected “Other”. How would <em>{person_name}</em> describe their national identity?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'national-identity-other',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question('You selected “Other”. How would you describe your national identity?'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question({
+        text: 'You selected “Other”. How would <em>{person_name}</em> describe their national identity?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      }),
       when: [rules.isProxy],
     },
   ],
