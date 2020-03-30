@@ -10,7 +10,7 @@ import requests
 import re
 from eq_translations.entrypoints import handle_extract_template
 
-page = requests.get('https://github.com/ONSdigital/eq-translations/commit/master/')
+page = requests.get("https://github.com/ONSdigital/eq-translations/commit/master/")
 contents = page.text
 
 
@@ -18,15 +18,15 @@ def get_ref():
     f = open("Pipfile.lock", "r")
     file = f.readlines()
     for i, line in enumerate(file):
-        if "\"eq-translations\"" in line:
-            ref = re.compile(r'\w{40}')
-            mo = ref.search(file[i+3])
+        if '"eq-translations"' in line:
+            ref = re.compile(r"\w{40}")
+            mo = ref.search(file[i + 3])
             return mo.group()
     print("eq-translations not in Pipfile.lock")
 
 
 if get_ref() in contents:
-    print('eq-translations up to date')
+    print("eq-translations up to date")
 
     logger = logging.getLogger(__name__)
 
@@ -39,7 +39,6 @@ if get_ref() in contents:
         "census_household_gb_wls",
         "census_household_gb_nir",
     ]
-
 
     def get_template_content(filename, ignore_context=False):
         line_beginnings_to_ignore = ['"POT-Creation-Date']
@@ -57,13 +56,11 @@ if get_ref() in contents:
                 )
             )
 
-
     def print_filename_results(filename, success=True):
         if success:
             logger.debug("%s - NO CHANGES", filename)
         else:
             logger.error("%s - CHANGES FOUND", filename)
-
 
     def compare_files(source_dir, target_dir, filename):
         source_file = f"{source_dir}/{filename}"
@@ -76,14 +73,16 @@ if get_ref() in contents:
 
         if not contents_match:
             diff_results = difflib.unified_diff(
-                source_contents, target_contents, fromfile=source_file, tofile=target_file
+                source_contents,
+                target_contents,
+                fromfile=source_file,
+                tofile=target_file,
             )
             logger.info("".join(list(diff_results)))
 
         print_filename_results(f"{source_file}", contents_match)
 
         return contents_match
-
 
     def build_schema_templates(output_dir):
 
@@ -97,20 +96,20 @@ if get_ref() in contents:
 
             logger.info("Built %s/%s", output_dir, template_file)
 
-
     def check_schema_templates(source_dir, target_dir):
         return all(
             compare_files(source_dir, target_dir, f"{schema_name}.pot")
             for schema_name in SCHEMAS_TO_EXTRACT
         )
 
-
     if __name__ == "__main__":
         parser = argparse.ArgumentParser(
             description="Extract translation templates from runner"
         )
         parser.add_argument(
-            "--test", help="Test the templates without making changes", action="store_true"
+            "--test",
+            help="Test the templates without making changes",
+            action="store_true",
         )
 
         args = parser.parse_args()
@@ -133,4 +132,4 @@ if get_ref() in contents:
         build_schema_templates(os.getcwd() + "/translations")
 
 else:
-    print('Newer version of eq-translations available, use \"pipenv update\"')
+    print('Newer version of eq-translations available, use "pipenv update"')
