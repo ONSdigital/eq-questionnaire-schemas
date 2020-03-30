@@ -11,7 +11,6 @@ import re
 from eq_translations.entrypoints import handle_extract_template
 
 page = requests.get("https://github.com/ONSdigital/eq-translations/commit/master/")
-contents = page.text
 
 
 def get_ref():
@@ -25,7 +24,7 @@ def get_ref():
     print("eq-translations not in Pipfile.lock")
 
 
-if get_ref() in contents:
+if get_ref() in page.text:
     print("eq-translations up to date")
 
     logger = logging.getLogger(__name__)
