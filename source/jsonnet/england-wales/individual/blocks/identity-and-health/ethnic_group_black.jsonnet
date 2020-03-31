@@ -67,7 +67,7 @@ local proxyWalesTitle = {
 
 
 function(region_code) (
-  local optionLabelValue = if region_code == 'GB-WLS' then 'Any other Black, Black Welsh Black British or Caribbean background'
+  local optionLabelValue = if region_code == 'GB-WLS' then 'Any other Black, Black Welsh, Black British or Caribbean background'
   else 'Any other Black, Black British or Caribbean background';
   {
     type: 'Question',
