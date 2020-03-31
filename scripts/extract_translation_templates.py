@@ -92,10 +92,10 @@ def check_schema_templates(source_dir, target_dir):
 
 if __name__ == "__main__":
 
-    page = requests.get("https://github.com/ONSdigital/eq-translations/commit/master/")
+    response = requests.get("https://api.github.com/repos/ONSdigital/eq-translations/commits/master").json()
+    commit_sha = response.get('sha')
 
-
-    def get_ref():
+    def sha_from_pipfile():
         f = open("Pipfile.lock", "r")
         file = f.readlines()
         for i, line in enumerate(file):
@@ -103,14 +103,15 @@ if __name__ == "__main__":
                 ref = re.compile(r"\w{40}")
                 mo = ref.search(file[i + 3])
                 return mo.group()
-        print("eq-translations not in Pipfile.lock")
+        logger.error("eq-translations not found in Pipfile.lock")
+        sys.exit(0)
 
 
-    if get_ref() in page.text:
-        print("eq-translations up to date")
+    if sha_from_pipfile() == commit_sha:
+        logger.error("eq-translations up to date")
 
     else:
-        print('Newer version of eq-translations available, use "pipenv update"')
+        logger.error('Newer version of eq-translations available, use "pipenv update"')
         sys.exit(0)
 
     parser = argparse.ArgumentParser(
