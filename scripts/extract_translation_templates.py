@@ -5,9 +5,9 @@ import tempfile
 import logging
 import argparse
 import difflib
+
 import coloredlogs
-import requests
-import re
+
 from eq_translations.entrypoints import handle_extract_template
 
 logger = logging.getLogger(__name__)
@@ -91,28 +91,6 @@ def check_schema_templates(source_dir, target_dir):
 
 
 if __name__ == "__main__":
-
-    response = requests.get("https://api.github.com/repos/ONSdigital/eq-translations/commits/master").json()
-    commit_sha = response.get('sha')
-
-    def sha_from_pipfile():
-        f = open("Pipfile.lock", "r")
-        file = f.readlines()
-        for i, line in enumerate(file):
-            if '"eq-translations"' in line:
-                ref = re.compile(r"\w{40}")
-                mo = ref.search(file[i + 3])
-                return mo.group()
-        logger.error("eq-translations not found in Pipfile.lock")
-        sys.exit(0)
-
-
-    if sha_from_pipfile() == commit_sha:
-        logger.error("eq-translations up to date")
-
-    else:
-        logger.error('Newer version of eq-translations available, use "pipenv update"')
-        sys.exit(0)
 
     parser = argparse.ArgumentParser(
         description="Extract translation templates from runner"
