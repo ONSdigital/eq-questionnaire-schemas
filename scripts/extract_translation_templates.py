@@ -10,7 +10,6 @@ import requests
 import re
 from eq_translations.entrypoints import handle_extract_template
 
-
 logger = logging.getLogger(__name__)
 
 coloredlogs.install(level="DEBUG", logger=logger, fmt="%(message)s")
