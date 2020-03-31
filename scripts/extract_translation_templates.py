@@ -140,5 +140,3 @@ if __name__ == "__main__":
         sys.exit(0)
 
     build_schema_templates(os.getcwd() + "/translations")
-
-
