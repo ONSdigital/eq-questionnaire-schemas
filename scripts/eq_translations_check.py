@@ -15,12 +15,13 @@ try:
     )
     if response.status_code == 200:
         latest_tag = response.json()[0]["tag_name"]
+        if latest_tag != version:
+            logger.error(
+                'Newer version of eq-translations available, use "pipenv update"'
+            )
+            sys.exit(1)
     else:
         logger.error("Can't check eq-translations version")
-        sys.exit(1)
-
-    if version != latest_tag:
-        logger.error('Newer version of eq-translations available, use "pipenv update"')
         sys.exit(1)
 
 except ConnectionError:
