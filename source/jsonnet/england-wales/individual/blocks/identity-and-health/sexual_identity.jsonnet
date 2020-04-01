@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label) = {
+local question(title, label, guidanceHeader, description) = {
   id: 'sexual-identity-question',
   title: title,
   type: 'General',
@@ -18,6 +18,22 @@ local question(title, label) = {
       mandatory: false,
       label: '',
       voluntary: true,
+      guidance: {
+        show_guidance: guidanceHeader,
+        hide_guidance: guidanceHeader,
+        contents: [
+          {
+            description: description,
+          },
+          {
+            description: 'Councils and government will use this information to:',
+            list: [
+                'monitor equality to ensure that everyone is treated fairly',
+                'provide services and share funding',
+            ],
+          },
+        ],
+      },
       options: [
         {
           label: 'Straight or Heterosexual',
@@ -59,16 +75,22 @@ local proxyTitle = {
 };
 local proxyLabel = 'Enter their sexual orientation';
 
+local nonProxyGuidanceHeader = 'Why your answer is important';
+local proxyGuidanceHeader = 'Why their answer is important';
+
+local nonProxyDescription = 'Your answer will help your local community by providing organisations, such as charities, with an understanding of the services people might need.';
+local proxyDescription = 'Their answer will help your local community by providing organisations, such as charities, with an understanding of the services people might need.';
+
 {
   type: 'Question',
   id: 'sexual-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel),
+      question: question(nonProxyTitle, nonProxyLabel, nonProxyGuidanceHeader, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel),
+      question: question(proxyTitle, proxyLabel, proxyGuidanceHeader, proxyDescription),
       when: [rules.isProxy],
     },
   ],

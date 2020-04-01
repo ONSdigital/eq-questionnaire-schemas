@@ -1,11 +1,18 @@
+local placeholders = import '../../../lib/placeholders.libsonnet';
+
 {
   type: 'Interstitial',
   id: 'accommodation-introduction',
   content: {
-    title: 'Household accommodation',
+    title: 'Household and accommodation',
     contents: [
       {
-        description: 'In this section, we’re going to ask you about the accommodation you live in.',
+        description: {
+          text: 'In this section we are going to ask you about the accommodation at {household_address}.',
+          placeholders: [
+            placeholders.address,
+          ],
+        },
       },
       {
         title: 'You will need to know',

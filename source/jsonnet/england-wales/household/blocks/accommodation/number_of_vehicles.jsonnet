@@ -37,7 +37,6 @@
         {
           label: '5 or more',
           value: '5 or more',
-          description: 'Select to enter number',
           detail_answer: {
             id: 'number-of-vehicles-answer-other',
             type: 'Number',

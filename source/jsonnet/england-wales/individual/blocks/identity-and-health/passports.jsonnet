@@ -1,22 +1,26 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label, definitionContent) = {
+local nonProxyDescription = 'passports and travel documents that have expired, if you are entitled to renew them';
+local proxyDescription = 'passports and travel documents that have expired, if they are entitled to renew them';
+
+local question(title, description, label) = {
   id: 'passports-question',
   title: title,
   description: '',
   type: 'MutuallyExclusive',
   mandatory: false,
-  definitions: [
-    {
-      title: 'What official documents can be included?',
-      contents: [
-        {
-          description: definitionContent,
-        },
-      ],
-    },
-  ],
+  guidance: {
+    contents: [
+      {
+        title: 'Include',
+        list: [
+          'current passports and any other travel documents, such as ID cards, that show citizenship of a particular country or countries',
+          description,
+        ],
+      },
+    ],
+  },
   answers: [
     {
       id: 'passports-answer',
@@ -58,10 +62,8 @@ local question(title, label, definitionContent) = {
   ],
 };
 
-local nonProxyDefinitionContent = 'You may have other travel documents that show you are a citizen of a particular country. Please complete this question as if your travel documents are passports.';
 local nonProxyTitle = 'What passports do you hold?';
 local nonProxyLabel = 'Enter the passports you hold';
-local proxyDefinitionContent = 'They may have other travel documents that show they are a citizen of a particular country. Please complete this question as if their travel documents are passports.';
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
   placeholders: [
@@ -75,11 +77,11 @@ local proxyLabel = 'Enter passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel, nonProxyDefinitionContent),
+      question: question(nonProxyTitle, nonProxyDescription, nonProxyLabel),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel, proxyDefinitionContent),
+      question: question(proxyTitle, proxyDescription, proxyLabel),
       when: [rules.isProxy],
     },
   ],
