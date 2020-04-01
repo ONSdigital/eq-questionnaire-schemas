@@ -28,8 +28,8 @@ local question(title, label, guidanceHeader, description) = {
           {
             description: 'Councils and government will use this information to:',
             list: [
-                'monitor equality to ensure that everyone is treated fairly',
-                'provide services and share funding',
+              'monitor equality to ensure that everyone is treated fairly',
+              'provide services and share funding',
             ],
           },
         ],
