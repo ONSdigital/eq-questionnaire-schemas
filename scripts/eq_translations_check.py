@@ -10,8 +10,10 @@ logger = logging.getLogger(__name__)
 version = f"v{eq_translations.__version__}"
 
 try:
-    response = requests.get("https://api.github.com/repos/ONSdigital/eq-translations/releases").json()
-    latest_tag = response[0]['tag_name']
+    response = requests.get(
+        "https://api.github.com/repos/ONSdigital/eq-translations/releases"
+    ).json()
+    latest_tag = response[0]["tag_name"]
 
     if version == latest_tag:
         logger.error("eq-translations up to date")
