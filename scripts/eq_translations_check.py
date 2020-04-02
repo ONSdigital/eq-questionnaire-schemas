@@ -22,8 +22,8 @@ try:
             sys.exit(1)
     else:
         logger.error("Can't check eq-translations version")
-        sys.exit(1)
+        sys.exit(0)
 
 except ConnectionError:
     logger.error("Can't check eq-translations version")
-    sys.exit(1)
+    sys.exit(0)
