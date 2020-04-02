@@ -16,6 +16,7 @@ validate-schemas:
 	./scripts/validate_schemas.sh
 
 translate-schemas:
+	pipenv run python -m scripts.eq_translations_check
 	pipenv run python -m scripts.translate_schemas
 
 translation-templates:
