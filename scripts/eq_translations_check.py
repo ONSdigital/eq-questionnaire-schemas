@@ -4,7 +4,7 @@ import sys
 
 import eq_translations
 
-from requests.exceptions import ConnectionError
+from requests.exceptions import RequestException
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +24,6 @@ try:
         logger.error("Can't check eq-translations version")
         sys.exit(0)
 
-except requests.exceptions.RequestException:
+except RequestException:
     logger.error("Can't check eq-translations version")
     sys.exit(0)
