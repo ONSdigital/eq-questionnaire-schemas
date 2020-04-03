@@ -34,7 +34,7 @@ local proxyTitle = {
 local guidance = {
   contents: [
     {
-      description: 'A question about gender will follow',
+      description: 'A question about gender identity will follow later on in the questionnaire',
     },
   ],
 };
