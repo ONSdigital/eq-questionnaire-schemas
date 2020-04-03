@@ -42,7 +42,7 @@ local question(title) = {
 local nonProxyTitle = 'What is the other address where you may have been included on a Census questionnaire?';
 
 local proxyTitle = {
-  text: 'What is the other address where {person_name} may have been included on a Census questionnaire?',
+  text: 'What is the other address where <em>{person_name}</em> may have been included on a Census questionnaire?',
   placeholders: [
     placeholders.personName,
   ],

@@ -25,7 +25,7 @@ local question(title) = {
     },
     {
       question: question({
-        text: 'You selected “African”. How would {person_name} describe their African ethnic group or background?',
+        text: 'You selected “African”. How would <em>{person_name}</em> describe their African ethnic group or background?',
         placeholders: [
           placeholders.personName,
         ],

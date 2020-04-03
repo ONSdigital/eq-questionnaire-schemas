@@ -37,7 +37,7 @@ local walesOptions = [
 local nonProxyDetailAnswerLabel = 'Describe your national identity';
 local proxyDetailAnswerLabel = 'Describe their national identity';
 
-local question(title, description, detailAnswerLabel, region_code) = (
+local question(title, description, detailAnswerLabel, region_code, otherDescription) = (
   local regionOptions = if region_code == 'GB-WLS' then walesOptions else englandOptions;
   {
     id: 'national-identity-question',
@@ -65,7 +65,7 @@ local question(title, description, detailAnswerLabel, region_code) = (
           {
             label: 'Other',
             value: 'Other',
-            description: 'You can enter your national identity on the next question',
+            description: otherDescription,
           },
         ],
       },
@@ -78,11 +78,11 @@ function(region_code) {
   id: 'national-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code),
+      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code, 'You can enter your national identity on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code),
+      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code, 'You can enter their national identity on the next question'),
       when: [rules.isProxy],
     },
   ],

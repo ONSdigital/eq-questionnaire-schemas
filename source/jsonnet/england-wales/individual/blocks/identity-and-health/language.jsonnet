@@ -42,7 +42,7 @@ local routing(region_code) = (
   }
 );
 
-local question(title, definitionDescription, region_code) = (
+local question(title, definitionDescription, region_code, otherDescription) = (
   local regionOption = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'language-question',
@@ -66,7 +66,7 @@ local question(title, definitionDescription, region_code) = (
           {
             label: 'Other, including British Sign Language',
             value: 'Other, including British Sign Language',
-            description: 'You can enter your main language on the next question',
+            description: otherDescription,
           },
         ],
       },
@@ -79,11 +79,11 @@ function(region_code) {
   id: 'language',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code),
+      question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code, 'You can enter your main language on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionDescription, region_code),
+      question: question(proxyTitle, proxyDefinitionDescription, region_code, 'You can enter their main language on the next question'),
       when: [rules.isProxy],
     },
   ],

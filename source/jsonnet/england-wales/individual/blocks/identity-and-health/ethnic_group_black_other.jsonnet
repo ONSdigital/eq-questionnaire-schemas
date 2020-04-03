@@ -21,16 +21,16 @@ local question(englandTitle, walesTitle, region_code) = (
   }
 );
 
-local nonProxyEnglandTitle = 'You selected “Any other Black, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean background?';
+local nonProxyEnglandTitle = 'You selected “Any other Black, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean ethnic group or background?';
 local proxyEnglandTitle = {
-  text: 'You selected “Any other Black, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean background?',
+  text: 'You selected “Any other Black, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],
 };
-local nonProxyWalesTitle = 'You selected “Any other Black, Black Welsh, Black British or Caribbean”. How would you describe your Black, Black British or Caribbean background?';
+local nonProxyWalesTitle = 'You selected “Any other Black, Black Welsh, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean background?';
 local proxyWalesTitle = {
-  text: 'You selected “Any other Black, Black Welsh, Black British or Caribbean”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean background?',
+  text: 'You selected “Any other Black, Black Welsh, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],

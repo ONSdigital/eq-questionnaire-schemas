@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(englandTitle, walesTitle, region_code, definitionDescription) = (
+local question(englandTitle, walesTitle, region_code, definitionDescription, otherAsianBackgroundDescription) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
   {
     id: 'asian-ethnic-group-question',
@@ -47,7 +47,7 @@ local question(englandTitle, walesTitle, region_code, definitionDescription) = (
           {
             label: 'Any other Asian background',
             value: 'Any other Asian background',
-            description: 'You can enter your ethnic group or background on the next question',
+            description: otherAsianBackgroundDescription,
           },
         ],
         type: 'Radio',
@@ -76,11 +76,11 @@ function(region_code) {
   id: 'asian-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription),
+      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription),
+      question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],

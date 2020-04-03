@@ -10,7 +10,7 @@ local question(title) = {
       id: 'another-address-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
-      mandatory: false,
+      mandatory: true,
       type: 'TextField',
     },
   ],
@@ -21,12 +21,12 @@ local question(title) = {
   id: 'another-address-outside-uk',
   question_variants: [
     {
-      question: question('Which country outside of the UK do you stay at for more than 30 days a year?'),
+      question: question('In which country outside of the UK is the address you stay at for more than 30 days a year?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'Which country outside of the UK does <em>{person_name}</em> stay at for more than 30 days a year?',
+        text: 'In which country outside of the UK is the address <em>{person_name}</em> stays at for more than 30 days a year?',
         placeholders: [
           placeholders.personName,
         ],

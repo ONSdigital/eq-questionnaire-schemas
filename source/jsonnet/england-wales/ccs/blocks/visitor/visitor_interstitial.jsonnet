@@ -14,7 +14,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     contents: [
       {
         description: {
-          text: 'In this section, I’m going to ask you about your visitor, {person_name}.',
+          text: 'In this section, I’m going to ask you about your visitor, <em>{person_name}</em>.',
           placeholders: [
             placeholders.personName,
           ],

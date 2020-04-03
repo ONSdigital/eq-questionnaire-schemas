@@ -9,6 +9,7 @@ local question(title) = {
     {
       id: 'mainly-work-outside-uk-answer',
       label: 'Current name of country',
+      description: 'Enter your own answer or select from suggestions',
       mandatory: false,
       type: 'TextField',
     },

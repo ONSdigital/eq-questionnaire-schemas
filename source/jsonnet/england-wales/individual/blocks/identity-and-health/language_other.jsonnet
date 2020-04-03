@@ -8,7 +8,7 @@ local question(title) = {
   answers: [
     {
       id: 'language-other-answer',
-      label: 'Main Language',
+      label: 'Main language',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
       type: 'TextField',

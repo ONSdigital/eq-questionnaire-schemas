@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label, definitionContent) = {
+local question(title, label, definitionContent, otherDescription) = {
   id: 'passports-question',
   title: title,
   description: '',
@@ -34,7 +34,7 @@ local question(title, label, definitionContent) = {
         {
           label: 'Other',
           value: 'Other',
-          description: 'You can enter your passports on the next question',
+          description: otherDescription,
         },
       ],
     },
@@ -69,11 +69,11 @@ local proxyLabel = 'Enter passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel, nonProxyDefinitionContent),
+      question: question(nonProxyTitle, nonProxyLabel, nonProxyDefinitionContent, 'You can enter your passports on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel, proxyDefinitionContent),
+      question: question(proxyTitle, proxyLabel, proxyDefinitionContent, 'You can enter their passports on the next question'),
       when: [rules.isProxy],
     },
   ],

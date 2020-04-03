@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, definitionDescription) = {
+local question(title, definitionDescription, otherEthnicGroup) = {
   id: 'other-ethnic-group-question',
   title: title,
   type: 'General',
@@ -33,7 +33,7 @@ local question(title, definitionDescription) = {
         {
           label: 'Any other ethnic group',
           value: 'Any other ethnic group',
-          description: 'You can enter their ethnic group or background on the next question',
+          description: otherEthnicGroup,
         },
       ],
       type: 'Radio',
@@ -54,11 +54,11 @@ local proxyTitle = {
   id: 'other-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionDescription),
+      question: question(nonProxyTitle, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionDescription),
+      question: question(proxyTitle, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],

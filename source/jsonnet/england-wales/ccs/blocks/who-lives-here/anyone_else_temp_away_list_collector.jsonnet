@@ -2,14 +2,14 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local primaryEditPersonQuestionTitle = {
-  text: 'Change details for {person_name} (You)',
+  text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
     placeholders.personName,
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
-  text: 'Change details for {person_name}',
+  text: 'Change details for <em>{person_name}</em>',
   placeholders: [
     placeholders.personName,
   ],
@@ -155,7 +155,7 @@ local editQuestion(questionTitle) = {
         }],
       },
       title: {
-        text: 'Are you sure you want to remove {person_name}?',
+        text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
           placeholders.personName,
         ],

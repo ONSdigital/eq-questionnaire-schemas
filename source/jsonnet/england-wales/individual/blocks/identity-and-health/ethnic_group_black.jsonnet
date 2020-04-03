@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(englandTitle, walesTitle, region_code, definitionDescription, optionLabelValue) = (
+local question(englandTitle, walesTitle, region_code, definitionDescription, optionLabelValue, optionDescriptionAfricanOther) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
 
   {
@@ -36,12 +36,12 @@ local question(englandTitle, walesTitle, region_code, definitionDescription, opt
           {
             label: 'African',
             value: 'African',
-            description: 'You can enter your ethnic group or background on the next question',
+            description: optionDescriptionAfricanOther,
           },
           {
             label: optionLabelValue,
             value: optionLabelValue,
-            description: 'You can enter your ethnic group or background on the next question',
+            description: optionDescriptionAfricanOther,
           },
         ],
         type: 'Radio',
@@ -74,11 +74,11 @@ function(region_code) (
     id: 'black-ethnic-group',
     question_variants: [
       {
-        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription, optionLabelValue),
+        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription, optionLabelValue, 'You can enter your ethnic group or background on the next question'),
         when: [rules.isNotProxy],
       },
       {
-        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription, optionLabelValue),
+        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription, optionLabelValue, 'You can enter their ethnic group or background on the next question'),
         when: [rules.isProxy],
       },
     ],

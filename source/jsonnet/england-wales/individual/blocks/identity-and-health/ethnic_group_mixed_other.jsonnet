@@ -21,12 +21,12 @@ local question(title) = {
   id: 'ethnic-group-mixed-other',
   question_variants: [
     {
-      question: question('You selected “Any other Mixed or Multiple background”. How would your Mixed or Multiple ethnic group or background?'),
+      question: question('You selected “Any other Mixed or Multiple background”. How would you describe your Mixed or Multiple ethnic group or background?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Any other Mixed or Multiple background”. How would {person_name} describe their Mixed or Multiple ethnic group or background?',
+        text: 'You selected “Any other Mixed or Multiple background”. How would <em>{person_name}</em> describe their Mixed or Multiple ethnic group or background?',
         placeholders: [
           placeholders.personName,
         ],

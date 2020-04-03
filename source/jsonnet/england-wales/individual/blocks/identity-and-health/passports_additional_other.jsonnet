@@ -26,7 +26,7 @@ local question(title) = {
     },
     {
       question: question({
-        text: 'You selected “Other”. What passports does {person_name} hold?',
+        text: 'You selected "Other". What other passports does <em>{person_name}</em> hold?',
         placeholders: [
           placeholders.personName,
         ],

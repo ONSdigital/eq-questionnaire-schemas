@@ -79,7 +79,7 @@ local rules = import 'rules.libsonnet';
       id: 'visitor-edit-question',
       type: 'General',
       title: {
-        text: 'Change details for {person_name}',
+        text: 'Change details for <em>{person_name}</em>',
         placeholders: [
           placeholders.personName,
         ],
@@ -112,7 +112,7 @@ local rules = import 'rules.libsonnet';
         }],
       },
       title: {
-        text: 'Are you sure you want to remove {person_name}?',
+        text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
           placeholders.personName,
         ],
