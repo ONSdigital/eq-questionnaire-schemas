@@ -9,79 +9,68 @@ local proxyTitle = {
   ],
 };
 
-local englandOptions = {
-  options: [
-    {
-      label: 'England',
-      value: 'England',
-    },
-    {
-      label: 'Wales',
-      value: 'Wales',
-    },
-    {
-      label: 'Scotland',
-      value: 'Scotland',
-    },
-    {
-      label: 'Northern Ireland',
-      value: 'Northern Ireland',
-    },
-    {
-      label: 'Republic of Ireland',
-      value: 'Republic of Ireland',
-    },
-    {
-      label: 'Elsewhere',
-      value: 'Elsewhere',
-      description: 'Select to enter answer',
-      detail_answer: {
-        id: 'country-of-birth-answer-other',
-        type: 'TextField',
-        mandatory: false,
-        label: 'Enter the current name of the country',
-      },
-    },
-  ],
-};
+local question(title, region_code, elsewhereDescription) = (
 
-local walesOptions = {
-  options: [
-    {
-      label: 'Wales',
-      value: 'Wales',
-    },
-    {
-      label: 'England',
-      value: 'England',
-    },
-    {
-      label: 'Scotland',
-      value: 'Scotland',
-    },
-    {
-      label: 'Northern Ireland',
-      value: 'Northern Ireland',
-    },
-    {
-      label: 'Republic of Ireland',
-      value: 'Republic of Ireland',
-    },
-    {
-      label: 'Elsewhere',
-      value: 'Elsewhere',
-      description: 'Select to enter answer',
-      detail_answer: {
-        id: 'country-of-birth-answer-other',
-        type: 'TextField',
-        mandatory: false,
-        label: 'Enter the current name of the country',
+  local englandOptions = {
+    options: [
+      {
+        label: 'England',
+        value: 'England',
       },
-    },
-  ],
-};
+      {
+        label: 'Wales',
+        value: 'Wales',
+      },
+      {
+        label: 'Scotland',
+        value: 'Scotland',
+      },
+      {
+        label: 'Northern Ireland',
+        value: 'Northern Ireland',
+      },
+      {
+        label: 'Republic of Ireland',
+        value: 'Republic of Ireland',
+      },
+      {
+        label: 'Elsewhere',
+        value: 'Elsewhere',
+        description: elsewhereDescription,
+      },
+    ],
+  };
 
-local question(title, region_code) = (
+  local walesOptions = {
+    options: [
+      {
+        label: 'Wales',
+        value: 'Wales',
+      },
+      {
+        label: 'England',
+        value: 'England',
+      },
+      {
+        label: 'Scotland',
+        value: 'Scotland',
+      },
+      {
+        label: 'Northern Ireland',
+        value: 'Northern Ireland',
+      },
+      {
+        label: 'Republic of Ireland',
+        value: 'Republic of Ireland',
+      },
+      {
+        label: 'Elsewhere',
+        value: 'Elsewhere',
+        description: elsewhereDescription,
+      },
+    ],
+  };
+
   local radioOptions = if region_code == 'GB-WLS' then walesOptions else englandOptions;
   {
     id: 'country-of-birth-question',
@@ -102,18 +91,18 @@ function(region_code) {
   id: 'country-of-birth',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(nonProxyTitle, region_code, 'You can enter your country of birth on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(proxyTitle, region_code, 'You can enter their country of birth on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
     {
       goto: {
-        block: 'arrive-in-country',
+        block: 'country-of-birth-elsewhere',
         when: [
           {
             id: 'country-of-birth-answer',

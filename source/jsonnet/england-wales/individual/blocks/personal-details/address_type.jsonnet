@@ -73,7 +73,7 @@ local nonProxyNonUkAddressTitle = {
       placeholder: 'country',
       value: {
         source: 'answers',
-        identifier: 'another-address-answer-other-country',
+        identifier: 'another-address-outside-uk-answer',
       },
     },
   ],
@@ -86,7 +86,7 @@ local proxyNonUkAddressTitle = {
       placeholder: 'country',
       value: {
         source: 'answers',
-        identifier: 'another-address-answer-other-country',
+        identifier: 'another-address-outside-uk-answer',
       },
     },
   ],

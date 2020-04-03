@@ -32,7 +32,7 @@ local nonProxyUnder19Title = {
 };
 
 local proxyUnder19Title = {
-  text: 'On {census_date}, was {person_name} a schoolchild or student in full-time education?',
+  text: 'On {census_date}, was <em>{person_name}</em> a schoolchild or student in full-time education?',
   placeholders: [
     placeholders.personName,
     placeholders.censusDate,
@@ -47,7 +47,7 @@ local nonProxyOver19Title = {
 };
 
 local proxyOver19Title = {
-  text: 'On {census_date}, was {person_name} a student in full-time education?',
+  text: 'On {census_date}, was <em>{person_name}</em> a student in full-time education?',
   placeholders: [
     placeholders.personName,
     placeholders.censusDate,

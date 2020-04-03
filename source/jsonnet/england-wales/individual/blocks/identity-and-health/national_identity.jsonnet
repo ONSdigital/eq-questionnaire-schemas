@@ -14,12 +14,24 @@ local proxyDescription = 'This relates to where they feel they belong, such as t
 
 local englandOptions = [
   {
+    label: 'British',
+    value: 'British',
+  },
+  {
     label: 'English',
     value: 'English',
   },
   {
     label: 'Welsh',
     value: 'Welsh',
+  },
+  {
+    label: 'Scottish',
+    value: 'Scottish',
+  },
+  {
+    label: 'Northern Irish',
+    value: 'Northern Irish',
   },
 ];
 
@@ -32,12 +44,24 @@ local walesOptions = [
     label: 'English',
     value: 'English',
   },
+  {
+    label: 'Scottish',
+    value: 'Scottish',
+  },
+  {
+    label: 'Northern Irish',
+    value: 'Northern Irish',
+  },
+  {
+    label: 'British',
+    value: 'British',
+  },
 ];
 
 local nonProxyDetailAnswerLabel = 'Describe your national identity';
 local proxyDetailAnswerLabel = 'Describe their national identity';
 
-local question(title, description, detailAnswerLabel, region_code) = (
+local question(title, description, detailAnswerLabel, region_code, otherDescription) = (
   local regionOptions = if region_code == 'GB-WLS' then walesOptions else englandOptions;
   {
     id: 'national-identity-question',
@@ -51,27 +75,9 @@ local question(title, description, detailAnswerLabel, region_code) = (
         type: 'Checkbox',
         options: regionOptions + [
           {
-            label: 'Scottish',
-            value: 'Scottish',
-          },
-          {
-            label: 'Northern Irish',
-            value: 'Northern Irish',
-          },
-          {
-            label: 'British',
-            value: 'British',
-          },
-          {
             label: 'Other',
             value: 'Other',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'national-identity-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: detailAnswerLabel,
-            },
+            description: otherDescription,
           },
         ],
       },
@@ -84,12 +90,31 @@ function(region_code) {
   id: 'national-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code),
+      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code, 'You can enter your national identity on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code),
+      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code, 'You can enter their national identity on the next question'),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'national-identity-other',
+        when: [
+          {
+            condition: 'contains',
+            id: 'national-identity-answer',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'ethnic-group',
+      },
     },
   ],
 }

@@ -60,7 +60,7 @@ local nonProxyTitle = {
   ],
 };
 local proxyTitle = {
-  text: 'On {census_date}, what was {person_name_possessive} legal marital or registered civil partnership status?',
+  text: 'On {census_date}, what was <em>{person_name_possessive}</em> legal marital or registered civil partnership status?',
   placeholders: [
     placeholders.censusDate,
     placeholders.personNamePossessive,

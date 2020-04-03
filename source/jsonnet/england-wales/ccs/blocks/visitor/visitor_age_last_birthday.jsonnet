@@ -9,7 +9,7 @@ local rules = import 'rules.libsonnet';
     description: '',
     type: 'General',
     title: {
-      text: 'What was {person_name_possessive} age on their last birthday?',
+      text: 'What was <em>{person_name_possessive}</em> age on their last birthday?',
       placeholders: [placeholders.personNamePossessive],
     },
     answers: [

@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, options) = {
+local question(title, options, description) = {
   id: 'term-time-location-question',
   type: 'General',
   title: title,
@@ -10,6 +10,15 @@ local question(title, options) = {
       id: 'term-time-location-answer',
       mandatory: true,
       type: 'Radio',
+      guidance: {
+        show_guidance: 'Why we ask for term-time address',
+        hide_guidance: 'Why we ask for term-time address',
+        contents: [
+          {
+            description: description,
+          },
+        ],
+      },
     } + options,
   ],
 };
@@ -21,6 +30,9 @@ local proxyTitle = {
     placeholders.personName,
   ],
 };
+
+local nonProxyDescription = 'Your answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
+local proxyDescription = 'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
 
 local noOtherAddressOptions = {
   options: [
@@ -98,7 +110,7 @@ local otherNonUkAddressOptions = {
             placeholder: 'thirty_day_address_country',
             value: {
               source: 'answers',
-              identifier: 'another-address-answer-other-country',
+              identifier: 'another-address-outside-uk-answer',
             },
           },
         ],
@@ -117,7 +129,7 @@ local otherNonUkAddressOptions = {
   id: 'term-time-location',
   question_variants: [
     {
-      question: question(nonProxyTitle, otherNonUkAddressOptions),
+      question: question(nonProxyTitle, otherNonUkAddressOptions, nonProxyDescription),
       when: [
         rules.isNotProxy,
         {
@@ -128,7 +140,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherNonUkAddressOptions),
+      question: question(proxyTitle, otherNonUkAddressOptions, proxyDescription),
       when: [
         rules.isProxy,
         {
@@ -139,7 +151,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, otherUkAddressOptions),
+      question: question(nonProxyTitle, otherUkAddressOptions, nonProxyDescription),
       when: [
         rules.isNotProxy,
         {
@@ -150,7 +162,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherUkAddressOptions),
+      question: question(proxyTitle, otherUkAddressOptions, proxyDescription),
       when: [
         rules.isProxy,
         {
@@ -161,11 +173,11 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, noOtherAddressOptions),
+      question: question(nonProxyTitle, noOtherAddressOptions, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, noOtherAddressOptions),
+      question: question(proxyTitle, noOtherAddressOptions, proxyDescription),
       when: [rules.isProxy],
     },
   ],

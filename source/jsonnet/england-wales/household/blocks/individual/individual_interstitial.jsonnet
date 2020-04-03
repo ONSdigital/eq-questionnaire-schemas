@@ -14,22 +14,23 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     contents: [
       {
         description: {
-          text: 'In this section, we’re going to ask you questions about <strong>{person_name}</strong>.',
+          text: 'In this section, we are going to ask you questions about <strong>{person_name}</strong>.',
           placeholders: [
             placeholders.personName,
           ],
         },
       },
       {
-        title: 'You will need to know',
+        title: 'You will need to know personal details such as',
         list: [
-          'Personal details such as date of birth, country of birth, religion',
-          'Second or holiday homes',
-          'Main language',
-          'Health',
-          'Unpaid care provided',
-          'Qualifications',
-          'Employment details',
+          'date of birth',
+          'country of birth',
+          'second or holiday homes',
+          'main language',
+          'general health',
+          'unpaid care provided',
+          'qualifications',
+          'employment details',
         ],
       },
     ],

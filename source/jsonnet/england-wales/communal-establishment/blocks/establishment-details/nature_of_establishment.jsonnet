@@ -30,8 +30,8 @@
           description: 'For example, prisons or approved premises',
         },
         {
-          label: 'Travel or temporary accomodation',
-          value: 'Travel or temporary accomodation',
+          label: 'Travel or temporary accommodation',
+          value: 'Travel or temporary accommodation',
           description: 'Includes shelters for homeless people',
         },
         {
@@ -39,8 +39,8 @@
           value: 'Religious establishment',
         },
         {
-          label: 'Staff or worker accomodation only',
-          value: 'Staff or worker accomodation only',
+          label: 'Staff or worker accommodation only',
+          value: 'Staff or worker accommodation only',
         },
         {
           label: 'Other establishment',
@@ -94,7 +94,7 @@
           {
             id: 'nature-of-establishment-answer',
             condition: 'equals',
-            value: 'Travel or temporary accomodation',
+            value: 'Travel or temporary accommodation',
           },
         ],
       },

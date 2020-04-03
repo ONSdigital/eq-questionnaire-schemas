@@ -15,7 +15,7 @@ local walesOption = 'Welsh, English, Scottish, Northern Irish or British';
 local nonProxyDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, description, region_code) = (
+local question(title, description, region_code, whiteBackgroundDescription) = (
   local radioOptions = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'white-ethnic-group-question',
@@ -58,13 +58,7 @@ local question(title, description, region_code) = (
           {
             label: 'Any other White background',
             value: 'Any other White background',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'white-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter White background',
-            },
+            description: whiteBackgroundDescription,
           },
         ],
         type: 'Radio',
@@ -78,15 +72,27 @@ function(region_code) {
   id: 'white-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, region_code),
+      question: question(nonProxyTitle, nonProxyDescription, region_code, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, region_code),
+      question: question(proxyTitle, proxyDescription, region_code, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-white-other',
+        when: [
+          {
+            id: 'white-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other White background',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

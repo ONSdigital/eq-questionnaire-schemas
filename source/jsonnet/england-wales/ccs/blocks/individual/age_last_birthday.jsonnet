@@ -37,7 +37,7 @@ local question(title) = {
 local nonProxyTitle = 'What was your age on your last birthday?';
 
 local proxyTitle = {
-  text: 'What was {person_name_possessive} age on their last birthday?',
+  text: 'What was <em>{person_name_possessive}</em> age on their last birthday?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

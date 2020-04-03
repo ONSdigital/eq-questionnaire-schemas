@@ -32,13 +32,6 @@ local question(title) = {
         {
           label: 'Yes, an address outside the UK',
           value: 'Yes, an address outside the UK',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'another-address-answer-other-country',
-            type: 'TextField',
-            mandatory: true,
-            label: 'Enter the current name of the country',
-          },
         },
       ],
       type: 'Radio',
@@ -119,7 +112,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'address-type',
+        block: 'another-address-outside-uk',
         when: [
           {
             id: 'another-address-answer',

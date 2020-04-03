@@ -64,7 +64,7 @@ local nonProxyTitle = {
 };
 
 local proxyTitle = {
-  text: 'During the week of 15 to {census_date}, was {person_name} doing any of the following?',
+  text: 'During the week of 15 to {census_date}, was <em>{person_name}</em> doing any of the following?',
   placeholders: [
     placeholders.personName,
     placeholders.censusDate,
