@@ -9,8 +9,19 @@ local proxyTitle = {
   ],
 };
 
-local englandGuidanceTitle = 'Include equivalent qualifications achieved anywhere outside England and Wales';
-local walesGuidanceTitle = 'Include equivalent qualifications achieved anywhere outside Wales and England';
+local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
+local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
+
+local englandGuidance = 'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in England and Wales 
+usually complete GCSEs at school by the age of 16 years.
+
+If they have achieved CSEs, O levels or any other similar qualifications outside of England and Wales, choose the 
+options they think are the closest match.';
+local walesGuidance = 'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in Wales and England
+usually complete GCSEs at school by the age of 16 years.
+
+If you have achieved CSEs, O levels or any other similar qualifications outside of Wales and England, choose the 
+options you think are the closest match. ';
 
 local walesOptions = [
   {
@@ -24,17 +35,19 @@ local walesOptions = [
 ];
 
 local question(title, region_code) = (
-  local regionGuidanceTitle = if region_code == 'GB-WLS' then walesGuidanceTitle else englandGuidanceTitle;
+  local regionGuidance = if region_code == 'GB-WLS' then walesGuidance else englandGuidance;
+  local questionDescription = if region_code == 'GB-WLS' then walesGuidance else englandGuidance;
   local regionOptions = if region_code == 'GB-WLS' then walesOptions else [];
   {
     id: 'gcse-question',
     title: title,
+    description: questionDescription,
     type: 'MutuallyExclusive',
     mandatory: false,
     guidance: {
       contents: [
         {
-          description: regionGuidanceTitle,
+          description: regionGuidance,
         },
       ],
     },

@@ -9,25 +9,19 @@ local proxyTitle = {
   ],
 };
 
-local walesGuidanceTitle = 'Include equivalent apprenticeships completed anywhere outside Wales and England';
-local englandGuidanceTitle = 'Include equivalent apprenticeships completed anywhere outside England and Wales';
-local walesAnswerDescription = 'For example, trade, higher, foundation or modern';
+local englandQuestionDescription = 'This could be equivalent apprenticeships completed anywhere outside England and Wales';
+local walesQuestionDescription = 'This could be equivalent apprenticeships completed anywhere outside Wales and England';
 local englandAnswerDescription = 'For example, trade, advanced, foundation or modern';
+local walesAnswerDescription = 'For example, trade, higher, foundation or modern';
 
 local question(title, region_code) = (
-  local regionGuidanceTitle = if region_code == 'GB-WLS' then walesGuidanceTitle else englandGuidanceTitle;
+  local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   local answerDescription = if region_code == 'GB-WLS' then walesAnswerDescription else englandAnswerDescription;
   {
     id: 'apprenticeship-question',
     title: title,
+    description: questionDescription,
     type: 'General',
-    guidance: {
-      contents: [
-        {
-          description: regionGuidanceTitle,
-        },
-      ],
-    },
     answers: [
       {
         id: 'apprenticeship-answer',

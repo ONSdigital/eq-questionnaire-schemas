@@ -31,11 +31,15 @@ local walesOptions = [
   },
 ];
 
-local question(title, region_code) = (
+local nonProxyQuestionDescription = 'This could be any qualifications you have ever achieved, even if you are not using them now';
+local proxyQuestionDescription = 'This could be any qualifications they have ever achieved, even if they are not using them now';
+
+local question(title, questionDescription, region_code) = (
   local regionOptions = if region_code == 'GB-WLS' then walesOptions else englandOptions;
   {
     id: 'other-qualifications-question',
     title: title,
+    description: questionDescription,
     type: 'MutuallyExclusive',
     mandatory: false,
     answers: [
@@ -65,11 +69,11 @@ function(region_code) {
   id: 'other-qualifications',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(nonProxyTitle, nonProxyQuestionDescription, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(proxyTitle, proxyQuestionDescription, region_code),
       when: [rules.isProxy],
     },
   ],
