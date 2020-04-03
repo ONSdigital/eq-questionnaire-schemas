@@ -42,7 +42,7 @@ local question(title, region_code) = (
     description: questionDescription,
     type: 'MutuallyExclusive',
     mandatory: false,
-    definitons: [{
+    definitions: [{
       title: 'What we mean by “GCSE”',
       contents: [
         {
