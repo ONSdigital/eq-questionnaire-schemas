@@ -12,9 +12,14 @@ local proxyTitle = {
 local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
 local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
 
-local englandGuidance = 'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in \nEngland and Wales usually complete AS levels by the age of 17 years and A levels by the age of 18 years.\n\nIf they have achieved similar qualifications outside of England and Wales, choose the options they think are \nthe closest match.\n\nAn International Baccalaureate diploma is equivalent to three A levels.';
-
-local walesGuidance = 'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in \nWales and England usually complete AS levels by the age of 17 years and A levels by the age of 18 years.\n\nIf you have achieved similar qualifications outside of Wales and England, choose the options you think are\nthe closest match.\n\nAn International Baccalaureate diploma is equivalent to three A levels.';
+local englandGuidanceList = [
+  'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in England and Wales usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
+  'If they have achieved similar qualifications outside of England and Wales, choose the options they think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.'
+];
+local walesGuidanceList = [
+  'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in Wales and England usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
+  'If you have achieved similar qualifications outside of Wales and England, choose the options you think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.'
+];
 
 local walesOption = [{
   label: 'Advanced Welsh Baccalaureate',
@@ -22,7 +27,7 @@ local walesOption = [{
 }];
 
 local question(title, region_code) = (
-  local regionGuidance = if region_code == 'GB-WLS' then walesGuidance else englandGuidance;
+  local regionGuidanceList = if region_code == 'GB-WLS' then walesGuidanceList else englandGuidanceList;
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   local regionOptions = if region_code == 'GB-WLS' then walesOption else [];
   {
@@ -33,7 +38,7 @@ local question(title, region_code) = (
       title: 'What we mean by “AS and A level”',
       contents: [
         {
-          description: regionGuidance,
+          list: regionGuidanceList,
         },
       ],
     },
