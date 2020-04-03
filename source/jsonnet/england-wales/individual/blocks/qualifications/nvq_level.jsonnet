@@ -28,14 +28,15 @@ local question(title, region_code) = (
     id: 'nvq-level-question',
     title: title,
     type: 'MutuallyExclusive',
-    guidance: {
+    description: questionDescription,
+    definitions: [{
       title: 'What we mean by “NVQ”',
       contents: [
         {
           list: regionGuidanceList,
         },
       ],
-    },
+    }],
     mandatory: false,
     answers: [
       {

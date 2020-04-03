@@ -9,8 +9,8 @@ local proxyTitle = {
   ],
 };
 
-local englandQuestionDescription = 'Include equivalent qualifications achieved anywhere outside England and Wales';
-local walesQuestionDescription = 'Include equivalent qualifications achieved anywhere outside Wales and England';
+local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
+local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
 
 local englandQuestionGuidanceList = [
   'This is any higher education qualification, achieved in the UK or another country, at level 4 or above.',

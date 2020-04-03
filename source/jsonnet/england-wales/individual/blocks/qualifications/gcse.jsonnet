@@ -42,13 +42,14 @@ local question(title, region_code) = (
     description: questionDescription,
     type: 'MutuallyExclusive',
     mandatory: false,
-    guidance: {
+    definitons: [{
+      title: 'What we mean by “GCSE”',
       contents: [
         {
           list: regionGuidanceList,
         },
       ],
-    },
+    }],
     answers: [
       {
         id: 'gcse-answer',

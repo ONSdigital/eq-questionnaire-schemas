@@ -34,14 +34,14 @@ local question(title, region_code) = (
     id: 'a-level-question',
     title: title,
     description: questionDescription,
-    guidance: {
+    definitions: [{
       title: 'What we mean by “AS and A level”',
       contents: [
         {
           list: regionGuidanceList,
         },
       ],
-    },
+    }],
     type: 'MutuallyExclusive',
     mandatory: false,
     answers: [
