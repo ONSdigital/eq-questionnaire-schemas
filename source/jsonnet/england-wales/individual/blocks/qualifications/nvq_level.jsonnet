@@ -12,16 +12,8 @@ local proxyTitle = {
 local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
 local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
 
-local englandGuidance = 'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved 
-in school, college or at work.
-
-If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications 
-outside of the UK, choose the options they think are the closest match.';
-local walesGuidance = 'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved 
-in school, college or at work.
-
-If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications 
-outside of the UK, choose the options they think are the closest match.';
+local englandGuidance = 'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved \nin school, college or at work.\n\nIf they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications \noutside of the UK, choose the options they think are the closest match.';
+local walesGuidance = 'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved \nin school, college or at work.\n\nIf they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications \noutside of the UK, choose the options they think are the closest match.';
 
 local question(title, region_code) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;

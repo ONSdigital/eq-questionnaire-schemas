@@ -12,19 +12,9 @@ local proxyTitle = {
 local englandQuestionDescription = 'Include equivalent qualifications achieved anywhere outside England and Wales';
 local walesQuestionDescription = 'Include equivalent qualifications achieved anywhere outside Wales and England';
 
-local englandQuestionGuidance = 'This is any higher education qualification, achieved in the UK or another country, at level 4 or above.
+local englandQuestionGuidance = 'This is any higher education qualification, achieved in the UK or another country, at level 4 or above.\n\nStudents are usually aged 18 years or over when they begin these qualifications through a college or university.\n\nExamples include level 4 and 5 qualifications, bachelor’s degrees with or without honours, master’s degrees, PhD \nor other doctorates and professional qualifications, such as PGCE or chartership.';
 
-Students are usually aged 18 years or over when they begin these qualifications through a college or university.
-
-Examples include level 4 and 5 qualifications, bachelor’s degrees with or without honours, master’s degrees, PhD 
-or other doctorates and professional qualifications, such as PGCE or chartership.';
-
-local walesQuestionGuidance = 'This is any higher education qualification, achieved in the UK or another country, at level 4 or above.
-
-Students are usually aged 18 years or over when they begin these qualifications through a college or university.
-
-Examples include level 4 and 5 qualifications, bachelor’s degrees with or without honours, master’s degrees, PhD 
-or other doctorates and professional qualifications, such as PGCE or chartership.';
+local walesQuestionGuidance = 'This is any higher education qualification, achieved in the UK or another country, at level 4 or above.\n\nStudents are usually aged 18 years or over when they begin these qualifications through a college or university.\n\nExamples include level 4 and 5 qualifications, bachelor’s degrees with or without honours, master’s degrees, PhD \nor other doctorates and professional qualifications, such as PGCE or chartership.';
 
 local question(title, region_code) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
