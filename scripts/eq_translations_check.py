@@ -17,7 +17,8 @@ try:
         latest_tag = response.json()[0]["tag_name"]
         if latest_tag != f"v{version}":
             logger.error(
-                f'Latest eq-translations version is {version}, use "pipenv update"'
+                f'eq-translations is out of date. Update using: "pipenv install -e git+https://github.com/ONSDigital'
+                f'/eq-translations.git@v{version}#egg=eq_translations". '
             )
             sys.exit(1)
     else:
