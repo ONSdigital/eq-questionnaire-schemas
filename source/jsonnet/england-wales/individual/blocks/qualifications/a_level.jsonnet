@@ -14,11 +14,11 @@ local walesQuestionDescription = 'This could be equivalent qualifications achiev
 
 local englandGuidanceList = [
   'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in England and Wales usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
-  'If they have achieved similar qualifications outside of England and Wales, choose the options they think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.'
+  'If they have achieved similar qualifications outside of England and Wales, choose the options they think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.',
 ];
 local walesGuidanceList = [
   'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in Wales and England usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
-  'If you have achieved similar qualifications outside of Wales and England, choose the options you think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.'
+  'If you have achieved similar qualifications outside of Wales and England, choose the options you think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.',
 ];
 
 local walesOption = [{

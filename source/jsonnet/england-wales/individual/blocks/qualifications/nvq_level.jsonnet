@@ -14,11 +14,11 @@ local walesQuestionDescription = 'This could be equivalent qualifications achiev
 
 local englandGuidanceList = [
   'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
-  'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.'
+  'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.',
 ];
 local walesGuidanceList = [
   'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
-  'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.'
+  'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.',
 ];
 
 local question(title, region_code) = (
