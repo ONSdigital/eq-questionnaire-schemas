@@ -14,12 +14,24 @@ local proxyDescription = 'This relates to where they feel they belong, such as t
 
 local englandOptions = [
   {
+    label: 'British',
+    value: 'British',
+  },
+  {
     label: 'English',
     value: 'English',
   },
   {
     label: 'Welsh',
     value: 'Welsh',
+  },
+  {
+    label: 'Scottish',
+    value: 'Scottish',
+  },
+  {
+    label: 'Northern Irish',
+    value: 'Northern Irish',
   },
 ];
 
@@ -31,6 +43,18 @@ local walesOptions = [
   {
     label: 'English',
     value: 'English',
+  },
+  {
+    label: 'Scottish',
+    value: 'Scottish',
+  },
+  {
+    label: 'Northern Irish',
+    value: 'Northern Irish',
+  },
+  {
+    label: 'British',
+    value: 'British',
   },
 ];
 
@@ -50,18 +74,6 @@ local question(title, description, detailAnswerLabel, region_code) = (
         mandatory: false,
         type: 'Checkbox',
         options: regionOptions + [
-          {
-            label: 'Scottish',
-            value: 'Scottish',
-          },
-          {
-            label: 'Northern Irish',
-            value: 'Northern Irish',
-          },
-          {
-            label: 'British',
-            value: 'British',
-          },
           {
             label: 'Other',
             value: 'Other',

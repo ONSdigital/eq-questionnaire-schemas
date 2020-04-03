@@ -41,10 +41,10 @@ local question(title, label) = {
   ],
 };
 
-local nonProxyTitle = 'Is your gender the same as the sex you were registered at birth?';
+local nonProxyTitle = 'Is the gender you identify with the same as your sex registered at birth?';
 local nonProxyLabel = 'Enter your gender';
 local proxyTitle = {
-  text: 'Is <em>{person_name_possessive}</em> gender the same as the sex they were registered at birth?',
+  text: 'Is the gender <em>{person_name_possessive}</em> identifies with the same as their sex registered at birth?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

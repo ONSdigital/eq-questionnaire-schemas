@@ -14,7 +14,7 @@ local rules = import 'rules.libsonnet';
     guidance: {
       contents: [
         {
-          title: 'Include central heating systems that generate heat for multiple rooms whether or not you use them',
+          title: 'Include all central heating systems that generate heat for multiple rooms, whether or not the system is used',
         },
       ],
     },
