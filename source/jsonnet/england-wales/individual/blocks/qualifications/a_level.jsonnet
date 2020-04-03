@@ -23,7 +23,7 @@ local walesOption = [{
 
 local question(title, region_code) = (
   local regionGuidance = if region_code == 'GB-WLS' then walesGuidance else englandGuidance;
-  local questionDescription = if region_code == 'GB-WLS' then walesGuidance else englandGuidance;
+  local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   local regionOptions = if region_code == 'GB-WLS' then walesOption else [];
   {
     id: 'a-level-question',
