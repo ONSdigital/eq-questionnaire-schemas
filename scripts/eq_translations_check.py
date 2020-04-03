@@ -24,6 +24,6 @@ try:
         logger.error("Can't check eq-translations version")
         sys.exit(0)
 
-except ConnectionError:
+except requests.exceptions.RequestException:
     logger.error("Can't check eq-translations version")
     sys.exit(0)
