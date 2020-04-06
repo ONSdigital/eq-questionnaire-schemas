@@ -1,10 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local nonProxyDescription = 'passports and travel documents that have expired, if you are entitled to renew them';
-local proxyDescription = 'passports and travel documents that have expired, if they are entitled to renew them';
-
-local question(title, description, label) = {
+local question(title, description, otherDescription) = {
   id: 'passports-question',
   title: title,
   description: '',
@@ -38,13 +35,7 @@ local question(title, description, label) = {
         {
           label: 'Other',
           value: 'Other',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'passport-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: label,
-          },
+          description: otherDescription,
         },
       ],
     },
@@ -77,12 +68,48 @@ local proxyLabel = 'Enter passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, nonProxyLabel),
+      question: question(nonProxyTitle, 'passports and travel documents that have expired, if you are entitled to renew them', 'You can enter your passports on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, proxyLabel),
+      question: question(proxyTitle, 'passports and travel documents that have expired, if they are entitled to renew them', 'You can enter their passports on the next question'),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'passports-additional-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains any',
+            values: ['United Kingdom', 'Ireland'],
+          },
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'passports-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'health',
+      },
     },
   ],
 }

@@ -12,7 +12,7 @@ local proxyTitle = {
 local englandDescription = 'Including Church of England, Catholic, Protestant and all other Christian denominations';
 local walesDescription = 'All denominations';
 
-local question(title, region_code) = (
+local question(title, region_code, otherReligionDescription) = (
   local optionDescription = if region_code == 'GB-WLS' then walesDescription else englandDescription;
   {
     id: 'religion-question',
@@ -64,13 +64,7 @@ local question(title, region_code) = (
           {
             label: 'Any other religion',
             value: 'Any other religion',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'religion-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter religion',
-            },
+            description: otherReligionDescription,
           },
         ],
         type: 'Radio',
@@ -84,15 +78,27 @@ function(region_code) {
   id: 'religion',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(nonProxyTitle, region_code, 'You can enter your religion on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(proxyTitle, region_code, 'You can enter their religion on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'religion-other',
+        when: [
+          {
+            id: 'religion-answer',
+            condition: 'equals',
+            value: 'Any other religion',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'passports',

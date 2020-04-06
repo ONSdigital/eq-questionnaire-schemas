@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, definitionDescription) = {
+local question(title, definitionDescription, mixedMultipleBackgroundDescription) = {
   id: 'mixed-ethnic-group-question',
   title: title,
   type: 'General',
@@ -41,13 +41,7 @@ local question(title, definitionDescription) = {
         {
           label: 'Any other Mixed or Multiple background',
           value: 'Any other Mixed or Multiple background',
-          description: 'Select to enter answer',
-          detail_answer: {
-            id: 'mixed-ethnic-group-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Enter Mixed or Multiple background',
-          },
+          description: mixedMultipleBackgroundDescription,
         },
       ],
       type: 'Radio',
@@ -68,15 +62,27 @@ local proxyTitle = {
   id: 'mixed-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionDescription),
+      question: question(nonProxyTitle, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionDescription),
+      question: question(proxyTitle, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-mixed-other',
+        when: [
+          {
+            id: 'mixed-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other Mixed or Multiple background',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'religion',

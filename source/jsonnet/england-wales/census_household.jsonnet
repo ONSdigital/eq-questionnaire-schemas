@@ -31,6 +31,7 @@ local individual_interstitial = import 'household/blocks/individual/individual_i
 local proxy = import 'household/blocks/individual/proxy.jsonnet';
 local address_type = import 'individual/blocks/personal-details/address_type.jsonnet';
 local another_address = import 'individual/blocks/personal-details/another_address.jsonnet';
+local another_address_outside_uk = import 'individual/blocks/personal-details/another_address_outside_uk.jsonnet';
 local confirm_dob = import 'individual/blocks/personal-details/confirm_dob.jsonnet';
 local current_marriage_status = import 'individual/blocks/personal-details/current_marriage_status.jsonnet';
 local current_partnership_status = import 'individual/blocks/personal-details/current_partnership_status.jsonnet';
@@ -42,6 +43,7 @@ local previous_marriage_status = import 'individual/blocks/personal-details/prev
 local previous_partnership_status = import 'individual/blocks/personal-details/previous_partnership_status.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';
 local term_time_address_country = import 'individual/blocks/personal-details/term_time_address_country.jsonnet';
+local term_time_address_country_outside_uk = import 'individual/blocks/personal-details/term_time_address_country_outside_uk.jsonnet';
 local term_time_address_details = import 'individual/blocks/personal-details/term_time_address_details.jsonnet';
 local term_time_location = import 'individual/blocks/personal-details/term_time_location.jsonnet';
 
@@ -50,22 +52,35 @@ local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_i
 local birth_gender = import 'individual/blocks/identity-and-health/birth_gender.jsonnet';
 local carer = import 'individual/blocks/identity-and-health/carer.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
+local country_of_birth_elsewhere = import 'individual/blocks/identity-and-health/country_of_birth_elsewhere.jsonnet';
 local disability = import 'individual/blocks/identity-and-health/disability.jsonnet';
 local disability_limitation = import 'individual/blocks/identity-and-health/disability_limitation.jsonnet';
 local ethnic_group = import 'individual/blocks/identity-and-health/ethnic_group.jsonnet';
 local ethnic_group_asian = import 'individual/blocks/identity-and-health/ethnic_group_asian.jsonnet';
+local ethnic_group_asian_other = import 'individual/blocks/identity-and-health/ethnic_group_asian_other.jsonnet';
 local ethnic_group_black = import 'individual/blocks/identity-and-health/ethnic_group_black.jsonnet';
+local ethnic_group_black_african = import 'individual/blocks/identity-and-health/ethnic_group_black_african.jsonnet';
+local ethnic_group_black_other = import 'individual/blocks/identity-and-health/ethnic_group_black_other.jsonnet';
 local ethnic_group_mixed = import 'individual/blocks/identity-and-health/ethnic_group_mixed.jsonnet';
+local ethnic_group_mixed_other = import 'individual/blocks/identity-and-health/ethnic_group_mixed_other.jsonnet';
 local ethnic_group_other = import 'individual/blocks/identity-and-health/ethnic_group_other.jsonnet';
+local ethnic_group_other_other = import 'individual/blocks/identity-and-health/ethnic_group_other_other.jsonnet';
 local ethnic_group_white = import 'individual/blocks/identity-and-health/ethnic_group_white.jsonnet';
+local ethnic_group_white_other = import 'individual/blocks/identity-and-health/ethnic_group_white_other.jsonnet';
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
 local language = import 'individual/blocks/identity-and-health/language.jsonnet';
+local language_other = import 'individual/blocks/identity-and-health/language_other.jsonnet';
 local last_year_address = import 'individual/blocks/identity-and-health/last_year_address.jsonnet';
 local length_of_stay = import 'individual/blocks/identity-and-health/length_of_stay.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
+local national_identity_other = import 'individual/blocks/identity-and-health/national_identity_other.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
+local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
+local passports_other = import 'individual/blocks/identity-and-health/passports_other.jsonnet';
+local past_usual_address_outside_uk = import 'individual/blocks/identity-and-health/past_usual_address_outside_uk.jsonnet';
 local past_usual_household_address = import 'individual/blocks/identity-and-health/past_usual_household_address.jsonnet';
 local religion = import 'individual/blocks/identity-and-health/religion.jsonnet';
+local religion_other = import 'individual/blocks/identity-and-health/religion_other.jsonnet';
 local sexual_identity = import 'individual/blocks/identity-and-health/sexual_identity.jsonnet';
 local speak_english = import 'individual/blocks/identity-and-health/speak_english.jsonnet';
 local understand_welsh = import 'individual/blocks/identity-and-health/understand_welsh.jsonnet';
@@ -108,6 +123,8 @@ local visitor_dob = import 'household/blocks/visitor/date_of_birth.jsonnet';
 local visitor_sex = import 'household/blocks/visitor/sex.jsonnet';
 local usual_household_address = import 'household/blocks/visitor/usual_household_address.jsonnet';
 local usual_household_address_details = import 'household/blocks/visitor/usual_household_address_details.jsonnet';
+local usual_household_address_other = import 'household/blocks/visitor/usual_household_address_other.jsonnet';
+
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
 
@@ -279,11 +296,13 @@ function(region_code, census_month_year_date) {
             current_partnership_status,
             previous_partnership_status,
             another_address,
+            another_address_outside_uk,
             other_uk_address,
             address_type,
             in_education,
             term_time_location,
             term_time_address_country,
+            term_time_address_country_outside_uk,
             term_time_address_details,
           ],
         },
@@ -292,23 +311,36 @@ function(region_code, census_month_year_date) {
           title: 'Identity and Health',
           blocks: [
             country_of_birth(region_code),
+            country_of_birth_elsewhere,
             arrive_in_country(region_code, census_month_year_date),
             when_arrive_in_uk(region_code),
             length_of_stay,
             past_usual_household_address,
+            past_usual_address_outside_uk,
             last_year_address,
             national_identity(region_code),
+            national_identity_other,
             ethnic_group(region_code),
             ethnic_group_white(region_code),
+            ethnic_group_white_other,
             ethnic_group_mixed,
+            ethnic_group_mixed_other,
             ethnic_group_asian(region_code),
+            ethnic_group_asian_other(region_code),
             ethnic_group_black(region_code),
+            ethnic_group_black_african,
+            ethnic_group_black_other(region_code),
             ethnic_group_other,
+            ethnic_group_other_other,
             religion(region_code),
+            religion_other,
           ] + understandWelshBlock(region_code) + [
             language(region_code),
+            language_other,
             speak_english,
             passports,
+            passports_other,
+            passports_additional_other,
             health,
             disability,
             disability_limitation,
@@ -405,6 +437,7 @@ function(region_code, census_month_year_date) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
+            usual_household_address_other,
           ],
         },
         {

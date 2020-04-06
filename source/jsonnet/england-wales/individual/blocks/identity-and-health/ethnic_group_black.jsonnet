@@ -4,8 +4,9 @@ local rules = import 'rules.libsonnet';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(englandTitle, walesTitle, region_code, definitionDescription) = (
+local question(englandTitle, walesTitle, region_code, definitionDescription, optionLabelValue, optionDescriptionAfricanOther) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
+
   {
     id: 'black-ethnic-group-question',
     title: title,
@@ -35,24 +36,12 @@ local question(englandTitle, walesTitle, region_code, definitionDescription) = (
           {
             label: 'African',
             value: 'African',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'african-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter African background',
-            },
+            description: optionDescriptionAfricanOther,
           },
           {
-            label: 'Any other Black, Black British or Caribbean background',
-            value: 'Any other Black, Black British or Caribbean background',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'black-ethnic-group-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter Black, Black British or Caribbean background',
-            },
+            label: optionLabelValue,
+            value: optionLabelValue,
+            description: optionDescriptionAfricanOther,
           },
         ],
         type: 'Radio',
@@ -76,24 +65,53 @@ local proxyWalesTitle = {
   ],
 };
 
-function(region_code) {
-  type: 'Question',
-  id: 'black-ethnic-group',
-  question_variants: [
-    {
-      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription),
-      when: [rules.isNotProxy],
-    },
-    {
-      question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription),
-      when: [rules.isProxy],
-    },
-  ],
-  routing_rules: [
-    {
-      goto: {
-        block: 'religion',
+
+function(region_code) (
+  local optionLabelValue = if region_code == 'GB-WLS' then 'Any other Black, Black Welsh, Black British or Caribbean background'
+  else 'Any other Black, Black British or Caribbean background';
+  {
+    type: 'Question',
+    id: 'black-ethnic-group',
+    question_variants: [
+      {
+        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyDefinitionDescription, optionLabelValue, 'You can enter your ethnic group or background on the next question'),
+        when: [rules.isNotProxy],
       },
-    },
-  ],
-}
+      {
+        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyDefinitionDescription, optionLabelValue, 'You can enter their ethnic group or background on the next question'),
+        when: [rules.isProxy],
+      },
+    ],
+    routing_rules: [
+      {
+        goto: {
+          block: 'ethnic-group-black-other',
+          when: [
+            {
+              id: 'black-ethnic-group-answer',
+              condition: 'equals',
+              value: optionLabelValue,
+            },
+          ],
+        },
+      },
+      {
+        goto: {
+          block: 'ethnic-group-black-african',
+          when: [
+            {
+              id: 'black-ethnic-group-answer',
+              condition: 'equals',
+              value: 'African',
+            },
+          ],
+        },
+      },
+      {
+        goto: {
+          block: 'religion',
+        },
+      },
+    ],
+  }
+)

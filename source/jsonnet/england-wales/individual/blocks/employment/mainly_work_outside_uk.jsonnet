@@ -9,6 +9,7 @@ local question(title) = {
     {
       id: 'mainly-work-outside-uk-answer',
       label: 'Current name of country',
+      description: 'Enter your own answer or select from suggestions',
       mandatory: false,
       type: 'TextField',
     },
@@ -17,7 +18,7 @@ local question(title) = {
 
 local nonProxyTitle = 'Which country outside of the UK do you mainly work in?';
 local proxyTitle = {
-  text: 'Which country outside of the UK does <em>{person_name}</em> mainly work in?',
+  text: 'In which country outside the UK does <em>{person_name}</em> mainly work?',
   placeholders: [
     placeholders.personName,
   ],

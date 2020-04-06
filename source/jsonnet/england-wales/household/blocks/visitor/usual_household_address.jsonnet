@@ -26,13 +26,7 @@ local rules = import 'rules.libsonnet';
           {
             label: 'An address outside the UK',
             value: 'An address outside the UK',
-            description: 'Select to enter answer',
-            detail_answer: {
-              id: 'usual-address-household-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Enter the current name of the country',
-            },
+            description: 'You can enter their country on the next question',
           },
         ],
         type: 'Radio',
@@ -48,6 +42,18 @@ local rules = import 'rules.libsonnet';
             id: 'usual-address-household-answer',
             condition: 'equals',
             value: 'An address in the UK',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'usual-household-address-other',
+        when: [
+          {
+            id: 'usual-address-household-answer',
+            condition: 'equals',
+            value: 'An address outside the UK',
           },
         ],
       },
