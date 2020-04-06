@@ -15,14 +15,14 @@ lint-jsonnet:
 validate-schemas:
 	./scripts/validate_schemas.sh
 
-translate-schemas:
+eq-translations-check:
 	pipenv run python -m scripts.eq_translations_check
+
+translate-schemas: eq-translations-check
 	pipenv run python -m scripts.translate_schemas
 
-translation-templates:
-	pipenv run python -m scripts.eq_translations_check
+translation-templates: eq-translations-check
 	pipenv run python -m scripts.extract_translation_templates
 
-test-translation-templates:
-	pipenv run python -m scripts.eq_translations_check
+test-translation-templates: eq-translations-check
 	pipenv run python -m scripts.extract_translation_templates --test

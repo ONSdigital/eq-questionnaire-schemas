@@ -13,12 +13,12 @@ try:
         "https://api.github.com/repos/ONSdigital/eq-translations/releases"
     )
     if response.status_code == 200:
-        version = eq_translations.__version__
+        version = f'v{eq_translations.__version__}'
         latest_tag = response.json()[0]["tag_name"]
-        if latest_tag != f"v{version}":
+        if latest_tag != version:
             logger.error(
                 f'eq-translations is out of date. Update using: "pipenv install -e git+https://github.com/ONSDigital'
-                f'/eq-translations.git@v{version}#egg=eq_translations". '
+                f'/eq-translations.git@{version}#egg=eq_translations". '
             )
             sys.exit(1)
     else:
