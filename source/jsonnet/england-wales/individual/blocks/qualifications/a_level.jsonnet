@@ -12,13 +12,26 @@ local proxyTitle = {
 local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
 local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
 
-local englandGuidanceList = [
+local englandGuidanceNonProxy = [
   'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in England and Wales usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
-  'If they have achieved similar qualifications outside of England and Wales, choose the options they think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.',
+  'If you have achieved similar qualifications outside of England and Wales, choose the options you think are the closest match.',
+  'An International Baccalaureate diploma is equivalent to three A levels.',
 ];
-local walesGuidanceList = [
+local englandGuidanceProxy = [
+  'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in England and Wales usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
+  'If they have achieved similar qualifications outside of England and Wales, choose the options they think are the closest match.',
+  'An International Baccalaureate diploma is equivalent to three A levels.',
+];
+
+local walesGuidanceNonProxy = [
   'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in Wales and England usually complete AS levels by the age of 17 years and A levels by the age of 18 years.',
-  'If you have achieved similar qualifications outside of Wales and England, choose the options you think are the closest match. An International Baccalaureate diploma is equivalent to three A levels.',
+  'If you have achieved similar qualifications outside of Wales and England, choose the options you think are the closest match.',
+  'An International Baccalaureate diploma is equivalent to three A levels.',
+];
+local walesGuidanceProxy = [
+  'These are advanced-level, subject-based qualifications that are often needed to get a place at university. Students in Wales and England usually complete AS levels by the age of 17 years and A levels by the age of 18 years',
+  'If they have achieved similar qualifications outside of Wales and England, choose the options they think are the closest match.',
+  'An International Baccalaureate diploma is equivalent to three A levels.',
 ];
 
 local walesOption = [{
@@ -26,20 +39,23 @@ local walesOption = [{
   value: 'Advanced Welsh Baccalaureate',
 }];
 
-local question(title, region_code) = (
-  local regionGuidanceList = if region_code == 'GB-WLS' then walesGuidanceList else englandGuidanceList;
+local guidance(isProxy, region_code) = (
+  if region_code == 'GB-WLS' then
+    if isProxy then walesGuidanceProxy else walesGuidanceNonProxy
+  else if isProxy then englandGuidanceProxy else englandGuidanceNonProxy
+);
+
+local question(isProxy, region_code) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   local regionOptions = if region_code == 'GB-WLS' then walesOption else [];
   {
     id: 'a-level-question',
-    title: title,
+    title: if isProxy then proxyTitle else nonProxyTitle,
     description: questionDescription,
     definitions: [{
       title: 'What we mean by “AS and A level”',
       contents: [
-        {
-          list: regionGuidanceList,
-        },
+        {description: paragraph} for paragraph in guidance(isProxy, region_code)
       ],
     }],
     type: 'MutuallyExclusive',
@@ -87,11 +103,11 @@ function(region_code) {
   id: 'a-level',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(false, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(true, region_code),
       when: [rules.isProxy],
     },
   ],

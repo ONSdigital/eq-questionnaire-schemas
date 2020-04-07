@@ -12,29 +12,40 @@ local proxyTitle = {
 local englandQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside England and Wales';
 local walesQuestionDescription = 'This could be equivalent qualifications achieved anywhere outside Wales and England';
 
-local englandGuidanceList = [
+local englandGuidanceNonProxy = [
+  'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
+  'If you have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options you think are the closest match.',
+];
+local englandGuidanceProxy = [
   'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
   'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.',
 ];
-local walesGuidanceList = [
+local walesGuidanceNonProxy = [
+  'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
+  'If you have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options you think are the closest match.',
+];
+local walesGuidanceProxy = [
   'This is a National Vocational Qualification. NVQs are competency and skills-based qualifications that can be achieved in school, college or at work.',
   'If they have achieved similar qualifications, such as Scottish Vocational Qualifications or other vocational qualifications outside of the UK, choose the options they think are the closest match.',
 ];
 
-local question(title, region_code) = (
+local guidance(isProxy, region_code) = (
+  if region_code == 'GB-WLS' then
+    if isProxy then walesGuidanceProxy else walesGuidanceNonProxy
+  else if isProxy then englandGuidanceProxy else englandGuidanceNonProxy
+);
+
+local question(isProxy, region_code) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
-  local regionGuidanceList = if region_code == 'GB-WLS' then walesGuidanceList else englandGuidanceList;
   {
     id: 'nvq-level-question',
-    title: title,
+    title: if isProxy then proxyTitle else nonProxyTitle,
     type: 'MutuallyExclusive',
     description: questionDescription,
     definitions: [{
       title: 'What we mean by “NVQ”',
       contents: [
-        {
-          list: regionGuidanceList,
-        },
+        {description: paragraph} for paragraph in guidance(isProxy, region_code)
       ],
     }],
     mandatory: false,
@@ -81,11 +92,11 @@ function(region_code) {
   id: 'nvq-level',
   question_variants: [
     {
-      question: question(nonProxyTitle, region_code),
+      question: question(false, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, region_code),
+      question: question(true, region_code),
       when: [rules.isProxy],
     },
   ],
