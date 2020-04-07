@@ -39,13 +39,13 @@ local walesOption = [{
   value: 'Advanced Welsh Baccalaureate',
 }];
 
-local guidance(isProxy, region_code) = (
+local guidance(region_code, isProxy) = (
   if region_code == 'GB-WLS' then
     if isProxy then walesGuidanceProxy else walesGuidanceNonProxy
   else if isProxy then englandGuidanceProxy else englandGuidanceNonProxy
 );
 
-local question(isProxy, region_code) = (
+local question(region_code, isProxy) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   local regionOptions = if region_code == 'GB-WLS' then walesOption else [];
   {
@@ -56,7 +56,7 @@ local question(isProxy, region_code) = (
       title: 'What we mean by “AS and A level”',
       contents: [
         { description: paragraph }
-        for paragraph in guidance(isProxy, region_code)
+        for paragraph in guidance(region_code, isProxy)
       ],
     }],
     type: 'MutuallyExclusive',
@@ -104,11 +104,11 @@ function(region_code) {
   id: 'a-level',
   question_variants: [
     {
-      question: question(false, region_code),
+      question: question(region_code, isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(true, region_code),
+      question: question(region_code, isProxy=true),
       when: [rules.isProxy],
     },
   ],
