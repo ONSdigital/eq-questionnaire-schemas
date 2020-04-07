@@ -27,7 +27,8 @@ local question(title, region_code) = (
     definitions: [{
       title: 'What we mean by “degree level or above”',
       contents: [
-        {description: paragraph} for paragraph in questionGuidance
+        { description: paragraph }
+        for paragraph in questionGuidance
       ],
     }],
     type: 'General',

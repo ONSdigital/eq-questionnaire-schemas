@@ -45,7 +45,8 @@ local question(isProxy, region_code) = (
     definitions: [{
       title: 'What we mean by “NVQ”',
       contents: [
-        {description: paragraph} for paragraph in guidance(isProxy, region_code)
+        { description: paragraph }
+        for paragraph in guidance(isProxy, region_code)
       ],
     }],
     mandatory: false,
