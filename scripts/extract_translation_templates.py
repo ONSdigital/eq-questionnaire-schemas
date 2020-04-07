@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
-
 import os
 import sys
-import subprocess
 import tempfile
 import logging
 import argparse
@@ -60,7 +58,10 @@ def compare_files(source_dir, target_dir, filename):
 
     if not contents_match:
         diff_results = difflib.unified_diff(
-            source_contents, target_contents, fromfile=source_file, tofile=target_file
+            source_contents,
+            target_contents,
+            fromfile=source_file,
+            tofile=target_file,
         )
         logger.info("".join(list(diff_results)))
 
@@ -90,11 +91,14 @@ def check_schema_templates(source_dir, target_dir):
 
 
 if __name__ == "__main__":
+
     parser = argparse.ArgumentParser(
         description="Extract translation templates from runner"
     )
     parser.add_argument(
-        "--test", help="Test the templates without making changes", action="store_true"
+        "--test",
+        help="Test the templates without making changes",
+        action="store_true",
     )
 
     args = parser.parse_args()
