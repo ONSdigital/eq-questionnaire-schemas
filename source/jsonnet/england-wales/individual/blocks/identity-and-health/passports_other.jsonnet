@@ -11,6 +11,7 @@ local question(title) = {
       label: 'Passports',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
+      suggestions_url: "https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/passport-countries.json",
       type: 'TextField',
     },
   ],
