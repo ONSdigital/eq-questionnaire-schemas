@@ -11,7 +11,7 @@ local question(title) = {
       label: 'Main language',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
-      suggestions_url: "https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/languages.json",
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/languages.json',
       type: 'TextField',
     },
   ],

@@ -11,7 +11,7 @@ local question(title) = {
       label: 'National identity',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
-      suggestions_url: "https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/national-identities.json",
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/national-identities.json',
       type: 'TextField',
     },
   ],

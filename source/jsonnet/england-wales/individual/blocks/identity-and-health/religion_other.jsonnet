@@ -18,7 +18,7 @@ local question(title) = {
       label: 'Religion',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
-      suggestions_url: "https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/religions.json",
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/religions.json',
       type: 'TextField',
     },
   ],
