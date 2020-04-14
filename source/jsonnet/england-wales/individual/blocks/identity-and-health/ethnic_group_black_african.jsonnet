@@ -11,6 +11,7 @@ local question(title) = {
       label: 'African ethnic group or background',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/ethnic-groups.json',
       type: 'TextField',
     },
   ],
