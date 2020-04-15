@@ -101,7 +101,7 @@
     },
     {
       goto: {
-        block: 'live-in-establishment',
+        block: 'responsible-for-establishment',
       },
     },
   ],
