@@ -16,6 +16,7 @@ TRANSLATION_MAP = {
         "ccs_household_gb_eng",
         "census_individual_gb_wls",
         "census_household_gb_wls",
+        "census_communal_establishment_gb_wls"
     ],
     "eo": ["census_individual_gb_nir", "census_household_gb_nir"],
     "ga": ["census_individual_gb_nir", "census_household_gb_nir"],
