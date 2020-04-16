@@ -45,10 +45,10 @@ function(region_code, census_month_year_date) {
           blocks: [
             establishment_details,
             medical_establishment,
-            responsible_for_establishment,
             education_establishment,
             detention_establishment,
             travel_establishment,
+            responsible_for_establishment,
             live_in_establishment,
             people_in_establishment,
             visitors_in_establishment,
