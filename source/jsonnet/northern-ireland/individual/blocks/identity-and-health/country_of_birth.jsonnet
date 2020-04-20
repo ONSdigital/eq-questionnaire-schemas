@@ -72,10 +72,6 @@ local question(title) = {
       goto: {
         block: 'passports',
         when: [
-          {
-            id: 'country-of-birth-answer',
-            condition: 'not set',
-          },
           rules.under1,
         ],
       },
@@ -93,24 +89,8 @@ local question(title) = {
     },
     {
       goto: {
-        block: 'passports',
-        when: [
-          {
-            id: 'country-of-birth-answer',
-            condition: 'set',
-          },
-          rules.under1,
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'arrive-in-country',
         when: [
-          {
-            id: 'country-of-birth-answer',
-            condition: 'set',
-          },
           {
             id: 'country-of-birth-answer',
             condition: 'not equals',
