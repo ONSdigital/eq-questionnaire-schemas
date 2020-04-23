@@ -45,8 +45,8 @@ jobs:
         id: cache-virtualenv
         uses: actions/cache@v1
         with:
-            path: ~/.local/share/virtualenvs/
-            key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
+          path: ~/.local/share/virtualenvs/
+          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
       - name: Install virtualenv
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
         run: pipenv install --dev
@@ -79,9 +79,16 @@ jobs:
     needs: release
     runs-on: ubuntu-latest
     steps:
+      - name: Get schema version
+        uses: actions/checkout@v2
+      - run: |
+          GITHUB_REF=`echo ${{ github.ref }}`
+          TAG_CLEAN="${GITHUB_REF/refs\/tags\//}"
+          echo "::set-env name=TAG::$TAG_CLEAN"
       - name: Notify Runner
         uses: peter-evans/repository-dispatch@v1.0.0
         with:
-          token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: ONSdigital/eq-questionnaire-runner
-          event-type: schemas_release
+          token: "${{ secrets.REPO_ACCESS_TOKEN }}"
+          repository: "ONSdigital/eq-questionnaire-runner"
+          event-type: "schemas_release"
+          client-payload: '{"tag": "${{ env.TAG }}"}'
