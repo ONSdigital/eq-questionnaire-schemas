@@ -17,7 +17,7 @@ local question(title) = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'term-time-address-country-outside-uk',
   question_variants: [
@@ -38,7 +38,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
   routing_rules: [
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

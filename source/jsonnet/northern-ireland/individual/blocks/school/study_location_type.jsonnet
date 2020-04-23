@@ -44,7 +44,7 @@ local proxyDescriptionStudy = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'study-location-type',
   question_variants: [
@@ -84,7 +84,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

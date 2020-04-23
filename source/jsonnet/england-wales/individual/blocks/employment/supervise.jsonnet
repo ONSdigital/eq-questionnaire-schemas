@@ -40,7 +40,7 @@ local pastProxyTitle = {
   ],
 };
 
-function(routingRuleLastMainJobElement, routingRuleLastMainJobValue) {
+{
   type: 'Question',
   id: 'supervise',
   question_variants: [
@@ -64,7 +64,7 @@ function(routingRuleLastMainJobElement, routingRuleLastMainJobValue) {
   routing_rules: [
     {
       goto: {
-        [routingRuleLastMainJobElement]: routingRuleLastMainJobValue,
+        section: 'End',
         when: [
           rules.lastMainJob,
         ],

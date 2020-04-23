@@ -47,7 +47,7 @@ local proxyTitle = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'term-time-address-details',
   question_variants: [
@@ -63,7 +63,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
   routing_rules: [
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

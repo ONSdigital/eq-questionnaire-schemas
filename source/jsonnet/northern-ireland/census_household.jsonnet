@@ -98,9 +98,6 @@ local usual_household_address = import 'household/blocks/visitor/usual_household
 local usual_household_address_details = import 'household/blocks/visitor/usual_household_address_details.jsonnet';
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
-local routingRuleSectionEndElement = 'section';
-local routingRuleSectionEndValue = 'end';
-
 function(region_code) {
   mime_type: 'application/json/ons/eq',
   language: 'en',
@@ -287,7 +284,7 @@ function(region_code) {
             health,
             disability_limitation,
             disability,
-            disability_other(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            disability_other,
             carer,
             sexual_identity,
           ],
@@ -315,7 +312,7 @@ function(region_code) {
             jobseeker,
             job_availability,
             job_pending,
-            ever_worked(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            ever_worked,
             main_employment_block,
             main_job_type,
             business_name,
@@ -324,16 +321,16 @@ function(region_code) {
             employers_business,
             supervise,
             hours_worked,
-            work_location_type(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            work_location_type,
             work_location,
-            work_travel(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            work_travel,
           ],
         },
         {
           id: 'school-group',
           title: 'School',
           blocks: [
-            study_location_type(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            study_location_type,
             school_location,
             school_travel,
           ],

@@ -54,7 +54,7 @@ local proxyDefinitionContent = [
   },
 ];
 
-function(routingRuleUnder5Element, routingRuleUnder5Value) {
+{
   type: 'Question',
   id: 'disability',
   question_variants: [
@@ -82,7 +82,7 @@ function(routingRuleUnder5Element, routingRuleUnder5Value) {
     },
     {
       goto: {
-        [routingRuleUnder5Element]: routingRuleUnder5Value,
+        section: 'End',
         when: [
           {
             id: 'disability-answer',
@@ -95,7 +95,7 @@ function(routingRuleUnder5Element, routingRuleUnder5Value) {
     },
     {
       goto: {
-        [routingRuleUnder5Element]: routingRuleUnder5Value,
+        section: 'End',
         when: [
           {
             id: 'disability-answer',

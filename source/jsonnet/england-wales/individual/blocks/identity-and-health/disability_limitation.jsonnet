@@ -65,8 +65,7 @@ local proxyDefinition = {
   ],
 };
 
-
-function(routingRuleUnder5Element, routingRuleUnder5Value) {
+{
   type: 'Question',
   id: 'disability-limitation',
   question_variants: [
@@ -82,7 +81,7 @@ function(routingRuleUnder5Element, routingRuleUnder5Value) {
   routing_rules: [
     {
       goto: {
-        [routingRuleUnder5Element]: routingRuleUnder5Value,
+        section: 'End',
         when: [
           rules.under5,
         ],

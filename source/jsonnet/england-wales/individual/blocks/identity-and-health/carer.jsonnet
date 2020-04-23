@@ -57,7 +57,7 @@ local proxyTitle = {
 };
 local proxyGuidance = 'Exclude anything they do as part of their paid employment';
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'carer',
   question_variants: [
@@ -81,7 +81,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

@@ -98,7 +98,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        section: 'end',
+        section: 'End',
         when: [{
           id: 'any-visitors-answer-exclusive',
           condition: 'set',

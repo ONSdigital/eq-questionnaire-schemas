@@ -44,7 +44,7 @@ local proxyTitle = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'employer-type-of-address',
   question_variants: [
@@ -86,7 +86,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

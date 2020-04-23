@@ -67,10 +67,6 @@ local work_location = import 'individual/blocks/employment/work_location.jsonnet
 local work_location_type = import 'individual/blocks/employment/work_location_type.jsonnet';
 local work_travel = import 'individual/blocks/employment/work_travel.jsonnet';
 
-local routingRuleSummaryElement = 'group';
-local routingRuleSummaryValue = 'submit-group';
-
-
 function(region_code) {
   mime_type: 'application/json/ons/eq',
   language: 'en',
@@ -141,7 +137,7 @@ function(region_code) {
             health,
             disability_limitation,
             disability,
-            disability_other(routingRuleSummaryElement, routingRuleSummaryValue),
+            disability_other,
             carer,
             sexual_identity,
           ],
@@ -169,7 +165,7 @@ function(region_code) {
             jobseeker,
             job_availability,
             job_pending,
-            ever_worked(routingRuleSummaryElement, routingRuleSummaryValue),
+            ever_worked,
             main_employment_block,
             main_job_type,
             business_name,
@@ -178,16 +174,16 @@ function(region_code) {
             employers_business,
             supervise,
             hours_worked,
-            work_location_type(routingRuleSummaryElement, routingRuleSummaryValue),
+            work_location_type,
             work_location,
-            work_travel(routingRuleSummaryElement, routingRuleSummaryValue),
+            work_travel,
           ],
         },
         {
           id: 'school-group',
           title: 'School',
           blocks: [
-            study_location_type(routingRuleSummaryElement, routingRuleSummaryValue),
+            study_location_type,
             school_location,
             school_travel,
           ],

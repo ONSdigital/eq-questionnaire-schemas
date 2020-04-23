@@ -54,7 +54,7 @@ local rules = import 'rules.libsonnet';
     },
     {
       goto: {
-        section: 'end',
+        section: 'End',
       },
     },
   ],

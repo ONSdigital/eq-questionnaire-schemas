@@ -71,7 +71,7 @@ local proxyGuidanceContent = [
   },
 ];
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'employer-address-workplace',
   question_variants: [
@@ -87,7 +87,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
   routing_rules: [
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],

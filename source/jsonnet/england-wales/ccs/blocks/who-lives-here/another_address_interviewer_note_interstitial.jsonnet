@@ -12,7 +12,7 @@
   routing_rules: [
     {
       goto: {
-        section: 'end',
+        section: 'End',
       },
     },
   ],

@@ -70,7 +70,7 @@ local proxyTitle = {
   ],
 };
 
-function(routingRuleUnder4Element, routingRuleUnder4Value) {
+{
   type: 'Question',
   id: 'disability-other',
   question_variants: [
@@ -86,7 +86,7 @@ function(routingRuleUnder4Element, routingRuleUnder4Value) {
   routing_rules: [
     {
       goto: {
-        [routingRuleUnder4Element]: routingRuleUnder4Value,
+        section: 'End',
         when: [rules.under4],
       },
     },

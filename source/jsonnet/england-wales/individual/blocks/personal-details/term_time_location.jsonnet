@@ -124,7 +124,7 @@ local otherNonUkAddressOptions = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'term-time-location',
   question_variants: [
@@ -212,7 +212,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
         when: [
           {
             id: 'term-time-location-answer',
@@ -224,7 +224,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
         when: [
           {
             id: 'term-time-location-answer',
@@ -236,7 +236,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
         when: [
           {
             id: 'term-time-location-answer',

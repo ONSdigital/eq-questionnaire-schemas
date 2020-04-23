@@ -38,7 +38,7 @@ local proxyTitle = {
 };
 local proxyLabel = 'No, has never worked';
 
-function(routingRuleNeverWorkedElement, routingRuleNeverWorkedValue) {
+{
   type: 'Question',
   id: 'ever-worked',
   question_variants: [
@@ -54,7 +54,7 @@ function(routingRuleNeverWorkedElement, routingRuleNeverWorkedValue) {
   routing_rules: [
     {
       goto: {
-        [routingRuleNeverWorkedElement]: routingRuleNeverWorkedValue,
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',
@@ -66,7 +66,7 @@ function(routingRuleNeverWorkedElement, routingRuleNeverWorkedValue) {
     },
     {
       goto: {
-        [routingRuleNeverWorkedElement]: routingRuleNeverWorkedValue,
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',
@@ -78,7 +78,7 @@ function(routingRuleNeverWorkedElement, routingRuleNeverWorkedValue) {
     },
     {
       goto: {
-        [routingRuleNeverWorkedElement]: routingRuleNeverWorkedValue,
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',

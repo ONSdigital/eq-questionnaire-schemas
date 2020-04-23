@@ -125,8 +125,6 @@ local usual_household_address_other = import 'household/blocks/visitor/usual_hou
 
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
-local routingRuleSectionEndElement = 'section';
-local routingRuleSectionEndValue = 'end';
 local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [understand_welsh] else [];
 
 function(region_code, census_month_year_date) {
@@ -298,10 +296,10 @@ function(region_code, census_month_year_date) {
             other_uk_address,
             address_type,
             in_education,
-            term_time_location(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            term_time_address_country(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            term_time_address_country_outside_uk(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            term_time_address_details(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            term_time_location,
+            term_time_address_country,
+            term_time_address_country_outside_uk,
+            term_time_address_details,
           ],
         },
         {
@@ -340,9 +338,9 @@ function(region_code, census_month_year_date) {
             passports_other,
             passports_additional_other,
             health,
-            disability(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            disability_limitation(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            carer(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            disability,
+            disability_limitation,
+            carer,
             sexual_identity,
             birth_gender,
           ],
@@ -370,20 +368,20 @@ function(region_code, census_month_year_date) {
             jobseeker,
             job_availability,
             job_pending,
-            ever_worked(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            ever_worked,
             main_employment_block,
             main_job_type,
             business_name,
             job_title,
             job_description,
             employers_business(region_code),
-            supervise(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            supervise,
             hours_worked,
             work_travel,
-            employer_type_of_address(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            employer_type_of_address,
             mainly_work_in_uk,
-            employer_address_workplace(routingRuleSectionEndElement, routingRuleSectionEndValue),
-            employer_address_depot(routingRuleSectionEndElement, routingRuleSectionEndValue),
+            employer_address_workplace,
+            employer_address_depot,
             mainly_work_outside_uk,
           ],
         },

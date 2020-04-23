@@ -61,7 +61,7 @@ local proxyDescriptionDidWork = {
   ],
 };
 
-function(routingRuleDefaultElement, routingRuleDefaultValue) {
+{
   type: 'Question',
   id: 'work-location-type',
   question_variants: [
@@ -109,7 +109,7 @@ function(routingRuleDefaultElement, routingRuleDefaultValue) {
     },
     {
       goto: {
-        [routingRuleDefaultElement]: routingRuleDefaultValue,
+        section: 'End',
       },
     },
   ],
