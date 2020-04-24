@@ -10,6 +10,7 @@ local question(title) = {
       id: 'ethnic-group-mixed-other-answer',
       label: 'Mixed or Multiple ethnic group or background',
       description: 'Enter your own answer or select from suggestions',
+      max_length: 100,
       mandatory: false,
       type: 'TextField',
     },

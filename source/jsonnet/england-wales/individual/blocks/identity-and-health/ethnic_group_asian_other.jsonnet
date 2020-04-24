@@ -14,6 +14,7 @@ local question(englandTitle, walesTitle, region_code) = (
         id: 'ethnic-group-asian-other-answer',
         label: label,
         description: 'Enter your own answer or select from suggestions',
+        max_length: 100,
         mandatory: false,
         suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/ethnic-groups.json',
         type: 'TextField',

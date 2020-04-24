@@ -10,6 +10,7 @@ local question(title) = {
       id: 'passports-other-answer',
       label: 'Passports',
       description: 'Enter your own answer or select from suggestions',
+      max_length: 100,
       mandatory: false,
       suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/passport-countries.json',
       type: 'TextField',
