@@ -12,6 +12,7 @@ local question(title, description, option) = {
       id: 'business-name-answer',
       label: 'Organisation or business name',
       mandatory: false,
+      max_length: 120,
       type: 'TextField',
     },
     {
