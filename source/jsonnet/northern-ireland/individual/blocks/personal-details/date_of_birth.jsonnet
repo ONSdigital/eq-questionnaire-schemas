@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, mandatory) = {
   id: 'date-of-birth-question',
   title: title,
   guidance: {
@@ -15,7 +15,7 @@ local question(title) = {
   answers: [
     {
       id: 'date-of-birth-answer',
-      mandatory: true,
+      mandatory: mandatory,
       type: 'Date',
       minimum: {
         value: std.extVar('census_date'),
@@ -45,12 +45,28 @@ local proxyTitle = {
   id: 'date-of-birth',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, true),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, false),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'confirm-dob',
+        when: [{
+          id: 'date-of-birth-answer',
+          condition: 'set',
+        }],
+      },
+    },
+    {
+      goto: {
+        block: 'age-last-birthday',
+      },
     },
   ],
 }
