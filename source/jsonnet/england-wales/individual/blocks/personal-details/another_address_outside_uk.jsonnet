@@ -10,6 +10,7 @@ local question(title) = {
       id: 'another-address-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
+      max_length: 100,
       mandatory: true,
       suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/countries-of-birth.json',
       type: 'TextField',
