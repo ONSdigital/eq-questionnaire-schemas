@@ -72,6 +72,11 @@ local question(title) = {
       goto: {
         block: 'passports',
         when: [
+          {
+            id: 'country-of-birth-answer',
+            condition: 'equals',
+            values: 'Northern Ireland',
+          },
           rules.under1,
         ],
       },
