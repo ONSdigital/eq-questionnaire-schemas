@@ -19,9 +19,9 @@ local contentDescription = {
       {
         title: 'You will need to know',
         list: [
-          'Names of the people living at this address including anyone temporarily away or who has been or intends to be in the UK for 3 months or more.',
+          'names of people living at this address, including anyone currently away',
           {
-            text: 'Names of visitors staying overnight at this address on {census_date}',
+            text: 'names of visitors staying overnight in this household on {census_date}',
             placeholders: [
               placeholders.censusDate,
             ],
