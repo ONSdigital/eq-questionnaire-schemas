@@ -27,6 +27,7 @@ local relationships_interstitial = import 'household/blocks/relationships/relati
 // Personal Details
 local individual_interstitial = import 'household/blocks/individual/individual_interstitial.jsonnet';
 local proxy = import 'household/blocks/individual/proxy.jsonnet';
+local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local confirm_dob = import 'individual/blocks/personal-details/confirm_dob.jsonnet';
 local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.jsonnet';
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
@@ -256,6 +257,7 @@ function(region_code) {
             proxy,
             date_of_birth,
             confirm_dob,
+            age_last_birthday,
             sex,
             marriage_type,
             in_education,

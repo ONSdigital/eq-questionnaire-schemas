@@ -1,5 +1,6 @@
 // Personal Details
 local accommodation_type = import 'individual/blocks/personal-details/accommodation_type.jsonnet';
+local age_last_birthday = import 'individual/blocks/personal-details/age_last_birthday.jsonnet';
 local confirm_dob = import 'individual/blocks/personal-details/confirm_dob.jsonnet';
 local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.jsonnet';
 local establishment_position = import 'individual/blocks/personal-details/establishment_position.jsonnet';
@@ -109,6 +110,7 @@ function(region_code) {
             establishment_position,
             date_of_birth,
             confirm_dob,
+            age_last_birthday,
             sex,
             marriage_type,
             in_education,
