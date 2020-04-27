@@ -10,6 +10,7 @@ local question(title) = {
       id: 'national-identity-other-answer',
       label: 'National identity',
       description: 'Enter your own answer or select from suggestions',
+      max_length: 100,
       mandatory: false,
       suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/national-identities.json',
       type: 'TextField',
