@@ -10,7 +10,8 @@ local question(title) = {
       id: 'job-description-answer',
       label: 'Job description',
       mandatory: false,
-      type: 'TextField',
+      rows: 4,
+      type: 'TextArea',
     },
   ],
 };
