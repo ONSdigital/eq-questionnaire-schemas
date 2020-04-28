@@ -28,6 +28,7 @@ local question(title) = (
         id: 'employers-business-answer',
         label: 'Main activity',
         mandatory: false,
+        max_length: 120,
         type: 'TextField',
       },
     ],
