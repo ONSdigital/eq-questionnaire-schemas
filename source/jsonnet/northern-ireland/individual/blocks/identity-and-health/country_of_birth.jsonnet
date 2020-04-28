@@ -75,7 +75,7 @@ local question(title) = {
           {
             id: 'country-of-birth-answer',
             condition: 'equals',
-            values: 'Northern Ireland',
+            value: 'Northern Ireland',
           },
           rules.under1,
         ],
