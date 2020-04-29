@@ -50,13 +50,18 @@ local questionTitle = {
     title: questionTitle,
     definitions: [
       {
-        title: 'What does “usually live” mean?',
+        title: 'What we mean by "usually live"?',
         contents: [
           {
-            description: 'It means the address at which you generally spend most time. For most people, this will be their permanent or family home.',
+            description: {
+              text: 'This is often your permanent or family home.<br><br>If you have more than one address, include yourself at the home address where you spend most of your time. If you split your time equally then use the home address where you are staying overnight on {census_date}.',
+              placeholders: [
+                placeholders.censusDate,
+              ],
+            },
           },
           {
-            description: '<strong>Full-time students</strong>, include yourself at your term time address.',
+            description: '<strong>Students</strong>, include yourself at both your term-time and out of term-time addresses.',
           },
           {
             description: '<strong>Armed forces members</strong>, include yourself at your home address if you have one.',
