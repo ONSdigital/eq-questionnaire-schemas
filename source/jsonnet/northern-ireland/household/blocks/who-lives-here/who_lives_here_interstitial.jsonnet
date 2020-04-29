@@ -27,7 +27,7 @@ local contentDescription = {
         list: [
           'Names of people living at this address, including anyone currently away.',
           {
-            text: 'Names of visitors staying overnight in this household on {census date}.',
+            text: 'Names of visitors staying overnight in this household on {census_date}.',
             placeholders: [
               placeholders.censusDate,
             ],
