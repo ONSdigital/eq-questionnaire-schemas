@@ -103,16 +103,16 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Husband or wife',
               },
               {
-                label: 'Same-sex civil partner',
+                label: 'Civil partner',
                 playback: {
-                  text: '{second_person_name} is your <em>Same-sex civil partner</em>',
+                  text: '{second_person_name} is your <em>civil partner</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
                 title: {
-                  text: '{second_person_name} is your <em>Same-sex civil partner</em>',
+                  text: '{second_person_name} is your <em>civil partner</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
-                value: 'Same-sex civil partner',
+                value: 'Civil partner',
               },
               {
                 label: 'Partner',
@@ -139,16 +139,16 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Son or daughter',
               },
               {
-                label: 'Stepchild',
+                label: 'Step-child',
                 playback: {
-                  text: '{second_person_name} is your <em>stepchild</em>',
+                  text: '{second_person_name} is your <em>step-child</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
                 title: {
-                  text: '{second_person_name} is your <em>stepchild</em>',
+                  text: '{second_person_name} is your <em>step-child</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
-                value: 'Stepchild',
+                value: 'Step-child',
               },
               {
                 description: 'Including half brother or half sister',
@@ -164,16 +164,16 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Brother or sister',
               },
               {
-                label: 'Stepbrother or stepsister',
+                label: 'Step-brother or step-sister',
                 playback: {
-                  text: '{second_person_name} is your <em>stepbrother or stepsister</em>',
+                  text: '{second_person_name} is your <em>step-brother or step-sister</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
                 title: {
-                  text: '{second_person_name} is your <em>stepbrother or stepsister</em>',
+                  text: '{second_person_name} is your <em>step-brother or step-sister</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
-                value: 'Stepbrother or stepsister',
+                value: 'Step-brother or step-sister',
               },
               {
                 label: 'Mother or father',
@@ -188,16 +188,16 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Mother or father',
               },
               {
-                label: 'Stepmother or stepfather',
+                label: 'Step-mother or step-father',
                 playback: {
-                  text: '{second_person_name} is your <em>stepmother or stepfather</em>',
+                  text: '{second_person_name} is your <em>step-mother or step-father</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
                 title: {
-                  text: '{second_person_name} is your <em>stepmother or stepfather</em>',
+                  text: '{second_person_name} is your <em>step-mother or step-father</em>',
                   placeholders: [secondPersonPlaceholder],
                 },
-                value: 'Stepmother or stepfather',
+                value: 'Step-mother or step-father',
               },
               {
                 label: 'Grandchild',
@@ -259,7 +259,7 @@ local firstPersonNamePossessivePlaceholder = {
         id: 'relationship-question',
         type: 'General',
         title: {
-          text: 'Thinking of {first_person_name}, {second_person_name} is their <em>…</em>',
+          text: 'Thinking about {first_person_name}, {second_person_name} is their <em>…</em>',
           placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
         },
         description: 'Complete the sentence by selecting the appropriate relationship.',
@@ -280,22 +280,22 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>husband or wife</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>husband or wife</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Husband or wife',
               },
               {
-                label: 'Same-sex civil partner',
+                label: 'Civil partner',
                 playback: {
-                  text: '{second_person_name} is {first_person_name_possessive} <em>Same-sex civil partner</em>',
+                  text: '{second_person_name} is {first_person_name_possessive} <em>civil partner</em>',
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>Same-sex civil partner</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>civil partner</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
-                value: 'Same-sex civil partner',
+                value: 'Civil partner',
               },
               {
                 label: 'Partner',
@@ -304,7 +304,7 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>partner</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>partner</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Partner',
@@ -316,22 +316,22 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>son or daughter</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>son or daughter</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Son or daughter',
               },
               {
-                label: 'Stepchild',
+                label: 'Step-child',
                 playback: {
-                  text: '{second_person_name} is {first_person_name_possessive} <em>stepchild</em>',
+                  text: '{second_person_name} is {first_person_name_possessive} <em>step-child</em>',
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>stepchild</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>step-child</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
-                value: 'Stepchild',
+                value: 'Step-child',
               },
               {
                 description: 'Including half brother or half sister',
@@ -341,22 +341,22 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>brother or sister</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>brother or sister</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Brother or sister',
               },
               {
-                label: 'Stepbrother or stepsister',
+                label: 'Step-brother or step-sister',
                 playback: {
-                  text: '{second_person_name} is {first_person_name_possessive} <em>stepbrother or stepsister</em>',
+                  text: '{second_person_name} is {first_person_name_possessive} <em>step-brother or step-sister</em>',
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>stepbrother or stepsister</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>step-brother or step-sister</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
-                value: 'Stepbrother or stepsister',
+                value: 'Step-brother or step-sister',
               },
               {
                 label: 'Mother or father',
@@ -365,22 +365,22 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>mother or father</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>mother or father</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Mother or father',
               },
               {
-                label: 'Stepmother or stepfather',
+                label: 'Step-mother or step-father',
                 playback: {
-                  text: '{second_person_name} is {first_person_name_possessive} <em>stepmother or stepfather</em>',
+                  text: '{second_person_name} is {first_person_name_possessive} <em>step-mother or step-father</em>',
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>stepmother or stepfather</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>step-mother or step-father</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
-                value: 'Stepmother or stepfather',
+                value: 'Step-mother or step-father',
               },
               {
                 label: 'Grandchild',
@@ -389,7 +389,7 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>grandchild</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>grandchild</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Grandchild',
@@ -401,7 +401,7 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>grandparent</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>grandparent</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Grandparent',
@@ -413,7 +413,7 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonNamePossessivePlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is their <em>other relation</em>',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is their <em>other relation</em>',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
                 },
                 value: 'Other relation',
@@ -426,7 +426,7 @@ local firstPersonNamePossessivePlaceholder = {
                   placeholders: [secondPersonPlaceholder, firstPersonPlaceholder],
                 },
                 title: {
-                  text: 'Thinking of {first_person_name}, {second_person_name} is <em>unrelated</em> to {first_person_name}',
+                  text: 'Thinking about {first_person_name}, {second_person_name} is <em>unrelated</em> to {first_person_name}',
                   placeholders: [firstPersonPlaceholder, secondPersonPlaceholder, firstPersonPlaceholder],
                 },
                 value: 'Unrelated',

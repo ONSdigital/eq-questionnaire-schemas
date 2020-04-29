@@ -23,8 +23,8 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           value: 'Owns with a mortgage or loan',
         },
         {
-          label: 'Part owns and part rents',
-          value: 'Part owns and part rents',
+          label: 'Part-owns and part-rents',
+          value: 'Part-owns and part-rents',
           description: 'Shared ownership',
         },
         {
