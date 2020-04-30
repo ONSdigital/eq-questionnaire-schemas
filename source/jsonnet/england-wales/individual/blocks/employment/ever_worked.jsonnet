@@ -54,7 +54,7 @@ local proxyLabel = 'No, has never worked';
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',
@@ -66,7 +66,7 @@ local proxyLabel = 'No, has never worked';
     },
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',
@@ -78,7 +78,7 @@ local proxyLabel = 'No, has never worked';
     },
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
         when: [
           {
             id: 'ever-worked-answer',

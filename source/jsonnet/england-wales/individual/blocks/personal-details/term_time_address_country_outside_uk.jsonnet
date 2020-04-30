@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
       },
     },
   ],

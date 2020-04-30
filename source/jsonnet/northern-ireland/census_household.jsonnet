@@ -2,7 +2,6 @@ local placeholders = import '../../lib/placeholders.libsonnet';
 
 // Accommodation
 local accommodation_introduction = import 'household/blocks/accommodation/accommodation_introduction.jsonnet';
-local accommodation_summary = import 'household/blocks/accommodation/accommodation_summary.jsonnet';
 local accommodation_type = import 'household/blocks/accommodation/accommodation_type.jsonnet';
 local adapted = import 'household/blocks/accommodation/adapted.jsonnet';
 local central_heating = import 'household/blocks/accommodation/central_heating.jsonnet';
@@ -20,7 +19,6 @@ local anyone_else_temporarily_away_list_collector = import 'household/blocks/who
 local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
 local visitor_list_collector = import 'household/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'household/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
-local who_lives_here_section_summary = import 'household/blocks/who-lives-here/who_lives_here_section_summary.jsonnet';
 
 // Relationships
 local relationships_collector = import 'household/blocks/relationships/relationships_collector.jsonnet';
@@ -101,7 +99,6 @@ local usual_household_address = import 'household/blocks/visitor/usual_household
 local usual_household_address_details = import 'household/blocks/visitor/usual_household_address_details.jsonnet';
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
-
 function(region_code) {
   mime_type: 'application/json/ons/eq',
   language: 'en',
@@ -171,7 +168,6 @@ function(region_code) {
             anyone_else_temporarily_away_list_collector,
             any_visitors,
             visitor_list_collector,
-            who_lives_here_section_summary,
           ],
         },
       ],
@@ -205,6 +201,7 @@ function(region_code) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
+      summary: {},
       groups: [
         {
           id: 'accommodation-group',
@@ -220,7 +217,6 @@ function(region_code) {
             own_or_rent,
             who_rent_from,
             number_of_vehicles,
-            accommodation_summary,
           ],
         },
       ],
@@ -228,6 +224,7 @@ function(region_code) {
     {
       id: 'individual-section',
       title: 'Individual Section',
+      summary: {},
       repeat: {
         for_list: 'household',
         title: {
@@ -340,21 +337,12 @@ function(region_code) {
             school_travel,
           ],
         },
-        {
-          id: 'submit-group',
-          title: 'Summary',
-          blocks: [
-            {
-              id: 'summary',
-              type: 'SectionSummary',
-            },
-          ],
-        },
       ],
     },
     {
       id: 'visitor-section',
       title: 'Visitors',
+      summary: {},
       repeat: {
         for_list: 'visitors',
         title: {
@@ -388,16 +376,6 @@ function(region_code) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
-          ],
-        },
-        {
-          id: 'visitor-submit-group',
-          title: 'Summary',
-          blocks: [
-            {
-              id: 'visitor-summary',
-              type: 'SectionSummary',
-            },
           ],
         },
       ],

@@ -50,7 +50,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'who-lives-here-section-summary',
+        section: 'End',
         when: [{
           id: 'any-visitors-answer',
           condition: 'equals',
