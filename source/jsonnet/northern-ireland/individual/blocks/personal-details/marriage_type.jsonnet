@@ -11,40 +11,40 @@ local question(title) = {
       mandatory: false,
       options: [
         {
-          label: 'Single, never married and never in a same-sex civil partnership',
-          value: 'Single, never married and never in a same-sex civil partnership',
+          label: 'Single, never married and never in a civil partnership',
+          value: 'Single, never married and never in a civil partnership',
         },
         {
           label: 'Married',
           value: 'Married',
         },
         {
-          label: 'In a same-sex civil partnership',
-          value: 'In a same-sex civil partnership',
+          label: 'In a civil partnership',
+          value: 'In a civil partnership',
         },
         {
           label: 'Separated, but still legally married',
           value: 'Separated, but still legally married',
         },
         {
-          label: 'Separated, but still legally in a same-sex civil partnership',
-          value: 'Separated, but still legally in a same-sex civil partnership',
+          label: 'Separated, but still legally in a civil partnership',
+          value: 'Separated, but still legally in a civil partnership',
         },
         {
           label: 'Divorced',
           value: 'Divorced',
         },
         {
-          label: 'Formerly in a same-sex civil partnership which is now legally dissolved',
-          value: 'Formerly in a same-sex civil partnership which is now legally dissolved',
+          label: 'Formerly in a civil partnership which is now legally dissolved',
+          value: 'Formerly in a civil partnership which is now legally dissolved',
         },
         {
           label: 'Widowed',
           value: 'Widowed',
         },
         {
-          label: 'Surviving partner from a same-sex civil partnership',
-          value: 'Surviving partner from a same-sex civil partnership',
+          label: 'Surviving partner from a civil partnership',
+          value: 'Surviving partner from a civil partnership',
         },
       ],
       type: 'Radio',
@@ -52,10 +52,10 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'What is your marital or same-sex civil partnership status?';
+local nonProxyTitle = 'What is your marital or civil partnership status?';
 
 local proxyTitle = {
-  text: 'What is <em>{person_name_possessive}</em> marital or same-sex civil partnership status?',
+  text: 'What is <em>{person_name_possessive}</em> marital or civil partnership status?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
