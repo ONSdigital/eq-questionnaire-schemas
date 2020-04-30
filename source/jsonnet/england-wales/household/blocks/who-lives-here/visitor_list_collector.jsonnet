@@ -1,22 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local visitorGuidance = {
-  contents: [
-    {
-      title: 'Include',
-    },
-    {
-      list: [
-        'People who usually live somewhere else in the UK, for example boy/girlfriends, friends or relatives',
-        'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
-        'People who usually live outside the UK who are staying in the UK for less than three months',
-        'People here on holiday',
-      ],
-    },
-  ],
-};
-
 {
   id: 'visitor-list-collector',
   type: 'ListCollector',
@@ -27,7 +11,7 @@ local visitorGuidance = {
   },
   remove_answer: {
     id: 'visitor-remove-confirmation',
-    value: 'Yes, I want to remove this person',
+    value: 'Yes, remove this person',
   },
   question: {
     id: 'visitor-confirmation-question',
@@ -39,7 +23,6 @@ local visitorGuidance = {
         placeholders.address,
       ],
     },
-    guidance: visitorGuidance,
     answers: [
       {
         id: 'visitor-answer',
@@ -72,7 +55,6 @@ local visitorGuidance = {
           placeholders.address,
         ],
       },
-      guidance: visitorGuidance,
       answers: [
         {
           id: 'first-name',
@@ -86,11 +68,11 @@ local visitorGuidance = {
           mandatory: true,
           type: 'TextField',
           guidance: {
-            show_guidance: 'Why do I have to include visitors?',
-            hide_guidance: 'Why do I have to include visitors?',
+            show_guidance: 'Why we ask about visitors?',
+            hide_guidance: 'Why we ask about visitors?',
             contents: [
               {
-                description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
+                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
               },
             ],
           },
@@ -150,12 +132,12 @@ local visitorGuidance = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, I want to remove this person',
-              value: 'Yes, I want to remove this person',
+              label: 'Yes, remove this person',
+              value: 'Yes, remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, cancel and return',
+              value: 'No, cancel and return',
             },
           ],
         },

@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle = {
-  text: 'Are there any visitors staying overnight on {census_date} at {household_address}?',
+  text: 'Apart from everyone already included, who else is staying overnight on Sunday {census_date} at {household_address}?',
   placeholders: [
     placeholders.censusDate,
     placeholders.address,
@@ -10,7 +10,7 @@ local questionTitle = {
 };
 
 local exclusiveAnswerText = {
-  text: 'No, there are no visitors staying overnight on {census_date}',
+  text: 'There are no visitors staying here overnight on {census_date}',
   placeholders: [
     placeholders.censusDate,
   ],
@@ -24,6 +24,7 @@ local exclusiveAnswerText = {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',
     title: questionTitle,
+    description: 'These people will be counted as visitors.',
     mandatory: true,
     answers: [
       {
@@ -32,8 +33,8 @@ local exclusiveAnswerText = {
         type: 'Checkbox',
         options: [
           {
-            label: 'People who usually live somewhere else in the UK, for example boy/girlfriends, friends or relatives',
-            value: 'People who usually live somewhere else in the UK, for example boy/girlfriends, friends or relatives',
+            label: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
+            value: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
@@ -77,11 +78,11 @@ local exclusiveAnswerText = {
           },
         ],
         guidance: {
-          show_guidance: 'Why do I have to include visitors?',
-          hide_guidance: 'Why do I have to include visitors?',
+          show_guidance: 'Why we ask about visitors?',
+          hide_guidance: 'Why we ask about visitors?',
           contents: [
             {
-              description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
+              description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
             },
           ],
         },
@@ -93,7 +94,7 @@ local exclusiveAnswerText = {
         options: [
           {
             label: exclusiveAnswerText,
-            value: 'No, there are no visitors staying overnight on {census_date}',
+            value: 'There are no visitors staying here overnight on {census_date}',
           },
         ],
       },
@@ -102,7 +103,7 @@ local exclusiveAnswerText = {
   routing_rules: [
     {
       goto: {
-        block: 'who-lives-here-section-summary',
+        section: 'End',
         when: [{
           id: 'any-visitors-answer-exclusive',
           condition: 'set',

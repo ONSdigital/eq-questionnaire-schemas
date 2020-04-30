@@ -93,7 +93,7 @@ local editQuestion(questionTitle) = {
   },
   remove_answer: {
     id: 'remove-confirmation',
-    value: 'Yes, I want to remove this person',
+    value: 'Yes, remove this person',
   },
   question_variants: [
     {
@@ -213,12 +213,12 @@ local editQuestion(questionTitle) = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, I want to remove this person',
-              value: 'Yes, I want to remove this person',
+              label: 'Yes, remove this person',
+              value: 'Yes, remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, cancel and return',
+              value: 'No, cancel and return',
             },
           ],
         },
