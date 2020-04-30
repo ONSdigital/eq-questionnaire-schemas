@@ -50,7 +50,7 @@ local questionTitle = {
     title: questionTitle,
     definitions: [
       {
-        title: 'What we mean by "usually live"?',
+        title: 'What we mean by “usually live”?',
         contents: [
           {
             description: {
