@@ -14,7 +14,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     contents: [
       {
         description: {
-          text: 'In this section, we’re going to ask you about your visitor, <strong>{person_name}</strong>.',
+          text: 'In this section, we are going to ask you about your visitor, <strong>{person_name}</strong>.',
           placeholders: [
             placeholders.personName,
           ],
@@ -23,9 +23,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       {
         title: 'You will need to know',
         list: [
-          'Date of birth',
-          'Sex',
-          'Usual address',
+          'date of birth',
+          'sex',
+          'usual address',
         ],
       },
     ],
