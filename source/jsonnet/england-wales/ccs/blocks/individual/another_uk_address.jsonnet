@@ -101,7 +101,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        block: 'individual-section-summary',
         when: [{
           id: 'another-uk-address-answer',
           condition: 'not set',

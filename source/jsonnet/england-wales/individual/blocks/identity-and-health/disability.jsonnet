@@ -82,7 +82,7 @@ local proxyDefinitionContent = [
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           {
             id: 'disability-answer',
@@ -95,7 +95,7 @@ local proxyDefinitionContent = [
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           {
             id: 'disability-answer',

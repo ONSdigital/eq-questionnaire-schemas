@@ -50,7 +50,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'visitor-submit-group',
       },
     },
   ],

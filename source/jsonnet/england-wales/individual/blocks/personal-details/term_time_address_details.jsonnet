@@ -63,7 +63,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
       },
     },
   ],

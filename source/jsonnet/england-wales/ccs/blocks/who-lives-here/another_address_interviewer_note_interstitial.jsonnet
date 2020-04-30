@@ -12,7 +12,7 @@
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        block: 'who-lives-here-section-summary',
       },
     },
   ],

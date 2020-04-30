@@ -81,7 +81,7 @@ local proxyDefinition = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           rules.under5,
         ],

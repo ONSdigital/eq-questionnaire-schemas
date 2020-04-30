@@ -11,6 +11,7 @@ local primary_person_list_collector = import 'ccs/blocks/who-lives-here/primary_
 local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
 local visitor_list_collector = import 'ccs/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'ccs/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
+local who_lives_here_section_summary = import 'ccs/blocks/who-lives-here/who_lives_here_section_summary.jsonnet';
 
 // Accommodation
 local accommodation_introduction = import 'ccs/blocks/accommodation/accommodation_introduction.jsonnet';
@@ -23,6 +24,7 @@ local self_contained = import 'ccs/blocks/accommodation/self_contained.jsonnet';
 local type_of_flat = import 'ccs/blocks/accommodation/type_of_flat.jsonnet';
 local type_of_house = import 'ccs/blocks/accommodation/type_of_house.jsonnet';
 local who_rent_from = import 'ccs/blocks/accommodation/who_rent_from.jsonnet';
+local accommodation_summary = import 'household/blocks/accommodation/accommodation_summary.jsonnet';
 
 // Individual
 local age_last_birthday = import 'ccs/blocks/individual/age_last_birthday.jsonnet';
@@ -40,6 +42,7 @@ local ethnic_group_other = import 'ccs/blocks/individual/ethnic_group_other.json
 local ethnic_group_white = import 'ccs/blocks/individual/ethnic_group_white.jsonnet';
 local in_education = import 'ccs/blocks/individual/in_education.jsonnet';
 local individual_interstitial = import 'ccs/blocks/individual/individual_interstitial.jsonnet';
+local individual_section_summary = import 'ccs/blocks/individual/individual_section_summary.jsonnet';
 local length_of_stay = import 'ccs/blocks/individual/length_of_stay.jsonnet';
 local marriage_type = import 'ccs/blocks/individual/marriage_type.jsonnet';
 local other_census_address = import 'ccs/blocks/individual/other_census_address.jsonnet';
@@ -128,6 +131,7 @@ function(region_code, census_month_year_date) {
             anyone_else_temp_away_list_collector,
             any_visitors,
             visitor_list_collector,
+            who_lives_here_section_summary,
             relationships,
           ],
         },
@@ -136,7 +140,6 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      summary: {},
       groups: [
         {
           id: 'accommodation-group',
@@ -152,6 +155,7 @@ function(region_code, census_month_year_date) {
             internet,
             government_services,
             other_living_accommodation,
+            accommodation_summary,
           ],
         },
       ],
@@ -159,7 +163,6 @@ function(region_code, census_month_year_date) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: {},
       repeat: {
         for_list: 'household',
         title: {
@@ -210,6 +213,7 @@ function(region_code, census_month_year_date) {
             employment_type,
             another_uk_address,
             other_census_address,
+            individual_section_summary,
           ],
         },
       ],
@@ -251,6 +255,16 @@ function(region_code, census_month_year_date) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
+          ],
+        },
+        {
+          id: 'visitor-submit-group',
+          title: 'Summary',
+          blocks: [
+            {
+              id: 'visitor-summary',
+              type: 'SectionSummary',
+            },
           ],
         },
       ],

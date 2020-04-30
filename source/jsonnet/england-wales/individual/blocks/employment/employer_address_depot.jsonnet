@@ -87,7 +87,7 @@ local proxyGuidanceContent = [
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
       },
     },
   ],

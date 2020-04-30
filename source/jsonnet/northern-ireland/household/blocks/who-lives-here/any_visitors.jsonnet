@@ -102,7 +102,7 @@ local exclusiveAnswerText = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        block: 'who-lives-here-section-summary',
         when: [{
           id: 'any-visitors-answer-exclusive',
           condition: 'set',

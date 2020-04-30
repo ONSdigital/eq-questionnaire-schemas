@@ -84,7 +84,7 @@ local proxyDescriptionStudy = {
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
       },
     },
   ],

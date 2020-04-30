@@ -64,7 +64,7 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           rules.lastMainJob,
         ],

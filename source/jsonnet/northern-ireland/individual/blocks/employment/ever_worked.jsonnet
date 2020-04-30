@@ -81,7 +81,7 @@ local proxyLabel = 'No, has never worked';
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
       },
     },
   ],

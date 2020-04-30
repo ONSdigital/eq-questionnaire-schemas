@@ -212,7 +212,7 @@ local otherNonUkAddressOptions = {
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           {
             id: 'term-time-location-answer',
@@ -224,7 +224,7 @@ local otherNonUkAddressOptions = {
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           {
             id: 'term-time-location-answer',
@@ -236,7 +236,7 @@ local otherNonUkAddressOptions = {
     },
     {
       goto: {
-        section: 'End',
+        group: 'submit-group',
         when: [
           {
             id: 'term-time-location-answer',
