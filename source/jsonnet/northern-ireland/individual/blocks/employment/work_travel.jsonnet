@@ -100,7 +100,7 @@ local proxyDescriptionWork = 'Select one option only, for the longest part, by d
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
       },
     },
   ],

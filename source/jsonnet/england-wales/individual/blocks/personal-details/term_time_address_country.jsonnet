@@ -50,7 +50,7 @@
     },
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
       },
     },
   ],

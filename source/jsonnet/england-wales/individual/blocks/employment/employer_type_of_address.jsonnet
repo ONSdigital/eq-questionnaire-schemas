@@ -86,7 +86,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        group: 'submit-group',
+        section: 'End',
       },
     },
   ],

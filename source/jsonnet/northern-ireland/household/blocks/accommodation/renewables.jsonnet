@@ -58,7 +58,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'accommodation-section-summary',
+        section: 'End',
         when: [rules.listIsEmpty('household')],
       },
     },
