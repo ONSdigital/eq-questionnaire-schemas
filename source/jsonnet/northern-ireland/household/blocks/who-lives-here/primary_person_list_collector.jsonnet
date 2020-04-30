@@ -53,8 +53,11 @@ local questionTitle = {
         title: 'What we mean by “usually live”?',
         contents: [
           {
+            description: 'This is often your permanent or family home.',
+          },
+          {
             description: {
-              text: 'This is often your permanent or family home.<br><br>If you have more than one address, include yourself at the home address where you spend most of your time. If you split your time equally then use the home address where you are staying overnight on {census_date}.',
+              text: 'If you have more than one address, include yourself at the home address where you spend most of your time. If you split your time equally then use the home address where you are staying overnight on {census_date}.',
               placeholders: [
                 placeholders.censusDate,
               ],
