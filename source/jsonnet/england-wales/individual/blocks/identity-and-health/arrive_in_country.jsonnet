@@ -48,11 +48,17 @@ function(region_code, census_month_year_date) {
   routing_rules: [
     {
       goto: {
-        block: 'when-arrive-in-uk',
+        block: 'length-of-stay',
+        when: [rules.under1],
+      },
+    },
+    {
+      goto: {
+        block: 'length-of-stay',
         when: [
           {
             id: 'arrive-in-country-answer',
-            condition: 'equals',
+            condition: 'greater than',
             date_comparison: {
               value: census_month_year_date,
               offset_by: {
@@ -76,11 +82,11 @@ function(region_code, census_month_year_date) {
     },
     {
       goto: {
-        block: 'length-of-stay',
+        block: 'when-arrive-in-uk',
         when: [
           {
             id: 'arrive-in-country-answer',
-            condition: 'greater than',
+            condition: 'equals',
             date_comparison: {
               value: census_month_year_date,
               offset_by: {
