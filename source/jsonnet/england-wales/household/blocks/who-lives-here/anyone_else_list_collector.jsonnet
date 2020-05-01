@@ -130,7 +130,6 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'add-question',
       type: 'General',
