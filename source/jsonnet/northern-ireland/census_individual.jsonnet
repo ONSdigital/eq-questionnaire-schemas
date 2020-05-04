@@ -117,6 +117,8 @@ function(region_code) {
             marriage_type,
             in_education,
             term_time_location,
+            term_time_address,
+            term_time_address_country,
           ],
         },
         {
