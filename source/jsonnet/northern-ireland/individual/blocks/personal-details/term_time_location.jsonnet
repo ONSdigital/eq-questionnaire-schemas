@@ -21,8 +21,12 @@ local question(title) = {
           value: '{household_address}',
         },
         {
-          label: 'At another address',
-          value: 'At another address',
+          label: 'At another address in the UK',
+          value: 'At another address in the UK',
+        },
+        {
+          label: 'At another address outside the UK',
+          value: 'At another address outside the UK',
         },
       ],
     },
@@ -48,6 +52,37 @@ local proxyTitle = {
     {
       question: question(proxyTitle),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'term-time-address-country',
+        when: [
+          {
+            id: 'term-time-location-answer',
+            condition: 'equals',
+            value: 'At another address outside the UK',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'term-time-address',
+        when: [
+          {
+            id: 'term-time-location-answer',
+            condition: 'equals',
+            value: 'At another address in the UK',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'country-of-birth',
+      },
     },
   ],
 }

@@ -34,6 +34,8 @@ local in_education = import 'individual/blocks/personal-details/in_education.jso
 local marriage_type = import 'individual/blocks/personal-details/marriage_type.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';
 local term_time_location = import 'individual/blocks/personal-details/term_time_location.jsonnet';
+local term_time_address_country = import 'individual/blocks/personal-details/term_time_address_country.jsonnet';
+local term_time_address = import 'individual/blocks/personal-details/term_time_address.jsonnet';
 
 // Identity and Health
 local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
