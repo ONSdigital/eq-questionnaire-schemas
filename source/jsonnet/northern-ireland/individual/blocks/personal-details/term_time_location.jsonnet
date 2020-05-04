@@ -57,7 +57,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'term-time-address-country',
+        block: 'term-time-country-outside-uk',
         when: [
           {
             id: 'term-time-location-answer',
