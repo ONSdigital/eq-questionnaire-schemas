@@ -99,7 +99,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'who-lives-here-section-summary',
+        section: 'End',
         when: [{
           id: 'any-visitors-answer-exclusive',
           condition: 'set',

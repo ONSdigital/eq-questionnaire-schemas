@@ -69,7 +69,7 @@ local rules = import 'rules.libsonnet';
     },
     {
       goto: {
-        group: 'visitor-submit-group',
+        section: 'End',
       },
     },
   ],
