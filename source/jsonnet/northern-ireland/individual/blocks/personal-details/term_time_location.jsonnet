@@ -79,10 +79,5 @@ local proxyTitle = {
         ],
       },
     },
-    {
-      goto: {
-        block: 'country-of-birth',
-      },
-    },
   ],
 }
