@@ -79,5 +79,10 @@ local proxyTitle = {
         ],
       },
     },
+    {
+      goto: {
+        group: 'identity-and-health-group',
+      },
+    },
   ],
 }
