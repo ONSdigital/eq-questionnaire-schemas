@@ -16,6 +16,15 @@ local rules = import 'rules.libsonnet';
     type: 'General',
     answers: [
       {
+        guidance: {
+          show_guidance: 'Why we ask for visitor details',
+          hide_guidance: 'Why we ask for visitor details',
+          contents: [
+            {
+              description: 'Your answer helps to ensure that everyone is counted in the census. Add visitor details, even if you think they have been included on a census questionnaire at another address.',
+            },
+          ],
+        },
         id: 'visitor-sex-answer',
         mandatory: false,
         options: [
