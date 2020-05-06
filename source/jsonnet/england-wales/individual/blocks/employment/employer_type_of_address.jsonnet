@@ -1,12 +1,17 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, guidanceContent) = {
   id: 'employer-type-of-address-question',
   title: title,
   type: 'General',
   answers: [
     {
+      guidance: {
+        show_guidance: 'Why we ask for workplace',
+        hide_guidance: 'Why we ask for workplace',
+        contents: guidanceContent,
+      },
       id: 'employer-type-of-address-answer',
       mandatory: false,
       options: [
@@ -36,6 +41,23 @@ local question(title) = {
   ],
 };
 
+local nonProxyGuidanceContent = [
+  {
+    description: 'Your answer will help your community by allowing the government and councils to understand commuting patterns.',
+  },
+  {
+    description: 'Information about your workplace and how you travel to work are used together to work out local public transport needs, develop transport policies and plan services.',
+  },
+];
+local proxyGuidanceContent = [
+  {
+    description: 'Their answer will help their community by allowing the government and councils to understand commuting patterns.',
+  },
+  {
+    description: 'Information about their workplace and how they travel to work are used together to work out local public transport needs, develop transport policies and plan services.',
+  },
+];
+
 local nonProxyTitle = 'Where do you mainly work?';
 local proxyTitle = {
   text: 'Where does <em>{person_name}</em> mainly work?',
@@ -49,11 +71,11 @@ local proxyTitle = {
   id: 'employer-type-of-address',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyGuidanceContent),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyGuidanceContent),
       when: [rules.isProxy],
     },
   ],

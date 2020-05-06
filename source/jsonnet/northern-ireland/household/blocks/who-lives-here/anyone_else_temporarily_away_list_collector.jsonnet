@@ -81,7 +81,7 @@ local editQuestion(questionTitle) = {
   },
   remove_answer: {
     id: 'anyone-else-temp-away-remove-confirmation',
-    value: 'Yes, I want to remove this person',
+    value: 'Yes, remove this person',
   },
   question: {
     id: 'anyone-else-temp-away-confirmation-question',
@@ -141,7 +141,6 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'anyone-else-temp-away-add-person',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'anyone-else-temp-away-add-question',
       type: 'General',
@@ -201,12 +200,12 @@ local editQuestion(questionTitle) = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, I want to remove this person',
-              value: 'Yes, I want to remove this person',
+              label: 'Yes, remove this person',
+              value: 'Yes, remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, cancel and return',
+              value: 'No, cancel and return',
             },
           ],
         },
