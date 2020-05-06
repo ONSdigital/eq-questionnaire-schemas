@@ -66,33 +66,33 @@ local questionWithExclusive = {
   id: 'number-of-visitors-in-establishment',
   question_variants: [
     {
+      question: questionWithExclusive,
+      when: [
+        {
+          id: 'visitors-in-establishment-exclusive',
+          condition: 'set',
+        },
+      ],
+    },
+    {
+      question: questionWithExclusive,
+      when: [
+        {
+          id: 'visitors-in-establishment-answer',
+          condition: 'not set',
+        },
+        {
+          id: 'visitors-in-establishment-exclusive',
+          condition: 'not set',
+        },
+      ],
+    },
+    {
       question: question,
       when: [
         {
           id: 'visitors-in-establishment-answer',
           condition: 'set',
-        },
-      ],
-    },
-    {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'visitors-in-establishment-exclusive',
-          condition: 'set',
-        },
-      ],
-    },
-    {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'visitors-in-establishment-answer',
-          condition: 'not set',
-        },
-        {
-          id: 'visitors-in-establishment-exclusive',
-          condition: 'not set',
         },
       ],
     },
