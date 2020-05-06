@@ -45,7 +45,6 @@ local removePersonQuestionTitle = {
   ],
 };
 
-
 {
   id: 'visitor-list-collector',
   type: 'ListCollector',
@@ -56,7 +55,7 @@ local removePersonQuestionTitle = {
   },
   remove_answer: {
     id: 'visitor-remove-confirmation',
-    value: 'Yes, remove this person',
+    value: 'Yes, I want to remove this person',
   },
   question: {
     id: 'visitor-confirmation-question',
@@ -69,7 +68,12 @@ local removePersonQuestionTitle = {
         type: 'Radio',
         options: [
           {
-            label: 'Yes, I need to add someone',
+            label: {
+              text: 'Yes, I need to add {ordinal_visitor} visitor',
+              placeholders: [
+                placeholders.ordinalVisitor,
+              ],
+            },
             value: 'Yes, I need to add someone',
           },
           {
@@ -83,6 +87,7 @@ local removePersonQuestionTitle = {
   add_block: {
     id: 'add-visitor',
     type: 'ListAddQuestion',
+    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'visitor-add-question',
       type: 'General',
@@ -100,11 +105,11 @@ local removePersonQuestionTitle = {
           mandatory: true,
           type: 'TextField',
           guidance: {
-            show_guidance: 'Why we ask about visitors?',
-            hide_guidance: 'Why we ask about visitors?',
+            show_guidance: 'Why do I have to include visitors?',
+            hide_guidance: 'Why do I have to include visitors?',
             contents: [
               {
-                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
+                description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
               },
             ],
           },
@@ -154,12 +159,12 @@ local removePersonQuestionTitle = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, remove this person',
-              value: 'Yes, remove this person',
+              label: 'Yes, I want to remove this person',
+              value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, cancel and return',
-              value: 'No, cancel and return',
+              label: 'No, I do not want to remove this person',
+              value: 'No, I do not want to remove this person',
             },
           ],
         },

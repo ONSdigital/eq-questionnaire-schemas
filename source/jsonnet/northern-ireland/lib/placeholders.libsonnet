@@ -115,4 +115,62 @@
       },
     ],
   },
+  ordinal: {
+    placeholder: 'ordinal',
+    transforms: [
+      {
+        transform: 'add',
+        arguments: {
+          lhs: { source: 'list', identifier: 'household' },
+          rhs: { value: 1 },
+        },
+      },
+      {
+        arguments: {
+          number_to_format: {
+            source: 'previous_transform',
+          },
+          determiner: {
+            value: 'a_or_an',
+          },
+        },
+        transform: 'format_ordinal',
+      },
+    ],
+  },
+  ordinalVisitor: {
+    placeholder: 'ordinal_visitor',
+    transforms: [
+      {
+        transform: 'add',
+        arguments: {
+          lhs: { source: 'list', identifier: 'visitors' },
+          rhs: { value: 1 },
+        },
+      },
+      {
+        arguments: {
+          number_to_format: {
+            source: 'previous_transform',
+          },
+          determiner: {
+            value: 'a_or_an',
+          },
+        },
+        transform: 'format_ordinal',
+      },
+    ],
+  },
+  cardinal: {
+    placeholder: 'cardinal',
+    transforms: [
+      {
+        transform: 'add',
+        arguments: {
+          lhs: { source: 'list', identifier: 'household' },
+          rhs: { value: 1 },
+        },
+      },
+    ],
+  },
 }
