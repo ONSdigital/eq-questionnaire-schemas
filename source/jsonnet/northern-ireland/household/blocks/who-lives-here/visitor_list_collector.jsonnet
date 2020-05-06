@@ -23,22 +23,6 @@ local summaryTitlePersonName = {
   ],
 };
 
-local visitorGuidance = {
-  contents: [
-    {
-      title: 'Include',
-    },
-    {
-      list: [
-        'People who usually live somewhere else in the UK, for example boy/girlfriends, friends or relatives',
-        'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
-        'People who usually live outside the UK who are staying in the UK for less than three months',
-        'People here on holiday',
-      ],
-    },
-  ],
-};
-
 local addVisitorQuestionTitle = {
   text: 'What is the name of the visitor staying overnight on {census_date} at {household_address}?',
   placeholders: [
@@ -72,13 +56,12 @@ local removePersonQuestionTitle = {
   },
   remove_answer: {
     id: 'visitor-remove-confirmation',
-    value: 'Yes, I want to remove this person',
+    value: 'Yes, remove this person',
   },
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
     title: questionTitle,
-    guidance: visitorGuidance,
     answers: [
       {
         id: 'visitor-answer',
@@ -100,12 +83,10 @@ local removePersonQuestionTitle = {
   add_block: {
     id: 'add-visitor',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'visitor-add-question',
       type: 'General',
       title: addVisitorQuestionTitle,
-      guidance: visitorGuidance,
       answers: [
         {
           id: 'first-name',
@@ -119,11 +100,11 @@ local removePersonQuestionTitle = {
           mandatory: true,
           type: 'TextField',
           guidance: {
-            show_guidance: 'Why do I have to include visitors?',
-            hide_guidance: 'Why do I have to include visitors?',
+            show_guidance: 'Why we ask about visitors?',
+            hide_guidance: 'Why we ask about visitors?',
             contents: [
               {
-                description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
+                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
               },
             ],
           },
@@ -173,12 +154,12 @@ local removePersonQuestionTitle = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, I want to remove this person',
-              value: 'Yes, I want to remove this person',
+              label: 'Yes, remove this person',
+              value: 'Yes, remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, cancel and return',
+              value: 'No, cancel and return',
             },
           ],
         },

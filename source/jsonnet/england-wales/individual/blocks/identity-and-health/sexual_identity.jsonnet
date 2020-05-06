@@ -79,7 +79,7 @@ local nonProxyGuidanceHeader = 'Why your answer is important';
 local proxyGuidanceHeader = 'Why their answer is important';
 
 local nonProxyDescription = 'Your answer will help your local community by providing organisations, such as charities, with an understanding of the services people might need.';
-local proxyDescription = 'Their answer will help your local community by providing organisations, such as charities, with an understanding of the services people might need.';
+local proxyDescription = 'Their answer will help their local community by providing organisations, such as charities, with an understanding of the services people might need.';
 
 {
   type: 'Question',
