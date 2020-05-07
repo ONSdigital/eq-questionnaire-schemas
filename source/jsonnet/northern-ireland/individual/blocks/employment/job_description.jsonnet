@@ -9,6 +9,7 @@ local question(title) = {
     {
       id: 'job-description-answer',
       label: 'Job description',
+      max_length: 120,
       mandatory: false,
       rows: 4,
       type: 'TextArea',
