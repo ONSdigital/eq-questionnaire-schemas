@@ -33,6 +33,8 @@ local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.j
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
 local marriage_type = import 'individual/blocks/personal-details/marriage_type.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';
+local term_time_address = import 'individual/blocks/personal-details/term_time_address.jsonnet';
+local term_time_country_outside_uk = import 'individual/blocks/personal-details/term_time_country_outside_uk.jsonnet';
 local term_time_location = import 'individual/blocks/personal-details/term_time_location.jsonnet';
 
 // Identity and Health
@@ -262,6 +264,8 @@ function(region_code) {
             marriage_type,
             in_education,
             term_time_location,
+            term_time_address,
+            term_time_country_outside_uk,
           ],
         },
         {

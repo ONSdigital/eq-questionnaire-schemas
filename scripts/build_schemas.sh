@@ -16,20 +16,22 @@ for region_code in GB-WLS GB-ENG GB-NIR; do
 
         DESTINATION_FILE="schemas/en/census_${census_type}_${FORMATTED_REGION_CODE}.json"
 
-        if [[ "$region_code" = "GB-NIR" ]] && [[ "$census_type" != "communal_establishment"  ]]; then
-            SOURCE_FILE="source/jsonnet/northern-ireland/census_${census_type}.jsonnet"
-            ADDITIONAL_LIBRARY_PATH="source/jsonnet/northern-ireland/${census_type}/lib/"
+        if [[ "$region_code" = "GB-NIR" ]]; then
+            if [[ "$census_type" != "communal_establishment"  ]]; then
+                SOURCE_FILE="source/jsonnet/northern-ireland/census_${census_type}.jsonnet"
+                ADDITIONAL_LIBRARY_PATH="source/jsonnet/northern-ireland/${census_type}/lib/"
 
-            jsonnet --tla-str region_code="${region_code}" --ext-str census_date="${CENSUS_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
-
+                jsonnet --tla-str region_code="${region_code}" --ext-str census_date="${CENSUS_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
+                echo "Built ${DESTINATION_FILE}"
+            fi
         else
             SOURCE_FILE="source/jsonnet/england-wales/census_${census_type}.jsonnet"
             ADDITIONAL_LIBRARY_PATH="source/jsonnet/england-wales/${census_type}/lib/"
 
             jsonnet --tla-str region_code="${region_code}"  --ext-str census_date="${CENSUS_DATE}" --tla-str census_month_year_date="${CENSUS_MONTH_YEAR_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
+            echo "Built ${DESTINATION_FILE}"
         fi
 
-        echo "Built ${DESTINATION_FILE}"
     done
 done
 
