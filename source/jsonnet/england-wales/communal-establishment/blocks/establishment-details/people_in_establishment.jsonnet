@@ -64,33 +64,29 @@ local questionWithExclusive = {
   id: 'people-in-establishment',
   question_variants: [
     {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'live-in-establishment-exclusive',
-          condition: 'set',
-        },
-      ],
-    },
-    {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'live-in-establishment-answer',
-          condition: 'not set',
-        },
-        {
-          id: 'live-in-establishment-exclusive',
-          condition: 'not set',
-        },
-      ],
-    },
-    {
       question: question,
       when: [
         {
           id: 'live-in-establishment-answer',
           condition: 'set',
+        },
+      ],
+    },
+    {
+      question: questionWithExclusive,
+      when: [
+        {
+          id: 'live-in-establishment-exclusive',
+          condition: 'set',
+        },
+      ],
+    },
+    {
+      question: questionWithExclusive,
+      when: [
+        {
+          id: 'live-in-establishment-answer',
+          condition: 'not set',
         },
       ],
     },
