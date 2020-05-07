@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-05-06 15:30+0100\n"
+"POT-Creation-Date: 2020-05-07 07:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,9 @@ msgid "Why do we ask this question?"
 msgstr ""
 
 msgid "Why we ask about visitors?"
+msgstr ""
+
+msgid "Why do I have to include visitors?"
 msgstr ""
 
 msgid "Why do I need to answer if I am retired or long-term sick or disabled?"
@@ -58,13 +61,6 @@ msgid ""
 "address if you have one."
 msgstr ""
 
-msgid ""
-"Include partners, children, babies born on or before {census_date}, "
-"housemates, tenants and lodgers, students and schoolchildren who live "
-"away from home during term time, where this is their permanent or family "
-"home"
-msgstr ""
-
 msgid "For example, this is a second address or holiday home"
 msgstr ""
 
@@ -74,6 +70,12 @@ msgid ""
 "away."
 msgstr ""
 
+msgid ""
+"The information is vital for planning services, whether it is for "
+"hospital beds, school places, GP and dental services or where to build "
+"houses and roads."
+msgstr ""
+
 msgid "These people will be counted as visitors."
 msgstr ""
 
@@ -81,6 +83,13 @@ msgid ""
 "This is to ensure that everyone is counted in the census. Add any "
 "visitors, even if they have been included on a census questionnaire at "
 "another address."
+msgstr ""
+
+msgid ""
+"We ask for visitor information to ensure that everyone is counted. This "
+"helps to produce accurate population estimates. Add any visitors, even if"
+" you think they may have been included on a census form at another "
+"address."
 msgstr ""
 
 msgid ""
@@ -147,9 +156,6 @@ msgid ""
 msgstr ""
 
 msgid "For example, 31 3 1970"
-msgstr ""
-
-msgid "Enter your own answer or select from suggestions"
 msgstr ""
 
 msgid ""
@@ -403,6 +409,9 @@ msgstr ""
 msgid "There are no householders"
 msgstr ""
 
+msgid "Don’t need to add anyone?"
+msgstr ""
+
 msgid "Names of people living at this address, including anyone currently away."
 msgstr ""
 
@@ -410,28 +419,33 @@ msgid "Names of visitors staying overnight in this household on {census_date}."
 msgstr ""
 
 msgid ""
-"People who work away from home within the UK if this is their permanent "
+"people who work away from home within the UK if this is their permanent "
 "or family home"
 msgstr ""
 
-msgid "Members of the armed forces if this is their permanent or family home"
+msgid "members of the armed forces if this is their permanent or family home"
 msgstr ""
 
 msgid ""
-"People who are temporarily outside the UK for less than <strong>12 "
+"people who are temporarily outside the UK for <strong>less than 12 "
 "months</strong>"
 msgstr ""
 
-msgid "Other people who usually live here but are temporarily away"
+msgid ""
+"people staying, or expecting to stay, in an establishment such as a "
+"hospital, care home or hostel for <strong>less than 6 months</strong>"
+msgstr ""
+
+msgid "other people who usually live here but are temporarily away from home"
 msgstr ""
 
 msgid ""
-"People staying temporarily who usually live in the UK but do not have "
+"people staying temporarily who usually live in the UK but do not have "
 "another UK address for example, relatives, friends"
 msgstr ""
 
 msgid ""
-"People who usually live outside the UK who are staying in the UK for "
+"people who usually live outside the UK who are staying in the UK for "
 "<strong>3 months or more</strong>"
 msgstr ""
 
@@ -681,14 +695,21 @@ msgid "Household members"
 msgstr ""
 
 msgid ""
-"Apart from the people already included, is there anyone who is "
-"temporarily away or staying that you need to add to {household_address}?"
+"You said {cardinal} person lives at {household_address}. Do you need to "
+"add anyone?"
+msgid_plural ""
+"You said {cardinal} people live at {household_address}. Do you need to "
+"add anyone?"
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Remember to Include people who are<br><br>"
 msgstr ""
 
-msgid "Include people who are temporarily away"
+msgid "Temporarily away"
 msgstr ""
 
-msgid "Include people who are temporarily staying"
+msgid "Temporarily staying"
 msgstr ""
 
 msgid ""
@@ -925,20 +946,6 @@ msgid "During term time, where do you usually live?"
 msgstr ""
 
 msgid "During term time, where does <em>{person_name}</em> usually live?"
-msgstr ""
-
-msgid "Enter details of your term time address."
-msgstr ""
-
-msgid "Enter details of their term time address."
-msgstr ""
-
-msgid "During term time, in which country outside the UK do you usually live?"
-msgstr ""
-
-msgid ""
-"During term time, in which country outside the UK does "
-"<em>{person_name}</em> usually live?"
 msgstr ""
 
 msgid "Identity and Health"
@@ -1462,7 +1469,7 @@ msgid "Last name"
 msgstr ""
 
 msgctxt "Answer for: Does anyone usually live at {household_address}?"
-msgid "Yes, I need to add someone"
+msgid "Yes, I want to add {ordinal} person"
 msgstr ""
 
 msgctxt "Answer for: Does anyone usually live at {household_address}?"
@@ -1470,7 +1477,7 @@ msgid "No, no one usually lives here"
 msgstr ""
 
 msgctxt "Answer for: Does anyone else live at {household_address}?"
-msgid "Yes, I need to add someone"
+msgid "Yes, I want to add {ordinal} person"
 msgstr ""
 
 msgctxt "Answer for: Does anyone else live at {household_address}?"
@@ -1478,26 +1485,26 @@ msgid "No, I do not need to add anyone"
 msgstr ""
 
 msgctxt "Answer for: Are you sure you want to remove {person_name}?"
-msgid "Yes, remove this person"
+msgid "Yes, I want to remove this person"
 msgstr ""
 
 msgctxt "Answer for: Are you sure you want to remove {person_name}?"
-msgid "No, cancel and return"
+msgid "No, I do not want to remove this person"
 msgstr ""
 
 msgctxt ""
-"Answer for: Apart from the people already included, is there anyone who "
-"is temporarily away or staying that you need to add to "
-"{household_address}?"
+"Answer for: You said {cardinal} people live at {household_address}. Do "
+"you need to add anyone?"
 msgid "Yes, I need to add someone"
 msgstr ""
 
 msgctxt ""
-"Answer for: Apart from the people already included, is there anyone who "
-"is temporarily away or staying that you need to add to "
-"{household_address}?"
-msgid "No, I do not need to add anyone"
-msgstr ""
+"Answer for: You said {cardinal} people live at {household_address}. Do "
+"you need to add anyone?"
+msgid "No, there is {cardinal} person living here"
+msgid_plural "No, there are {cardinal} people living here"
+msgstr[0] ""
+msgstr[1] ""
 
 msgctxt ""
 "Answer for: Apart from everyone already included, who else is staying "
@@ -1550,7 +1557,7 @@ msgstr ""
 msgctxt ""
 "Answer for: Are there any other visitors staying overnight on "
 "{census_date} at {household_address}?"
-msgid "Yes, I need to add someone"
+msgid "Yes, I need to add {ordinal_visitor} visitor"
 msgstr ""
 
 msgctxt ""
@@ -2130,11 +2137,7 @@ msgid "{household_address}"
 msgstr ""
 
 msgctxt "Answer for: During term time, where do you usually live?"
-msgid "At another address in the UK"
-msgstr ""
-
-msgctxt "Answer for: During term time, where do you usually live?"
-msgid "At another address outside the UK"
+msgid "At another address"
 msgstr ""
 
 msgctxt ""
@@ -2146,65 +2149,7 @@ msgstr ""
 msgctxt ""
 "Answer for: During term time, where does <em>{person_name}</em> usually "
 "live?"
-msgid "At another address in the UK"
-msgstr ""
-
-msgctxt ""
-"Answer for: During term time, where does <em>{person_name}</em> usually "
-"live?"
-msgid "At another address outside the UK"
-msgstr ""
-
-msgctxt "Answer for: Enter details of your term time address."
-msgid "Address line 1"
-msgstr ""
-
-msgctxt "Answer for: Enter details of your term time address."
-msgid "Address line 2"
-msgstr ""
-
-msgctxt "Answer for: Enter details of your term time address."
-msgid "Town or city"
-msgstr ""
-
-msgctxt "Answer for: Enter details of your term time address."
-msgid "County"
-msgstr ""
-
-msgctxt "Answer for: Enter details of your term time address."
-msgid "Postcode"
-msgstr ""
-
-msgctxt "Answer for: Enter details of their term time address."
-msgid "Address line 1"
-msgstr ""
-
-msgctxt "Answer for: Enter details of their term time address."
-msgid "Address line 2"
-msgstr ""
-
-msgctxt "Answer for: Enter details of their term time address."
-msgid "Town or city"
-msgstr ""
-
-msgctxt "Answer for: Enter details of their term time address."
-msgid "County"
-msgstr ""
-
-msgctxt "Answer for: Enter details of their term time address."
-msgid "Postcode"
-msgstr ""
-
-msgctxt ""
-"Answer for: During term time, in which country outside the UK do you "
-"usually live?"
-msgid "Current name of country"
-msgstr ""
-
-msgctxt ""
-"Answer for: During term time, in which country outside the UK does "
-"<em>{person_name}</em> usually live?"
-msgid "Current name of country"
+msgid "At another address"
 msgstr ""
 
 msgctxt "Answer for: What is your country of birth?"
