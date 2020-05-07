@@ -79,7 +79,7 @@ local editQuestion(questionTitle) = {
                     placeholders.ordinal,
                   ],
                 },
-                value: 'Yes, I need to add someone',
+                value: 'Yes, I want to add {ordinal} person',
               },
               {
                 label: 'No, no one usually lives here',
@@ -115,7 +115,7 @@ local editQuestion(questionTitle) = {
                     placeholders.ordinal,
                   ],
                 },
-                value: 'Yes, I need to add someone',
+                value: 'Yes, I want to add {ordinal} person',
               },
               {
                 label: 'No, I do not need to add anyone',

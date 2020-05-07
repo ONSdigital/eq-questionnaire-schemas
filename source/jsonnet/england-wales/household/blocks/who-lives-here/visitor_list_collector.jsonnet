@@ -36,7 +36,7 @@ local rules = import 'rules.libsonnet';
                 placeholders.ordinalVisitor,
               ],
             },
-            value: 'Yes, I need to add someone',
+            value: 'Yes, I need to add {ordinal_visitor} visitor',
           },
           {
             label: 'No, I do not need to add anyone',
