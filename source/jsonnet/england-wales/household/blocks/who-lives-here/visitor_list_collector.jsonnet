@@ -7,7 +7,7 @@ local rules = import 'rules.libsonnet';
   for_list: 'visitors',
   add_answer: {
     id: 'visitor-answer',
-    value: 'Yes, I need to add someone',
+    value: 'Yes, I need to add {ordinal_visitor} visitor',
   },
   remove_answer: {
     id: 'visitor-remove-confirmation',

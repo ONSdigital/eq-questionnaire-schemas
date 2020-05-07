@@ -54,7 +54,7 @@ local editQuestion(questionTitle) = {
   for_list: 'household',
   add_answer: {
     id: 'anyone-else-answer',
-    value: 'Yes, I need to add someone',
+    value: 'Yes, I want to add {ordinal} person',
   },
   remove_answer: {
     id: 'remove-confirmation',
