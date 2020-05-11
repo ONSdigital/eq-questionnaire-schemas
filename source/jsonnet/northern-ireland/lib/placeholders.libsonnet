@@ -1,4 +1,4 @@
-local ordinality(listName) = {
+local getListOrdinality(listName) = {
   placeholder: 'ordinality',
   transforms: [
     {
@@ -21,7 +21,7 @@ local ordinality(listName) = {
     },
   ],
 };
-local cardinality(listName) = {
+local getListCardinality(listName) = {
   placeholder: 'cardinality',
   transforms: [
     {
@@ -150,6 +150,6 @@ local cardinality(listName) = {
       },
     ],
   },
-  ordinality: ordinality,
-  cardinality: cardinality,
+  getListOrdinality: getListOrdinality,
+  getListCardinality: getListCardinality,
 }

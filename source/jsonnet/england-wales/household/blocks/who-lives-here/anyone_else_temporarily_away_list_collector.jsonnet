@@ -14,7 +14,7 @@ local questionTitle = {
   },
   placeholders: [
     placeholders.address,
-    placeholders.cardinality('household'),
+    placeholders.getListCardinality('household'),
   ],
 };
 
@@ -126,7 +126,7 @@ local editQuestion(questionTitle) = {
                 },
               },
               placeholders: [
-                placeholders.cardinality('household'),
+                placeholders.getListCardinality('household'),
               ],
             },
             value: 'No, I do not need to add anyone',

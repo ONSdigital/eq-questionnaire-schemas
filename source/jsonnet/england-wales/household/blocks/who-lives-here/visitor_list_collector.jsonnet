@@ -33,7 +33,7 @@ local rules = import 'rules.libsonnet';
             label: {
               text: 'Yes, I need to add {ordinality} visitor',
               placeholders: [
-                placeholders.ordinality('visitors'),
+                placeholders.getListOrdinality('visitors'),
               ],
             },
             value: 'Yes, I need to add {ordinality} visitor',

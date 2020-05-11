@@ -111,7 +111,7 @@ local editQuestion(questionTitle) = {
                 label: {
                   text: 'Yes, I want to add {ordinality} person',
                   placeholders: [
-                    placeholders.ordinality('household'),
+                    placeholders.getListOrdinality('household'),
                   ],
                 },
                 value: 'Yes, I want to add {ordinality} person',
@@ -142,7 +142,7 @@ local editQuestion(questionTitle) = {
                 label: {
                   text: 'Yes, I want to add {ordinality} person',
                   placeholders: [
-                    placeholders.ordinality('household'),
+                    placeholders.getListOrdinality('household'),
                   ],
                 },
                 value: 'Yes, I want to add {ordinality} person',
