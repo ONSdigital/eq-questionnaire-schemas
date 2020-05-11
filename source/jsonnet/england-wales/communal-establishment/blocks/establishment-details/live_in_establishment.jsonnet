@@ -68,17 +68,6 @@ local question = {
   routing_rules: [
     {
       goto: {
-        block: 'visitors-in-establishment',
-        when: [
-          {
-            id: 'live-in-establishment-exclusive',
-            condition: 'set',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'people-in-establishment',
       },
     },
