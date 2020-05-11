@@ -23,12 +23,12 @@ local question(title) = {
   id: 'another-address-outside-uk',
   question_variants: [
     {
-      question: question('In which country outside of the UK is the address you stay at for more than 30 days a year?'),
+      question: question('In which country outside the UK is the address you stay at for more than 30 days a year?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'In which country outside of the UK is the address <em>{person_name}</em> stays at for more than 30 days a year?',
+        text: 'In which country outside the UK is the address <em>{person_name}</em> stays at for more than 30 days a year?',
         placeholders: [
           placeholders.personName,
         ],
