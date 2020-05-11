@@ -77,7 +77,9 @@ jobs:
           version: 'latest'
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SCHEMAS_BUCKET_SA_KEY }}
-      - name: Upload Schemas To GCS
+      - name: Upload Schemas To GCS & Set Cache Control Headers
         run: |
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
-          gsutil -m cp -r schemas gs://${{ secrets.GCS_SCHEMAS_BUCKET }}/${BRANCH_NAME}/
+          BUCKET_URI="gs://${{ secrets.GCS_SCHEMAS_BUCKET }}/${BRANCH_NAME}/"
+          gsutil -m cp -r schemas ${BUCKET_URI}
+          gsutil -m setmeta -h "Cache-Control:private, max-age=0, no-transform" "${BUCKET_URI}**"
