@@ -66,8 +66,8 @@
       },
     }],
   },
-  ordinal: {
-    placeholder: 'ordinal',
+  householdOrdinality: {
+    placeholder: 'household_ordinality',
     transforms: [
       {
         transform: 'add',
@@ -89,8 +89,8 @@
       },
     ],
   },
-  ordinalVisitor: {
-    placeholder: 'ordinal_visitor',
+  visitorOrdinality: {
+    placeholder: 'visitor_ordinality',
     transforms: [
       {
         transform: 'add',
@@ -112,8 +112,8 @@
       },
     ],
   },
-  cardinal: {
-    placeholder: 'cardinal',
+  householdCardinality: {
+    placeholder: 'household_cardinality',
     transforms: [
       {
         transform: 'add',

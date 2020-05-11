@@ -54,7 +54,7 @@ local editQuestion(questionTitle) = {
   for_list: 'household',
   add_answer: {
     id: 'anyone-else-answer',
-    value: 'Yes, I want to add {ordinal} person',
+    value: 'Yes, I want to add {household_ordinality} person',
   },
   remove_answer: {
     id: 'remove-confirmation',
@@ -74,12 +74,12 @@ local editQuestion(questionTitle) = {
             options: [
               {
                 label: {
-                  text: 'Yes, I want to add {ordinal} person',
+                  text: 'Yes, I want to add {household_ordinality} person',
                   placeholders: [
-                    placeholders.ordinal,
+                    placeholders.householdOrdinality,
                   ],
                 },
-                value: 'Yes, I want to add {ordinal} person',
+                value: 'Yes, I want to add {household_ordinality} person',
               },
               {
                 label: 'No, no one usually lives here',
@@ -110,12 +110,12 @@ local editQuestion(questionTitle) = {
             options: [
               {
                 label: {
-                  text: 'Yes, I want to add {ordinal} person',
+                  text: 'Yes, I want to add {household_ordinality} person',
                   placeholders: [
-                    placeholders.ordinal,
+                    placeholders.householdOrdinality,
                   ],
                 },
-                value: 'Yes, I want to add {ordinal} person',
+                value: 'Yes, I want to add {household_ordinality} person',
               },
               {
                 label: 'No, I do not need to add anyone',
