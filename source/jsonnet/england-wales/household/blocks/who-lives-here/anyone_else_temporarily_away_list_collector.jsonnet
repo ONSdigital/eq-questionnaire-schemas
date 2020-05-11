@@ -133,8 +133,8 @@ local editQuestion(questionTitle) = {
           },
         ],
         guidance: {
-          show_guidance: 'Why do we ask this question?',
-          hide_guidance: 'Why do we ask this question?',
+          show_guidance: 'Why we ask this question',
+          hide_guidance: 'Why we ask this question',
           contents: [
             {
               description: 'We ask this question to help ensure that everyone is correctly counted in the census. This includes people who are staying temporarily or are away.',
