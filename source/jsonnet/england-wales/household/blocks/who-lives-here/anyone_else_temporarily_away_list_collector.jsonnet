@@ -78,7 +78,7 @@ local editQuestion(questionTitle) = {
     guidance: {
       contents: [
         {
-          title: 'Remember to Include people who are<br><br>',
+          title: '<p>Remember to Include people who are</p>',
         },
         {
           title: 'Temporarily away',
