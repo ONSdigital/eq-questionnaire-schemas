@@ -28,7 +28,7 @@ local question(title) = {
     },
     {
       question: question({
-        text: 'In which country outside of the UK was <em>{person_name_possessive}</em> usual address one year ago?',
+        text: 'In which country outside the UK was <em>{person_name_possessive}</em> usual address one year ago?',
         placeholders: [
           placeholders.personNamePossessive,
         ],
