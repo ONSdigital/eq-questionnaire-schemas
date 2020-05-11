@@ -40,6 +40,8 @@ local understand_ulster_scots = import 'individual/blocks/identity-and-health/un
 local school_location = import 'individual/blocks/school/school_location.jsonnet';
 local school_travel = import 'individual/blocks/school/school_travel.jsonnet';
 local study_location_type = import 'individual/blocks/school/study_location_type.jsonnet';
+local place_of_study = import 'individual/blocks/school/place_of_study.jsonnet';
+local place_of_study_elsewhere = import 'individual/blocks/school/place_of_study_elsewhere.jsonnet';
 
 // Qualifications
 local a_level = import 'individual/blocks/qualifications/a_level.jsonnet';
@@ -190,6 +192,8 @@ function(region_code) {
           title: 'School',
           blocks: [
             study_location_type,
+            place_of_study,
+            place_of_study_elsewhere,
             school_location,
             school_travel,
           ],
