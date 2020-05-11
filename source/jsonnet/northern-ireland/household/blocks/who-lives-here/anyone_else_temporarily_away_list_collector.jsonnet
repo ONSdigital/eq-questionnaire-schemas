@@ -5,8 +5,8 @@ local rules = import 'rules.libsonnet';
 local questionTitle = {
   text_plural: {
     forms: {
-      one: 'You said {household_cardinality} person lives at {household_address}. Do you need to add anyone?',
-      other: 'You said {household_cardinality} people live at {household_address}. Do you need to add anyone?',
+      one: 'You said {cardinality} person lives at {household_address}. Do you need to add anyone?',
+      other: 'You said {cardinality} people live at {household_address}. Do you need to add anyone?',
     },
     count: {
       source: 'list',
@@ -15,7 +15,7 @@ local questionTitle = {
   },
   placeholders: [
     placeholders.address,
-    placeholders.householdCardinality,
+    placeholders.cardinality('household'),
   ],
 };
 
@@ -139,8 +139,8 @@ local editQuestion(questionTitle) = {
             label: {
               text_plural: {
                 forms: {
-                  one: 'No, there is {household_cardinality} person living here',
-                  other: 'No, there are {household_cardinality} people living here',
+                  one: 'No, there is {cardinality} person living here',
+                  other: 'No, there are {cardinality} people living here',
                 },
                 count: {
                   source: 'list',
@@ -148,7 +148,7 @@ local editQuestion(questionTitle) = {
                 },
               },
               placeholders: [
-                placeholders.householdCardinality,
+                placeholders.cardinality('household'),
               ],
             },
             value: 'No, I do not need to add anyone',

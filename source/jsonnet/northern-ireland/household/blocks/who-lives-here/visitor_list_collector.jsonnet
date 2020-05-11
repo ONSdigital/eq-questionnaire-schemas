@@ -51,7 +51,7 @@ local removePersonQuestionTitle = {
   for_list: 'visitors',
   add_answer: {
     id: 'visitor-answer',
-    value: 'Yes, I need to add {visitor_ordinality} visitor',
+    value: 'Yes, I need to add {ordinality} visitor',
   },
   remove_answer: {
     id: 'visitor-remove-confirmation',
@@ -69,12 +69,12 @@ local removePersonQuestionTitle = {
         options: [
           {
             label: {
-              text: 'Yes, I need to add {visitor_ordinality} visitor',
+              text: 'Yes, I need to add {ordinality} visitor',
               placeholders: [
-                placeholders.visitorOrdinality,
+                placeholders.ordinality('visitors'),
               ],
             },
-            value: 'Yes, I need to add {visitor_ordinality} visitor',
+            value: 'Yes, I need to add {ordinality} visitor',
           },
           {
             label: 'No, I do not need to add anyone',

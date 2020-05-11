@@ -1,3 +1,38 @@
+local ordinality(listName) = {
+  placeholder: 'ordinality',
+  transforms: [
+    {
+      transform: 'add',
+      arguments: {
+        lhs: { source: 'list', identifier: listName },
+        rhs: { value: 1 },
+      },
+    },
+    {
+      arguments: {
+        number_to_format: {
+          source: 'previous_transform',
+        },
+        determiner: {
+          value: 'a_or_an',
+        },
+      },
+      transform: 'format_ordinal',
+    },
+  ],
+};
+local cardinality(listName) = {
+  placeholder: 'cardinality',
+  transforms: [
+    {
+      transform: 'add',
+      arguments: {
+        lhs: { source: 'list', identifier: listName },
+        rhs: { value: 0 },
+      },
+    },
+  ],
+};
 {
   personName: {
     placeholder: 'person_name',
@@ -115,62 +150,6 @@
       },
     ],
   },
-  householdOrdinality: {
-    placeholder: 'household_ordinality',
-    transforms: [
-      {
-        transform: 'add',
-        arguments: {
-          lhs: { source: 'list', identifier: 'household' },
-          rhs: { value: 1 },
-        },
-      },
-      {
-        arguments: {
-          number_to_format: {
-            source: 'previous_transform',
-          },
-          determiner: {
-            value: 'a_or_an',
-          },
-        },
-        transform: 'format_ordinal',
-      },
-    ],
-  },
-  visitorOrdinality: {
-    placeholder: 'visitor_ordinality',
-    transforms: [
-      {
-        transform: 'add',
-        arguments: {
-          lhs: { source: 'list', identifier: 'visitors' },
-          rhs: { value: 1 },
-        },
-      },
-      {
-        arguments: {
-          number_to_format: {
-            source: 'previous_transform',
-          },
-          determiner: {
-            value: 'a_or_an',
-          },
-        },
-        transform: 'format_ordinal',
-      },
-    ],
-  },
-  householdCardinality: {
-    placeholder: 'household_cardinality',
-    transforms: [
-      {
-        transform: 'add',
-        arguments: {
-          lhs: { source: 'list', identifier: 'household' },
-          rhs: { value: 0 },
-        },
-      },
-    ],
-  },
+  ordinality: ordinality,
+  cardinality: cardinality,
 }
