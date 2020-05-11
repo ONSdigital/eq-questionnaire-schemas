@@ -71,12 +71,13 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: schemas
-      - name: Authenticate & Upload Schemas To GCS
+      - name: Authenticate With Google Cloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
           version: 'latest'
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SCHEMAS_BUCKET_SA_KEY }}
-      - run: |
+      - name: Upload Schemas To GCS
+        run: |
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
           gsutil -m cp -r schemas gs://${{ secrets.GCS_SCHEMAS_BUCKET }}/${BRANCH_NAME}/
