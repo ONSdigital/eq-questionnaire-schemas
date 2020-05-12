@@ -184,6 +184,22 @@ local otherNonUkAddressOptions = {
   routing_rules: [
     {
       goto: {
+        section: 'End',
+        when: [
+          {
+            id: 'term-time-location-answer',
+            condition: 'equals any',
+            values: [
+              '{household_address}',
+              '{thirty_day_address}',
+              'The address in {thirty_day_address_country}',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'term-time-address-country',
         when: [
           {
@@ -207,13 +223,6 @@ local otherNonUkAddressOptions = {
             id: 'another-address-answer',
             condition: 'not set',
           },
-        ],
-      },
-    },
-    {
-      goto: {
-        section: 'End',
-        when: [
           {
             id: 'term-time-location-answer',
             condition: 'equals',
@@ -229,7 +238,12 @@ local otherNonUkAddressOptions = {
           {
             id: 'term-time-location-answer',
             condition: 'equals',
-            value: '{thirty_day_address}',
+            value: 'Another address',
+          },
+          {
+            id: 'another-address-answer',
+            condition: 'equals',
+            value: 'Yes, an address within the UK',
           },
         ],
       },
@@ -241,7 +255,12 @@ local otherNonUkAddressOptions = {
           {
             id: 'term-time-location-answer',
             condition: 'equals',
-            value: 'The address in {thirty_day_address_country}',
+            value: 'Another address',
+          },
+          {
+            id: 'another-address-answer',
+            condition: 'equals',
+            value: 'Yes, an address outside the UK',
           },
         ],
       },
