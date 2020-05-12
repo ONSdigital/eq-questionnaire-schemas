@@ -65,6 +65,8 @@ local job_title = import 'individual/blocks/employment/job_title.jsonnet';
 local jobseeker = import 'individual/blocks/employment/jobseeker.jsonnet';
 local main_employment_block = import 'individual/blocks/employment/main_employment_block.jsonnet';
 local main_job_type = import 'individual/blocks/employment/main_job_type.jsonnet';
+local place_of_work = import 'individual/blocks/employment/place_of_work.jsonnet';
+local place_of_work_elsewhere = import 'individual/blocks/employment/place_of_work_elsewhere.jsonnet';
 local supervise = import 'individual/blocks/employment/supervise.jsonnet';
 local work_location = import 'individual/blocks/employment/work_location.jsonnet';
 local work_location_type = import 'individual/blocks/employment/work_location_type.jsonnet';
@@ -181,6 +183,8 @@ function(region_code) {
             supervise,
             hours_worked,
             work_location_type,
+            place_of_work,
+            place_of_work_elsewhere,
             work_location,
             work_travel,
           ],

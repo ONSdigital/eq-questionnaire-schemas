@@ -85,7 +85,7 @@ local proxyDescriptionDidWork = {
   routing_rules: [
     {
       goto: {
-        block: 'work-location',
+        block: 'place-of-work',
         when: [
           {
             id: 'work-location-type-answer',
