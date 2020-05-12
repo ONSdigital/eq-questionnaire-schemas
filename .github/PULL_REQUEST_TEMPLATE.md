@@ -6,4 +6,10 @@ Describe the steps required to test the changes (include screenshots if appropri
 
 ### Checklist
 
-* [ ] Jsonnet files conform to the latest [style guide](/ONSdigital/eq-questionnaire-schemas/.github/style_guide.md)
+* [ ] Jsonnet files conform to the latest [style guide](/ONSdigital/eq-questionnaire-schemas/blob/master/style_guide.md)
+
+### Schemas Artifacts
+Schemas artifacts are available at:
+```bash
+https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch_name>/schemas/en/<schema_name>.json
+```
