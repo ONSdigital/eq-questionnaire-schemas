@@ -191,7 +191,7 @@ local otherNonUkAddressOptions = {
             condition: 'equals any',
             values: [
               '{household_address}',
-              '{thirty_day_address}'
+              '{thirty_day_address}',
               'The address in {thirty_day_address_country}',
             ],
           },
