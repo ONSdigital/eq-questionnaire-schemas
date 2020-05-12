@@ -188,10 +188,8 @@ local otherNonUkAddressOptions = {
         when: [
           {
             id: 'term-time-location-answer',
-            condition: 'equals any',
-            values: [
-              '{household_address}',
-            ],
+            condition: 'equals',
+            value: '{household_address}',
           },
         ],
       },
