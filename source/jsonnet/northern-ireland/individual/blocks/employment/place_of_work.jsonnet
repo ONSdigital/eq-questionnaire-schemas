@@ -1,7 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local ireland = 'No, it is in the Republic of Ireland';
+local pastIreland = 'No, it was is in the Republic of Ireland';
+
+local anotherCountry = 'No, it is in another country';
+local pastAnotherCountry = 'No, it was in another country';
+
+local question(title, anotherCountry, republicOfIreland) = {
   id: 'place-of-work-question',
   title: title,
   type: 'General',
@@ -15,16 +21,32 @@ local question(title) = {
           value: 'Yes',
         },
         {
-          label: 'No, it is in the Republic of Ireland',
-          value: 'No, it is in the Republic of Ireland',
+          label: republicOfIreland,
+          value: republicOfIreland,
         },
         {
-          label: 'No, it is in another country',
-          value: 'No, it is in another country',
+          label: anotherCountry,
+          value: anotherCountry,
         },
       ],
       type: 'Radio',
     },
+  ],
+};
+
+local nonProxyTitle = 'Is your main place of work in Northern Ireland?';
+local proxyTitle = {
+  text: 'Is <em>{person_name_possessive}</em> main place of work in Northern Ireland?',
+  placeholders: [
+    placeholders.personNamePossessive,
+  ],
+};
+
+local pastNonProxyTitle = 'Was your main place of work in Northern Ireland?';
+local pastProxyTitle = {
+  text: 'Was <em>{person_name_possessive}</em> main place of work in Northern Ireland?',
+  placeholders: [
+    placeholders.personNamePossessive,
   ],
 };
 
@@ -33,16 +55,19 @@ local question(title) = {
   id: 'place-of-work',
   question_variants: [
     {
-      question: question('Is your main place of work in Northern Ireland?'),
+      question: question(nonProxyTitle, anotherCountry, ireland),
+      when: [rules.isNotProxy, rules.mainJob],
+    },
+    {
+      question: question(proxyTitle, anotherCountry, ireland),
+      when: [rules.isProxy, rules.mainJob],
+    },
+    {
+      question: question(pastNonProxyTitle, pastAnotherCountry, pastIreland),
       when: [rules.isNotProxy],
     },
     {
-      question: question({
-        text: 'Is <em>{person_name_possessive}</em> main place of work in Northern Ireland?',
-        placeholders: [
-          placeholders.personNamePossessive,
-        ],
-      }),
+      question: question(pastProxyTitle, pastAnotherCountry, pastIreland),
       when: [rules.isProxy],
     },
   ],
@@ -53,8 +78,8 @@ local question(title) = {
         when: [
           {
             id: 'place-of-work-answer',
-            condition: 'equals',
-            value: 'No, it is in another country',
+            condition: 'equals any',
+            values: ['No, it is in another country', 'No, it was in another country'],
           },
         ],
       },

@@ -16,21 +16,40 @@ local question(title) = {
   ],
 };
 
+local nonProxyTitle = 'In which country is your main place of work?';
+local proxyTitle = {
+  text: 'In which country is <em>{person_name_possessive}</em> main place of work?',
+  placeholders: [
+    placeholders.personNamePossessive,
+  ],
+};
+
+local pastNonProxyTitle = 'In which country was your main place of work?';
+local pastProxyTitle = {
+  text: 'In which country was <em>{person_name_possessive}</em> main place of work?',
+  placeholders: [
+    placeholders.personNamePossessive,
+  ],
+};
+
 {
   type: 'Question',
   id: 'place-of-work-elsewhere',
   question_variants: [
     {
-      question: question('In which country is your main place of work?'),
+      question: question(nonProxyTitle),
+      when: [rules.isNotProxy, rules.mainJob],
+    },
+    {
+      question: question(proxyTitle),
+      when: [rules.isProxy, rules.mainJob],
+    },
+    {
+      question: question(pastNonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question({
-        text: 'In which country is <em>{person_name_possessive}</em> main place of work?',
-        placeholders: [
-          placeholders.personNamePossessive,
-        ],
-      }),
+      question: question(pastProxyTitle),
       when: [rules.isProxy],
     },
   ],
