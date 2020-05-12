@@ -1,13 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local anyoneElseOptionDescription = {
-  text: 'Include partners, children, babies born on or before {census_date}, housemates, tenants and lodgers, students and schoolchildren who live away from home during term time, where this is their permanent or family home',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
 local questionTitle = {
   text: 'Does anyone usually live at {household_address}?',
   placeholders: [
@@ -61,11 +54,11 @@ local editQuestion(questionTitle) = {
   for_list: 'household',
   add_answer: {
     id: 'anyone-else-answer',
-    value: 'Yes, I need to add someone',
+    value: 'Yes, I want to add {ordinality} person',
   },
   remove_answer: {
     id: 'remove-confirmation',
-    value: 'Yes, remove this person',
+    value: 'Yes, I want to remove this person',
   },
   question_variants: [
     {
@@ -80,9 +73,13 @@ local editQuestion(questionTitle) = {
             type: 'Radio',
             options: [
               {
-                label: 'Yes, I need to add someone',
-                value: 'Yes, I need to add someone',
-                description: anyoneElseOptionDescription,
+                label: {
+                  text: 'Yes, I want to add {ordinality} person',
+                  placeholders: [
+                    placeholders.getListOrdinality('household'),
+                  ],
+                },
+                value: 'Yes, I want to add {ordinality} person',
               },
               {
                 label: 'No, no one usually lives here',
@@ -112,9 +109,13 @@ local editQuestion(questionTitle) = {
             type: 'Radio',
             options: [
               {
-                label: 'Yes, I need to add someone',
-                value: 'Yes, I need to add someone',
-                description: anyoneElseOptionDescription,
+                label: {
+                  text: 'Yes, I want to add {ordinality} person',
+                  placeholders: [
+                    placeholders.getListOrdinality('household'),
+                  ],
+                },
+                value: 'Yes, I want to add {ordinality} person',
               },
               {
                 label: 'No, I do not need to add anyone',
@@ -130,6 +131,7 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
+    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'add-question',
       type: 'General',
@@ -199,12 +201,12 @@ local editQuestion(questionTitle) = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, remove this person',
-              value: 'Yes, remove this person',
+              label: 'Yes, I want to remove this person',
+              value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, cancel and return',
-              value: 'No, cancel and return',
+              label: 'No, I do not want to remove this person',
+              value: 'No, I do not want to remove this person',
             },
           ],
         },
