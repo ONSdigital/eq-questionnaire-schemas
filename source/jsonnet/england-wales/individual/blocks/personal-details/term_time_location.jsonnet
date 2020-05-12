@@ -188,8 +188,12 @@ local otherNonUkAddressOptions = {
         when: [
           {
             id: 'term-time-location-answer',
-            condition: 'equals',
-            value: '{household_address}',
+            condition: 'equals any',
+            values: [
+              '{household_address}',
+              '{thirty_day_address}'
+              'The address in {thirty_day_address_country}',
+            ],
           },
         ],
       },
@@ -257,30 +261,6 @@ local otherNonUkAddressOptions = {
             id: 'another-address-answer',
             condition: 'equals',
             value: 'Yes, an address outside the UK',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        section: 'End',
-        when: [
-          {
-            id: 'term-time-location-answer',
-            condition: 'equals',
-            value: '{thirty_day_address}',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        section: 'End',
-        when: [
-          {
-            id: 'term-time-location-answer',
-            condition: 'equals',
-            value: 'The address in {thirty_day_address_country}',
           },
         ],
       },
