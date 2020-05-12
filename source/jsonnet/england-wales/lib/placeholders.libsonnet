@@ -1,3 +1,38 @@
+local getListOrdinality(listName) = {
+  placeholder: 'ordinality',
+  transforms: [
+    {
+      transform: 'add',
+      arguments: {
+        lhs: { source: 'list', identifier: listName },
+        rhs: { value: 1 },
+      },
+    },
+    {
+      arguments: {
+        number_to_format: {
+          source: 'previous_transform',
+        },
+        determiner: {
+          value: 'a_or_an',
+        },
+      },
+      transform: 'format_ordinal',
+    },
+  ],
+};
+local getListCardinality(listName) = {
+  placeholder: 'cardinality',
+  transforms: [
+    {
+      transform: 'add',
+      arguments: {
+        lhs: { source: 'list', identifier: listName },
+        rhs: { value: 0 },
+      },
+    },
+  ],
+};
 {
   personName: {
     placeholder: 'person_name',
@@ -66,4 +101,6 @@
       },
     }],
   },
+  getListOrdinality: getListOrdinality,
+  getListCardinality: getListCardinality,
 }
