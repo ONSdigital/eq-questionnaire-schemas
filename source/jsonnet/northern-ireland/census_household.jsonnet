@@ -61,6 +61,8 @@ local understand_irish = import 'individual/blocks/identity-and-health/understan
 local understand_ulster_scots = import 'individual/blocks/identity-and-health/understand_ulster_scots.jsonnet';
 
 // School
+local place_of_study = import 'individual/blocks/school/place_of_study.jsonnet';
+local place_of_study_elsewhere = import 'individual/blocks/school/place_of_study_elsewhere.jsonnet';
 local school_location = import 'individual/blocks/school/school_location.jsonnet';
 local school_travel = import 'individual/blocks/school/school_travel.jsonnet';
 local study_location_type = import 'individual/blocks/school/study_location_type.jsonnet';
@@ -337,6 +339,8 @@ function(region_code) {
           title: 'School',
           blocks: [
             study_location_type,
+            place_of_study,
+            place_of_study_elsewhere,
             school_location,
             school_travel,
           ],
