@@ -17,7 +17,7 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Which country outside of the UK do you mainly work in?';
+local nonProxyTitle = 'Which country outside the UK do you mainly work in?';
 local proxyTitle = {
   text: 'In which country outside the UK does <em>{person_name}</em> mainly work?',
   placeholders: [

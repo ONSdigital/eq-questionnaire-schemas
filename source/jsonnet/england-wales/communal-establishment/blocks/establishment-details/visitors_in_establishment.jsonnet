@@ -62,17 +62,6 @@ local question = {
   routing_rules: [
     {
       goto: {
-        group: 'submit-group',
-        when: [
-          {
-            id: 'visitors-in-establishment-exclusive',
-            condition: 'set',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
         block: 'number-of-visitors-in-establishment',
       },
     },
