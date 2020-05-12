@@ -184,13 +184,26 @@ local otherNonUkAddressOptions = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'identity-and-health-group',
         when: [
           {
             id: 'term-time-location-answer',
             condition: 'equals any',
             values: [
               '{household_address}',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        section: 'End',
+        when: [
+          {
+            id: 'term-time-location-answer',
+            condition: 'equals any',
+            values: [
               '{thirty_day_address}',
               'The address in {thirty_day_address_country}',
             ],
