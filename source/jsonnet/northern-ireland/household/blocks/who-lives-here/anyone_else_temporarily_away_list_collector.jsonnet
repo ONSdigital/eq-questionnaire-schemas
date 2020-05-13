@@ -3,9 +3,19 @@ local rules = import 'rules.libsonnet';
 
 
 local questionTitle = {
-  text: 'Apart from the people already included, is there anyone who is temporarily away or staying that you need to add to {household_address}?',
+  text_plural: {
+    forms: {
+      one: 'You said {cardinality} person lives at {household_address}. Do you need to add anyone?',
+      other: 'You said {cardinality} people live at {household_address}. Do you need to add anyone?',
+    },
+    count: {
+      source: 'list',
+      identifier: 'household',
+    },
+  },
   placeholders: [
     placeholders.address,
+    placeholders.getListCardinality('household'),
   ],
 };
 
@@ -81,7 +91,7 @@ local editQuestion(questionTitle) = {
   },
   remove_answer: {
     id: 'anyone-else-temp-away-remove-confirmation',
-    value: 'Yes, remove this person',
+    value: 'Yes, I want to remove this person',
   },
   question: {
     id: 'anyone-else-temp-away-confirmation-question',
@@ -90,23 +100,27 @@ local editQuestion(questionTitle) = {
     guidance: {
       contents: [
         {
-          title: 'Include people who are temporarily away',
+          title: '<p>Remember to Include people who are</p>',
+        },
+        {
+          title: 'Temporarily away',
         },
         {
           list: [
-            'People who work away from home within the UK if this is their permanent or family home',
-            'Members of the armed forces if this is their permanent or family home',
-            'People who are temporarily outside the UK for less than <strong>12 months</strong>',
-            'Other people who usually live here but are temporarily away',
+            'people who work away from home within the UK if this is their permanent or family home',
+            'members of the armed forces if this is their permanent or family home',
+            'people who are temporarily outside the UK for <strong>less than 12 months</strong>',
+            'people staying, or expecting to stay, in an establishment such as a hospital, care home or hostel for <strong>less than 6 months</strong>',
+            'other people who usually live here but are temporarily away from home',
           ],
         },
         {
-          title: 'Include people who are temporarily staying',
+          title: 'Temporarily staying',
         },
         {
           list: [
-            'People staying temporarily who usually live in the UK but do not have another UK address for example, relatives, friends',
-            'People who usually live outside the UK who are staying in the UK for <strong>3 months or more</strong>',
+            'people staying temporarily who usually live in the UK but do not have another UK address for example, relatives, friends',
+            'people who usually live outside the UK who are staying in the UK for <strong>3 months or more</strong>',
           ],
         },
       ],
@@ -122,16 +136,33 @@ local editQuestion(questionTitle) = {
             value: 'Yes, I need to add someone',
           },
           {
-            label: 'No, I do not need to add anyone',
+            label: {
+              text_plural: {
+                forms: {
+                  one: 'No, there is {cardinality} person living here',
+                  other: 'No, there are {cardinality} people living here',
+                },
+                count: {
+                  source: 'list',
+                  identifier: 'household',
+                },
+              },
+              placeholders: [
+                placeholders.getListCardinality('household'),
+              ],
+            },
             value: 'No, I do not need to add anyone',
           },
         ],
         guidance: {
-          show_guidance: 'Why do we ask this question?',
-          hide_guidance: 'Why do we ask this question?',
+          show_guidance: 'Why we ask this question',
+          hide_guidance: 'Why we ask this question',
           contents: [
             {
               description: 'We ask this question to help ensure that everyone is correctly counted in the census. This includes people who are staying temporarily or are away.',
+            },
+            {
+              description: 'The information is vital for planning services, whether it is for hospital beds, school places, GP and dental services or where to build houses and roads.',
             },
           ],
         },
@@ -141,6 +172,7 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'anyone-else-temp-away-add-person',
     type: 'ListAddQuestion',
+    cancel_text: 'Don’t need to add anyone?',
     question: {
       id: 'anyone-else-temp-away-add-question',
       type: 'General',
@@ -200,12 +232,12 @@ local editQuestion(questionTitle) = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, remove this person',
-              value: 'Yes, remove this person',
+              label: 'Yes, I want to remove this person',
+              value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, cancel and return',
-              value: 'No, cancel and return',
+              label: 'No, I do not want to remove this person',
+              value: 'No, I do not want to remove this person',
             },
           ],
         },

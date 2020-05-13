@@ -60,7 +60,7 @@ local proxyDescriptionStudy = {
   routing_rules: [
     {
       goto: {
-        block: 'school-location',
+        block: 'place-of-study',
         when: [
           {
             id: 'study-location-type-answer',
@@ -73,18 +73,6 @@ local proxyDescriptionStudy = {
     {
       goto: {
         block: 'school-travel',
-        when: [
-          {
-            id: 'study-location-type-answer',
-            condition: 'equals',
-            value: 'No fixed place',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        section: 'End',
       },
     },
   ],
