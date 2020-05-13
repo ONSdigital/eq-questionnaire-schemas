@@ -35,10 +35,10 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Are your day-to-day activities limited because of a health problem, or disability which has lasted, or is expected to last, at least 12 months?';
+local nonProxyTitle = 'Are your day-to-day activities limited because of a health problem or disability which has lasted, or is expected to last, at least 12 months?';
 
 local proxyTitle = {
-  text: 'Are <em>{person_name_possessive}</em> day-to-day activities limited because of a health problem, or disability which has lasted, or is expected to last, at least 12 months?',
+  text: 'Are <em>{person_name_possessive}</em> day-to-day activities limited because of a health problem or disability which has lasted, or is expected to last, at least 12 months?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
