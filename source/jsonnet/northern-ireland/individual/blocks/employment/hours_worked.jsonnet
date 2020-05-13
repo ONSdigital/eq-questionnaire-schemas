@@ -79,7 +79,7 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'study-location-type',
+        group: 'school-group',
         when: [{
           id: 'in-education-answer',
           condition: 'equals',
