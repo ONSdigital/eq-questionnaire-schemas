@@ -76,4 +76,21 @@ local pastProxyTitle = {
       when: [rules.isProxy, rules.lastMainJob],
     },
   ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'study-location-type',
+        when: [{
+          id: 'in-education-answer',
+          condition: 'equals',
+          value: 'Yes',
+        }],
+      },
+    },
+    {
+      goto: {
+        block: 'work-location-type',
+      },
+    },
+  ],
 }
