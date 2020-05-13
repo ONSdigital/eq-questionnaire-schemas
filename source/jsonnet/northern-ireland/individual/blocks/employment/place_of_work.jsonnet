@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local ireland = 'No, it is in the Republic of Ireland';
-local pastIreland = 'No, it was is in the Republic of Ireland';
+local pastIreland = 'No, it was in the Republic of Ireland';
 
 local anotherCountry = 'No, it is in another country';
 local pastAnotherCountry = 'No, it was in another country';
