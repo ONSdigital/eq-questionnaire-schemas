@@ -92,8 +92,20 @@ local proxyTitle = {
     },
     {
       goto: {
+        section: 'End',
+        when: [rules.lastBirthdayAgeUnder(4)],
+      },
+    },
+    {
+      goto: {
         block: 'carer',
         when: [rules.over5],
+      },
+    },
+    {
+      goto: {
+        block: 'carer',
+        when: [rules.lastBirthdayAgeOver(5)],
       },
     },
     {

@@ -1,4 +1,14 @@
 {
+  lastBirthdayAgeOver(age): {
+    id: 'age-last-birthday-answer',
+    condition: 'greater than or equal to',
+    value: age,
+  },
+  lastBirthdayAgeUnder(age): {
+    id: 'age-last-birthday-answer',
+    condition: 'less than',
+    value: age,
+  },
   over16: {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',

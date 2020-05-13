@@ -75,6 +75,12 @@ local proxyGuidance = 'Exclude anything they do in paid employment';
     },
     {
       goto: {
+        block: 'sexual-identity',
+        when: [rules.lastBirthdayAgeOver(16)],
+      },
+    },
+    {
+      goto: {
         group: 'school-group',
       },
     },
