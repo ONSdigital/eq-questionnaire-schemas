@@ -89,6 +89,16 @@ local pastProxyTitle = {
     },
     {
       goto: {
+        group: 'school-group',
+        when: [{
+          id: 'employment-type',
+          condition: 'equals',
+          value: 'Studying',
+        }],
+      },
+    },
+    {
+      goto: {
         block: 'work-location-type',
       },
     },
