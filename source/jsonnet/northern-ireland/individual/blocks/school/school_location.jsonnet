@@ -26,7 +26,7 @@ local question(title) = {
     },
     {
       id: 'school-address-details-answer-county',
-      label: 'County (optional)',
+      label: 'County',
       mandatory: false,
       type: 'TextField',
     },
