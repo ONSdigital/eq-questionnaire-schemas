@@ -1,11 +1,11 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local ireland = 'No, it is in the Republic of Ireland';
-local pastIreland = 'No, it was in the Republic of Ireland';
+local irelandAnswerOption = 'No, it is in the Republic of Ireland';
+local pastIrelandAnswerOption = 'No, it was in the Republic of Ireland';
 
-local anotherCountry = 'No, it is in another country';
-local pastAnotherCountry = 'No, it was in another country';
+local anotherCountryAnswerOption = 'No, it is in another country';
+local pastAnotherCountryAnswerOption = 'No, it was in another country';
 
 local question(title, anotherCountry, republicOfIreland) = {
   id: 'place-of-work-question',
@@ -55,19 +55,19 @@ local pastProxyTitle = {
   id: 'place-of-work',
   question_variants: [
     {
-      question: question(nonProxyTitle, anotherCountry, ireland),
+      question: question(nonProxyTitle, anotherCountryAnswerOption, irelandAnswerOption),
       when: [rules.isNotProxy, rules.mainJob],
     },
     {
-      question: question(proxyTitle, anotherCountry, ireland),
+      question: question(proxyTitle, anotherCountryAnswerOption, irelandAnswerOption),
       when: [rules.isProxy, rules.mainJob],
     },
     {
-      question: question(pastNonProxyTitle, pastAnotherCountry, pastIreland),
+      question: question(pastNonProxyTitle, pastAnotherCountryAnswerOption, pastIrelandAnswerOption),
       when: [rules.isNotProxy],
     },
     {
-      question: question(pastProxyTitle, pastAnotherCountry, pastIreland),
+      question: question(pastProxyTitle, pastAnotherCountryAnswerOption, pastIrelandAnswerOption),
       when: [rules.isProxy],
     },
   ],
