@@ -14,8 +14,8 @@ local question(title, guidance, definitionDescription, otherEthnicGroup) = {
   answers: [
     {
       guidance: {
-          show_guidance: guidance,
-          hide_guidance: guidance,
+        show_guidance: guidance,
+        hide_guidance: guidance,
         contents: [
           {
             description: definitionDescription,
