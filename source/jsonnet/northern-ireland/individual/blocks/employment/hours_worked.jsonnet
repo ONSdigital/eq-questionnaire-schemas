@@ -92,7 +92,7 @@ local pastProxyTitle = {
         group: 'school-group',
         when: [{
           id: 'employment-type-answer',
-          condition: 'equals',
+          condition: 'contains',
           value: 'Studying',
         }],
       },
