@@ -4,14 +4,17 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'understand-ulster-scots-question',
   title: title,
-  mandatory: false,
-  type: 'MutuallyExclusive',
+  type: 'General',
   answers: [
     {
       id: 'understand-ulster-scots-answer',
       mandatory: false,
       type: 'Checkbox',
       options: [
+        {
+          label: 'No ability',
+          value: 'No ability',
+        },
         {
           label: 'Understand Ulster-Scots',
           value: 'Understand Ulster-Scots',
@@ -27,17 +30,6 @@ local question(title) = {
         {
           label: 'Write Ulster-Scots',
           value: 'Write Ulster-Scots',
-        },
-      ],
-    },
-    {
-      id: 'understand-ulster-scots-answer-exclusive',
-      type: 'Checkbox',
-      mandatory: false,
-      options: [
-        {
-          label: 'No ability',
-          value: 'No ability',
         },
       ],
     },

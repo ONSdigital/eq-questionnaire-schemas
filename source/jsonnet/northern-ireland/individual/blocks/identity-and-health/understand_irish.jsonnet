@@ -4,14 +4,17 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'understand-irish-question',
   title: title,
-  mandatory: false,
-  type: 'MutuallyExclusive',
+  type: 'General',
   answers: [
     {
       id: 'understand-irish-answer',
       mandatory: false,
       type: 'Checkbox',
       options: [
+        {
+          label: 'No ability',
+          value: 'No ability',
+        },
         {
           label: 'Understand Irish',
           value: 'Understand Irish',
@@ -27,17 +30,6 @@ local question(title) = {
         {
           label: 'Write Irish',
           value: 'Write Irish',
-        },
-      ],
-    },
-    {
-      id: 'understand-irish-answer-exclusive',
-      type: 'Checkbox',
-      mandatory: false,
-      options: [
-        {
-          label: 'No ability',
-          value: 'No ability',
         },
       ],
     },

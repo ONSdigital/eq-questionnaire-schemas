@@ -77,7 +77,6 @@ local other_qualifications = import 'individual/blocks/qualifications/other_qual
 local qualifications = import 'individual/blocks/qualifications/qualifications.jsonnet';
 
 // Employment
-local armed_forces = import 'individual/blocks/employment/armed_forces.jsonnet';
 local business_name = import 'individual/blocks/employment/business_name.jsonnet';
 local employers_business = import 'individual/blocks/employment/employers_business.jsonnet';
 local employment_status = import 'individual/blocks/employment/employment_status.jsonnet';
@@ -316,7 +315,6 @@ function(region_code) {
           id: 'employment-group',
           title: 'Employment',
           blocks: [
-            armed_forces,
             employment_status,
             employment_type,
             jobseeker,
