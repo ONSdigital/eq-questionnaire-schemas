@@ -14,6 +14,7 @@ local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonn
 
 // Who lives here
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
+local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
 local anyone_else_list_collector = import 'household/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
 local anyone_else_temporarily_away_list_collector = import 'household/blocks/who-lives-here/anyone_else_temporarily_away_list_collector.jsonnet';
 local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
@@ -192,6 +193,7 @@ function(region_code, census_month_year_date) {
           blocks: [
             who_lives_here_interstitial,
             primary_person_list_collector,
+            anyone_else,
             anyone_else_list_collector,
             anyone_else_temporarily_away_list_collector,
             any_visitors,
