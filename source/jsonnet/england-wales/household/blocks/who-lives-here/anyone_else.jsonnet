@@ -17,6 +17,17 @@ local questionTitle(isPrimary) = (
   }
 );
 
+local anyoneElseAnswerExclusiveText(isPrimary) = (
+  if isPrimary then {
+    label: 'None of these apply, I am the only person who usually lives here',
+    value: 'None of these apply, I am the only person who usually lives here',
+  } else {
+    label: 'None of these apply, no-one usually lives here',
+    value: 'None of these apply, no-one usually lives here',
+    description: 'For example, this is a second address or holiday home',
+  }
+);
+
 local question(isPrimary) = {
   type: 'MutuallyExclusive',
   id: 'anyone-else-driving-question',
@@ -125,12 +136,7 @@ local question(isPrimary) = {
       id: 'anyone-else-driving-question-answer-exclusive',
       mandatory: false,
       type: 'Checkbox',
-      options: [
-        {
-          label: 'None of these apply, I am the only person who usually lives here',
-          value: 'None of these apply, I am the only person who usually lives here',
-        },
-      ],
+      options: [anyoneElseAnswerExclusiveText(isPrimary)],
     },
   ],
 };
