@@ -1,15 +1,15 @@
 local rules = import '../../../lib/common_rules.libsonnet';
 local placeholders = import '../../lib/placeholders.libsonnet';
 
-local questionTitle(isPrimary) = (
-  if isPrimary then {
-    text: 'Do any of the following people live at {household_address} on {census_date}?',
+local questionTitle(hasPrimary) = (
+  if hasPrimary then {
+    text: 'Do any of the following people also live at {household_address} on {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,
     ],
   } else {
-    text: 'Do any of the following people also live at {household_address} on {census_date}?',
+    text: 'Do any of the following people live at {household_address} on {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,
@@ -17,8 +17,8 @@ local questionTitle(isPrimary) = (
   }
 );
 
-local anyoneElseAnswerExclusiveText(isPrimary) = (
-  if isPrimary then {
+local anyoneElseAnswerExclusiveText(hasPrimary) = (
+  if hasPrimary then {
     label: 'None of these apply, I am the only person who usually lives here',
     value: 'None of these apply, I am the only person who usually lives here',
   } else {
@@ -28,10 +28,10 @@ local anyoneElseAnswerExclusiveText(isPrimary) = (
   }
 );
 
-local question(isPrimary) = {
+local question(hasPrimary) = {
   type: 'MutuallyExclusive',
   id: 'anyone-else-driving-question',
-  title: questionTitle(isPrimary),
+  title: questionTitle(hasPrimary),
   definitions: [
     {
       title: 'Who to include',
@@ -39,7 +39,7 @@ local question(isPrimary) = {
         { description: 'This is often their permanent or family home.' },
         {
           description: {
-            text: 'If someone has more than one home address, include them at this address if they generally spend most of their time here. For example, children whose parents live apart. If they split their time equally than include them at this address if they are staying overnight on {census_date}.',
+            text: 'If someone has more than one home address, include them at this address if they generally spend most of their time here. For example, children whose parents live apart. If they split their time equally then include them at this address if they are staying overnight on {census_date}.',
             placeholders: [
               placeholders.censusDate,
             ],
@@ -96,8 +96,8 @@ local question(isPrimary) = {
           },
         },
         {
-          label: 'People who usually live outside the UK who are staying in the UK for three months or more',
-          value: 'People who usually live outside the UK who are staying in the UK for three months or more',
+          label: 'People who usually live outside the UK who are staying in the UK for 3 months or more',
+          value: 'People who usually live outside the UK who are staying in the UK for 3 months or more',
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
@@ -136,7 +136,7 @@ local question(isPrimary) = {
       id: 'anyone-else-driving-question-answer-exclusive',
       mandatory: false,
       type: 'Checkbox',
-      options: [anyoneElseAnswerExclusiveText(isPrimary)],
+      options: [anyoneElseAnswerExclusiveText(hasPrimary)],
     },
   ],
 };
@@ -147,12 +147,12 @@ local question(isPrimary) = {
   id: 'anyone-else-driving-question',
   question_variants: [
     {
-      question: question(isPrimary=true),
-      when: [rules.isPrimary],
+      question: question(hasPrimary=true),
+      when: [rules.hasPrimary],
     },
     {
-      question: question(isPrimary=false),
-      when: [rules.isNotPrimary],
+      question: question(hasPrimary=false),
+      when: [rules.hasNoPrimary],
     },
   ],
   routing_rules: [
