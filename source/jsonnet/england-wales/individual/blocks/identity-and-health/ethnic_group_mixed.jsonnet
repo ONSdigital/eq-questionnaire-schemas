@@ -1,18 +1,21 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local nonProxyGuidance = 'Why your answer is important';
+local proxyGuidance = 'Why their answer is important';
+
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, definitionDescription, mixedMultipleBackgroundDescription) = {
+local question(title, guidance, definitionDescription, mixedMultipleBackgroundDescription) = {
   id: 'mixed-ethnic-group-question',
   title: title,
   type: 'General',
   answers: [
     {
       guidance: {
-        show_guidance: 'Why your answer is important',
-        hide_guidance: 'Why your answer is important',
+        show_guidance: guidance,
+        hide_guidance: guidance,
         contents: [
           {
             description: definitionDescription,
@@ -62,11 +65,11 @@ local proxyTitle = {
   id: 'mixed-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
+      question: question(nonProxyTitle, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
+      question: question(proxyTitle, proxyGuidance, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],
