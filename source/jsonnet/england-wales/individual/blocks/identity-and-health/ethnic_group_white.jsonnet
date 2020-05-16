@@ -12,10 +12,13 @@ local proxyTitle = {
 local englandOption = 'English, Welsh, Scottish, Northern Irish or British';
 local walesOption = 'Welsh, English, Scottish, Northern Irish or British';
 
+local nonProxyGuidance = 'Why your answer is important';
+local proxyGuidance = 'Why their answer is important';
+
 local nonProxyDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(title, description, region_code, whiteBackgroundDescription) = (
+local question(title, guidance, description, region_code, whiteBackgroundDescription) = (
   local radioOptions = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'white-ethnic-group-question',
@@ -24,8 +27,8 @@ local question(title, description, region_code, whiteBackgroundDescription) = (
     answers: [
       {
         guidance: {
-          show_guidance: 'Why your answer is important',
-          hide_guidance: 'Why your answer is important',
+          show_guidance: guidance,
+          hide_guidance: guidance,
           contents: [
             {
               description: description,
@@ -72,11 +75,11 @@ function(region_code) {
   id: 'white-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, region_code, 'You can enter your ethnic group or background on the next question'),
+      question: question(nonProxyTitle, nonProxyGuidance, nonProxyDescription, region_code, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, region_code, 'You can enter their ethnic group or background on the next question'),
+      question: question(proxyTitle, proxyGuidance, proxyDescription, region_code, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],
