@@ -39,12 +39,6 @@ local question(title) = {
         {
           label: 'Other',
           value: 'Other',
-          detail_answer: {
-            id: 'no-religion-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please specify religion, religious denomination or body',
-          },
         },
       ],
       type: 'Checkbox',
@@ -77,6 +71,18 @@ local question(title) = {
     },
   ],
   routing_rules: [
+  {
+      goto: {
+        block: 'passports-other',
+        when: [
+          {
+            id: 'no-religion-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'health',

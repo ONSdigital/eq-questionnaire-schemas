@@ -90,4 +90,23 @@ local question(title) = {
       when: [rules.isProxy],
     },
   ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'ethnic-group-other-other',
+        when: [
+          {
+            id: 'other-ethnic-group-answer',
+            condition: 'equals',
+            value: 'Any other ethnic group',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'religion',
+      },
+    },
+  ],
 }

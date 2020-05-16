@@ -74,4 +74,23 @@ local question(title, detailAnswerLabel) = {
       when: [rules.isProxy],
     },
   ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'national-identity-other',
+        when: [
+          {
+            condition: 'contains',
+            id: 'national-identity-answer',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'ethnic-group',
+      },
+    },
+  ],
 }

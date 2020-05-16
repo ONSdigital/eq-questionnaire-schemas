@@ -9,7 +9,7 @@ local proxyTitle = {
   ],
 };
 
-local question(title) = {
+local question(title, otherReligionDescription) = {
   id: 'religion-question',
   title: title,
   type: 'MutuallyExclusive',
@@ -40,12 +40,7 @@ local question(title) = {
         {
           label: 'Other',
           value: 'Other',
-          detail_answer: {
-            id: 'religion-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please specify religion, religious denomination or body',
-          },
+          description: otherReligionDescription,
         },
       ],
     },
@@ -68,15 +63,27 @@ local question(title) = {
   id: 'religion',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, 'You can enter your religion on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, 'You can enter their religion on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
+  {
+      goto: {
+        block: 'religion-other',
+        when: [
+          {
+            id: 'religion-answer',
+            condition: 'equals',
+            value: 'Any other religion',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'no-religion',

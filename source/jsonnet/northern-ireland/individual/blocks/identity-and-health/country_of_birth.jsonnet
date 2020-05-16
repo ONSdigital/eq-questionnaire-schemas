@@ -9,7 +9,7 @@ local proxyTitle = {
   ],
 };
 
-local question(title) = {
+local question(title, elsewhereDescription) = {
   id: 'country-of-birth-question',
   title: title,
   type: 'General',
@@ -42,12 +42,7 @@ local question(title) = {
         {
           label: 'Elsewhere',
           value: 'Elsewhere',
-          detail_answer: {
-            id: 'country-of-birth-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please specify current name of country',
-          },
+          description: elsewhereDescription
         },
       ],
     },
@@ -59,15 +54,27 @@ local question(title) = {
   id: 'country-of-birth',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, 'You can enter your country of birth on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, 'You can enter their country of birth on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'country-of-birth-elsewhere',
+        when: [
+          {
+            id: 'country-of-birth-answer',
+            condition: 'equals',
+            value: 'Elsewhere',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'passports',
