@@ -90,7 +90,7 @@ local question(title) = {
             condition: 'equals',
             value: 'Northern Ireland',
           },
-          rules.lastBirthdayAgeUnder(1),
+          rules.lastBirthdayAgeLessThan(1),
         ],
       },
     },

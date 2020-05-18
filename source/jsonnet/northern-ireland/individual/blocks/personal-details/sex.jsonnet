@@ -67,7 +67,7 @@ local proxyTitle = {
     {
       goto: {
         group: 'identity-and-health-group',
-        when: [rules.lastBirthdayAgeUnder(4)],
+        when: [rules.lastBirthdayAgeLessThan(4)],
       },
     },
     {

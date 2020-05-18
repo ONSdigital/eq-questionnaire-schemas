@@ -54,7 +54,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'passports',
-        when: [rules.lastBirthdayAgeUnder(1)],
+        when: [rules.lastBirthdayAgeLessThan(1)],
       },
     },
     {

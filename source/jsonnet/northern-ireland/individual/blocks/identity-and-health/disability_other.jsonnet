@@ -93,7 +93,7 @@ local proxyTitle = {
     {
       goto: {
         section: 'End',
-        when: [rules.lastBirthdayAgeUnder(4)],
+        when: [rules.lastBirthdayAgeLessThan(4)],
       },
     },
     {

@@ -4,7 +4,7 @@
     condition: 'greater than or equal to',
     value: age,
   },
-  lastBirthdayAgeUnder(age): {
+  lastBirthdayAgeLessThan(age): {
     id: 'age-last-birthday-answer',
     condition: 'less than',
     value: age,
