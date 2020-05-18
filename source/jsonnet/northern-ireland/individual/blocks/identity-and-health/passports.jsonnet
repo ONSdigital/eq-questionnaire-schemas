@@ -68,11 +68,11 @@ local proxyLabel = 'Please specify the passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, 'passports and travel documents that have expired, if you are entitled to renew them', 'You can enter your passports on the next question'),
+      question: question(nonProxyTitle, nonProxyDefinitionContent, 'You can enter your passports on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, 'passports and travel documents that have expired, if they are entitled to renew them', 'You can enter their passports on the next question'),
+      question: question(proxyTitle, proxyDefinitionContent , 'You can enter their passports on the next question'),
       when: [rules.isProxy],
     },
   ],
