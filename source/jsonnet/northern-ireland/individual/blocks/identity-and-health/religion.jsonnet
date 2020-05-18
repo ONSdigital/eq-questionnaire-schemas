@@ -78,8 +78,8 @@ local question(title, otherReligionDescription) = {
         when: [
           {
             id: 'religion-answer',
-            condition: 'equals',
-            value: 'Any other religion',
+            condition: 'contains',
+            value: 'Other',
           },
         ],
       },

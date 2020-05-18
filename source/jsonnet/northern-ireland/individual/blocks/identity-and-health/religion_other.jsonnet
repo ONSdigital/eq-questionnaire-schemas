@@ -46,12 +46,18 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'passports',
+        block: 'health',
         when: [
           rules.under3,
         ],
       },
     },
+    {
+      goto: {
+        block: 'health',
+        when: [rules.lastBirthdayAgeLessThan(3)],
+      },
+    }
     {
       goto: {
         block: 'language',

@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'no_religion-other-question',
+  id: 'no-religion-other-question',
   title: title,
   guidance: {
     contents: [
@@ -14,7 +14,7 @@ local question(title) = {
   type: 'General',
   answers: [
     {
-      id: 'no_religion-other-answer',
+      id: 'no-religion-other-answer',
       label: 'Religion',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
@@ -27,7 +27,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'no_religion-other',
+  id: 'no-religion-other',
   question_variants: [
     {
       question: question('You selected “Other”. What religion, religious denomination were you brought up in?'),
@@ -52,6 +52,12 @@ local question(title) = {
         ],
       },
     },
+    {
+      goto: {
+        block: 'health',
+        when: [rules.lastBirthdayAgeLessThan(3)],
+      },
+    }
     {
       goto: {
         block: 'language',

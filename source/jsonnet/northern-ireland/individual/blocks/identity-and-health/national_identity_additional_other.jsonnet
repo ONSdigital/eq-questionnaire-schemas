@@ -2,17 +2,17 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'ethnic-group-other-question',
+  id: 'national-identity-additional-other-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'ethnic-group-other-answer',
-      label: 'Ethnic group',
+      id: 'national-identity-additional-other-answer',
+      label: 'National identity',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/ethnic-groups.json',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/national-identities.json',
       type: 'TextField',
     },
   ],
@@ -20,15 +20,15 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'ethnic-group-other',
+  id: 'national-identity-additional-other',
   question_variants: [
     {
-      question: question('You selected “Any other ethnic group”. How would you describe your ethnic group or background?'),
+      question: question('You selected “Other”. How would you describe your other national identity?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Any other ethnic group”. How would <em>{person_name}</em> describe their ethnic group or background?',
+        text: 'You selected “Other”. How would <em>{person_name}</em> describe their other national identity?',
         placeholders: [
           placeholders.personName,
         ],
@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'religion',
+        block: 'ethnic-group',
       },
     },
   ],

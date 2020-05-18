@@ -51,9 +51,11 @@ local frequency_irish = import 'individual/blocks/identity-and-health/frequency_
 local frequency_ulster_scots = import 'individual/blocks/identity-and-health/frequency_ulster_scots.jsonnet';
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
 local language = import 'individual/blocks/identity-and-health/language.jsonnet';
+local language_other = import 'individual/blocks/identity-and-health/language_other.jsonnet';
 local last_year_address = import 'individual/blocks/identity-and-health/last_year_address.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
 local national_identity_other = import 'individual/blocks/identity-and-health/national_identity_other.jsonnet';
+local national_identity_additional_other = import 'individual/blocks/identity-and-health/national_identity_additional_other.jsonnet';
 local no_religion = import 'individual/blocks/identity-and-health/no_religion.jsonnet';
 local no_religion_other = import 'individual/blocks/identity-and-health/no_religion_other.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
@@ -110,6 +112,7 @@ local visitor_dob = import 'household/blocks/visitor/date_of_birth.jsonnet';
 local visitor_sex = import 'household/blocks/visitor/sex.jsonnet';
 local usual_household_address = import 'household/blocks/visitor/usual_household_address.jsonnet';
 local usual_household_address_details = import 'household/blocks/visitor/usual_household_address_details.jsonnet';
+local usual_household_address_other = import 'household/blocks/visitor/usual_household_address_other.jsonnet';
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
 function(region_code) {
@@ -294,6 +297,7 @@ function(region_code) {
             passports_additional_other,
             national_identity,
             national_identity_other,
+            national_identity_additional_other,
             ethnic_group,
             ethnic_group_other,
             religion,
@@ -301,6 +305,7 @@ function(region_code) {
             no_religion,
             no_religion_other,
             language,
+            language_other,
             speak_english,
             understand_irish,
             frequency_irish,
@@ -401,6 +406,7 @@ function(region_code) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
+            usual_household_address_other,
           ],
         },
       ],

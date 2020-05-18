@@ -10,7 +10,7 @@ local proxyTitle = {
 };
 
 
-local question(title) = {
+local question(title, otherEthnicGroupDescription) = {
   id: 'ethnic-group-question',
   title: title,
   type: 'General',
@@ -64,12 +64,7 @@ local question(title) = {
         {
           label: 'Any other ethnic group',
           value: 'Any other ethnic group',
-          detail_answer: {
-            id: 'ethnic-group-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please specify other ethnic group',
-          },
+          description: otherEthnicGroupDescription,
         },
       ],
       type: 'Radio',
@@ -82,21 +77,21 @@ local question(title) = {
   id: 'ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, 'You can enter your ethnic group or background on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, 'You can enter their ethnic group or background on the next question'),
       when: [rules.isProxy],
     },
   ],
   routing_rules: [
     {
       goto: {
-        block: 'ethnic-group-other-other',
+        block: 'ethnic-group-other',
         when: [
           {
-            id: 'other-ethnic-group-answer',
+            id: 'ethnic-group-answer',
             condition: 'equals',
             value: 'Any other ethnic group',
           },

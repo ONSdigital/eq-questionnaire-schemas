@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'national-identity',
+        block: 'passports',
       },
     },
   ],
