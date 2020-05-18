@@ -1,23 +1,22 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description, otherDescription) = {
+local question(title, definitionContent, otherDescription) = {
   id: 'passports-question',
   title: title,
   description: '',
   type: 'MutuallyExclusive',
   mandatory: false,
-  guidance: {
-    contents: [
-      {
-        title: 'Include',
-        list: [
-          'current passports and any other travel documents, such as ID cards, that show citizenship of a particular country or countries',
-          description,
-        ],
-      },
-    ],
-  },
+  definitions: [
+    {
+      title: 'What official documents can be included?',
+      contents: [
+        {
+          description: definitionContent,
+        },
+      ],
+    },
+  ],
   answers: [
     {
       id: 'passports-answer',
@@ -53,8 +52,11 @@ local question(title, description, otherDescription) = {
   ],
 };
 
+local nonProxyDefinitionContent = 'You may have other travel documents that show you are a citizen of a particular country. Please complete this question as if your travel documents are passports.';
 local nonProxyTitle = 'What passports do you hold?';
-local nonProxyLabel = 'Enter the passports you hold';
+local nonProxyLabel = 'Please specify the passports you hold';
+local proxyDefinitionContent = 'They may have other travel documents that show they are a citizen of a particular country. Please complete this question as if their travel documents are passports.';
+
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
   placeholders: [
@@ -68,11 +70,11 @@ local proxyLabel = 'Enter passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, 'passports and travel documents that have expired, if you are entitled to renew them', 'You can enter your passports on the next question'),
+      question: question(nonProxyTitle, nonProxyDefinitionContent, 'You can enter your passports on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, 'passports and travel documents that have expired, if they are entitled to renew them', 'You can enter their passports on the next question'),
+      question: question(proxyTitle, proxyDefinitionContent, 'You can enter their passports on the next question'),
       when: [rules.isProxy],
     },
   ],

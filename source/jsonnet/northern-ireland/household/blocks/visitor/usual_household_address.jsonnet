@@ -34,7 +34,7 @@ local rules = import 'rules.libsonnet';
     ],
   },
   routing_rules: [
-  {
+    {
       goto: {
         block: 'usual-household-address-other',
         when: [

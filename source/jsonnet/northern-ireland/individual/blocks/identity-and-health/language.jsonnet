@@ -58,7 +58,7 @@ local question(title, definitionDescription) = {
     },
   ],
   routing_rules: [
-  {
+    {
       goto: {
         block: 'language-other',
         when: [

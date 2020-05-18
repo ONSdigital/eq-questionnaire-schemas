@@ -72,7 +72,7 @@ local question(title, otherReligionDescription) = {
     },
   ],
   routing_rules: [
-  {
+    {
       goto: {
         block: 'religion-other',
         when: [

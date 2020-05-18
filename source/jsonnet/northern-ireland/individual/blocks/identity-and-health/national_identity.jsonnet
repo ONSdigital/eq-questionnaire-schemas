@@ -67,14 +67,14 @@ local question(title, otherDescription) = {
     },
   ],
   routing_rules: [
-  {
+    {
       goto: {
         block: 'national-identity-additional-other',
         when: [
           {
             id: 'national-identity-answer',
             condition: 'contains any',
-            values: ['British', 'Irish', 'Northern Irish','English', 'Scottish', 'Welsh'],
+            values: ['British', 'Irish', 'Northern Irish', 'English', 'Scottish', 'Welsh'],
           },
           {
             id: 'national-identity-answer',

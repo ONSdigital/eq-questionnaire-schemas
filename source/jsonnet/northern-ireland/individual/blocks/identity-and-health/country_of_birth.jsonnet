@@ -42,7 +42,7 @@ local question(title, elsewhereDescription) = {
         {
           label: 'Elsewhere',
           value: 'Elsewhere',
-          description: elsewhereDescription
+          description: elsewhereDescription,
         },
       ],
     },
