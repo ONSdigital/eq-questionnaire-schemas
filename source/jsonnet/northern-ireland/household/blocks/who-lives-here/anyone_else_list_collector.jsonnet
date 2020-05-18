@@ -171,7 +171,6 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
     question_variants: [
       {
         question: addQuestion(listIsEmpty=false),
