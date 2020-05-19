@@ -1,13 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local anyoneElseOptionDescription = {
-  text: 'Include partners, children, babies born on or before {census_date}, housemates, tenants and lodgers, students and schoolchildren who live away from home during term time, where this is their permanent or family home',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
 local questionTitle = {
   text: 'Does anyone usually live at {household_address}?',
   placeholders: [
@@ -15,43 +8,55 @@ local questionTitle = {
   ],
 };
 
-local questionVariantTitle = {
-  text: 'Does anyone else live at {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
+local addQuestionTitle(listIsEmpty) = (
+  if listIsEmpty then {
+    text: 'Who lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  } else {
+    text: 'Who else lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  }
+);
 
-local summaryTitlePersonName = {
-  text: '{person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local addPersonQuestionTitle = {
-  text: 'Who do you need to add to {household_address}?',
-  placeholders: [
-    placeholders.address,
+local addQuestion(listIsEmpty) = {
+  id: 'add-question',
+  type: 'General',
+  title: addQuestionTitle(listIsEmpty),
+  answers: [
+    {
+      id: 'first-name',
+      label: 'First name',
+      mandatory: true,
+      type: 'TextField',
+    },
+    {
+      id: 'middle-names',
+      label: 'Middle names',
+      mandatory: false,
+      type: 'TextField',
+    },
+    {
+      id: 'last-name',
+      label: 'Last name',
+      mandatory: true,
+      type: 'TextField',
+    },
   ],
 };
 
 local primaryEditPersonQuestionTitle = {
-  text: 'Change details for {person_name} (You)',
+  text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
     placeholders.personName,
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
-  text: 'Change details for {person_name}',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
-local removePersonQuestionTitle = {
-  text: 'Are you sure you want to remove {person_name}?',
+  text: 'Change details for <em>{person_name}</em>',
   placeholders: [
     placeholders.personName,
   ],
@@ -131,7 +136,12 @@ local editQuestion(questionTitle) = {
       question: {
         id: 'anyone-usually-live-at-question',
         type: 'General',
-        title: questionVariantTitle,
+        title: {
+          text: 'Does anyone else live at {household_address}?',
+          placeholders: [
+            placeholders.address,
+          ],
+        },
         answers: [
           {
             id: 'anyone-else-answer',
@@ -161,32 +171,16 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
-    question: {
-      id: 'add-question',
-      type: 'General',
-      title: addPersonQuestionTitle,
-      answers: [
-        {
-          id: 'first-name',
-          label: 'First name',
-          mandatory: true,
-          type: 'TextField',
-        },
-        {
-          id: 'middle-names',
-          label: 'Middle names',
-          mandatory: false,
-          type: 'TextField',
-        },
-        {
-          id: 'last-name',
-          label: 'Last name',
-          mandatory: true,
-          type: 'TextField',
-        },
-      ],
-    },
+    question_variants: [
+      {
+        question: addQuestion(listIsEmpty=false),
+        when: [rules.listIsNotEmpty('household')],
+      },
+      {
+        question: addQuestion(listIsEmpty=true),
+        when: [rules.listIsEmpty('household')],
+      },
+    ],
   },
   edit_block: {
     id: 'edit-person',
@@ -213,7 +207,12 @@ local editQuestion(questionTitle) = {
           title: 'All of the data entered about this person will be deleted',
         }],
       },
-      title: removePersonQuestionTitle,
+      title: {
+        text: 'Are you sure you want to remove <em>{person_name}</em>?',
+        placeholders: [
+          placeholders.personName,
+        ],
+      },
       answers: [
         {
           id: 'remove-confirmation',
@@ -235,6 +234,11 @@ local editQuestion(questionTitle) = {
   },
   summary: {
     title: 'Household members',
-    item_title: summaryTitlePersonName,
+    item_title: {
+      text: '{person_name}',
+      placeholders: [
+        placeholders.personName,
+      ],
+    },
   },
 }
