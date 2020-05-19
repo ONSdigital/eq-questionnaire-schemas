@@ -23,9 +23,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       {
         title: 'You will need to know',
         list: [
-          'Date of birth',
-          'Sex',
-          'Usual address',
+          'date of birth',
+          'sex',
+          'usual address',
         ],
       },
     ],

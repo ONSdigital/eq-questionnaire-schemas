@@ -1,9 +1,10 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, description) = {
   id: 'main-job-type-question',
   title: title,
+  description: description,
   type: 'General',
   answers: [
     {
@@ -44,24 +45,29 @@ local pastProxyTitle = {
   ],
 };
 
+local nonProxyDescription = 'Your main job is the job in which you usually work the most hours';
+local proxyDescription = 'Their main job is the job in which they usually work the most hours';
+local pastNonProxyDescription = 'This is the most recent job you had. If you had more than one job at the same time, answer for the job in which you usually worked the most hours.';
+local pastProxyDescription = 'This is the most recent job they had. If they had more than one job at the same time, answer for the job in which they usually worked the most hours.';
+
 {
   type: 'Question',
   id: 'main-job-type',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyDescription),
       when: [rules.isNotProxy, rules.mainJob],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyDescription),
       when: [rules.isProxy, rules.mainJob],
     },
     {
-      question: question(pastNonProxyTitle),
+      question: question(pastNonProxyTitle, pastNonProxyDescription),
       when: [rules.isNotProxy, rules.lastMainJob],
     },
     {
-      question: question(pastProxyTitle),
+      question: question(pastProxyTitle, pastProxyDescription),
       when: [rules.isProxy, rules.lastMainJob],
     },
   ],

@@ -9,7 +9,7 @@ local question(title, label, definitionContent) = {
   mandatory: false,
   definitions: [
     {
-      title: 'What official documents can be included?',
+      title: 'What passports and travel documents to include',
       contents: [
         {
           description: definitionContent,
@@ -57,10 +57,10 @@ local question(title, label, definitionContent) = {
   ],
 };
 
-local nonProxyDefinitionContent = 'You may have other travel documents that show you are a citizen of a particular country. Please complete this question as if your travel documents are passports.';
+local nonProxyDefinitionContent = 'Include current passports and any other travel documents, including those that are expired, if you are entitled to renew them.';
 local nonProxyTitle = 'What passports do you hold?';
 local nonProxyLabel = 'Please specify the passports you hold';
-local proxyDefinitionContent = 'They may have other travel documents that show they are a citizen of a particular country. Please complete this question as if their travel documents are passports.';
+local proxyDefinitionContent = 'Include current passports and any other travel documents, including those that are expired, if they are entitled to renew them.';
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
   placeholders: [
