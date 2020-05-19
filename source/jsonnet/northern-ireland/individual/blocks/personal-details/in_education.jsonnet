@@ -53,6 +53,14 @@ local proxyOver16Title = {
       when: [rules.isProxy, rules.over16],
     },
     {
+      question: question(nonProxyOver16Title),
+      when: [rules.isNotProxy, rules.lastBirthdayAgeOver(16)],
+    },
+    {
+      question: question(proxyOver16Title),
+      when: [rules.isProxy, rules.lastBirthdayAgeOver(16)],
+    },
+    {
       question: question(nonProxyUnder16Title),
       when: [rules.isNotProxy],
     },

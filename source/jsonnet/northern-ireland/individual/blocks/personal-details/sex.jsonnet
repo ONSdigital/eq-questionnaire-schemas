@@ -54,8 +54,20 @@ local proxyTitle = {
     },
     {
       goto: {
+        block: 'marriage-type',
+        when: [rules.lastBirthdayAgeOver(16)],
+      },
+    },
+    {
+      goto: {
         group: 'identity-and-health-group',
         when: [rules.nisraUnder4],
+      },
+    },
+    {
+      goto: {
+        group: 'identity-and-health-group',
+        when: [rules.lastBirthdayAgeLessThan(4)],
       },
     },
     {
