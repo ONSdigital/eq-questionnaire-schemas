@@ -53,6 +53,12 @@ local proxyTitle = {
     },
     {
       goto: {
+        block: 'passports',
+        when: [rules.lastBirthdayAgeLessThan(1)],
+      },
+    },
+    {
+      goto: {
         block: 'past-usual-household-address',
       },
     },
