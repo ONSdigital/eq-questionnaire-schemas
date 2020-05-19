@@ -72,7 +72,7 @@ local proxyLabel = 'Please specify the passports held';
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDefinitionContent , 'You can enter their passports on the next question'),
+      question: question(proxyTitle, proxyDefinitionContent, 'You can enter their passports on the next question'),
       when: [rules.isProxy],
     },
   ],
