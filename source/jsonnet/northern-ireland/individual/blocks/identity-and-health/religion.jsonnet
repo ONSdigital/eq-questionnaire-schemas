@@ -103,6 +103,12 @@ local question(title, otherReligionDescription) = {
     },
     {
       goto: {
+        block: 'health',
+        when: [rules.lastBirthdayAgeLessThan(3)],
+      },
+    },
+    {
+      goto: {
         block: 'language',
       },
     },

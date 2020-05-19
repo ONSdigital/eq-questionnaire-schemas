@@ -90,6 +90,19 @@ local question(title, elsewhereDescription) = {
     },
     {
       goto: {
+        block: 'passports',
+        when: [
+          {
+            id: 'country-of-birth-answer',
+            condition: 'equals',
+            value: 'Northern Ireland',
+          },
+          rules.lastBirthdayAgeLessThan(1),
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'past-usual-household-address',
         when: [
           {
