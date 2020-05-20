@@ -30,12 +30,12 @@ local question(title) = {
   id: 'religion-other',
   question_variants: [
     {
-      question: question('You selected “Any other religion”. What is your religion?'),
+      question: question('You selected "Other". What religion, religious denomination or body do you belong to?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Any other religion”. What is <em>{person_name_possessive}</em> religion?',
+        text: 'You selected "Other". What religion, religious denomination or body does {person_name_possessive} belong to?',
         placeholders: [
           placeholders.personNamePossessive,
         ],
