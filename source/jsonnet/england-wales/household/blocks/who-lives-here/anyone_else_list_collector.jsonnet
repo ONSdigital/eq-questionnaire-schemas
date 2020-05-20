@@ -8,6 +8,46 @@ local questionTitle = {
   ],
 };
 
+local addQuestionTitle(listIsEmpty) = (
+  if listIsEmpty then {
+    text: 'Who lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  } else {
+    text: 'Who else lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  }
+);
+
+local addQuestion(listIsEmpty) = {
+  id: 'add-question',
+  type: 'General',
+  title: addQuestionTitle(listIsEmpty),
+  answers: [
+    {
+      id: 'first-name',
+      label: 'First name',
+      mandatory: true,
+      type: 'TextField',
+    },
+    {
+      id: 'middle-names',
+      label: 'Middle names',
+      mandatory: false,
+      type: 'TextField',
+    },
+    {
+      id: 'last-name',
+      label: 'Last name',
+      mandatory: true,
+      type: 'TextField',
+    },
+  ],
+};
+
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
@@ -131,37 +171,16 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
-    cancel_text: 'Don’t need to add anyone?',
-    question: {
-      id: 'add-question',
-      type: 'General',
-      title: {
-        text: 'Who do you need to add to {household_address}?',
-        placeholders: [
-          placeholders.address,
-        ],
+    question_variants: [
+      {
+        question: addQuestion(listIsEmpty=false),
+        when: [rules.listIsNotEmpty('household')],
       },
-      answers: [
-        {
-          id: 'first-name',
-          label: 'First name',
-          mandatory: true,
-          type: 'TextField',
-        },
-        {
-          id: 'middle-names',
-          label: 'Middle names',
-          mandatory: false,
-          type: 'TextField',
-        },
-        {
-          id: 'last-name',
-          label: 'Last name',
-          mandatory: true,
-          type: 'TextField',
-        },
-      ],
-    },
+      {
+        question: addQuestion(listIsEmpty=true),
+        when: [rules.listIsEmpty('household')],
+      },
+    ],
   },
   edit_block: {
     id: 'edit-person',
