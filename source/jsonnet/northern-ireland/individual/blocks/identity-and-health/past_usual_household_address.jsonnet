@@ -31,12 +31,6 @@ local question(title, description) = {
         {
           label: 'An address outside the UK',
           value: 'An address outside the UK',
-          detail_answer: {
-            id: 'past-usual-address-household-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please enter the country',
-          },
         },
       ],
       type: 'Radio',
@@ -69,6 +63,18 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'past-usual-address-outside-uk',
+        when: [
+          {
+            id: 'past-usual-address-household-answer',
+            condition: 'equals',
+            value: 'An address outside the UK',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'last-year-address',

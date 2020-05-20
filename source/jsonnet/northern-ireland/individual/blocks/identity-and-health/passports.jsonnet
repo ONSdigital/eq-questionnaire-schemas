@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label, definitionContent) = {
+local question(title, definitionContent, otherDescription) = {
   id: 'passports-question',
   title: title,
   description: '',
@@ -34,12 +34,7 @@ local question(title, label, definitionContent) = {
         {
           label: 'Other',
           value: 'Other',
-          detail_answer: {
-            id: 'passport-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: label,
-          },
+          description: otherDescription,
         },
       ],
     },
@@ -59,7 +54,6 @@ local question(title, label, definitionContent) = {
 
 local nonProxyDefinitionContent = 'Include current passports and any other travel documents, including those that are expired, if you are entitled to renew them.';
 local nonProxyTitle = 'What passports do you hold?';
-local nonProxyLabel = 'Please specify the passports you hold';
 local proxyDefinitionContent = 'Include current passports and any other travel documents, including those that are expired, if they are entitled to renew them.';
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
@@ -74,12 +68,48 @@ local proxyLabel = 'Please specify the passports held';
   id: 'passports',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel, nonProxyDefinitionContent),
+      question: question(nonProxyTitle, nonProxyDefinitionContent, 'You can enter your passports on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel, proxyDefinitionContent),
+      question: question(proxyTitle, proxyDefinitionContent, 'You can enter their passports on the next question'),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'passports-additional-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains any',
+            values: ['United Kingdom', 'Ireland'],
+          },
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'passports-other',
+        when: [
+          {
+            id: 'passports-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'national-identity',
+      },
     },
   ],
 }

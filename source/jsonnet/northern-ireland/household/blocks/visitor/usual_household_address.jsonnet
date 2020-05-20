@@ -35,12 +35,7 @@ local rules = import 'rules.libsonnet';
           {
             label: 'An address outside the UK',
             value: 'An address outside the UK',
-            detail_answer: {
-              id: 'usual-address-household-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Please enter the country',
-            },
+            description: 'You can enter their country on the next question',
           },
         ],
         type: 'Radio',
@@ -48,6 +43,18 @@ local rules = import 'rules.libsonnet';
     ],
   },
   routing_rules: [
+    {
+      goto: {
+        block: 'usual-household-address-other',
+        when: [
+          {
+            id: 'usual-address-household-answer',
+            condition: 'equals',
+            value: 'An address outside the UK',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'usual-address-details',

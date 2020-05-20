@@ -2,17 +2,17 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'language-other-question',
+  id: 'national-identity-additional-other-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'language-other-answer',
-      label: 'Main language',
+      id: 'national-identity-additional-other-answer',
+      label: 'National identity',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/languages.json',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/national-identities.json',
       type: 'TextField',
     },
   ],
@@ -20,17 +20,17 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'language-other',
+  id: 'national-identity-additional-other',
   question_variants: [
     {
-      question: question('You selected “Other, including British Sign Language”. What is your main language?'),
+      question: question('You selected “Other”. How would you describe your other national identity?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
+        text: 'You selected “Other”. How would <em>{person_name}</em> describe their other national identity?',
         placeholders: [
-          placeholders.personNamePossessive,
+          placeholders.personName,
         ],
       }),
       when: [rules.isProxy],
@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'english',
+        block: 'ethnic-group',
       },
     },
   ],
