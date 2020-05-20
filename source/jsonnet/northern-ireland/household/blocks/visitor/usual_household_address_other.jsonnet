@@ -14,7 +14,6 @@ local rules = import 'rules.libsonnet';
       ],
     },
     type: 'General',
-
     answers: [
       {
         id: 'usual-household-address-other-answer',
