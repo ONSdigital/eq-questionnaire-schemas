@@ -72,6 +72,7 @@ local language_other = import 'individual/blocks/identity-and-health/language_ot
 local last_year_address = import 'individual/blocks/identity-and-health/last_year_address.jsonnet';
 local length_of_stay = import 'individual/blocks/identity-and-health/length_of_stay.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
+local national_identity_additional_other = import 'individual/blocks/identity-and-health/national_identity_additional_other.jsonnet';
 local national_identity_other = import 'individual/blocks/identity-and-health/national_identity_other.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
 local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
@@ -319,6 +320,7 @@ function(region_code, census_month_year_date) {
             last_year_address,
             national_identity(region_code),
             national_identity_other,
+            national_identity_additional_other,
             ethnic_group(region_code),
             ethnic_group_white(region_code),
             ethnic_group_white_other,
