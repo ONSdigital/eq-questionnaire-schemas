@@ -9,10 +9,7 @@ local proxyTitle = {
   ],
 };
 
-local nonProxyDetailAnswerLabel = 'Please describe your national identity';
-local proxyDetailAnswerLabel = 'Please describe their national identity';
-
-local question(title, detailAnswerLabel) = {
+local question(title, otherDescription) = {
   id: 'national-identity-question',
   title: title,
   type: 'General',
@@ -49,12 +46,7 @@ local question(title, detailAnswerLabel) = {
         {
           label: 'Other',
           value: 'Other',
-          detail_answer: {
-            id: 'national-identity-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: detailAnswerLabel,
-          },
+          description: otherDescription,
         },
       ],
     },
@@ -66,12 +58,48 @@ local question(title, detailAnswerLabel) = {
   id: 'national-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDetailAnswerLabel),
+      question: question(nonProxyTitle, 'You can enter your national identity on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDetailAnswerLabel),
+      question: question(proxyTitle, 'You can enter their national identity on the next question'),
       when: [rules.isProxy],
+    },
+  ],
+  routing_rules: [
+    {
+      goto: {
+        block: 'national-identity-additional-other',
+        when: [
+          {
+            id: 'national-identity-answer',
+            condition: 'contains any',
+            values: ['British', 'Irish', 'Northern Irish', 'English', 'Scottish', 'Welsh'],
+          },
+          {
+            id: 'national-identity-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'national-identity-other',
+        when: [
+          {
+            condition: 'contains',
+            id: 'national-identity-answer',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'ethnic-group',
+      },
     },
   ],
 }

@@ -73,8 +73,8 @@ local pastProxyTitleWork = {
   ],
 };
 
-local nonProxyDescriptionWork = 'Select one option only, for the longest part, by distance, of your usual journey to place of work.';
-local proxyDescriptionWork = 'Select one option only, for the longest part, by distance, of their usual journey to place of work.';
+local nonProxyDescriptionWork = 'Answer for the longest part, by distance, of your usual journey to work';
+local proxyDescriptionWork = 'Answer for the longest part, by distance, of their usual journey to work';
 
 {
   type: 'Question',

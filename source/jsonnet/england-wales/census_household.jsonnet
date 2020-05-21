@@ -14,6 +14,7 @@ local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonn
 
 // Who lives here
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
+local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
 local anyone_else_list_collector = import 'household/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
 local anyone_else_temporarily_away_list_collector = import 'household/blocks/who-lives-here/anyone_else_temporarily_away_list_collector.jsonnet';
 local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
@@ -71,6 +72,7 @@ local language_other = import 'individual/blocks/identity-and-health/language_ot
 local last_year_address = import 'individual/blocks/identity-and-health/last_year_address.jsonnet';
 local length_of_stay = import 'individual/blocks/identity-and-health/length_of_stay.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
+local national_identity_additional_other = import 'individual/blocks/identity-and-health/national_identity_additional_other.jsonnet';
 local national_identity_other = import 'individual/blocks/identity-and-health/national_identity_other.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
 local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
@@ -163,6 +165,7 @@ function(region_code, census_month_year_date) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
+        show_on_completion: true,
         items: [
           {
             type: 'List',
@@ -192,6 +195,7 @@ function(region_code, census_month_year_date) {
           blocks: [
             who_lives_here_interstitial,
             primary_person_list_collector,
+            anyone_else,
             anyone_else_list_collector,
             anyone_else_temporarily_away_list_collector,
             any_visitors,
@@ -229,7 +233,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      summary: {},
+      summary: { show_on_completion: true },
       groups: [
         {
           id: 'accommodation-group',
@@ -252,7 +256,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: {},
+      summary: { show_on_completion: true },
       repeat: {
         for_list: 'household',
         title: {
@@ -316,6 +320,7 @@ function(region_code, census_month_year_date) {
             last_year_address,
             national_identity(region_code),
             national_identity_other,
+            national_identity_additional_other,
             ethnic_group(region_code),
             ethnic_group_white(region_code),
             ethnic_group_white_other,
@@ -390,7 +395,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'visitor-section',
       title: 'Visitors',
-      summary: {},
+      summary: { show_on_completion: true },
       repeat: {
         for_list: 'visitors',
         title: {

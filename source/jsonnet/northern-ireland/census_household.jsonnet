@@ -14,6 +14,7 @@ local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonn
 
 // Who lives here
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
+local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
 local anyone_else_list_collector = import 'household/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
 local anyone_else_temporarily_away_list_collector = import 'household/blocks/who-lives-here/anyone_else_temporarily_away_list_collector.jsonnet';
 local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
@@ -41,20 +42,31 @@ local term_time_location = import 'individual/blocks/personal-details/term_time_
 local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
 local carer = import 'individual/blocks/identity-and-health/carer.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
+local country_of_birth_elsewhere = import 'individual/blocks/identity-and-health/country_of_birth_elsewhere.jsonnet';
 local disability = import 'individual/blocks/identity-and-health/disability.jsonnet';
 local disability_limitation = import 'individual/blocks/identity-and-health/disability_limitation.jsonnet';
 local disability_other = import 'individual/blocks/identity-and-health/disability_other.jsonnet';
 local ethnic_group = import 'individual/blocks/identity-and-health/ethnic_group.jsonnet';
+local ethnic_group_other = import 'individual/blocks/identity-and-health/ethnic_group_other.jsonnet';
 local frequency_irish = import 'individual/blocks/identity-and-health/frequency_irish.jsonnet';
 local frequency_ulster_scots = import 'individual/blocks/identity-and-health/frequency_ulster_scots.jsonnet';
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
 local language = import 'individual/blocks/identity-and-health/language.jsonnet';
+local language_other = import 'individual/blocks/identity-and-health/language_other.jsonnet';
 local last_year_address = import 'individual/blocks/identity-and-health/last_year_address.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
+local national_identity_additional_other = import 'individual/blocks/identity-and-health/national_identity_additional_other.jsonnet';
+local national_identity_other = import 'individual/blocks/identity-and-health/national_identity_other.jsonnet';
 local no_religion = import 'individual/blocks/identity-and-health/no_religion.jsonnet';
+local no_religion_other = import 'individual/blocks/identity-and-health/no_religion_other.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
+local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
+local passports_other = import 'individual/blocks/identity-and-health/passports_other.jsonnet';
+local past_usual_address_outside_uk = import 'individual/blocks/identity-and-health/past_usual_address_outside_uk.jsonnet';
 local past_usual_household_address = import 'individual/blocks/identity-and-health/past_usual_household_address.jsonnet';
 local religion = import 'individual/blocks/identity-and-health/religion.jsonnet';
+local religion_other = import 'individual/blocks/identity-and-health/religion_other.jsonnet';
+
 local sexual_identity = import 'individual/blocks/identity-and-health/sexual_identity.jsonnet';
 local speak_english = import 'individual/blocks/identity-and-health/speak_english.jsonnet';
 local understand_irish = import 'individual/blocks/identity-and-health/understand_irish.jsonnet';
@@ -102,6 +114,7 @@ local visitor_dob = import 'household/blocks/visitor/date_of_birth.jsonnet';
 local visitor_sex = import 'household/blocks/visitor/sex.jsonnet';
 local usual_household_address = import 'household/blocks/visitor/usual_household_address.jsonnet';
 local usual_household_address_details = import 'household/blocks/visitor/usual_household_address_details.jsonnet';
+local usual_household_address_other = import 'household/blocks/visitor/usual_household_address_other.jsonnet';
 local visitor_interstitial = import 'household/blocks/visitor/visitor_interstitial.jsonnet';
 
 function(region_code) {
@@ -140,6 +153,7 @@ function(region_code) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
+        show_on_completion: true,
         items: [
           {
             type: 'List',
@@ -169,6 +183,7 @@ function(region_code) {
           blocks: [
             who_lives_here_interstitial,
             primary_person_list_collector,
+            anyone_else,
             anyone_else_list_collector,
             anyone_else_temporarily_away_list_collector,
             any_visitors,
@@ -206,7 +221,7 @@ function(region_code) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      summary: {},
+      summary: { show_on_completion: true },
       groups: [
         {
           id: 'accommodation-group',
@@ -229,7 +244,7 @@ function(region_code) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: {},
+      summary: { show_on_completion: true },
       repeat: {
         for_list: 'household',
         title: {
@@ -276,15 +291,25 @@ function(region_code) {
           title: 'Identity and Health',
           blocks: [
             country_of_birth,
+            country_of_birth_elsewhere,
             arrive_in_country,
             past_usual_household_address,
+            past_usual_address_outside_uk,
             last_year_address,
             passports,
+            passports_other,
+            passports_additional_other,
             national_identity,
+            national_identity_other,
+            national_identity_additional_other,
             ethnic_group,
+            ethnic_group_other,
             religion,
+            religion_other,
             no_religion,
+            no_religion_other,
             language,
+            language_other,
             speak_english,
             understand_irish,
             frequency_irish,
@@ -352,7 +377,7 @@ function(region_code) {
     {
       id: 'visitor-section',
       title: 'Visitors',
-      summary: {},
+      summary: { show_on_completion: true },
       repeat: {
         for_list: 'visitors',
         title: {
@@ -386,6 +411,7 @@ function(region_code) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
+            usual_household_address_other,
           ],
         },
       ],

@@ -2,17 +2,17 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'language-other-question',
+  id: 'passports-other-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'language-other-answer',
-      label: 'Main language',
+      id: 'passports-other-answer',
+      label: 'Passports',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/languages.json',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/passport-countries.json',
       type: 'TextField',
     },
   ],
@@ -20,17 +20,17 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'language-other',
+  id: 'passports-other',
   question_variants: [
     {
-      question: question('You selected “Other, including British Sign Language”. What is your main language?'),
+      question: question('You selected “Other”. What passports do you hold?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
+        text: 'You selected “Other”. What passports does <em>{person_name}</em> hold?',
         placeholders: [
-          placeholders.personNamePossessive,
+          placeholders.personName,
         ],
       }),
       when: [rules.isProxy],
@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'english',
+        block: 'national-identity',
       },
     },
   ],

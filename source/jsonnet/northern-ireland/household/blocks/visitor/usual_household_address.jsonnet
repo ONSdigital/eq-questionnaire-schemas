@@ -16,6 +16,15 @@ local rules = import 'rules.libsonnet';
     type: 'General',
     answers: [
       {
+        guidance: {
+          show_guidance: 'Why we ask for visitor details',
+          hide_guidance: 'Why we ask for visitor details',
+          contents: [
+            {
+              description: 'Your answer helps to ensure that everyone is counted in the census. Add visitor details, even if you think they have been included on a census questionnaire at another address.',
+            },
+          ],
+        },
         id: 'usual-address-household-answer',
         mandatory: false,
         options: [
@@ -26,12 +35,7 @@ local rules = import 'rules.libsonnet';
           {
             label: 'An address outside the UK',
             value: 'An address outside the UK',
-            detail_answer: {
-              id: 'usual-address-household-answer-other',
-              type: 'TextField',
-              mandatory: false,
-              label: 'Please enter the country',
-            },
+            description: 'You can enter their country on the next question',
           },
         ],
         type: 'Radio',
@@ -39,6 +43,18 @@ local rules = import 'rules.libsonnet';
     ],
   },
   routing_rules: [
+    {
+      goto: {
+        block: 'usual-household-address-other',
+        when: [
+          {
+            id: 'usual-address-household-answer',
+            condition: 'equals',
+            value: 'An address outside the UK',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'usual-address-details',

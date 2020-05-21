@@ -23,12 +23,12 @@ local question(title) = {
   id: 'language-other',
   question_variants: [
     {
-      question: question('You selected “Other, including British Sign Language”. What is your main language?'),
+      question: question('You selected “Other, including British or Irish Sign Language”. What is your main language?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
+        text: 'You selected “Other, including British or Irish Sign Language”. What is <em>{person_name_possessive}</em> main language?',
         placeholders: [
           placeholders.personNamePossessive,
         ],

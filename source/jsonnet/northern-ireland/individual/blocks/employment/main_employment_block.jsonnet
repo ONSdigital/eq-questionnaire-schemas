@@ -35,7 +35,10 @@ local rules = import 'rules.libsonnet';
         title: 'Last main job',
         contents: [
           {
-            description: 'The next set of questions is about your last main job. Your main job is the job in which you usually worked the most hours.',
+            description: 'The next set of questions is about your last main job. This is the most recent job you had.',
+          },
+          {
+            description: 'If you had more than one job at the same time, answer for the job in which you usually worked the most hours.',
           },
         ],
       },
@@ -47,9 +50,12 @@ local rules = import 'rules.libsonnet';
         contents: [
           {
             description: {
-              text: 'The next set of questions is about <em>{person_name_possessive}</em> last main job. Their main job is the job in which they usually worked the most hours.',
+              text: 'The next set of questions is about <em>{person_name_possessive}</em> last main job. This is the most recent job they had.',
               placeholders: [placeholders.personNamePossessive],
             },
+          },
+          {
+            description: 'If they had more than one job at the same time, answer for the job in which they usually worked the most hours.',
           },
         ],
       },

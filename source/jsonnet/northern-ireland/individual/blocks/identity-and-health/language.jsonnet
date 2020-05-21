@@ -17,7 +17,7 @@ local question(title, definitionDescription) = {
   title: title,
   type: 'General',
   definitions: [{
-    title: 'What do we mean by “main language”?',
+    title: 'What we mean by “main language”',
     contents: [
       {
         description: definitionDescription,
@@ -35,15 +35,9 @@ local question(title, definitionDescription) = {
           value: 'English',
         },
         {
-          label: 'Other',
-          value: 'Other',
-          description: 'Including British Sign Language or Irish Sign Language',
-          detail_answer: {
-            id: 'language-answer-other',
-            type: 'TextField',
-            mandatory: false,
-            label: 'Please specify main language',
-          },
+          label: 'Other, including British or Irish Sign Language',
+          value: 'Other, including British or Irish Sign Language',
+          description: 'You can enter your main language on the next question',
         },
       ],
     },
@@ -64,6 +58,18 @@ local question(title, definitionDescription) = {
     },
   ],
   routing_rules: [
+    {
+      goto: {
+        block: 'language-other',
+        when: [
+          {
+            id: 'language-answer',
+            condition: 'equals',
+            value: 'Other, including British or Irish Sign Language',
+          },
+        ],
+      },
+    },
     {
       goto: {
         block: 'understand-irish',

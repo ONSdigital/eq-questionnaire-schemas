@@ -21,14 +21,11 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         },
       },
       {
-        title: 'You will need to know',
+        title: 'You will need to know personal details such as',
         list: [
-          'Personal details such as date of birth, country of birth, religion',
-          'Main language',
-          'Health',
-          'Unpaid care provided',
-          'Qualifications',
-          'Employment details',
+          'date of birth or age',
+          'student status',
+          'employment details',
         ],
       },
     ],

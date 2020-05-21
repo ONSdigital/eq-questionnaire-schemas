@@ -2,17 +2,17 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'language-other-question',
+  id: 'country-of-birth-elsewhere-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'language-other-answer',
-      label: 'Main language',
+      id: 'country-of-birth-elsewhere-answer',
+      label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/languages.json',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/countries-of-birth.json',
       type: 'TextField',
     },
   ],
@@ -20,15 +20,15 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'language-other',
+  id: 'country-of-birth-elsewhere',
   question_variants: [
     {
-      question: question('You selected “Other, including British Sign Language”. What is your main language?'),
+      question: question('You selected “Elsewhere”. What is your country of birth?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Other, including British Sign Language”. What is <em>{person_name_possessive}</em> main language?',
+        text: 'You selected “Elsewhere”. What is <em>{person_name_possessive}</em> country of birth?',
         placeholders: [
           placeholders.personNamePossessive,
         ],
@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'english',
+        block: 'arrive-in-country',
       },
     },
   ],

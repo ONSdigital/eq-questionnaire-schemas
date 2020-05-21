@@ -101,6 +101,23 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
+        block: 'national-identity-additional-other',
+        when: [
+          {
+            id: 'national-identity-answer',
+            condition: 'contains any',
+            values: ['British', 'English', 'Welsh', 'Scottish', 'Northern Irish'],
+          },
+          {
+            id: 'national-identity-answer',
+            condition: 'contains',
+            value: 'Other',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'national-identity-other',
         when: [
           {
