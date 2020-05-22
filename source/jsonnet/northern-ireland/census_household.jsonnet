@@ -153,7 +153,7 @@ function(region_code) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
-        show_on_completion: false,
+        show_on_completion: true,
         items: [
           {
             type: 'List',
@@ -221,7 +221,7 @@ function(region_code) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       groups: [
         {
           id: 'accommodation-group',
@@ -244,7 +244,7 @@ function(region_code) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       repeat: {
         for_list: 'household',
         title: {
@@ -377,7 +377,7 @@ function(region_code) {
     {
       id: 'visitor-section',
       title: 'Visitors',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       repeat: {
         for_list: 'visitors',
         title: {

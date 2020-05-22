@@ -165,7 +165,7 @@ function(region_code, census_month_year_date) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
-        show_on_completion: false,
+        show_on_completion: true,
         items: [
           {
             type: 'List',
@@ -233,7 +233,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       groups: [
         {
           id: 'accommodation-group',
@@ -256,7 +256,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       repeat: {
         for_list: 'household',
         title: {
@@ -395,7 +395,7 @@ function(region_code, census_month_year_date) {
     {
       id: 'visitor-section',
       title: 'Visitors',
-      summary: { show_on_completion: true },
+      summary: { show_on_completion: false },
       repeat: {
         for_list: 'visitors',
         title: {
