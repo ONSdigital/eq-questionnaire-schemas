@@ -37,7 +37,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'identity-and-health-group',
       },
     },
   ],
