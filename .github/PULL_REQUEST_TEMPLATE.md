@@ -1,15 +1,35 @@
 ### What is the context of this PR?
+
 Describe what you have changed and why, link to other PRs or Issues as appropriate.
 
 ### How to review
+
 Describe the steps required to test the changes (include screenshots if appropriate).
 
 ### Checklist
 
-* [ ] Jsonnet files conform to the latest [style guide](/ONSdigital/eq-questionnaire-schemas/blob/master/style_guide.md)
+- [ ] Jsonnet files conform to the latest [style guide](/ONSdigital/eq-questionnaire-schemas/blob/master/style_guide.md)
 
 ### Schemas Artifacts
+
 Schemas artifacts are available at:
+
 ```bash
 https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch_name>/schemas/en/<schema_name>.json
 ```
+
+### Quick Launch
+
+#### England & Wales
+
+[household](https://test-launcher.gcp.dev.eq.ons.digital/quick-launch?language_code=en&survey=CENSUS&form_type=H&region_code=GB-ENG&url=https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch-name>/schemas/en/census_household_gb_eng.json)
+
+[individual](https://test-launcher.gcp.dev.eq.ons.digital/quick-launch?language_code=en&survey=CENSUS&form_type=I&region_code=GB-ENG&url=https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch-name>/schemas/en/census_individual_gb_eng.json)
+
+[ccs](https://test-launcher.gcp.dev.eq.ons.digital/quick-launch?language_code=en&survey=CENSUS&form_type=I&region_code=GB-ENG&url=https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch-name>/schemas/en/ccs_household_gb_eng.json)
+
+#### Northern Ireland
+
+[household](https://test-launcher.gcp.dev.eq.ons.digital/quick-launch?language_code=en&survey=CENSUS&form_type=I&region_code=GB-NIR&url=https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch>/schemas/en/census_household_gb_nir.json)
+
+[individual](https://test-launcher.gcp.dev.eq.ons.digital/quick-launch?language_code=en&survey=CENSUS&form_type=I&region_code=GB-NIR&url=https://storage.googleapis.com/eq-questionnaire-schemas-artifacts/<branch>/schemas/en/ccs_household.json)
