@@ -153,7 +153,7 @@ function(region_code) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
-        show_on_completion: true,
+        show_on_completion: false,
         items: [
           {
             type: 'List',

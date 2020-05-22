@@ -165,7 +165,7 @@ function(region_code, census_month_year_date) {
       id: 'who-lives-here-section',
       title: 'People who live here',
       summary: {
-        show_on_completion: true,
+        show_on_completion: false,
         items: [
           {
             type: 'List',
