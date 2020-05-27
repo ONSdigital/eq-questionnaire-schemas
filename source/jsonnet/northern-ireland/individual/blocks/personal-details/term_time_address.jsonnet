@@ -58,7 +58,7 @@ local proxyTitle = 'Enter details of their term time address.';
   routing_rules: [
     {
       goto: {
-        section: 'End',
+        group: 'identity-and-health-group',
       },
     },
   ],
