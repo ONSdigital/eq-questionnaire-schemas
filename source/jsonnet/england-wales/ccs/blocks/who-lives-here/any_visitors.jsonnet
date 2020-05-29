@@ -8,13 +8,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     type: 'General',
     id: 'any-visitors-question',
     title: {
-      text: 'How many visitors were staying in your household at {household_address} on {census_date}?',
+      text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
       placeholders: [
         placeholders.address,
         placeholders.censusDate,
       ],
     },
-    instruction: 'Tell respondent to turn to <strong>Showcard 13</strong>',
+    instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
     guidance: {
       contents: [
         {

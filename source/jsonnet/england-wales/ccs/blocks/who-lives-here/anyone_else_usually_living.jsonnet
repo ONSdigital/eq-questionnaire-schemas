@@ -6,9 +6,8 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     id: 'anyone-else-usually-living-question',
     title: {
-      text: 'Was anyone in your current household usually living at {household_address} on Sunday {census_date}?',
+      text: 'Was anyone in your current household usually living here on Sunday {census_date}?',
       placeholders: [
-        placeholders.address,
         placeholders.censusDate,
       ],
     },

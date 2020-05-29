@@ -2,9 +2,8 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle = {
-  text: 'Did anyone usually live at {household_address} on Sunday {census_date}?',
+  text: 'Did anyone else usually live in your household on Sunday {census_date}?',
   placeholders: [
-    placeholders.address,
     placeholders.censusDate,
   ],
 };
@@ -74,7 +73,7 @@ local editQuestion(questionTitle) = {
             },
           ],
         },
-        instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         answers: [
           {
             id: 'anyone-else-answer',
@@ -100,9 +99,8 @@ local editQuestion(questionTitle) = {
         id: 'anyone-usually-live-at-question',
         type: 'General',
         title: {
-          text: 'Did anyone else usually live at {household_address} on Sunday {census_date}?',
+          text: 'Did anyone else usually live in your household on Sunday {census_date}?',
           placeholders: [
-            placeholders.address,
             placeholders.censusDate,
           ],
         },
@@ -113,7 +111,7 @@ local editQuestion(questionTitle) = {
             },
           ],
         },
-        instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         answers: [
           {
             id: 'anyone-else-answer',
@@ -141,12 +139,7 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'add-question',
       type: 'General',
-      title: {
-        text: 'Who do you need to add to {household_address}?',
-        placeholders: [
-          placeholders.address,
-        ],
-      },
+      title: 'Who do you need to add?',
       instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
       answers: [
         {
