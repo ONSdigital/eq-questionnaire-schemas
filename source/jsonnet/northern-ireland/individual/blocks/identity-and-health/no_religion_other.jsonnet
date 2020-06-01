@@ -57,7 +57,7 @@ local question(title) = {
         block: 'health',
         when: [rules.lastBirthdayAgeLessThan(3)],
       },
-    }
+    },
     {
       goto: {
         block: 'language',
