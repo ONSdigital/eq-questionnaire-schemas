@@ -21,7 +21,7 @@ local getListOrdinality(listName) = {
     },
   ],
 };
-local newOrdinal(listName) = {
+local getListOrdinalityWithoutDeterminer(listName) = {
   placeholder: 'ordinality',
   transforms: [
     {
@@ -122,6 +122,6 @@ local getListCardinality(listName) = {
     }],
   },
   getListOrdinality: getListOrdinality,
-  newOrdinal: newOrdinal,
+  getListOrdinalityWithoutDeterminer: getListOrdinalityWithoutDeterminer,
   getListCardinality: getListCardinality,
 }

@@ -81,7 +81,7 @@ local rules = import 'rules.libsonnet';
           title: {
             text: 'What is the name of the {ordinality} visitor who stayed overnight?',
             placeholders: [
-              placeholders.newOrdinal('visitors'),
+              placeholders.getListOrdinalityWithoutDeterminer('visitors'),
             ],
           },
           instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
