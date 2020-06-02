@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-01 09:14+0100\n"
+"POT-Creation-Date: 2020-06-02 10:50+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgid "Voluntary"
 msgstr ""
 
 #. Section title
-msgid "People who live here"
+msgid "This section is now complete"
 msgstr ""
 
 #. Section title
@@ -38,6 +38,7 @@ msgid "Individual Section"
 msgstr ""
 
 #. Section title
+#. Custom section summary item title
 msgid "Visitors"
 msgstr ""
 
@@ -53,11 +54,6 @@ msgstr ""
 
 #. Custom section summary item title
 msgid "Householder members"
-msgstr ""
-
-#. Custom section summary item title
-#. List collector summary heading
-msgid "Visitors staying overnight on {census_date}"
 msgstr ""
 
 #. Custom section summary list add link
@@ -88,6 +84,10 @@ msgstr ""
 msgid "Household members"
 msgstr ""
 
+#. List collector summary heading
+msgid "Visitors staying overnight on {census_date}"
+msgstr ""
+
 #. Content page main heading
 msgid "Household definition"
 msgstr ""
@@ -110,14 +110,21 @@ msgstr ""
 #. Content page description
 msgctxt "Household definition"
 msgid ""
-"A <em>household</em> is one person living alone or a group of people (not"
-" necessarily related) who share cooking facilities and share a\n"
-"        living room <em>OR</em> sitting room <em>OR</em> dining area."
+"A <em>household</em> is one person living alone, or a group of people "
+"(not necessarily related), who share cooking facilities, and share a\n"
+"        living room <em>or</em> sitting room, <em>or</em> dining area."
 msgstr ""
 
 #. Content page description
 msgctxt "Household definition"
-msgid "Here are some cards to help with answering the questions."
+msgid ""
+"Some of the questions that I will ask have showcards to help you to "
+"answer."
+msgstr ""
+
+#. Content page description
+msgctxt "Household definition"
+msgid "I will show you these on paper/on the phone screen."
 msgstr ""
 
 #. Content page description
@@ -174,8 +181,8 @@ msgstr ""
 
 #. Question text
 msgid ""
-"Was anyone in your current household usually living at "
-"{household_address} on Sunday {census_date}?"
+"Was anyone in your current household usually living here on Sunday "
+"{census_date}?"
 msgstr ""
 
 #. Question text
@@ -191,7 +198,7 @@ msgid "Change details for <em>{person_name}</em>"
 msgstr ""
 
 #. Question text
-msgid "Did anyone usually live at {household_address} on Sunday {census_date}?"
+msgid "Did anyone else usually live in your household on Sunday {census_date}?"
 msgstr ""
 
 #. Question text
@@ -211,21 +218,25 @@ msgid ""
 msgstr ""
 
 #. Question text
-msgid ""
-"How many visitors were staying in your household at {household_address} "
-"on {census_date}?"
+msgid "Who do you need to add?"
 msgstr ""
 
 #. Question text
 msgid ""
-"Were there any other visitors staying overnight on {census_date} at "
-"{household_address}?"
+"How many visitors were staying overnight at {household_address} on Sunday"
+" {census_date}?"
 msgstr ""
 
 #. Question text
-msgid ""
-"What is the name of the visitor staying overnight on {census_date} at "
-"{household_address}?"
+msgid "Were there any other visitors staying overnight on Sunday {census_date}?"
+msgstr ""
+
+#. Question text
+msgid "What is the name of the visitor who stayed overnight?"
+msgstr ""
+
+#. Question text
+msgid "What is the name of the {ordinality} visitor who stayed overnight?"
 msgstr ""
 
 #. Question text
@@ -508,7 +519,9 @@ msgstr ""
 
 #. Question instruction
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
-msgid "Tell respondent to turn to <strong>Showcard 1</strong>"
+msgid ""
+"Tell the respondent to turn to <strong>Showcard 1</strong> or show them "
+"the Electronic Showcard below"
 msgstr ""
 
 #. Question instruction
@@ -519,8 +532,10 @@ msgid ""
 msgstr ""
 
 #. Question instruction
-msgctxt "Did anyone usually live at {household_address} on Sunday {census_date}?"
-msgid "Tell respondent to turn to <strong>Showcard 2</strong>"
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
+msgid ""
+"Tell the respondent to turn to <strong>Showcard 2</strong> or show them "
+"the Electronic Showcard below"
 msgstr ""
 
 #. Question instruction
@@ -531,16 +546,30 @@ msgid "Tell respondent to turn to <strong>Showcard 2</strong>"
 msgstr ""
 
 #. Question instruction
-msgctxt ""
-"How many visitors were staying in your household at {household_address} "
-"on {census_date}?"
-msgid "Tell respondent to turn to <strong>Showcard 13</strong>"
+msgctxt "Who do you need to add?"
+msgid ""
+"Enter a full stop (.) if the respondent does not know a person’s “First "
+"name” or “Last name”"
 msgstr ""
 
 #. Question instruction
 msgctxt ""
-"What is the name of the visitor staying overnight on {census_date} at "
-"{household_address}?"
+"How many visitors were staying overnight at {household_address} on Sunday"
+" {census_date}?"
+msgid ""
+"Tell the respondent to turn to <strong>Showcard 13</strong> or show them "
+"the Electronic Showcard below"
+msgstr ""
+
+#. Question instruction
+msgctxt "What is the name of the visitor who stayed overnight?"
+msgid ""
+"Enter a full stop (.) if the respondent does not know a person’s “First "
+"name” or “Last name”"
+msgstr ""
+
+#. Question instruction
+msgctxt "What is the name of the {ordinality} visitor who stayed overnight?"
 msgid ""
 "Enter a full stop (.) if the respondent does not know a person’s “First "
 "name” or “Last name”"
@@ -663,7 +692,7 @@ msgid "All of the data entered about this person will be deleted"
 msgstr ""
 
 #. Question guidance description
-msgctxt "Did anyone usually live at {household_address} on Sunday {census_date}?"
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
 msgid ""
 "Remember to only include those people who share cooking facilities and "
 "share a living room or sitting room or dining area"
@@ -687,8 +716,8 @@ msgstr ""
 
 #. Question guidance description
 msgctxt ""
-"How many visitors were staying in your household at {household_address} "
-"on {census_date}?"
+"How many visitors were staying overnight at {household_address} on Sunday"
+" {census_date}?"
 msgid ""
 "A visitor is a person staying overnight in your household who usually "
 "lives at another address."
@@ -836,16 +865,37 @@ msgid "Last name"
 msgstr ""
 
 #. Answer
-msgctxt ""
-"What is the name of the visitor staying overnight on {census_date} at "
-"{household_address}?"
+msgctxt "Who do you need to add?"
 msgid "First name"
 msgstr ""
 
 #. Answer
-msgctxt ""
-"What is the name of the visitor staying overnight on {census_date} at "
-"{household_address}?"
+msgctxt "Who do you need to add?"
+msgid "Middle names"
+msgstr ""
+
+#. Answer
+msgctxt "Who do you need to add?"
+msgid "Last name"
+msgstr ""
+
+#. Answer
+msgctxt "What is the name of the visitor who stayed overnight?"
+msgid "First name"
+msgstr ""
+
+#. Answer
+msgctxt "What is the name of the visitor who stayed overnight?"
+msgid "Last name"
+msgstr ""
+
+#. Answer
+msgctxt "What is the name of the {ordinality} visitor who stayed overnight?"
+msgid "First name"
+msgstr ""
+
+#. Answer
+msgctxt "What is the name of the {ordinality} visitor who stayed overnight?"
 msgid "Last name"
 msgstr ""
 
@@ -966,25 +1016,25 @@ msgstr ""
 
 #. Answer option
 msgctxt ""
-"Was anyone in your current household usually living at "
-"{household_address} on Sunday {census_date}?"
+"Was anyone in your current household usually living here on Sunday "
+"{census_date}?"
 msgid "Yes"
 msgstr ""
 
 #. Answer option
 msgctxt ""
-"Was anyone in your current household usually living at "
-"{household_address} on Sunday {census_date}?"
+"Was anyone in your current household usually living here on Sunday "
+"{census_date}?"
 msgid "No"
 msgstr ""
 
 #. Answer option
-msgctxt "Did anyone usually live at {household_address} on Sunday {census_date}?"
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
 msgid "Yes"
 msgstr ""
 
 #. Answer option
-msgctxt "Did anyone usually live at {household_address} on Sunday {census_date}?"
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
 msgid "No"
 msgstr ""
 
@@ -1028,29 +1078,25 @@ msgstr ""
 
 #. Answer option
 msgctxt ""
-"How many visitors were staying in your household at {household_address} "
-"on {census_date}?"
+"How many visitors were staying overnight at {household_address} on Sunday"
+" {census_date}?"
 msgid "1 or more"
 msgstr ""
 
 #. Answer option
 msgctxt ""
-"How many visitors were staying in your household at {household_address} "
-"on {census_date}?"
+"How many visitors were staying overnight at {household_address} on Sunday"
+" {census_date}?"
 msgid "None"
 msgstr ""
 
 #. Answer option
-msgctxt ""
-"Were there any other visitors staying overnight on {census_date} at "
-"{household_address}?"
+msgctxt "Were there any other visitors staying overnight on Sunday {census_date}?"
 msgid "Yes"
 msgstr ""
 
 #. Answer option
-msgctxt ""
-"Were there any other visitors staying overnight on {census_date} at "
-"{household_address}?"
+msgctxt "Were there any other visitors staying overnight on Sunday {census_date}?"
 msgid "No"
 msgstr ""
 
