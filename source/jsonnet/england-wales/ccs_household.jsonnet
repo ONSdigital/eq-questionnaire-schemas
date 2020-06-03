@@ -100,7 +100,7 @@ function(region_code, census_month_year_date) {
   sections: [
     {
       id: 'who-lives-here-section',
-      title: 'People who live here',
+      title: 'This section is now complete',
       summary: {
         show_on_completion: true,
         items: [
@@ -114,12 +114,7 @@ function(region_code, census_month_year_date) {
           {
             type: 'List',
             for_list: 'visitors',
-            title: {
-              text: 'Visitors staying overnight on {census_date}',
-              placeholders: [
-                placeholders.censusDate,
-              ],
-            },
+            title: 'Visitors',
             add_link_text: 'Add a visitor',
             empty_list_text: 'There are no visitors',
           },
