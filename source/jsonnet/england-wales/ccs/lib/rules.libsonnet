@@ -17,6 +17,18 @@ local estimatedAge = {
   condition: 'not set',
 };
 
+local livingAtDifferentAddress = {
+  id: 'interviewer-note-answer',
+  condition: 'equals',
+  value: 'No, living at a different address',
+};
+
+local livingAtCurrentAddress = {
+  id: 'interviewer-note-answer',
+  condition: 'equals',
+  value: 'Yes, living at this address',
+};
+
 {
   isNotProxy: {
     id: 'proxy-answer',
@@ -31,4 +43,6 @@ local estimatedAge = {
   listIsEmpty: listIsEmpty,
   listIsNotEmpty: listIsNotEmpty,
   estimatedAge: estimatedAge,
+  livingAtDifferentAddress: livingAtDifferentAddress,
+  livingAtCurrentAddress: livingAtCurrentAddress,
 } + common_rules

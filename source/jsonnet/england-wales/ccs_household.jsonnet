@@ -17,6 +17,7 @@ local accommodation_introduction = import 'ccs/blocks/accommodation/accommodatio
 local accommodation_type = import 'ccs/blocks/accommodation/accommodation_type.jsonnet';
 local government_services = import 'ccs/blocks/accommodation/government_services.jsonnet';
 local internet = import 'ccs/blocks/accommodation/internet.jsonnet';
+local interviewer_note = import 'ccs/blocks/accommodation/interviewer_note.jsonnet';
 local other_living_accommodation = import 'ccs/blocks/accommodation/other_living_accommodation.jsonnet';
 local own_or_rent = import 'ccs/blocks/accommodation/own_or_rent.jsonnet';
 local self_contained = import 'ccs/blocks/accommodation/self_contained.jsonnet';
@@ -153,6 +154,7 @@ function(region_code, census_month_year_date) {
           id: 'accommodation-group',
           title: '',
           blocks: [
+            interviewer_note,
             accommodation_introduction,
             accommodation_type,
             type_of_house,

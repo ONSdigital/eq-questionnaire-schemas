@@ -1,39 +1,48 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local question(title) = {
+  id: 'accommodation-type-question',
+  title: title,
+  instruction: 'Tell respondent to turn to <strong>Showcard 3</strong> or show them the options below',
+  type: 'General',
+  answers: [
+    {
+      id: 'accommodation-type-answer',
+      mandatory: false,
+      type: 'Radio',
+      options: [
+        {
+          label: 'Whole house or bungalow',
+          value: 'Whole house or bungalow',
+        },
+        {
+          label: 'Flat, maisonette or apartment',
+          value: 'Flat, maisonette or apartment',
+          description: 'Including purpose-built flats and flats within converted buildings',
+        },
+        {
+          label: 'Caravan or other mobile or temporary structure',
+          value: 'Caravan or other mobile or temporary structure',
+        },
+      ],
+    },
+  ],
+};
+
 {
   type: 'Question',
   id: 'accommodation-type',
-  question: {
-    id: 'accommodation-type-question',
-    title: {
-      text: 'What type of accommodation is {household_address}?',
-      placeholders: [placeholders.address],
+  question_variants: [
+    {
+      question: question('What type of accomodation is this?'),
+      when: [rules.livingAtCurrentAddress],
     },
-    instruction: 'Tell respondent to turn to <strong>Showcard 3</strong>',
-    type: 'General',
-    answers: [
-      {
-        id: 'accommodation-type-answer',
-        mandatory: false,
-        type: 'Radio',
-        options: [
-          {
-            label: 'Whole house or bungalow',
-            value: 'Whole house or bungalow',
-          },
-          {
-            label: 'Flat, maisonette or apartment',
-            value: 'Flat, maisonette or apartment',
-          },
-          {
-            label: 'Caravan or other mobile or temporary structure',
-            value: 'Caravan or other mobile or temporary structure',
-          },
-        ],
-      },
-    ],
-  },
+    {
+      question: question('What type of accomodation was this?'),
+      when: [rules.livingAtDifferentAddress],
+    },
+  ],
   routing_rules: [
     {
       goto: {
