@@ -18,7 +18,7 @@ try:
         if latest_tag != version:
             logger.error(
                 f'eq-translations is out of date. Update using: "pipenv install -e git+https://github.com/ONSDigital'
-                f'/eq-translations.git@{version}#egg=eq_translations". '
+                f'/eq-translations.git@{latest_tag}#egg=eq_translations". '
             )
             sys.exit(1)
     else:
