@@ -3,7 +3,7 @@
   id: 'type-of-house',
   question: {
     id: 'type-of-house-question',
-    title: 'Which of the following is your house or bungalow?',
+    title: 'Which of the following was your house or bungalow?',
     type: 'General',
     answers: [{
       id: 'type-of-house-answer',

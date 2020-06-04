@@ -4,13 +4,6 @@
   question: {
     id: 'government-services-question',
     title: 'In the last year, how have you or your household used online government services?',
-    guidance: {
-      contents: [
-        {
-          description: 'This refers to any interaction you might have with public authorities online, such as DVLA, HMRC, local council or health related services.',
-        },
-      ],
-    },
     instruction: 'Tell respondent to turn to <strong>Showcard 7</strong>',
     type: 'MutuallyExclusive',
     mandatory: false,

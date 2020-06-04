@@ -67,14 +67,36 @@ local editQuestion(questionTitle) = {
         type: 'General',
         id: 'anyone-usually-live-at-question',
         title: questionTitle,
-        guidance: {
-          contents: [
-            {
-              description: 'Remember to only include those people who share cooking facilities and share a living room or sitting room or dining area',
-            },
-          ],
-        },
+        description: 'Remember to only include those people who: <ul><li>share cooking facilities, <strong>and</strong></li><li>share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area</li></ul>Anyone else is not part of your household and will be interviewed separately.',
         instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+        definitions: [
+      {
+        title: 'Electronic Showcard',
+        contents: [
+          {
+            description: 'Include people temporarily away such as',
+          },
+          {
+          list: [
+            'people who worked away from home within the UK, or members of the armed forces, if this was their permanent or family home',
+            'people staying or expecting to stay in an establishment such as a hospital, care home or hostel for less than 6 months, if this was their permanent or family home',
+            'prisoners with a sentence of less than 12 months',
+            'people who were temporarily outside the UK for less than 12 months',
+            'other people who usually lived with your household, but were temporarily away, for example, at a second address for work or on holiday',
+            ],
+          },
+          {
+            description: 'Include people temporarily staying on such as'
+          },
+          {
+          list: [
+            'people staying temporarily who did not have another UK address, for example, UK residents between addresses or currently without a home',
+            'people from outside the UK who were staying in the UK for 3 months or more',
+            ],
+          },
+        ],
+      },
+    ],
         answers: [
           {
             id: 'anyone-else-answer',
@@ -106,14 +128,36 @@ local editQuestion(questionTitle) = {
             placeholders.censusDate,
           ],
         },
-        guidance: {
-          contents: [
-            {
-              description: 'Remember to only include those people who share cooking facilities and share a living room or sitting room or dining area',
-            },
-          ],
-        },
+        description: 'Remember to only include those people who: <ul><li>share cooking facilities, <strong>and</strong></li><li>share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area</li></ul>Anyone else is not part of your household and will be interviewed separately.',
         instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+                definitions: [
+      {
+        title: 'Electronic Showcard',
+        contents: [
+          {
+            description: 'Include people temporarily away such as',
+          },
+          {
+          list: [
+            'people who worked away from home within the UK, or members of the armed forces, if this was their permanent or family home',
+            'people staying or expecting to stay in an establishment such as a hospital, care home or hostel for <strong>less than 6 months</strong>, if this was their permanent or family home',
+            'prisoners with a sentence of <strong>less than 12 months</strong>',
+            'people who were temporarily outside the UK for <strong>less than 12 months</strong>',
+            'other people who usually lived with your household, but were temporarily away, for example, at a second address for work or on holiday',
+            ],
+          },
+          {
+            description: 'Include people temporarily staying on such as'
+          },
+          {
+          list: [
+            'people staying temporarily who did not have another UK address, for example, UK residents between addresses or currently without a home',
+            'people from outside the UK who were staying in the UK for <strong>3 months or more</strong>',
+            ],
+          },
+        ],
+      },
+    ],
         answers: [
           {
             id: 'anyone-else-answer',

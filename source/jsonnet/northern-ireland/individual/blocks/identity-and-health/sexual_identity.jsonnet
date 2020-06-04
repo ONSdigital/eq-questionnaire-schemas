@@ -32,6 +32,7 @@ local question(title) = {
             id: 'sexual-identity-answer-other',
             type: 'TextField',
             mandatory: false,
+            visible: true,
             max_length: 100,
             label: 'Please specify sexual orientation',
           },

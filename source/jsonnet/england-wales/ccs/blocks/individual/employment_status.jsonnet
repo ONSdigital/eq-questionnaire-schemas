@@ -7,13 +7,6 @@ local question(title) = {
   instruction: 'Tell respondent to turn to <strong>Showcard 10</strong>',
   type: 'MutuallyExclusive',
   mandatory: false,
-  guidance: {
-    contents: [
-      {
-        description: 'Include casual or temporary work, even if only for one hour',
-      },
-    ],
-  },
   answers: [
     {
       id: 'employment-status-answer',
