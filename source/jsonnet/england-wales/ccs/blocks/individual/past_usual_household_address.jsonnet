@@ -66,7 +66,7 @@ local proxyTitle = {
           {
             id: 'past-usual-address-household-answer',
             condition: 'not equals',
-            value: 'An address outside the UK',
+            value: 'No, living outside the UK',
           },
           rules.under16,
         ],
@@ -79,7 +79,7 @@ local proxyTitle = {
           {
             id: 'past-usual-address-household-answer',
             condition: 'not equals',
-            value: 'An address outside the UK',
+            value: 'No, living outside the UK',
           },
           rules.over16,
         ],
@@ -92,7 +92,7 @@ local proxyTitle = {
           {
             id: 'past-usual-address-household-answer',
             condition: 'not equals',
-            value: 'An address outside the UK',
+            value: 'No, living outside the UK',
           },
           rules.estimatedAge,
         ],

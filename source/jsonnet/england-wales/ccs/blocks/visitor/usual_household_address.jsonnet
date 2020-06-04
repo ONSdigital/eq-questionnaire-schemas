@@ -11,7 +11,7 @@ local additionalAnswerOption = [
         placeholders.firstPersonNameForList(listName),
       ],
     },
-    value: 'Same address as {visitor_name}',
+    value: 'Same address as {first_person}',
   },
 ];
 
