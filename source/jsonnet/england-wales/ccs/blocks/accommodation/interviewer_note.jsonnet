@@ -6,7 +6,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     id: 'interviewer-note-question',
     title: {
-      text: 'Interviewer Note: Was the respondent living at {household_address}, on {census_date}?',
+      text: 'Interviewer Note: Was the respondent living at {household_address} on Sunday {census_date}?',
       placeholders: [placeholders.address, placeholders.censusDate],
     },
     type: 'General',
