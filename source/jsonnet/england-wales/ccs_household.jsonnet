@@ -149,8 +149,8 @@ function(region_code, census_month_year_date) {
           id: 'accommodation-group',
           title: '',
           blocks: [
-            interviewer_note,
             accommodation_introduction,
+            interviewer_note,
             accommodation_type,
             type_of_house,
             type_of_flat,
