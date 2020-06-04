@@ -23,19 +23,24 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             description: 'Include',
           },
           {
-          list: [
-            'people who usually lived somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
-            'people staying because it was their second address, for example, for work - their permanent or family home was elsewhere',
-            'people who usually lived outside the UK who were staying in the UK for less than 3 months',
-            'people staying on holiday',
+            list: [
+              'people who usually lived somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
+              'people staying because it was their second address, for example, for work - their permanent or family home was elsewhere',
+              'people who usually lived outside the UK who were staying in the UK for less than 3 months',
+              'people staying on holiday',
             ],
           },
           {
             description: 'Or',
           },
-                    {
-          list: [
-            'there were no visitors staying overnight on 21 March 2021',
+          {
+            list: [
+              {
+                text: 'there were no visitors staying overnight on {census_date}.',
+                placeholders: [
+                  placeholders.censusDate,
+                ],
+              },
             ],
           },
         ],

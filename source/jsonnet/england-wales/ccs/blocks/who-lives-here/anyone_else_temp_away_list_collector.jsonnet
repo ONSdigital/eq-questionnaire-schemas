@@ -58,23 +58,34 @@ local editQuestion(questionTitle) = {
     id: 'anyone-else-temp-away-confirmation-question',
     type: 'General',
     title: 'Apart from the people already included, is there anyone else who was temporarily away or staying that you need to add?',
-    guidance: {
-      contents: [
-        {
-          description: 'Include',
-        },
-        {
-          list: [
-            'People from outside the UK who were staying in the UK for <strong>3 months or more</strong>',
-            'Members of the armed forces',
-            'Prisoners with a sentence of <strong>less than 12 months</strong>',
-            'People expecting to stay in an establishment such as a hospital, care home or hostel for <strong>less than 6 months</strong>',
-            'People who were temporarily outside the UK for <strong>less than 12 months</strong>',
-            'People staying temporarily who did not have another UK address',
-          ],
-        },
-      ],
-    },
+    definitions: [
+      {
+        title: 'Electronic Showcard',
+        contents: [
+          {
+            description: 'Include people temporarily away such as',
+          },
+          {
+            list: [
+              'people who worked away from home within the UK, or members of the armed forces, if this was their permanent or family home',
+              'people staying or expecting to stay in an establishment such as a hospital, care home or hostel for <strong>less than 6 months</strong>, if this was their permanent or family home',
+              'prisoners with a sentence of <strong>less than 12 months</strong>',
+              'people who were temporarily outside the UK for <strong>less than 12 months</strong>',
+              'other people who usually lived with your household, but were temporarily away, for example, at a second address for work or on holiday',
+            ],
+          },
+          {
+            description: 'Include people temporarily staying on such as',
+          },
+          {
+            list: [
+              'people staying temporarily who did not have another UK address, for example, UK residents between addresses or currently without a home',
+              'people from outside the UK who were staying in the UK for <strong>3 months or more</strong>',
+            ],
+          },
+        ],
+      },
+    ],
     answers: [
       {
         id: 'anyone-else-temp-away-answer',
