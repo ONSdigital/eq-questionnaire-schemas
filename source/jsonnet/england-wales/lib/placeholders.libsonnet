@@ -21,6 +21,7 @@ local getListOrdinality(listName) = {
     },
   ],
 };
+
 local getListOrdinalityWithoutDeterminer(listName) = {
   placeholder: 'ordinality',
   transforms: [
@@ -41,6 +42,7 @@ local getListOrdinalityWithoutDeterminer(listName) = {
     },
   ],
 };
+
 local getListCardinality(listName) = {
   placeholder: 'cardinality',
   transforms: [
@@ -53,6 +55,28 @@ local getListCardinality(listName) = {
     },
   ],
 };
+
+local firstPersonNameForList(listName) = {
+  placeholder: 'first_person',
+  transforms: [
+    {
+      arguments: {
+        delimiter: ' ',
+        list_to_concatenate: {
+          identifier: ['first-name', 'last-name'],
+          source: 'answers',
+          list_item_selector: {
+            source: 'list',
+            id: listName,
+            id_selector: 'first',
+          },
+        },
+      },
+      transform: 'concatenate_list',
+    },
+  ],
+};
+
 {
   personName: {
     placeholder: 'person_name',
@@ -124,4 +148,5 @@ local getListCardinality(listName) = {
   getListOrdinality: getListOrdinality,
   getListOrdinalityWithoutDeterminer: getListOrdinalityWithoutDeterminer,
   getListCardinality: getListCardinality,
+  firstPersonNameForList: firstPersonNameForList,
 }

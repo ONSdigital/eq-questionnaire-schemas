@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'employment-status-question',
   title: title,
-  instruction: 'Tell respondent to turn to <strong>Showcard 10</strong>',
+  instruction: 'Tell the respondent to turn to <strong>Showcard 10</strong> or show them the options below',
   type: 'MutuallyExclusive',
   mandatory: false,
   guidance: {
@@ -27,6 +27,7 @@ local question(title) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
+          description: 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work',
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',

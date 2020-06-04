@@ -11,21 +11,16 @@ local question(title) = {
       mandatory: false,
       options: [
         {
-          label: {
-            text: '{household_address}',
-            placeholders: [
-              placeholders.address,
-            ],
-          },
-          value: '{household_address}',
+          label: 'Yes',
+          value: 'Yes',
         },
         {
-          label: 'Another address in the UK',
-          value: 'Another address in the UK',
+          label: 'No, living elsewhere in the UK',
+          value: 'No, living elsewhere in the UK',
         },
         {
-          label: 'An address outside the UK',
-          value: 'An address outside the UK',
+          label: 'No, living outside the UK',
+          value: 'No, living outside the UK',
         },
       ],
       type: 'Radio',
@@ -34,16 +29,18 @@ local question(title) = {
 };
 
 local nonProxyTitle = {
-  text: 'One year ago, on {year_before_census_date}, what was your usual address?',
+  text: 'Was your usual address one year ago, on {year_before_census_date}, the same as your usual address on {census_date}?',
   placeholders: [
     placeholders.yearBeforeCensusDate,
+    placeholders.censusDate,
   ],
 };
 local proxyTitle = {
-  text: 'One year ago, on {year_before_census_date}, what was <em>{person_name_possessive}</em> usual address?',
+  text: 'Was {person_name_possessive} usual address one year ago, on {year_before_census_date}, the same as their usual address on {census_date}?',
   placeholders: [
     placeholders.personNamePossessive,
     placeholders.yearBeforeCensusDate,
+    placeholders.censusDate,
   ],
 };
 

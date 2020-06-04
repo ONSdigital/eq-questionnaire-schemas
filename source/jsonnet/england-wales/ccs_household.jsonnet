@@ -204,7 +204,7 @@ function(region_code, census_month_year_date) {
             sex,
             country_of_birth,
             marriage_type,
-            ethnic_group,
+            ethnic_group(region_code),
             ethnic_group_white(region_code),
             ethnic_group_mixed,
             ethnic_group_asian,
