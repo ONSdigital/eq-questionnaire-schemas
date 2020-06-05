@@ -1,15 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local nonProxyTitle = 'What is the other address where you may have been included on a Census questionnaire?';
-
-local proxyTitle = {
-  text: 'What is the other address where <em>{person_name}</em> may have been included on a Census questionnaire?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-
 {
   type: 'Question',
   id: 'other-census-address',
