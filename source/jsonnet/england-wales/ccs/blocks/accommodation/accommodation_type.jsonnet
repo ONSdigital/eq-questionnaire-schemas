@@ -39,7 +39,7 @@ local question(title) = {
       when: [rules.livingAtCurrentAddress],
     },
     {
-      question: question('What type of accomodation was this?'),
+      question: question('What type of accomodation was that?'),
       when: [rules.livingAtDifferentAddress],
     },
   ],
