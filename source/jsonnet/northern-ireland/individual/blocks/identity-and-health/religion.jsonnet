@@ -36,14 +36,6 @@ local question(title, otherReligionDescription) = {
         {
           label: 'Methodist Church in Ireland',
           value: 'Methodist Church in Ireland',
-          detail_answer: {
-            id: 'sexual-identity-123',
-            type: 'TextField',
-            mandatory: false,
-            visible: true,
-            max_length: 100,
-            label: 'Please specify sexual orientation',
-          },
         },
         {
           label: 'Other',
