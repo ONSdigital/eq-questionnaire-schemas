@@ -7,6 +7,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     type: 'General',
     id: 'any-visitors-question',
+    description: 'A visitor is a person staying overnight who usually lives at another address.',
     title: {
       text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
       placeholders: [
@@ -15,13 +16,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       ],
     },
     instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
-    guidance: {
-      contents: [
-        {
-          description: 'A visitor is a person staying overnight in your household who usually lives at another address.',
-        },
-      ],
-    },
     answers: [
       {
         id: 'any-visitors-answer',

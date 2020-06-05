@@ -75,6 +75,7 @@ local editQuestion(questionTitle) = {
         },
       ],
     },
+    instruction: 'Tell the respondent to double-check <strong>Showcard 2</strong> or show them the Electronic Showcard below',
     answers: [
       {
         id: 'anyone-else-temp-away-answer',

@@ -15,14 +15,8 @@
   question: {
     id: 'relationships-question',
     title: 'Are any of these people related to each other?',
+    description: 'Remember to include partners and stepchildren as related.',
     type: 'General',
-    guidance: {
-      contents: [
-        {
-          description: 'Remember to include partners and step-children as related.',
-        },
-      ],
-    },
     answers: [{
       id: 'relationships-answer',
       mandatory: false,
