@@ -67,7 +67,6 @@ local editQuestion(questionTitle) = {
         type: 'General',
         id: 'anyone-usually-live-at-question',
         title: questionTitle,
-        description: 'Remember to only include those people who: <ul><li>share cooking facilities, <strong>and</strong></li><li>share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area</li></ul>Anyone else is not part of your household and will be interviewed separately.',
         instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
         definitions: [
           {
@@ -137,7 +136,6 @@ local editQuestion(questionTitle) = {
             placeholders.censusDate,
           ],
         },
-        description: 'Remember to only include those people who: <ul><li>share cooking facilities, <strong>and</strong></li><li>share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area</li></ul>Anyone else is not part of your household and will be interviewed separately.',
         instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
         definitions: [
           {
