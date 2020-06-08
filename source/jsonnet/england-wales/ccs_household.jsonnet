@@ -7,8 +7,11 @@ local anyone_else_list_collector = import 'ccs/blocks/who-lives-here/anyone_else
 local anyone_else_temp_away_list_collector = import 'ccs/blocks/who-lives-here/anyone_else_temp_away_list_collector.jsonnet';
 local anyone_else_usually_living = import 'ccs/blocks/who-lives-here/anyone_else_usually_living.jsonnet';
 local interviewer_note_interstitial = import 'ccs/blocks/who-lives-here/interviewer_note_interstitial.jsonnet';
+local outside_uk_interstitial = import 'ccs/blocks/who-lives-here/outside_uk_interstitial.jsonnet';
 local primary_person_list_collector = import 'ccs/blocks/who-lives-here/primary_person_list_collector.jsonnet';
 local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
+local usual_address = import 'ccs/blocks/who-lives-here/usual_address.jsonnet';
+local usual_address_uk = import 'ccs/blocks/who-lives-here/usual_address_uk.jsonnet';
 local visitor_list_collector = import 'ccs/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'ccs/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
 
@@ -129,6 +132,9 @@ function(region_code, census_month_year_date) {
             who_lives_here_interstitial,
             primary_person_list_collector,
             anyone_else_usually_living,
+            usual_address_uk,
+            outside_uk_interstitial,
+            usual_address,
             interviewer_note_interstitial,
             another_address_interviewer_note_interstitial,
             anyone_else_list_collector,
