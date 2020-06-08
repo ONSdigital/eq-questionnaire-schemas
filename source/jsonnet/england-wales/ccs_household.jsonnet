@@ -17,6 +17,7 @@ local accommodation_introduction = import 'ccs/blocks/accommodation/accommodatio
 local accommodation_type = import 'ccs/blocks/accommodation/accommodation_type.jsonnet';
 local government_services = import 'ccs/blocks/accommodation/government_services.jsonnet';
 local internet = import 'ccs/blocks/accommodation/internet.jsonnet';
+local interviewer_note = import 'ccs/blocks/accommodation/interviewer_note.jsonnet';
 local other_living_accommodation = import 'ccs/blocks/accommodation/other_living_accommodation.jsonnet';
 local own_or_rent = import 'ccs/blocks/accommodation/own_or_rent.jsonnet';
 local self_contained = import 'ccs/blocks/accommodation/self_contained.jsonnet';
@@ -100,7 +101,7 @@ function(region_code, census_month_year_date) {
   sections: [
     {
       id: 'who-lives-here-section',
-      title: 'People who live here',
+      title: 'This section is now complete',
       summary: {
         show_on_completion: true,
         items: [
@@ -114,12 +115,7 @@ function(region_code, census_month_year_date) {
           {
             type: 'List',
             for_list: 'visitors',
-            title: {
-              text: 'Visitors staying overnight on {census_date}',
-              placeholders: [
-                placeholders.censusDate,
-              ],
-            },
+            title: 'Visitors',
             add_link_text: 'Add a visitor',
             empty_list_text: 'There are no visitors',
           },
@@ -154,6 +150,7 @@ function(region_code, census_month_year_date) {
           title: '',
           blocks: [
             accommodation_introduction,
+            interviewer_note,
             accommodation_type,
             type_of_house,
             type_of_flat,
@@ -207,7 +204,7 @@ function(region_code, census_month_year_date) {
             sex,
             country_of_birth,
             marriage_type,
-            ethnic_group,
+            ethnic_group(region_code),
             ethnic_group_white(region_code),
             ethnic_group_mixed,
             ethnic_group_asian,

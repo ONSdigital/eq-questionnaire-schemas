@@ -24,10 +24,10 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Including the time you have already spent here, how long do you intend to stay in the United Kingdom?';
+local nonProxyTitle = 'Including the time you have already spent here, how long do you intend to stay in the UK?';
 
 local proxyTitle = {
-  text: 'Including the time they have already spent here, how long does <em>{person_name}</em> intend to stay in the United Kingdom?',
+  text: 'Including the time they have already spent here, how long does <em>{person_name}</em> intend to stay in the UK?',
   placeholders: [
     placeholders.personName,
   ],

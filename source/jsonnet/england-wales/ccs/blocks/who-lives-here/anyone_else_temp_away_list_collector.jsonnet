@@ -110,12 +110,7 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'anyone-else-temp-away-add-question',
       type: 'General',
-      title: {
-        text: 'Who do you need to add to {household_address}?',
-        placeholders: [
-          placeholders.address,
-        ],
-      },
+      title: 'Who do you need to add?',
       instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
       answers: [
         {

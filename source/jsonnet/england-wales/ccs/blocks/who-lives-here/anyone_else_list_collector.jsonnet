@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle = {
-  text: 'Did anyone usually live at {household_address} on Sunday {census_date}?',
+  text: 'Did anyone else usually live in your household on Sunday {census_date}?',
   placeholders: [
     placeholders.address,
     placeholders.censusDate,
@@ -67,7 +67,14 @@ local editQuestion(questionTitle) = {
         type: 'General',
         id: 'anyone-usually-live-at-question',
         title: questionTitle,
-        instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+        guidance: {
+          contents: [
+            {
+              description: 'Remember to only include those people who share cooking facilities and share a living room or sitting room or dining area',
+            },
+          ],
+        },
+        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         definitions: [
           {
             title: 'Electronic Showcard',
@@ -130,13 +137,20 @@ local editQuestion(questionTitle) = {
         id: 'anyone-usually-live-at-question',
         type: 'General',
         title: {
-          text: 'Did anyone else usually live at {household_address} on Sunday {census_date}?',
+          text: 'Did anyone else usually live in your household on Sunday {census_date}?',
           placeholders: [
             placeholders.address,
             placeholders.censusDate,
           ],
         },
-        instruction: 'Tell respondent to turn to <strong>Showcard 2</strong>',
+        guidance: {
+          contents: [
+            {
+              description: 'Remember to only include those people who share cooking facilities and share a living room or sitting room or dining area',
+            },
+          ],
+        },
+        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         definitions: [
           {
             title: 'Electronic Showcard',
@@ -193,7 +207,7 @@ local editQuestion(questionTitle) = {
       id: 'add-question',
       type: 'General',
       title: {
-        text: 'Who do you need to add to {household_address}?',
+        text: 'Who do you need to add?',
         placeholders: [
           placeholders.address,
         ],

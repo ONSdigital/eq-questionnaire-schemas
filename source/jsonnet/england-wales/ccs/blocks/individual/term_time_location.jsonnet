@@ -25,13 +25,8 @@ local proxyTitle = {
 local noOtherAddressOptions = {
   options: [
     {
-      label: {
-        text: '{household_address}',
-        placeholders: [
-          placeholders.address,
-        ],
-      },
-      value: '{household_address}',
+      label: 'At this household’s address',
+      value: 'At this household’s address',
     },
     {
       label: 'At another address',

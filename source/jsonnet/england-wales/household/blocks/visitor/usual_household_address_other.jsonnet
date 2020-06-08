@@ -23,6 +23,7 @@ local rules = import 'rules.libsonnet';
         mandatory: false,
         suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/countries-of-birth.json',
         type: 'TextField',
+        max_length: 100,
       },
     ],
   },

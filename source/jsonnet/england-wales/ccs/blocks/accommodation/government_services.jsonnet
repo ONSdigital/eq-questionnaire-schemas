@@ -4,7 +4,14 @@
   question: {
     id: 'government-services-question',
     title: 'In the last year, how have you or your household used online government services?',
-    instruction: 'Tell respondent to turn to <strong>Showcard 7</strong>',
+    guidance: {
+      contents: [
+        {
+          description: 'This refers to any interaction you might have with public authorities online, such as DVLA, HMRC, local council or health related services.',
+        },
+      ],
+    },
+    instruction: 'Tell the respondent to turn to <strong>Showcard 7</strong> or show them the options below',
     type: 'MutuallyExclusive',
     mandatory: false,
     answers: [
@@ -19,8 +26,8 @@
             description: 'For example, taxing a car, registering to vote, applying for school places',
           },
           {
-            label: 'Applying for official documents',
-            value: 'Applying for official documents',
+            label: 'Applying for official documents online',
+            value: 'Applying for official documents online',
             description: 'For example, passports, visas',
           },
           {

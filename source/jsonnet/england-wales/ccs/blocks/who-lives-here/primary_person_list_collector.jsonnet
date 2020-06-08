@@ -47,7 +47,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         placeholders.censusDate,
       ],
     },
-    instruction: 'Tell respondent to turn to <strong>Showcard 1</strong>',
+    instruction: 'Tell the respondent to turn to <strong>Showcard 1</strong> or show them the Electronic Showcard below',
     definitions: [
       {
         title: 'Electronic Showcard',
