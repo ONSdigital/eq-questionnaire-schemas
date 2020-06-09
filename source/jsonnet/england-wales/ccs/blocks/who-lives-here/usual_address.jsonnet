@@ -5,7 +5,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   id: 'usual-address',
   question: {
     id: 'usual-address-question',
-    title: 'What is the other address?',
+    title: 'What was your household’s usual address?',
     type: 'General',
     answers: [
       {
