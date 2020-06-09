@@ -4,7 +4,7 @@ set -e
 
 mkdir -p schemas/en
 
-# Build schema for each region
+# Build Census schema for each region
 for region_code in GB-WLS GB-ENG GB-NIR; do
     # Lowercase the region code and replace '-' with '_'
     FORMATTED_REGION_CODE=$(echo "${region_code}" | tr '[:upper:]' '[:lower:]' | tr - _)
@@ -35,10 +35,15 @@ for region_code in GB-WLS GB-ENG GB-NIR; do
     done
 done
 
-DESTINATION_FILE="schemas/en/ccs_household_gb_eng.json"
+# Build CCS schema for England and Wales
+for region_code in GB-WLS GB-ENG; do
+  FORMATTED_REGION_CODE=$(echo "${region_code}" | tr '[:upper:]' '[:lower:]' | tr - _)
 
-SOURCE_FILE="source/jsonnet/england-wales/ccs_household.jsonnet"
-ADDITIONAL_LIBRARY_PATH="source/jsonnet/england-wales/ccs/lib/"
+  DESTINATION_FILE="schemas/en/ccs_household_${FORMATTED_REGION_CODE}.json"
 
-jsonnet --tla-str region_code="GB-ENG" --ext-str census_date="${CENSUS_DATE}" --tla-str census_month_year_date="${CENSUS_MONTH_YEAR_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
-echo "Built ${DESTINATION_FILE}"
+  SOURCE_FILE="source/jsonnet/england-wales/ccs_household.jsonnet"
+  ADDITIONAL_LIBRARY_PATH="source/jsonnet/england-wales/ccs/lib/"
+
+  jsonnet --tla-str region_code=${region_code} --ext-str census_date="${CENSUS_DATE}" --tla-str census_month_year_date="${CENSUS_MONTH_YEAR_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
+  echo "Built ${DESTINATION_FILE}"
+done
