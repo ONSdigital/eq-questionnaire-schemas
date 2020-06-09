@@ -15,13 +15,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       ],
     },
     instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
-    guidance: {
-      contents: [
-        {
-          description: 'A visitor is a person staying overnight in your household who usually lives at another address.',
-        },
-      ],
-    },
     definitions: [
       {
         title: 'Electronic Showcard',
@@ -33,7 +26,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             list: [
               'people who usually lived somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
               'people staying because it was their second address, for example, for work - their permanent or family home was elsewhere',
-              'people who usually lived outside the UK who were staying in the UK for less than 3 months',
+              'people who usually lived outside the UK who were staying in the UK for <strong>less than 3 months</strong>',
               'people staying on holiday',
             ],
           },

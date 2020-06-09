@@ -53,7 +53,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         title: 'Electronic Showcard',
         contents: [
           {
-            description: '<strong>“Usually living at” means:</strong>',
+            title: '“Usually living at” means:',
           },
           {
             description: 'The address at which you generally spend most time, for most people this will be their permanent or family home.',

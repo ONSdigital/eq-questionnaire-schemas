@@ -100,15 +100,6 @@ local editQuestion(questionTitle) = {
                   },
                 ],
               },
-              {
-                description: 'Include people temporarily staying on such as',
-              },
-              {
-                list: [
-                  'people staying temporarily who did not have another UK address, for example, UK residents between addresses or currently without a home',
-                  'people from outside the UK who were staying in the UK for 3 months or more',
-                ],
-              },
             ],
           },
         ],
