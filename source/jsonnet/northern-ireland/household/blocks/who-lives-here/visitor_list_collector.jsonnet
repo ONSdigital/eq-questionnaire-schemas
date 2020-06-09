@@ -145,12 +145,8 @@ local removePersonQuestionTitle = {
     question: {
       id: 'visitor-remove-question',
       type: 'General',
-      guidance: {
-        contents: [{
-          title: 'All of the data entered about this person will be deleted',
-        }],
-      },
       title: removePersonQuestionTitle,
+      warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
           id: 'visitor-remove-confirmation',

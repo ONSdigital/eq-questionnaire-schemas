@@ -202,17 +202,13 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'remove-question',
       type: 'General',
-      guidance: {
-        contents: [{
-          title: 'All of the data entered about this person will be deleted',
-        }],
-      },
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
           placeholders.personName,
         ],
       },
+      warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
           id: 'remove-confirmation',
