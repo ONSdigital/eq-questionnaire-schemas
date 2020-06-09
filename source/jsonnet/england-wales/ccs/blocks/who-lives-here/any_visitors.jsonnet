@@ -36,7 +36,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           {
             list: [
               {
-                text: 'there were no visitors staying overnight on {census_date}.',
+                text: 'there were no visitors staying overnight on {census_date}',
                 placeholders: [
                   placeholders.censusDate,
                 ],
