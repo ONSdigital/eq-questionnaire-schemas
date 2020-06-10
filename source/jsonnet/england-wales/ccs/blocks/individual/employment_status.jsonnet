@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'employment-status-question',
   title: title,
+  description: 'Include casual or temporary work, even if only for one hour',
   instruction: 'Tell the respondent to turn to <strong>Showcard 10</strong> or show them the options below',
   type: 'MutuallyExclusive',
   mandatory: false,
