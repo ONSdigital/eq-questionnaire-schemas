@@ -67,7 +67,7 @@ function(region_code, census_month_year_date) {
   data_version: '0.0.3',
   survey_id: 'ccs',
   title: '2019 Census Coverage Survey Test',
-  description: 'Census England Coverage Survey Schema',
+  description: 'Census Coverage Survey Schema',
   theme: 'census',
   legal_basis: 'Voluntary',
   navigation: {
