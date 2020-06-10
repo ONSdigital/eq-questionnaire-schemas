@@ -48,6 +48,26 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       ],
     },
     instruction: 'Tell the respondent to turn to <strong>Showcard 1</strong> or show them the Electronic Showcard below',
+    definitions: [
+      {
+        title: 'Electronic Showcard',
+        contents: [
+          {
+            title: '“Usually living at” means:',
+          },
+          {
+            description: 'The address at which you generally spend most time, for most people this will be their permanent or family home.',
+          },
+          {
+            list: [
+              '<strong>full-time students</strong> should include themselves here',
+              '<strong>armed forces members</strong> should include themselves at their home address if they have one',
+              '<strong>include anyone temporarily outside the UK, if this was for less than 12 months</strong>',
+            ],
+          },
+        ],
+      },
+    ],
     answers: [
       {
         id: 'you-live-here-answer',

@@ -75,6 +75,34 @@ local editQuestion(questionTitle) = {
           ],
         },
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
+        definitions: [
+          {
+            title: 'Electronic Showcard',
+            contents: [
+              {
+                description: 'Include',
+              },
+              {
+                list: [
+                  {
+                    text: 'family members (including partners, children and babies born on or before {census_date} even if still in hospital)',
+                    placeholders: [
+                      placeholders.censusDate,
+                    ],
+                  },
+                  'students and schoolchildren who lived away from home during term time ',
+                  'housemates, tenants or lodgers',
+                  {
+                    text: 'people who usually lived here on {census_date} but have since moved out',
+                    placeholders: [
+                      placeholders.censusDate,
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
         answers: [
           {
             id: 'anyone-else-answer',
@@ -114,6 +142,34 @@ local editQuestion(questionTitle) = {
           ],
         },
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
+        definitions: [
+          {
+            title: 'Electronic Showcard',
+            contents: [
+              {
+                description: 'Include',
+              },
+              {
+                list: [
+                  {
+                    text: 'family members (including partners, children and babies born on or before {census_date} even if still in hospital)',
+                    placeholders: [
+                      placeholders.censusDate,
+                    ],
+                  },
+                  'students and schoolchildren who lived away from home during term time ',
+                  'housemates, tenants or lodgers',
+                  {
+                    text: 'people who usually lived here on {census_date} but have since moved out',
+                    placeholders: [
+                      placeholders.censusDate,
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
         answers: [
           {
             id: 'anyone-else-answer',
