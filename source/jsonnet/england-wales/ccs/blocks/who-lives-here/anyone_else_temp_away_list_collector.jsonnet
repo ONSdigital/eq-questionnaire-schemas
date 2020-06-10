@@ -58,6 +58,7 @@ local editQuestion(questionTitle) = {
     id: 'anyone-else-temp-away-confirmation-question',
     type: 'General',
     title: 'Apart from the people already included, is there anyone else who was temporarily away or staying that you need to add?',
+    instruction: 'Tell the respondent to double-check <strong>Showcard 2</strong> or show them the Electronic Showcard below',
     definitions: [
       {
         title: 'Electronic Showcard',

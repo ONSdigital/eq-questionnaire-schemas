@@ -14,6 +14,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         placeholders.censusDate,
       ],
     },
+    description: 'A visitor is a person staying overnight who usually lives at another address',
     instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
     definitions: [
       {
