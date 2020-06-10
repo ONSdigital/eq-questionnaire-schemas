@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label) = {
+local question(title) = {
   id: 'birth-gender-question',
   title: title,
   type: 'General',
@@ -31,7 +31,7 @@ local question(title, label) = {
             max_length: 100,
             type: 'TextField',
             mandatory: false,
-            label: label,
+            label: 'Enter gender identity',
             visible: true,
           },
         },
@@ -42,25 +42,23 @@ local question(title, label) = {
 };
 
 local nonProxyTitle = 'Is the gender you identify with the same as your sex registered at birth?';
-local nonProxyLabel = 'Enter your gender';
 local proxyTitle = {
-  text: 'Is the gender <em>{person_name_possessive}</em> identifies with the same as their sex registered at birth?',
+  text: 'Is the gender <em>{person_name}</em> identifies with the same as their sex registered at birth?',
   placeholders: [
-    placeholders.personNamePossessive,
+    placeholders.personName,
   ],
 };
-local proxyLabel = 'Enter their gender';
 
 {
   type: 'Question',
   id: 'birth-gender',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

@@ -3,13 +3,13 @@ local placeholders = import '../../lib/placeholders.libsonnet';
 
 local questionTitle(hasPrimary) = (
   if hasPrimary then {
-    text: 'Do any of the following people also live at {household_address} on {census_date}?',
+    text: 'Do any of the following people also live at {household_address} on Sunday {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,
     ],
   } else {
-    text: 'Do any of the following people live at {household_address} on {census_date}?',
+    text: 'Do any of the following people live at {household_address} on Sunday {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,
@@ -39,7 +39,7 @@ local question(hasPrimary) = {
         { description: 'This is often their permanent or family home.' },
         {
           description: {
-            text: 'If someone has more than one home address, include them at this address if they generally spend most of their time here. For example, children whose parents live apart. If they split their time equally then include them at this address if they are staying overnight on {census_date}.',
+            text: 'If someone has more than one home address, include them at this address if they generally spend most of their time here. For example, children whose parents live apart. If they split their time equally then include them at this address if they are staying overnight on Sunday {census_date}.',
             placeholders: [
               placeholders.censusDate,
             ],
@@ -50,7 +50,7 @@ local question(hasPrimary) = {
         },
         {
           list: [
-            '<strong>students</strong>, if this is either their term-time or their out of term-time address',
+            '<strong>students</strong>, if this is either their term-time <strong>or</strong> their out of term-time address',
             '<strong>people with a second address for work</strong>, if this is their home address',
             '<strong>armed forces members</strong>, if this is their home address',
           ],

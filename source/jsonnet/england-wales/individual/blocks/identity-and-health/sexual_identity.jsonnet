@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label, guidanceHeader, description) = {
+local question(title, guidanceHeader, description) = {
   id: 'sexual-identity-question',
   title: title,
   type: 'General',
@@ -55,7 +55,7 @@ local question(title, label, guidanceHeader, description) = {
             max_length: 100,
             type: 'TextField',
             mandatory: false,
-            label: label,
+            label: 'Enter sexual orientation',
             visible: true,
           },
         },
@@ -66,14 +66,12 @@ local question(title, label, guidanceHeader, description) = {
 };
 
 local nonProxyTitle = 'Which of the following best describes your sexual orientation?';
-local nonProxyLabel = 'Enter your sexual orientation';
 local proxyTitle = {
   text: 'Which of the following best describes <em>{person_name_possessive}</em> sexual orientation?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
 };
-local proxyLabel = 'Enter their sexual orientation';
 
 local nonProxyGuidanceHeader = 'Why your answer is important';
 local proxyGuidanceHeader = 'Why their answer is important';
@@ -86,11 +84,11 @@ local proxyDescription = 'Their answer will help their local community by provid
   id: 'sexual-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel, nonProxyGuidanceHeader, nonProxyDescription),
+      question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel, proxyGuidanceHeader, proxyDescription),
+      question: question(proxyTitle, proxyGuidanceHeader, proxyDescription),
       when: [rules.isProxy],
     },
   ],

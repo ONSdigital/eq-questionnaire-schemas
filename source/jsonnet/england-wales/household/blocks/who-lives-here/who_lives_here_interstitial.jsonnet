@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
 local contentDescription = {
-  text: 'In this section, we are counting the people at {household_address} on {census_date}.',
+  text: 'In this section, we are counting the people at {household_address} on Sunday {census_date}.',
   placeholders: [
     placeholders.censusDate,
     placeholders.address,
@@ -25,9 +25,9 @@ local contentDescription = {
       {
         title: 'You will need to know',
         list: [
-          'Names of people living at this address, including anyone currently away.',
+          'names of people living at this address, including anyone currently away.',
           {
-            text: 'Names of visitors staying overnight in this household on {census_date}.',
+            text: 'names of visitors staying overnight in this household on {census_date}.',
             placeholders: [
               placeholders.censusDate,
             ],

@@ -10,7 +10,10 @@ local rules = import 'rules.libsonnet';
         title: 'Main job',
         contents: [
           {
-            description: 'The next set of questions is about your main job. Your main job is the job in which you usually work the most hours.',
+            description: 'The next set of questions is about your last main job. This is the most recent job you had.',
+          },
+          {
+            description: 'If you had more than one job at the same time, answer for the job in which you usually worked the most hours.',
           },
         ],
       },

@@ -224,8 +224,8 @@ local editQuestion(questionTitle) = {
               value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, I don‘t want to remove this person',
+              value: 'No, I don‘t want to remove this person',
             },
           ],
         },
