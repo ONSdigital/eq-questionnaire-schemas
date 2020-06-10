@@ -36,13 +36,13 @@ for region_code in GB-WLS GB-ENG GB-NIR; do
 done
 
 # Build CCS schema for England and Wales
+SOURCE_FILE="source/jsonnet/england-wales/ccs_household.jsonnet"
+ADDITIONAL_LIBRARY_PATH="source/jsonnet/england-wales/ccs/lib/"
+
 for region_code in GB-WLS GB-ENG; do
   FORMATTED_REGION_CODE=$(echo "${region_code}" | tr '[:upper:]' '[:lower:]' | tr - _)
 
   DESTINATION_FILE="schemas/en/ccs_household_${FORMATTED_REGION_CODE}.json"
-
-  SOURCE_FILE="source/jsonnet/england-wales/ccs_household.jsonnet"
-  ADDITIONAL_LIBRARY_PATH="source/jsonnet/england-wales/ccs/lib/"
 
   jsonnet --tla-str region_code=${region_code} --ext-str census_date="${CENSUS_DATE}" --tla-str census_month_year_date="${CENSUS_MONTH_YEAR_DATE}" --jpath "${ADDITIONAL_LIBRARY_PATH}" "${SOURCE_FILE}" > "${DESTINATION_FILE}"
   echo "Built ${DESTINATION_FILE}"

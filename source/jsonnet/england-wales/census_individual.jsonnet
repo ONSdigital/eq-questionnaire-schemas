@@ -102,7 +102,7 @@ function(region_code, census_month_year_date) {
   data_version: '0.0.3',
   survey_id: 'census',
   title: '2019 Census Test',
-  description: 'Census England Individual Schema',
+  description: 'Census Individual Schema',
   theme: 'census',
   legal_basis: 'Voluntary',
   navigation: {
