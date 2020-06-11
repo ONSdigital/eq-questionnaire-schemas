@@ -28,7 +28,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       },
       {
         id: 'usual-address-answer-county',
-        label: 'County (optional)',
+        label: 'County',
         mandatory: false,
         type: 'TextField',
       },
