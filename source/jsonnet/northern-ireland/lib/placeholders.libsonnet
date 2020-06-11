@@ -33,6 +33,26 @@ local getListCardinality(listName) = {
     },
   ],
 };
+local firstPersonNameForList(listName) = {
+  placeholder: 'first_person',
+  transforms: [
+    {
+      arguments: {
+        delimiter: ' ',
+        list_to_concatenate: {
+          identifier: ['first-name', 'last-name'],
+          source: 'answers',
+          list_item_selector: {
+            source: 'list',
+            id: listName,
+            id_selector: 'first',
+          },
+        },
+      },
+      transform: 'concatenate_list',
+    },
+  ],
+};
 {
   personName: {
     placeholder: 'person_name',
@@ -152,4 +172,5 @@ local getListCardinality(listName) = {
   },
   getListOrdinality: getListOrdinality,
   getListCardinality: getListCardinality,
+  firstPersonNameForList: firstPersonNameForList,
 }

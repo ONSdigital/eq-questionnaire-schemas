@@ -1,7 +1,9 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local listName = 'household';
+
+local question(title, description, additionalAnswerOptions=[]) = {
   id: 'past-usual-address-household-question',
   title: title,
   type: 'General',
@@ -10,7 +12,7 @@ local question(title, description) = {
     {
       id: 'past-usual-address-household-answer',
       mandatory: false,
-      options: [
+      options: additionalAnswerOptions + [
         {
           label: {
             text: '{household_address}',
@@ -48,17 +50,37 @@ local proxyTitle = {
 };
 local proxyDescription = 'If they had no usual address one year ago, state the address where they were staying';
 
+local additionalAnswerOption = [
+  {
+    label: {
+      text: 'Same address as {first_person}',
+      placeholders: [
+        placeholders.firstPersonNameForList(listName),
+      ],
+    },
+    value: 'Same address as {first_person}',
+  },
+];
+
 {
   type: 'Question',
   id: 'past-usual-household-address',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),
-      when: [rules.isNotProxy],
+      when: [rules.isNotProxy, rules.isFirstPersonInList(listName)],
+    },
+    {
+      question: question(nonProxyTitle, nonProxyDescription, additionalAnswerOption),
+      when: [rules.isNotProxy, rules.isNotFirstPersonInList(listName)],
     },
     {
       question: question(proxyTitle, proxyDescription),
-      when: [rules.isProxy],
+      when: [rules.isProxy, rules.isFirstPersonInList(listName)],
+    },
+    {
+      question: question(proxyTitle, proxyDescription, additionalAnswerOption),
+      when: [rules.isProxy, rules.isNotFirstPersonInList(listName)],
     },
   ],
   routing_rules: [
