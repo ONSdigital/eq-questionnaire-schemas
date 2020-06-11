@@ -2,9 +2,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'usual-address-uk',
+  id: 'usual-address-in-uk',
   question: {
-    id: 'usual-address-uk-question',
+    id: 'usual-address-in-uk-question',
     title: {
       text: 'On Sunday {census_date}, was your usual address in the UK?',
       placeholders: [
@@ -13,7 +13,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     type: 'General',
     answers: [{
-      id: 'usual-address-uk-answer',
+      id: 'usual-address-in-uk-answer',
       mandatory: false,
       options: [
         {
@@ -25,7 +25,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           value: 'No',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'usual-address-uk-other',
+            id: 'usual-address-in-uk-other',
             type: 'TextField',
             mandatory: false,
             label: 'Enter current name of country',
@@ -42,7 +42,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         block: 'outside-uk-interstitial',
         when: [
           {
-            id: 'usual-address-uk-answer',
+            id: 'usual-address-in-uk-answer',
             condition: 'equals',
             value: 'No',
           },

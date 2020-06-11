@@ -11,7 +11,7 @@ local outside_uk_interstitial = import 'ccs/blocks/who-lives-here/outside_uk_int
 local primary_person_list_collector = import 'ccs/blocks/who-lives-here/primary_person_list_collector.jsonnet';
 local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
 local usual_address = import 'ccs/blocks/who-lives-here/usual_address.jsonnet';
-local usual_address_uk = import 'ccs/blocks/who-lives-here/usual_address_uk.jsonnet';
+local usual_address_in_uk = import 'ccs/blocks/who-lives-here/usual_address_in_uk.jsonnet';
 local visitor_list_collector = import 'ccs/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'ccs/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
 
@@ -132,7 +132,7 @@ function(region_code, census_month_year_date) {
             who_lives_here_interstitial,
             primary_person_list_collector,
             anyone_else_usually_living,
-            usual_address_uk,
+            usual_address_in_uk,
             outside_uk_interstitial,
             usual_address,
             interviewer_note_interstitial,
@@ -149,6 +149,17 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
+      enabled: [
+        {
+          when: [
+            {
+              id: 'you-live-here-answer',
+              condition: 'contains',
+              value: 'Yes',
+            },
+          ],
+        },
+      ],
       summary: { show_on_completion: false },
       groups: [
         {
