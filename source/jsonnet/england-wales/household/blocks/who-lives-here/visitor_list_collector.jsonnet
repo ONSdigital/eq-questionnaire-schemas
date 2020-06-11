@@ -1,6 +1,52 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local addQuestionTitle(visitorsListEmpty) = (
+  if visitorsListEmpty then {
+    text: 'What is the name of the visitor staying overnight on Sunday {census_date} at {household_address}?',
+    placeholders: [
+      placeholders.censusDate,
+      placeholders.address,
+    ]
+  } else {
+    text: 'What is the name of the {ordinality} visitor staying overnight on Sunday {census_date} at {household_address}?',
+    placeholders: [
+      placeholders.censusDate,
+      placeholders.address,
+      placeholders.getListOrdinalityWithoutDeterminer('visitors'),
+    ],
+  }
+);
+
+local addQuestion(visitorsListEmpty) = {
+      id: 'visitor-add-question',
+      type:'General',
+      title: addQuestionTitle(visitorsListEmpty),
+      answers: [
+        {
+          id: 'first-name',
+          label: 'First name',
+          mandatory: true,
+          type: 'TextField',
+        },
+        {
+          id: 'last-name',
+          label: 'Last name',
+          mandatory: true,
+          type: 'TextField',
+          guidance: {
+            show_guidance: 'Why we ask about visitors',
+            hide_guidance: 'Why we ask about visitors',
+            contents: [
+              {
+                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
+              },
+            ],
+          },
+        },
+      ],
+    };
+
 {
   id: 'visitor-list-collector',
   type: 'ListCollector',
@@ -50,94 +96,23 @@ local rules = import 'rules.libsonnet';
     id: 'add-visitor',
     type: 'ListAddQuestion',
     question_variants: [
-      {
-        question: {
-          id: 'visitor-add-question',
-          type: 'General',
-          title: {
-            text: 'What is the name of the visitor staying overnight on Sunday {census_date} at {household_address}?',
-            placeholders: [
-              placeholders.censusDate,
-              placeholders.address,
-            ],
-          },
-          answers: [
-            {
-              id: 'first-name',
-              label: 'First name',
-              mandatory: true,
-              type: 'TextField',
-            },
-            {
-              id: 'last-name',
-              label: 'Last name',
-              mandatory: true,
-              type: 'TextField',
-              guidance: {
-                show_guidance: 'Why we ask about visitors',
-                hide_guidance: 'Why we ask about visitors',
-                contents: [
-                  {
-                    description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
-                  },
-                ],
-              },
-            },
-          ],
+        {
+          question: addQuestion(visitorsListEmpty=true),
+          when: [{
+                list: 'visitors',
+                condition: 'equals',
+                value: 0,
+              }],
         },
-        when: [
-          {
-            list: 'visitors',
-            condition: 'equals',
-            value: 0,
-          },
-        ],
-      },
-      {
-        question: {
-          id: 'visitor-add-question',
-          type: 'General',
-          title: {
-            text: 'What is the name of the {ordinality} visitor staying overnight on Sunday {census_date} at {household_address}?',
-            placeholders: [
-              placeholders.censusDate,
-              placeholders.address,
-              placeholders.getListOrdinalityWithoutDeterminer('visitors'),
-            ],
-          },
-          answers: [
-            {
-              id: 'first-name',
-              label: 'First name',
-              mandatory: true,
-              type: 'TextField',
-            },
-            {
-              id: 'last-name',
-              label: 'Last name',
-              mandatory: true,
-              type: 'TextField',
-              guidance: {
-                show_guidance: 'Why we ask about visitors',
-                hide_guidance: 'Why we ask about visitors',
-                contents: [
-                  {
-                    description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
-                  },
-                ],
-              },
-            },
-          ],
+        {
+          question: addQuestion(visitorsListEmpty=false),
+          when: [{
+                list: 'visitors',
+                condition: 'greater than',
+                value: 0,
+              }],
         },
-        when: [
-          {
-            list: 'visitors',
-            condition: 'greater than',
-            value: 0,
-          },
-        ],
-      },
-    ],
+      ],
   },
   edit_block: {
     id: 'edit-visitor',
@@ -195,8 +170,8 @@ local rules = import 'rules.libsonnet';
               value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, I don‘t want to remove this person',
-              value: 'No, I don‘t want to remove this person',
+              label: 'No, I do not want to remove this person',
+              value: 'No, I do not want to remove this person',
             },
           ],
         },

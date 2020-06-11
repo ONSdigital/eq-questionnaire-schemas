@@ -34,6 +34,9 @@ local contentDescription = {
           },
         ],
       },
+      {
+        description: 'The Householder is responsible for ensuring that this questionnaire is completed and submitted.',
+      },
     ],
   },
 }
