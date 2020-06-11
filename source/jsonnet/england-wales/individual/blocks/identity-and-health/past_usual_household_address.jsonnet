@@ -1,7 +1,9 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local listName = 'household';
+
+local question(title, description, answer_option) = {
   id: 'past-usual-address-household-question',
   title: title,
   type: 'General',
@@ -10,16 +12,7 @@ local question(title, description) = {
     {
       id: 'past-usual-address-household-answer',
       mandatory: false,
-      options: [
-        {
-          label: {
-            text: '{household_address}',
-            placeholders: [
-              placeholders.address,
-            ],
-          },
-          value: '{household_address}',
-        },
+      options: answer_option + [
         {
           label: 'Student term-time or boarding school address in the UK',
           value: 'Student term-time or boarding school address in the UK',
@@ -48,17 +41,49 @@ local proxyTitle = {
 };
 local proxyDescription = 'If they had no usual address one year ago, state the address where they were staying';
 
+local answerOptionForPerson1 = [
+  {
+    label: {
+        text: '{household_address}',
+        placeholders: [
+        placeholders.address,
+        ],
+    },
+    value: '{household_address}',
+  },
+];
+
+local answerOptionForPerson2Onwards = [
+  {
+    label: {
+      text: 'Same address as {first_person}',
+      placeholders: [
+        placeholders.firstPersonNameForList(listName),
+      ],
+    },
+    value: 'Same address as {first_person}',
+  },
+];
+
 {
   type: 'Question',
   id: 'past-usual-household-address',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
-      when: [rules.isNotProxy],
+      question: question(nonProxyTitle, nonProxyDescription, answerOptionForPerson1),
+      when: [rules.isNotProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(proxyTitle, proxyDescription),
-      when: [rules.isProxy],
+      question: question(nonProxyTitle, nonProxyDescription, answerOptionForPerson2Onwards),
+      when: [rules.isNotProxy, rules.isNotFirstPersonInList(listName)],
+    },
+    {
+      question: question(proxyTitle, proxyDescription, answerOptionForPerson1),
+      when: [rules.isProxy, rules.isFirstPersonInList(listName)],
+    },
+    {
+      question: question(proxyTitle, proxyDescription, answerOptionForPerson2Onwards),
+      when: [rules.isProxy, rules.isNotFirstPersonInList(listName)],
     },
   ],
   routing_rules: [
