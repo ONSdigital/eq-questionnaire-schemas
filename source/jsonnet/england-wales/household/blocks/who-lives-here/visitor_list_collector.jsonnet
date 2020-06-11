@@ -7,7 +7,7 @@ local addQuestionTitle(visitorsListEmpty) = (
     placeholders: [
       placeholders.censusDate,
       placeholders.address,
-    ]
+    ],
   } else {
     text: 'What is the name of the {ordinality} visitor staying overnight on Sunday {census_date} at {household_address}?',
     placeholders: [
@@ -19,33 +19,33 @@ local addQuestionTitle(visitorsListEmpty) = (
 );
 
 local addQuestion(visitorsListEmpty) = {
-      id: 'visitor-add-question',
-      type:'General',
-      title: addQuestionTitle(visitorsListEmpty),
-      answers: [
-        {
-          id: 'first-name',
-          label: 'First name',
-          mandatory: true,
-          type: 'TextField',
-        },
-        {
-          id: 'last-name',
-          label: 'Last name',
-          mandatory: true,
-          type: 'TextField',
-          guidance: {
-            show_guidance: 'Why we ask about visitors',
-            hide_guidance: 'Why we ask about visitors',
-            contents: [
-              {
-                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
-              },
-            ],
+  id: 'visitor-add-question',
+  type: 'General',
+  title: addQuestionTitle(visitorsListEmpty),
+  answers: [
+    {
+      id: 'first-name',
+      label: 'First name',
+      mandatory: true,
+      type: 'TextField',
+    },
+    {
+      id: 'last-name',
+      label: 'Last name',
+      mandatory: true,
+      type: 'TextField',
+      guidance: {
+        show_guidance: 'Why we ask about visitors',
+        hide_guidance: 'Why we ask about visitors',
+        contents: [
+          {
+            description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
           },
-        },
-      ],
-    };
+        ],
+      },
+    },
+  ],
+};
 
 {
   id: 'visitor-list-collector',
@@ -96,23 +96,23 @@ local addQuestion(visitorsListEmpty) = {
     id: 'add-visitor',
     type: 'ListAddQuestion',
     question_variants: [
-        {
-          question: addQuestion(visitorsListEmpty=true),
-          when: [{
-                list: 'visitors',
-                condition: 'equals',
-                value: 0,
-              }],
-        },
-        {
-          question: addQuestion(visitorsListEmpty=false),
-          when: [{
-                list: 'visitors',
-                condition: 'greater than',
-                value: 0,
-              }],
-        },
-      ],
+      {
+        question: addQuestion(visitorsListEmpty=true),
+        when: [{
+          list: 'visitors',
+          condition: 'equals',
+          value: 0,
+        }],
+      },
+      {
+        question: addQuestion(visitorsListEmpty=false),
+        when: [{
+          list: 'visitors',
+          condition: 'greater than',
+          value: 0,
+        }],
+      },
+    ],
   },
   edit_block: {
     id: 'edit-visitor',
