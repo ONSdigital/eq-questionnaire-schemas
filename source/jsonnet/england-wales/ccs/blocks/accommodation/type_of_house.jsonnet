@@ -3,6 +3,7 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'type-of-house-question',
   title: title,
+  instruction: 'Ask the respondent to continue looking at <strong>Showcard 3</strong> or show them the options below',
   type: 'General',
   answers: [{
     id: 'type-of-house-answer',
