@@ -29,7 +29,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             type: 'TextField',
             mandatory: false,
             label: 'Enter current name of country',
-            visible: true,
           },
         },
       ],
