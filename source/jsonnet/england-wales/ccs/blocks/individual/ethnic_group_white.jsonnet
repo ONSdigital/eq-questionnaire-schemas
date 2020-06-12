@@ -15,7 +15,7 @@ local walesInstruction = 'Ask the respondent to continue looking at <strong>Show
 local englandOption = 'English, Welsh, Scottish, Northern Irish or British';
 local walesOption = 'Welsh, English, Scottish, Northern Irish or British';
 
-local question(title, region_code) = (
+local question(title, instruction, region_code) = (
   local radioOptions = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
     id: 'white-ethnic-group-question',

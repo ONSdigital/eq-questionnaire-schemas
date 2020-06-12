@@ -1,9 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local englandInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9E</strong> or show them the options below';
+local walesInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9W</strong> or show them the options below';
+
+local question(title, instruction) = {
   id: 'other-ethnic-group-question',
   title: title,
+  instruction: instruction,
   type: 'General',
   answers: [
     {
@@ -39,16 +43,18 @@ local proxyTitle = {
   ],
 };
 
-{
+function(region_code) {
+  local instruction = if region_code == 'GB-WLS' then walesInstruction else englandInstruction,
+
   type: 'Question',
   id: 'other-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, instruction),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, instruction),
       when: [rules.isProxy],
     },
   ],

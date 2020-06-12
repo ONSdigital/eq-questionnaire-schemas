@@ -1,9 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local englandInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9E</strong> or show them the options below';
+local walesInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9W</strong> or show them the options below';
+
+local question(title, instruction) = {
   id: 'asian-ethnic-group-question',
   title: title,
+  instruction: instruction,
   type: 'General',
   answers: [
     {
@@ -43,24 +47,35 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Which one best describes your Asian or Asian British ethnic group or background?';
-local proxyTitle = {
+local nonProxyEnglandTitle = 'Which one best describes your Asian or Asian British ethnic group or background?';
+local proxyEnglandTitle = {
   text: 'Which one best describes <em>{person_name_possessive}</em> Asian or Asian British ethnic group or background?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
 };
+local nonProxyWalesTitle = 'Which one best describes your Asian, Asian Welsh or Asian British ethnic group or background?';
+local proxyWalesTitle = {
+  text: 'Which one best describes <em>{person_name_possessive}</em> Asian, Asian Welsh or Asian British ethnic group or background?',
+  placeholders: [
+    placeholders.personNamePossessive,
+  ],
+};
 
-{
+function(region_code) {
+  local instruction = if region_code == 'GB-WLS' then walesInstruction else englandInstruction,
+  local nonProxyTitle = if region_code == 'GB-WLS' then nonProxyWalesTitle else nonProxyEnglandTitle,
+  local proxyTitle = if region_code == 'GB-WLS' then proxyWalesTitle else proxyEnglandTitle,
+
   type: 'Question',
   id: 'asian-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, instruction),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, instruction),
       when: [rules.isProxy],
     },
   ],
