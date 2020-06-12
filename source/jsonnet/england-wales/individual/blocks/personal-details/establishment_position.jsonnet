@@ -6,10 +6,10 @@ local question(title) = {
   title: title,
   definitions: [
     {
-      title: 'What is an establishment?',
+      title: 'What we mean by “establishment”',
       contents: [
         {
-          description: 'A communal establishment is an establishment providing managed residential accommodation. ”Managed” in this context means full-time or part-time supervision of the accommodation. Examples of communal establishments include student halls of residence, boarding schools, armed forces bases, hospitals, care homes and prisons',
+          description: 'A communal establishment is an establishment providing managed residential accommodation. ”Managed” in this context means full-time or part-time supervision of the accommodation. Examples of communal establishments include student halls of residence, boarding schools, armed forces bases, hospitals, care homes and prisons.',
         },
       ],
     },
