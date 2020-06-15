@@ -77,6 +77,35 @@ local firstPersonNameForList(listName) = {
   ],
 };
 
+local firstPersonNamePossessiveForList(listName) = {
+  placeholder: 'first_person',
+  transforms: [
+    {
+      arguments: {
+        delimiter: ' ',
+        list_to_concatenate: {
+          identifier: ['first-name', 'last-name'],
+          source: 'answers',
+          list_item_selector: {
+            source: 'list',
+            id: listName,
+            id_selector: 'first',
+          },
+        },
+      },
+      transform: 'concatenate_list',
+    },
+    {
+      transform: 'format_possessive',
+      arguments: {
+        string_to_format: {
+          source: 'previous_transform',
+        },
+      },
+    },
+  ],
+};
+
 {
   personName: {
     placeholder: 'person_name',
@@ -149,4 +178,5 @@ local firstPersonNameForList(listName) = {
   getListOrdinalityWithoutDeterminer: getListOrdinalityWithoutDeterminer,
   getListCardinality: getListCardinality,
   firstPersonNameForList: firstPersonNameForList,
+  firstPersonNamePossessiveForList: firstPersonNamePossessiveForList,
 }
