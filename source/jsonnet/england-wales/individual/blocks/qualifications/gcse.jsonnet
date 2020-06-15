@@ -15,19 +15,19 @@ local walesQuestionDescription = 'This could be equivalent qualifications achiev
 
 local englandGuidanceProxy = [
   'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in England and Wales usually complete GCSEs at school by the age of 16 years.',
-  'If they have achieved CSEs, O levels or any other similar qualifications outside of England and Wales, choose the options they think are the closest match.',
+  'If they have achieved CSEs, O levels or other similar qualifications outside of England and Wales, choose the options they think are the closest match.',
 ];
 local englandGuidanceNonProxy = [
   'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in England and Wales usually complete GCSEs at school by the age of 16 years.',
-  'If you have achieved CSEs, O levels or any other similar qualifications outside of England and Wales, choose the options you think are the closest match.',
+  'If you have achieved CSEs, O levels or other similar qualifications outside of England and Wales, choose the options you think are the closest match.',
 ];
 local walesGuidanceProxy = [
   'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in Wales and England usually complete GCSEs at school by the age of 16 years.',
-  'If they have achieved CSEs, O levels or any other similar qualifications outside of Wales and England, choose the options they think are the closest match.',
+  'If they have achieved CSEs, O levels or other similar qualifications outside of Wales and England, choose the options they think are the closest match.',
 ];
 local walesGuidanceNonProxy = [
   'This is a General Certificate of Secondary Education. GCSEs are subject based. Students in Wales and England usually complete GCSEs at school by the age of 16 years.',
-  'If you have achieved CSEs, O levels or any other similar qualifications outside of Wales and England, choose the options you think are the closest match. ',
+  'If you have achieved CSEs, O levels or other similar qualifications outside of Wales and England, choose the options you think are the closest match. ',
 ];
 
 local walesOptions = [

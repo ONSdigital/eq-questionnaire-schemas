@@ -90,11 +90,11 @@ function(region_code) {
   id: 'national-identity',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code, 'You can enter your national identity on the next question'),
+      question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code, 'You can describe your national identity on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code, 'You can enter their national identity on the next question'),
+      question: question(proxyTitle, proxyDescription, proxyDetailAnswerLabel, region_code, 'You can describe their national identity on the next question'),
       when: [rules.isProxy],
     },
   ],

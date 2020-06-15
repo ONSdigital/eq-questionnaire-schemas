@@ -97,7 +97,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'employer-address-workplace',
+        block: 'mainly-work-in-uk',
         when: [
           {
             id: 'employer-type-of-address-answer',

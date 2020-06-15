@@ -2,18 +2,18 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'anyone-else-usually-living',
+  id: 'usual-address-in-uk',
   question: {
-    id: 'anyone-else-usually-living-question',
+    id: 'usual-address-in-uk-question',
     title: {
-      text: 'Was anyone in your current household usually living here on Sunday {census_date}?',
+      text: 'On Sunday {census_date}, was your usual address in the UK?',
       placeholders: [
         placeholders.censusDate,
       ],
     },
     type: 'General',
     answers: [{
-      id: 'anyone-else-usually-living-answer',
+      id: 'usual-address-in-uk-answer',
       mandatory: false,
       options: [
         {
@@ -23,6 +23,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         {
           label: 'No',
           value: 'No',
+          description: 'Select to enter answer',
+          detail_answer: {
+            id: 'usual-address-in-uk-other',
+            type: 'TextField',
+            mandatory: false,
+            label: 'Enter current name of country',
+          },
         },
       ],
       type: 'Radio',
@@ -31,10 +38,10 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'usual-address-in-uk',
+        block: 'outside-uk-interstitial',
         when: [
           {
-            id: 'anyone-else-usually-living-answer',
+            id: 'usual-address-in-uk-answer',
             condition: 'equals',
             value: 'No',
           },
@@ -43,7 +50,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     {
       goto: {
-        block: 'interviewer-note-interstitial',
+        block: 'usual-address',
       },
     },
   ],

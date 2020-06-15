@@ -201,17 +201,13 @@ local editQuestion(questionTitle) = {
     question: {
       id: 'anyone-else-temp-away-remove-question',
       type: 'General',
-      guidance: {
-        contents: [{
-          title: 'All of the data entered about this person will be deleted',
-        }],
-      },
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
           placeholders.personName,
         ],
       },
+      warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
           id: 'anyone-else-temp-away-remove-confirmation',
@@ -223,8 +219,8 @@ local editQuestion(questionTitle) = {
               value: 'Yes, I want to remove this person',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No, I don‘t want to remove this person',
+              value: 'No, I don‘t want to remove this person',
             },
           ],
         },
