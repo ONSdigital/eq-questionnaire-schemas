@@ -52,6 +52,21 @@ local proxyTitle = {
         when: [
           {
             id: 'employer-type-of-address-answer',
+            condition: 'not set',
+          },
+          {
+            id: 'mainly-work-in-uk-answer',
+            condition: 'not set',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'employer-address-workplace',
+        when: [
+          {
+            id: 'employer-type-of-address-answer',
             condition: 'equals',
             value: 'At a workplace',
           },

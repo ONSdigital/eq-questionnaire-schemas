@@ -46,8 +46,8 @@ local rules = import 'rules.libsonnet';
             },
           },
           {
-            label: 'People who usually live outside the UK who are staying in the UK for less than three months',
-            value: 'People who usually live outside the UK who are staying in the UK for less than three months',
+            label: 'People who usually live outside the UK who are staying in the UK for less than 3 months',
+            value: 'People who usually live outside the UK who are staying in the UK for less than 3 months',
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
@@ -69,8 +69,8 @@ local rules = import 'rules.libsonnet';
           },
         ],
         guidance: {
-          show_guidance: 'Why we ask about visitors?',
-          hide_guidance: 'Why we ask about visitors?',
+          show_guidance: 'Why we ask about visitors',
+          hide_guidance: 'Why we ask about visitors',
           contents: [
             {
               description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
@@ -85,12 +85,12 @@ local rules = import 'rules.libsonnet';
         options: [
           {
             label: {
-              text: 'There are no visitors staying here overnight on {census_date}',
+              text: 'There are no visitors staying overnight here on Sunday {census_date}',
               placeholders: [
                 placeholders.censusDate,
               ],
             },
-            value: 'There are no visitors staying here overnight on {census_date}',
+            value: 'There are no visitors staying overnight here on Sunday {census_date}',
           },
         ],
       },
