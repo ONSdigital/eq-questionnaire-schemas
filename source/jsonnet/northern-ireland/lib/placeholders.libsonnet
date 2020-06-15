@@ -54,7 +54,7 @@ local firstPersonNameForList(listName) = {
   ],
 };
 local firstPersonNamePossessiveForList(listName) = {
-  placeholder: 'first_person',
+  placeholder: 'first_person_possessive',
   transforms: [
     {
       arguments: {

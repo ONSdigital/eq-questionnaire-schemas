@@ -54,12 +54,12 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
 local additionalAnswerOption = [
   {
     label: {
-      text: 'Same as {first_person} address one year ago',
+      text: 'Same as {first_person_possessive} address one year ago',
       placeholders: [
         placeholders.firstPersonNamePossessiveForList(listName),
       ],
     },
-    value: 'Same as {first_person} address one year ago',
+    value: 'Same as {first_person_possessive} address one year ago',
   },
 ];
 
