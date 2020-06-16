@@ -39,6 +39,7 @@ local term_time_country_outside_uk = import 'individual/blocks/personal-details/
 local term_time_location = import 'individual/blocks/personal-details/term_time_location.jsonnet';
 
 // Identity and Health
+local past_usual_household_address = import 'household/blocks/individual/past_usual_household_address.jsonnet';
 local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
 local carer = import 'individual/blocks/identity-and-health/carer.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
@@ -63,7 +64,6 @@ local passports = import 'individual/blocks/identity-and-health/passports.jsonne
 local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
 local passports_other = import 'individual/blocks/identity-and-health/passports_other.jsonnet';
 local past_usual_address_outside_uk = import 'individual/blocks/identity-and-health/past_usual_address_outside_uk.jsonnet';
-local past_usual_household_address = import 'individual/blocks/identity-and-health/past_usual_household_address.jsonnet';
 local religion = import 'individual/blocks/identity-and-health/religion.jsonnet';
 local religion_other = import 'individual/blocks/identity-and-health/religion_other.jsonnet';
 
