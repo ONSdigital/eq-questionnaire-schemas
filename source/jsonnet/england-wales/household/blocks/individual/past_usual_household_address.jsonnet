@@ -58,7 +58,7 @@ local additionalAnswerOption = [
         placeholders.firstPersonNamePossessiveForList(listName),
       ],
     },
-    value: 'Same as {first_person} address one year ago',
+    value: 'Same as {first_person_possessive} address one year ago',
   },
 ];
 
