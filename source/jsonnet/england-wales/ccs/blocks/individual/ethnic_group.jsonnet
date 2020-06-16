@@ -9,27 +9,25 @@ local proxyTitle = {
   ],
 };
 
-local englandInstruction = 'Tell the respondent to turn to <strong>Showcard 9E</strong> or show them the options below';
-local walesInstruction = 'Tell the respondent to turn to <strong>Showcard 9W</strong> or show them the options below';
+local englandStrings = {
+  instruction: 'Tell the respondent to turn to <strong>Showcard 9E</strong> or show them the options below',
+  description: 'Includes British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background',
+  asianOption: 'Asian or Asian British',
+  blackOption: 'Black, Black British, Caribbean or African',
+};
 
-local englandDescription = 'Includes British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background';
-local walesDescription = 'Includes Welsh, British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background';
+local walesStrings = {
+  instruction: 'Tell the respondent to turn to <strong>Showcard 9W</strong> or show them the options below',
+  description: 'Includes Welsh, British, Northern Irish, Irish, Gypsy, Irish Traveller, Roma or any other White background',
+  asianOption: 'Asian, Asian Welsh or Asian British',
+  blackOption: 'Black, Black Welsh, Black British, Caribbean or African',
+};
 
-local englandAsianOption = 'Asian or Asian British';
-local walesAsianOption = 'Asian, Asian Welsh or Asian British';
-
-local englandBlackOption = 'Black, Black British, Caribbean or African';
-local walesBlackOption = 'Black, Black Welsh, Black British, Caribbean or African';
-
-local question(title, instruction, region_code) = (
-  local regionDescription = if region_code == 'GB-WLS' then walesDescription else englandDescription;
-  local asianOption = if region_code == 'GB-WLS' then walesAsianOption else englandAsianOption;
-  local blackOption = if region_code == 'GB-WLS' then walesBlackOption else englandBlackOption;
-
+local question(title, regionStrings, region_code) = (
   {
     id: 'ethnic-group-question',
     title: title,
-    instruction: instruction,
+    instruction: regionStrings.instruction,
     type: 'General',
     answers: [
       {
@@ -39,7 +37,7 @@ local question(title, instruction, region_code) = (
           {
             label: 'White',
             value: 'White',
-            description: regionDescription,
+            description: regionStrings.description,
           },
           {
             label: 'Mixed or Multiple ethnic groups',
@@ -47,13 +45,13 @@ local question(title, instruction, region_code) = (
             description: 'Includes White and Black Caribbean, White and Black African, White and Asian or any other Mixed or Multiple',
           },
           {
-            label: asianOption,
-            value: asianOption,
+            label: regionStrings.asianOption,
+            value: regionStrings.asianOption,
             description: 'Includes Indian, Pakistani, Bangladeshi, Chinese or any other Asian background',
           },
           {
-            label: blackOption,
-            value: blackOption,
+            label: regionStrings.blackOption,
+            value: regionStrings.blackOption,
             description: 'Includes Black British, Caribbean, African or any other Black background',
           },
           {
@@ -69,19 +67,17 @@ local question(title, instruction, region_code) = (
 );
 
 function(region_code) {
-  local instruction = if region_code == 'GB-WLS' then walesInstruction else englandInstruction,
-  local asianOption = if region_code == 'GB-WLS' then walesAsianOption else englandAsianOption,
-  local blackOption = if region_code == 'GB-WLS' then walesBlackOption else englandBlackOption,
+  local regionStrings = if region_code == 'GB-WLS' then walesStrings else englandStrings,
 
   type: 'Question',
   id: 'ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyTitle, instruction, region_code),
+      question: question(nonProxyTitle, regionStrings, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, instruction, region_code),
+      question: question(proxyTitle, regionStrings, region_code),
       when: [rules.isProxy],
     },
   ],
@@ -117,7 +113,7 @@ function(region_code) {
           {
             id: 'ethnic-group-answer',
             condition: 'equals',
-            value: asianOption,
+            value: regionStrings.asianOption,
           },
         ],
       },
@@ -129,7 +125,7 @@ function(region_code) {
           {
             id: 'ethnic-group-answer',
             condition: 'equals',
-            value: blackOption,
+            value: regionStrings.blackOption,
           },
         ],
       },
