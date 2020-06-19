@@ -67,13 +67,7 @@ local editQuestion(questionTitle) = {
         type: 'General',
         id: 'anyone-usually-live-at-question',
         title: questionTitle,
-        guidance: {
-          contents: [
-            {
-              description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
-            },
-          ],
-        },
+        description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         definitions: [
           {
@@ -134,13 +128,7 @@ local editQuestion(questionTitle) = {
             placeholders.censusDate,
           ],
         },
-        guidance: {
-          contents: [
-            {
-              description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
-            },
-          ],
-        },
+        description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
         definitions: [
           {
