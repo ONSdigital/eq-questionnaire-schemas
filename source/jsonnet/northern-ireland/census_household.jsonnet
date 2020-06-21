@@ -168,7 +168,23 @@ function(region_code) {
           {
             type: 'List',
             for_list: 'household',
-            title: 'Household members',
+            title: {
+              text_plural: {
+                forms: {
+                  one: 'You said {cardinality} person is living here on Sunday {census_date}',
+                  other: 'You said {cardinality} people are living here on Sunday {census_date}',
+                },
+                count: {
+                  source: 'list',
+                  identifier: 'household',
+                },
+              },
+
+              placeholders: [
+                placeholders.censusDate,
+                placeholders.getListCardinality('household'),
+              ],
+            },
             add_link_text: 'Add someone to this household',
             empty_list_text: 'There are no householders',
           },
@@ -176,9 +192,20 @@ function(region_code) {
             type: 'List',
             for_list: 'visitors',
             title: {
-              text: 'Visitors staying overnight on {census_date}',
+              text_plural: {
+                forms: {
+                  one: 'You said {cardinality} visitor is staying overnight here on Sunday {census_date}',
+                  other: 'You said {cardinality} visitors are staying overnight here on Sunday {census_date}',
+                },
+                count: {
+                  source: 'list',
+                  identifier: 'visitors',
+                },
+              },
+
               placeholders: [
                 placeholders.censusDate,
+                placeholders.getListCardinality('visitors'),
               ],
             },
             add_link_text: 'Add someone to this household',
