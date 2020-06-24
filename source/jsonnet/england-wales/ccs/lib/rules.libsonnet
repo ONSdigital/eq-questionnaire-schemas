@@ -49,6 +49,18 @@ local livingAtCurrentAddress = {
   value: 'Yes, living at this address',
 };
 
+local isHouseholdAddress = {
+  id: 'usual-address-in-uk-answer',
+  condition: 'not set',
+};
+
+
+local isNotHouseholdAddress = {
+  id: 'usual-address-in-uk-answer',
+  condition: 'equals',
+  value: 'Yes',
+};
+
 {
   isNotProxy: {
     id: 'proxy-answer',
@@ -67,5 +79,7 @@ local livingAtCurrentAddress = {
   livingAtCurrentAddress: livingAtCurrentAddress,
   isFirstPersonInList: isFirstPersonInList,
   isNotFirstPersonInList: isNotFirstPersonInList,
+  isHouseholdAddress: isHouseholdAddress,
+  isNotHouseholdAddress: isNotHouseholdAddress,
 
 } + common_rules
