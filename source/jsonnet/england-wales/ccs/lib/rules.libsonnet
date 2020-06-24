@@ -50,15 +50,16 @@ local livingAtCurrentAddress = {
 };
 
 local isHouseholdAddress = {
-  id: 'usual-address-in-uk-answer',
-  condition: 'not set',
+  id: 'you-live-here-answer',
+  condition: 'equals',
+  value: 'Yes',
 };
 
 
 local isNotHouseholdAddress = {
-  id: 'usual-address-in-uk-answer',
+  id: 'you-live-here-answer',
   condition: 'equals',
-  value: 'Yes',
+  value: 'No',
 };
 
 {
