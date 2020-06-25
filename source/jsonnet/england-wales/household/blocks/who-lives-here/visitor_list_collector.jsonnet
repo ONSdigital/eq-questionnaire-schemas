@@ -132,12 +132,22 @@ local addQuestion(visitorsListEmpty) = {
           label: 'First name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+            },
+          },
         },
         {
           id: 'last-name',
           label: 'Last name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+            },
+          },
         },
       ],
     },

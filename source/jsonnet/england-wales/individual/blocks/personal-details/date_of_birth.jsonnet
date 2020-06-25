@@ -28,6 +28,11 @@ local question(title) = {
       maximum: {
         value: 'now',
       },
+      validation: {
+        messages: {
+          MANDATORY_DATE: 'Enter a date of birth to continue',
+        },
+      },
     },
   ],
 };

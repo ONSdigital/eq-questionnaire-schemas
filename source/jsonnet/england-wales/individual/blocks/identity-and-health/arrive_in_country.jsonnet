@@ -9,7 +9,7 @@ local question(title) = {
   answers: [
     {
       id: 'arrive-in-country-answer',
-      mandatory: false,
+      mandatory: true,
       type: 'MonthYearDate',
       minimum: {
         value: {
@@ -19,6 +19,11 @@ local question(title) = {
       },
       maximum: {
         value: 'now',
+      },
+      validation: {
+        messages: {
+          MANDATORY_DATE: 'Enter date of arrival to continue',
+        },
       },
     },
   ],

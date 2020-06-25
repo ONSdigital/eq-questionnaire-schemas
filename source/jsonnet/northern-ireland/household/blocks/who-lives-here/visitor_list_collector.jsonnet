@@ -97,6 +97,11 @@ local removePersonQuestionTitle = {
           label: 'First name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+            },
+          },
         },
         {
           id: 'last-name',
@@ -111,6 +116,11 @@ local removePersonQuestionTitle = {
                 description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
               },
             ],
+          },
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+            },
           },
         },
       ],
@@ -129,12 +139,22 @@ local removePersonQuestionTitle = {
           label: 'First name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+            },
+          },
         },
         {
           id: 'last-name',
           label: 'Last name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+            },
+          },
         },
       ],
     },
