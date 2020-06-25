@@ -176,6 +176,12 @@ function(region_code, census_month_year_date) {
       title: 'People who live here',
       summary: {
         show_on_completion: true,
+        title: {
+          text: 'People who live at {household_address} and overnight visitors',
+          placeholders: [
+            placeholders.address,
+          ],
+        },
         items: [
           {
             type: 'List',
