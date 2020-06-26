@@ -1,8 +1,8 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle(isHouseholdAddress) = (
-  if isHouseholdAddress then {
+local questionTitle(livesAtHouseholdAddress) = (
+  if livesAtHouseholdAddress then {
     text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
     placeholders: [
       placeholders.address,
@@ -12,16 +12,16 @@ local questionTitle(isHouseholdAddress) = (
   else {
     text: 'How many visitors were staying overnight at {other_address} on Sunday {census_date}?',
     placeholders: [
-      placeholders.otherAddress,
+      placeholders.otherHouseholdAddress,
       placeholders.censusDate,
     ],
   }
 );
 
-local question(isHouseholdAddress) = {
+local question(livesAtHouseholdAddress) = {
   type: 'General',
   id: 'any-visitors-question',
-  title: questionTitle(isHouseholdAddress),
+  title: questionTitle(livesAtHouseholdAddress),
   description: 'A visitor is a person staying overnight who usually lives at another address',
   instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
   definitions: [
@@ -87,11 +87,11 @@ local question(isHouseholdAddress) = {
   id: 'any-visitors',
   question_variants: [
     {
-      question: question(isHouseholdAddress=true),
+      question: question(livesAtHouseholdAddress=true),
       when: [rules.livesAtHouseholdAddress],
     },
     {
-      question: question(isHouseholdAddress=false),
+      question: question(livesAtHouseholdAddress=false),
       when: [rules.doesntLiveAtHouseholdAddress],
     },
   ],

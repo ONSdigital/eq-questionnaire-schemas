@@ -174,7 +174,7 @@ local firstPersonNamePossessiveForList(listName) = {
       },
     }],
   },
-  otherAddress: {
+  otherHouseholdAddress: {
     placeholder: 'other_address',
     transforms: [
       {
