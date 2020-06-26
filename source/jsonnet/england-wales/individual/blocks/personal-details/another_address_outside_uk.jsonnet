@@ -14,6 +14,11 @@ local question(title) = {
       mandatory: true,
       suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/countries-of-birth.json',
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a country to continue',
+        },
+      },
     },
   ],
 };
