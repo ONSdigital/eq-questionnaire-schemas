@@ -16,7 +16,6 @@ local question(title, guidanceHeader, description) = {
     {
       id: 'sexual-identity-answer',
       mandatory: false,
-      label: '',
       voluntary: true,
       guidance: {
         show_guidance: guidanceHeader,

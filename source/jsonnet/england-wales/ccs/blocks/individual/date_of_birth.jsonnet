@@ -3,7 +3,6 @@ local rules = import 'rules.libsonnet';
 
 local question(title) = {
   id: 'date-of-birth-question',
-  description: '',
   type: 'MutuallyExclusive',
   title: title,
   mandatory: false,

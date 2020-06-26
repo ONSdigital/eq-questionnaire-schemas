@@ -18,7 +18,6 @@ local question(title, otherDescription) = {
     {
       id: 'no-religion-answer',
       mandatory: false,
-      label: '',
       options: [
         {
           label: 'Roman Catholic',

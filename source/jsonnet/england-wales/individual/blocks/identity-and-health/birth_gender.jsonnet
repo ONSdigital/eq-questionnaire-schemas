@@ -16,7 +16,6 @@ local question(title) = {
     {
       id: 'birth-gender-answer',
       mandatory: false,
-      label: '',
       voluntary: true,
       options: [
         {

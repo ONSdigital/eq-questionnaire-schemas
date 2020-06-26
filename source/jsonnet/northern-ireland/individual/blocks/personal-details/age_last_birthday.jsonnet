@@ -6,7 +6,6 @@ local rules = import 'rules.libsonnet';
   id: 'age-last-birthday',
   question: {
     id: 'age-last-birthday-question',
-    description: '',
     type: 'General',
     title: {
       text: 'What was <em>{person_name_possessive}</em> age on their last birthday?',
@@ -29,7 +28,6 @@ local rules = import 'rules.libsonnet';
       },
       {
         id: 'age-estimate-answer',
-        label: '',
         mandatory: false,
         type: 'Checkbox',
         options: [

@@ -262,7 +262,7 @@ function(region_code) {
       groups: [
         {
           id: 'accommodation-group',
-          title: '',
+          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             accommodation_type,
@@ -441,7 +441,7 @@ function(region_code) {
       groups: [
         {
           id: 'visitor-group',
-          title: '',
+          title: 'Visitor group',
           blocks: [
             visitor_interstitial,
             visitor_dob,

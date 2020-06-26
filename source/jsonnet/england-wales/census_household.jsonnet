@@ -274,7 +274,7 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'accommodation-group',
-          title: '',
+          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             accommodation_type,
@@ -459,7 +459,7 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'visitor-group',
-          title: '',
+          title: 'Visitor Group',
           blocks: [
             visitor_interstitial,
             visitor_dob,
