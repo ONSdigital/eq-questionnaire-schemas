@@ -17,6 +17,11 @@ local question(title, mandatory) = {
       id: 'date-of-birth-answer',
       mandatory: mandatory,
       type: 'Date',
+      validation: {
+        messages: {
+          MANDATORY_DATE: 'Enter a date of birth to continue',
+        },
+      },
       minimum: {
         value: std.extVar('census_date'),
         offset_by: {
