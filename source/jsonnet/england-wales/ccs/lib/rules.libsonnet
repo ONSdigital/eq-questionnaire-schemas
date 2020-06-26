@@ -49,14 +49,14 @@ local livingAtCurrentAddress = {
   value: 'Yes, living at this address',
 };
 
-local isHouseholdAddress = {
+local livesAtHouseholdAddress = {
   id: 'you-live-here-answer',
   condition: 'equals',
   value: 'Yes',
 };
 
 
-local isNotHouseholdAddress = {
+local doesntLiveAtHouseholdAddress = {
   id: 'you-live-here-answer',
   condition: 'equals',
   value: 'No',
@@ -80,7 +80,7 @@ local isNotHouseholdAddress = {
   livingAtCurrentAddress: livingAtCurrentAddress,
   isFirstPersonInList: isFirstPersonInList,
   isNotFirstPersonInList: isNotFirstPersonInList,
-  isHouseholdAddress: isHouseholdAddress,
-  isNotHouseholdAddress: isNotHouseholdAddress,
+  livesAtHouseholdAddress: livesAtHouseholdAddress,
+  doesntLiveAtHouseholdAddress: doesntLiveAtHouseholdAddress,
 
 } + common_rules

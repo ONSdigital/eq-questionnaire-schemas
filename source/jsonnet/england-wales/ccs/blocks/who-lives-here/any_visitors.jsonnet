@@ -1,26 +1,27 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local householdAddressTitle = {
-  text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
-  placeholders: [
-    placeholders.address,
-    placeholders.censusDate,
-  ],
-};
+local questionTitle(isHouseholdAddress) = (
+  if isHouseholdAddress then {
+    text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
+    placeholders: [
+      placeholders.address,
+      placeholders.censusDate,
+    ],
+  }
+  else {
+    text: 'How many visitors were staying overnight at {other_address} on Sunday {census_date}?',
+    placeholders: [
+      placeholders.otherAddress,
+      placeholders.censusDate,
+    ],
+  }
+);
 
-local otherAddressTitle = {
-  text: 'How many visitors were staying overnight at {other_address} on Sunday {census_date}?',
-  placeholders: [
-    placeholders.otherAddress,
-    placeholders.censusDate,
-  ],
-};
-
-local question(title) = {
+local question(isHouseholdAddress) = {
   type: 'General',
   id: 'any-visitors-question',
-  title: title,
+  title: questionTitle(isHouseholdAddress),
   description: 'A visitor is a person staying overnight who usually lives at another address',
   instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the Electronic Showcard below',
   definitions: [
@@ -86,12 +87,12 @@ local question(title) = {
   id: 'any-visitors',
   question_variants: [
     {
-      question: question(householdAddressTitle),
-      when: [rules.isHouseholdAddress],
+      question: question(isHouseholdAddress=true),
+      when: [rules.livesAtHouseholdAddress],
     },
     {
-      question: question(otherAddressTitle),
-      when: [rules.isNotHouseholdAddress],
+      question: question(isHouseholdAddress=false),
+      when: [rules.doesntLiveAtHouseholdAddress],
     },
   ],
   routing_rules: [
