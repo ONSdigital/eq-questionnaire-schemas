@@ -32,6 +32,11 @@ local addQuestion(listIsEmpty) = {
       label: 'First name',
       mandatory: true,
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+        },
+      },
     },
     {
       id: 'middle-names',
@@ -44,6 +49,11 @@ local addQuestion(listIsEmpty) = {
       label: 'Last name',
       mandatory: true,
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+        },
+      },
     },
   ],
 };
@@ -72,6 +82,11 @@ local editQuestion(questionTitle) = {
       label: 'First name',
       mandatory: true,
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+        },
+      },
     },
     {
       id: 'middle-names',
@@ -84,6 +99,11 @@ local editQuestion(questionTitle) = {
       label: 'Last name',
       mandatory: true,
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+        },
+      },
     },
   ],
 };

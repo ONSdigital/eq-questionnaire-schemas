@@ -11,7 +11,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       {
         id: 'usual-address-answer-building',
         label: 'Address line 1',
-        mandatory: false,
+        mandatory: true,
         type: 'TextField',
       },
       {
