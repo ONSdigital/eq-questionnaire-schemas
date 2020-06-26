@@ -174,21 +174,6 @@ local firstPersonNamePossessiveForList(listName) = {
       },
     }],
   },
-  otherHouseholdAddress: {
-    placeholder: 'other_address',
-    transforms: [
-      {
-        transform: 'concatenate_list',
-        arguments: {
-          list_to_concatenate: {
-            source: 'answers',
-            identifier: ['usual-address-answer-building', 'usual-address-answer-street'],
-          },
-          delimiter: ', ',
-        },
-      },
-    ],
-  },
   getListOrdinality: getListOrdinality,
   getListOrdinalityWithoutDeterminer: getListOrdinalityWithoutDeterminer,
   getListCardinality: getListCardinality,
