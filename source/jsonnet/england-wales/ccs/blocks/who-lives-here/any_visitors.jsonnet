@@ -1,22 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local otherHouseholdAddress = {
-  placeholder: 'other_address',
-  transforms: [
-    {
-      transform: 'concatenate_list',
-      arguments: {
-        list_to_concatenate: {
-          source: 'answers',
-          identifier: ['usual-address-answer-building', 'usual-address-answer-street'],
-        },
-        delimiter: ', ',
-      },
-    },
-  ],
-};
-
 local questionTitle(livesAtHouseholdAddress) = (
   if livesAtHouseholdAddress then {
     text: 'How many visitors were staying overnight at {household_address} on Sunday {census_date}?',
@@ -28,7 +12,21 @@ local questionTitle(livesAtHouseholdAddress) = (
   else {
     text: 'How many visitors were staying overnight at {other_address} on Sunday {census_date}?',
     placeholders: [
-      otherHouseholdAddress,
+      {
+        placeholder: 'other_address',
+        transforms: [
+          {
+            transform: 'concatenate_list',
+            arguments: {
+              list_to_concatenate: {
+                source: 'answers',
+                identifier: ['usual-address-answer-building', 'usual-address-answer-street'],
+              },
+              delimiter: ', ',
+            },
+          },
+        ],
+      },
       placeholders.censusDate,
     ],
   }
