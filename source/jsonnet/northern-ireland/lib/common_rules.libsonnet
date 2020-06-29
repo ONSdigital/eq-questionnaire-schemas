@@ -59,7 +59,7 @@
       },
     },
   },
-  nisraUnder4: {
+  schoolYearUnder4: {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
@@ -69,7 +69,7 @@
       },
     },
   },
-  nisraOver5: {
+  schoolYear5OrOver: {
     id: 'date-of-birth-answer',
     condition: 'less than or equal to',
     date_comparison: {

@@ -87,7 +87,7 @@ local proxyTitle = {
     {
       goto: {
         section: 'End',
-        when: [rules.nisraUnder4],
+        when: [rules.schoolYearUnder4],
       },
     },
     {
@@ -99,7 +99,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'carer',
-        when: [rules.nisraOver5],
+        when: [rules.schoolYear5OrOver],
       },
     },
     {
