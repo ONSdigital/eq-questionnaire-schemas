@@ -21,7 +21,6 @@ local accommodation_type = import 'ccs/blocks/accommodation/accommodation_type.j
 local government_services = import 'ccs/blocks/accommodation/government_services.jsonnet';
 local internet = import 'ccs/blocks/accommodation/internet.jsonnet';
 local interviewer_note = import 'ccs/blocks/accommodation/interviewer_note.jsonnet';
-local other_living_accommodation = import 'ccs/blocks/accommodation/other_living_accommodation.jsonnet';
 local own_or_rent = import 'ccs/blocks/accommodation/own_or_rent.jsonnet';
 local self_contained = import 'ccs/blocks/accommodation/self_contained.jsonnet';
 local type_of_flat = import 'ccs/blocks/accommodation/type_of_flat.jsonnet';
@@ -59,6 +58,12 @@ local usual_household_address = import 'ccs/blocks/visitor/usual_household_addre
 local usual_household_address_details = import 'ccs/blocks/visitor/usual_household_address_details.jsonnet';
 local visitor_age_last_birthday = import 'ccs/blocks/visitor/visitor_age_last_birthday.jsonnet';
 local visitor_interstitial = import 'ccs/blocks/visitor/visitor_interstitial.jsonnet';
+
+// Household check
+local household_check_interstitial = import 'ccs/blocks/household-check/household_check_interstitial.jsonnet';
+local other_living_accommodation = import 'ccs/blocks/household-check/other_living_accommodation.jsonnet';
+local separate_household = import 'ccs/blocks/household-check/separate_household.jsonnet';
+
 
 function(region_code, census_month_year_date) {
   mime_type: 'application/json/ons/eq',
@@ -176,7 +181,6 @@ function(region_code, census_month_year_date) {
             who_rent_from,
             internet,
             government_services,
-            other_living_accommodation,
           ],
         },
       ],
@@ -276,6 +280,24 @@ function(region_code, census_month_year_date) {
             visitor_sex,
             usual_household_address,
             usual_household_address_details,
+          ],
+        },
+      ],
+    },
+    {
+      id: 'household-check',
+      title: 'Final check – other households',
+      summary: {
+        show_on_completion: false,
+      },
+      groups: [
+        {
+          id: 'household-check-group',
+          title: 'Household Check',
+          blocks: [
+            household_check_interstitial,
+            other_living_accommodation,
+            separate_household,
           ],
         },
       ],
