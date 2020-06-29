@@ -11,6 +11,11 @@ local question(title) = {
       label: 'Address line 1',
       mandatory: true,
       type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter an address to continue',
+        },
+      },
     },
     {
       id: 'other-address-answer-street',

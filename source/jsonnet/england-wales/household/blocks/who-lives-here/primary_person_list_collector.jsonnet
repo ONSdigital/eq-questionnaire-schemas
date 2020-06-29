@@ -21,6 +21,11 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           label: 'First name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+            },
+          },
         },
         {
           id: 'middle-names',
@@ -33,6 +38,11 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           label: 'Last name',
           mandatory: true,
           type: 'TextField',
+          validation: {
+            messages: {
+              MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+            },
+          },
         },
       ],
     },
