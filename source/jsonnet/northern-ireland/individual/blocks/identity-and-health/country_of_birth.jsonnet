@@ -103,6 +103,30 @@ local question(title, elsewhereDescription) = {
     },
     {
       goto: {
+        block: 'passports',
+        when: [
+          {
+            id: 'country-of-birth-answer',
+            condition: 'not set',
+          },
+          rules.under1,
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'passports',
+        when: [
+          {
+            id: 'country-of-birth-answer',
+            condition: 'not set',
+          },
+          rules.lastBirthdayAgeLessThan(1),
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'past-usual-household-address',
         when: [
           {

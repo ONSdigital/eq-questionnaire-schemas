@@ -3,13 +3,13 @@ local placeholders = import '../../lib/placeholders.libsonnet';
 
 local questionTitle(hasPrimary) = (
   if hasPrimary then {
-    text: 'Do any of the following people also live at {household_address} on {census_date}?',
+    text: 'Do any of the following people also live at {household_address} on Sunday {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,
     ],
   } else {
-    text: 'Do any of the following people live at {household_address} on {census_date}?',
+    text: 'Do any of the following people live at {household_address} on Sunday {census_date}?',
     placeholders: [
       placeholders.address,
       placeholders.censusDate,

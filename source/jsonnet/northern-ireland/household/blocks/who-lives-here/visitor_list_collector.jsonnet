@@ -113,7 +113,7 @@ local removePersonQuestionTitle = {
             hide_guidance: 'Why do I have to include visitors?',
             contents: [
               {
-                description: 'We ask for visitor information to ensure that everyone is counted. This helps to produce accurate population estimates. Add any visitors, even if you think they may have been included on a census form at another address.',
+                description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
               },
             ],
           },
