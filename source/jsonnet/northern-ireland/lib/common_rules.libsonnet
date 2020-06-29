@@ -59,13 +59,23 @@
       },
     },
   },
-  nisraUnder4: {
+  schoolYearUnder4: {
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: '2020-07-01',
+      value: '2021-07-01',
       offset_by: {
         years: -4,
+      },
+    },
+  },
+  schoolYear5OrOver: {
+    id: 'date-of-birth-answer',
+    condition: 'less than or equal to',
+    date_comparison: {
+      value: '2021-07-01',
+      offset_by: {
+        years: -5,
       },
     },
   },

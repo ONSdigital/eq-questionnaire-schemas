@@ -87,7 +87,7 @@ local proxyTitle = {
     {
       goto: {
         section: 'End',
-        when: [rules.under4],
+        when: [rules.schoolYearUnder4],
       },
     },
     {
@@ -99,7 +99,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'carer',
-        when: [rules.over5],
+        when: [rules.schoolYear5OrOver],
       },
     },
     {

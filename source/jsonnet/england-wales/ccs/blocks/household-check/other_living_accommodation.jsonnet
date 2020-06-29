@@ -1,23 +1,21 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
-local questionTitle = {
-  text: 'Is there any other living accommodation at {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
-
 {
   type: 'Question',
   id: 'other-living-accommodation',
   question: {
     id: 'other-living-accommodation-question',
-    title: questionTitle,
+    title: {
+      text: 'Is there any other living accommodation at {household_address}?',
+      placeholders: [
+        placeholders.address,
+      ],
+    },
     type: 'General',
     guidance: {
       contents: [
         {
-          description: 'For example, separate bedsits, annexes, sheds etc.',
+          description: 'For example, separate bedsits, annexes, sheds etc',
         },
       ],
     },
