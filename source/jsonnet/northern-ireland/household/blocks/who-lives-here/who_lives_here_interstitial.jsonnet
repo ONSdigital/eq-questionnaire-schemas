@@ -25,9 +25,9 @@ local contentDescription = {
       {
         title: 'You will need to know',
         list: [
-          'names of people living at this address, including anyone currently away.',
+          'names of people living at this address, including anyone currently away',
           {
-            text: 'names of visitors staying overnight in this household on {census_date}.',
+            text: 'names of visitors staying overnight in this household on {census_date}',
             placeholders: [
               placeholders.censusDate,
             ],
