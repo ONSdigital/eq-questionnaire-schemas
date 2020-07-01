@@ -117,7 +117,7 @@ local variantLabel = 'Ok, understood';
           },
         ],
       },
-      when: [rules.listIsEmpty('household'), rules.livesAtHouseholdAddress],
+      when: [rules.listIsEmpty('household')],
     },
     {
       question: {
@@ -177,93 +177,7 @@ local variantLabel = 'Ok, understood';
           },
         ],
       },
-      when: [rules.listIsNotEmpty('household'), rules.livesAtHouseholdAddress],
-    },
-    {
-      question: {
-        type: 'General',
-        id: 'anyone-usually-live-at-question',
-        title: {
-          text: 'I will now collect the names of everyone who lived at that address on Sunday {census_date}?',
-          placeholders: [
-            placeholders.censusDate,
-          ],
-        },
-        answers: [
-          {
-            id: 'anyone-else-answer',
-            mandatory: true,
-            type: 'Radio',
-            options: [
-              {
-                label: variantLabel,
-                value: 'Yes',
-              },
-            ],
-          },
-        ],
-      },
-      when: [rules.listIsEmpty('household'), rules.doesntLiveAtHouseholdAddress],
-    },
-    {
-      question: {
-        id: 'anyone-usually-live-at-question',
-        type: 'General',
-        title: {
-          text: 'Did anyone else usually live in your household on Sunday {census_date}?',
-          placeholders: [
-            placeholders.censusDate,
-          ],
-        },
-        description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong></p>',
-        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the Electronic Showcard below',
-        definitions: [
-          {
-            title: 'Electronic Showcard',
-            contents: [
-              {
-                description: 'Include',
-              },
-              {
-                list: [
-                  {
-                    text: 'family members (including partners, children and babies born on or before {census_date} even if still in hospital)',
-                    placeholders: [
-                      placeholders.censusDate,
-                    ],
-                  },
-                  'students and schoolchildren who lived away from home during term time ',
-                  'housemates, tenants or lodgers',
-                  {
-                    text: 'people who usually lived here on {census_date} but have since moved out',
-                    placeholders: [
-                      placeholders.censusDate,
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-        answers: [
-          {
-            id: 'anyone-else-answer',
-            mandatory: true,
-            type: 'Radio',
-            options: [
-              {
-                label: 'Yes',
-                value: 'Yes',
-              },
-              {
-                label: 'No',
-                value: 'No',
-              },
-            ],
-          },
-        ],
-      },
-      when: [rules.listIsNotEmpty('household'), rules.doesntLiveAtHouseholdAddress],
+      when: [rules.listIsNotEmpty('household')],
     },
   ],
   add_block: {
