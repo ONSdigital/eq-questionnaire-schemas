@@ -49,8 +49,6 @@ local editQuestion(questionTitle) = {
   ],
 };
 
-local variantLabel = 'Ok, understood';
-
 {
   id: 'anyone-else-list-collector',
   type: 'ListCollector',
