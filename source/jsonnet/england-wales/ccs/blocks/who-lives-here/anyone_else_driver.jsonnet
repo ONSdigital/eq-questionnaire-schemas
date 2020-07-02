@@ -19,8 +19,8 @@ local rules = import 'rules.libsonnet';
         mandatory: false,
         options: [
           {
-            label: 'Ok, understood',
-            value: 'Ok, understood',
+            label: 'OK, understood',
+            value: 'OK, understood',
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
