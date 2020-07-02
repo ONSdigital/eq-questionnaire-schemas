@@ -60,7 +60,7 @@ local pastProxyTitle = {
         when: [
           {
             id: 'place-of-work-elsewhere-answer',
-            condition: 'contains any',
+            condition: 'equals any',
             values: [
               'Carlow',
               'Cavan',
