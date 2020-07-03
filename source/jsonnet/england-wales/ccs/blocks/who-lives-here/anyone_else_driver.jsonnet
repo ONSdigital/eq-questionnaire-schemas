@@ -16,7 +16,7 @@ local rules = import 'rules.libsonnet';
     answers: [
       {
         id: 'anyone-else-driver-answer',
-        mandatory: false,
+        mandatory: true,
         options: [
           {
             label: 'OK, understood',
