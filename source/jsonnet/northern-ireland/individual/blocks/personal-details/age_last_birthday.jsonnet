@@ -34,8 +34,8 @@ local rules = import 'rules.libsonnet';
         type: 'Checkbox',
         options: [
           {
-            label: 'Estimate',
-            value: 'Estimate',
+            label: 'This age is an estimate',
+            value: 'This age is an estimate',
           },
         ],
       },

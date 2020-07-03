@@ -25,12 +25,6 @@ local question(title) = {
       type: 'TextField',
     },
     {
-      id: 'work-address-details-answer-county',
-      label: 'County',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
       id: 'work-address-details-answer-postcode',
       label: 'Postcode',
       mandatory: false,

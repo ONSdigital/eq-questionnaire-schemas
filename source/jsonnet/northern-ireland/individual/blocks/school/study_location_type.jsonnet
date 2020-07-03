@@ -72,6 +72,21 @@ local proxyDescriptionStudy = {
     },
     {
       goto: {
+        section: 'End',
+        when: [
+          {
+            id: 'study-location-type-answer',
+            condition: 'equals any',
+            values: [
+              'At or from home',
+              'No fixed place',
+            ],
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'school-travel',
       },
     },

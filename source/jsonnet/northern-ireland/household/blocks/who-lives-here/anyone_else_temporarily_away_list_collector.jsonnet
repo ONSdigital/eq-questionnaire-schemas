@@ -117,6 +117,7 @@ local editQuestion(questionTitle) = {
         },
         {
           list: [
+            'students and schoolchildren who live away from home during term time',
             'people who work away from home within the UK if this is their permanent or family home',
             'members of the armed forces if this is their permanent or family home',
             'people who are temporarily outside the UK for <strong>less than 12 months</strong>',
