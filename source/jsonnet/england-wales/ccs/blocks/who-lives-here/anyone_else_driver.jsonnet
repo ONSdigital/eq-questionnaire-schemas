@@ -31,7 +31,6 @@ local rules = import 'rules.libsonnet';
           },
         ],
         type: 'Checkbox',
-        label: '',
       },
     ],
   },
