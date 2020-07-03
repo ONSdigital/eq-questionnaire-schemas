@@ -208,7 +208,7 @@ local editQuestion(questionTitle) = {
             },
           ],
         },
-        when: [rules.listIsEmpty('household'), rules.doesntLiveAtHouseholdAddress],
+        when: [rules.listIsEmpty('household')],
       },
       {
         question: {
@@ -237,36 +237,7 @@ local editQuestion(questionTitle) = {
             },
           ],
         },
-        when: [rules.listIsNotEmpty('household'), rules.doesntLiveAtHouseholdAddress],
-      },
-      {
-        question: {
-          id: 'add-question',
-          type: 'General',
-          title: 'Who do you need to add?',
-          instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
-          answers: [
-            {
-              id: 'first-name',
-              label: 'First name',
-              mandatory: true,
-              type: 'TextField',
-            },
-            {
-              id: 'middle-names',
-              label: 'Middle names',
-              mandatory: false,
-              type: 'TextField',
-            },
-            {
-              id: 'last-name',
-              label: 'Last name',
-              mandatory: true,
-              type: 'TextField',
-            },
-          ],
-        },
-        when: [rules.livesAtHouseholdAddress],
+        when: [rules.listIsNotEmpty('household')],
       },
     ],
   },
