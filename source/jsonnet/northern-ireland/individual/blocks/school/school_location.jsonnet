@@ -25,12 +25,6 @@ local question(title) = {
       type: 'TextField',
     },
     {
-      id: 'school-address-details-answer-county',
-      label: 'County',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
       id: 'school-address-details-answer-postcode',
       label: 'Postcode',
       mandatory: false,
@@ -39,9 +33,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitleSchool = 'What is the address of your main place of study, including school?';
+local nonProxyTitleSchool = 'What is the address of your main place of study?';
 local proxyTitleSchool = {
-  text: 'What is the address of <em>{person_name_possessive}</em> main place of study, including school?',
+  text: 'What is the address of <em>{person_name_possessive}</em> main place of study?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

@@ -78,8 +78,8 @@ local exclusiveAnswerText = {
           },
         ],
         guidance: {
-          show_guidance: 'Why we ask about visitors?',
-          hide_guidance: 'Why we ask about visitors?',
+          show_guidance: 'Why we ask about visitors',
+          hide_guidance: 'Why we ask about visitors',
           contents: [
             {
               description: 'This is to ensure that everyone is counted in the census. Add any visitors, even if they have been included on a census questionnaire at another address.',
