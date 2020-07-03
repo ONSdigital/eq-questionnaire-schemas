@@ -15,10 +15,6 @@ local question(title) = {
           value: 'Yes',
         },
         {
-          label: 'No, it is in the Republic of Ireland',
-          value: 'No, it is in the Republic of Ireland',
-        },
-        {
           label: 'No, it is in another country',
           value: 'No, it is in another country',
         },
