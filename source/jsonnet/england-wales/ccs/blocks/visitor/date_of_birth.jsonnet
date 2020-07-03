@@ -6,7 +6,6 @@ local rules = import 'rules.libsonnet';
   id: 'visitor-date-of-birth',
   question: {
     id: 'visitor-date-of-birth-question',
-    description: '',
     type: 'MutuallyExclusive',
     title: {
       text: 'What is <em>{person_name_possessive}</em> date of birth?',

@@ -29,7 +29,6 @@ local question(title, region_code, otherReligionDescription) = (
       {
         id: 'religion-answer',
         mandatory: false,
-        label: '',
         voluntary: true,
         options: [
           {

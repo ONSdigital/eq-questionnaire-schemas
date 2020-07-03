@@ -4,7 +4,6 @@ local rules = import 'rules.libsonnet';
 local question(title, definitionContent, otherDescription) = {
   id: 'passports-question',
   title: title,
-  description: '',
   type: 'MutuallyExclusive',
   mandatory: false,
   definitions: [

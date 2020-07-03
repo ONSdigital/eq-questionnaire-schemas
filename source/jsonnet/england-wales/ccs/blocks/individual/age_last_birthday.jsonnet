@@ -3,7 +3,6 @@ local rules = import 'rules.libsonnet';
 
 local question(title) = {
   id: 'age-last-birthday-question',
-  description: '',
   type: 'General',
   title: title,
   answers: [
@@ -21,7 +20,6 @@ local question(title) = {
     },
     {
       id: 'age-estimate-answer',
-      label: '',
       mandatory: false,
       type: 'Checkbox',
       options: [
