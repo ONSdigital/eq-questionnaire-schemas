@@ -3,6 +3,7 @@ local placeholders = import '../../lib/placeholders.libsonnet';
 // Who lives here
 local another_address_interviewer_note_interstitial = import 'ccs/blocks/who-lives-here/another_address_interviewer_note_interstitial.jsonnet';
 local any_visitors = import 'ccs/blocks/who-lives-here/any_visitors.jsonnet';
+local anyone_else_driver = import 'ccs/blocks/who-lives-here/anyone_else_driver.jsonnet';
 local anyone_else_list_collector = import 'ccs/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
 local anyone_else_temp_away_list_collector = import 'ccs/blocks/who-lives-here/anyone_else_temp_away_list_collector.jsonnet';
 local anyone_else_usually_living = import 'ccs/blocks/who-lives-here/anyone_else_usually_living.jsonnet';
@@ -140,6 +141,7 @@ function(region_code, census_month_year_date) {
             usual_address_in_uk,
             outside_uk_interstitial,
             usual_address,
+            anyone_else_driver,
             interviewer_note_interstitial,
             another_address_interviewer_note_interstitial,
             anyone_else_list_collector,

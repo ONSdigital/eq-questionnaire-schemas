@@ -43,7 +43,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'anyone-else-list-collector',
+        block: 'anyone-else-driver',
       },
     },
   ],

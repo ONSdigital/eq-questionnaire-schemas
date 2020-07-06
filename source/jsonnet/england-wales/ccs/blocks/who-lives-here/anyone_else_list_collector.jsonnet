@@ -124,7 +124,6 @@ local editQuestion(questionTitle) = {
         title: {
           text: 'Did anyone else usually live in your household on Sunday {census_date}?',
           placeholders: [
-            placeholders.address,
             placeholders.censusDate,
           ],
         },
@@ -182,37 +181,65 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'add-person',
     type: 'ListAddQuestion',
-    question: {
-      id: 'add-question',
-      type: 'General',
-      title: {
-        text: 'Who do you need to add?',
-        placeholders: [
-          placeholders.address,
-        ],
+    question_variants: [
+      {
+        question: {
+          id: 'add-question',
+          type: 'General',
+          title: 'What is your full name?',
+          answers: [
+            {
+              id: 'first-name',
+              label: 'First name',
+              mandatory: true,
+              type: 'TextField',
+            },
+            {
+              id: 'middle-names',
+              label: 'Middle names',
+              mandatory: false,
+              type: 'TextField',
+            },
+            {
+              id: 'last-name',
+              label: 'Last name',
+              mandatory: true,
+              type: 'TextField',
+            },
+          ],
+        },
+        when: [rules.listIsEmpty('household')],
       },
-      instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
-      answers: [
-        {
-          id: 'first-name',
-          label: 'First name',
-          mandatory: true,
-          type: 'TextField',
+      {
+        question: {
+          id: 'add-question',
+          type: 'General',
+          title: 'Who do you need to add?',
+          instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
+          answers: [
+            {
+              id: 'first-name',
+              label: 'First name',
+              mandatory: true,
+              type: 'TextField',
+            },
+            {
+              id: 'middle-names',
+              label: 'Middle names',
+              mandatory: false,
+              type: 'TextField',
+            },
+            {
+              id: 'last-name',
+              label: 'Last name',
+              mandatory: true,
+              type: 'TextField',
+            },
+          ],
         },
-        {
-          id: 'middle-names',
-          label: 'Middle names',
-          mandatory: false,
-          type: 'TextField',
-        },
-        {
-          id: 'last-name',
-          label: 'Last name',
-          mandatory: true,
-          type: 'TextField',
-        },
-      ],
-    },
+        when: [rules.listIsNotEmpty('household')],
+      },
+    ],
   },
   edit_block: {
     id: 'edit-person',
