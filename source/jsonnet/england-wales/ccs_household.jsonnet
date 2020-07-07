@@ -156,17 +156,6 @@ function(region_code, census_month_year_date) {
     {
       id: 'accommodation-section',
       title: 'Household accommodation',
-      enabled: [
-        {
-          when: [
-            {
-              id: 'you-live-here-answer',
-              condition: 'contains',
-              value: 'Yes',
-            },
-          ],
-        },
-      ],
       summary: { show_on_completion: false },
       groups: [
         {
