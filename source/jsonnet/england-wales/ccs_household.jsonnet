@@ -72,7 +72,7 @@ function(region_code, census_month_year_date) {
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'ccs',
-  title: '2019 Census Coverage Survey Test',
+  title: 'Census 2021',
   description: 'Census Coverage Survey Schema',
   theme: 'census',
   legal_basis: 'Voluntary',
