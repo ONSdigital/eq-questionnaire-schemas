@@ -38,7 +38,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'outside-uk-interstitial',
+        block: 'outside-uk-note',
         when: [
           {
             id: 'usual-address-in-uk-answer',

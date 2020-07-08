@@ -43,7 +43,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     {
       goto: {
-        block: 'interviewer-note-interstitial',
+        block: 'who-to-interview-note',
       },
     },
   ],
