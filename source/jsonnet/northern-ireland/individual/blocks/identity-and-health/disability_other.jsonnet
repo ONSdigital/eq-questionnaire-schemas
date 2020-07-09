@@ -99,7 +99,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'carer',
-        when: [rules.schoolYear5OrOver],
+        when: [rules.schoolYear5AndOver],
       },
     },
     {

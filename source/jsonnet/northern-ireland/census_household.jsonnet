@@ -124,7 +124,7 @@ function(region_code) {
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'census',
-  title: '2019 Census Test',
+  title: 'Census 2021',
   description: 'Census Northern Ireland Household Schema',
   theme: 'census-nisra',
   legal_basis: 'Voluntary',

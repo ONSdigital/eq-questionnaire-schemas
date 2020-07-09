@@ -7,22 +7,22 @@ local anyone_else_driver = import 'ccs/blocks/who-lives-here/anyone_else_driver.
 local anyone_else_list_collector = import 'ccs/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
 local anyone_else_temp_away_list_collector = import 'ccs/blocks/who-lives-here/anyone_else_temp_away_list_collector.jsonnet';
 local anyone_else_usually_living = import 'ccs/blocks/who-lives-here/anyone_else_usually_living.jsonnet';
-local interviewer_note_interstitial = import 'ccs/blocks/who-lives-here/interviewer_note_interstitial.jsonnet';
-local outside_uk_interstitial = import 'ccs/blocks/who-lives-here/outside_uk_interstitial.jsonnet';
+local outside_uk_note = import 'ccs/blocks/who-lives-here/outside_uk_note.jsonnet';
 local primary_person_list_collector = import 'ccs/blocks/who-lives-here/primary_person_list_collector.jsonnet';
 local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
 local usual_address = import 'ccs/blocks/who-lives-here/usual_address.jsonnet';
 local usual_address_in_uk = import 'ccs/blocks/who-lives-here/usual_address_in_uk.jsonnet';
 local visitor_list_collector = import 'ccs/blocks/who-lives-here/visitor_list_collector.jsonnet';
 local who_lives_here_interstitial = import 'ccs/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
+local who_to_interview_note = import 'ccs/blocks/who-lives-here/who_to_interview_note.jsonnet';
 
 // Accommodation
 local accommodation_introduction = import 'ccs/blocks/accommodation/accommodation_introduction.jsonnet';
 local accommodation_type = import 'ccs/blocks/accommodation/accommodation_type.jsonnet';
 local government_services = import 'ccs/blocks/accommodation/government_services.jsonnet';
 local internet = import 'ccs/blocks/accommodation/internet.jsonnet';
-local interviewer_note = import 'ccs/blocks/accommodation/interviewer_note.jsonnet';
 local own_or_rent = import 'ccs/blocks/accommodation/own_or_rent.jsonnet';
+local respondent_living_at = import 'ccs/blocks/accommodation/respondent_living_at.jsonnet';
 local self_contained = import 'ccs/blocks/accommodation/self_contained.jsonnet';
 local type_of_flat = import 'ccs/blocks/accommodation/type_of_flat.jsonnet';
 local type_of_house = import 'ccs/blocks/accommodation/type_of_house.jsonnet';
@@ -72,7 +72,7 @@ function(region_code, census_month_year_date) {
   schema_version: '0.0.1',
   data_version: '0.0.3',
   survey_id: 'ccs',
-  title: '2019 Census Coverage Survey Test',
+  title: 'Census Coverage Survey 2021',
   description: 'Census Coverage Survey Schema',
   theme: 'census',
   legal_basis: 'Voluntary',
@@ -139,10 +139,10 @@ function(region_code, census_month_year_date) {
             primary_person_list_collector,
             anyone_else_usually_living,
             usual_address_in_uk,
-            outside_uk_interstitial,
+            outside_uk_note,
             usual_address,
             anyone_else_driver,
-            interviewer_note_interstitial,
+            who_to_interview_note,
             another_address_interviewer_note_interstitial,
             anyone_else_list_collector,
             anyone_else_temp_away_list_collector,
@@ -163,7 +163,7 @@ function(region_code, census_month_year_date) {
           title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
-            interviewer_note,
+            respondent_living_at,
             accommodation_type,
             type_of_house,
             type_of_flat,
