@@ -2,16 +2,16 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'interviewer-note',
+  id: 'respondent-living-at',
   question: {
-    id: 'interviewer-note-question',
+    id: 'respondent-living-at-question',
     title: {
       text: 'Interviewer Note: Was the respondent living at {household_address} on Sunday {census_date}?',
       placeholders: [placeholders.address, placeholders.censusDate],
     },
     type: 'General',
     answers: [{
-      id: 'interviewer-note-answer',
+      id: 'respondent-living-at-answer',
       mandatory: true,
       options: [
         {

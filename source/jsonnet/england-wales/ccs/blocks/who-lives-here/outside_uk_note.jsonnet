@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Interstitial',
-  id: 'outside-uk-interstitial',
+  id: 'outside-uk-note',
   content: {
     title: 'Interviewer Note',
     contents: [

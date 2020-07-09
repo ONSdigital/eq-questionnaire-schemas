@@ -38,13 +38,13 @@ local estimatedAge = {
 };
 
 local livingAtDifferentAddress = {
-  id: 'interviewer-note-answer',
+  id: 'respondent-living-at-answer',
   condition: 'equals',
   value: 'No, living at a different address',
 };
 
 local livingAtCurrentAddress = {
-  id: 'interviewer-note-answer',
+  id: 'respondent-living-at-answer',
   condition: 'equals',
   value: 'Yes, living at this address',
 };

@@ -1,6 +1,6 @@
 {
   type: 'Interstitial',
-  id: 'interviewer-note-interstitial',
+  id: 'who-to-interview-note',
   content: {
     title: '<em>Interviewer Note</em>',
     contents: [
