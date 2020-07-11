@@ -36,7 +36,7 @@ local nonProxyTitle = {
   ],
 };
 local proxyTitle = {
-  text: 'Was {person_name_possessive} usual address one year ago, on {year_before_census_date}, the same as their usual address on {census_date}?',
+  text: 'Was <em>{person_name_possessive}</em> usual address one year ago, on {year_before_census_date}, the same as their usual address on {census_date}?',
   placeholders: [
     placeholders.personNamePossessive,
     placeholders.yearBeforeCensusDate,

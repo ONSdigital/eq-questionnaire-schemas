@@ -26,7 +26,7 @@ local question(title, instruction) = {
             id: 'other-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter other ethnic group',
+            label: 'Enter other ethnic group or background',
           },
         },
       ],

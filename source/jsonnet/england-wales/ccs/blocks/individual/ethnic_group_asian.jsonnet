@@ -57,7 +57,7 @@ local question(title, instruction) = {
             id: 'asian-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter Asian background',
+            label: 'Enter Asian ethnic group or background',
           },
         },
       ],

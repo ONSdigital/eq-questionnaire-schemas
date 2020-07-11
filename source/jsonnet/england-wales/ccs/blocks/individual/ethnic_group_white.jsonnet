@@ -51,7 +51,7 @@ local question(title, instruction, region_code) = (
               id: 'white-ethnic-group-answer-other',
               type: 'TextField',
               mandatory: false,
-              label: 'Enter White background',
+              label: 'Enter White ethnic group or background',
             },
           },
         ],
