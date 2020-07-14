@@ -104,7 +104,7 @@ function(region_code, census_month_year_date) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
       },
     },
   ],

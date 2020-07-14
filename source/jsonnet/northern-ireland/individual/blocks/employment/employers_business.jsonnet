@@ -37,7 +37,7 @@ local question(title) = (
 
 {
   type: 'Question',
-  id: 'employers-business',
+  id: 'business-type',
   question_variants: [
     {
       question: question(nonProxyTitle),

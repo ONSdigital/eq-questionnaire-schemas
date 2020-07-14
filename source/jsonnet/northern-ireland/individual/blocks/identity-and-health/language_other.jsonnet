@@ -20,7 +20,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'language-other',
+  id: 'other-main-language',
   question_variants: [
     {
       question: question('You selected “Other, including British or Irish Sign Language”. What is your main language?'),
@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'english',
+        block: 'level-of-spoken-english',
       },
     },
   ],

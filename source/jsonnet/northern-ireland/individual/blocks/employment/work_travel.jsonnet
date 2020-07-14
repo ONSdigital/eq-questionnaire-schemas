@@ -78,7 +78,7 @@ local proxyDescriptionWork = 'Answer for the longest part, by distance, of their
 
 {
   type: 'Question',
-  id: 'work-travel',
+  id: 'travel-to-work',
   question_variants: [
     {
       question: question(nonProxyTitleWork, nonProxyDescriptionWork),

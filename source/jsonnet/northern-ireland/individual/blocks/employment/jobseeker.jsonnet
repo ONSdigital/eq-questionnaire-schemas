@@ -45,7 +45,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
 
 {
   type: 'Question',
-  id: 'jobseeker',
+  id: 'looking-for-work',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader),
@@ -59,7 +59,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
   routing_rules: [
     {
       goto: {
-        block: 'job-pending',
+        block: 'about-to-start-job',
         when: [
           {
             id: 'jobseeker-answer',
@@ -71,7 +71,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
     },
     {
       goto: {
-        block: 'job-availability',
+        block: 'available-for-work',
       },
     },
   ],

@@ -52,7 +52,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
 
 {
   type: 'Question',
-  id: 'job-pending',
+  id: 'about-to-start-job',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader),

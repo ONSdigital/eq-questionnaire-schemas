@@ -55,7 +55,7 @@ local question(additionalAnswerOptions=[]) = {
 
 {
   type: 'Question',
-  id: 'usual-household-address',
+  id: 'visitor-usual-address',
   question_variants: [
     {
       question: question(),
@@ -69,7 +69,7 @@ local question(additionalAnswerOptions=[]) = {
   routing_rules: [
     {
       goto: {
-        block: 'usual-address-details',
+        block: 'visitor-usual-address-details',
         when: [
           {
             id: 'usual-address-household-answer',
@@ -81,7 +81,7 @@ local question(additionalAnswerOptions=[]) = {
     },
     {
       goto: {
-        block: 'usual-household-address-other',
+        block: 'visitor-usual-address-country',
         when: [
           {
             id: 'usual-address-household-answer',

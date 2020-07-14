@@ -34,7 +34,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'job-availability',
+  id: 'available-for-work',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -60,7 +60,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'job-pending',
+        block: 'about-to-start-job',
       },
     },
   ],

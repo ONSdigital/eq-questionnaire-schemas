@@ -68,7 +68,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'employer-type-of-address',
+  id: 'workplace-type',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceContent),

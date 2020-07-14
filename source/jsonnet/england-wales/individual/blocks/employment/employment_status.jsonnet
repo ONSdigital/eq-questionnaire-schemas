@@ -69,7 +69,7 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
 
 {
   type: 'Question',
-  id: 'employment-status',
+  id: 'employment-status-last-seven-days',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyAnswerDescription),
@@ -83,7 +83,7 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
   routing_rules: [
     {
       goto: {
-        block: 'employment-type',
+        block: 'not-employed-status-last-seven-days',
         when: [
           rules.lastMainJob,
         ],
@@ -91,7 +91,7 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
     },
     {
       goto: {
-        block: 'main-employment-block',
+        block: 'main-job-introduction',
       },
     },
   ],

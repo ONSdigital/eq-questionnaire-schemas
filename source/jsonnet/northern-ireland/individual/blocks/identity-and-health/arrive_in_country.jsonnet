@@ -64,7 +64,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
       },
     },
   ],

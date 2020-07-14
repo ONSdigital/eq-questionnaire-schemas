@@ -65,7 +65,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'employment-status',
+  id: 'employment-status-last-seven-days',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -79,7 +79,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'employment-type',
+        block: 'not-employed-status-last-seven-days',
         when: [
           rules.lastMainJob,
         ],
@@ -87,7 +87,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'main-employment-block',
+        block: 'main-job-introduction',
       },
     },
   ],

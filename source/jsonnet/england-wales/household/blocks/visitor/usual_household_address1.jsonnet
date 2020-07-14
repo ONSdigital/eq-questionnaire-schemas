@@ -55,7 +55,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
 
 {
   type: 'Question',
-  id: 'usual-household-address',
+  id: 'visitor-usual-address',
   question: {
     id: 'usual-address-household-question',
     title: title,

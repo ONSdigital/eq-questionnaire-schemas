@@ -56,7 +56,7 @@ local proxyDefinitionContent = [
 
 {
   type: 'Question',
-  id: 'disability',
+  id: 'health-conditions-or-illnesses',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionContent),
@@ -70,7 +70,7 @@ local proxyDefinitionContent = [
   routing_rules: [
     {
       goto: {
-        block: 'disability-limitation',
+        block: 'health-conditions-or-illnesses-limitations',
         when: [
           {
             id: 'disability-answer',
@@ -107,7 +107,7 @@ local proxyDefinitionContent = [
     },
     {
       goto: {
-        block: 'carer',
+        block: 'look-after-or-support-others',
       },
     },
   ],

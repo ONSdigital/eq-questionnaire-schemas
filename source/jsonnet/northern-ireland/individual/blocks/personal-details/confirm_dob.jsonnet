@@ -78,7 +78,7 @@ local proxyNoValue = 'No, I need to correct their date of birth';
 
 {
   type: 'ConfirmationQuestion',
-  id: 'confirm-dob',
+  id: 'confirm-age',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyYesLabel, nonProxyYesValue, nonProxyNoLabel, nonProxyNoValue),

@@ -101,7 +101,7 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'national-identity-additional-other',
+        block: 'other-national-identities',
         when: [
           {
             id: 'national-identity-answer',
@@ -118,7 +118,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'national-identity-other',
+        block: 'other-national-identity',
         when: [
           {
             condition: 'contains',

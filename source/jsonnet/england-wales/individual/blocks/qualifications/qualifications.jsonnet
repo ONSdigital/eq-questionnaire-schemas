@@ -12,7 +12,7 @@ function(region_code) (
   local regionDescriptionProxy = if region_code == 'GB-WLS' then walesDescriptionProxy else englandDescriptionProxy;
   {
     type: 'Interstitial',
-    id: 'qualifications',
+    id: 'qualifications-introduction',
     content_variants: [
       {
         content: {

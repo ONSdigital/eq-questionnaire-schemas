@@ -26,7 +26,7 @@
   routing_rules: [
     {
       goto: {
-        block: 'term-time-address-details',
+        block: 'term-time-address-uk',
         when: [
           {
             id: 'term-time-address-country-answer',

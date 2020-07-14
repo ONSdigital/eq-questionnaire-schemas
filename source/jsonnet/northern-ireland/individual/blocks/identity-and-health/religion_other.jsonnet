@@ -60,7 +60,7 @@ local question(title) = {
     },
     {
       goto: {
-        block: 'language',
+        block: 'main-language',
       },
     },
   ],

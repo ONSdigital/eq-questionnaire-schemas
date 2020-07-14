@@ -1,6 +1,6 @@
 {
   type: 'Question',
-  id: 'proxy',
+  id: 'confirm-who-is-answering',
   question: {
     id: 'proxy-question',
     title: 'Are you answering these questions for yourself or for someone else?',

@@ -34,7 +34,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'current-marriage-status',
+  id: 'sex-of-current-partner',
   question_variants: [
     {
       question: question(nonProxyTitle),

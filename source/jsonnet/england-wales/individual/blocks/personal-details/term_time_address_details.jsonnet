@@ -49,7 +49,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'term-time-address-details',
+  id: 'term-time-address-uk',
   question_variants: [
     {
       question: question(nonProxyTitle),

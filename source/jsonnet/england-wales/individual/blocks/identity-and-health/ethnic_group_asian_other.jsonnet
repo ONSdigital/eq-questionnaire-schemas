@@ -40,7 +40,7 @@ local proxyWalesTitle = {
 
 function(region_code) {
   type: 'Question',
-  id: 'ethnic-group-asian-other',
+  id: 'other-asian-or-asian-british-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code),

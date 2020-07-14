@@ -76,7 +76,7 @@ local question(title, definitionDescription, region_code, otherDescription) = (
 
 function(region_code) {
   type: 'Question',
-  id: 'language',
+  id: 'main-language',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code, 'You can enter your main language on the next question'),
@@ -90,7 +90,7 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'language-other',
+        block: 'other-main-language',
         when: [
           {
             id: 'language-answer',
@@ -106,7 +106,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'english',
+        block: 'level-of-spoken-english',
       },
     },
   ],

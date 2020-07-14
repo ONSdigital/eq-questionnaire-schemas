@@ -76,7 +76,7 @@ local proxyWalesTitle = {
 
 function(region_code) {
   type: 'Question',
-  id: 'asian-ethnic-group',
+  id: 'asian-or-asian-british-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
@@ -90,7 +90,7 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'ethnic-group-asian-other',
+        block: 'other-asian-or-asian-british-ethnic-group',
         when: [
           {
             id: 'asian-ethnic-group-answer',

@@ -6,7 +6,7 @@ local descriptionProxy = 'The next set of questions is about the qualifications 
 
 {
   type: 'Interstitial',
-  id: 'qualifications',
+  id: 'qualifications-introduction',
   content_variants: [
     {
       content: {

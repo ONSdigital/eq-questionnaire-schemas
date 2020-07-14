@@ -3,7 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'proxy',
+  id: 'confirm-who-is-answering',
   question: {
     id: 'proxy-question',
     title: {

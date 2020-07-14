@@ -100,7 +100,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'other-address',
+        block: 'other-address-uk',
         when: [
           {
             id: 'another-address-answer',

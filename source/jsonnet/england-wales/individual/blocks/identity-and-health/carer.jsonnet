@@ -59,7 +59,7 @@ local proxyGuidance = 'Exclude anything they do as part of their paid employment
 
 {
   type: 'Question',
-  id: 'carer',
+  id: 'look-after-or-support-others',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance),
@@ -73,7 +73,7 @@ local proxyGuidance = 'Exclude anything they do as part of their paid employment
   routing_rules: [
     {
       goto: {
-        block: 'sexual-identity',
+        block: 'sexual-orientation',
         when: [
           rules.over16,
         ],

@@ -51,7 +51,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
 
 {
   type: 'Question',
-  id: 'past-usual-household-address',
+  id: 'location-one-year-ago',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),
@@ -65,7 +65,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
   routing_rules: [
     {
       goto: {
-        block: 'past-usual-address-outside-uk',
+        block: 'address-one-year-ago-outside-uk',
         when: [
           {
             id: 'past-usual-address-household-answer',
@@ -77,7 +77,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
     },
     {
       goto: {
-        block: 'last-year-address',
+        block: 'address-one-year-ago',
         when: [
           {
             id: 'past-usual-address-household-answer',

@@ -3,7 +3,7 @@ local rules = import 'rules.libsonnet';
 
 {
   type: 'Interstitial',
-  id: 'main-employment-block',
+  id: 'main-job-introduction',
   content_variants: [
     {
       content: {

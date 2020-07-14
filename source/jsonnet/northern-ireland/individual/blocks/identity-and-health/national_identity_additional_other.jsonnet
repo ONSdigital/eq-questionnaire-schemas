@@ -20,7 +20,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'national-identity-additional-other',
+  id: 'other-national-identities',
   question_variants: [
     {
       question: question('You selected “Other”. How would you describe your other national identity?'),

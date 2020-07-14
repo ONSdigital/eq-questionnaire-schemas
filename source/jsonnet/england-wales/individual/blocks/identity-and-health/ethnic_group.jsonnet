@@ -25,7 +25,7 @@ local englandBlackEthnicityLabel = 'Black, Black British, Caribbean or African';
 local walesBlackEthnicityLabel = 'Black, Black Welsh, Black British, Caribbean or African';
 
 local englandAsianEthnicityRoutingRule = {
-  block: 'asian-ethnic-group',
+  block: 'asian-or-asian-british-ethnic-group',
   when: [
     {
       id: 'ethnic-group-answer',
@@ -36,7 +36,7 @@ local englandAsianEthnicityRoutingRule = {
 };
 
 local walesAsianEthnicityRoutingRule = {
-  block: 'asian-ethnic-group',
+  block: 'asian-or-asian-british-ethnic-group',
   when: [
     {
       id: 'ethnic-group-answer',
@@ -47,7 +47,7 @@ local walesAsianEthnicityRoutingRule = {
 };
 
 local englandBlackEthnicityRoutingRule = {
-  block: 'black-ethnic-group',
+  block: 'black-black-british-caribbean-or-african-ethnic-group',
   when: [
     {
       id: 'ethnic-group-answer',
@@ -58,7 +58,7 @@ local englandBlackEthnicityRoutingRule = {
 };
 
 local walesBlackEthnicityRoutingRule = {
-  block: 'black-ethnic-group',
+  block: 'black-black-british-caribbean-or-african-ethnic-group',
   when: [
     {
       id: 'ethnic-group-answer',
@@ -157,7 +157,7 @@ function(region_code) (
       },
       {
         goto: {
-          block: 'mixed-ethnic-group',
+          block: 'mixed-or-multiple-ethnic-group',
           when: [
             {
               id: 'ethnic-group-answer',

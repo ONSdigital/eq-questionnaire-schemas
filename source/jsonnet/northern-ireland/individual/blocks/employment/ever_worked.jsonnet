@@ -55,7 +55,7 @@ local proxyLabel = 'No, has never worked';
   routing_rules: [
     {
       goto: {
-        block: 'main-employment-block',
+        block: 'main-job-introduction',
         when: [rules.hasWorked],
       },
     },

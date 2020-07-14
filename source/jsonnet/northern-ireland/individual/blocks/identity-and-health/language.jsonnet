@@ -46,7 +46,7 @@ local question(title, definitionDescription) = {
 
 {
   type: 'Question',
-  id: 'language',
+  id: 'main-language',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionDescription),
@@ -60,7 +60,7 @@ local question(title, definitionDescription) = {
   routing_rules: [
     {
       goto: {
-        block: 'language-other',
+        block: 'other-main-language',
         when: [
           {
             id: 'language-answer',
@@ -84,7 +84,7 @@ local question(title, definitionDescription) = {
     },
     {
       goto: {
-        block: 'english',
+        block: 'level-of-spoken-english',
       },
     },
   ],

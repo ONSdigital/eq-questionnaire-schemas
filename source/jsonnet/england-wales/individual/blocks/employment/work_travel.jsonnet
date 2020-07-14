@@ -73,7 +73,7 @@ local proxyDescription = 'Answer for the longest part, <em>by distance</em>, of 
 
 {
   type: 'Question',
-  id: 'work-travel',
+  id: 'travel-to-work',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),

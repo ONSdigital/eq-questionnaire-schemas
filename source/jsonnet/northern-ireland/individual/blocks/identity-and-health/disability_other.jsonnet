@@ -98,13 +98,13 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'carer',
+        block: 'look-after-or-support-others',
         when: [rules.schoolYear5AndOver],
       },
     },
     {
       goto: {
-        block: 'carer',
+        block: 'look-after-or-support-others',
         when: [rules.lastBirthdayAgeOver(5)],
       },
     },

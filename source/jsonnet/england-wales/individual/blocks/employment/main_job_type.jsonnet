@@ -56,7 +56,7 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
 
 {
   type: 'Question',
-  id: 'main-job-type',
+  id: 'main-job-status',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),

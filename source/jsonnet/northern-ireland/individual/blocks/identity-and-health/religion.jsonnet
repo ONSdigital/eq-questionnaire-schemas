@@ -108,7 +108,7 @@ local question(title, otherReligionDescription) = {
     },
     {
       goto: {
-        block: 'language',
+        block: 'main-language',
       },
     },
   ],

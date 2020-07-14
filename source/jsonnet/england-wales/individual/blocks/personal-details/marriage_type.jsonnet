@@ -81,7 +81,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'marriage-type',
+  id: 'marital-or-civil-partnership-status',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -94,13 +94,13 @@ local proxyTitle = {
   ],
   routing_rules: [
     gotoRule('another-address', 'Never married and never registered a civil partnership'),
-    gotoRule('current-marriage-status', 'Married'),
+    gotoRule('sex-of-current-partner', 'Married'),
     gotoRule('current-partnership-status', 'In a registered civil partnership'),
-    gotoRule('current-marriage-status', 'Separated, but still legally married'),
+    gotoRule('sex-of-current-partner', 'Separated, but still legally married'),
     gotoRule('current-partnership-status', 'Separated, but still legally in a civil partnership'),
-    gotoRule('previous-marriage-status', 'Divorced'),
+    gotoRule('sex-of-previous-partner', 'Divorced'),
     gotoRule('previous-partnership-status', 'Formerly in a civil partnership which is now legally dissolved'),
-    gotoRule('previous-marriage-status', 'Widowed'),
+    gotoRule('sex-of-previous-partner', 'Widowed'),
     gotoRule('previous-partnership-status', 'Surviving partner from a registered civil partnership'),
     {
       goto: {

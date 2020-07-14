@@ -56,7 +56,7 @@ local question(title, region_code) = (
 
 function(region_code) {
   type: 'Question',
-  id: 'degree',
+  id: 'degree-level-or-above',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code),

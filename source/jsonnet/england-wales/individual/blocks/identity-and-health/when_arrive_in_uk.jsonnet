@@ -66,7 +66,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
         when: [
           {
             id: 'when-arrive-in-uk-answer',

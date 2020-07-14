@@ -42,7 +42,7 @@ local pastProxyTitle = {
 
 {
   type: 'Question',
-  id: 'supervise',
+  id: 'supervise-others',
   question_variants: [
     {
       question: question(nonProxyTitle),

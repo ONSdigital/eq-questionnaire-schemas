@@ -74,7 +74,7 @@ function(region_code) (
   else 'Any other Black, Black British or Caribbean background';
   {
     type: 'Question',
-    id: 'black-ethnic-group',
+    id: 'black-black-british-caribbean-or-african-ethnic-group',
     question_variants: [
       {
         question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, optionLabelValue, 'You can enter your ethnic group or background on the next question'),
@@ -88,7 +88,7 @@ function(region_code) (
     routing_rules: [
       {
         goto: {
-          block: 'ethnic-group-black-other',
+          block: 'other-black-black-british-caribbean-or-african-ethnic-group',
           when: [
             {
               id: 'black-ethnic-group-answer',

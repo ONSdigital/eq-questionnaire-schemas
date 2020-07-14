@@ -43,7 +43,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'degree',
+  id: 'degree-level-or-above',
   question_variants: [
     {
       question: question(nonProxyTitle),

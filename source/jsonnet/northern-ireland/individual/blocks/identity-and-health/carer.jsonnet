@@ -55,7 +55,7 @@ local proxyGuidance = 'Exclude anything they do in paid employment';
 
 {
   type: 'Question',
-  id: 'carer',
+  id: 'look-after-or-support-others',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance),
@@ -69,13 +69,13 @@ local proxyGuidance = 'Exclude anything they do in paid employment';
   routing_rules: [
     {
       goto: {
-        block: 'sexual-identity',
+        block: 'sexual-orientation',
         when: [rules.over16],
       },
     },
     {
       goto: {
-        block: 'sexual-identity',
+        block: 'sexual-orientation',
         when: [rules.lastBirthdayAgeOver(16)],
       },
     },

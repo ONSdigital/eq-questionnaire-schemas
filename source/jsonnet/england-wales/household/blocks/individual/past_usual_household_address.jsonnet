@@ -64,7 +64,7 @@ local additionalAnswerOption = [
 
 {
   type: 'Question',
-  id: 'past-usual-household-address',
+  id: 'location-one-year-ago',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),
@@ -86,7 +86,7 @@ local additionalAnswerOption = [
   routing_rules: [
     {
       goto: {
-        block: 'last-year-address',
+        block: 'address-one-year-ago',
         when: [
           {
             id: 'past-usual-address-household-answer',
@@ -98,7 +98,7 @@ local additionalAnswerOption = [
     },
     {
       goto: {
-        block: 'last-year-address',
+        block: 'address-one-year-ago',
         when: [
           {
             id: 'past-usual-address-household-answer',
@@ -110,7 +110,7 @@ local additionalAnswerOption = [
     },
     {
       goto: {
-        block: 'past-usual-address-outside-uk',
+        block: 'address-one-year-ago-outside-uk',
         when: [
           {
             id: 'past-usual-address-household-answer',

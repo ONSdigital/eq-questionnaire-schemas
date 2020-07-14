@@ -20,7 +20,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'past-usual-address-outside-uk',
+  id: 'address-one-year-ago-outside-uk',
   question_variants: [
     {
       question: question('In which country outside the UK was your usual address one year ago?'),

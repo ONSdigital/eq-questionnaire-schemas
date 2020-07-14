@@ -108,7 +108,7 @@ local pastProxyTitle = {
     },
     {
       goto: {
-        block: 'work-travel',
+        block: 'travel-to-work',
       },
     },
   ],

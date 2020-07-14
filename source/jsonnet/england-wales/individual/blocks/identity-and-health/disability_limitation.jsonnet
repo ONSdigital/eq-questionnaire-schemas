@@ -67,7 +67,7 @@ local proxyDefinition = {
 
 {
   type: 'Question',
-  id: 'disability-limitation',
+  id: 'health-conditions-or-illnesses-limitations',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinition),
@@ -89,7 +89,7 @@ local proxyDefinition = {
     },
     {
       goto: {
-        block: 'carer',
+        block: 'look-after-or-support-others',
       },
     },
   ],

@@ -73,7 +73,7 @@ local proxyGuidanceContent = [
 
 {
   type: 'Question',
-  id: 'employer-address-workplace',
+  id: 'workplace-address',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyGuidanceContent),
