@@ -25,7 +25,9 @@ local question(title, region_code) = (
   {
     id: 'employers-business-question',
     title: title,
-    description: description,
+    description: [
+      description,
+    ],
     type: 'General',
     answers: [
       {

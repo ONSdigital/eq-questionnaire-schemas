@@ -5,7 +5,9 @@ local question(title) = {
   id: 'arrive-in-country-question',
   title: title,
   type: 'General',
-  description: 'Do not count short visits away from the UK',
+  description: [
+    'Do not count short visits away from the UK',
+  ],
   answers: [
     {
       id: 'arrive-in-country-answer',

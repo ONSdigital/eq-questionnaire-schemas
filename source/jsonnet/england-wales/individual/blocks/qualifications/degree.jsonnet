@@ -23,7 +23,9 @@ local question(title, region_code) = (
   {
     id: 'degree-question',
     title: title,
-    description: questionDescription,
+    description: [
+      questionDescription,
+    ],
     definitions: [{
       title: 'What we mean by “degree level or above”',
       contents: [

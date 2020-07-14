@@ -20,7 +20,9 @@ local question(title, region_code) = (
   {
     id: 'apprenticeship-question',
     title: title,
-    description: questionDescription,
+    description: [
+      questionDescription,
+    ],
     type: 'General',
     answers: [
       {

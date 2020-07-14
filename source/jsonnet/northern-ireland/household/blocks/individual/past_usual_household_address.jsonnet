@@ -7,7 +7,9 @@ local question(title, description, additionalAnswerOptions=[]) = {
   id: 'past-usual-address-household-question',
   title: title,
   type: 'General',
-  description: description,
+  description: [
+    description,
+  ],
   answers: [
     {
       id: 'past-usual-address-household-answer',

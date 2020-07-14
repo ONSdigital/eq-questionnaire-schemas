@@ -24,7 +24,9 @@ local exclusiveAnswerText = {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',
     title: questionTitle,
-    description: 'These people will be counted as visitors.',
+    description: [
+      'These people will be counted as visitors.',
+    ],
     mandatory: true,
     answers: [
       {

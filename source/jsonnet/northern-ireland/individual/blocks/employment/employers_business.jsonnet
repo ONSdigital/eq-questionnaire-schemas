@@ -21,7 +21,9 @@ local question(title) = (
   {
     id: 'employers-business-question',
     title: title,
-    description: 'For example, clothing retail, general hospital, primary education, food wholesale, civil service or local government.',
+    description: [
+      'For example, clothing retail, general hospital, primary education, food wholesale, civil service or local government.',
+    ],
     type: 'General',
     answers: [
       {

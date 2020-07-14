@@ -5,7 +5,9 @@ local question(title, description) = {
   id: 'job-title-question',
   title: title,
   type: 'General',
-  description: description,
+  description: [
+    description,
+  ],
   answers: [
     {
       id: 'job-title-answer',

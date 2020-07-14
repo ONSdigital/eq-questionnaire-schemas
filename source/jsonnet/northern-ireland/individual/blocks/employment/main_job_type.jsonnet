@@ -4,7 +4,9 @@ local rules = import 'rules.libsonnet';
 local question(title, description) = {
   id: 'main-job-type-question',
   title: title,
-  description: description,
+  description: [
+    description,
+  ],
   type: 'General',
   answers: [
     {
