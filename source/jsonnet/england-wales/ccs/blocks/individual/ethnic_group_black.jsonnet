@@ -56,7 +56,7 @@ local question(title, instruction) = {
             id: 'black-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter Black, Black British or Caribbean background',
+            label: 'Enter Black, Black British or Caribbean ethnic group or background',
           },
         },
       ],

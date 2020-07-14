@@ -42,7 +42,7 @@ local question(title, regionStrings, region_code) = (
           {
             label: 'Mixed or Multiple ethnic groups',
             value: 'Mixed or Multiple ethnic groups',
-            description: 'Includes White and Black Caribbean, White and Black African, White and Asian or any other Mixed or Multiple',
+            description: 'Includes White and Black Caribbean, White and Black African, White and Asian or any other Mixed or Multiple background',
           },
           {
             label: regionStrings.asianOption,

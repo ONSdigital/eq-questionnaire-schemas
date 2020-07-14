@@ -3,7 +3,7 @@ local rules = import 'rules.libsonnet';
 local question(title, options) = {
   id: 'own-or-rent-question',
   title: title,
-  instruction: 'Tell respondent to turn to <strong>Showcard 4</strong> or show them the options below',
+  instruction: 'Tell the respondent to turn to <strong>Showcard 4</strong> or show them the options below',
   type: 'General',
   answers: [{
     id: 'own-or-rent-answer',
