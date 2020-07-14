@@ -9,7 +9,10 @@ build: build-schemas translate-schemas
 run-validator:
 	./scripts/run_validator.sh
 
-lint-jsonnet:
+format:
+	./scripts/format_jsonnet.sh
+
+lint:
 	./scripts/lint_jsonnet.sh
 
 validate-schemas:
