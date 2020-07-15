@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidanceContent) = {
-  id: 'employer-type-of-address-question',
+  id: 'workplace-type-question',
   title: title,
   type: 'General',
   answers: [
@@ -12,7 +12,7 @@ local question(title, guidanceContent) = {
         hide_guidance: 'Why we ask for workplace',
         contents: guidanceContent,
       },
-      id: 'employer-type-of-address-answer',
+      id: 'workplace-type-answer',
       mandatory: false,
       options: [
         {
@@ -85,7 +85,7 @@ local proxyTitle = {
         block: 'mainly-work-in-uk',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'equals any',
             values: [
               'At a workplace',
@@ -100,7 +100,7 @@ local proxyTitle = {
         block: 'mainly-work-in-uk',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'not set',
           },
         ],

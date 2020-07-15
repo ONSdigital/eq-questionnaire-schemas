@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'past-usual-address-outside-uk-question',
+  id: 'address-one-year-ago-outside-uk-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'past-usual-address-outside-uk-answer',
+      id: 'address-one-year-ago-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,

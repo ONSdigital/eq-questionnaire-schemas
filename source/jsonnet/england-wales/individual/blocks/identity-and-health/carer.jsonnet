@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidance) = {
-  id: 'carer-question',
+  id: 'look-after-or-support-others-question',
   title: title,
   guidance: {
     contents: [
@@ -14,7 +14,7 @@ local question(title, guidance) = {
   type: 'General',
   answers: [
     {
-      id: 'carer-answer',
+      id: 'look-after-or-support-others-answer',
       mandatory: false,
       options: [
         {

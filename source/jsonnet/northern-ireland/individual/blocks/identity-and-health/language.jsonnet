@@ -13,7 +13,7 @@ local nonProxyDefinitionDescription = 'Main language is your first or preferred 
 local proxyDefinitionDescription = 'Main language is their first or preferred language.';
 
 local question(title, definitionDescription) = {
-  id: 'language-question',
+  id: 'main-language-question',
   title: title,
   type: 'General',
   definitions: [{
@@ -26,7 +26,7 @@ local question(title, definitionDescription) = {
   }],
   answers: [
     {
-      id: 'language-answer',
+      id: 'main-language-answer',
       mandatory: false,
       type: 'Radio',
       options: [
@@ -63,7 +63,7 @@ local question(title, definitionDescription) = {
         block: 'other-main-language',
         when: [
           {
-            id: 'language-answer',
+            id: 'main-language-answer',
             condition: 'equals',
             value: 'Other, including British or Irish Sign Language',
           },
@@ -75,7 +75,7 @@ local question(title, definitionDescription) = {
         block: 'understand-irish',
         when: [
           {
-            id: 'language-answer',
+            id: 'main-language-answer',
             condition: 'equals',
             value: 'English',
           },

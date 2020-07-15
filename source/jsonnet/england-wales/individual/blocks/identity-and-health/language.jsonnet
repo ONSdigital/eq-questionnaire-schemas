@@ -34,7 +34,7 @@ local routing(region_code) = (
     block: 'passports',
     when: [
       {
-        id: 'language-answer',
+        id: 'main-language-answer',
         condition: 'equals',
         value: regionValue,
       },
@@ -45,7 +45,7 @@ local routing(region_code) = (
 local question(title, definitionDescription, region_code, otherDescription) = (
   local regionOption = if region_code == 'GB-WLS' then walesOption else englandOption;
   {
-    id: 'language-question',
+    id: 'main-language-question',
     title: title,
     type: 'General',
     definitions: [{
@@ -58,7 +58,7 @@ local question(title, definitionDescription, region_code, otherDescription) = (
     }],
     answers: [
       {
-        id: 'language-answer',
+        id: 'main-language-answer',
         mandatory: false,
         type: 'Radio',
         options: [
@@ -93,7 +93,7 @@ function(region_code) {
         block: 'other-main-language',
         when: [
           {
-            id: 'language-answer',
+            id: 'main-language-answer',
             condition: 'equals',
             value: 'Other, including British Sign Language',
           },

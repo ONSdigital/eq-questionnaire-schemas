@@ -6,12 +6,12 @@ local question(englandTitle, walesTitle, region_code) = (
   local label = if region_code == 'GB-WLS' then 'Asian, Asian Welsh or Asian British ethnic group or background'
   else 'Asian or Asian British ethnic group or background';
   {
-    id: 'ethnic-group-asian-other-question',
+    id: 'other-asian-or-asian-british-ethnic-group-question',
     title: title,
     type: 'General',
     answers: [
       {
-        id: 'ethnic-group-asian-other-answer',
+        id: 'other-asian-or-asian-british-ethnic-group-answer',
         label: label,
         description: 'Enter your own answer or select from suggestions',
         max_length: 100,

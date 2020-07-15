@@ -2,36 +2,36 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidanceHeader, guidanceContent) = {
-  id: 'employer-address-workplace-question',
+  id: 'workplace-address-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'employer-address-workplace-answer-building',
+      id: 'workplace-address-answer-building',
       label: 'Address line 1',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'employer-address-workplace-answer-street',
+      id: 'workplace-address-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'employer-address-workplace-answer-city',
+      id: 'workplace-address-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'employer-address-workplace-answer-county',
+      id: 'workplace-address-answer-county',
       label: 'County',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'employer-address-workplace-answer-postcode',
+      id: 'workplace-address-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',

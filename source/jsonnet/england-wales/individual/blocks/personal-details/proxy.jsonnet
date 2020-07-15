@@ -2,12 +2,12 @@
   type: 'Question',
   id: 'confirm-who-is-answering',
   question: {
-    id: 'proxy-question',
+    id: 'confirm-who-is-answering-question',
     title: 'Are you answering these questions for yourself or for someone else?',
     type: 'General',
     answers: [
       {
-        id: 'proxy-answer',
+        id: 'confirm-who-is-answering-answer',
         mandatory: false,
         default: 'For someone else',
         options: [

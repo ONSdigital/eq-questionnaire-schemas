@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidanceHeader) = {
-  id: 'jobseeker-question',
+  id: 'looking-for-work-question',
   title: title,
   type: 'General',
   answers: [
@@ -16,7 +16,7 @@ local question(title, guidanceHeader) = {
           },
         ],
       },
-      id: 'jobseeker-answer',
+      id: 'looking-for-work-answer',
       mandatory: false,
       options: [
         {
@@ -62,7 +62,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
         block: 'about-to-start-job',
         when: [
           {
-            id: 'jobseeker-answer',
+            id: 'looking-for-work-answer',
             condition: 'equals',
             value: 'No',
           },

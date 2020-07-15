@@ -5,7 +5,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   type: 'Question',
   id: 'confirm-who-is-answering',
   question: {
-    id: 'proxy-question',
+    id: 'confirm-who-is-answering-question',
     title: {
       text: 'Are you <em>{person_name}?</em>',
       placeholders: [
@@ -15,7 +15,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     type: 'General',
     answers: [
       {
-        id: 'proxy-answer',
+        id: 'confirm-who-is-answering-answer',
         mandatory: false,
         default: 'No, I am answering on their behalf',
         options: [

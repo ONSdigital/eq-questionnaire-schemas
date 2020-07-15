@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'marriage-type-question',
+  id: 'marital-or-civil-partnership-status-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'marriage-type-answer',
+      id: 'marital-or-civil-partnership-status-answer',
       mandatory: false,
       options: [
         {
@@ -57,7 +57,7 @@ local gotoRule(blockId, whenValue) = {
     block: blockId,
     when: [
       {
-        id: 'marriage-type-answer',
+        id: 'marital-or-civil-partnership-status-answer',
         condition: 'equals',
         value: whenValue,
       },

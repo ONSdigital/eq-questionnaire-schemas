@@ -19,13 +19,13 @@ local pastProxyTitle = {
 
 local question(title) = (
   {
-    id: 'employers-business-question',
+    id: 'business-type-question',
     title: title,
     description: 'For example, clothing retail, general hospital, primary education, food wholesale, civil service or local government.',
     type: 'General',
     answers: [
       {
-        id: 'employers-business-answer',
+        id: 'business-type-answer',
         label: 'Main activity',
         mandatory: false,
         max_length: 120,

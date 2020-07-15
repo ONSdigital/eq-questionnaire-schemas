@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'previous-marriage-status-question',
+  id: 'sex-of-previous-partner-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'previous-marriage-status-answer',
+      id: 'sex-of-previous-partner-answer',
       mandatory: false,
       options: [
         {

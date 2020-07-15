@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'job-availability-question',
+  id: 'available-for-work-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'job-availability-answer',
+      id: 'available-for-work-answer',
       mandatory: false,
       options: [
         {
@@ -51,7 +51,7 @@ local proxyTitle = {
         block: 'ever-worked',
         when: [
           {
-            id: 'job-availability-answer',
+            id: 'available-for-work-answer',
             condition: 'equals',
             value: 'Yes',
           },

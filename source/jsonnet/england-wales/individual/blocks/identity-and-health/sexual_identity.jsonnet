@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidanceHeader, description) = {
-  id: 'sexual-identity-question',
+  id: 'sexual-orientation-question',
   title: title,
   type: 'General',
   guidance: {
@@ -14,7 +14,7 @@ local question(title, guidanceHeader, description) = {
   },
   answers: [
     {
-      id: 'sexual-identity-answer',
+      id: 'sexual-orientation-answer',
       mandatory: false,
       voluntary: true,
       guidance: {
@@ -50,7 +50,7 @@ local question(title, guidanceHeader, description) = {
           label: 'Other sexual orientation',
           value: 'Other sexual orientation',
           detail_answer: {
-            id: 'sexual-identity-answer-other',
+            id: 'sexual-orientation-answer-other',
             max_length: 100,
             type: 'TextField',
             mandatory: false,

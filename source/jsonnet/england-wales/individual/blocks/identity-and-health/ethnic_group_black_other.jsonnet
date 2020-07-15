@@ -6,12 +6,12 @@ local question(englandTitle, walesTitle, region_code) = (
   local label = if region_code == 'GB-WLS' then 'Black, Black Welsh, Black British or Caribbean background'
   else 'Black, Black British or Caribbean background';
   {
-    id: 'ethnic-group-black-other-question',
+    id: 'other-black-black-british-caribbean-or-african-ethnic-group-question',
     title: title,
     type: 'General',
     answers: [
       {
-        id: 'ethnic-group-black-other-answer',
+        id: 'other-black-black-british-caribbean-or-african-ethnic-group-answer',
         label: label,
         description: 'Enter your own answer or select from suggestions',
         max_length: 100,

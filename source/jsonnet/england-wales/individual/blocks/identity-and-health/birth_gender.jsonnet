@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'birth-gender-question',
+  id: 'gender-identity-question',
   title: title,
   type: 'General',
   guidance: {
@@ -14,7 +14,7 @@ local question(title) = {
   },
   answers: [
     {
-      id: 'birth-gender-answer',
+      id: 'gender-identity-answer',
       mandatory: false,
       voluntary: true,
       options: [
@@ -26,7 +26,7 @@ local question(title) = {
           label: 'No',
           value: 'No',
           detail_answer: {
-            id: 'birth-gender-answer-other',
+            id: 'gender-identity-answer-other',
             max_length: 100,
             type: 'TextField',
             mandatory: false,

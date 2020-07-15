@@ -51,7 +51,7 @@ local proxyTitle = {
         block: 'workplace-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'not set',
           },
           {
@@ -66,7 +66,7 @@ local proxyTitle = {
         block: 'workplace-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'At a workplace',
           },
@@ -83,7 +83,7 @@ local proxyTitle = {
         block: 'depot-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'Report to a depot',
           },

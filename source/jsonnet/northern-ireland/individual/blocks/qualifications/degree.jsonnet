@@ -10,7 +10,7 @@ local proxyTitle = {
 };
 
 local question(title) = {
-  id: 'degree-question',
+  id: 'degree-level-or-above-question',
   title: title,
   type: 'General',
   guidance: {
@@ -22,7 +22,7 @@ local question(title) = {
   },
   answers: [
     {
-      id: 'degree-answer',
+      id: 'degree-level-or-above-answer',
       mandatory: false,
       type: 'Radio',
       options: [

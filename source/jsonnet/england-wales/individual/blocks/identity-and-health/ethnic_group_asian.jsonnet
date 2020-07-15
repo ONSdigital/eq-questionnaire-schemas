@@ -10,7 +10,7 @@ local proxyDefinitionDescription = 'Their answer will provide a better understan
 local question(englandTitle, walesTitle, region_code, guidance, definitionDescription, otherAsianBackgroundDescription) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
   {
-    id: 'asian-ethnic-group-question',
+    id: 'asian-or-asian-british-ethnic-group-question',
     title: title,
     type: 'General',
     answers: [
@@ -28,7 +28,7 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
             },
           ],
         },
-        id: 'asian-ethnic-group-answer',
+        id: 'asian-or-asian-british-ethnic-group-answer',
         mandatory: false,
         options: [
           {
@@ -93,7 +93,7 @@ function(region_code) {
         block: 'other-asian-or-asian-british-ethnic-group',
         when: [
           {
-            id: 'asian-ethnic-group-answer',
+            id: 'asian-or-asian-british-ethnic-group-answer',
             condition: 'equals',
             value: 'Any other Asian background',
           },

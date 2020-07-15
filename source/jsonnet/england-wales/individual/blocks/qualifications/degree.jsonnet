@@ -21,7 +21,7 @@ local questionGuidance = [
 local question(title, region_code) = (
   local questionDescription = if region_code == 'GB-WLS' then walesQuestionDescription else englandQuestionDescription;
   {
-    id: 'degree-question',
+    id: 'degree-level-or-above-question',
     title: title,
     description: questionDescription,
     definitions: [{
@@ -34,7 +34,7 @@ local question(title, region_code) = (
     type: 'General',
     answers: [
       {
-        id: 'degree-answer',
+        id: 'degree-level-or-above-answer',
         mandatory: false,
         type: 'Radio',
         options: [

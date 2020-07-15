@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, yesLabel, noLabel, noValue, yesValue) = {
-  id: 'confirm-date-of-birth',
+  id: 'confirm-age-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'confirm-date-of-birth-answer',
+      id: 'confirm-age-answer',
       mandatory: true,
       options: [
         {
@@ -98,7 +98,7 @@ local proxyNoValue = 'No, I need to correct their date of birth';
         block: 'date-of-birth',
         when: [
           {
-            id: 'confirm-date-of-birth-answer',
+            id: 'confirm-age-answer',
             condition: 'equals any',
             values: [proxyNoValue, nonProxyNoValue],
           },

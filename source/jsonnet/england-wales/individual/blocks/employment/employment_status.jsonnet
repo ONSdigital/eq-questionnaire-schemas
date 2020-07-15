@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
-  id: 'employment-status-question',
+  id: 'employment-status-last-seven-days-question',
   title: title,
   type: 'MutuallyExclusive',
   mandatory: true,
@@ -15,7 +15,7 @@ local question(title, description) = {
   },
   answers: [
     {
-      id: 'employment-status-answer',
+      id: 'employment-status-last-seven-days-answer',
       mandatory: false,
       type: 'Checkbox',
       options: [
@@ -43,7 +43,7 @@ local question(title, description) = {
       ],
     },
     {
-      id: 'employment-status-answer-exclusive',
+      id: 'employment-status-last-seven-days-answer-exclusive',
       type: 'Checkbox',
       mandatory: false,
       options: [

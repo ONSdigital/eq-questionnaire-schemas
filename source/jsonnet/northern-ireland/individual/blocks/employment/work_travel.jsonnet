@@ -3,12 +3,12 @@ local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
   title: title,
-  id: 'work-travel-question',
+  id: 'travel-to-work-question',
   description: description,
   type: 'General',
   answers: [
     {
-      id: 'work-travel-answer',
+      id: 'travel-to-work-answer',
       mandatory: false,
       options: [
         {

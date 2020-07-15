@@ -2,36 +2,36 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'last-year-address-question',
+  id: 'address-one-year-ago-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'last-year-address-answer-building',
+      id: 'address-one-year-ago-answer-building',
       label: 'Address line 1',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'last-year-address-answer-street',
+      id: 'address-one-year-ago-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'last-year-address-answer-city',
+      id: 'address-one-year-ago-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'last-year-address-answer-county',
+      id: 'address-one-year-ago-answer-county',
       label: 'County',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'last-year-address-answer-postcode',
+      id: 'address-one-year-ago-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',

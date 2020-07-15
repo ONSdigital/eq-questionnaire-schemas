@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'other-address-question',
+  id: 'other-address-uk-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'other-address-answer-building',
+      id: 'other-address-uk-answer-building',
       label: 'Address line 1',
       mandatory: true,
       type: 'TextField',
@@ -18,25 +18,25 @@ local question(title) = {
       },
     },
     {
-      id: 'other-address-answer-street',
+      id: 'other-address-uk-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'other-address-answer-city',
+      id: 'other-address-uk-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'other-address-answer-county',
+      id: 'other-address-uk-answer-county',
       label: 'County',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'other-address-answer-postcode',
+      id: 'other-address-uk-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',

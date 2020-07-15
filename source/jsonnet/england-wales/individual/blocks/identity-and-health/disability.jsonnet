@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, definitionContent) = {
-  id: 'disability-question',
+  id: 'health-conditions-or-illnesses-question',
   title: title,
   definitions: [
     {
@@ -13,7 +13,7 @@ local question(title, definitionContent) = {
   type: 'General',
   answers: [
     {
-      id: 'disability-answer',
+      id: 'health-conditions-or-illnesses-answer',
       mandatory: false,
       options: [
         {
@@ -73,7 +73,7 @@ local proxyDefinitionContent = [
         block: 'health-conditions-or-illnesses-limitations',
         when: [
           {
-            id: 'disability-answer',
+            id: 'health-conditions-or-illnesses-answer',
             condition: 'equals',
             value: 'Yes',
           },
@@ -85,7 +85,7 @@ local proxyDefinitionContent = [
         section: 'End',
         when: [
           {
-            id: 'disability-answer',
+            id: 'health-conditions-or-illnesses-answer',
             condition: 'equals',
             value: 'No',
           },
@@ -98,7 +98,7 @@ local proxyDefinitionContent = [
         section: 'End',
         when: [
           {
-            id: 'disability-answer',
+            id: 'health-conditions-or-illnesses-answer',
             condition: 'not set',
           },
           rules.under5,

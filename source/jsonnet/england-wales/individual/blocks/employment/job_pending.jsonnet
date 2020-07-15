@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, guidanceHeader) = {
-  id: 'job-pending-question',
+  id: 'about-to-start-job-question',
   title: title,
   type: 'General',
   answers: [
@@ -22,7 +22,7 @@ local question(title, guidanceHeader) = {
           },
         ],
       },
-      id: 'job-pending-answer',
+      id: 'about-to-start-job-answer',
       mandatory: false,
       options: [
         {

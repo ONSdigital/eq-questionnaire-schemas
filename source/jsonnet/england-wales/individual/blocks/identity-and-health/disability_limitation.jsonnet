@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, definition) = {
-  id: 'disability-limitation-question',
+  id: 'health-conditions-or-illnesses-limitations-question',
   title: title,
   definitions: [definition],
   type: 'General',
   answers: [
     {
-      id: 'disability-limitation-answer',
+      id: 'health-conditions-or-illnesses-limitations-answer',
       mandatory: false,
       options: [
         {

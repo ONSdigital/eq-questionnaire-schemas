@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'language-other-question',
+  id: 'other-main-language-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'language-other-answer',
+      id: 'other-main-language-answer',
       label: 'Main language',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,

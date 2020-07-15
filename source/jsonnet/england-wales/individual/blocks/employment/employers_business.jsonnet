@@ -23,13 +23,13 @@ local walesDescription = 'For example, clothing retail, general hospital, primar
 local question(title, region_code) = (
   local description = if region_code == 'GB-WLS' then walesDescription else englandDescription;
   {
-    id: 'employers-business-question',
+    id: 'business-type-question',
     title: title,
     description: description,
     type: 'General',
     answers: [
       {
-        id: 'employers-business-answer',
+        id: 'business-type-answer',
         label: 'Main activity',
         max_length: 120,
         mandatory: false,

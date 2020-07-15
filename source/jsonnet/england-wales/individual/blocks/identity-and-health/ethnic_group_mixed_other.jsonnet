@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'ethnic-group-mixed-other-question',
+  id: 'other-mixed-or-multiple-ethnic-group-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'ethnic-group-mixed-other-answer',
+      id: 'other-mixed-or-multiple-ethnic-group-answer',
       label: 'Mixed or Multiple ethnic group or background',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,

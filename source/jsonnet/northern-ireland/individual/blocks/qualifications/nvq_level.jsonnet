@@ -76,7 +76,7 @@ local question(title) = {
         block: 'apprenticeship',
         when: [
           {
-            id: 'degree-answer',
+            id: 'degree-level-or-above-answer',
             condition: 'equals',
             value: 'Yes',
           },

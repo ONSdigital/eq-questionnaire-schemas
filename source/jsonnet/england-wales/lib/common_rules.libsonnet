@@ -80,11 +80,11 @@
     },
   },
   mainJob: {
-    id: 'employment-status-answer-exclusive',
+    id: 'employment-status-last-seven-days-answer-exclusive',
     condition: 'not set',
   },
   lastMainJob: {
-    id: 'employment-status-answer-exclusive',
+    id: 'employment-status-last-seven-days-answer-exclusive',
     condition: 'contains',
     value: 'None of these apply',
   },
