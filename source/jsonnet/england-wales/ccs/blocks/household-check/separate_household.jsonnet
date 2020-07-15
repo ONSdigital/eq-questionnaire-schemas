@@ -6,7 +6,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     id: 'separate-household-question',
     description: [
-      'A <strong>household</strong> is one person living alone, or a group of people (not necessarily related), who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area'
+      'A <strong>household</strong> is one person living alone, or a group of people (not necessarily related), who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area',
     ],
     instruction: 'If yes, record these people on the Fieldwork Management Tool and interview them, if at this address',
     title: {

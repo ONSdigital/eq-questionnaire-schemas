@@ -6,7 +6,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   question: {
     id: 'usual-address-in-uk-question',
     description: [
-      '“Usual address” means the address at which you generally spend most time, for most people this will be their permanent or family home'
+      '“Usual address” means the address at which you generally spend most time, for most people this will be their permanent or family home',
     ],
     title: {
       text: 'On Sunday {census_date}, was your usual address in the UK?',

@@ -69,7 +69,7 @@ local editQuestion(questionTitle) = {
         title: questionTitle,
         description: [
           'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.',
-          '<strong>Anyone else is not part of your household and will be interviewed separately.</strong>'
+          '<strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
         ],
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below',
         definitions: [
@@ -132,7 +132,7 @@ local editQuestion(questionTitle) = {
         },
         description: [
           'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.',
-          '<strong>Anyone else is not part of your household and will be interviewed separately.</strong>'
+          '<strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
         ],
         instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below',
         definitions: [
