@@ -1,8 +1,9 @@
 {
   type: 'Interstitial',
   id: 'who-to-interview-note',
+  interviewer_only: 'true',
   content: {
-    title: '<em>Interviewer Note</em>',
+    title: 'Who to interview',
     instruction: 'If the respondent was not living at the property on census night, but other current household members were, you must speak to one of those household members instead. <p>If none of those household members are available, you must return to the address to interview one of them at a later date.</p>',
   },
   routing_rules: [
