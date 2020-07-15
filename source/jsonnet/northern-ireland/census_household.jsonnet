@@ -178,8 +178,8 @@ function(region_code) {
             title: {
               text_plural: {
                 forms: {
-                  one: 'You said {cardinality} person is living here on Sunday {census_date}',
-                  other: 'You said {cardinality} people are living here on Sunday {census_date}',
+                  one: 'You said <em class="highlight"">{cardinality}</em> person is living here on Sunday {census_date}',
+                  other: 'You said <em class="highlight"">{cardinality}</em> people are living here on Sunday {census_date}',
                 },
                 count: {
                   source: 'list',
@@ -201,8 +201,8 @@ function(region_code) {
             title: {
               text_plural: {
                 forms: {
-                  one: 'You said {cardinality} visitor is staying overnight here on Sunday {census_date}',
-                  other: 'You said {cardinality} visitors are staying overnight here on Sunday {census_date}',
+                  one: 'You said <em class="highlight"">{cardinality}</em> visitor is staying overnight here on Sunday {census_date}',
+                  other: 'You said <em class="highlight"">{cardinality}</em> visitors are staying overnight here on Sunday {census_date}',
                 },
                 count: {
                   source: 'list',
@@ -264,12 +264,11 @@ function(region_code) {
     },
     {
       id: 'accommodation-section',
-      title: 'Household accommodation',
+      title: 'Household and accommodation',
       summary: { show_on_completion: false },
       groups: [
         {
           id: 'accommodation-group',
-          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             accommodation_type,
@@ -449,7 +448,6 @@ function(region_code) {
       groups: [
         {
           id: 'visitor-group',
-          title: 'Visitor group',
           blocks: [
             visitor_interstitial,
             visitor_dob,
