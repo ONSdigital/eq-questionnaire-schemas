@@ -3,7 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'respondent-living-at',
-  interviewer_only: 'true',
+  interviewer_only: true,
   question: {
     id: 'respondent-living-at-question',
     title: {

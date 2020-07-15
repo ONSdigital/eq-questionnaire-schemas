@@ -3,7 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Interstitial',
   id: 'outside-uk-note',
-  interviewer_only: 'true',
+  interviewer_only: true,
   content: {
     title: 'End of interview',
     instruction: {

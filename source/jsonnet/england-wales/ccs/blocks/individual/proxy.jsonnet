@@ -1,7 +1,7 @@
 {
   type: 'Question',
   id: 'proxy',
-  interviewer_only: 'true',
+  interviewer_only: true,
   question: {
     id: 'proxy-question',
     title: 'Are they answering the questions for themselves or on someone else’s behalf?',
