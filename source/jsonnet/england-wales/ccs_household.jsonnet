@@ -110,7 +110,7 @@ function(region_code, census_month_year_date) {
   sections: [
     {
       id: 'who-lives-here-section',
-      title: 'This section is now complete',
+      title: 'Household members and visitors',
       summary: {
         show_on_completion: true,
         items: [

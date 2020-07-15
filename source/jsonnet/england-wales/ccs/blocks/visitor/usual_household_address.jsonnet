@@ -30,12 +30,12 @@ local question(additionalAnwerOptions=[]) = {
       mandatory: false,
       options: additionalAnwerOptions + [
         {
-          label: 'An address in the UK',
-          value: 'An address in the UK',
+          label: 'Yes',
+          value: 'Yes',
         },
         {
-          label: 'An address outside the UK',
-          value: 'An address outside the UK',
+          label: 'No',
+          value: 'No',
           description: 'Select to enter answer',
           detail_answer: {
             id: 'usual-address-household-answer-other',
@@ -71,7 +71,7 @@ local question(additionalAnwerOptions=[]) = {
           {
             id: 'usual-address-household-answer',
             condition: 'equals',
-            value: 'An address in the UK',
+            value: 'Yes',
           },
         ],
       },

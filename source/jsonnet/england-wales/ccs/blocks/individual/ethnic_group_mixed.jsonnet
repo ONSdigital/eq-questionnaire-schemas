@@ -34,7 +34,7 @@ local question(title, instruction) = {
             id: 'mixed-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter Mixed or Multiple background',
+            label: 'Enter Mixed or Multiple ethnic group or background',
           },
         },
       ],
