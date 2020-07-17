@@ -29,7 +29,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           'main language',
           'general health',
           'unpaid care provided',
-          'qualifications-introduction',
+          'qualifications',
           'employment details',
         ],
       },
