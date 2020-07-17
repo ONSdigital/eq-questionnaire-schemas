@@ -16,7 +16,7 @@ local additionalAnswerOption = [
 ];
 
 local question(additionalAnswerOptions=[]) = {
-  id: 'usual-address-household-question',
+  id: 'visitor-usual-question',
   title: {
     text: 'What is <em>{person_name_possessive}</em> usual address?',
     placeholders: [
@@ -35,7 +35,7 @@ local question(additionalAnswerOptions=[]) = {
           },
         ],
       },
-      id: 'usual-address-household-answer',
+      id: 'visitor-usual-answer',
       mandatory: false,
       options: additionalAnswerOptions + [
         {
@@ -72,7 +72,7 @@ local question(additionalAnswerOptions=[]) = {
         block: 'visitor-usual-address-details',
         when: [
           {
-            id: 'usual-address-household-answer',
+            id: 'visitor-usual-answer',
             condition: 'equals',
             value: 'An address in the UK',
           },
@@ -84,7 +84,7 @@ local question(additionalAnswerOptions=[]) = {
         block: 'visitor-usual-address-country',
         when: [
           {
-            id: 'usual-address-household-answer',
+            id: 'visitor-usual-answer',
             condition: 'equals',
             value: 'An address outside the UK',
           },

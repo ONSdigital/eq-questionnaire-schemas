@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
-  id: 'past-usual-address-household-question',
+  id: 'location-one-year-ago-question',
   title: title,
   type: 'General',
   description: description,
   answers: [
     {
-      id: 'past-usual-address-household-answer',
+      id: 'location-one-year-ago-answer',
       mandatory: false,
       options: [
         {
@@ -21,8 +21,8 @@ local question(title, description) = {
           value: '{household_address}',
         },
         {
-          label: 'Student term-time address in the UK',
-          value: 'Student term-time address in the UK',
+          label: 'Student term-time or boarding school address in the UK',
+          value: 'Student term-time or boarding school address in the UK',
         },
         {
           label: 'Another address in the UK',
@@ -39,15 +39,14 @@ local question(title, description) = {
 };
 
 local nonProxyTitle = 'One year ago, what was your usual address?';
-local nonProxyDescription = 'If you had no usual address one year ago, state the address where you were staying';
-
+local nonProxyDescription = 'If you had no usual address one year ago, select the address where you were staying';
 local proxyTitle = {
   text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
 };
-local proxyDescription = 'If they had no usual address one year ago, state the address where they were staying';
+local proxyDescription = 'If they had no usual address one year ago, select the address where they were staying';
 
 {
   type: 'Question',
@@ -65,12 +64,12 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
   routing_rules: [
     {
       goto: {
-        block: 'address-one-year-ago-outside-uk',
+        block: 'address-one-year-ago',
         when: [
           {
-            id: 'past-usual-address-household-answer',
+            id: 'location-one-year-ago-answer',
             condition: 'equals',
-            value: 'An address outside the UK',
+            value: 'Student term-time or boarding school address in the UK',
           },
         ],
       },
@@ -80,19 +79,28 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
         block: 'address-one-year-ago',
         when: [
           {
-            id: 'past-usual-address-household-answer',
-            condition: 'equals any',
-            values: [
-              'Another address in the UK',
-              'Student term-time address in the UK',
-            ],
+            id: 'location-one-year-ago-answer',
+            condition: 'equals',
+            value: 'Another address in the UK',
           },
         ],
       },
     },
     {
       goto: {
-        block: 'passports',
+        block: 'address-one-year-ago-outside-uk',
+        when: [
+          {
+            id: 'location-one-year-ago-answer',
+            condition: 'equals',
+            value: 'An address outside the UK',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
+        block: 'national-identity',
       },
     },
   ],

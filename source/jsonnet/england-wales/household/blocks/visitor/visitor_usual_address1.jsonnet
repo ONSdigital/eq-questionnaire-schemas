@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
-  id: 'usual-address-household-question',
+  id: 'visitor-usual-question',
   title: title,
   type: 'General',
   description: description,
   answers: [
     {
-      id: 'usual-address-household-answer',
+      id: 'visitor-usual-answer',
       mandatory: false,
       options: [
         {
@@ -33,7 +33,7 @@ local question(title, description) = {
           value: 'Other',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'usual-address-household-answer-other',
+            id: 'visitor-usual-answer-other',
             type: 'TextField',
             mandatory: false,
             label: 'Enter the current name of the country',
@@ -57,13 +57,13 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
   type: 'Question',
   id: 'visitor-usual-address',
   question: {
-    id: 'usual-address-household-question',
+    id: 'visitor-usual-question',
     title: title,
     type: 'General',
     description: description,
     answers: [
       {
-        id: 'usual-address-household-answer',
+        id: 'visitor-usual-answer',
         mandatory: false,
         options: [
           {
@@ -75,7 +75,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
             value: 'Other',
             description: 'Select to enter answer',
             detail_answer: {
-              id: 'usual-address-household-answer-other',
+              id: 'visitor-usual-answer-other',
               type: 'TextField',
               mandatory: false,
               label: 'Enter the current name of the country',

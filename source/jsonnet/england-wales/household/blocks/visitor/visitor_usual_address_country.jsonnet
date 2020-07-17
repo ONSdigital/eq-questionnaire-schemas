@@ -6,7 +6,7 @@ local rules = import 'rules.libsonnet';
   type: 'Question',
   id: 'visitor-usual-address-country',
   question: {
-    id: 'visitor-usual-address-other-question',
+    id: 'visitor-usual-address-country-question',
     title: {
       text: 'In which country outside the UK does <em>{person_name}</em> usually live?',
       placeholders: [
@@ -14,9 +14,10 @@ local rules = import 'rules.libsonnet';
       ],
     },
     type: 'General',
+
     answers: [
       {
-        id: 'visitor-usual-address-other-answer',
+        id: 'visitor-usual-address-country-answer',
         label: 'Current name of country',
         description: 'Enter your own answer or select from suggestions',
         mandatory: false,
