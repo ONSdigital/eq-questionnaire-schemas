@@ -21,7 +21,7 @@ local question(title) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
-          description: 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work',
+          description: 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work',
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',

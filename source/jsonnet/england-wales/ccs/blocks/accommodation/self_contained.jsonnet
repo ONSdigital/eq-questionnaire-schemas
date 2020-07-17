@@ -3,7 +3,7 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'self-contained-question',
   title: title,
-  instruction: 'If “No” confirm one or more rooms are shared with another household',
+  instruction: 'If “No” confirm one or more rooms were shared with another household',
   type: 'General',
   answers: [{
     id: 'self-contained-answer',

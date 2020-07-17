@@ -48,7 +48,7 @@ local question(livesAtHouseholdAddress) = {
         {
           list: [
             'people who usually lived somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
-            'people staying because it was their second address, for example, for work - their permanent or family home was elsewhere',
+            'people staying because it was their second address, for example, for work – their permanent or family home was elsewhere',
             'people who usually lived outside the UK who were staying in the UK for <strong>less than 3 months</strong>',
             'people staying on holiday',
           ],

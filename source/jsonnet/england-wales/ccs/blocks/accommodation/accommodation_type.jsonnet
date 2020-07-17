@@ -35,11 +35,11 @@ local question(title) = {
   id: 'accommodation-type',
   question_variants: [
     {
-      question: question('What type of accomodation is this?'),
+      question: question('What type of accommodation is this?'),
       when: [rules.livingAtCurrentAddress],
     },
     {
-      question: question('What type of accomodation was that?'),
+      question: question('What type of accommodation was that?'),
       when: [rules.livingAtDifferentAddress],
     },
   ],

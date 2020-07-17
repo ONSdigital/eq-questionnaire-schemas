@@ -146,7 +146,7 @@ local rules = import 'rules.libsonnet';
       type: 'General',
       guidance: {
         contents: [{
-          title: 'All of the data entered about this person will be deleted',
+          title: 'All of the information entered about this person will be deleted',
         }],
       },
       title: {

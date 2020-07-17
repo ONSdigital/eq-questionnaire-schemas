@@ -64,7 +64,7 @@ local editQuestion(questionTitle) = {
         title: 'Electronic Showcard',
         contents: [
           {
-            description: 'Include people temporarily away such as',
+            description: '<strong>Include people temporarily away such as</strong>',
           },
           {
             list: [
@@ -76,7 +76,7 @@ local editQuestion(questionTitle) = {
             ],
           },
           {
-            description: 'Include people temporarily staying on such as',
+            description: '<strong>Include people temporarily staying on such as</strong>',
           },
           {
             list: [

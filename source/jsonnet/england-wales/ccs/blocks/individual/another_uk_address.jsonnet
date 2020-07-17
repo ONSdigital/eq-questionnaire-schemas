@@ -62,8 +62,8 @@ local question(title) = {
           value: 'Partner’s address',
         },
         {
-          label: 'Holiday in the UK',
-          value: 'Holiday in the UK',
+          label: 'Holiday address in the UK',
+          value: 'Holiday address in the UK',
         },
         {
           label: 'Other UK address',

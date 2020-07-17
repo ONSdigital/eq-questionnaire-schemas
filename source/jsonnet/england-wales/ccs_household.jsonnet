@@ -117,7 +117,7 @@ function(region_code, census_month_year_date) {
           {
             type: 'List',
             for_list: 'household',
-            title: 'Householder members',
+            title: 'Household members',
             add_link_text: 'Add someone to this household',
             empty_list_text: 'There are no householders',
           },

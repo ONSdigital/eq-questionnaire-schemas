@@ -22,7 +22,7 @@
           {
             label: 'Applying for official documents online',
             value: 'Applying for official documents online',
-            description: 'For example, passports, visas',
+            description: 'For example, passports, driving licence',
           },
           {
             label: 'Used paper-based services',
