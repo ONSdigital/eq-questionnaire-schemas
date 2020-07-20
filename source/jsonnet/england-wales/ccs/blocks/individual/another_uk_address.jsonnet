@@ -18,7 +18,7 @@ local proxyTitle = {
 local question(title) = {
   id: 'another-uk-address',
   title: title,
-  instruction: 'Tell the respondent to turn to <strong>Showcard 12</strong> or show them the options below',
+  instruction: ['Tell the respondent to turn to <strong>Showcard 12</strong> or show them the options below'],
   type: 'MutuallyExclusive',
   mandatory: false,
   answers: [

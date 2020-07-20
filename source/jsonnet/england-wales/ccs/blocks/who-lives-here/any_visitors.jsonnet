@@ -39,7 +39,7 @@ local question(livesAtHouseholdAddress) = {
   description: [
     'A visitor is a person staying overnight who usually lives at another address',
   ],
-  instruction: 'Tell the respondent to turn to <strong>Showcard 13</strong> or show them the <strong>Electronic Showcard</strong> below',
+  instruction: ['Tell the respondent to turn to <strong>Showcard 13</strong> or show them the <strong>Electronic Showcard</strong> below'],
   definitions: [
     {
       title: 'Electronic Showcard',

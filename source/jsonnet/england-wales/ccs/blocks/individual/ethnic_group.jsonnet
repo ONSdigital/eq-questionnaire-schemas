@@ -27,7 +27,7 @@ local question(title, regionStrings, region_code) = (
   {
     id: 'ethnic-group-question',
     title: title,
-    instruction: regionStrings.instruction,
+    instruction: [regionStrings.instruction],
     type: 'General',
     answers: [
       {

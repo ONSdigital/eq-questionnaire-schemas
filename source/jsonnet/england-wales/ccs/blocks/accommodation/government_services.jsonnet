@@ -7,7 +7,7 @@
     description: [
       'This refers to any interaction you might have with public authorities online, such as DVLA, HMRC, local council or health-related services',
     ],
-    instruction: 'Tell the respondent to turn to <strong>Showcard 7</strong> or show them the options below',
+    instruction: ['Tell the respondent to turn to <strong>Showcard 7</strong> or show them the options below'],
     type: 'MutuallyExclusive',
     mandatory: false,
     answers: [

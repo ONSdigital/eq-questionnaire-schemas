@@ -15,7 +15,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       ],
     },
     type: 'General',
-    instruction: 'If yes, ensure this accommodation is recorded on the Fieldwork Management Tool and interview household',
+    instruction: ['If yes, ensure this accommodation is recorded on the Fieldwork Management Tool and interview household'],
     answers: [{
       id: 'other-living-accommodation-answer',
       mandatory: false,
