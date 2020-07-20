@@ -15,7 +15,7 @@ local rules = import 'rules.libsonnet';
         placeholders.address,
       ],
     },
-    description: 'These people will be counted as visitors.',
+    description: 'These people will be counted as visitors',
     mandatory: true,
     answers: [
       {

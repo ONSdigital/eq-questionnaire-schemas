@@ -7,7 +7,7 @@
     type: 'General',
     guidance: {
       contents: [{
-        title: 'Include all rooms built or converted for use as bedrooms',
+        description: 'Include all rooms built or converted for use as bedrooms',
       }],
     },
     answers: [{

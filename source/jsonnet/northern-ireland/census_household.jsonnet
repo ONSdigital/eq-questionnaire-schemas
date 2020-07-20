@@ -264,12 +264,11 @@ function(region_code) {
     },
     {
       id: 'accommodation-section',
-      title: 'Household accommodation',
+      title: 'Household and accommodation',
       summary: { show_on_completion: false },
       groups: [
         {
           id: 'accommodation-group',
-          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             accommodation_type,
@@ -449,7 +448,6 @@ function(region_code) {
       groups: [
         {
           id: 'visitor-group',
-          title: 'Visitor group',
           blocks: [
             visitor_introduction,
             visitor_dob,

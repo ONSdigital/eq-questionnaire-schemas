@@ -2,7 +2,8 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 {
-  type: 'Question',
+  type: 'ListCollectorDrivingQuestion',
+  for_list: 'household',
   id: 'anyone-else-driver',
   question: {
     id: 'anyone-else-driver-question',

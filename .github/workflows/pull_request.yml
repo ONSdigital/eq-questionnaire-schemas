@@ -15,7 +15,7 @@ jobs:
           tar -xzf jsonnet.tar.gz -C jsonnet
           echo "::add-path::jsonnet"
       - name: Lint jsonnet
-        run: make lint-jsonnet
+        run: make lint
       - name: Build schemas
         run: make build-schemas
       - name: Archive schema artifacts

@@ -7,7 +7,7 @@
     type: 'General',
     guidance: {
       contents: [{
-        title: 'Include any company cars or vans available for private use.',
+        description: 'Include any company cars or vans available for private use.',
       }],
     },
     answers: [{

@@ -275,12 +275,11 @@ function(region_code, census_month_year_date) {
     },
     {
       id: 'accommodation-section',
-      title: 'Household accommodation',
+      title: 'Household and accommodation',
       summary: { show_on_completion: false },
       groups: [
         {
           id: 'accommodation-group',
-          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             accommodation_type,
@@ -465,7 +464,6 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'visitor-group',
-          title: 'Visitor Group',
           blocks: [
             visitor_introduction,
             visitor_dob,
