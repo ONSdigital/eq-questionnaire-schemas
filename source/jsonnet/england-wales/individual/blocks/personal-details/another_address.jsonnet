@@ -15,7 +15,9 @@ local question(title) = {
       ],
     },
   ],
-  description: 'This should be a single address and could be more than 30 days in a row or divided across the year',
+  description: [
+    'This should be a single address and could be more than 30 days in a row or divided across the year',
+  ],
   answers: [
     {
       id: 'another-address-answer',

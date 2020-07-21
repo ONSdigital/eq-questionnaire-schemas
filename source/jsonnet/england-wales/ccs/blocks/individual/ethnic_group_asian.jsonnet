@@ -26,7 +26,7 @@ local walesStrings = {
 local question(title, instruction) = {
   id: 'asian-ethnic-group-question',
   title: title,
-  instruction: instruction,
+  instruction: [instruction],
   type: 'General',
   answers: [
     {

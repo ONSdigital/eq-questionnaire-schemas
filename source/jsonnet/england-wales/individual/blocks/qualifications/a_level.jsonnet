@@ -51,7 +51,9 @@ local question(region_code, isProxy) = (
   {
     id: 'a-level-question',
     title: if isProxy then proxyTitle else nonProxyTitle,
-    description: questionDescription,
+    description: [
+      questionDescription,
+    ],
     definitions: [{
       title: 'What we mean by “AS and A level”',
       contents: [

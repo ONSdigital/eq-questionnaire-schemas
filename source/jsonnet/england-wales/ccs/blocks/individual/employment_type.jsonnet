@@ -4,7 +4,7 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'employment-type-question',
   title: title,
-  instruction: 'Tell the respondent to turn to <strong>Showcard 11</strong> or show them the options below',
+  instruction: ['Tell the respondent to turn to <strong>Showcard 11</strong> or show them the options below'],
   type: 'General',
   answers: [
     {

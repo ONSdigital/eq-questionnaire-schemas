@@ -5,7 +5,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   id: 'other-living-accommodation',
   question: {
     id: 'other-living-accommodation-question',
-    description: 'For example, separate bedsits, annexes, sheds',
+    description: [
+      'For example, separate bedsits, annexes, sheds',
+    ],
     title: {
       text: 'Is there any other living accommodation at {household_address}?',
       placeholders: [
@@ -13,7 +15,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
       ],
     },
     type: 'General',
-    instruction: 'If yes, ensure this accommodation is recorded on the Fieldwork Management Tool and interview household',
+    instruction: ['If yes, ensure this accommodation is recorded on the Fieldwork Management Tool and interview household'],
     answers: [{
       id: 'other-living-accommodation-answer',
       mandatory: false,

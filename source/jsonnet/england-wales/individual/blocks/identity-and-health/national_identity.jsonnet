@@ -67,7 +67,9 @@ local question(title, description, detailAnswerLabel, region_code, otherDescript
     id: 'national-identity-question',
     title: title,
     type: 'General',
-    description: description,
+    description: [
+      description,
+    ],
     answers: [
       {
         id: 'national-identity-answer',

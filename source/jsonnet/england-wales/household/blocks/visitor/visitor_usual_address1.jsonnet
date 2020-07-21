@@ -5,7 +5,9 @@ local question(title, description) = {
   id: 'visitor-usual-question',
   title: title,
   type: 'General',
-  description: description,
+  description: [
+    description,
+  ],
   answers: [
     {
       id: 'visitor-usual-answer',
@@ -60,7 +62,9 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
     id: 'visitor-usual-question',
     title: title,
     type: 'General',
-    description: description,
+    description: [
+      description,
+    ],
     answers: [
       {
         id: 'visitor-usual-answer',

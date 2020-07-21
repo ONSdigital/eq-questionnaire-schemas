@@ -50,7 +50,7 @@ local rules = import 'rules.libsonnet';
           id: 'visitor-add-question',
           type: 'General',
           title: 'What is the name of the visitor who stayed overnight?',
-          instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
+          instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
           answers: [
             {
               id: 'first-name',
@@ -84,7 +84,7 @@ local rules = import 'rules.libsonnet';
               placeholders.getListOrdinalityWithoutDeterminer('visitors'),
             ],
           },
-          instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
+          instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
           answers: [
             {
               id: 'first-name',

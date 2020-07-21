@@ -20,7 +20,7 @@ local question(title, instruction, region_code) = (
   {
     id: 'white-ethnic-group-question',
     title: title,
-    instruction: instruction,
+    instruction: [instruction],
     type: 'General',
     answers: [
       {
