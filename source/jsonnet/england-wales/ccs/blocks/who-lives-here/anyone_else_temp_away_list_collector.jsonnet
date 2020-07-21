@@ -58,7 +58,7 @@ local editQuestion(questionTitle) = {
     id: 'anyone-else-temp-away-confirmation-question',
     type: 'General',
     title: 'Apart from the people already included, is there anyone else who was temporarily away or staying that you need to add?',
-    instruction: 'Tell the respondent to double-check <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below',
+    instruction: ['Tell the respondent to double-check <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below'],
     definitions: [
       {
         title: 'Electronic Showcard',
@@ -112,7 +112,7 @@ local editQuestion(questionTitle) = {
       id: 'anyone-else-temp-away-add-question',
       type: 'General',
       title: 'Who do you need to add?',
-      instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
+      instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
       answers: [
         {
           id: 'first-name',

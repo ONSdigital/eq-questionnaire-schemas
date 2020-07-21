@@ -91,7 +91,7 @@ local pastProxyTitle = {
       goto: {
         group: 'school-group',
         when: [{
-          id: 'employment-type-answer',
+          id: 'not-employed-status-last-seven-days-answer',
           condition: 'contains',
           value: 'Studying',
         }],

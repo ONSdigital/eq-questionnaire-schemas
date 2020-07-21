@@ -4,7 +4,9 @@ local rules = import 'rules.libsonnet';
 local question(title, description) = {
   title: title,
   id: 'work-location-type-question',
-  description: description,
+  description: [
+    description,
+  ],
   type: 'General',
   answers: [
     {
@@ -97,7 +99,7 @@ local proxyDescriptionDidWork = {
     },
     {
       goto: {
-        block: 'work-travel',
+        block: 'travel-to-work',
         when: [
           {
             id: 'work-location-type-answer',

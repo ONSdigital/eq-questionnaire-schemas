@@ -67,7 +67,7 @@ local guidance = {
   routing_rules: [
     {
       goto: {
-        block: 'marriage-type',
+        block: 'marital-or-civil-partnership-status',
         when: [
           rules.over15,
         ],

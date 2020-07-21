@@ -10,7 +10,7 @@ local proxyDefinitionDescription = 'Their answer will provide a better understan
 local question(englandTitle, walesTitle, region_code, guidance, definitionDescription, otherAsianBackgroundDescription) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
   {
-    id: 'asian-ethnic-group-question',
+    id: 'asian-or-asian-british-ethnic-group-question',
     title: title,
     type: 'General',
     answers: [
@@ -28,7 +28,7 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
             },
           ],
         },
-        id: 'asian-ethnic-group-answer',
+        id: 'asian-or-asian-british-ethnic-group-answer',
         mandatory: false,
         options: [
           {
@@ -76,7 +76,7 @@ local proxyWalesTitle = {
 
 function(region_code) {
   type: 'Question',
-  id: 'asian-ethnic-group',
+  id: 'asian-or-asian-british-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
@@ -90,10 +90,10 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'ethnic-group-asian-other',
+        block: 'other-asian-or-asian-british-ethnic-group',
         when: [
           {
-            id: 'asian-ethnic-group-answer',
+            id: 'asian-or-asian-british-ethnic-group-answer',
             condition: 'equals',
             value: 'Any other Asian background',
           },

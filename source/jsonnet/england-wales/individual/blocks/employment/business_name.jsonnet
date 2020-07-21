@@ -4,7 +4,9 @@ local rules = import 'rules.libsonnet';
 local question(title, description, option) = {
   id: 'business-name-question',
   title: title,
-  description: description,
+  description: [
+    description,
+  ],
   type: 'MutuallyExclusive',
   mandatory: false,
   answers: [

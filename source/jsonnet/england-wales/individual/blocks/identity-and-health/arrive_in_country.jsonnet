@@ -5,7 +5,9 @@ local question(title) = {
   id: 'arrive-in-country-question',
   title: title,
   type: 'General',
-  description: 'Do not count short visits away from the UK',
+  description: [
+    'Do not count short visits away from the UK',
+  ],
   answers: [
     {
       id: 'arrive-in-country-answer',
@@ -104,7 +106,7 @@ function(region_code, census_month_year_date) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
       },
     },
   ],

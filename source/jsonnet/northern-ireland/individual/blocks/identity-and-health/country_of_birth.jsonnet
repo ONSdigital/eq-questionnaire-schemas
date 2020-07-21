@@ -127,7 +127,7 @@ local question(title, elsewhereDescription) = {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
         when: [
           {
             id: 'country-of-birth-answer',
@@ -150,7 +150,7 @@ local question(title, elsewhereDescription) = {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'location-one-year-ago',
       },
     },
   ],

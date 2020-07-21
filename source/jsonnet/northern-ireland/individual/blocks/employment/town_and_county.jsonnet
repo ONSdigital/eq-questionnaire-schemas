@@ -63,7 +63,7 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'work-travel',
+        block: 'travel-to-work',
       },
     },
   ],

@@ -74,7 +74,7 @@ local otherUkAddressOptions = {
               arguments: {
                 list_to_concatenate: {
                   source: 'answers',
-                  identifier: ['other-address-answer-building', 'other-address-answer-street'],
+                  identifier: ['other-address-uk-answer-building', 'other-address-uk-answer-street'],
                 },
                 delimiter: ', ',
               },

@@ -11,7 +11,7 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
 
   {
-    id: 'black-ethnic-group-question',
+    id: 'black-black-british-caribbean-or-african-ethnic-group-question',
     title: title,
     type: 'General',
     answers: [
@@ -29,7 +29,7 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
             },
           ],
         },
-        id: 'black-ethnic-group-answer',
+        id: 'black-black-british-caribbean-or-african-ethnic-group-answer',
         mandatory: false,
         options: [
           {
@@ -74,7 +74,7 @@ function(region_code) (
   else 'Any other Black, Black British or Caribbean background';
   {
     type: 'Question',
-    id: 'black-ethnic-group',
+    id: 'black-black-british-caribbean-or-african-ethnic-group',
     question_variants: [
       {
         question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, optionLabelValue, 'You can enter your ethnic group or background on the next question'),
@@ -88,10 +88,10 @@ function(region_code) (
     routing_rules: [
       {
         goto: {
-          block: 'ethnic-group-black-other',
+          block: 'other-black-black-british-caribbean-or-african-ethnic-group',
           when: [
             {
-              id: 'black-ethnic-group-answer',
+              id: 'black-black-british-caribbean-or-african-ethnic-group-answer',
               condition: 'equals',
               value: optionLabelValue,
             },
@@ -103,7 +103,7 @@ function(region_code) (
           block: 'ethnic-group-black-african',
           when: [
             {
-              id: 'black-ethnic-group-answer',
+              id: 'black-black-british-caribbean-or-african-ethnic-group-answer',
               condition: 'equals',
               value: 'African',
             },

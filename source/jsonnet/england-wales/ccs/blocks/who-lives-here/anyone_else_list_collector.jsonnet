@@ -67,8 +67,11 @@ local editQuestion(questionTitle) = {
         type: 'General',
         id: 'anyone-usually-live-at-question',
         title: questionTitle,
-        description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p><strong>Anyone else is not part of your household and will be interviewed separately.</strong></p>',
-        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below',
+        description: [
+          'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.',
+          '<strong>Anyone else is not part of your household and will be interviewed separately.</strong>',
+        ],
+        instruction: ['Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below'],
         definitions: [
           {
             title: 'Electronic Showcard',
@@ -127,8 +130,8 @@ local editQuestion(questionTitle) = {
             placeholders.censusDate,
           ],
         },
-        description: 'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p>Anyone else is not part of your household and will be interviewed separately.</p>',
-        instruction: 'Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below',
+        description: ['Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.<p>Anyone else is not part of your household and will be interviewed separately.</p>'],
+        instruction: ['Tell the respondent to turn to <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below'],
         definitions: [
           {
             title: 'Electronic Showcard',
@@ -215,7 +218,7 @@ local editQuestion(questionTitle) = {
           id: 'add-question',
           type: 'General',
           title: 'Who do you need to add?',
-          instruction: 'Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”',
+          instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
           answers: [
             {
               id: 'first-name',

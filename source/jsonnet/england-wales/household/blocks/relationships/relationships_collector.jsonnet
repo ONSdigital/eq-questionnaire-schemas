@@ -79,7 +79,9 @@ local firstPersonNamePossessivePlaceholder = {
           text: '{second_person_name} is your <em>…</em>',
           placeholders: [secondPersonPlaceholder],
         },
-        description: 'Complete the sentence by selecting the appropriate relationship.',
+        description: [
+          'Complete the sentence by selecting the appropriate relationship.',
+        ],
         answers: [{
           id: 'relationship-answer',
           mandatory: false,
@@ -260,7 +262,9 @@ local firstPersonNamePossessivePlaceholder = {
           text: 'Thinking about {first_person_name}, {second_person_name} is their <em>…</em>',
           placeholders: [firstPersonPlaceholder, secondPersonPlaceholder],
         },
-        description: 'Complete the sentence by selecting the appropriate relationship.',
+        description: [
+          'Complete the sentence by selecting the appropriate relationship.',
+        ],
         answers: [
           {
             id: 'relationship-answer',

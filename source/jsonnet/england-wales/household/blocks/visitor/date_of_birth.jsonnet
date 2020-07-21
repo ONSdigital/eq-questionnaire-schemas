@@ -13,7 +13,9 @@ local rules = import 'rules.libsonnet';
         placeholders.personNamePossessive,
       ],
     },
-    description: 'For example, 31 3 1980',
+    description: [
+      'For example, 31 3 1980',
+    ],
     type: 'General',
     answers: [
       {

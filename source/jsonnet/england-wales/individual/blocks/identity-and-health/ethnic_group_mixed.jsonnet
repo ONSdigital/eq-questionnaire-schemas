@@ -8,7 +8,7 @@ local nonProxyDefinitionDescription = 'Your answer will provide a better underst
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
 local question(title, guidance, definitionDescription, mixedMultipleBackgroundDescription) = {
-  id: 'mixed-ethnic-group-question',
+  id: 'mixed-or-multiple-ethnic-group-question',
   title: title,
   type: 'General',
   answers: [
@@ -26,7 +26,7 @@ local question(title, guidance, definitionDescription, mixedMultipleBackgroundDe
           },
         ],
       },
-      id: 'mixed-ethnic-group-answer',
+      id: 'mixed-or-multiple-ethnic-group-answer',
       mandatory: false,
       options: [
         {
@@ -62,7 +62,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'mixed-ethnic-group',
+  id: 'mixed-or-multiple-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
@@ -76,10 +76,10 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'ethnic-group-mixed-other',
+        block: 'other-mixed-or-multiple-ethnic-group',
         when: [
           {
-            id: 'mixed-ethnic-group-answer',
+            id: 'mixed-or-multiple-ethnic-group-answer',
             condition: 'equals',
             value: 'Any other Mixed or Multiple background',
           },

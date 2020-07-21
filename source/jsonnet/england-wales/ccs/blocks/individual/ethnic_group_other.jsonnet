@@ -7,7 +7,7 @@ local walesInstruction = 'Ask the respondent to continue looking at <strong>Show
 local question(title, instruction) = {
   id: 'other-ethnic-group-question',
   title: title,
-  instruction: instruction,
+  instruction: [instruction],
   type: 'General',
   answers: [
     {

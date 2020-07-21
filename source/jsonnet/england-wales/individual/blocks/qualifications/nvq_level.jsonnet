@@ -41,7 +41,9 @@ local question(region_code, isProxy) = (
     id: 'nvq-level-question',
     title: if isProxy then proxyTitle else nonProxyTitle,
     type: 'MutuallyExclusive',
-    description: questionDescription,
+    description: [
+      questionDescription,
+    ],
     definitions: [{
       title: 'What we mean by “NVQ”',
       contents: [

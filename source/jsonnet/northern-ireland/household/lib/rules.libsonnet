@@ -34,12 +34,12 @@ local isNotFirstPersonInList(listName) = {
 
 {
   isNotProxy: {
-    id: 'proxy-answer',
+    id: 'confirm-who-is-answering-answer',
     condition: 'equals',
     value: 'Yes, I am',
   },
   isProxy: {
-    id: 'proxy-answer',
+    id: 'confirm-who-is-answering-answer',
     condition: 'equals',
     value: 'No, I am answering on their behalf',
   },

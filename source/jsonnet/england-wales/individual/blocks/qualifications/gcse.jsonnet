@@ -53,7 +53,9 @@ local question(region_code, isProxy) = (
   {
     id: 'gcse-question',
     title: if isProxy then proxyTitle else nonProxyTitle,
-    description: questionDescription,
+    description: [
+      questionDescription,
+    ],
     type: 'MutuallyExclusive',
     mandatory: false,
     definitions: [{
@@ -120,7 +122,7 @@ function(region_code) {
         group: 'employment-group',
         when: [
           {
-            id: 'degree-answer',
+            id: 'degree-level-or-above-answer',
             condition: 'equals',
             value: 'Yes',
           },

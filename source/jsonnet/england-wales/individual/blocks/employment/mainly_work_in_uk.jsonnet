@@ -48,10 +48,10 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'employer-address-workplace',
+        block: 'workplace-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'not set',
           },
           {
@@ -63,10 +63,10 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'employer-address-workplace',
+        block: 'workplace-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'At a workplace',
           },
@@ -80,10 +80,10 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'employer-address-depot',
+        block: 'depot-address',
         when: [
           {
-            id: 'employer-type-of-address-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'Report to a depot',
           },
