@@ -1,3 +1,4 @@
+local rules = import '../../lib/common_rules.libsonnet';
 local placeholders = import '../../lib/placeholders.libsonnet';
 
 // Who lives here
@@ -157,6 +158,13 @@ function(region_code, census_month_year_date) {
       id: 'accommodation-section',
       title: 'Household accommodation',
       summary: { show_on_completion: false },
+      enabled: [
+        {
+          when: [
+            rules.listIsNotEmpty('household'),
+          ],
+        },
+      ],
       groups: [
         {
           id: 'accommodation-group',
@@ -281,6 +289,13 @@ function(region_code, census_month_year_date) {
       summary: {
         show_on_completion: false,
       },
+      enabled: [
+        {
+          when: [
+            rules.listIsNotEmpty('household'),
+          ],
+        },
+      ],
       groups: [
         {
           id: 'household-check-group',
