@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-07-21 16:02+0100\n"
+"POT-Creation-Date: 2020-07-21 16:06+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -58,7 +58,8 @@ msgid "{person_name} (Visitor)"
 msgstr ""
 
 #. Custom section summary item title
-msgid "Householder members"
+#. List collector summary heading
+msgid "Household members"
 msgstr ""
 
 #. Custom section summary list add link
@@ -98,10 +99,6 @@ msgid "Household Check"
 msgstr ""
 
 #. List collector summary heading
-msgid "Household members"
-msgstr ""
-
-#. List collector summary heading
 msgid "Visitors staying overnight on {census_date}"
 msgstr ""
 
@@ -129,20 +126,18 @@ msgstr ""
 msgid ""
 "If the respondent was living outside the UK on Sunday {census_date}, "
 "please explain that they do not need to complete the questionnaire and "
-"end interview"
+"end interview <p>You still need to submit this questionnaire.</p><p> "
+"Continue past the household members summary page and select Submit.</p>"
 msgstr ""
 
 #. Content instruction
 msgid ""
 "If the respondent was not living at the property on census night, but "
 "other current household members were, you must speak to one of those "
-"household members instead."
-msgstr ""
-
-#. Content instruction
-msgid ""
-"If none of those household members are available, you must return to the "
-"address to interview one of them at a later date."
+"household members instead. <p>If none of those household members are "
+"available, <strong>save and sign out</strong> of the questionnaire. You "
+"must return to the address to interview one of them at a later time or "
+"date.</p>"
 msgstr ""
 
 #. Content instruction
@@ -159,9 +154,11 @@ msgstr ""
 #. Content page description
 msgctxt "Your household"
 msgid ""
-"A <em>household</em> is one person living alone, or a group of people "
-"(not necessarily related), who share cooking facilities, and share a\n"
-"        living room, <em>or</em> sitting room, <em>or</em> dining area."
+"A <strong>household</strong> is one person living alone, or a group of "
+"people (not necessarily related), who share cooking facilities "
+"<em>and</em> share a\n"
+"        living room, <strong>or</strong> sitting room, "
+"<strong>or</strong> dining area."
 msgstr ""
 
 #. Content page description
@@ -173,7 +170,7 @@ msgstr ""
 
 #. Content page description
 msgctxt "Your household"
-msgid "I will show you these on paper/on the phone screen."
+msgid "I will show you these on paper or on the phone screen."
 msgstr ""
 
 #. Content page description
@@ -188,27 +185,27 @@ msgstr ""
 msgctxt "Household and accommodation"
 msgid ""
 "In this section, I’m going to ask you about the household and "
-"accommodation you were living in on Sunday {census_date}."
+"accommodation you were living in on Sunday {census_date}"
 msgstr ""
 
 #. Content page description
 msgctxt "{person_name}"
 msgid ""
 "In this section, I’m going to ask you questions about "
-"<em>{person_name}</em>."
+"<em>{person_name}</em>"
 msgstr ""
 
 #. Content page description
 msgctxt "{person_name}"
 msgid ""
 "In this section, I’m going to ask you about your visitor, "
-"<em>{person_name}</em>."
+"<em>{person_name}</em>"
 msgstr ""
 
 #. Content page description
 msgctxt "Final check – other households"
 msgid ""
-"These final questions are to check we haven’t missed any other living "
+"These final questions are to check we have not missed any other living "
 "accommodation or households"
 msgstr ""
 
@@ -299,11 +296,11 @@ msgid "Was the respondent living at {household_address} on Sunday {census_date}?
 msgstr ""
 
 #. Question text
-msgid "What type of accomodation is this?"
+msgid "What type of accommodation is this?"
 msgstr ""
 
 #. Question text
-msgid "What type of accomodation was that?"
+msgid "What type of accommodation was that?"
 msgstr ""
 
 #. Question text
@@ -628,6 +625,15 @@ msgid ""
 msgstr ""
 
 #. Question description
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
+msgid ""
+"Remember to only include those people who share cooking facilities "
+"<strong>and</strong> share a living room, <strong>or</strong> sitting "
+"room, <strong>or</strong> dining area.<p>Anyone else is not part of your "
+"household and will be interviewed separately.</p>"
+msgstr ""
+
+#. Question description
 msgctxt "Are any of these people related to each other?"
 msgid "Remember to include partners and stepchildren as related"
 msgstr ""
@@ -752,14 +758,14 @@ msgid ""
 msgstr ""
 
 #. Question instruction
-msgctxt "What type of accomodation is this?"
+msgctxt "What type of accommodation is this?"
 msgid ""
 "Tell the respondent to turn to <strong>Showcard 3</strong> or show them "
 "the options below"
 msgstr ""
 
 #. Question instruction
-msgctxt "What type of accomodation was that?"
+msgctxt "What type of accommodation was that?"
 msgid ""
 "Tell the respondent to turn to <strong>Showcard 3</strong> or show them "
 "the options below"
@@ -797,14 +803,14 @@ msgstr ""
 msgctxt ""
 "Are all the rooms in this accommodation, including the kitchen, bathroom "
 "and toilet, behind a door that only this household can use?"
-msgid "If “No” confirm one or more rooms are shared with another household"
+msgid "If “No” confirm one or more rooms were shared with another household"
 msgstr ""
 
 #. Question instruction
 msgctxt ""
 "Were all the rooms in that accommodation, including the kitchen, bathroom"
 " and toilet, behind a door that only this household could use?"
-msgid "If “No” confirm one or more rooms are shared with another household"
+msgid "If “No” confirm one or more rooms were shared with another household"
 msgstr ""
 
 #. Question instruction
@@ -1052,6 +1058,11 @@ msgid ""
 "interview them, if at this address"
 msgstr ""
 
+#. Question warning
+msgctxt "Are you sure you want to remove <em>{person_name}</em>?"
+msgid "All of the information entered about this person will be deleted"
+msgstr ""
+
 #. Question definition link
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
 msgid "Electronic Showcard"
@@ -1091,8 +1102,13 @@ msgstr ""
 #. Question definition description
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
 msgid ""
-"The address at which you generally spend most time, for most people this "
+"The address at which you generally spend most time. For most people this "
 "will be their permanent or family home."
+msgstr ""
+
+#. Question definition description
+msgctxt "Did anyone else usually live in your household on Sunday {census_date}?"
+msgid "<strong>Include</strong>"
 msgstr ""
 
 #. Question definition description
@@ -1104,14 +1120,14 @@ msgstr ""
 msgctxt ""
 "Apart from the people already included, is there anyone else who was "
 "temporarily away or staying that you need to add?"
-msgid "Include people temporarily away such as"
+msgid "<strong>Include people temporarily away such as</strong>"
 msgstr ""
 
 #. Question definition description
 msgctxt ""
 "Apart from the people already included, is there anyone else who was "
 "temporarily away or staying that you need to add?"
-msgid "Include people temporarily staying on such as"
+msgid "<strong>Include people temporarily staying on such as</strong>"
 msgstr ""
 
 #. Question definition description
@@ -1144,21 +1160,21 @@ msgstr ""
 
 #. Question definition list item
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
-msgid "<strong>full-time students</strong> should include themselves here"
+msgid "<strong>Full-time students</strong> should include themselves here."
 msgstr ""
 
 #. Question definition list item
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
 msgid ""
-"<strong>armed forces members</strong> should include themselves at their "
-"home address if they have one"
+"<strong>Armed forces members</strong> should include themselves at their "
+"home address if they have one."
 msgstr ""
 
 #. Question definition list item
 msgctxt "Were you usually living at {household_address} on Sunday {census_date}?"
 msgid ""
-"<strong>include anyone temporarily outside the UK, if this was for less "
-"than 12 months</strong>"
+"Include <strong>anyone temporarily outside the UK</strong>, if this was "
+"for less than 12 months."
 msgstr ""
 
 #. Question definition list item
@@ -1260,7 +1276,7 @@ msgctxt ""
 " {census_date}?"
 msgid ""
 "people staying because it was their second address, for example, for work"
-" - their permanent or family home was elsewhere"
+" – their permanent or family home was elsewhere"
 msgstr ""
 
 #. Question definition list item
@@ -1301,7 +1317,7 @@ msgctxt ""
 "{census_date}?"
 msgid ""
 "people staying because it was their second address, for example, for work"
-" - their permanent or family home was elsewhere"
+" – their permanent or family home was elsewhere"
 msgstr ""
 
 #. Question definition list item
@@ -1641,32 +1657,32 @@ msgid "No, living at a different address"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation is this?"
+msgctxt "What type of accommodation is this?"
 msgid "Whole house or bungalow"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation is this?"
+msgctxt "What type of accommodation is this?"
 msgid "Flat, maisonette or apartment"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation is this?"
+msgctxt "What type of accommodation is this?"
 msgid "Caravan or other mobile or temporary structure"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation was that?"
+msgctxt "What type of accommodation was that?"
 msgid "Whole house or bungalow"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation was that?"
+msgctxt "What type of accommodation was that?"
 msgid "Flat, maisonette or apartment"
 msgstr ""
 
 #. Answer option
-msgctxt "What type of accomodation was that?"
+msgctxt "What type of accommodation was that?"
 msgid "Caravan or other mobile or temporary structure"
 msgstr ""
 
@@ -2848,7 +2864,7 @@ msgctxt ""
 "Is there another UK address where you may have been included on a census "
 "questionnaire because you were a usual resident, or staying overnight "
 "there on Sunday {census_date}?"
-msgid "Holiday in the UK"
+msgid "Holiday address in the UK"
 msgstr ""
 
 #. Answer option
@@ -2928,7 +2944,7 @@ msgctxt ""
 "Is there another UK address where <em>{person_name}</em> may have been "
 "included on a census questionnaire because they were a usual resident, or"
 " staying overnight there on Sunday {census_date}?"
-msgid "Holiday in the UK"
+msgid "Holiday address in the UK"
 msgstr ""
 
 #. Answer option
@@ -2994,13 +3010,13 @@ msgstr ""
 
 #. Answer option description
 #. For answer option: Flat, maisonette or apartment
-msgctxt "What type of accomodation is this?"
+msgctxt "What type of accommodation is this?"
 msgid "Including purpose-built flats and flats within converted buildings"
 msgstr ""
 
 #. Answer option description
 #. For answer option: Flat, maisonette or apartment
-msgctxt "What type of accomodation was that?"
+msgctxt "What type of accommodation was that?"
 msgid "Including purpose-built flats and flats within converted buildings"
 msgstr ""
 
@@ -3089,7 +3105,7 @@ msgstr ""
 msgctxt ""
 "In the last year, how have you or your household used online government "
 "services?"
-msgid "For example, passports, visas"
+msgid "For example, passports, driving licence"
 msgstr ""
 
 #. Answer option description
@@ -3248,7 +3264,7 @@ msgctxt ""
 "During the week of 15 to {census_date}, were you doing any of the "
 "following?"
 msgid ""
-"Freelance means that you are self-employed and work for different "
+"Freelance means that they are self-employed and work for different "
 "companies or people on particular pieces of work"
 msgstr ""
 
@@ -3258,7 +3274,7 @@ msgctxt ""
 "During the week of 15 to {census_date}, was <em>{person_name}</em> doing "
 "any of the following?"
 msgid ""
-"Freelance means that you are self-employed and work for different "
+"Freelance means that they are self-employed and work for different "
 "companies or people on particular pieces of work"
 msgstr ""
 
