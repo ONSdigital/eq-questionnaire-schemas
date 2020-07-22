@@ -52,7 +52,7 @@ local editQuestion(questionTitle) = {
   },
   remove_answer: {
     id: 'anyone-else-temp-away-remove-confirmation',
-    value: 'Yes, I want to remove this person',
+    value: 'Yes',
   },
   question: {
     id: 'anyone-else-temp-away-confirmation-question',
@@ -173,12 +173,12 @@ local editQuestion(questionTitle) = {
           type: 'Radio',
           options: [
             {
-              label: 'Yes, I want to remove this person',
-              value: 'Yes, I want to remove this person',
+              label: 'Yes',
+              value: 'Yes',
             },
             {
-              label: 'No, I do not want to remove this person',
-              value: 'No, I do not want to remove this person',
+              label: 'No',
+              value: 'No',
             },
           ],
         },
