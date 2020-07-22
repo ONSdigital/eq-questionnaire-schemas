@@ -1,3 +1,4 @@
+local rules = import '../../lib/common_rules.libsonnet';
 local placeholders = import '../../lib/placeholders.libsonnet';
 
 // Who lives here
@@ -155,12 +156,18 @@ function(region_code, census_month_year_date) {
     },
     {
       id: 'accommodation-section',
-      title: 'Household accommodation',
+      title: 'Household and accommodation',
       summary: { show_on_completion: false },
+      enabled: [
+        {
+          when: [
+            rules.listIsNotEmpty('household'),
+          ],
+        },
+      ],
       groups: [
         {
           id: 'accommodation-group',
-          title: 'Accommodation group',
           blocks: [
             accommodation_introduction,
             respondent_living_at,
@@ -206,7 +213,6 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'personal-details-group',
-          title: 'Personal Details',
           blocks: [
             individual_interstitial,
             proxy,
@@ -260,10 +266,12 @@ function(region_code, census_month_year_date) {
           ],
         },
       },
+      summary: {
+        show_on_completion: false,
+      },
       groups: [
         {
           id: 'visitor-group',
-          title: 'Visitor Group',
           blocks: [
             visitor_interstitial,
             visitor_dob,
@@ -281,10 +289,16 @@ function(region_code, census_month_year_date) {
       summary: {
         show_on_completion: false,
       },
+      enabled: [
+        {
+          when: [
+            rules.listIsNotEmpty('household'),
+          ],
+        },
+      ],
       groups: [
         {
           id: 'household-check-group',
-          title: 'Household Check',
           blocks: [
             household_check_interstitial,
             other_living_accommodation,
