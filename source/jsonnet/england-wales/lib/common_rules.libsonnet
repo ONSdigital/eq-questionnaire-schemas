@@ -130,4 +130,9 @@
     condition: 'equals',
     value: 'No, I don’t usually live here',
   },
+  listIsNotEmpty(listName): {
+    list: listName,
+    condition: 'greater than',
+    value: 0,
+  },
 }
