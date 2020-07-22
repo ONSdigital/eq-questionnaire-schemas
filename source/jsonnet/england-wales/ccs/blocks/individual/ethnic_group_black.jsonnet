@@ -45,7 +45,7 @@ local question(title, instruction) = {
             id: 'african-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter African ethic group or background',
+            label: 'Enter African ethnic group or background',
           },
         },
         {
