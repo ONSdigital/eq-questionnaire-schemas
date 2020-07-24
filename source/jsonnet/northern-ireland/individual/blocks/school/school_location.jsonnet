@@ -33,9 +33,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitleSchool = 'What is the address of your main place of study?';
+local nonProxyTitleSchool = 'What is the address of your main place of <em>study</em>?';
 local proxyTitleSchool = {
-  text: 'What is the address of <em>{person_name_possessive}</em> main place of study?',
+  text: 'What is the address of <em>{person_name_possessive}</em> main place of <em>study</em>?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

@@ -59,17 +59,17 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitleWork = 'How do you usually travel to your main place of work?';
+local nonProxyTitleWork = 'How do you usually travel to your main place of <em>work</em>?';
 local proxyTitleWork = {
-  text: 'How does <em>{person_name}</em> usually travel to their main place of work?',
+  text: 'How does <em>{person_name}</em> usually travel to their main place of <em>work</em>?',
   placeholders: [
     placeholders.personName,
   ],
 };
 
-local pastNonProxyTitleWork = 'How did you usually travel to your main place of work?';
+local pastNonProxyTitleWork = 'How did you usually travel to your main place of <em>work</em>?';
 local pastProxyTitleWork = {
-  text: 'How did <em>{person_name}</em> usually travel to their main place of work?',
+  text: 'How did <em>{person_name}</em> usually travel to their main place of <em>work</em>?',
   placeholders: [
     placeholders.personName,
   ],

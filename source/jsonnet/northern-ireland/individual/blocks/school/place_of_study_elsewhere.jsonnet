@@ -21,12 +21,12 @@ local question(title) = {
   id: 'place-of-study-elsewhere',
   question_variants: [
     {
-      question: question('In which country is your course of study, including school?'),
+      question: question('In which country is your course of <em>study</em>, including school?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'In which country is <em>{person_name_possessive}</em> course of study, including school?',
+        text: 'In which country is <em>{person_name_possessive}</em> course of <em>study</em>, including school?',
         placeholders: [
           placeholders.personNamePossessive,
         ],
