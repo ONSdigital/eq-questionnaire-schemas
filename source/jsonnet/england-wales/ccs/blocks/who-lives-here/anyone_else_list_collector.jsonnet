@@ -137,7 +137,7 @@ local editQuestion(questionTitle) = {
             title: 'Electronic Showcard',
             contents: [
               {
-                description: 'Include',
+                description: '<strong>Include</strong>',
               },
               {
                 list: [

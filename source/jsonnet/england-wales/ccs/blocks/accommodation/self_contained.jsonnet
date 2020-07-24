@@ -1,9 +1,9 @@
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, instruction) = {
   id: 'self-contained-question',
   title: title,
-  instruction: ['If “No” confirm one or more rooms were shared with another household'],
+  instruction: instruction,
   type: 'General',
   answers: [{
     id: 'self-contained-answer',
@@ -27,11 +27,11 @@ local question(title) = {
   id: 'self-contained',
   question_variants: [
     {
-      question: question('Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?'),
+      question: question('Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?', ['If “No” confirm one or more rooms are shared with another household']),
       when: [rules.livingAtCurrentAddress],
     },
     {
-      question: question('Were all the rooms in that accommodation, including the kitchen, bathroom and toilet, behind a door that only this household could use?'),
+      question: question('Were all the rooms in that accommodation, including the kitchen, bathroom and toilet, behind a door that only this household could use?', ['If “No” confirm one or more rooms were shared with another household']),
       when: [rules.livingAtDifferentAddress],
     },
   ],
