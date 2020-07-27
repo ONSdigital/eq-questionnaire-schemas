@@ -172,8 +172,8 @@ function(region_code) {
             title: {
               text_plural: {
                 forms: {
-                  one: 'You said {cardinality} person is living here on Sunday {census_date}',
-                  other: 'You said {cardinality} people are living here on Sunday {census_date}',
+                  one: 'You said <em>{cardinality}</em> person is living here on Sunday {census_date}',
+                  other: 'You said <em>{cardinality}</em> people are living here on Sunday {census_date}',
                 },
                 count: {
                   source: 'list',
@@ -195,8 +195,8 @@ function(region_code) {
             title: {
               text_plural: {
                 forms: {
-                  one: 'You said {cardinality} visitor is staying overnight here on Sunday {census_date}',
-                  other: 'You said {cardinality} visitors are staying overnight here on Sunday {census_date}',
+                  one: 'You said <em>{cardinality}</em> visitor is staying overnight here on Sunday {census_date}',
+                  other: 'You said <em>{cardinality}</em> visitors are staying overnight here on Sunday {census_date}',
                 },
                 count: {
                   source: 'list',

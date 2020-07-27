@@ -27,12 +27,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         type: 'TextField',
       },
       {
-        id: 'usual-address-answer-county',
-        label: 'County',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
         id: 'usual-address-answer-postcode',
         label: 'Postcode',
         mandatory: false,

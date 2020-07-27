@@ -29,12 +29,12 @@ local question(title) = {
   id: 'place-of-study',
   question_variants: [
     {
-      question: question('Is your place of study in Northern Ireland?'),
+      question: question('Is your place of <em>study</em> in Northern Ireland?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'Is <em>{person_name_possessive}</em> place of study in Northern Ireland?',
+        text: 'Is <em>{person_name_possessive}</em> place of <em>study</em> in Northern Ireland?',
         placeholders: [
           placeholders.personNamePossessive,
         ],
