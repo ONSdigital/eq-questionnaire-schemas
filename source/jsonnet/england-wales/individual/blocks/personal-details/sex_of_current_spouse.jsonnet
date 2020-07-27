@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'previous-partnership-status-question',
+  id: 'sex-of-current-spouse-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'previous-partnership-status-answer',
+      id: 'sex-of-current-spouse-answer',
       mandatory: false,
       options: [
         {
@@ -24,9 +24,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Who was your registered civil partnership to?';
+local nonProxyTitle = 'Who is your legal marriage to?';
 local proxyTitle = {
-  text: 'Who was <em>{person_name_possessive}</em> registered civil partnership to?',
+  text: 'Who is <em>{person_name_possessive}</em> legal marriage to?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
@@ -34,7 +34,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'previous-partnership-status',
+  id: 'sex-of-current-spouse',
   question_variants: [
     {
       question: question(nonProxyTitle),

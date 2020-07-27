@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'arrive-in-country-question',
+  id: 'arrive-in-uk-question',
   title: title,
   type: 'General',
   description: [
@@ -10,7 +10,7 @@ local question(title) = {
   ],
   answers: [
     {
-      id: 'arrive-in-country-answer',
+      id: 'arrive-in-uk-answer',
       mandatory: true,
       type: 'MonthYearDate',
       minimum: {
@@ -41,7 +41,7 @@ local proxyTitle = {
 
 function(region_code, census_month_year_date) {
   type: 'Question',
-  id: 'arrive-in-country',
+  id: 'arrive-in-uk',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -55,16 +55,16 @@ function(region_code, census_month_year_date) {
   routing_rules: [
     {
       goto: {
-        block: 'length-of-stay',
+        block: 'length-of-stay-in-uk',
         when: [rules.under1],
       },
     },
     {
       goto: {
-        block: 'length-of-stay',
+        block: 'length-of-stay-in-uk',
         when: [
           {
-            id: 'arrive-in-country-answer',
+            id: 'arrive-in-uk-answer',
             condition: 'greater than',
             date_comparison: {
               value: census_month_year_date,
@@ -81,7 +81,7 @@ function(region_code, census_month_year_date) {
         block: 'when-arrive-in-uk',
         when: [
           {
-            id: 'arrive-in-country-answer',
+            id: 'arrive-in-uk-answer',
             condition: 'not set',
           },
         ],
@@ -92,7 +92,7 @@ function(region_code, census_month_year_date) {
         block: 'when-arrive-in-uk',
         when: [
           {
-            id: 'arrive-in-country-answer',
+            id: 'arrive-in-uk-answer',
             condition: 'equals',
             date_comparison: {
               value: census_month_year_date,
