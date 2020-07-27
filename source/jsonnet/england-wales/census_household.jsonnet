@@ -158,15 +158,9 @@ function(region_code, census_month_year_date) {
   ],
   hub: {
     enabled: true,
-    complete: {
-      title: 'Submit census',
-      guidance: 'Please submit this census to complete it',
-    },
-    incomplete: {
-      guidance: 'You must complete all sections in order to complete this census',
-    },
     submission: {
       button: 'Submit census',
+      title: 'Submit census',
     },
     required_completed_sections: ['who-lives-here-section', 'relationships-section'],
   },
