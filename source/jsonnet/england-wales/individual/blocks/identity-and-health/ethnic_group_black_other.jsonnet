@@ -3,8 +3,8 @@ local rules = import 'rules.libsonnet';
 
 local question(englandTitle, walesTitle, region_code) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
-  local label = if region_code == 'GB-WLS' then 'Black, Black Welsh, Black British or Caribbean background'
-  else 'Black, Black British or Caribbean background';
+  local label = if region_code == 'GB-WLS' then 'Black, Black Welsh, Black British or Caribbean ethnic group or background'
+  else 'Black, Black British or Caribbean ethnic group or background';
   {
     id: 'other-black-black-british-caribbean-or-african-ethnic-group-question',
     title: title,

@@ -30,12 +30,6 @@ local question(title) = {
       type: 'TextField',
     },
     {
-      id: 'other-address-uk-answer-county',
-      label: 'County',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
       id: 'other-address-uk-answer-postcode',
       label: 'Postcode',
       mandatory: false,

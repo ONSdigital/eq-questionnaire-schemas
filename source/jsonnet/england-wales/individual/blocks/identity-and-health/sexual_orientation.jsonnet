@@ -25,7 +25,7 @@ local question(title, guidanceHeader, description) = {
             description: description,
           },
           {
-            description: 'Councils and government will use this information to:',
+            description: 'Councils and government will use this information to',
             list: [
               'monitor equality to ensure that everyone is treated fairly',
               'provide services and share funding',
