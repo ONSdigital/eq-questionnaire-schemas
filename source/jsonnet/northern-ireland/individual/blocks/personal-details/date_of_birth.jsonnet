@@ -5,7 +5,7 @@ local question(title, mandatory) = {
   id: 'date-of-birth-question',
   title: title,
   description: [
-    'For example, 31 3 1970',
+    'For example, 31 3 1980',
   ],
   type: 'General',
   answers: [
