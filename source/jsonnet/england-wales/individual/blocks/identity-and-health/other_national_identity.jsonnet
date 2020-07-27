@@ -7,7 +7,9 @@ local question(title, guidance) = {
   type: 'General',
   guidance: {
     contents: [
-      guidance,
+      {
+        description: guidance,
+      },
     ],
   },
   answers: [

@@ -7,7 +7,9 @@ local question(title, guidance) = {
   type: 'General',
   guidance: {
     contents: [
-      guidance,
+      {
+        description: guidance,
+      },
     ],
   },
   answers: [
@@ -28,17 +30,22 @@ local question(title, guidance) = {
   id: 'passports-other',
   question_variants: [
     {
-      question: question('You selected “Other”. What passports do you hold?', 'Include all passports. If you have more than one, enter them all separated by commas.'),
+      question: question(
+        'You selected “Other”. What passports do you hold?',
+        'Include all passports. If you have more than one, enter them all separated by commas.'
+      ),
       when: [rules.isNotProxy],
     },
     {
-      question: question({
-                           text: 'You selected “Other”. What passports does <em>{person_name}</em> hold?',
-                           placeholders: [
-                             placeholders.personName,
-                           ],
-                         },
-                         'Include all passports. If they have more than one, enter them all separated by commas.'),
+      question: question(
+        {
+          text: 'You selected “Other”. What passports does <em>{person_name}</em> hold?',
+          placeholders: [
+            placeholders.personName,
+          ],
+        },
+        'Include all passports. If they have more than one, enter them all separated by commas.'
+      ),
       when: [rules.isProxy],
     },
   ],
