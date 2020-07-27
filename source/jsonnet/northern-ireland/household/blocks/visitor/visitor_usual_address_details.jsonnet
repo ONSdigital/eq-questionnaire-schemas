@@ -34,12 +34,6 @@ local rules = import 'rules.libsonnet';
         type: 'TextField',
       },
       {
-        id: 'visitor-usual-address-details-answer-county',
-        label: 'County (optional)',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
         id: 'visitor-usual-address-details-answer-postcode',
         label: 'Postcode',
         mandatory: false,

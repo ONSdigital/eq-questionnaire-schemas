@@ -14,7 +14,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     guidance: {
       contents: [
         {
-          title: 'Include central heating systems that generate heat for multiple rooms whether or not you use them',
+          description: 'Include central heating systems that generate heat for multiple rooms whether or not you use them',
         },
       ],
     },
