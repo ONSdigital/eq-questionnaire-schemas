@@ -114,7 +114,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'arrive-in-country',
+        block: 'arrive-in-uk',
         when: [
           {
             id: 'country-of-birth-answer',

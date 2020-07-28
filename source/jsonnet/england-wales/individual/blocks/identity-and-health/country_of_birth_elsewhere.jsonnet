@@ -39,7 +39,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'arrive-in-country',
+        block: 'arrive-in-uk',
       },
     },
   ],

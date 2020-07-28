@@ -54,7 +54,7 @@ function(region_code) {
   routing_rules: [
     {
       goto: {
-        block: 'length-of-stay',
+        block: 'length-of-stay-in-uk',
         when: [
           {
             id: 'when-arrive-in-uk-answer',
@@ -78,7 +78,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'length-of-stay',
+        block: 'length-of-stay-in-uk',
       },
     },
   ],

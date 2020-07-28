@@ -5,17 +5,17 @@ local another_address = import 'individual/blocks/personal-details/another_addre
 local another_address_outside_uk = import 'individual/blocks/personal-details/another_address_outside_uk.jsonnet';
 local confirm_age = import 'individual/blocks/personal-details/confirm_age.jsonnet';
 local proxy = import 'individual/blocks/personal-details/confirm_who_is_answering.jsonnet';
-local current_partnership_status = import 'individual/blocks/personal-details/current_partnership_status.jsonnet';
 local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.jsonnet';
 local establishment_position = import 'individual/blocks/personal-details/establishment_position.jsonnet';
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
 local marriage_or_civil_partnership_status = import 'individual/blocks/personal-details/marriage_or_civil_partnership_status.jsonnet';
 local name = import 'individual/blocks/personal-details/name.jsonnet';
 local other_address_uk = import 'individual/blocks/personal-details/other_address_uk.jsonnet';
-local previous_partnership_status = import 'individual/blocks/personal-details/previous_partnership_status.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';
 local sex_of_current_partner = import 'individual/blocks/personal-details/sex_of_current_partner.jsonnet';
+local sex_of_current_spouse = import 'individual/blocks/personal-details/sex_of_current_spouse.jsonnet';
 local sex_of_previous_partner = import 'individual/blocks/personal-details/sex_of_previous_partner.jsonnet';
+local sex_of_previous_spouse = import 'individual/blocks/personal-details/sex_of_previous_spouse.jsonnet';
 local term_time_address_country = import 'individual/blocks/personal-details/term_time_address_country.jsonnet';
 local term_time_address_country_outside_uk = import 'individual/blocks/personal-details/term_time_address_country_outside_uk.jsonnet';
 local term_time_address_uk = import 'individual/blocks/personal-details/term_time_address_uk.jsonnet';
@@ -24,7 +24,7 @@ local term_time_location = import 'individual/blocks/personal-details/term_time_
 // Identity and Health
 local address_one_year_ago = import 'individual/blocks/identity-and-health/address_one_year_ago.jsonnet';
 local address_one_year_ago_outside_uk = import 'individual/blocks/identity-and-health/address_one_year_ago_outside_uk.jsonnet';
-local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
+local arrive_in_uk = import 'individual/blocks/identity-and-health/arrive_in_uk.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
 local country_of_birth_elsewhere = import 'individual/blocks/identity-and-health/country_of_birth_elsewhere.jsonnet';
 local ethnic_group = import 'individual/blocks/identity-and-health/ethnic_group.jsonnet';
@@ -43,7 +43,7 @@ local gender_identity = import 'individual/blocks/identity-and-health/gender_ide
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
 local health_conditions_or_illnesses = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses.jsonnet';
 local health_conditions_or_illnesses_limitations = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses_limitations.jsonnet';
-local length_of_stay = import 'individual/blocks/identity-and-health/length_of_stay.jsonnet';
+local length_of_stay_in_uk = import 'individual/blocks/identity-and-health/length_of_stay_in_uk.jsonnet';
 local location_one_year_ago = import 'individual/blocks/identity-and-health/location_one_year_ago.jsonnet';
 local look_after_or_support_others = import 'individual/blocks/identity-and-health/look_after_or_support_others.jsonnet';
 local language = import 'individual/blocks/identity-and-health/main_language.jsonnet';
@@ -139,10 +139,10 @@ function(region_code, census_month_year_date) {
             confirm_age,
             sex,
             marriage_or_civil_partnership_status,
+            sex_of_current_spouse,
+            sex_of_previous_spouse,
             sex_of_current_partner,
             sex_of_previous_partner,
-            current_partnership_status,
-            previous_partnership_status,
             another_address,
             another_address_outside_uk,
             other_address_uk,
@@ -160,9 +160,9 @@ function(region_code, census_month_year_date) {
           blocks: [
             country_of_birth(region_code),
             country_of_birth_elsewhere,
-            arrive_in_country(region_code, census_month_year_date),
+            arrive_in_uk(region_code, census_month_year_date),
             when_arrive_in_uk(region_code),
-            length_of_stay,
+            length_of_stay_in_uk,
             location_one_year_ago,
             address_one_year_ago_outside_uk,
             address_one_year_ago,
