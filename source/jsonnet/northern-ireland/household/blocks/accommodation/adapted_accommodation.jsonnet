@@ -2,9 +2,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'adapted',
+  id: 'adapted-accommodation',
   question: {
-    id: 'adapted-question',
+    id: 'adapted-accommodation-question',
     mandatory: false,
     type: 'MutuallyExclusive',
     title: {
@@ -13,7 +13,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     answers: [
       {
-        id: 'adapted-answer',
+        id: 'adapted-accommodation-answer',
         mandatory: false,
         type: 'Checkbox',
         options: [
@@ -43,7 +43,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             label: 'Other',
             value: 'Other',
             detail_answer: {
-              id: 'adapted-answer-other',
+              id: 'adapted-accommodation-answer-other',
               type: 'TextField',
               mandatory: false,
               label: 'Enter adaptation',
@@ -52,7 +52,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         ],
       },
       {
-        id: 'adapted-answer-exclusive',
+        id: 'adapted-accommodation-answer-exclusive',
         type: 'Checkbox',
         mandatory: false,
         options: [

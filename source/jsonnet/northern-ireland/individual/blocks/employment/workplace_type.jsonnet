@@ -3,14 +3,14 @@ local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
   title: title,
-  id: 'work-location-type-question',
+  id: 'workplace-type-question',
   description: [
     description,
   ],
   type: 'General',
   answers: [
     {
-      id: 'work-location-type-answer',
+      id: 'workplace-type-answer',
       mandatory: true,
       options: [
         {
@@ -65,7 +65,7 @@ local proxyDescriptionDidWork = {
 
 {
   type: 'Question',
-  id: 'work-location-type',
+  id: 'workplace-type',
   question_variants: [
     {
       question: question(nonProxyTitleWork, nonProxyDescriptionWork),
@@ -87,10 +87,10 @@ local proxyDescriptionDidWork = {
   routing_rules: [
     {
       goto: {
-        block: 'place-of-work',
+        block: 'workplace-location',
         when: [
           {
-            id: 'work-location-type-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'At a workplace',
           },
@@ -102,7 +102,7 @@ local proxyDescriptionDidWork = {
         block: 'travel-to-work',
         when: [
           {
-            id: 'work-location-type-answer',
+            id: 'workplace-type-answer',
             condition: 'equals',
             value: 'No fixed place',
           },

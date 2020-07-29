@@ -49,7 +49,7 @@ local rules = import 'rules.libsonnet';
     },
     {
       goto: {
-        block: 'adapted',
+        block: 'adapted-accommodation',
       },
     },
   ],

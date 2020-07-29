@@ -10,13 +10,13 @@ local proxyTitle = {
 };
 
 local question(title, otherDescription) = {
-  id: 'no-religion-question',
+  id: 'childhood-religion-question',
   title: title,
   type: 'MutuallyExclusive',
   mandatory: false,
   answers: [
     {
-      id: 'no-religion-answer',
+      id: 'childhood-religion-answer',
       mandatory: false,
       options: [
         {
@@ -44,7 +44,7 @@ local question(title, otherDescription) = {
       type: 'Checkbox',
     },
     {
-      id: 'no-religion-answer-exclusive',
+      id: 'childhood-religion-answer-exclusive',
       type: 'Checkbox',
       mandatory: false,
       options: [
@@ -59,7 +59,7 @@ local question(title, otherDescription) = {
 
 {
   type: 'Question',
-  id: 'no-religion',
+  id: 'childhood-religion',
   question_variants: [
     {
       question: question(nonProxyTitle, 'You can enter your religion on the next question'),
@@ -73,10 +73,10 @@ local question(title, otherDescription) = {
   routing_rules: [
     {
       goto: {
-        block: 'no-religion-other',
+        block: 'religion-other',
         when: [
           {
-            id: 'no-religion-answer',
+            id: 'childhood-religion-answer',
             condition: 'contains',
             value: 'Other',
           },

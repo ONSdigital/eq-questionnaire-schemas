@@ -56,7 +56,7 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'work-town-and-county',
+        block: 'workplace-outside-northern-ireland',
         when: [
           {
             id: 'place-of-work-elsewhere-answer',
