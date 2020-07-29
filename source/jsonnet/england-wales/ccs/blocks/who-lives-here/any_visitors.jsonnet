@@ -45,7 +45,7 @@ local question(livesAtHouseholdAddress) = {
       title: 'Electronic Showcard',
       contents: [
         {
-          description: 'Include',
+          description: '<strong>Include</strong>',
         },
         {
           list: [
