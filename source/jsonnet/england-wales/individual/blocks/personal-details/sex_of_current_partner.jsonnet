@@ -24,9 +24,9 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Who is your legal marriage to?';
+local nonProxyTitle = 'Who is your registered civil partnership to?';
 local proxyTitle = {
-  text: 'Who is <em>{person_name_possessive}</em> legal marriage to?',
+  text: 'Who is <em>{person_name_possessive}</em> registered civil partnership to?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

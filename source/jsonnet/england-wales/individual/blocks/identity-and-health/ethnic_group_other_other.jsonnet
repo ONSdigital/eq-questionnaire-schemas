@@ -8,7 +8,7 @@ local question(title) = {
   answers: [
     {
       id: 'ethnic-group-other-other-answer',
-      label: 'Ethnic group',
+      label: 'Ethnic group or background',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
