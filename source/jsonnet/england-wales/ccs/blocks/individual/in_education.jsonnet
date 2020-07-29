@@ -98,7 +98,7 @@ local proxyOver19Title = {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'address-one-year-ago',
       },
     },
   ],

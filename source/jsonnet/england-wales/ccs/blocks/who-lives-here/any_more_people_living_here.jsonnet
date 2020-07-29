@@ -16,7 +16,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'anyone-else-temp-away-edit-question',
+  id: 'any-more-people-living-here-edit-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -43,19 +43,19 @@ local editQuestion(questionTitle) = {
 
 
 {
-  id: 'anyone-else-temp-away-list-collector',
+  id: 'any-more-people-living-here',
   type: 'ListCollector',
   for_list: 'household',
   add_answer: {
-    id: 'anyone-else-temp-away-answer',
+    id: 'any-more-people-living-here-answer',
     value: 'Yes',
   },
   remove_answer: {
-    id: 'anyone-else-temp-away-remove-confirmation',
+    id: 'any-more-people-living-here-remove-confirmation',
     value: 'Yes',
   },
   question: {
-    id: 'anyone-else-temp-away-confirmation-question',
+    id: 'any-more-people-living-here-confirmation-question',
     type: 'General',
     title: 'Apart from the people already included, is there anyone else who was temporarily away or staying that you need to add?',
     instruction: ['Tell the respondent to double-check <strong>Showcard 2</strong> or show them the <strong>Electronic Showcard</strong> below'],
@@ -89,7 +89,7 @@ local editQuestion(questionTitle) = {
     ],
     answers: [
       {
-        id: 'anyone-else-temp-away-answer',
+        id: 'any-more-people-living-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [
@@ -106,10 +106,10 @@ local editQuestion(questionTitle) = {
     ],
   },
   add_block: {
-    id: 'anyone-else-temp-away-add-person',
+    id: 'any-more-people-living-here-add-person',
     type: 'ListAddQuestion',
     question: {
-      id: 'anyone-else-temp-away-add-question',
+      id: 'any-more-people-living-here-add-question',
       type: 'General',
       title: 'Who do you need to add?',
       instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
@@ -136,7 +136,7 @@ local editQuestion(questionTitle) = {
     },
   },
   edit_block: {
-    id: 'anyone-else-temp-away-edit-person',
+    id: 'any-more-people-living-here-edit-person',
     type: 'ListEditQuestion',
     question_variants: [
       {
@@ -150,10 +150,10 @@ local editQuestion(questionTitle) = {
     ],
   },
   remove_block: {
-    id: 'anyone-else-temp-away-remove-person',
+    id: 'any-more-people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'anyone-else-temp-away-remove-question',
+      id: 'any-more-people-living-here-remove-question',
       type: 'General',
       warning: 'All of the information entered about this person will be deleted',
       title: {
@@ -164,7 +164,7 @@ local editQuestion(questionTitle) = {
       },
       answers: [
         {
-          id: 'anyone-else-temp-away-remove-confirmation',
+          id: 'any-more-people-living-here-remove-confirmation',
           mandatory: true,
           type: 'Radio',
           options: [

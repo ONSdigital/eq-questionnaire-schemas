@@ -50,26 +50,26 @@ local livingAtCurrentAddress = {
 };
 
 local livesAtHouseholdAddress = {
-  id: 'you-live-here-answer',
+  id: 'were-you-usually-living-here-answer',
   condition: 'equals',
   value: 'Yes',
 };
 
 
 local doesntLiveAtHouseholdAddress = {
-  id: 'you-live-here-answer',
+  id: 'were-you-usually-living-here-answer',
   condition: 'equals',
   value: 'No',
 };
 
 {
   isNotProxy: {
-    id: 'proxy-answer',
+    id: 'who-is-answering-answer',
     condition: 'equals',
     value: 'Yes, they are answering for themselves',
   },
   isProxy: {
-    id: 'proxy-answer',
+    id: 'who-is-answering-answer',
     condition: 'equals',
     value: 'No, they are answering on someone else’s behalf',
   },

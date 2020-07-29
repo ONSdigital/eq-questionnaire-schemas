@@ -1,18 +1,18 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
-  id: 'primary-person-list-collector',
+  id: 'were-you-usually-living-here',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
   add_or_edit_answer: {
-    id: 'you-live-here-answer',
+    id: 'were-you-usually-living-here-answer',
     value: 'Yes',
   },
   add_or_edit_block: {
-    id: 'add-or-edit-primary-person',
+    id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
     question: {
-      id: 'primary-person-add-or-edit-question',
+      id: 'what-is-your-name-question',
       type: 'General',
       title: 'What is your full name?',
       answers: [
@@ -72,7 +72,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     ],
     answers: [
       {
-        id: 'you-live-here-answer',
+        id: 'were-you-usually-living-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [
@@ -94,7 +94,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         block: 'anyone-else-usually-living',
         when: [
           {
-            id: 'you-live-here-answer',
+            id: 'were-you-usually-living-here-answer',
             condition: 'equals',
             value: 'No',
           },
@@ -103,7 +103,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     {
       goto: {
-        block: 'anyone-else-list-collector',
+        block: 'who-else-lives-here',
       },
     },
   ],

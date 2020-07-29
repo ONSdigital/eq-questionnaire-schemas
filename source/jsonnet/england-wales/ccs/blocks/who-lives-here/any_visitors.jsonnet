@@ -124,7 +124,7 @@ local question(livesAtHouseholdAddress) = {
     },
     {
       goto: {
-        block: 'visitor-list-collector',
+        block: 'any-more-visitors',
       },
     },
   ],

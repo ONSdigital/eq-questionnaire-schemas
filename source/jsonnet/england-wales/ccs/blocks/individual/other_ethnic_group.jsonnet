@@ -5,36 +5,28 @@ local englandInstruction = 'Ask the respondent to continue looking at <strong>Sh
 local walesInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9W</strong> or show them the options below';
 
 local question(title, instruction) = {
-  id: 'mixed-ethnic-group-question',
+  id: 'other-ethnic-group-question',
   title: title,
   instruction: [instruction],
   type: 'General',
   answers: [
     {
-      id: 'mixed-ethnic-group-answer',
+      id: 'other-ethnic-group-answer',
       mandatory: false,
       options: [
         {
-          label: 'White and Black Caribbean',
-          value: 'White and Black Caribbean',
+          label: 'Arab',
+          value: 'Arab',
         },
         {
-          label: 'White and Black African',
-          value: 'White and Black African',
-        },
-        {
-          label: 'White and Asian',
-          value: 'White and Asian',
-        },
-        {
-          label: 'Any other Mixed or Multiple background',
-          value: 'Any other Mixed or Multiple background',
+          label: 'Any other ethnic group',
+          value: 'Any other ethnic group',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'mixed-ethnic-group-answer-other',
+            id: 'other-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
-            label: 'Enter Mixed or Multiple ethnic group or background',
+            label: 'Enter other ethnic group or background',
           },
         },
       ],
@@ -43,9 +35,9 @@ local question(title, instruction) = {
   ],
 };
 
-local nonProxyTitle = 'Which one best describes your Mixed or Multiple ethnic group or background?';
+local nonProxyTitle = 'Which one best describes your other ethnic group or background?';
 local proxyTitle = {
-  text: 'Which one best describes <em>{person_name_possessive}</em> Mixed or Multiple ethnic group or background?',
+  text: 'Which one best describes <em>{person_name_possessive}</em> other ethnic group or background?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
@@ -55,7 +47,7 @@ function(region_code) {
   local instruction = if region_code == 'GB-WLS' then walesInstruction else englandInstruction,
 
   type: 'Question',
-  id: 'mixed-ethnic-group',
+  id: 'other-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyTitle, instruction),
@@ -75,7 +67,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'address-one-year-ago',
         when: [rules.under4],
       },
     },

@@ -96,7 +96,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'mixed-ethnic-group',
+        block: 'mixed-or-multiple-ethnic-group',
         when: [
           {
             id: 'ethnic-group-answer',
@@ -108,7 +108,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'asian-ethnic-group',
+        block: 'asian-or-asian-british-ethnic-group',
         when: [
           {
             id: 'ethnic-group-answer',
@@ -120,7 +120,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'black-ethnic-group',
+        block: 'black-black-british-caribbean-or-african-ethnic-group',
         when: [
           {
             id: 'ethnic-group-answer',
@@ -156,7 +156,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'address-one-year-ago',
         when: [
           {
             id: 'ethnic-group-answer',

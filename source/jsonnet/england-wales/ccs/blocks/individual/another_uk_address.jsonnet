@@ -110,7 +110,7 @@ local question(title) = {
     },
     {
       goto: {
-        block: 'other-census-address',
+        block: 'other-uk-address',
       },
     },
   ],

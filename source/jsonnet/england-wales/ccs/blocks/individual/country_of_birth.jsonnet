@@ -48,7 +48,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'marriage-type',
+        block: 'marital-or-civil-partnership-status',
         when: [
           rules.over15,
         ],
@@ -56,7 +56,7 @@ local proxyTitle = {
     },
     {
       goto: {
-        block: 'marriage-type',
+        block: 'marital-or-civil-partnership-status',
         when: [
           rules.estimatedAge,
         ],

@@ -24,13 +24,13 @@ local walesStrings = {
 };
 
 local question(title, instruction) = {
-  id: 'asian-ethnic-group-question',
+  id: 'asian-or-asian-british-ethnic-group-question',
   title: title,
   instruction: [instruction],
   type: 'General',
   answers: [
     {
-      id: 'asian-ethnic-group-answer',
+      id: 'asian-or-asian-british-ethnic-group-answer',
       mandatory: false,
       options: [
         {
@@ -54,7 +54,7 @@ local question(title, instruction) = {
           value: 'Any other Asian background',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'asian-ethnic-group-answer-other',
+            id: 'asian-or-asian-british-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
             label: 'Enter Asian ethnic group or background',
@@ -70,7 +70,7 @@ function(region_code) {
   local regionStrings = if region_code == 'GB-WLS' then walesStrings else englandStrings,
 
   type: 'Question',
-  id: 'asian-ethnic-group',
+  id: 'asian-or-asian-british-ethnic-group',
   question_variants: [
     {
       question: question(regionStrings.nonProxyTitle, regionStrings.instruction),
@@ -90,7 +90,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'address-one-year-ago',
         when: [rules.under4],
       },
     },

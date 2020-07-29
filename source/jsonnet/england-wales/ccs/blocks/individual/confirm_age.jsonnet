@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'confirm-date-of-birth',
+  id: 'confirm-age',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'confirm-date-of-birth-answer',
+      id: 'confirm-age-answer',
       mandatory: true,
       options: [
         {
@@ -59,7 +59,7 @@ local proxyTitle = {
 
 {
   type: 'ConfirmationQuestion',
-  id: 'confirm-dob',
+  id: 'confirm-age',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -76,7 +76,7 @@ local proxyTitle = {
         block: 'date-of-birth',
         when: [
           {
-            id: 'confirm-date-of-birth-answer',
+            id: 'confirm-age-answer',
             condition: 'equals',
             value: 'No',
           },

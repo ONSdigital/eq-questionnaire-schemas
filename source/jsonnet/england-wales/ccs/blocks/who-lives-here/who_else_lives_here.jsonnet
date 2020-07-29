@@ -50,7 +50,7 @@ local editQuestion(questionTitle) = {
 };
 
 {
-  id: 'anyone-else-list-collector',
+  id: 'who-else-lives-here',
   type: 'ListCollector',
   for_list: 'household',
   add_answer: {
@@ -65,7 +65,7 @@ local editQuestion(questionTitle) = {
     {
       question: {
         type: 'General',
-        id: 'anyone-usually-live-at-question',
+        id: 'who-else-lives-here-question',
         title: questionTitle,
         description: [
           'Remember to only include those people who share cooking facilities <strong>and</strong> share a living room, <strong>or</strong> sitting room, <strong>or</strong> dining area.',
@@ -122,7 +122,7 @@ local editQuestion(questionTitle) = {
     },
     {
       question: {
-        id: 'anyone-usually-live-at-question',
+        id: 'who-else-lives-here-question',
         type: 'General',
         title: {
           text: 'Did anyone else usually live in your household on Sunday {census_date}?',
