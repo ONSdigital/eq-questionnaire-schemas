@@ -51,7 +51,6 @@ local ethnic_group_other = import 'individual/blocks/identity-and-health/ethnic_
 local frequency_irish = import 'individual/blocks/identity-and-health/frequency_irish.jsonnet';
 local frequency_ulster_scots = import 'individual/blocks/identity-and-health/frequency_ulster_scots.jsonnet';
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
-local health_conditions_or_illnesses = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses.jsonnet';
 local health_conditions_or_illnesses_limitations = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses_limitations.jsonnet';
 local look_after_or_support_others = import 'individual/blocks/identity-and-health/look_after_or_support_others.jsonnet';
 local language = import 'individual/blocks/identity-and-health/main_language.jsonnet';
@@ -64,6 +63,7 @@ local other_national_identity = import 'individual/blocks/identity-and-health/ot
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
 local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
 local passports_other = import 'individual/blocks/identity-and-health/passports_other.jsonnet';
+local physical_health_conditions = import 'individual/blocks/identity-and-health/physical_health_conditions.jsonnet';
 local religion = import 'individual/blocks/identity-and-health/religion.jsonnet';
 local religion_other = import 'individual/blocks/identity-and-health/religion_other.jsonnet';
 local sexual_orientation = import 'individual/blocks/identity-and-health/sexual_orientation.jsonnet';
@@ -359,7 +359,7 @@ function(region_code) {
             frequency_ulster_scots,
             health,
             health_conditions_or_illnesses_limitations,
-            health_conditions_or_illnesses,
+            physical_health_conditions,
             other_health_conditions,
             look_after_or_support_others,
             sexual_orientation,
