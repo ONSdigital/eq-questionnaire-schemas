@@ -76,10 +76,10 @@ local looking_for_work = import 'individual/blocks/employment/looking_for_work.j
 local main_job_introduction = import 'individual/blocks/employment/main_job_introduction.jsonnet';
 local main_job_status = import 'individual/blocks/employment/main_job_status.jsonnet';
 local not_employed_status_last_seven_days = import 'individual/blocks/employment/not_employed_status_last_seven_days.jsonnet';
-local place_of_work_elsewhere = import 'individual/blocks/employment/place_of_work_elsewhere.jsonnet';
 local supervise_others = import 'individual/blocks/employment/supervise_others.jsonnet';
 local travel_to_work = import 'individual/blocks/employment/travel_to_work.jsonnet';
 local workplace_address = import 'individual/blocks/employment/workplace_address.jsonnet';
+local workplace_country = import 'individual/blocks/employment/workplace_country.jsonnet';
 local workplace_location = import 'individual/blocks/employment/workplace_location.jsonnet';
 local workplace_outside_northern_ireland = import 'individual/blocks/employment/workplace_outside_northern_ireland.jsonnet';
 local workplace_type = import 'individual/blocks/employment/workplace_type.jsonnet';
@@ -205,7 +205,7 @@ function(region_code) {
             hours_worked,
             workplace_type,
             workplace_location,
-            place_of_work_elsewhere,
+            workplace_country,
             workplace_outside_northern_ireland,
             workplace_address,
             travel_to_work,

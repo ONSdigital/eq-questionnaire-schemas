@@ -3,9 +3,9 @@ local rules = import 'rules.libsonnet';
 
 {
   type: 'Question',
-  id: 'renewables-energy-systems',
+  id: 'renewable-energy-systems',
   question: {
-    id: 'renewables-energy-systems-question',
+    id: 'renewable-energy-systems-question',
     mandatory: false,
     title: {
       text: 'What type of renewable energy systems does <em>{household_address}</em> have?',
@@ -14,7 +14,7 @@ local rules = import 'rules.libsonnet';
     type: 'MutuallyExclusive',
     answers: [
       {
-        id: 'renewables-energy-systems-answer',
+        id: 'renewable-energy-systems-answer',
         mandatory: false,
         type: 'Checkbox',
         options: [
@@ -34,7 +34,7 @@ local rules = import 'rules.libsonnet';
             label: 'Other',
             value: 'Other',
             detail_answer: {
-              id: 'renewables-energy-systems-answer-other',
+              id: 'renewable-energy-systems-answer-other',
               type: 'TextField',
               mandatory: false,
               label: 'Enter renewable energy system',
@@ -43,7 +43,7 @@ local rules = import 'rules.libsonnet';
         ],
       },
       {
-        id: 'renewables-energy-systems-answer-exclusive',
+        id: 'renewable-energy-systems-answer-exclusive',
         type: 'Checkbox',
         mandatory: false,
         options: [

@@ -7,7 +7,7 @@ local adapted_accommodation = import 'household/blocks/accommodation/adapted_acc
 local central_heating = import 'household/blocks/accommodation/central_heating.jsonnet';
 local number_of_vehicles = import 'household/blocks/accommodation/number_of_vehicles.jsonnet';
 local own_or_rent = import 'household/blocks/accommodation/own_or_rent.jsonnet';
-local renewables_energy_systems = import 'household/blocks/accommodation/renewables_energy_systems.jsonnet';
+local renewable_energy_systems = import 'household/blocks/accommodation/renewable_energy_systems.jsonnet';
 local type_of_flat = import 'household/blocks/accommodation/type_of_flat.jsonnet';
 local type_of_house = import 'household/blocks/accommodation/type_of_house.jsonnet';
 local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonnet';
@@ -101,10 +101,10 @@ local looking_for_work = import 'individual/blocks/employment/looking_for_work.j
 local main_job_introduction = import 'individual/blocks/employment/main_job_introduction.jsonnet';
 local main_job_status = import 'individual/blocks/employment/main_job_status.jsonnet';
 local not_employed_status_last_seven_days = import 'individual/blocks/employment/not_employed_status_last_seven_days.jsonnet';
-local place_of_work_elsewhere = import 'individual/blocks/employment/place_of_work_elsewhere.jsonnet';
 local supervise_others = import 'individual/blocks/employment/supervise_others.jsonnet';
 local travel_to_work = import 'individual/blocks/employment/travel_to_work.jsonnet';
 local workplace_address = import 'individual/blocks/employment/workplace_address.jsonnet';
+local workplace_country = import 'individual/blocks/employment/workplace_country.jsonnet';
 local workplace_location = import 'individual/blocks/employment/workplace_location.jsonnet';
 local workplace_outside_northern_ireland = import 'individual/blocks/employment/workplace_outside_northern_ireland.jsonnet';
 local workplace_type = import 'individual/blocks/employment/workplace_type.jsonnet';
@@ -275,7 +275,7 @@ function(region_code) {
             type_of_flat,
             adapted_accommodation,
             central_heating,
-            renewables_energy_systems,
+            renewable_energy_systems,
             own_or_rent,
             who_rent_from,
             number_of_vehicles,
@@ -398,7 +398,7 @@ function(region_code) {
             hours_worked,
             workplace_type,
             workplace_location,
-            place_of_work_elsewhere,
+            workplace_country,
             workplace_outside_northern_ireland,
             workplace_address,
             travel_to_work,

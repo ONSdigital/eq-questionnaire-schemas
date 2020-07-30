@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'place-of-work-elsewhere-question',
+  id: 'workplace-country-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'place-of-work-elsewhere-answer',
+      id: 'workplace-country-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
@@ -34,7 +34,7 @@ local pastProxyTitle = {
 
 {
   type: 'Question',
-  id: 'place-of-work-elsewhere',
+  id: 'workplace-country',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -59,7 +59,7 @@ local pastProxyTitle = {
         block: 'workplace-outside-northern-ireland',
         when: [
           {
-            id: 'place-of-work-elsewhere-answer',
+            id: 'workplace-country-answer',
             condition: 'equals any',
             values: [
               'Carlow',
