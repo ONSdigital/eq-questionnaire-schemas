@@ -16,7 +16,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'any-more-people-living-here-edit-question',
+  id: 'any-more-people-living-here-edit-person-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -51,7 +51,7 @@ local editQuestion(questionTitle) = {
     value: 'Yes',
   },
   remove_answer: {
-    id: 'any-more-people-living-here-remove-confirmation',
+    id: 'any-more-people-living-here-remove-person-confirmation',
     value: 'Yes',
   },
   question: {
@@ -153,7 +153,7 @@ local editQuestion(questionTitle) = {
     id: 'any-more-people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'any-more-people-living-here-remove-question',
+      id: 'any-more-people-living-here-remove-person-question',
       type: 'General',
       warning: 'All of the information entered about this person will be deleted',
       title: {
@@ -164,7 +164,7 @@ local editQuestion(questionTitle) = {
       },
       answers: [
         {
-          id: 'any-more-people-living-here-remove-confirmation',
+          id: 'any-more-people-living-here-remove-person-confirmation',
           mandatory: true,
           type: 'Radio',
           options: [
