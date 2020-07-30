@@ -28,12 +28,6 @@ local rules = import 'rules.libsonnet';
         type: 'TextField',
       },
       {
-        id: 'other-census-address-answer-county',
-        label: 'County (optional)',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
         id: 'other-census-address-answer-postcode',
         label: 'Postcode',
         mandatory: false,
