@@ -109,7 +109,7 @@ local editQuestion(questionTitle) = {
     id: 'any-more-people-living-here-add-person',
     type: 'ListAddQuestion',
     question: {
-      id: 'any-more-people-living-here-add-question',
+      id: 'any-more-people-living-here-add-person-question',
       type: 'General',
       title: 'Who do you need to add?',
       instruction: ['Enter a full stop (.) if the respondent does not know a person’s “First name” or “Last name”'],
