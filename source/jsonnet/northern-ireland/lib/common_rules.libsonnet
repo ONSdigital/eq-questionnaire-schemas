@@ -63,7 +63,7 @@
     id: 'date-of-birth-answer',
     condition: 'greater than',
     date_comparison: {
-      value: '2020-07-01',
+      value: '2020-06-30',
       offset_by: {
         years: -4,
       },
