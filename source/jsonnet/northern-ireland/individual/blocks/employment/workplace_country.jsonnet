@@ -10,6 +10,7 @@ local question(title) = {
       id: 'workplace-country-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/countries-of-birth.json',
       mandatory: false,
       type: 'TextField',
     },
