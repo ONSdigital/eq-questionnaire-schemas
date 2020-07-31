@@ -5,12 +5,12 @@ local anotherCountryAnswerOption = 'No, it is in another country';
 local pastAnotherCountryAnswerOption = 'No, it was in another country';
 
 local question(title, anotherCountry) = {
-  id: 'place-of-work-question',
+  id: 'workplace-location-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'place-of-work-answer',
+      id: 'workplace-location-answer',
       mandatory: false,
       options: [
         {
@@ -45,7 +45,7 @@ local pastProxyTitle = {
 
 {
   type: 'Question',
-  id: 'place-of-work',
+  id: 'workplace-location',
   question_variants: [
     {
       question: question(nonProxyTitle, anotherCountryAnswerOption),
@@ -67,10 +67,10 @@ local pastProxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'place-of-work-elsewhere',
+        block: 'workplace-country',
         when: [
           {
-            id: 'place-of-work-answer',
+            id: 'workplace-location-answer',
             condition: 'equals any',
             values: ['No, it is in another country', 'No, it was in another country'],
           },
@@ -79,7 +79,7 @@ local pastProxyTitle = {
     },
     {
       goto: {
-        block: 'work-location',
+        block: 'workplace-address',
       },
     },
   ],

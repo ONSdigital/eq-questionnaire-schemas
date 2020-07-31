@@ -3,14 +3,14 @@ local rules = import 'rules.libsonnet';
 
 local question(title, description) = {
   title: title,
-  id: 'school-travel-question',
+  id: 'travel-to-study-location-question',
   description: [
     description,
   ],
   type: 'General',
   answers: [
     {
-      id: 'school-travel-answer',
+      id: 'travel-to-study-location-answer',
       mandatory: false,
       options: [
         {
@@ -73,7 +73,7 @@ local proxyDescriptionSchool = 'Answer for the longest part, by distance, of the
 
 {
   type: 'Question',
-  id: 'school-travel',
+  id: 'travel-to-study-location',
   question_variants: [
     {
       question: question(nonProxyTitleSchool, nonProxyDescriptionSchool),

@@ -99,7 +99,7 @@ local pastProxyTitle = {
     },
     {
       goto: {
-        block: 'work-location-type',
+        block: 'workplace-type',
       },
     },
   ],

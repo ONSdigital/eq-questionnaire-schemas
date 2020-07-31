@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'health-conditions-or-illnesses-question',
+  id: 'physical-health-conditions-question',
   title: title,
   type: 'MutuallyExclusive',
   mandatory: false,
   answers: [
     {
-      id: 'health-conditions-or-illnesses-answer',
+      id: 'physical-health-conditions-answer',
       mandatory: false,
       options: [
         {
@@ -37,7 +37,7 @@ local question(title) = {
       type: 'Checkbox',
     },
     {
-      id: 'health-conditions-or-illnesses-answer-exclusive',
+      id: 'physical-health-conditions-answer-exclusive',
       type: 'Checkbox',
       mandatory: false,
       options: [
@@ -61,7 +61,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'health-conditions-or-illnesses',
+  id: 'physical-health-conditions',
   question_variants: [
     {
       question: question(nonProxyTitle),
