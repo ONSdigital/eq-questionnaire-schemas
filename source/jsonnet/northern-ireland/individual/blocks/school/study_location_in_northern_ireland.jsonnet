@@ -2,30 +2,30 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'school-location-question',
+  id: 'study-location-in-northern-ireland-question',
   type: 'General',
   title: title,
   answers: [
     {
-      id: 'school-address-details-answer-building',
+      id: 'study-location-in-northern-ireland-details-answer-building',
       label: 'Address line 1',
       mandatory: true,
       type: 'TextField',
     },
     {
-      id: 'school-address-details-answer-street',
+      id: 'study-location-in-northern-ireland-details-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'school-address-details-answer-city',
+      id: 'study-location-in-northern-ireland-details-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'school-address-details-answer-postcode',
+      id: 'study-location-in-northern-ireland-details-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',
@@ -43,7 +43,7 @@ local proxyTitleSchool = {
 
 {
   type: 'Question',
-  id: 'school-location',
+  id: 'study-location-in-northern-ireland',
   question_variants: [
     {
       question: question(nonProxyTitleSchool),

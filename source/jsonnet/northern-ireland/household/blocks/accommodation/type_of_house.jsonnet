@@ -28,7 +28,7 @@
   },
   routing_rules: [{
     goto: {
-      block: 'adapted',
+      block: 'adapted-accommodation',
     },
   }],
 }

@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'place-of-study-elsewhere-question',
+  id: 'study-location-country-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'place-of-study-elsewhere-answer',
+      id: 'study-location-country-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
       mandatory: false,
@@ -18,7 +18,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'place-of-study-elsewhere',
+  id: 'study-location-country',
   question_variants: [
     {
       question: question('In which country is your course of <em>study</em>, including school?'),
@@ -37,7 +37,7 @@ local question(title) = {
   routing_rules: [
     {
       goto: {
-        block: 'school-travel',
+        block: 'travel-to-study-location',
       },
     },
   ],

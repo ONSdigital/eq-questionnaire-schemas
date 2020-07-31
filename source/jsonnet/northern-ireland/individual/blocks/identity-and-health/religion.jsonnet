@@ -85,7 +85,7 @@ local question(title, otherReligionDescription) = {
     },
     {
       goto: {
-        block: 'no-religion',
+        block: 'childhood-religion',
         when: [
           {
             id: 'religion-answer',

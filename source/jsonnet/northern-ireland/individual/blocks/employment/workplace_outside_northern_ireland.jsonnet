@@ -2,19 +2,19 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'work-town-and-county-question',
+  id: 'workplace-outside-northern-ireland-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'work-town-and-county-answer-town',
+      id: 'workplace-outside-northern-ireland-answer-town',
       label: 'Town or city',
       mandatory: false,
       max_length: 100,
       type: 'TextField',
     },
     {
-      id: 'work-town-and-county-answer-county',
+      id: 'workplace-outside-northern-ireland-answer-county',
       label: 'County',
       mandatory: false,
       max_length: 100,
@@ -41,7 +41,7 @@ local pastProxyTitle = {
 
 {
   type: 'Question',
-  id: 'work-town-and-county',
+  id: 'workplace-outside-northern-ireland',
   question_variants: [
     {
       question: question(nonProxyTitle),
