@@ -7,7 +7,7 @@ local any_more_people_living_here = import 'ccs/blocks/who-lives-here/any_more_p
 local any_more_visitors = import 'ccs/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'ccs/blocks/who-lives-here/any_visitors.jsonnet';
 local anyone_else_driver = import 'ccs/blocks/who-lives-here/anyone_else_driver.jsonnet';
-local anyone_else_usually_living = import 'ccs/blocks/who-lives-here/anyone_else_usually_living.jsonnet';
+local anyone_else_usually_living_here = import 'ccs/blocks/who-lives-here/anyone_else_usually_living_here.jsonnet';
 local outside_uk_note = import 'ccs/blocks/who-lives-here/outside_uk_note.jsonnet';
 local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
 local usual_address = import 'ccs/blocks/who-lives-here/usual_address.jsonnet';
@@ -33,20 +33,20 @@ local who_rent_from = import 'ccs/blocks/accommodation/who_rent_from.jsonnet';
 local address_one_year_ago = import 'ccs/blocks/individual/address_one_year_ago.jsonnet';
 local age_last_birthday = import 'ccs/blocks/individual/age_last_birthday.jsonnet';
 local another_uk_address = import 'ccs/blocks/individual/another_uk_address.jsonnet';
-local asian_or_asian_british_ethnic_group = import 'ccs/blocks/individual/asian_or_asian_british_ethnic_group.jsonnet';
-local black_black_british_caribbean_or_african_ethnic_group = import 'ccs/blocks/individual/black_black_british_caribbean_or_african_ethnic_group.jsonnet';
 local confirm_age = import 'ccs/blocks/individual/confirm_age.jsonnet';
 local country_of_birth = import 'ccs/blocks/individual/country_of_birth.jsonnet';
 local date_of_birth = import 'ccs/blocks/individual/date_of_birth.jsonnet';
 local employment_status = import 'ccs/blocks/individual/employment_status.jsonnet';
 local employment_type = import 'ccs/blocks/individual/employment_type.jsonnet';
 local ethnic_group = import 'ccs/blocks/individual/ethnic_group.jsonnet';
+local ethnic_group_asian_or_asian_british = import 'ccs/blocks/individual/ethnic_group_asian_or_asian_british.jsonnet';
+local ethnic_group_black_black_british_caribbean_or_african = import 'ccs/blocks/individual/ethnic_group_black_black_british_caribbean_or_african.jsonnet';
+local ethnic_group_mixed_or_multiple = import 'ccs/blocks/individual/ethnic_group_mixed_or_multiple.jsonnet';
+local ethnic_group_other = import 'ccs/blocks/individual/ethnic_group_other.jsonnet';
 local in_education = import 'ccs/blocks/individual/in_education.jsonnet';
 local individual_introduction = import 'ccs/blocks/individual/individual_introduction.jsonnet';
 local length_of_stay = import 'ccs/blocks/individual/length_of_stay.jsonnet';
 local marital_or_civil_partnership_status = import 'ccs/blocks/individual/marital_or_civil_partnership_status.jsonnet';
-local mixed_or_multiple_ethnic_group = import 'ccs/blocks/individual/mixed_or_multiple_ethnic_group.jsonnet';
-local other_ethnic_group = import 'ccs/blocks/individual/other_ethnic_group.jsonnet';
 local other_uk_address = import 'ccs/blocks/individual/other_uk_address.jsonnet';
 local sex = import 'ccs/blocks/individual/sex.jsonnet';
 local term_time_location = import 'ccs/blocks/individual/term_time_location.jsonnet';
@@ -138,7 +138,7 @@ function(region_code, census_month_year_date) {
           blocks: [
             who_lives_here_introduction,
             were_you_usually_living_here,
-            anyone_else_usually_living,
+            anyone_else_usually_living_here,
             usual_address_in_uk,
             outside_uk_note,
             usual_address,
@@ -224,10 +224,10 @@ function(region_code, census_month_year_date) {
             marital_or_civil_partnership_status,
             ethnic_group(region_code),
             white_ethnic_group(region_code),
-            mixed_or_multiple_ethnic_group(region_code),
-            asian_or_asian_british_ethnic_group(region_code),
-            black_black_british_caribbean_or_african_ethnic_group(region_code),
-            other_ethnic_group(region_code),
+            ethnic_group_mixed_or_multiple(region_code),
+            ethnic_group_asian_or_asian_british(region_code),
+            ethnic_group_black_black_british_caribbean_or_african(region_code),
+            ethnic_group_other(region_code),
             in_education,
             term_time_location,
             address_one_year_ago,

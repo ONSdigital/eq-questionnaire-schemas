@@ -91,7 +91,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'anyone-else-usually-living',
+        block: 'anyone-else-usually-living-here',
         when: [
           {
             id: 'were-you-usually-living-here-answer',
