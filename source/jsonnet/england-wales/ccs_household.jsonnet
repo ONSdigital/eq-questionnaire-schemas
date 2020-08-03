@@ -2,7 +2,7 @@ local rules = import '../../lib/common_rules.libsonnet';
 local placeholders = import '../../lib/placeholders.libsonnet';
 
 // Who lives here
-local another_address_interviewer_note_interstitial = import 'ccs/blocks/who-lives-here/another_address_interviewer_note_interstitial.jsonnet';
+local another_address_interviewer_note = import 'ccs/blocks/who-lives-here/another_address_interviewer_note.jsonnet';
 local any_more_people_living_here = import 'ccs/blocks/who-lives-here/any_more_people_living_here.jsonnet';
 local any_more_visitors = import 'ccs/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'ccs/blocks/who-lives-here/any_visitors.jsonnet';
@@ -62,7 +62,7 @@ local visitor_usual_address = import 'ccs/blocks/visitor/visitor_usual_address.j
 local visitor_usual_address_details = import 'ccs/blocks/visitor/visitor_usual_address_details.jsonnet';
 
 // Household check
-local household_check_interstitial = import 'ccs/blocks/household-check/household_check_interstitial.jsonnet';
+local household_check_introduction = import 'ccs/blocks/household-check/household_check_introduction.jsonnet';
 local other_living_accommodation = import 'ccs/blocks/household-check/other_living_accommodation.jsonnet';
 local separate_household = import 'ccs/blocks/household-check/separate_household.jsonnet';
 
@@ -144,7 +144,7 @@ function(region_code, census_month_year_date) {
             usual_address,
             anyone_else_driver,
             who_to_interview_note,
-            another_address_interviewer_note_interstitial,
+            another_address_interviewer_note,
             who_else_lives_here,
             any_more_people_living_here,
             relationships,
@@ -300,7 +300,7 @@ function(region_code, census_month_year_date) {
         {
           id: 'household-check-group',
           blocks: [
-            household_check_interstitial,
+            household_check_introduction,
             other_living_accommodation,
             separate_household,
           ],
