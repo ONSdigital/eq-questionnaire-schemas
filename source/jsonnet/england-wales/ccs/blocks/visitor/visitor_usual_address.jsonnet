@@ -16,7 +16,7 @@ local additionalAnswerOption = [
 ];
 
 local question(additionalAnwerOptions=[]) = {
-  id: 'usual-address-household-question',
+  id: 'visitor-usual-address-question',
   title: {
     text: 'Did <em>{person_name}</em> usually live in the UK?',
     placeholders: [
@@ -26,7 +26,7 @@ local question(additionalAnwerOptions=[]) = {
   type: 'General',
   answers: [
     {
-      id: 'usual-address-household-answer',
+      id: 'visitor-usual-address-answer',
       mandatory: false,
       options: additionalAnwerOptions + [
         {
@@ -38,7 +38,7 @@ local question(additionalAnwerOptions=[]) = {
           value: 'No',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'usual-address-household-answer-other',
+            id: 'visitor-usual-address-answer-other',
             type: 'TextField',
             mandatory: false,
             label: 'Enter current name of country',
@@ -52,7 +52,7 @@ local question(additionalAnwerOptions=[]) = {
 
 {
   type: 'Question',
-  id: 'usual-household-address',
+  id: 'visitor-usual-address',
   question_variants: [
     {
       question: question(),
@@ -66,10 +66,10 @@ local question(additionalAnwerOptions=[]) = {
   routing_rules: [
     {
       goto: {
-        block: 'usual-address-details',
+        block: 'visitor-usual-address-details',
         when: [
           {
-            id: 'usual-address-household-answer',
+            id: 'visitor-usual-address-answer',
             condition: 'equals',
             value: 'Yes',
           },

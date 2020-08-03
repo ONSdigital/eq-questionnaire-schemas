@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 {
-  id: 'visitor-list-collector',
+  id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
   add_answer: {

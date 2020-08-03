@@ -9,7 +9,7 @@
   routing_rules: [
     {
       goto: {
-        block: 'primary-person-list-collector',
+        block: 'were-you-usually-living-here',
       },
     },
   ],

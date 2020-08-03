@@ -60,7 +60,7 @@ local proxyTitle = {
   routing_rules: [
     {
       goto: {
-        block: 'confirm-dob',
+        block: 'confirm-age',
         when: [{
           id: 'date-of-birth-answer',
           condition: 'set',

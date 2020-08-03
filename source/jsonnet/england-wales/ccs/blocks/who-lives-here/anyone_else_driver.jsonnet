@@ -38,7 +38,7 @@ local rules = import 'rules.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'anyone-else-list-collector',
+        block: 'who-else-lives-here',
       },
     },
   ],

@@ -2,13 +2,13 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'marriage-type-question',
+  id: 'marital-or-civil-partnership-status-question',
   title: title,
   instruction: ['Tell the respondent to turn to <strong>Showcard 8</strong> or show them the options below'],
   type: 'General',
   answers: [
     {
-      id: 'marriage-type-answer',
+      id: 'marital-or-civil-partnership-status-answer',
       mandatory: false,
       options: [
         {
@@ -69,7 +69,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'marriage-type',
+  id: 'marital-or-civil-partnership-status',
   question_variants: [
     {
       question: question(nonProxyTitle),

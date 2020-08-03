@@ -1,12 +1,12 @@
 local rules = import 'rules.libsonnet';
 
 local question(title, instruction) = {
-  id: 'self-contained-question',
+  id: 'rooms-shared-with-another-household-question',
   title: title,
   instruction: instruction,
   type: 'General',
   answers: [{
-    id: 'self-contained-answer',
+    id: 'rooms-shared-with-another-household-answer',
     mandatory: false,
     options: [
       {
@@ -24,7 +24,7 @@ local question(title, instruction) = {
 
 {
   type: 'Question',
-  id: 'self-contained',
+  id: 'rooms-shared-with-another-household',
   question_variants: [
     {
       question: question('Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?', ['If “No” confirm one or more rooms are shared with another household']),

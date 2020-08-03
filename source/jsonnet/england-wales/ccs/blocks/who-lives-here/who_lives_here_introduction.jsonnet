@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Interstitial',
-  id: 'who-lives-here-interstitial',
+  id: 'who-lives-here-introduction',
   content: {
     title: 'Your household',
     contents: [

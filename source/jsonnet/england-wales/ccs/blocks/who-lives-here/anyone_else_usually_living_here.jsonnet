@@ -2,9 +2,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   type: 'Question',
-  id: 'anyone-else-usually-living',
+  id: 'anyone-else-usually-living-here',
   question: {
-    id: 'anyone-else-usually-living-question',
+    id: 'anyone-else-usually-living-here-question',
     title: {
       text: 'Was anyone in your current household usually living here on Sunday {census_date}?',
       placeholders: [
@@ -13,7 +13,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     },
     type: 'General',
     answers: [{
-      id: 'anyone-else-usually-living-answer',
+      id: 'anyone-else-usually-living-here-answer',
       mandatory: false,
       options: [
         {
@@ -34,7 +34,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         block: 'usual-address-in-uk',
         when: [
           {
-            id: 'anyone-else-usually-living-answer',
+            id: 'anyone-else-usually-living-here-answer',
             condition: 'equals',
             value: 'No',
           },

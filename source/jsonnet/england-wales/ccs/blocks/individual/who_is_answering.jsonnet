@@ -1,14 +1,14 @@
 {
   type: 'Question',
-  id: 'proxy',
+  id: 'who-is-answering',
   interviewer_only: true,
   question: {
-    id: 'proxy-question',
+    id: 'who-is-answering-question',
     title: 'Are they answering the questions for themselves or on someone else’s behalf?',
     type: 'General',
     answers: [
       {
-        id: 'proxy-answer',
+        id: 'who-is-answering-answer',
         mandatory: false,
         default: 'No, they are answering on someone else’s behalf',
         options: [

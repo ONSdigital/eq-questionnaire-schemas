@@ -58,7 +58,7 @@ local question(title) = {
     },
     {
       goto: {
-        block: 'self-contained',
+        block: 'rooms-shared-with-another-household',
       },
     },
   ],

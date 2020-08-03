@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'past-usual-address-household-question',
+  id: 'address-one-year-ago-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'past-usual-address-household-answer',
+      id: 'address-one-year-ago-answer',
       mandatory: false,
       options: [
         {
@@ -47,7 +47,7 @@ local proxyTitle = {
 
 {
   type: 'Question',
-  id: 'past-usual-household-address',
+  id: 'address-one-year-ago',
   question_variants: [
     {
       question: question(nonProxyTitle),
@@ -64,7 +64,7 @@ local proxyTitle = {
         block: 'another-uk-address',
         when: [
           {
-            id: 'past-usual-address-household-answer',
+            id: 'address-one-year-ago-answer',
             condition: 'not equals',
             value: 'No, living outside the UK',
           },
@@ -77,7 +77,7 @@ local proxyTitle = {
         block: 'employment-status',
         when: [
           {
-            id: 'past-usual-address-household-answer',
+            id: 'address-one-year-ago-answer',
             condition: 'not equals',
             value: 'No, living outside the UK',
           },
@@ -90,7 +90,7 @@ local proxyTitle = {
         block: 'employment-status',
         when: [
           {
-            id: 'past-usual-address-household-answer',
+            id: 'address-one-year-ago-answer',
             condition: 'not equals',
             value: 'No, living outside the UK',
           },

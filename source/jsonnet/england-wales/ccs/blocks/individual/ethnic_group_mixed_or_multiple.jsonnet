@@ -5,13 +5,13 @@ local englandInstruction = 'Ask the respondent to continue looking at <strong>Sh
 local walesInstruction = 'Ask the respondent to continue looking at <strong>Showcard 9W</strong> or show them the options below';
 
 local question(title, instruction) = {
-  id: 'mixed-ethnic-group-question',
+  id: 'mixed-or-multiple-ethnic-group-question',
   title: title,
   instruction: [instruction],
   type: 'General',
   answers: [
     {
-      id: 'mixed-ethnic-group-answer',
+      id: 'mixed-or-multiple-ethnic-group-answer',
       mandatory: false,
       options: [
         {
@@ -31,7 +31,7 @@ local question(title, instruction) = {
           value: 'Any other Mixed or Multiple background',
           description: 'Select to enter answer',
           detail_answer: {
-            id: 'mixed-ethnic-group-answer-other',
+            id: 'mixed-or-multiple-ethnic-group-answer-other',
             type: 'TextField',
             mandatory: false,
             label: 'Enter Mixed or Multiple ethnic group or background',
@@ -55,7 +55,7 @@ function(region_code) {
   local instruction = if region_code == 'GB-WLS' then walesInstruction else englandInstruction,
 
   type: 'Question',
-  id: 'mixed-ethnic-group',
+  id: 'mixed-or-multiple-ethnic-group',
   question_variants: [
     {
       question: question(nonProxyTitle, instruction),
@@ -75,7 +75,7 @@ function(region_code) {
     },
     {
       goto: {
-        block: 'past-usual-household-address',
+        block: 'address-one-year-ago',
         when: [rules.under4],
       },
     },

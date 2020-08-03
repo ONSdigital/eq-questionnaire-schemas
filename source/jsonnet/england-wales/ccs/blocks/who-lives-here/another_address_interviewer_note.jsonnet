@@ -1,6 +1,6 @@
 {
   type: 'Interstitial',
-  id: 'another-address-interviewer-note-interstitial',
+  id: 'another-address-interviewer-note',
   content: {
     title: '<em>Interviewer Note</em>',
     contents: [
