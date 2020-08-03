@@ -17,28 +17,28 @@ local term_time_location = import 'individual/blocks/personal-details/term_time_
 local address_one_year_ago = import 'individual/blocks/identity-and-health/address_one_year_ago.jsonnet';
 local address_one_year_ago_outside_uk = import 'individual/blocks/identity-and-health/address_one_year_ago_outside_uk.jsonnet';
 local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
+local childhood_religion = import 'individual/blocks/identity-and-health/childhood_religion.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
 local country_of_birth_elsewhere = import 'individual/blocks/identity-and-health/country_of_birth_elsewhere.jsonnet';
-local disability_other = import 'individual/blocks/identity-and-health/disability_other.jsonnet';
 local ethnic_group = import 'individual/blocks/identity-and-health/ethnic_group.jsonnet';
 local ethnic_group_other = import 'individual/blocks/identity-and-health/ethnic_group_other.jsonnet';
 local frequency_irish = import 'individual/blocks/identity-and-health/frequency_irish.jsonnet';
 local frequency_ulster_scots = import 'individual/blocks/identity-and-health/frequency_ulster_scots.jsonnet';
 local health = import 'individual/blocks/identity-and-health/health.jsonnet';
-local health_conditions_or_illnesses = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses.jsonnet';
 local health_conditions_or_illnesses_limitations = import 'individual/blocks/identity-and-health/health_conditions_or_illnesses_limitations.jsonnet';
 local location_one_year_ago = import 'individual/blocks/identity-and-health/location_one_year_ago.jsonnet';
 local look_after_or_support_others = import 'individual/blocks/identity-and-health/look_after_or_support_others.jsonnet';
 local language = import 'individual/blocks/identity-and-health/main_language.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
-local no_religion = import 'individual/blocks/identity-and-health/no_religion.jsonnet';
 local no_religion_other = import 'individual/blocks/identity-and-health/no_religion_other.jsonnet';
+local other_health_conditions = import 'individual/blocks/identity-and-health/other_health_conditions.jsonnet';
 local other_main_language = import 'individual/blocks/identity-and-health/other_main_language.jsonnet';
 local other_national_identities = import 'individual/blocks/identity-and-health/other_national_identities.jsonnet';
 local other_national_identity = import 'individual/blocks/identity-and-health/other_national_identity.jsonnet';
 local passports = import 'individual/blocks/identity-and-health/passports.jsonnet';
 local passports_additional_other = import 'individual/blocks/identity-and-health/passports_additional_other.jsonnet';
 local passports_other = import 'individual/blocks/identity-and-health/passports_other.jsonnet';
+local physical_health_conditions = import 'individual/blocks/identity-and-health/physical_health_conditions.jsonnet';
 local religion = import 'individual/blocks/identity-and-health/religion.jsonnet';
 local religion_other = import 'individual/blocks/identity-and-health/religion_other.jsonnet';
 local sexual_orientation = import 'individual/blocks/identity-and-health/sexual_orientation.jsonnet';
@@ -47,11 +47,11 @@ local understand_irish = import 'individual/blocks/identity-and-health/understan
 local understand_ulster_scots = import 'individual/blocks/identity-and-health/understand_ulster_scots.jsonnet';
 
 // School
-local place_of_study = import 'individual/blocks/school/place_of_study.jsonnet';
-local place_of_study_elsewhere = import 'individual/blocks/school/place_of_study_elsewhere.jsonnet';
-local school_location = import 'individual/blocks/school/school_location.jsonnet';
-local school_travel = import 'individual/blocks/school/school_travel.jsonnet';
+local study_location = import 'individual/blocks/school/study_location.jsonnet';
+local study_location_country = import 'individual/blocks/school/study_location_country.jsonnet';
+local study_location_in_northern_ireland = import 'individual/blocks/school/study_location_in_northern_ireland.jsonnet';
 local study_location_type = import 'individual/blocks/school/study_location_type.jsonnet';
+local travel_to_study_location = import 'individual/blocks/school/travel_to_study_location.jsonnet';
 
 // Qualifications
 local a_level = import 'individual/blocks/qualifications/a_level.jsonnet';
@@ -76,13 +76,13 @@ local looking_for_work = import 'individual/blocks/employment/looking_for_work.j
 local main_job_introduction = import 'individual/blocks/employment/main_job_introduction.jsonnet';
 local main_job_status = import 'individual/blocks/employment/main_job_status.jsonnet';
 local not_employed_status_last_seven_days = import 'individual/blocks/employment/not_employed_status_last_seven_days.jsonnet';
-local place_of_work = import 'individual/blocks/employment/place_of_work.jsonnet';
-local place_of_work_elsewhere = import 'individual/blocks/employment/place_of_work_elsewhere.jsonnet';
 local supervise_others = import 'individual/blocks/employment/supervise_others.jsonnet';
-local town_and_county = import 'individual/blocks/employment/town_and_county.jsonnet';
 local travel_to_work = import 'individual/blocks/employment/travel_to_work.jsonnet';
-local work_location = import 'individual/blocks/employment/work_location.jsonnet';
-local work_location_type = import 'individual/blocks/employment/work_location_type.jsonnet';
+local workplace_address = import 'individual/blocks/employment/workplace_address.jsonnet';
+local workplace_country = import 'individual/blocks/employment/workplace_country.jsonnet';
+local workplace_location = import 'individual/blocks/employment/workplace_location.jsonnet';
+local workplace_outside_northern_ireland = import 'individual/blocks/employment/workplace_outside_northern_ireland.jsonnet';
+local workplace_type = import 'individual/blocks/employment/workplace_type.jsonnet';
 
 function(region_code) {
   mime_type: 'application/json/ons/eq',
@@ -155,7 +155,7 @@ function(region_code) {
             ethnic_group_other,
             religion,
             religion_other,
-            no_religion,
+            childhood_religion,
             no_religion_other,
             language,
             other_main_language,
@@ -166,8 +166,8 @@ function(region_code) {
             frequency_ulster_scots,
             health,
             health_conditions_or_illnesses_limitations,
-            health_conditions_or_illnesses,
-            disability_other,
+            physical_health_conditions,
+            other_health_conditions,
             look_after_or_support_others,
             sexual_orientation,
           ],
@@ -203,11 +203,11 @@ function(region_code) {
             business_type,
             supervise_others,
             hours_worked,
-            work_location_type,
-            place_of_work,
-            place_of_work_elsewhere,
-            town_and_county,
-            work_location,
+            workplace_type,
+            workplace_location,
+            workplace_country,
+            workplace_outside_northern_ireland,
+            workplace_address,
             travel_to_work,
           ],
         },
@@ -216,10 +216,10 @@ function(region_code) {
           title: 'School',
           blocks: [
             study_location_type,
-            place_of_study,
-            place_of_study_elsewhere,
-            school_location,
-            school_travel,
+            study_location,
+            study_location_country,
+            study_location_in_northern_ireland,
+            travel_to_study_location,
           ],
         },
       ],

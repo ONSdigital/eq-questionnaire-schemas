@@ -2,30 +2,30 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'work-location-question',
+  id: 'workplace-address-question',
   type: 'General',
   title: title,
   answers: [
     {
-      id: 'work-address-details-answer-building',
+      id: 'workplace-address-details-answer-building',
       label: 'Address line 1',
       mandatory: true,
       type: 'TextField',
     },
     {
-      id: 'work-address-details-answer-street',
+      id: 'workplace-address-details-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'work-address-details-answer-city',
+      id: 'workplace-address-details-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'work-address-details-answer-postcode',
+      id: 'workplace-address-details-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',
@@ -52,7 +52,7 @@ local pastProxyTitleWork = {
 
 {
   type: 'Question',
-  id: 'work-location',
+  id: 'workplace-address',
   question_variants: [
     {
       question: question(nonProxyTitleWork),
