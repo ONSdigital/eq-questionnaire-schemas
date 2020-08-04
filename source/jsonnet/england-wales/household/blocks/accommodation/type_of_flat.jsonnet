@@ -34,7 +34,7 @@
   },
   routing_rules: [{
     goto: {
-      block: 'self-contained',
+      block: 'rooms-shared-with-another-household',
     },
   }],
 }
