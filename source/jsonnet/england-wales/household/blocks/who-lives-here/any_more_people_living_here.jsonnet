@@ -33,7 +33,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'anyone-else-temp-away-edit-question',
+  id: 'any-more-people-living-here-edit-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -70,19 +70,19 @@ local editQuestion(questionTitle) = {
 
 
 {
-  id: 'anyone-else-temp-away-list-collector',
+  id: 'any-more-people-living-here',
   type: 'ListCollector',
   for_list: 'household',
   add_answer: {
-    id: 'anyone-else-temp-away-answer',
+    id: 'any-more-people-living-here-answer',
     value: 'Yes, I need to add someone',
   },
   remove_answer: {
-    id: 'anyone-else-temp-away-remove-confirmation',
+    id: 'any-more-people-living-here-remove-confirmation',
     value: 'Yes, I want to remove this person',
   },
   question: {
-    id: 'anyone-else-temp-away-confirmation-question',
+    id: 'any-more-people-living-here-question',
     type: 'General',
     title: questionTitle,
     guidance: {
@@ -115,7 +115,7 @@ local editQuestion(questionTitle) = {
     },
     answers: [
       {
-        id: 'anyone-else-temp-away-answer',
+        id: 'any-more-people-living-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [
@@ -158,10 +158,10 @@ local editQuestion(questionTitle) = {
     ],
   },
   add_block: {
-    id: 'anyone-else-temp-away-add-person',
+    id: 'any-more-people-living-here-add-person',
     type: 'ListAddQuestion',
     question: {
-      id: 'anyone-else-temp-away-add-question',
+      id: 'any-more-people-living-here-add-question',
       type: 'General',
       title: {
         text: 'Who do you need to add to {household_address}?',
@@ -202,7 +202,7 @@ local editQuestion(questionTitle) = {
     },
   },
   edit_block: {
-    id: 'anyone-else-temp-away-edit-person',
+    id: 'any-more-people-living-here-edit-person',
     type: 'ListEditQuestion',
     question_variants: [
       {
@@ -216,10 +216,10 @@ local editQuestion(questionTitle) = {
     ],
   },
   remove_block: {
-    id: 'anyone-else-temp-away-remove-person',
+    id: 'any-more-people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'anyone-else-temp-away-remove-question',
+      id: 'any-more-people-living-here-remove-question',
       type: 'General',
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
@@ -230,7 +230,7 @@ local editQuestion(questionTitle) = {
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'anyone-else-temp-away-remove-confirmation',
+          id: 'any-more-people-living-here-remove-confirmation',
           mandatory: true,
           type: 'Radio',
           options: [

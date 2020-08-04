@@ -109,7 +109,7 @@ local editQuestion(questionTitle) = {
 };
 
 {
-  id: 'anyone-else-list-collector',
+  id: 'people-living-here',
   type: 'ListCollector',
   for_list: 'household',
   add_answer: {
@@ -124,7 +124,7 @@ local editQuestion(questionTitle) = {
     {
       question: {
         type: 'General',
-        id: 'anyone-usually-live-at-question',
+        id: 'people-living-here-question',
         title: questionTitle,
         answers: [
           {
@@ -154,7 +154,7 @@ local editQuestion(questionTitle) = {
     },
     {
       question: {
-        id: 'anyone-usually-live-at-question',
+        id: 'people-living-here-question',
         type: 'General',
         title: {
           text: 'Does anyone else live at {household_address}?',

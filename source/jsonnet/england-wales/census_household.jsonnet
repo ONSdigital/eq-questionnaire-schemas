@@ -7,23 +7,23 @@ local central_heating = import 'household/blocks/accommodation/central_heating.j
 local number_bedrooms = import 'household/blocks/accommodation/number_bedrooms.jsonnet';
 local number_of_vehicles = import 'household/blocks/accommodation/number_of_vehicles.jsonnet';
 local own_or_rent = import 'household/blocks/accommodation/own_or_rent.jsonnet';
-local self_contained = import 'household/blocks/accommodation/self_contained.jsonnet';
+local rooms_shared_with_another_household = import 'household/blocks/accommodation/rooms_shared_with_another_household.jsonnet';
 local type_of_flat = import 'household/blocks/accommodation/type_of_flat.jsonnet';
 local type_of_house = import 'household/blocks/accommodation/type_of_house.jsonnet';
 local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonnet';
 
 // Who lives here
+local any_more_people_living_here = import 'household/blocks/who-lives-here/any_more_people_living_here.jsonnet';
+local any_more_visitors = import 'household/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
-local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
-local anyone_else_list_collector = import 'household/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
-local anyone_else_temporarily_away_list_collector = import 'household/blocks/who-lives-here/anyone_else_temporarily_away_list_collector.jsonnet';
-local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
-local visitor_list_collector = import 'household/blocks/who-lives-here/visitor_list_collector.jsonnet';
-local who_lives_here_interstitial = import 'household/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
+local do_you_usually_live_here = import 'household/blocks/who-lives-here/do_you_usually_live_here.jsonnet';
+local people_living_here = import 'household/blocks/who-lives-here/people_living_here.jsonnet';
+local people_who_live_here_introduction = import 'household/blocks/who-lives-here/people_who_live_here_introduction.jsonnet';
+local who_else_lives_here = import 'household/blocks/who-lives-here/who_else_lives_here.jsonnet';
 
 // Relationships
 local relationships_collector = import 'household/blocks/relationships/relationships_collector.jsonnet';
-local relationships_interstitial = import 'household/blocks/relationships/relationships_interstitial.jsonnet';
+local relationships_introduction = import 'household/blocks/relationships/relationships_introduction.jsonnet';
 
 // Personal Details
 local proxy = import 'household/blocks/individual/confirm_who_is_answering.jsonnet';
@@ -168,11 +168,11 @@ function(region_code, census_month_year_date) {
     submission: {
       button: 'Submit census',
     },
-    required_completed_sections: ['who-lives-here-section', 'relationships-section'],
+    required_completed_sections: ['people-who-live-here-and-overnight-visitors', 'relationships-section'],
   },
   sections: [
     {
-      id: 'who-lives-here-section',
+      id: 'people-who-live-here-and-overnight-visitors',
       title: 'People who live here',
       summary: {
         show_on_completion: true,
@@ -236,13 +236,13 @@ function(region_code, census_month_year_date) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
-            who_lives_here_interstitial,
-            primary_person_list_collector,
-            anyone_else,
-            anyone_else_list_collector,
-            anyone_else_temporarily_away_list_collector,
+            people_who_live_here_introduction,
+            do_you_usually_live_here,
+            who_else_lives_here,
+            people_living_here,
+            any_more_people_living_here,
             any_visitors,
-            visitor_list_collector,
+            any_more_visitors,
           ],
         },
       ],
@@ -256,7 +256,7 @@ function(region_code, census_month_year_date) {
           id: 'relationships-group',
           title: 'Relationships',
           blocks: [
-            relationships_interstitial,
+            relationships_introduction,
             relationships_collector,
           ],
         },
@@ -285,7 +285,7 @@ function(region_code, census_month_year_date) {
             accommodation_type,
             type_of_house,
             type_of_flat,
-            self_contained,
+            rooms_shared_with_another_household,
             number_bedrooms,
             central_heating,
             own_or_rent,

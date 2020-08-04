@@ -58,7 +58,7 @@ local addQuestion(visitorsListEmpty) = {
 };
 
 {
-  id: 'visitor-list-collector',
+  id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
   add_answer: {

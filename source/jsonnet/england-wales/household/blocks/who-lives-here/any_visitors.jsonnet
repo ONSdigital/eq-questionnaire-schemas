@@ -110,7 +110,7 @@ local rules = import 'rules.libsonnet';
     },
     {
       goto: {
-        block: 'visitor-list-collector',
+        block: 'any-more-visitors',
       },
     },
   ],

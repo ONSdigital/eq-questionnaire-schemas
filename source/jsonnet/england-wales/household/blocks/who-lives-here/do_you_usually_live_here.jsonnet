@@ -1,15 +1,15 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
-  id: 'primary-person-list-collector',
+  id: 'do-you-usually-live-here',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
   add_or_edit_answer: {
-    id: 'you-live-here-answer',
+    id: 'do-you-usually-live-here-answer',
     value: 'Yes, I usually live here',
   },
   add_or_edit_block: {
-    id: 'add-or-edit-primary-person',
+    id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
     question: {
       id: 'primary-person-add-or-edit-question',
@@ -85,7 +85,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     ],
     answers: [
       {
-        id: 'you-live-here-answer',
+        id: 'do-you-usually-live-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [

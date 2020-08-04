@@ -30,7 +30,7 @@ local anyoneElseAnswerExclusiveText(hasPrimary) = (
 
 local question(hasPrimary) = {
   type: 'MutuallyExclusive',
-  id: 'anyone-else-driving-question',
+  id: 'who-else-lives-here',
   title: questionTitle(hasPrimary),
   definitions: [
     {
@@ -63,7 +63,7 @@ local question(hasPrimary) = {
   answers: [
     {
       label: 'Select all that apply. You can select more than one for each person',
-      id: 'anyone-else-driving-question-answer',
+      id: 'who-else-lives-here-answer',
       mandatory: false,
       type: 'Checkbox',
       options: [
@@ -133,7 +133,7 @@ local question(hasPrimary) = {
       ],
     },
     {
-      id: 'anyone-else-driving-question-answer-exclusive',
+      id: 'who-else-lives-here-answer-exclusive',
       mandatory: false,
       type: 'Checkbox',
       options: [anyoneElseAnswerExclusiveText(hasPrimary)],
@@ -144,7 +144,7 @@ local question(hasPrimary) = {
 {
   type: 'ListCollectorDrivingQuestion',
   for_list: 'household',
-  id: 'anyone-else-driving-question',
+  id: 'who-else-lives-here',
   question_variants: [
     {
       question: question(hasPrimary=true),
@@ -158,10 +158,10 @@ local question(hasPrimary) = {
   routing_rules: [
     {
       goto: {
-        block: 'anyone-else-temp-away-list-collector',
+        block: 'any-more-people-living-here',
         when: [
           {
-            id: 'anyone-else-driving-question-answer-exclusive',
+            id: 'who-else-lives-here-answer-exclusive',
             condition: 'set',
           },
         ],
@@ -169,7 +169,7 @@ local question(hasPrimary) = {
     },
     {
       goto: {
-        block: 'anyone-else-list-collector',
+        block: 'people-living-here',
       },
     },
   ],

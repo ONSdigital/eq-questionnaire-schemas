@@ -1,6 +1,6 @@
 {
   type: 'Interstitial',
-  id: 'relationships-interstitial',
+  id: 'relationships-introduction',
   content: {
     title: 'Household relationships',
     contents: [

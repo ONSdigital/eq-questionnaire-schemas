@@ -1,8 +1,8 @@
 {
   type: 'Question',
-  id: 'self-contained',
+  id: 'rooms-shared-with-another-household',
   question: {
-    id: 'self-contained-question',
+    id: 'rooms-shared-with-another-household-question',
     title: 'Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?',
     type: 'General',
     definitions: [{
@@ -12,7 +12,7 @@
       }],
     }],
     answers: [{
-      id: 'self-contained-answer',
+      id: 'rooms-shared-with-another-household-answer',
       mandatory: false,
       options: [
         {
