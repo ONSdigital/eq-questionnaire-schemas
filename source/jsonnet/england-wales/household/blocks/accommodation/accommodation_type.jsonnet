@@ -49,7 +49,7 @@ local rules = import 'rules.libsonnet';
     },
     {
       goto: {
-        block: 'self-contained',
+        block: 'rooms-shared-with-another-household',
       },
     },
   ],
