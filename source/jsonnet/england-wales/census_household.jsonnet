@@ -158,11 +158,11 @@ function(region_code, census_month_year_date) {
   ],
   hub: {
     enabled: true,
-    submission: {
-      button: 'Submit census',
-      title: 'Submit census',
-    },
     required_completed_sections: ['who-lives-here-section', 'relationships-section'],
+  },
+  submission: {
+    button: 'Submit census',
+    title: 'Submit census',
   },
   sections: [
     {
