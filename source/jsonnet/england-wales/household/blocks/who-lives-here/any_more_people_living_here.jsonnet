@@ -33,7 +33,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'any-more-people-living-here-edit-question',
+  id: 'any-more-people-living-here-edit-person-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -78,7 +78,7 @@ local editQuestion(questionTitle) = {
     value: 'Yes, I need to add someone',
   },
   remove_answer: {
-    id: 'any-more-people-living-here-remove-confirmation',
+    id: 'any-more-people-living-here-remove-person-confirmation',
     value: 'Yes, I want to remove this person',
   },
   question: {
@@ -161,7 +161,7 @@ local editQuestion(questionTitle) = {
     id: 'any-more-people-living-here-add-person',
     type: 'ListAddQuestion',
     question: {
-      id: 'any-more-people-living-here-add-question',
+      id: 'any-more-people-living-here-add-person-question',
       type: 'General',
       title: {
         text: 'Who do you need to add to {household_address}?',
@@ -219,7 +219,7 @@ local editQuestion(questionTitle) = {
     id: 'any-more-people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'any-more-people-living-here-remove-question',
+      id: 'any-more-people-living-here-remove-person-question',
       type: 'General',
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
@@ -230,7 +230,7 @@ local editQuestion(questionTitle) = {
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'any-more-people-living-here-remove-confirmation',
+          id: 'any-more-people-living-here-remove-person-confirmation',
           mandatory: true,
           type: 'Radio',
           options: [
