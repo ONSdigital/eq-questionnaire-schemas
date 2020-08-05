@@ -220,7 +220,7 @@ local editQuestion(questionTitle) = {
     id: 'people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'remove-question',
+      id: 'people-living-here-remove-person-question',
       type: 'General',
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
@@ -231,7 +231,7 @@ local editQuestion(questionTitle) = {
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'remove-confirmation',
+          id: 'people-living-here-remove-person-answer',
           mandatory: true,
           type: 'Radio',
           options: [

@@ -62,7 +62,7 @@ local addQuestion(visitorsListEmpty) = {
   type: 'ListCollector',
   for_list: 'visitors',
   add_answer: {
-    id: 'any-more-visitors-add-answer',
+    id: 'any-more-visitors-answer',
     value: 'Yes, I need to add {ordinality} visitor',
   },
   remove_answer: {

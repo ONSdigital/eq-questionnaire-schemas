@@ -79,7 +79,7 @@ local question(hasPrimary) = {
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
-              block_id: 'add-person',
+              block_id: 'people-living-here-add-person',
               list_name: 'household',
             },
           },
@@ -90,7 +90,7 @@ local question(hasPrimary) = {
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
-              block_id: 'add-person',
+              block_id: 'people-living-here-add-person',
               list_name: 'household',
             },
           },
@@ -101,7 +101,7 @@ local question(hasPrimary) = {
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
-              block_id: 'add-person',
+              block_id: 'people-living-here-add-person',
               list_name: 'household',
             },
           },
@@ -113,7 +113,7 @@ local question(hasPrimary) = {
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
-              block_id: 'add-person',
+              block_id: 'people-living-here-add-person',
               list_name: 'household',
             },
           },
@@ -125,7 +125,7 @@ local question(hasPrimary) = {
           action: {
             type: 'RedirectToListAddQuestion',
             params: {
-              block_id: 'add-person',
+              block_id: 'people-living-here-add-person',
               list_name: 'household',
             },
           },

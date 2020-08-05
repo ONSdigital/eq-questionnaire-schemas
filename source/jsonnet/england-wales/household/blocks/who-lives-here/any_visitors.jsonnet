@@ -31,7 +31,7 @@ local rules = import 'rules.libsonnet';
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
-                block_id: 'add-visitor',
+                block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
               },
             },
@@ -42,7 +42,7 @@ local rules = import 'rules.libsonnet';
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
-                block_id: 'add-visitor',
+                block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
               },
             },
@@ -53,7 +53,7 @@ local rules = import 'rules.libsonnet';
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
-                block_id: 'add-visitor',
+                block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
               },
             },
@@ -64,7 +64,7 @@ local rules = import 'rules.libsonnet';
             action: {
               type: 'RedirectToListAddQuestion',
               params: {
-                block_id: 'add-visitor',
+                block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
               },
             },
