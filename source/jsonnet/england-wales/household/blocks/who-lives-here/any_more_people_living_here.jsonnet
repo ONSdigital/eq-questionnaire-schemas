@@ -230,7 +230,7 @@ local editQuestion(questionTitle) = {
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'any-more-people-living-here-remove-person-confirmation',
+          id: 'any-more-people-living-here-remove-person-answer',
           mandatory: true,
           type: 'Radio',
           options: [
