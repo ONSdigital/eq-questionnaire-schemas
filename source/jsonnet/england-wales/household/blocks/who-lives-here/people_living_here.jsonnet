@@ -164,7 +164,7 @@ local editQuestion(questionTitle) = {
         },
         answers: [
           {
-            id: 'anyone-else-answer',
+            id: 'people-living-here-answer',
             mandatory: true,
             type: 'Radio',
             options: [

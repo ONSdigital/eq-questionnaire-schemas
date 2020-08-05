@@ -19,7 +19,7 @@ local addQuestionTitle(visitorsListEmpty) = (
 );
 
 local addQuestion(visitorsListEmpty) = {
-  id: 'visitor-add-question',
+  id: 'any-more-visitors-add-visitor-question',
   type: 'General',
   title: addQuestionTitle(visitorsListEmpty),
   answers: [
@@ -62,15 +62,15 @@ local addQuestion(visitorsListEmpty) = {
   type: 'ListCollector',
   for_list: 'visitors',
   add_answer: {
-    id: 'visitor-answer',
+    id: 'any-more-visitors-add-answer',
     value: 'Yes, I need to add {ordinality} visitor',
   },
   remove_answer: {
-    id: 'visitor-remove-confirmation',
+    id: 'any-more-visitors-remove-visitor-answer',
     value: 'Yes, I want to remove this person',
   },
   question: {
-    id: 'visitor-confirmation-question',
+    id: 'any-more-visitors-question',
     type: 'General',
     title: {
       text: 'Are there any other visitors staying overnight on Sunday {census_date} at {household_address}?',
@@ -81,7 +81,7 @@ local addQuestion(visitorsListEmpty) = {
     },
     answers: [
       {
-        id: 'visitor-answer',
+        id: 'any-more-visitors-answer',
         mandatory: true,
         type: 'Radio',
         options: [
@@ -103,7 +103,7 @@ local addQuestion(visitorsListEmpty) = {
     ],
   },
   add_block: {
-    id: 'add-visitor',
+    id: 'any-more-visitors-add-visitor',
     type: 'ListAddQuestion',
     question_variants: [
       {
@@ -125,10 +125,10 @@ local addQuestion(visitorsListEmpty) = {
     ],
   },
   edit_block: {
-    id: 'edit-visitor',
+    id: 'any-more-visitors-edit-visitor',
     type: 'ListEditQuestion',
     question: {
-      id: 'visitor-edit-question',
+      id: 'any-more-visitors-edit-visitor-question',
       type: 'General',
       title: {
         text: 'Change details for <em>{person_name}</em>',
@@ -163,10 +163,10 @@ local addQuestion(visitorsListEmpty) = {
     },
   },
   remove_block: {
-    id: 'remove-visitor',
+    id: 'any-more-visitors-remove-visitor',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'visitor-remove-question',
+      id: 'any-more-visitors-remove-visitor-question',
       type: 'General',
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
@@ -177,7 +177,7 @@ local addQuestion(visitorsListEmpty) = {
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'visitor-remove-confirmation',
+          id: 'any-more-visitors-remove-visitor-answer',
           mandatory: true,
           type: 'Radio',
           options: [
