@@ -9,10 +9,10 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     value: 'Yes, I usually live here',
   },
   add_or_edit_block: {
-    id: 'what-is-your-name-question',
+    id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
     question: {
-      id: 'primary-person-add-or-edit-question',
+      id: 'what-is-your-name-question',
       type: 'General',
       title: 'What is your name?',
       answers: [
