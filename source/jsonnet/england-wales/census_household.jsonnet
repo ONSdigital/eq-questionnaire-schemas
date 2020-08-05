@@ -158,7 +158,7 @@ function(region_code, census_month_year_date) {
   ],
   hub: {
     enabled: true,
-    required_completed_sections: ['who-lives-here-section', 'relationships-section'],
+    required_completed_sections: ['people-who-live-here-and-overnight-visitors', 'relationships-section'],
   },
   submission: {
     button: 'Submit census',
