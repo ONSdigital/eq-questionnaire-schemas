@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'confirm-age',
+  id: 'confirm-age-question',
   title: title,
   type: 'General',
   answers: [

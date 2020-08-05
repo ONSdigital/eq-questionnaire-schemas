@@ -30,7 +30,7 @@ local anyoneElseAnswerExclusiveText(hasPrimary) = (
 
 local question(hasPrimary) = {
   type: 'MutuallyExclusive',
-  id: 'who-else-lives-here',
+  id: 'who-else-lives-here-question',
   title: questionTitle(hasPrimary),
   definitions: [
     {

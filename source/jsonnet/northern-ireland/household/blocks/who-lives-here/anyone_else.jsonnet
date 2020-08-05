@@ -144,7 +144,7 @@ local question(hasPrimary) = {
 {
   type: 'ListCollectorDrivingQuestion',
   for_list: 'household',
-  id: 'anyone-else-driving-question',
+  id: 'who-else-lives-here',
   question_variants: [
     {
       question: question(hasPrimary=true),
