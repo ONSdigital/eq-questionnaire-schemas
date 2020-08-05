@@ -113,7 +113,7 @@ local editQuestion(questionTitle) = {
   type: 'ListCollector',
   for_list: 'household',
   add_answer: {
-    id: 'anyone-else-answer',
+    id: 'people-living-here-answer',
     value: 'Yes, I want to add {ordinality} person',
   },
   remove_answer: {
@@ -128,7 +128,7 @@ local editQuestion(questionTitle) = {
         title: questionTitle,
         answers: [
           {
-            id: 'anyone-else-answer',
+            id: 'people-living-here-answer',
             mandatory: true,
             type: 'Radio',
             options: [
