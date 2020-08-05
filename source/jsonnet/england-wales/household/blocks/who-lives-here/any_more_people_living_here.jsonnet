@@ -78,11 +78,11 @@ local editQuestion(questionTitle) = {
     value: 'Yes, I need to add someone',
   },
   remove_answer: {
-    id: 'any-more-people-living-here-remove-person-confirmation',
+    id: 'any-more-people-living-here-remove-person-answer',
     value: 'Yes, I want to remove this person',
   },
   question: {
-    id: 'any-more-people-living-here-confirmation-question',
+    id: 'any-more-people-living-here-question',
     type: 'General',
     title: questionTitle,
     guidance: {
