@@ -82,7 +82,7 @@ local editQuestion(questionTitle) = {
     value: 'Yes, I want to remove this person',
   },
   question: {
-    id: 'any-more-people-living-here-question',
+    id: 'any-more-people-living-here-confirmation-question',
     type: 'General',
     title: questionTitle,
     guidance: {
