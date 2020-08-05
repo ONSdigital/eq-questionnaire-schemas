@@ -23,7 +23,7 @@ local addQuestionTitle(listIsEmpty) = (
 );
 
 local addQuestion(listIsEmpty) = {
-  id: 'add-question',
+  id: 'people-living-here-add-person-question',
   type: 'General',
   title: addQuestionTitle(listIsEmpty),
   answers: [
@@ -73,7 +73,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'edit-question',
+  id: 'people-living-here-edit-person-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -117,7 +117,7 @@ local editQuestion(questionTitle) = {
     value: 'Yes, I want to add {ordinality} person',
   },
   remove_answer: {
-    id: 'remove-confirmation',
+    id: 'people-living-here-remove-person-answer',
     value: 'Yes, I want to remove this person',
   },
   question_variants: [
@@ -189,7 +189,7 @@ local editQuestion(questionTitle) = {
     },
   ],
   add_block: {
-    id: 'add-person',
+    id: 'people-living-here-add-person',
     type: 'ListAddQuestion',
     question_variants: [
       {
@@ -203,7 +203,7 @@ local editQuestion(questionTitle) = {
     ],
   },
   edit_block: {
-    id: 'edit-person',
+    id: 'people-living-here-edit-person',
     type: 'ListEditQuestion',
     question_variants: [
       {
@@ -217,7 +217,7 @@ local editQuestion(questionTitle) = {
     ],
   },
   remove_block: {
-    id: 'remove-person',
+    id: 'people-living-here-remove-person',
     type: 'ListRemoveQuestion',
     question: {
       id: 'remove-question',
