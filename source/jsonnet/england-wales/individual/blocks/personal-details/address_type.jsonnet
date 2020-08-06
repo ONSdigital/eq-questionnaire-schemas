@@ -120,7 +120,7 @@ local proxyNonUkAddressTitle = {
       goto: {
         group: 'identity-and-health-group',
         when: [
-          rules.under4,
+          rules.under5,
         ],
       },
     },
