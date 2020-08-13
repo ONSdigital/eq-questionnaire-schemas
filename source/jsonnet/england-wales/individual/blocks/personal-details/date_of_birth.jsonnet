@@ -24,7 +24,7 @@ local question(title) = {
       },
       validation: {
         messages: {
-          MANDATORY_DATE: 'Enter a date of birth to continue',
+          MANDATORY_DATE: 'Enter a date of birth',
         },
       },
     },

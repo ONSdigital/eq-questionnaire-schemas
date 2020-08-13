@@ -15,7 +15,7 @@ local question(title, mandatory) = {
       type: 'Date',
       validation: {
         messages: {
-          MANDATORY_DATE: 'Enter a date of birth to continue',
+          MANDATORY_DATE: 'Enter a date of birth',
         },
       },
       minimum: {

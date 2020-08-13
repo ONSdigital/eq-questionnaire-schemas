@@ -16,7 +16,7 @@ local question(title) = {
       type: 'TextField',
       validation: {
         messages: {
-          MANDATORY_TEXTFIELD: 'Enter a country to continue',
+          MANDATORY_TEXTFIELD: 'Enter a country',
         },
       },
     },
