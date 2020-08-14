@@ -4,10 +4,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   id: 'were-you-usually-living-here',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
-  add_or_edit_answer: {
-    id: 'were-you-usually-living-here-answer',
-    value: 'Yes',
-  },
   add_or_edit_block: {
     id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
@@ -79,6 +75,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           {
             label: 'Yes',
             value: 'Yes',
+            action: {
+              type: 'AddOrEditAnswerForListItem',
+            },
           },
           {
             label: 'No',

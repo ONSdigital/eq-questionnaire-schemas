@@ -11,10 +11,6 @@ local questionTitle = {
   id: 'primary-person-list-collector',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
-  add_or_edit_answer: {
-    id: 'you-live-here-answer',
-    value: 'Yes, I usually live here',
-  },
   add_or_edit_block: {
     id: 'add-or-edit-primary-person',
     type: 'PrimaryPersonListAddOrEditQuestion',
@@ -91,6 +87,9 @@ local questionTitle = {
           {
             label: 'Yes, I usually live here',
             value: 'Yes, I usually live here',
+            action: {
+              type: 'AddOrEditAnswerForListItem',
+            },
           },
           {
             label: 'No, I don’t usually live here',

@@ -49,14 +49,6 @@ local removePersonQuestionTitle = {
   id: 'visitor-list-collector',
   type: 'ListCollector',
   for_list: 'visitors',
-  add_answer: {
-    id: 'visitor-answer',
-    value: 'Yes, I need to add {ordinality} visitor',
-  },
-  remove_answer: {
-    id: 'visitor-remove-confirmation',
-    value: 'Yes, I want to remove this person',
-  },
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
@@ -75,6 +67,9 @@ local removePersonQuestionTitle = {
               ],
             },
             value: 'Yes, I need to add {ordinality} visitor',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: 'No, I do not need to add anyone',
@@ -176,6 +171,9 @@ local removePersonQuestionTitle = {
             {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No, I do not want to remove this person',

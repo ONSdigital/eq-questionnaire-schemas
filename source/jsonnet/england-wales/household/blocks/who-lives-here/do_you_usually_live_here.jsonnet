@@ -4,10 +4,6 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   id: 'do-you-usually-live-here',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
-  add_or_edit_answer: {
-    id: 'do-you-usually-live-here-answer',
-    value: 'Yes, I usually live here',
-  },
   add_or_edit_block: {
     id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
@@ -92,6 +88,9 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           {
             label: 'Yes, I usually live here',
             value: 'Yes, I usually live here',
+            action: {
+              type: 'AddOrEditAnswerForListItem',
+            },
           },
           {
             label: 'No, I don’t usually live here',

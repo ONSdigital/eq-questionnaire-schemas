@@ -5,14 +5,6 @@ local rules = import 'rules.libsonnet';
   id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
-  add_answer: {
-    id: 'visitor-answer',
-    value: 'Yes',
-  },
-  remove_answer: {
-    id: 'visitor-remove-confirmation',
-    value: 'Yes',
-  },
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
@@ -32,6 +24,9 @@ local rules = import 'rules.libsonnet';
           {
             label: 'Yes',
             value: 'Yes',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: 'No',
@@ -160,6 +155,9 @@ local rules = import 'rules.libsonnet';
             {
               label: 'Yes',
               value: 'Yes',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No',

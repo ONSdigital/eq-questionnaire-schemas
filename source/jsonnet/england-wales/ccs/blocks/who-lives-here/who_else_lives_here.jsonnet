@@ -53,14 +53,6 @@ local editQuestion(questionTitle) = {
   id: 'who-else-lives-here',
   type: 'ListCollector',
   for_list: 'household',
-  add_answer: {
-    id: 'anyone-else-answer',
-    value: 'Yes',
-  },
-  remove_answer: {
-    id: 'remove-confirmation',
-    value: 'Yes',
-  },
   question_variants: [
     {
       question: {
@@ -109,6 +101,9 @@ local editQuestion(questionTitle) = {
               {
                 label: 'Yes',
                 value: 'Yes',
+                action: {
+                  type: 'AddAnswerForListItem',
+                },
               },
               {
                 label: 'No',
@@ -169,6 +164,9 @@ local editQuestion(questionTitle) = {
               {
                 label: 'Yes',
                 value: 'Yes',
+                action: {
+                  type: 'AddAnswerForListItem',
+                },
               },
               {
                 label: 'No',
@@ -280,6 +278,9 @@ local editQuestion(questionTitle) = {
             {
               label: 'Yes',
               value: 'Yes',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No',

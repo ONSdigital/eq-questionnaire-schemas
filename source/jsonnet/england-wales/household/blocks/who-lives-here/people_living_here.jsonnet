@@ -112,14 +112,6 @@ local editQuestion(questionTitle) = {
   id: 'people-living-here',
   type: 'ListCollector',
   for_list: 'household',
-  add_answer: {
-    id: 'people-living-here-answer',
-    value: 'Yes, I want to add {ordinality} person',
-  },
-  remove_answer: {
-    id: 'people-living-here-remove-person-answer',
-    value: 'Yes, I want to remove this person',
-  },
   question_variants: [
     {
       question: {
@@ -140,6 +132,9 @@ local editQuestion(questionTitle) = {
                   ],
                 },
                 value: 'Yes, I want to add {ordinality} person',
+                action: {
+                  type: 'AddAnswerForListItem',
+                },
               },
               {
                 label: 'No, no one usually lives here',
@@ -176,6 +171,9 @@ local editQuestion(questionTitle) = {
                   ],
                 },
                 value: 'Yes, I want to add {ordinality} person',
+                action: {
+                  type: 'AddAnswerForListItem',
+                },
               },
               {
                 label: 'No, I do not need to add anyone',
@@ -238,6 +236,9 @@ local editQuestion(questionTitle) = {
             {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No, I don‘t want to remove this person',

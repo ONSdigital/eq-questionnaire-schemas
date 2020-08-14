@@ -73,14 +73,6 @@ local editQuestion(questionTitle) = {
   id: 'any-more-people-living-here',
   type: 'ListCollector',
   for_list: 'household',
-  add_answer: {
-    id: 'any-more-people-living-here-answer',
-    value: 'Yes, I need to add someone',
-  },
-  remove_answer: {
-    id: 'any-more-people-living-here-remove-person-answer',
-    value: 'Yes, I want to remove this person',
-  },
   question: {
     id: 'any-more-people-living-here-question',
     type: 'General',
@@ -122,6 +114,9 @@ local editQuestion(questionTitle) = {
           {
             label: 'Yes, I need to add someone',
             value: 'Yes, I need to add someone',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: {
@@ -237,6 +232,9 @@ local editQuestion(questionTitle) = {
             {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No, I don‘t want to remove this person',

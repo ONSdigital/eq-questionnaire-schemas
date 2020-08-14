@@ -61,14 +61,6 @@ local addQuestion(visitorsListEmpty) = {
   id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
-  add_answer: {
-    id: 'any-more-visitors-answer',
-    value: 'Yes, I need to add {ordinality} visitor',
-  },
-  remove_answer: {
-    id: 'any-more-visitors-remove-visitor-answer',
-    value: 'Yes, I want to remove this person',
-  },
   question: {
     id: 'any-more-visitors-question',
     type: 'General',
@@ -93,6 +85,9 @@ local addQuestion(visitorsListEmpty) = {
               ],
             },
             value: 'Yes, I need to add {ordinality} visitor',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: 'No, I do not need to add anyone',
@@ -184,6 +179,9 @@ local addQuestion(visitorsListEmpty) = {
             {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No, I don‘t want to remove this person',

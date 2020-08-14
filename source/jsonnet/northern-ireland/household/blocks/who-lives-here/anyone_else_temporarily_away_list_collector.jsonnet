@@ -95,14 +95,6 @@ local editQuestion(questionTitle) = {
   id: 'anyone-else-temp-away-list-collector',
   type: 'ListCollector',
   for_list: 'household',
-  add_answer: {
-    id: 'anyone-else-temp-away-answer',
-    value: 'Yes, I need to add someone',
-  },
-  remove_answer: {
-    id: 'anyone-else-temp-away-remove-confirmation',
-    value: 'Yes, I want to remove this person',
-  },
   question: {
     id: 'anyone-else-temp-away-confirmation-question',
     type: 'General',
@@ -145,6 +137,9 @@ local editQuestion(questionTitle) = {
           {
             label: 'Yes, I need to add someone',
             value: 'Yes, I need to add someone',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: {
@@ -250,6 +245,9 @@ local editQuestion(questionTitle) = {
             {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No, I do not want to remove this person',

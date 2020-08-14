@@ -46,14 +46,6 @@ local editQuestion(questionTitle) = {
   id: 'any-more-people-living-here',
   type: 'ListCollector',
   for_list: 'household',
-  add_answer: {
-    id: 'any-more-people-living-here-answer',
-    value: 'Yes',
-  },
-  remove_answer: {
-    id: 'any-more-people-living-here-remove-person-confirmation',
-    value: 'Yes',
-  },
   question: {
     id: 'any-more-people-living-here-confirmation-question',
     type: 'General',
@@ -96,6 +88,9 @@ local editQuestion(questionTitle) = {
           {
             label: 'Yes',
             value: 'Yes',
+            action: {
+              type: 'AddAnswerForListItem',
+            },
           },
           {
             label: 'No',
@@ -171,6 +166,9 @@ local editQuestion(questionTitle) = {
             {
               label: 'Yes',
               value: 'Yes',
+              action: {
+                type: 'RemoveAnswerForListItem',
+              },
             },
             {
               label: 'No',
