@@ -66,7 +66,7 @@ local editQuestion(questionTitle) = {
       type: 'TextField',
       validation: {
         messages: {
-          MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+          MANDATORY_TEXTFIELD: 'Enter a first name',
         },
       },
     },
@@ -83,7 +83,7 @@ local editQuestion(questionTitle) = {
       type: 'TextField',
       validation: {
         messages: {
-          MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+          MANDATORY_TEXTFIELD: 'Enter a last name',
         },
       },
     },
@@ -190,7 +190,7 @@ local editQuestion(questionTitle) = {
           type: 'TextField',
           validation: {
             messages: {
-              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+              MANDATORY_TEXTFIELD: 'Enter a first name',
             },
           },
         },
@@ -207,7 +207,7 @@ local editQuestion(questionTitle) = {
           type: 'TextField',
           validation: {
             messages: {
-              MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+              MANDATORY_TEXTFIELD: 'Enter a last name',
             },
           },
         },

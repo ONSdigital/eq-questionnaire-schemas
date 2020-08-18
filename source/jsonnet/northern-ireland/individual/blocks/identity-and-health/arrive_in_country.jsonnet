@@ -21,7 +21,7 @@ local question(title) = {
       },
       validation: {
         messages: {
-          MANDATORY_DATE: 'Enter date of arrival to continue',
+          MANDATORY_DATE: 'Enter a year of arrival',
         },
       },
     },

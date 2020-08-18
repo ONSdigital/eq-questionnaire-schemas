@@ -19,7 +19,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           type: 'TextField',
           validation: {
             messages: {
-              MANDATORY_TEXTFIELD: 'Enter a first name to continue',
+              MANDATORY_TEXTFIELD: 'Enter a first name',
             },
           },
         },
@@ -36,7 +36,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           type: 'TextField',
           validation: {
             messages: {
-              MANDATORY_TEXTFIELD: 'Enter a last name to continue',
+              MANDATORY_TEXTFIELD: 'Enter a last name',
             },
           },
         },
