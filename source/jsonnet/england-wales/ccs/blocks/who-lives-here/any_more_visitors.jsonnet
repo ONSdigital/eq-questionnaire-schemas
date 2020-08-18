@@ -25,7 +25,7 @@ local rules = import 'rules.libsonnet';
             label: 'Yes',
             value: 'Yes',
             action: {
-              type: 'AddAnswerForListItem',
+              type: 'RedirectToAddBlock',
             },
           },
           {
@@ -156,7 +156,7 @@ local rules = import 'rules.libsonnet';
               label: 'Yes',
               value: 'Yes',
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {

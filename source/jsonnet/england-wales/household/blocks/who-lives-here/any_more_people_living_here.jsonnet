@@ -115,7 +115,7 @@ local editQuestion(questionTitle) = {
             label: 'Yes, I need to add someone',
             value: 'Yes, I need to add someone',
             action: {
-              type: 'AddAnswerForListItem',
+              type: 'RedirectToAddBlock',
             },
           },
           {
@@ -233,7 +233,7 @@ local editQuestion(questionTitle) = {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {

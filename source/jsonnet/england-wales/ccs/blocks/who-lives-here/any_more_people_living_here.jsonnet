@@ -89,7 +89,7 @@ local editQuestion(questionTitle) = {
             label: 'Yes',
             value: 'Yes',
             action: {
-              type: 'AddAnswerForListItem',
+              type: 'RedirectToAddBlock',
             },
           },
           {
@@ -167,7 +167,7 @@ local editQuestion(questionTitle) = {
               label: 'Yes',
               value: 'Yes',
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {

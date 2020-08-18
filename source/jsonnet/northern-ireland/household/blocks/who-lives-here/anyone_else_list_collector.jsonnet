@@ -133,7 +133,7 @@ local editQuestion(questionTitle) = {
                 },
                 value: 'Yes, I want to add {ordinality} person',
                 action: {
-                  type: 'AddAnswerForListItem',
+                  type: 'RedirectToAddBlock',
                 },
               },
               {
@@ -172,7 +172,7 @@ local editQuestion(questionTitle) = {
                 },
                 value: 'Yes, I want to add {ordinality} person',
                 action: {
-                  type: 'AddAnswerForListItem',
+                  type: 'RedirectToAddBlock',
                 },
               },
               {
@@ -238,7 +238,7 @@ local editQuestion(questionTitle) = {
               value: 'Yes, I want to remove this person',
 
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {

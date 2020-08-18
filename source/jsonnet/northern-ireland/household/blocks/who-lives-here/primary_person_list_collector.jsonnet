@@ -88,7 +88,7 @@ local questionTitle = {
             label: 'Yes, I usually live here',
             value: 'Yes, I usually live here',
             action: {
-              type: 'AddOrEditAnswerForListItem',
+              type: 'RedirectToAddOrEditBlock',
             },
           },
           {

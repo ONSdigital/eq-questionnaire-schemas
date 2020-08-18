@@ -86,7 +86,7 @@ local addQuestion(visitorsListEmpty) = {
             },
             value: 'Yes, I need to add {ordinality} visitor',
             action: {
-              type: 'AddAnswerForListItem',
+              type: 'RedirectToAddBlock',
             },
           },
           {
@@ -180,7 +180,7 @@ local addQuestion(visitorsListEmpty) = {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {

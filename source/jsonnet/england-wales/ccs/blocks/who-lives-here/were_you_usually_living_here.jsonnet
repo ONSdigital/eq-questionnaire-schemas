@@ -76,7 +76,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             label: 'Yes',
             value: 'Yes',
             action: {
-              type: 'AddOrEditAnswerForListItem',
+              type: 'RedirectToAddOrEditBlock',
             },
           },
           {

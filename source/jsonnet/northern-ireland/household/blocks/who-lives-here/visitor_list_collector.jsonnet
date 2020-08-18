@@ -68,7 +68,7 @@ local removePersonQuestionTitle = {
             },
             value: 'Yes, I need to add {ordinality} visitor',
             action: {
-              type: 'AddAnswerForListItem',
+              type: 'RedirectToAddBlock',
             },
           },
           {
@@ -172,7 +172,7 @@ local removePersonQuestionTitle = {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
               action: {
-                type: 'RemoveAnswerForListItem',
+                type: 'RedirectToRemoveBlock',
               },
             },
             {
