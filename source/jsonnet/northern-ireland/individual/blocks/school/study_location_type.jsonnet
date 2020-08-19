@@ -78,7 +78,7 @@ local proxyDescriptionStudy = {
         when: [
           {
             id: 'study-location-type-answer',
-            condition: 'equals',
+            condition: 'equals any',
             values: [
               'At or from home',
             ],
