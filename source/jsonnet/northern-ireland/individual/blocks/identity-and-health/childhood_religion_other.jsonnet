@@ -4,13 +4,6 @@ local rules = import 'rules.libsonnet';
 local question(title) = {
   id: 'childhood-religion-other-question',
   title: title,
-  guidance: {
-    contents: [
-      {
-        description: 'This question is <strong>voluntary</strong>',
-      },
-    ],
-  },
   type: 'General',
   answers: [
     {
