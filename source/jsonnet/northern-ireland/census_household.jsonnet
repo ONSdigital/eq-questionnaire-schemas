@@ -44,6 +44,7 @@ local address_one_year_ago = import 'individual/blocks/identity-and-health/addre
 local address_one_year_ago_outside_uk = import 'individual/blocks/identity-and-health/address_one_year_ago_outside_uk.jsonnet';
 local arrive_in_country = import 'individual/blocks/identity-and-health/arrive_in_country.jsonnet';
 local childhood_religion = import 'individual/blocks/identity-and-health/childhood_religion.jsonnet';
+local childhood_religion_other = import 'individual/blocks/identity-and-health/childhood_religion_other.jsonnet';
 local country_of_birth = import 'individual/blocks/identity-and-health/country_of_birth.jsonnet';
 local country_of_birth_elsewhere = import 'individual/blocks/identity-and-health/country_of_birth_elsewhere.jsonnet';
 local ethnic_group = import 'individual/blocks/identity-and-health/ethnic_group.jsonnet';
@@ -55,7 +56,6 @@ local health_conditions_or_illnesses_limitations = import 'individual/blocks/ide
 local look_after_or_support_others = import 'individual/blocks/identity-and-health/look_after_or_support_others.jsonnet';
 local language = import 'individual/blocks/identity-and-health/main_language.jsonnet';
 local national_identity = import 'individual/blocks/identity-and-health/national_identity.jsonnet';
-local no_religion_other = import 'individual/blocks/identity-and-health/no_religion_other.jsonnet';
 local other_health_conditions = import 'individual/blocks/identity-and-health/other_health_conditions.jsonnet';
 local other_main_language = import 'individual/blocks/identity-and-health/other_main_language.jsonnet';
 local other_national_identities = import 'individual/blocks/identity-and-health/other_national_identities.jsonnet';
@@ -345,7 +345,7 @@ function(region_code) {
             religion,
             religion_other,
             childhood_religion,
-            no_religion_other,
+            childhood_religion_other,
             language,
             other_main_language,
             speak_english,
