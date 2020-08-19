@@ -79,7 +79,7 @@ local proxyDescriptionStudy = {
           {
             id: 'study-location-type-answer',
             condition: 'equals',
-            values: 'At or from home',
+            value: 'At or from home',
           },
         ],
       },
