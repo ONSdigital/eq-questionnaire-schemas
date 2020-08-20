@@ -27,17 +27,17 @@ local question(title, anotherCountry) = {
   ],
 };
 
-local nonProxyTitle = 'Is your main place of <em>work</em> in <em>the UK</em>?';
+local nonProxyTitle = 'Is your main place of <em>work</em> in the UK?';
 local proxyTitle = {
-  text: 'Is <em>{person_name_possessive}</em> main place of <em>work</em> in <em>the UK</em>?',
+  text: 'Is <em>{person_name_possessive}</em> main place of <em>work</em> in the UK?',
   placeholders: [
     placeholders.personNamePossessive,
   ],
 };
 
-local pastNonProxyTitle = 'Was your main place of <em>work</em> in <em>the UK</em>?';
+local pastNonProxyTitle = 'Was your main place of <em>work</em> in the UK?';
 local pastProxyTitle = {
-  text: 'Was <em>{person_name_possessive}</em> main place of <em>work</em> in <em>the UK</em>?',
+  text: 'Was <em>{person_name_possessive}</em> main place of <em>work</em> in the UK?',
   placeholders: [
     placeholders.personNamePossessive,
   ],

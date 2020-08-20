@@ -2,19 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'no-religion-other-question',
+  id: 'childhood-religion-other-question',
   title: title,
-  guidance: {
-    contents: [
-      {
-        description: 'This question is <strong>voluntary</strong>',
-      },
-    ],
-  },
   type: 'General',
   answers: [
     {
-      id: 'no-religion-other-answer',
+      id: 'childhood-religion-other-answer',
       label: 'Religion',
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
@@ -27,7 +20,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'no-religion-other',
+  id: 'childhood-religion-other',
   question_variants: [
     {
       question: question('You selected “Other”. What religion, religious denomination were you brought up in?'),
