@@ -246,7 +246,7 @@ local editQuestion(questionTitle) = {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
               action: {
-                type: 'RedirectToRemoveBlock',
+                type: 'RemoveAnswersForListItem',
               },
             },
             {
