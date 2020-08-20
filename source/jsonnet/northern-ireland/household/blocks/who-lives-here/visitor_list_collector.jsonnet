@@ -172,7 +172,7 @@ local removePersonQuestionTitle = {
               label: 'Yes, I want to remove this person',
               value: 'Yes, I want to remove this person',
               action: {
-                type: 'RemoveAnswersForListItem',
+                type: 'RemoveListItemAndAnswers',
               },
             },
             {

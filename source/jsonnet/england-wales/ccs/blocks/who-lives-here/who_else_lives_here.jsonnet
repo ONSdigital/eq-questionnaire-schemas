@@ -279,7 +279,7 @@ local editQuestion(questionTitle) = {
               label: 'Yes',
               value: 'Yes',
               action: {
-                type: 'RemoveAnswersForListItem',
+                type: 'RemoveListItemAndAnswers',
               },
             },
             {

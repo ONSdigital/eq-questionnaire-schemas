@@ -238,7 +238,7 @@ local editQuestion(questionTitle) = {
               value: 'Yes, I want to remove this person',
 
               action: {
-                type: 'RemoveAnswersForListItem',
+                type: 'RemoveListItemAndAnswers',
               },
             },
             {

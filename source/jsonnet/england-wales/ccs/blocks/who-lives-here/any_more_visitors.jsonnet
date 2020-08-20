@@ -156,7 +156,7 @@ local rules = import 'rules.libsonnet';
               label: 'Yes',
               value: 'Yes',
               action: {
-                type: 'RemoveAnswersForListItem',
+                type: 'RemoveListItemAndAnswers',
               },
             },
             {
