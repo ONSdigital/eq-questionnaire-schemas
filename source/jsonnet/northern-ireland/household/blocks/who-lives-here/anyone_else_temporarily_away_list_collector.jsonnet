@@ -138,7 +138,7 @@ local editQuestion(questionTitle) = {
             label: 'Yes, I need to add someone',
             value: 'Yes, I need to add someone',
             action: {
-              type: 'RedirectToAddBlock',
+              type: 'RedirectToListAddBlock',
             },
           },
           {

@@ -89,7 +89,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
             label: 'Yes, I usually live here',
             value: 'Yes, I usually live here',
             action: {
-              type: 'RedirectToAddOrEditBlock',
+              type: 'RedirectToListAddBlock',
             },
           },
           {

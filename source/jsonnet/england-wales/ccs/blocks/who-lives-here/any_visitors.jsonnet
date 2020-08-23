@@ -80,7 +80,7 @@ local question(livesAtHouseholdAddress) = {
           label: '1 or more',
           value: '1 or more',
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-visitor',
               list_name: 'visitors',

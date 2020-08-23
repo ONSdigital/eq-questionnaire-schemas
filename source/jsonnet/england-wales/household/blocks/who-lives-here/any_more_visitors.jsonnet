@@ -86,7 +86,7 @@ local addQuestion(visitorsListEmpty) = {
             },
             value: 'Yes, I need to add {ordinality} visitor',
             action: {
-              type: 'RedirectToAddBlock',
+              type: 'RedirectToListAddBlock',
             },
           },
           {

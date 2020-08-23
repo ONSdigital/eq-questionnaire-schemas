@@ -23,7 +23,7 @@ local rules = import 'rules.libsonnet';
             label: 'OK, understood',
             value: 'OK, understood',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'add-person',
                 list_name: 'household',

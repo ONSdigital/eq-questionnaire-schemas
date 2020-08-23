@@ -77,7 +77,7 @@ local question(hasPrimary) = {
             ],
           },
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-person',
               list_name: 'household',
@@ -88,7 +88,7 @@ local question(hasPrimary) = {
           label: 'Housemates, tenants or lodgers',
           value: 'Housemates, tenants or lodgers',
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-person',
               list_name: 'household',
@@ -99,7 +99,7 @@ local question(hasPrimary) = {
           label: 'People who usually live outside the UK who are staying in the UK for 3 months or more',
           value: 'People who usually live outside the UK who are staying in the UK for 3 months or more',
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-person',
               list_name: 'household',
@@ -111,7 +111,7 @@ local question(hasPrimary) = {
           value: 'People temporarily away',
           description: 'For example, working away, on holiday, in the armed forces, living in an establishment such as a care home for up to 6 months, abroad for up to a year',
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-person',
               list_name: 'household',
@@ -123,7 +123,7 @@ local question(hasPrimary) = {
           value: 'People staying temporarily who usually live in the UK but do not have another UK address',
           description: 'For example, UK residents between addresses or currently without a home',
           action: {
-            type: 'RedirectToListAddQuestion',
+            type: 'RedirectToListAddBlock',
             params: {
               block_id: 'add-person',
               list_name: 'household',

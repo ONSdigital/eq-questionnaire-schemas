@@ -36,7 +36,7 @@ local exclusiveAnswerText = {
             label: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
             value: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'add-visitor',
                 list_name: 'visitors',
@@ -47,7 +47,7 @@ local exclusiveAnswerText = {
             label: 'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
             value: 'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'add-visitor',
                 list_name: 'visitors',
@@ -58,7 +58,7 @@ local exclusiveAnswerText = {
             label: 'People who usually live outside the UK who are staying in the UK for less than three months',
             value: 'People who usually live outside the UK who are staying in the UK for less than three months',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'add-visitor',
                 list_name: 'visitors',
@@ -69,7 +69,7 @@ local exclusiveAnswerText = {
             label: 'People here on holiday',
             value: 'People here on holiday',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'add-visitor',
                 list_name: 'visitors',

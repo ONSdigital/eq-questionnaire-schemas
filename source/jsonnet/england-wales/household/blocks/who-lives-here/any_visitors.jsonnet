@@ -29,7 +29,7 @@ local rules = import 'rules.libsonnet';
             label: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
             value: 'People who usually live somewhere else in the UK, for example, boyfriends, girlfriends, friends or relatives',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
@@ -40,7 +40,7 @@ local rules = import 'rules.libsonnet';
             label: 'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
             value: 'People staying here because it is their second address, for example, for work. Their permanent or family home is elsewhere',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
@@ -51,7 +51,7 @@ local rules = import 'rules.libsonnet';
             label: 'People who usually live outside the UK who are staying in the UK for less than 3 months',
             value: 'People who usually live outside the UK who are staying in the UK for less than 3 months',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',
@@ -62,7 +62,7 @@ local rules = import 'rules.libsonnet';
             label: 'People here on holiday',
             value: 'People here on holiday',
             action: {
-              type: 'RedirectToListAddQuestion',
+              type: 'RedirectToListAddBlock',
               params: {
                 block_id: 'any-more-visitors-add-visitor',
                 list_name: 'visitors',

@@ -133,7 +133,7 @@ local editQuestion(questionTitle) = {
                 },
                 value: 'Yes, I want to add {ordinality} person',
                 action: {
-                  type: 'RedirectToAddBlock',
+                  type: 'RedirectToListAddBlock',
                 },
               },
               {
@@ -172,7 +172,7 @@ local editQuestion(questionTitle) = {
                 },
                 value: 'Yes, I want to add {ordinality} person',
                 action: {
-                  type: 'RedirectToAddBlock',
+                  type: 'RedirectToListAddBlock',
                 },
               },
               {
