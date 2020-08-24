@@ -11,7 +11,7 @@ local question(title) = {
   answers: [
     {
       id: 'arrive-in-uk-answer',
-      mandatory: true,
+      mandatory: false,
       type: 'MonthYearDate',
       minimum: {
         value: {
