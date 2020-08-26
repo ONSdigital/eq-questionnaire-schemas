@@ -1,13 +1,6 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local questionTitle = {
-  text: 'Does anyone usually live at {household_address}?',
-  placeholders: [
-    placeholders.address,
-  ],
-};
-
 local addQuestionTitle(listIsEmpty) = (
   if listIsEmpty then {
     text: 'Who lives at {household_address}?',
@@ -72,10 +65,15 @@ local nonPrimaryEditPersonQuestionTitle = {
   ],
 };
 
-local editQuestion(questionTitle) = {
+local editQuestion() = {
   id: 'edit-question',
   type: 'General',
-  title: questionTitle,
+  title: {
+    text: 'Does anyone usually live at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  },
   answers: [
     {
       id: 'first-name',
@@ -117,7 +115,12 @@ local editQuestion(questionTitle) = {
       question: {
         type: 'General',
         id: 'anyone-usually-live-at-question',
-        title: questionTitle,
+        title: {
+          text: 'Does anyone live at {household_address}?',
+          placeholders: [
+            placeholders.address,
+          ],
+        },
         answers: [
           {
             id: 'anyone-else-answer',
@@ -125,21 +128,15 @@ local editQuestion(questionTitle) = {
             type: 'Radio',
             options: [
               {
-                label: {
-                  text: 'Yes, I want to add {ordinality} person',
-                  placeholders: [
-                    placeholders.getListOrdinality('household'),
-                  ],
-                },
-                value: 'Yes, I want to add {ordinality} person',
+                label: 'Yes, I need to add a person',
+                value: 'Yes, I need to add a person',
                 action: {
                   type: 'RedirectToListAddBlock',
                 },
               },
               {
-                label: 'No, no one usually lives here',
-                value: 'No, no one usually lives here',
-                description: 'For example, this is a second address or holiday home',
+                label: 'No, I do not need to add anyone',
+                value: 'No, I do not need to add anyone',
               },
             ],
           },
