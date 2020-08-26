@@ -65,15 +65,10 @@ local nonPrimaryEditPersonQuestionTitle = {
   ],
 };
 
-local editQuestion() = {
+local editQuestion(questionTitle) = {
   id: 'edit-question',
   type: 'General',
-  title: {
-    text: 'Does anyone usually live at {household_address}?',
-    placeholders: [
-      placeholders.address,
-    ],
-  },
+  title: questionTitle,
   answers: [
     {
       id: 'first-name',
