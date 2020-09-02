@@ -12,7 +12,7 @@ local question(title) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: true,
-      ssuggestions_url: {
+      suggestions_url: {
         text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/gb/{language_code}/countries-of-birth.json',
         placeholders: [
           placeholders.languageCode,
