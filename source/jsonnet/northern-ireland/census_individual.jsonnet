@@ -110,6 +110,10 @@ function(region_code) {
       name: 'display_address',
       type: 'string',
     },
+    {
+      name: 'language_code',
+      type: 'string',
+    },
   ],
   sections: [
     {

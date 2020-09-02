@@ -175,6 +175,7 @@ local firstPersonNamePossessiveForList(listName) = {
     }],
   },
   languageCode: {
+    placeholder: 'language_code',
     value: {
       identifier: 'language_code',
       source: 'metadata',

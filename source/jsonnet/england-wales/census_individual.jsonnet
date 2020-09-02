@@ -121,6 +121,10 @@ function(region_code, census_month_year_date) {
       name: 'display_address',
       type: 'string',
     },
+    {
+      name: 'language_code',
+      type: 'string',
+    },
   ],
   sections: [
     {
