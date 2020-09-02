@@ -81,6 +81,22 @@ local firstPersonNamePossessiveForList(listName) = {
     },
   ],
 };
+local suggestionsUrl(listName) = {
+  placeholder: 'suggestions_url',
+  transforms: [
+    {
+      transform: 'get_nisra_suggestions_url',
+      arguments: {
+        url: {
+          value: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/ni/en/',
+        },
+        list_json: {
+          value: listName,
+        },
+      },
+    },
+  ],
+};
 {
   personName: {
     placeholder: 'person_name',
@@ -198,6 +214,7 @@ local firstPersonNamePossessiveForList(listName) = {
       },
     ],
   },
+  suggestionsUrl: suggestionsUrl,
   getListOrdinality: getListOrdinality,
   getListCardinality: getListCardinality,
   firstPersonNameForList: firstPersonNameForList,

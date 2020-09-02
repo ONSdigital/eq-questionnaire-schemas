@@ -12,7 +12,12 @@ local question(title) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/ethnic-groups.json',
+      suggestions_url: {
+        text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/gb/{language_code}/ethnic-groups.json',
+        placeholders: [
+          placeholders.languageCode,
+        ],
+      },
       type: 'TextField',
     },
   ],

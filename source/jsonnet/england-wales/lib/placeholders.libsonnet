@@ -174,6 +174,12 @@ local firstPersonNamePossessiveForList(listName) = {
       },
     }],
   },
+  languageCode: {
+    value: {
+      identifier: 'language_code',
+      source: 'metadata',
+    },
+  },
   getListOrdinality: getListOrdinality,
   getListOrdinalityWithoutDeterminer: getListOrdinalityWithoutDeterminer,
   getListCardinality: getListCardinality,

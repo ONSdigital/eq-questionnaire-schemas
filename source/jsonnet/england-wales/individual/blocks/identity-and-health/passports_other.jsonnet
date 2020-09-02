@@ -19,7 +19,12 @@ local question(title, guidance) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/passport-countries.json',
+      suggestions_url: {
+        text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/gb/{language_code}/passport-countries.json',
+        placeholders: [
+          placeholders.languageCode,
+        ],
+      },
       type: 'TextField',
     },
   ],

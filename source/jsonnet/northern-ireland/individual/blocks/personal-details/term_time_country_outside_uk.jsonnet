@@ -1,6 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local listName = 'countries-of-birth.json';
+
+local suggestionsUrl = {
+  text: '{suggestions_url}',
+  placeholders: [placeholders.suggestionsUrl(listName)],
+};
+
 local question(title) = {
   id: 'term-time-country-outside-uk-question',
   title: title,
@@ -10,7 +17,7 @@ local question(title) = {
       id: 'term-time-country-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/countries-of-birth.json',
+      suggestions_url: suggestionsUrl,
       mandatory: false,
       type: 'TextField',
     },

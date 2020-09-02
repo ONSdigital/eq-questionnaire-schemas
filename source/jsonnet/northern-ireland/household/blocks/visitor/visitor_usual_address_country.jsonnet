@@ -1,6 +1,12 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local listName = 'countries-of-birth.json';
+
+local suggestionsUrl = {
+  text: '{suggestions_url}',
+  placeholders: [placeholders.suggestionsUrl(listName)],
+};
 
 {
   type: 'Question',
@@ -20,7 +26,7 @@ local rules = import 'rules.libsonnet';
         label: 'Current name of country',
         description: 'Enter your own answer or select from suggestions',
         mandatory: false,
-        suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/countries-of-birth.json',
+        suggestions_url: suggestionsUrl,
         type: 'TextField',
         max_length: 100,
       },

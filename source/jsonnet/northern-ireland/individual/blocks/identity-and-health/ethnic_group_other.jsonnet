@@ -1,6 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
+local listName = 'ethnic-groups.json';
+
+local suggestionsUrl = {
+  text: '{suggestions_url}',
+  placeholders: [placeholders.suggestionsUrl(listName)],
+};
+
 local question(title) = {
   id: 'ethnic-group-other-question',
   title: title,
@@ -12,7 +19,7 @@ local question(title) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/ethnic-groups.json',
+      suggestions_url: suggestionsUrl,
       type: 'TextField',
     },
   ],
