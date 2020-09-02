@@ -85,7 +85,7 @@ local suggestionsUrl(listName) = {
   placeholder: 'suggestions_url',
   transforms: [
     {
-      transform: 'get_nisra_suggestions_url',
+      transform: 'format_suggestions_url',
       arguments: {
         url: {
           value: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/ni/en/',
