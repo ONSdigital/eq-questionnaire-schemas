@@ -88,7 +88,7 @@ local suggestionsUrl(listName) = {
       transform: 'format_suggestions_url',
       arguments: {
         url: {
-          value: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/ni/en/',
+          value: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/ni/en/',
         },
         list_json: {
           value: listName,

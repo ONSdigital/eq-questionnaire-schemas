@@ -20,7 +20,7 @@ local question(title, guidance) = {
       max_length: 100,
       mandatory: false,
       suggestions_url: {
-        text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/gb/{language_code}/national-identities.json',
+        text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/gb/{language_code}/national-identities.json',
         placeholders: [
           placeholders.languageCode,
         ],

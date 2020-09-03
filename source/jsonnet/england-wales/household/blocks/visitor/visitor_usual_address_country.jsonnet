@@ -22,7 +22,7 @@ local rules = import 'rules.libsonnet';
         description: 'Enter your own answer or select from suggestions',
         mandatory: false,
         suggestions_url: {
-          text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v3.0.0/gb/{language_code}/countries-of-birth.json',
+          text: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/gb/{language_code}/countries-of-birth.json',
           placeholders: [
             placeholders.languageCode,
           ],
