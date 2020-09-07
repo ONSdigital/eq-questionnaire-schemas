@@ -1,63 +1,34 @@
 import json
-from jsonpointer import set_pointer
-
-ENG_WLS_ADDRESS = "https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/gb/"
-NI_ADDRESS = "https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/ni/"
+from jsonpointer import resolve_pointer, set_pointer
 
 
-def resolve_question(
-    data, block, section_index, group_index, block_index, url_address, language
-):
-    for answer_index, answer in enumerate(block["question"]["answers"]):
-        if "suggestions_url" in answer:
-            set_pointer(
-                data,
-                f"/sections/{section_index}/groups/{group_index}/blocks/{block_index}/question/answers/{answer_index}"
-                f"/suggestions_url",
-                "{}{}{}".format(url_address, language, answer["suggestions_url"]),
+def find_pointers_containing(input_data, search_key, pointer=None):
+    if isinstance(input_data, dict):
+        if pointer and search_key in input_data:
+            yield pointer
+        for k, v in input_data.items():
+            yield from find_pointers_containing(
+                v, search_key, f"{pointer}/{k}" if pointer else f"/{k}"
             )
+    elif isinstance(input_data, list):
+        for index, item in enumerate(input_data):
+            yield from find_pointers_containing(item, search_key, f"{pointer}/{index}")
 
 
-def resolve_question_variants(
-    data, block, section_index, group_index, block_index, url_address, language
-):
-    for variant_index, question_variant in enumerate(block["question_variants"]):
-        for answer_index, answer in enumerate(question_variant["question"]["answers"]):
-            if "suggestions_url" in answer:
-                set_pointer(
-                    data,
-                    f"/sections/{section_index}/groups/{group_index}/blocks/{block_index}/question_variants/"
-                    f"{variant_index}/question/answers/{answer_index}/suggestions_url",
-                    "{}{}{}".format(url_address, language, answer["suggestions_url"]),
-                )
-
-
-def resolve_schema(schema_address, url_address, language):
+def resolve_schema(schema_address, language=None):
     with open(schema_address, "r+") as file:
         data = json.load(file)
-        for section_index, section in enumerate(data["sections"]):
-            for group_index, group in enumerate(section["groups"]):
-                for block_index, block in enumerate(group["blocks"]):
-                    if "question" in block:
-                        resolve_question(
-                            data,
-                            block,
-                            section_index,
-                            group_index,
-                            block_index,
-                            url_address,
-                            language,
-                        )
-                    elif "question_variants" in block:
-                        resolve_question_variants(
-                            data,
-                            block,
-                            section_index,
-                            group_index,
-                            block_index,
-                            url_address,
-                            language,
-                        )
+        pointer_iterator = find_pointers_containing(data, "suggestions_url")
+        for pointer in pointer_iterator:
+            address = resolve_pointer(data, "{}{}".format(pointer, "/suggestions_url"))
+            if language:
+                set_pointer(
+                    data,
+                    "{}{}".format(pointer, "/suggestions_url"),
+                    address.replace("{language_code}", language),
+                )
+            else:
+                set_pointer(data, "{}{}".format(pointer, "/suggestions_url"), "")
         file.seek(0)
         json.dump(data, file, indent=4)
 
@@ -69,13 +40,15 @@ gb_en = [
     "census_individual_gb_wls.json",
 ]
 gb_cy = ["census_household_gb_wls.json", "census_individual_gb_wls.json"]
-ni_en = ["census_household_gb_nir.json", "census_individual_gb_nir.json"]
+ni = ["census_household_gb_nir.json", "census_individual_gb_nir.json"]
 
 for schema in gb_en:
-    resolve_schema(f"schemas/en/{schema}", ENG_WLS_ADDRESS, "en/")
+    resolve_schema(f"schemas/en/{schema}", "en")
 
 for schema in gb_cy:
-    resolve_schema(f"schemas/cy/{schema}", ENG_WLS_ADDRESS, "cy/")
+    resolve_schema(f"schemas/cy/{schema}", "cy")
 
-for schema in ni_en:
-    resolve_schema(f"schemas/en/{schema}", NI_ADDRESS, "en/")
+for schema in ni:
+    resolve_schema(f"schemas/en/{schema}", "en")
+    resolve_schema(f"schemas/eo/{schema}")
+    resolve_schema(f"schemas/ga/{schema}")
