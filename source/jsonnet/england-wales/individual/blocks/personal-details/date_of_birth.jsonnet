@@ -15,8 +15,8 @@ local question(title) = {
         value: std.extVar('census_date'),
         offset_by: {
           years: -115,
-          months: -2,
-          days: -20,
+          months: -11,
+          days: -30,
         },
       },
       maximum: {
