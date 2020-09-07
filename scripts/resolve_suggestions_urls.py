@@ -25,7 +25,7 @@ def resolve_schema(schema_address, language=None):
                 set_pointer(
                     data,
                     "{}{}".format(pointer, "/suggestions_url"),
-                    address.replace("{language_code}", language),
+                    address.format(language_code=language),
                 )
             else:
                 set_pointer(data, "{}{}".format(pointer, "/suggestions_url"), "")
