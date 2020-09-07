@@ -12,7 +12,7 @@ local question(title) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0/gb/{language_code}/languages.json',
+      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/{version}/gb/{language_code}/languages.json',
       type: 'TextField',
     },
   ],

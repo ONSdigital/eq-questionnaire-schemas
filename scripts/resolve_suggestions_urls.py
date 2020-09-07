@@ -1,6 +1,8 @@
 import json
 from jsonpointer import resolve_pointer, set_pointer
 
+VERSION = "v4.0.0"
+
 
 def find_pointers_containing(input_data, search_key, pointer=None):
     if isinstance(input_data, dict):
@@ -15,7 +17,7 @@ def find_pointers_containing(input_data, search_key, pointer=None):
             yield from find_pointers_containing(item, search_key, f"{pointer}/{index}")
 
 
-def resolve_schema(schema_address, language=None):
+def resolve_schema(schema_address, version=None, language=None):
     with open(schema_address, "r+") as file:
         data = json.load(file)
         pointer_iterator = find_pointers_containing(data, "suggestions_url")
@@ -25,7 +27,7 @@ def resolve_schema(schema_address, language=None):
                 set_pointer(
                     data,
                     "{}{}".format(pointer, "/suggestions_url"),
-                    address.format(language_code=language),
+                    address.format(version=version, language_code=language),
                 )
             else:
                 set_pointer(data, "{}{}".format(pointer, "/suggestions_url"), "")
@@ -42,13 +44,15 @@ gb_en = [
 gb_cy = ["census_household_gb_wls.json", "census_individual_gb_wls.json"]
 ni = ["census_household_gb_nir.json", "census_individual_gb_nir.json"]
 
-for schema in gb_en:
-    resolve_schema(f"schemas/en/{schema}", "en")
+if __name__ == '__main__':
 
-for schema in gb_cy:
-    resolve_schema(f"schemas/cy/{schema}", "cy")
+    for schema in gb_en:
+        resolve_schema(f"schemas/en/{schema}", VERSION, "en")
 
-for schema in ni:
-    resolve_schema(f"schemas/en/{schema}", "en")
-    resolve_schema(f"schemas/eo/{schema}")
-    resolve_schema(f"schemas/ga/{schema}")
+    for schema in gb_cy:
+        resolve_schema(f"schemas/cy/{schema}", VERSION, "cy")
+
+    for schema in ni:
+        resolve_schema(f"schemas/en/{schema}", VERSION, "en")
+        resolve_schema(f"schemas/eo/{schema}")
+        resolve_schema(f"schemas/ga/{schema}")
