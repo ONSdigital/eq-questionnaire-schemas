@@ -10,7 +10,7 @@ local question(title) = {
       id: 'term-time-country-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
-      suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/countries-of-birth.json',
+      suggestions_url: 'countries-of-birth.json',
       mandatory: false,
       type: 'TextField',
     },

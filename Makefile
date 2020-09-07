@@ -4,7 +4,7 @@ clean:
 build-schemas:
 	./scripts/build_schemas.sh
 
-build: build-schemas translate-schemas
+build: build-schemas translate-schemas resolve-suggestion-urls
 
 run-validator:
 	./scripts/run_validator.sh
@@ -29,3 +29,6 @@ translation-templates: eq-translations-check
 
 test-translation-templates: eq-translations-check
 	pipenv run python -m scripts.extract_translation_templates --test
+
+resolve-suggestion-urls:
+	pipenv run python -m scripts.resolve_suggestions_urls
