@@ -23,6 +23,33 @@ jobs:
         with:
           name: schemas
           path: schemas
+  test-translation-templates:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Download built schemas
+        uses: actions/download-artifact@v1
+        with:
+          name: schemas
+      - name: Install pipenv
+        run: pip install pipenv==2018.11.26
+      - run: |
+          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+      - name: Cache virtualenv
+        id: cache-virtualenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs/
+          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
+      - name: Install virtual environment
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        run: pipenv install --dev
+      - name: Test translation templates
+        run: make test-translation-templates
   translate-schemas:
     needs: build
     runs-on: ubuntu-latest
@@ -87,33 +114,6 @@ jobs:
           with:
             name: schemas
             path: schemas
-  test-translation-templates:
-    needs: resolve-suggestions-urls
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: Download built schemas
-        uses: actions/download-artifact@v1
-        with:
-          name: schemas
-      - name: Install pipenv
-        run: pip install pipenv==2018.11.26
-      - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
-      - name: Cache virtualenv
-        id: cache-virtualenv
-        uses: actions/cache@v1
-        with:
-          path: ~/.local/share/virtualenvs/
-          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
-      - name: Install virtual environment
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-        run: pipenv install --dev
-      - name: Test translation templates
-        run: make test-translation-templates
   validate-schemas:
     needs: resolve-suggestions-urls
     runs-on: ubuntu-latest
