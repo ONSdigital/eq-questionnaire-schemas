@@ -80,7 +80,7 @@ jobs:
       - name: Archive schema artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: schemas
+          name: translated
           path: schemas
   resolve-suggestions-urls:
     needs: translate-schemas
@@ -93,7 +93,7 @@ jobs:
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
-          name: schemas
+          name: translated
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
@@ -112,7 +112,7 @@ jobs:
       - name: Archive schema artifacts
           uses: actions/upload-artifact@v1
           with:
-            name: schemas
+            name: resolved
             path: schemas
   validate-schemas:
     needs: resolve-suggestions-urls
@@ -122,7 +122,7 @@ jobs:
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
-          name: schemas
+          name: resolved
       - run: make run-validator
       - name: Validate schemas
         run: make validate-schemas
@@ -134,7 +134,7 @@ jobs:
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
-          name: schemas
+          name: resolved
       - name: Authenticate With Google Cloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
