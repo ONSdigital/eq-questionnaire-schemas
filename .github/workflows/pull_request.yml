@@ -110,10 +110,10 @@ jobs:
       - name: Resolve suggesions urls
         run: make resolve-suggestions-urls
       - name: Archive schema artifacts
-          uses: actions/upload-artifact@v1
-          with:
-            name: resolved
-            path: schemas
+        uses: actions/upload-artifact@v1
+        with:
+          name: resolved
+          path: schemas
   validate-schemas:
     needs: resolve-suggestions-urls
     runs-on: ubuntu-latest
