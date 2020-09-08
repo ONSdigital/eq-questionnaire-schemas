@@ -52,20 +52,20 @@ if __name__ == "__main__":
 
     for schema in gb_en:
         resolve_schema(
-            f"./schemas/en/{schema}",
+            f"schemas/en/{schema}",
             SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="en"),
         )
 
     for schema in gb_cy:
         resolve_schema(
-            f"./schemas/cy/{schema}",
+            f"schemas/cy/{schema}",
             SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="cy"),
         )
 
     for schema in ni:
         resolve_schema(
-            f"./schemas/en/{schema}",
+            f"schemas/en/{schema}",
             SUGGESTIONS_API_URL.format(version=VERSION, region="ni", language="en"),
         )
-        resolve_schema(f"./schemas/eo/{schema}")
-        resolve_schema(f"./schemas/ga/{schema}")
+        resolve_schema(f"schemas/eo/{schema}")
+        resolve_schema(f"schemas/ga/{schema}")
