@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import json
 from jsonpath_rw import parse
 from jsonpointer import set_pointer
