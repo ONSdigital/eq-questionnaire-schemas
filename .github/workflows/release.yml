@@ -65,10 +65,6 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: Download built schemas
-        uses: actions/download-artifact@v1
-        with:
-          name: schemas
       - name: Download translated schemas
         uses: actions/download-artifact@v1
         with:
@@ -99,7 +95,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download built schemas and translations
+      - name: Download built and resolved schemas and translations
         uses: actions/download-artifact@v1
         with:
           name: resolved

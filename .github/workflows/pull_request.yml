@@ -80,7 +80,7 @@ jobs:
       - name: Archive schema artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: translated
+          name: schemas
           path: schemas
   resolve-suggestions-urls:
     needs: translate-schemas
@@ -91,10 +91,6 @@ jobs:
         with:
           python-version: 3.8
       - name: Download translated schemas
-        uses: actions/download-artifact@v1
-        with:
-          name: translated
-      - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
