@@ -68,6 +68,10 @@ jobs:
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
+          name: schemas
+      - name: Download translated schemas
+        uses: actions/download-artifact@v1
+        with:
           name: translated
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
@@ -100,7 +104,7 @@ jobs:
         with:
           name: resolved
       - name: Zip artifacts
-        run: mv translated schemas && zip -r schemas.zip schemas
+        run: mv resolved && zip -r schemas.zip schemas
       - name: Release
         uses: softprops/action-gh-release@v1
         with:

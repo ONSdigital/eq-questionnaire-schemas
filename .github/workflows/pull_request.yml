@@ -90,10 +90,14 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: Download built schemas
+      - name: Download translated schemas
         uses: actions/download-artifact@v1
         with:
           name: translated
+      - name: Download built schemas
+        uses: actions/download-artifact@v1
+        with:
+          name: schemas
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
