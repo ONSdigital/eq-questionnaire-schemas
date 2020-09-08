@@ -82,6 +82,11 @@ jobs:
         run: pipenv install --dev
       - name: Resolve suggesions urls
         run: make resolve-suggestions-urls
+      - name: Archive schema artifacts
+          uses: actions/upload-artifact@v1
+          with:
+            name: schemas
+            path: schemas
   test-translation-templates:
     needs: resolve-suggestions-urls
     runs-on: ubuntu-latest
