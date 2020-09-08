@@ -148,6 +148,10 @@ function(region_code) {
     enabled: true,
     required_completed_sections: ['who-lives-here-section', 'relationships-section'],
   },
+  individual_response: {
+    for_list: 'household',
+    individual_section_id: 'individual-section',
+  },
   submission: {
     button: 'Submit census',
     guidance: 'By submitting this census return you are confirming that, to the best of your knowledge and belief, the details provided are correct.',
