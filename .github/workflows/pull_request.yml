@@ -18,6 +18,8 @@ jobs:
         run: make lint
       - name: Build schemas
         run: make build-schemas
+      - name: Resolve suggestions urls
+        run: make resolve-suggestions-urls
       - name: Archive schema artifacts
         uses: actions/upload-artifact@v1
         with:
