@@ -37,7 +37,7 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: schemas
-      - name: Install pipenv
+      - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
           echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
