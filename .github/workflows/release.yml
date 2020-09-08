@@ -25,35 +25,8 @@ jobs:
         with:
           name: schemas
           path: schemas
-  resolve-suggestions-urls:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: Download built schemas
-        uses: actions/download-artifact@v1
-        with:
-          name: schemas
-      - name: Install pipenv --dev
-        run: pip install pipenv==2018.11.26
-      - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
-      - name: Cache virtualenv
-        id: cache-virtualenv
-        uses: actions/cache@v1
-        with:
-          path: ~/.local/share/virtualenvs/
-          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
-      - name: Install virtual environment
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-        run: pipenv install --dev
-      - name: Resolve suggesions urls
-        run: make resolve-suggestions-urls
   translate-schemas:
-    needs: resolve-suggestions-urls
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -84,6 +57,33 @@ jobs:
         with:
           name: translated
           path: schemas
+  resolve-suggestions-urls:
+    needs: translate-schemas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Download built schemas
+        uses: actions/download-artifact@v1
+        with:
+          name: schemas
+      - name: Install pipenv --dev
+        run: pip install pipenv==2018.11.26
+      - run: |
+          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+      - name: Cache virtualenv
+        id: cache-virtualenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs/
+          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
+      - name: Install virtual environment
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        run: pipenv install --dev
+      - name: Resolve suggesions urls
+        run: make resolve-suggestions-urls
   release:
     needs: translate-schemas
     runs-on: ubuntu-latest
