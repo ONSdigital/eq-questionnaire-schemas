@@ -87,7 +87,7 @@ jobs:
       - name: Archive schema artifacts
           uses: actions/upload-artifact@v1
           with:
-            name: resolved
+            name: schemas
             path: schemas
   release:
     needs: resolve-suggestions-urls
@@ -100,7 +100,7 @@ jobs:
         with:
           name: resolved
       - name: Zip artifacts
-        run: mv resolved && zip -r schemas.zip schemas
+        run: mv schemas && zip -r schemas.zip schemas
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
