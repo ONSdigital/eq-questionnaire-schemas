@@ -90,7 +90,7 @@ jobs:
             name: resolved
             path: schemas
   release:
-    needs: translate-schemas
+    needs: resolve-suggestions-urls
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
