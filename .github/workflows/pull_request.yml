@@ -53,7 +53,7 @@ jobs:
       - name: Archive schema artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: translated
+          name: schemas
           path: schemas
   resolve-suggestions-urls:
     needs: translate-schemas
