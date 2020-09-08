@@ -1,36 +1,38 @@
 import json
-from jsonpointer import resolve_pointer, set_pointer
+from jsonpath_rw import parse
+from jsonpointer import set_pointer
 
+SUGGESTIONS_API_URL = (
+    "https://cdn.eq.census-gcp.onsdigital.uk/data/{version}/{region}/{language}"
+)
 VERSION = "v4.0.0"
 
 
-def find_pointers_containing(input_data, search_key, pointer=None):
-    if isinstance(input_data, dict):
-        if pointer and search_key in input_data:
-            yield pointer
-        for k, v in input_data.items():
-            yield from find_pointers_containing(
-                v, search_key, f"{pointer}/{k}" if pointer else f"/{k}"
-            )
-    elif isinstance(input_data, list):
-        for index, item in enumerate(input_data):
-            yield from find_pointers_containing(item, search_key, f"{pointer}/{index}")
+def json_path_to_json_pointer(json_path):
+    """
+    Convert a json path string into a json pointer string.
+    :param json_path: the input data to search
+    :return: json pointer equivalent to the json path
+    """
+    json_pointer = json_path.replace("[", "").replace("]", "").replace(".", "/")
+    return f"/{json_pointer}"
 
 
 def resolve_schema(schema_address, version=None, language=None):
     with open(schema_address, "r+") as file:
         data = json.load(file)
-        pointer_iterator = find_pointers_containing(data, "suggestions_url")
-        for pointer in pointer_iterator:
-            address = resolve_pointer(data, "{}{}".format(pointer, "/suggestions_url"))
+        json_path = parse("$..suggestions_url")
+        for match in json_path.find(data):
+            json_pointer = json_path_to_json_pointer(str(match.full_path))
+            suggestions_url = match.value
             if language:
                 set_pointer(
                     data,
-                    "{}{}".format(pointer, "/suggestions_url"),
-                    address.format(version=version, language_code=language),
+                    json_pointer,
+                    suggestions_url.format(suggestions_api_url=version),
                 )
             else:
-                set_pointer(data, "{}{}".format(pointer, "/suggestions_url"), "")
+                set_pointer(data, json_pointer, "")
         file.seek(0)
         json.dump(data, file, indent=4)
 
@@ -44,15 +46,27 @@ gb_en = [
 gb_cy = ["census_household_gb_wls.json", "census_individual_gb_wls.json"]
 ni = ["census_household_gb_nir.json", "census_individual_gb_nir.json"]
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     for schema in gb_en:
-        resolve_schema(f"schemas/en/{schema}", VERSION, "en")
+        resolve_schema(
+            f"schemas/en/{schema}",
+            SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="en"),
+            "en",
+        )
 
     for schema in gb_cy:
-        resolve_schema(f"schemas/cy/{schema}", VERSION, "cy")
+        resolve_schema(
+            f"schemas/cy/{schema}",
+            SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="cy"),
+            "cy",
+        )
 
     for schema in ni:
-        resolve_schema(f"schemas/en/{schema}", VERSION, "en")
+        resolve_schema(
+            f"schemas/en/{schema}",
+            SUGGESTIONS_API_URL.format(version=VERSION, region="ni", language="en"),
+            "en",
+        )
         resolve_schema(f"schemas/eo/{schema}")
         resolve_schema(f"schemas/ga/{schema}")
