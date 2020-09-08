@@ -51,7 +51,7 @@ jobs:
       - name: Test translation templates
         run: make test-translation-templates
   translate-schemas:
-    needs: build
+    needs: test-translation-templates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
