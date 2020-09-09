@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import json
-import os
+from os import path, getcwd
 from jsonpath_rw import parse
 from jsonpointer import set_pointer
 
@@ -53,20 +53,23 @@ if __name__ == "__main__":
 
     for schema in gb_en:
         resolve_schema(
-            os.getcwd() + f"/schemas/en/{schema}",
+            getcwd() + f"/schemas/en/{schema}",
             UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="gb", language="en"),
         )
 
     for schema in gb_cy:
-        resolve_schema(
-            os.getcwd() + f"/schemas/cy/{schema}",
-            UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="gb", language="cy"),
-        )
+        if path.exists(getcwd() + "/schemas/cy/"):
+            resolve_schema(
+                getcwd() + f"/schemas/cy/{schema}",
+                UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="gb", language="cy"),
+            )
 
     for schema in ni:
         resolve_schema(
-            os.getcwd() + f"/schemas/en/{schema}",
+            getcwd() + f"/schemas/en/{schema}",
             UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="ni", language="en"),
         )
-        resolve_schema(f"{os.getcwd()}/schemas/eo/{schema}")
-        resolve_schema(f"{os.getcwd()}/schemas/ga/{schema}")
+        if path.exists(getcwd() + "/schemas/eo/"):
+            resolve_schema(getcwd() + f"/schemas/eo/{schema}")
+        if path.exists(getcwd() + "/schemas/ga/"):
+            resolve_schema(getcwd() + f"/schemas/ga/{schema}")

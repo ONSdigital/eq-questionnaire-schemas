@@ -50,40 +50,8 @@ jobs:
         run: pipenv install --dev
       - name: Test translation templates
         run: make test-translation-templates
-  translate-schemas:
-    needs: test-translation-templates
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v1
-        with:
-          python-version: 3.8
-      - name: Download built schemas
-        uses: actions/download-artifact@v1
-        with:
-          name: schemas
-      - name: Install pipenv
-        run: pip install pipenv==2018.11.26
-      - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -V 2>&1)"
-      - name: Cache virtualenv
-        id: cache-virtualenv
-        uses: actions/cache@v1
-        with:
-          path: ~/.local/share/virtualenvs/
-          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
-      - name: Install virtualenv
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-        run: pipenv install --dev
-      - name: Translate schemas
-        run: make translate-schemas
-      - name: Archive schema artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: schemas
-          path: schemas
   resolve-suggestions-urls:
-    needs: translate-schemas
+    needs: test-translation-templates
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
