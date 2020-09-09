@@ -32,7 +32,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
         with:
-          python-version: 3.8
+          python-version: '3.8'
       - name: Download built schemas
         uses: actions/download-artifact@v1
         with:
@@ -87,7 +87,7 @@ jobs:
       - name: Archive schema artifacts
           uses: actions/upload-artifact@v1
           with:
-            name: schemas
+            name: translated
             path: schemas
   release:
     needs: resolve-suggestions-urls
@@ -95,12 +95,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download built and resolved schemas and translations
+      - name: Download built schemas and translations
         uses: actions/download-artifact@v1
         with:
-          name: resolved
+          name: translated
       - name: Zip artifacts
-        run: mv schemas && zip -r schemas.zip schemas
+        run: mv translated && zip -r schemas.zip schemas
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
