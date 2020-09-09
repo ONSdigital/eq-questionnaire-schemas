@@ -100,7 +100,7 @@ jobs:
         with:
           name: translated
       - name: Zip artifacts
-        run: mv translated && zip -r schemas.zip schemas
+        run: mv translated schemas && zip -r schemas.zip schemas
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
