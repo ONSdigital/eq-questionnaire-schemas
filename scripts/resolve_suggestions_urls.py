@@ -5,7 +5,7 @@ import os
 from jsonpath_rw import parse
 from jsonpointer import set_pointer
 
-SUGGESTIONS_API_URL = (
+UNFORMATTED_SUGGESTIONS_URL_ROOT = (
     "https://cdn.eq.census-gcp.onsdigital.uk/data/{version}/{region}/{language}"
 )
 VERSION = "v4.0.0"
@@ -21,18 +21,18 @@ def json_path_to_json_pointer(json_path):
     return f"/{json_pointer}"
 
 
-def resolve_schema(schema_filepath, suggestions_api_url=None):
+def resolve_schema(schema_filepath, suggestions_url_root=None):
     with open(schema_filepath, "r+") as schema_file:
         schema_json = json.load(schema_file)
         json_path = parse("$..suggestions_url")
         for match in json_path.find(schema_json):
             json_pointer = json_path_to_json_pointer(str(match.full_path))
             suggestions_url = match.value
-            if suggestions_api_url:
+            if suggestions_url_root:
                 set_pointer(
                     schema_json,
                     json_pointer,
-                    suggestions_url.format(suggestions_api_url=suggestions_api_url),
+                    suggestions_url.format(suggestions_url_root=suggestions_url_root),
                 )
             else:
                 set_pointer(schema_json, json_pointer, "")
@@ -53,20 +53,20 @@ if __name__ == "__main__":
 
     for schema in gb_en:
         resolve_schema(
-            f"{os.getcwd()}/schemas/en/{schema}",
-            SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="en"),
+            os.getcwd() + f"/schemas/en/{schema}",
+            UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="gb", language="en"),
         )
 
     for schema in gb_cy:
         resolve_schema(
-            f"{os.getcwd()}/schemas/cy/{schema}",
-            SUGGESTIONS_API_URL.format(version=VERSION, region="gb", language="cy"),
+            os.getcwd() + f"/schemas/cy/{schema}",
+            UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="gb", language="cy"),
         )
 
     for schema in ni:
         resolve_schema(
-            f"{os.getcwd()}/schemas/en/{schema}",
-            SUGGESTIONS_API_URL.format(version=VERSION, region="ni", language="en"),
+            os.getcwd() + f"/schemas/en/{schema}",
+            UNFORMATTED_SUGGESTIONS_URL_ROOT.format(version=VERSION, region="ni", language="en"),
         )
         resolve_schema(f"{os.getcwd()}/schemas/eo/{schema}")
         resolve_schema(f"{os.getcwd()}/schemas/ga/{schema}")

@@ -16,7 +16,7 @@ local question(englandTitle, walesTitle, region_code) = (
         description: 'Enter your own answer or select from suggestions',
         max_length: 100,
         mandatory: false,
-        suggestions_url: '{suggestions_api_url}/ethnic-groups.json',
+        suggestions_url: '{suggestions_url_root}/ethnic-groups.json',
         type: 'TextField',
       },
     ],

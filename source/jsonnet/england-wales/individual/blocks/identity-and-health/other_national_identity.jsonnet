@@ -19,7 +19,7 @@ local question(title, guidance) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: '{suggestions_api_url}/national-identities.json',
+      suggestions_url: '{suggestions_url_root}/national-identities.json',
       type: 'TextField',
     },
   ],
