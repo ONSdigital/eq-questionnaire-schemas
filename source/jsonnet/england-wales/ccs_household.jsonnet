@@ -98,10 +98,6 @@ function(region_code, census_month_year_date) {
     enabled: true,
     required_completed_sections: ['who-lives-here-and-visitors'],
   },
-  individual_response: {
-    for_list: 'household',
-    individual_section_id: 'individual-section',
-  },
   submission: {
     button: 'Submit census',
     title: 'Submit census',
