@@ -160,6 +160,10 @@ function(region_code, census_month_year_date) {
     enabled: true,
     required_completed_sections: ['people-who-live-here-and-overnight-visitors', 'relationships-section'],
   },
+  individual_response: {
+    for_list: 'household',
+    individual_section_id: 'individual-section',
+  },
   submission: {
     button: 'Submit census',
     guidance: 'By submitting this census you are confirming that, to the best of your knowledge and belief, the details provided are correct.',
