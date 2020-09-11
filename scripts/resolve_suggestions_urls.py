@@ -4,7 +4,7 @@ import json
 import os
 
 from jsonpath_rw import parse
-from jsonpointer import set_pointer
+from jsonpointer import resolve_pointer, set_pointer
 
 SUGGESTIONS_URL_BASE = "https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0"
 
@@ -19,7 +19,7 @@ def json_path_to_pointer(json_path):
     return f"/{json_pointer}"
 
 
-def resolve_schema(schema_filepath, replacement_url_root):
+def replace_suggestions_urls(schema_filepath, replacement_url_root):
     updated_pointer_count = 0
 
     try:
@@ -30,14 +30,16 @@ def resolve_schema(schema_filepath, replacement_url_root):
                 json_pointer = json_path_to_pointer(str(match.full_path))
                 suggestions_url = match.value
                 if "suggestions_url_root" in suggestions_url:
-                    replacement_url = suggestions_url.format(
-                        suggestions_url_root=replacement_url_root
-                    ) if replacement_url_root else ""
-                    set_pointer(
-                        schema_json,
-                        json_pointer,
-                        replacement_url,
-                    )
+                    if replacement_url_root:
+                        replacement_url = suggestions_url.format(
+                            suggestions_url_root=replacement_url_root
+                        )
+                        set_pointer(schema_json, json_pointer, replacement_url)
+                    else:
+                        parent_pointer = "/".join(json_pointer.split("/")[0:-1])
+                        parent_object = resolve_pointer(schema_json, parent_pointer)
+                        del parent_object["suggestions_url"]
+                        set_pointer(schema_json, parent_pointer, parent_object)
                     updated_pointer_count += 1
     except FileNotFoundError:
         print(f"{schema_filepath} not found")
@@ -47,7 +49,7 @@ def resolve_schema(schema_filepath, replacement_url_root):
             json.dump(schema_json, schema_file, indent=4)
 
     schema_name = os.path.split(schema_filepath)[-1]
-    print(f"{schema_name}: Resolved {updated_pointer_count} suggestion urls")
+    print(f"{schema_name}: Replaced {updated_pointer_count} suggestions urls")
 
 
 SUGGESTION_MAP = {
@@ -74,9 +76,9 @@ if __name__ == "__main__":
     for language_code, schema_list in SUGGESTION_MAP.items():
         for schema in schema_list:
             region = "ni" if schema.endswith("nir") else "gb"
-            resolve_schema(
+            replace_suggestions_urls(
                 f"{schema_directory}/{language_code}/{schema}.json",
                 None
-                if region == "ni"
+                if language_code in ["eo", "ga"]
                 else f"{SUGGESTIONS_URL_BASE}/{region}/{language_code}",
             )
