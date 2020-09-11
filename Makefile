@@ -11,6 +11,8 @@ run-validator:
 
 format:
 	./scripts/format_jsonnet.sh
+	pipenv run isort .
+	pipenv run black .
 
 lint:
 	./scripts/lint_jsonnet.sh
