@@ -45,6 +45,7 @@ local question(additionalAnswerOptions=[]) = {
         {
           label: 'An address outside the UK',
           value: 'An address outside the UK',
+          description: 'You can enter their country on the next question',
         },
       ],
       type: 'Radio',
