@@ -7,7 +7,7 @@ local proxyGuidance = 'Why their answer is important';
 local nonProxyDefinitionDescription = 'Your answer will provide a better understanding of your community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 local proxyDefinitionDescription = 'Their answer will provide a better understanding of their community and help to support equality and fairness. For example, councils and government use information on ethnic group to make sure they';
 
-local question(englandTitle, walesTitle, region_code, guidance, definitionDescription, optionLabelValue, optionDescriptionAfricanOther) = (
+local question(englandTitle, walesTitle, region_code, guidance, definitionDescription, optionDescriptionAfricanOther) = (
   local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
 
   {
@@ -42,8 +42,8 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
             description: optionDescriptionAfricanOther,
           },
           {
-            label: optionLabelValue,
-            value: optionLabelValue,
+            label: 'Any other Black, Black British or Caribbean background',
+            value: 'Any other Black, Black British or Caribbean background',
             description: optionDescriptionAfricanOther,
           },
         ],
@@ -70,18 +70,16 @@ local proxyWalesTitle = {
 
 
 function(region_code) (
-  local optionLabelValue = if region_code == 'GB-WLS' then 'Any other Black, Black Welsh, Black British or Caribbean background'
-  else 'Any other Black, Black British or Caribbean background';
   {
     type: 'Question',
     id: 'black-black-british-caribbean-or-african-ethnic-group',
     question_variants: [
       {
-        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, optionLabelValue, 'You can enter your ethnic group or background on the next question'),
+        question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),
         when: [rules.isNotProxy],
       },
       {
-        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyGuidance, proxyDefinitionDescription, optionLabelValue, 'You can enter their ethnic group or background on the next question'),
+        question: question(proxyEnglandTitle, proxyWalesTitle, region_code, proxyGuidance, proxyDefinitionDescription, 'You can enter their ethnic group or background on the next question'),
         when: [rules.isProxy],
       },
     ],
@@ -93,7 +91,7 @@ function(region_code) (
             {
               id: 'black-black-british-caribbean-or-african-ethnic-group-answer',
               condition: 'equals',
-              value: optionLabelValue,
+              value: 'Any other Black, Black British or Caribbean background',
             },
           ],
         },

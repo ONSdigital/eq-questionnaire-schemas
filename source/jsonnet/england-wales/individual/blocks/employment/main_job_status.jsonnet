@@ -53,8 +53,8 @@ local proxyQuestionDescription = 'Their main job is the job in which they usuall
 local pastNonProxyQuestionDescription = 'This is the most recent job you had. If you had more than one job at the same time, answer for the job in which you usually worked the most hours.';
 local pastProxyQuestionDescription = 'This is the most recent job they had. If they had more than one job at the same time, answer for the job in which they usually worked the most hours.';
 
-local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
-local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
+local nonProxyAnswerDescription = 'Freelance means that you were self-employed and worked for different companies or people on particular pieces of work';
+local proxyAnswerDescription = 'Freelance means that they were self-employed and worked for different companies or people on particular pieces of work';
 
 {
   type: 'Question',
