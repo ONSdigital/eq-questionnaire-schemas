@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 
 import json
+import logging
 import os
 
+import coloredlogs
 from jsonpath_rw import parse
-from jsonpointer import resolve_pointer, set_pointer
+from jsonpointer import set_pointer
 
 SUGGESTIONS_URL_BASE = "https://cdn.eq.census-gcp.onsdigital.uk/data/v4.0.0"
+
+logger = logging.getLogger(__name__)
+
+coloredlogs.install(level="DEBUG", logger=logger, fmt="%(message)s")
 
 
 def json_path_to_pointer(json_path):
@@ -78,10 +84,10 @@ def update_schemas(schemas_dir):
                 with open(schema_filepath, "w") as schema_file:
                     json.dump(schema_data, schema_file, indent=4)
 
-            print(
+            logger.debug(
                 f"{language_code}/{schema_name}: Replaced {replaced} suggestions urls"
             )
-            print(
+            logger.debug(
                 f"{language_code}/{schema_name}: Removed {removed} suggestions urls"
             )
 
