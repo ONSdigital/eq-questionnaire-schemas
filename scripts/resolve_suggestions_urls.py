@@ -19,66 +19,76 @@ def json_path_to_pointer(json_path):
     return f"/{json_pointer}"
 
 
-def replace_suggestions_urls(schema_filepath, replacement_url_root):
-    updated_pointer_count = 0
-
-    try:
-        with open(schema_filepath, "r+") as schema_file:
-            schema_json = json.load(schema_file)
-            json_path = parse("$..suggestions_url")
-            for match in json_path.find(schema_json):
-                json_pointer = json_path_to_pointer(str(match.full_path))
-                suggestions_url = match.value
-                if "suggestions_url_root" in suggestions_url:
-                    if replacement_url_root:
-                        replacement_url = suggestions_url.format(
-                            suggestions_url_root=replacement_url_root
-                        )
-                        set_pointer(schema_json, json_pointer, replacement_url)
-                    else:
-                        parent_pointer = "/".join(json_pointer.split("/")[0:-1])
-                        parent_object = resolve_pointer(schema_json, parent_pointer)
-                        del parent_object["suggestions_url"]
-                        set_pointer(schema_json, parent_pointer, parent_object)
-                    updated_pointer_count += 1
-    except FileNotFoundError:
-        print(f"{schema_filepath} not found")
-
-    if updated_pointer_count:
-        with open(schema_filepath, "w") as schema_file:
-            json.dump(schema_json, schema_file, indent=4)
-
-    schema_name = os.path.split(schema_filepath)[-1]
-    print(f"{schema_name}: Replaced {updated_pointer_count} suggestions urls")
+def find_suggestion_urls(data):
+    json_path = parse("$..suggestions_url")
+    for match in json_path.find(data):
+        suggestions_url = match.value
+        if "suggestions_url_root" in suggestions_url:
+            yield match
 
 
-SUGGESTION_MAP = {
-    "en": [
-        "census_household_gb_eng",
-        "census_individual_gb_eng",
-        "census_household_gb_wls",
-        "census_individual_gb_wls",
-        "census_individual_gb_nir",
-        "census_household_gb_nir",
-    ],
-    "cy": [
-        "census_individual_gb_wls",
-        "census_household_gb_wls",
-    ],
-    "eo": ["census_individual_gb_nir", "census_household_gb_nir"],
-    "ga": ["census_individual_gb_nir", "census_household_gb_nir"],
-}
+def replace_suggestions_urls(data, matches, replacement_url_root) -> int:
+    replaced_pointer_count = 0
+    for match in matches:
+        pointer = json_path_to_pointer(str(match.full_path))
+        replacement_url = match.value.format(suggestions_url_root=replacement_url_root)
+        set_pointer(data, pointer, replacement_url)
+        replaced_pointer_count += 1
+    return replaced_pointer_count
+
+
+def remove_suggestions_urls(data, matches) -> int:
+    removed_pointer_count = 0
+    for match in matches:
+        parent_pointer = json_path_to_pointer(str(match.context.full_path))
+        parent_object = match.context.value
+        del parent_object["suggestions_url"]
+        set_pointer(data, parent_pointer, parent_object)
+
+        removed_pointer_count += 1
+    return removed_pointer_count
+
+
+def update_schemas(schemas_dir):
+    language_dirs = filter(
+        lambda d: os.path.isdir(f"{schema_directory}/{d}"), os.listdir(schemas_dir)
+    )
+
+    for language_code in language_dirs:
+        language_dir = f"{schema_directory}/{language_code}"
+        for schema_name in os.listdir(language_dir):
+            region = "ni" if schema_name.endswith("nir.json") else "gb"
+            schema_filepath = f"{language_dir}/{schema_name}"
+
+            replaced = 0
+            removed = 0
+
+            with open(schema_filepath, "r+") as schema_file:
+                schema_data = json.load(schema_file)
+                suggestions_urls_pointers = find_suggestion_urls(schema_data)
+
+                if language_code in ["eo", "ga"]:
+                    removed = remove_suggestions_urls(
+                        schema_data, suggestions_urls_pointers
+                    )
+                else:
+                    replaced = replace_suggestions_urls(
+                        schema_data,
+                        suggestions_urls_pointers,
+                        f"{SUGGESTIONS_URL_BASE}/{region}/{language_code}",
+                    )
+
+            if replaced or removed:
+                with open(schema_filepath, "w") as schema_file:
+                    json.dump(schema_data, schema_file, indent=4)
+
+            print(
+                f"{language_code}/{schema_name}: Replaced {replaced} and removed {removed} suggestions urls"
+            )
+
 
 if __name__ == "__main__":
     working_directory = os.getcwd()
     schema_directory = f"{working_directory}/schemas"
 
-    for language_code, schema_list in SUGGESTION_MAP.items():
-        for schema in schema_list:
-            region = "ni" if schema.endswith("nir") else "gb"
-            replace_suggestions_urls(
-                f"{schema_directory}/{language_code}/{schema}.json",
-                None
-                if language_code in ["eo", "ga"]
-                else f"{SUGGESTIONS_URL_BASE}/{region}/{language_code}",
-            )
+    update_schemas(schema_directory)
