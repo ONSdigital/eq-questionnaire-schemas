@@ -376,7 +376,7 @@ function(region_code, census_month_year_date) {
             ethnic_group_other,
             ethnic_group_other_other,
             religion(region_code),
-            religion_other,
+            religion_other(region_code),
           ] + understandWelshBlock(region_code) + [
             language(region_code),
             other_main_language,

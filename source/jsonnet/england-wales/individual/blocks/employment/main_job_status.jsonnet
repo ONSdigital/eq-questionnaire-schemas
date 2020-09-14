@@ -55,6 +55,8 @@ local pastProxyQuestionDescription = 'This is the most recent job they had. If t
 
 local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
 local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
+local pastNonProxyAnswerDescription = 'Freelance means that you were self-employed and worked for different companies or people on particular pieces of work';
+local pastProxyAnswerDescription = 'Freelance means that they were self-employed and worked for different companies or people on particular pieces of work';
 
 {
   type: 'Question',
@@ -69,11 +71,11 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
       when: [rules.isProxy, rules.mainJob],
     },
     {
-      question: question(pastNonProxyTitle, pastNonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(pastNonProxyTitle, pastNonProxyQuestionDescription, pastNonProxyAnswerDescription),
       when: [rules.isNotProxy, rules.lastMainJob],
     },
     {
-      question: question(pastProxyTitle, pastProxyQuestionDescription, proxyAnswerDescription),
+      question: question(pastProxyTitle, pastProxyQuestionDescription, pastProxyAnswerDescription),
       when: [rules.isProxy, rules.lastMainJob],
     },
   ],

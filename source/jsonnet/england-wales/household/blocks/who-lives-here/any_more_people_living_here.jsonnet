@@ -68,6 +68,55 @@ local editQuestion(questionTitle) = {
   ],
 };
 
+local addMorePeopleLivingHereTitle(listIsEmpty) = (
+  if listIsEmpty then {
+    text: 'Who lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  } else {
+    text: 'Who else lives at {household_address}?',
+    placeholders: [
+      placeholders.address,
+    ],
+  }
+);
+
+local addMorePeopleLivingHere(listIsEmpty) = {
+  id: 'any-more-people-living-here-add-person-question',
+  type: 'General',
+  title: addMorePeopleLivingHereTitle(listIsEmpty),
+  answers: [
+    {
+      id: 'first-name',
+      label: 'First name',
+      mandatory: true,
+      type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a first name',
+        },
+      },
+    },
+    {
+      id: 'middle-names',
+      label: 'Middle names',
+      mandatory: false,
+      type: 'TextField',
+    },
+    {
+      id: 'last-name',
+      label: 'Last name',
+      mandatory: true,
+      type: 'TextField',
+      validation: {
+        messages: {
+          MANDATORY_TEXTFIELD: 'Enter a last name',
+        },
+      },
+    },
+  ],
+};
 
 {
   id: 'any-more-people-living-here',
@@ -142,7 +191,7 @@ local editQuestion(questionTitle) = {
           hide_guidance: 'Why we ask this question',
           contents: [
             {
-              description: 'We ask this question to help ensure that everyone is correctly counted in the census. This includes people who are staying temporarily or are away.',
+              description: 'We ask this question to ensure that everyone is correctly counted in the census. This includes people who are staying temporarily or are away.',
             },
             {
               description: 'The information is vital for planning services, whether it is for hospital beds, school places, GP and dental services or where to build houses and roads.',
@@ -155,46 +204,16 @@ local editQuestion(questionTitle) = {
   add_block: {
     id: 'any-more-people-living-here-add-person',
     type: 'ListAddQuestion',
-    question: {
-      id: 'any-more-people-living-here-add-person-question',
-      type: 'General',
-      title: {
-        text: 'Who do you need to add to {household_address}?',
-        placeholders: [
-          placeholders.address,
-        ],
+    question_variants: [
+      {
+        question: addMorePeopleLivingHere(listIsEmpty=false),
+        when: [rules.listIsNotEmpty('household')],
       },
-      answers: [
-        {
-          id: 'first-name',
-          label: 'First name',
-          mandatory: true,
-          type: 'TextField',
-          validation: {
-            messages: {
-              MANDATORY_TEXTFIELD: 'Enter a first name',
-            },
-          },
-        },
-        {
-          id: 'middle-names',
-          label: 'Middle names',
-          mandatory: false,
-          type: 'TextField',
-        },
-        {
-          id: 'last-name',
-          label: 'Last name',
-          mandatory: true,
-          type: 'TextField',
-          validation: {
-            messages: {
-              MANDATORY_TEXTFIELD: 'Enter a last name',
-            },
-          },
-        },
-      ],
-    },
+      {
+        question: addMorePeopleLivingHere(listIsEmpty=true),
+        when: [rules.listIsEmpty('household')],
+      },
+    ],
   },
   edit_block: {
     id: 'any-more-people-living-here-edit-person',

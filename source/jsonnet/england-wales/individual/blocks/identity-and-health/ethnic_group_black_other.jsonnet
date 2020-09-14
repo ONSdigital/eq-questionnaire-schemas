@@ -1,10 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(englandTitle, walesTitle, region_code) = (
-  local title = if region_code == 'GB-WLS' then walesTitle else englandTitle;
-  local label = if region_code == 'GB-WLS' then 'Black, Black Welsh, Black British or Caribbean ethnic group or background'
-  else 'Black, Black British or Caribbean ethnic group or background';
+local question(title, region_code) = (
   {
     id: 'other-black-black-british-caribbean-or-african-ethnic-group-question',
     title: title,
@@ -12,7 +9,7 @@ local question(englandTitle, walesTitle, region_code) = (
     answers: [
       {
         id: 'other-black-black-british-caribbean-or-african-ethnic-group-answer',
-        label: label,
+        label: 'Black, Black British or Caribbean ethnic group or background',
         description: 'Enter your own answer or select from suggestions',
         max_length: 100,
         mandatory: false,
@@ -23,16 +20,9 @@ local question(englandTitle, walesTitle, region_code) = (
   }
 );
 
-local nonProxyEnglandTitle = 'You selected “Any other Black, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean ethnic group or background?';
-local proxyEnglandTitle = {
+local nonProxyTitle = 'You selected “Any other Black, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean ethnic group or background?';
+local proxyTitle = {
   text: 'You selected “Any other Black, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean ethnic group or background?',
-  placeholders: [
-    placeholders.personName,
-  ],
-};
-local nonProxyWalesTitle = 'You selected “Any other Black, Black Welsh, Black British or Caribbean background”. How would you describe your Black, Black British or Caribbean background?';
-local proxyWalesTitle = {
-  text: 'You selected “Any other Black, Black Welsh, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean ethnic group or background?',
   placeholders: [
     placeholders.personName,
   ],
@@ -43,11 +33,11 @@ function(region_code) {
   id: 'other-black-black-british-caribbean-or-african-ethnic-group',
   question_variants: [
     {
-      question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code),
+      question: question(nonProxyTitle, region_code),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyEnglandTitle, proxyWalesTitle, region_code),
+      question: question(proxyTitle, region_code),
       when: [rules.isProxy],
     },
   ],

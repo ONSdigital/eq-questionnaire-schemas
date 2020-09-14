@@ -25,7 +25,7 @@ local question(title) = {
   ],
 };
 
-{
+function(region_code) {
   type: 'Question',
   id: 'religion-other',
   question_variants: [
@@ -54,7 +54,7 @@ local question(title) = {
     },
     {
       goto: {
-        block: 'main-language',
+        block: if region_code == 'GB-WLS' then 'understand-welsh' else 'main-language',
       },
     },
   ],
