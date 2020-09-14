@@ -84,12 +84,18 @@ def update_schemas(schemas_dir):
                 with open(schema_filepath, "w") as schema_file:
                     json.dump(schema_data, schema_file, indent=4)
 
-            logger.debug(
-                f"{language_code}/{schema_name}: Replaced {replaced} suggestions urls"
-            )
-            logger.debug(
-                f"{language_code}/{schema_name}: Removed {removed} suggestions urls"
-            )
+            if replaced:
+                logger.debug(
+                    f"{language_code}/{schema_name}: Replaced {replaced} suggestions urls"
+                )
+            if removed:
+                logger.debug(
+                    f"{language_code}/{schema_name}: Removed {removed} suggestions urls"
+                )
+            if not replaced and not removed:
+                logger.warning(
+                    f"{language_code}/{schema_name}: No suggestions urls to resolve"
+                )
 
 
 if __name__ == "__main__":
