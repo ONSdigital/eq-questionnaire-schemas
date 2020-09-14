@@ -27,9 +27,9 @@ def find_suggestion_urls(data):
             yield match
 
 
-def replace_suggestions_urls(data, matches, replacement_url_root) -> int:
+def replace_suggestions_urls(data, replacement_url_root) -> int:
     replaced_pointer_count = 0
-    for match in matches:
+    for match in find_suggestion_urls(data):
         pointer = json_path_to_pointer(str(match.full_path))
         replacement_url = match.value.format(suggestions_url_root=replacement_url_root)
         set_pointer(data, pointer, replacement_url)
@@ -37,9 +37,9 @@ def replace_suggestions_urls(data, matches, replacement_url_root) -> int:
     return replaced_pointer_count
 
 
-def remove_suggestions_urls(data, matches) -> int:
+def remove_suggestions_urls(data) -> int:
     removed_pointer_count = 0
-    for match in matches:
+    for match in find_suggestion_urls(data):
         parent_pointer = json_path_to_pointer(str(match.context.full_path))
         parent_object = match.context.value
         del parent_object["suggestions_url"]
@@ -65,16 +65,12 @@ def update_schemas(schemas_dir):
 
             with open(schema_filepath, "r+") as schema_file:
                 schema_data = json.load(schema_file)
-                suggestions_urls_pointers = find_suggestion_urls(schema_data)
 
                 if language_code in ["eo", "ga"]:
-                    removed = remove_suggestions_urls(
-                        schema_data, suggestions_urls_pointers
-                    )
+                    removed = remove_suggestions_urls(schema_data)
                 else:
                     replaced = replace_suggestions_urls(
                         schema_data,
-                        suggestions_urls_pointers,
                         f"{SUGGESTIONS_URL_BASE}/{region}/{language_code}",
                     )
 
