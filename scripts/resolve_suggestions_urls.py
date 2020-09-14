@@ -79,7 +79,10 @@ def update_schemas(schemas_dir):
                     json.dump(schema_data, schema_file, indent=4)
 
             print(
-                f"{language_code}/{schema_name}: Replaced {replaced} and removed {removed} suggestions urls"
+                f"{language_code}/{schema_name}: Replaced {replaced} suggestions urls"
+            )
+            print(
+                f"{language_code}/{schema_name}: Removed {removed} suggestions urls"
             )
 
 
