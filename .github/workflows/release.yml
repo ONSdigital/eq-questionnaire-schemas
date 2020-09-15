@@ -47,7 +47,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Download built schemas and translations
+      - name: Download schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
