@@ -83,6 +83,10 @@ def update_schemas(schemas_dir):
             if replaced or removed:
                 with open(schema_filepath, "w") as schema_file:
                     json.dump(schema_data, schema_file, indent=4)
+            else:
+                logger.warning(
+                    f"{language_code}/{schema_name}: No suggestions urls to resolve"
+                )
 
             if replaced:
                 logger.debug(
@@ -91,10 +95,6 @@ def update_schemas(schemas_dir):
             if removed:
                 logger.debug(
                     f"{language_code}/{schema_name}: Removed {removed} suggestions urls"
-                )
-            if not replaced and not removed:
-                logger.warning(
-                    f"{language_code}/{schema_name}: No suggestions urls to resolve"
                 )
 
 
