@@ -41,6 +41,7 @@ local proxyDescription = 'For example, retail assistant, office cleaner, distric
 {
   type: 'Question',
   id: 'job-title',
+  page_title: 'Job title',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),

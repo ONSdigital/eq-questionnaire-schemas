@@ -42,6 +42,7 @@ local proxyTitle = {
 function(region_code, census_month_year_date) {
   type: 'Question',
   id: 'arrive-in-uk',
+  page_title: 'Arrived to live in the UK',
   question_variants: [
     {
       question: question(nonProxyTitle),

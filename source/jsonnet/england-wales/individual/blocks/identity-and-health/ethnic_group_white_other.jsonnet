@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'ethnic-group-white-other',
+  page_title: 'Other White ethnic group or background',
   question_variants: [
     {
       question: question('You selected “Any other White background”. How would you describe your White ethnic group or background?'),

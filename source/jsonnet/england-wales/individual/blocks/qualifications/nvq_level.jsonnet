@@ -93,6 +93,7 @@ local question(region_code, isProxy) = (
 function(region_code) {
   type: 'Question',
   id: 'nvq-level',
+  page_title: 'NVQ or equivalent qualification',
   question_variants: [
     {
       question: question(region_code, isProxy=false),

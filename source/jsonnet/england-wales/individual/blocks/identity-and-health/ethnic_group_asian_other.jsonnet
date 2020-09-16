@@ -31,6 +31,7 @@ local proxyTitle = {
 function(region_code) {
   type: 'Question',
   id: 'other-asian-or-asian-british-ethnic-group',
+  page_title: 'Other Asian or Asian British ethnic group or background',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code),

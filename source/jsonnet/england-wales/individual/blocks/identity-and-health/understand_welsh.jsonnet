@@ -55,6 +55,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'understand-welsh',
+  page_title: 'Welsh language skills',
   question_variants: [
     {
       question: question(nonProxyTitle),

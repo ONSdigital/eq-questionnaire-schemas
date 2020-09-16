@@ -44,6 +44,7 @@ local question(title, region_code) = (
 function(region_code) {
   type: 'Question',
   id: 'business-type',
+  page_title: 'Business type',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code),

@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'address-one-year-ago-outside-uk',
+  page_title: 'Address one year ago outside UK',
   question_variants: [
     {
       question: question('In which country outside the UK was your usual address one year ago?'),

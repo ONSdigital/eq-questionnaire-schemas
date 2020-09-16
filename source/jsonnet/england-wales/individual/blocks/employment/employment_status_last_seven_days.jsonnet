@@ -70,6 +70,7 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
 {
   type: 'Question',
   id: 'employment-status-last-seven-days',
+  page_title: 'Employment status in the last seven days',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyAnswerDescription),

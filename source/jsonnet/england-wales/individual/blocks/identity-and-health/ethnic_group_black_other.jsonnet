@@ -31,6 +31,7 @@ local proxyTitle = {
 function(region_code) {
   type: 'Question',
   id: 'other-black-black-british-caribbean-or-african-ethnic-group',
+  page_title: 'Other Black, Black British or Caribbean ethnic group or background',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code),

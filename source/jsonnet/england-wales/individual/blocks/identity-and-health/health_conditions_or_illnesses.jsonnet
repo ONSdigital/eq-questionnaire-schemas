@@ -57,6 +57,7 @@ local proxyDefinitionContent = [
 {
   type: 'Question',
   id: 'health-conditions-or-illnesses',
+  page_title: 'Health conditions or illnesses',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionContent),

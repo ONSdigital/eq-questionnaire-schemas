@@ -69,6 +69,7 @@ local question(title, questionDescription, region_code) = (
 function(region_code) {
   type: 'Question',
   id: 'other-qualifications',
+  page_title: 'Any other qualifications',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyQuestionDescription, region_code),
