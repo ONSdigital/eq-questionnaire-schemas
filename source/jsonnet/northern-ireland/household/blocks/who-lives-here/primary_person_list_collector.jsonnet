@@ -15,9 +15,9 @@ local questionTitle = {
   add_or_edit_block: {
     id: 'add-or-edit-primary-person',
     type: 'PrimaryPersonListAddOrEditQuestion',
+    page_title: 'Name of Person {list_item_position}',
     question: {
       id: 'primary-person-add-or-edit-question',
-      page_title: 'Name of Person {list_item_position}',
       type: 'General',
       title: 'What is your name?',
       answers: [

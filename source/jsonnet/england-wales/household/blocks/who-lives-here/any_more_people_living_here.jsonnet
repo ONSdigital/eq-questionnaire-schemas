@@ -158,7 +158,6 @@ local addMorePeopleLivingHere(listIsEmpty) = {
     answers: [
       {
         id: 'any-more-people-living-here-answer',
-        page_title: 'Any more people living here',
         mandatory: true,
         type: 'Radio',
         options: [
