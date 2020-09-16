@@ -5,6 +5,7 @@ local rules = import 'rules.libsonnet';
   type: 'ListCollectorDrivingQuestion',
   for_list: 'visitors',
   id: 'any-visitors',
+  page_title: 'Visitors staying here',
   question: {
     type: 'MutuallyExclusive',
     id: 'any-visitors-question',

@@ -1,6 +1,7 @@
 {
   type: 'Interstitial',
   id: 'relationships-introduction',
+  page_title: 'Introduction to household relationships',
   content: {
     title: 'Household relationships',
     contents: [

@@ -164,6 +164,7 @@ function(region_code) {
       title: 'People who live here',
       summary: {
         show_on_completion: true,
+        page_tile: 'People who live here and overnight visitors summary',
         title: {
           text: 'People who live at {household_address} and overnight visitors',
           placeholders: [

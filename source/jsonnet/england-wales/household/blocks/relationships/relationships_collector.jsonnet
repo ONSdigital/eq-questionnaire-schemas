@@ -70,6 +70,7 @@ local firstPersonNamePossessivePlaceholder = {
   id: 'relationships',
   title: 'Household relationships',
   for_list: 'household',
+  page_title: 'How Person {list_item_position} is related to Person {to_list_item_position}',
   question_variants: [
     {
       question: {

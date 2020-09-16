@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Question',
   id: 'central-heating',
+  page_title: 'Central heating',
   question: {
     id: 'central-heating-question',
     title: {

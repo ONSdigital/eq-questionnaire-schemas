@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Interstitial',
   id: 'accommodation-introduction',
+  page_title: 'Introduction to household and accommodation',
   content: {
     title: 'Household and accommodation',
     contents: [

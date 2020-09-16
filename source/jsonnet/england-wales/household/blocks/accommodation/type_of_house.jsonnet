@@ -5,6 +5,7 @@
     id: 'type-of-house-question',
     title: 'Which of the following is your house or bungalow?',
     type: 'General',
+    page_title: 'Type of house',
     answers: [{
       id: 'type-of-house-answer',
       mandatory: false,

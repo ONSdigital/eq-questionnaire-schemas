@@ -105,6 +105,7 @@ local editQuestion(questionTitle) = {
   id: 'anyone-else-list-collector',
   type: 'ListCollector',
   for_list: 'household',
+  page_title: 'People living here',
   question_variants: [
     {
       question: {
@@ -180,6 +181,7 @@ local editQuestion(questionTitle) = {
   ],
   add_block: {
     id: 'add-person',
+    page_title: 'Name of Person',
     type: 'ListAddQuestion',
     question_variants: [
       {
@@ -194,6 +196,7 @@ local editQuestion(questionTitle) = {
   },
   edit_block: {
     id: 'edit-person',
+    page_title: 'Change details for Person {list_item_position}',
     type: 'ListEditQuestion',
     question_variants: [
       {
@@ -209,6 +212,7 @@ local editQuestion(questionTitle) = {
   remove_block: {
     id: 'remove-person',
     type: 'ListRemoveQuestion',
+    page_title: 'Remove Person {list_item_position}',
     question: {
       id: 'remove-question',
       type: 'General',

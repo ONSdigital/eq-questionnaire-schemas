@@ -49,6 +49,7 @@ local removePersonQuestionTitle = {
   id: 'visitor-list-collector',
   type: 'ListCollector',
   for_list: 'visitors',
+  page_title: 'Any more visitors',
   question: {
     id: 'visitor-confirmation-question',
     type: 'General',
@@ -82,6 +83,7 @@ local removePersonQuestionTitle = {
   add_block: {
     id: 'add-visitor',
     type: 'ListAddQuestion',
+    page_title: 'Name of Visitor',
     question: {
       id: 'visitor-add-question',
       type: 'General',
@@ -124,6 +126,7 @@ local removePersonQuestionTitle = {
   edit_block: {
     id: 'edit-visitor',
     type: 'ListEditQuestion',
+    page_title: 'Change details for Visitor {list_item_position}',
     question: {
       id: 'visitor-edit-question',
       type: 'General',
@@ -157,6 +160,7 @@ local removePersonQuestionTitle = {
   remove_block: {
     id: 'remove-visitor',
     type: 'ListRemoveQuestion',
+    page_title: 'Remove Visitor {list_item_position}',
     question: {
       id: 'visitor-remove-question',
       type: 'General',

@@ -61,6 +61,7 @@ local addQuestion(visitorsListEmpty) = {
   id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
+  page_title: 'Any more visitors',
   question: {
     id: 'any-more-visitors-question',
     type: 'General',
@@ -100,6 +101,7 @@ local addQuestion(visitorsListEmpty) = {
   add_block: {
     id: 'any-more-visitors-add-visitor',
     type: 'ListAddQuestion',
+    page_title: 'Name of Visitor',
     question_variants: [
       {
         question: addQuestion(visitorsListEmpty=true),
@@ -122,6 +124,7 @@ local addQuestion(visitorsListEmpty) = {
   edit_block: {
     id: 'any-more-visitors-edit-visitor',
     type: 'ListEditQuestion',
+    page_title: 'Change details for Visitor {list_item_position}',
     question: {
       id: 'any-more-visitors-edit-visitor-question',
       type: 'General',
@@ -160,6 +163,7 @@ local addQuestion(visitorsListEmpty) = {
   remove_block: {
     id: 'any-more-visitors-remove-visitor',
     type: 'ListRemoveQuestion',
+    page_title: 'Remove Visitor {list_item_position}',
     question: {
       id: 'any-more-visitors-remove-visitor-question',
       type: 'General',

@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'type-of-flat',
+  page_title: 'Type of flat',
   question: {
     id: 'type-of-flat-question',
     title: 'Where is your flat, maisonette or apartment?',

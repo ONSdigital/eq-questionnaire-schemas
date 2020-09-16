@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'rooms-shared-with-another-household',
+  page_title: 'All rooms only for this household',
   question: {
     id: 'rooms-shared-with-another-household-question',
     title: 'Are all the rooms in this accommodation, including the kitchen, bathroom and toilet, behind a door that only this household can use?',
