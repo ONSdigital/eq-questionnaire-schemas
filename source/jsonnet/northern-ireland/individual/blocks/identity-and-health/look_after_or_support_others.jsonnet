@@ -56,6 +56,7 @@ local proxyGuidance = 'Exclude anything they do in paid employment';
 {
   type: 'Question',
   id: 'look-after-or-support-others',
+  page_title: 'Look after or support others',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance),

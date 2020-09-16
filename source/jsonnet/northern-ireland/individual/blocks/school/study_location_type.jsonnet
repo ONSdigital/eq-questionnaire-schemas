@@ -49,6 +49,7 @@ local proxyDescriptionStudy = {
 {
   type: 'Question',
   id: 'study-location-type',
+  page_title: 'Type of study location',
   question_variants: [
     {
       question: question(nonProxyTitleStudy, nonProxyDescriptionStudy),

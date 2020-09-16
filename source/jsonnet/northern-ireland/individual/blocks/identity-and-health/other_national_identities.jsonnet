@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'other-national-identities',
+  page_title: 'Other national identities',
   question_variants: [
     {
       question: question('You selected “Other”. How would you describe your other national identity?'),

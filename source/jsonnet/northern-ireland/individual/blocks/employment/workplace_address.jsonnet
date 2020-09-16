@@ -53,6 +53,7 @@ local pastProxyTitleWork = {
 {
   type: 'Question',
   id: 'workplace-address',
+  page_title: 'Workplace address',
   question_variants: [
     {
       question: question(nonProxyTitleWork),

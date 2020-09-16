@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'religion-other',
+  page_title: 'Other religion',
   question_variants: [
     {
       question: question('You selected “Other”. What religion, religious denomination or body do you belong to?'),

@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'country-of-birth-elsewhere',
+  page_title: 'Country of birth outside UK',
   question_variants: [
     {
       question: question('You selected “Elsewhere”. What is your country of birth?'),

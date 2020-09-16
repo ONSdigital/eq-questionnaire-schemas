@@ -54,6 +54,7 @@ local proxyDescription = 'If they had no usual address one year ago, state the a
 {
   type: 'Question',
   id: 'location-one-year-ago',
+  page_title: 'Location one year ago',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),

@@ -44,6 +44,7 @@ local proxyTitleSchool = {
 {
   type: 'Question',
   id: 'study-location-in-northern-ireland',
+  page_title: 'Study address',
   question_variants: [
     {
       question: question(nonProxyTitleSchool),

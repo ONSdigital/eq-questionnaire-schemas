@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Question',
   id: 'age-last-birthday',
+  page_title: 'Age last birthday',
   question: {
     id: 'age-last-birthday-question',
     type: 'General',

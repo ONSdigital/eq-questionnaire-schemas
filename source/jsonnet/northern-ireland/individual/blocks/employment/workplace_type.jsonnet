@@ -66,6 +66,7 @@ local proxyDescriptionDidWork = {
 {
   type: 'Question',
   id: 'workplace-type',
+  page_title: 'Type of workplace',
   question_variants: [
     {
       question: question(nonProxyTitleWork, nonProxyDescriptionWork),

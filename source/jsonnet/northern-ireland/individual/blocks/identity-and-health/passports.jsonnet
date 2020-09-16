@@ -65,6 +65,7 @@ local proxyLabel = 'Please specify the passports held';
 {
   type: 'Question',
   id: 'passports',
+  page_title: 'Passports',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionContent, 'You can enter your passports on the next question'),

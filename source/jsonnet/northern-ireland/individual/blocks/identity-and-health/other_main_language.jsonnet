@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'other-main-language',
+  page_title: 'Other language',
   question_variants: [
     {
       question: question('You selected “Other, including British or Irish Sign Language”. What is your main language?'),

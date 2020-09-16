@@ -55,6 +55,7 @@ local pastProxyDescription = 'This is the most recent job they had. If they had 
 {
   type: 'Question',
   id: 'main-job-status',
+  page_title: 'Main job employment status',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),

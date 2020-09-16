@@ -74,6 +74,7 @@ local proxyDescriptionSchool = 'Answer for the longest part, by distance, of the
 {
   type: 'Question',
   id: 'travel-to-study-location',
+  page_title: 'Travel to study location',
   question_variants: [
     {
       question: question(nonProxyTitleSchool, nonProxyDescriptionSchool),

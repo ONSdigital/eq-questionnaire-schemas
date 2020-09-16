@@ -57,6 +57,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'gcse',
+  page_title: 'GCSE or equivalent qualification',
   question_variants: [
     {
       question: question(nonProxyTitle),

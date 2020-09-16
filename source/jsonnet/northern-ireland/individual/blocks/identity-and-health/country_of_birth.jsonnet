@@ -52,6 +52,7 @@ local question(title, elsewhereDescription) = {
 {
   type: 'Question',
   id: 'country-of-birth',
+  page_title: 'Country of birth',
   question_variants: [
     {
       question: question(nonProxyTitle, 'You can enter your country of birth on the next question'),

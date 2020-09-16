@@ -75,6 +75,7 @@ local question(title, otherEthnicGroupDescription) = {
 {
   type: 'Question',
   id: 'ethnic-group',
+  page_title: 'Ethnic group',
   question_variants: [
     {
       question: question(nonProxyTitle, 'You can enter your ethnic group or background on the next question'),
