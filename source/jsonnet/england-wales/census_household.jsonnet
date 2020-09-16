@@ -176,7 +176,7 @@ function(region_code, census_month_year_date) {
       title: 'People who live here',
       summary: {
         show_on_completion: true,
-        page_tile: 'People who live here and overnight visitors summary',
+        page_title: 'People who live here and overnight visitors summary',
         title: {
           text: 'People who live at {household_address} and overnight visitors',
           placeholders: [
