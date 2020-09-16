@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'who-rent-from',
+  page_title: 'Landlord',
   question: {
     id: 'who-rent-from-question',
     title: 'Who do you rent from?',

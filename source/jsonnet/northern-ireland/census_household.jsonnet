@@ -265,7 +265,10 @@ function(region_code) {
     {
       id: 'accommodation-section',
       title: 'Household and accommodation',
-      summary: { show_on_completion: false },
+      summary: {
+        show_on_completion: false,
+        page_title: 'Household and accommodation summary',
+      },
       groups: [
         {
           id: 'accommodation-group',

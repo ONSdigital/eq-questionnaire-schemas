@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Question',
   id: 'renewable-energy-systems',
+  page_title: 'Renewable energy systems',
   question: {
     id: 'renewable-energy-systems-question',
     mandatory: false,

@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'central-heating',
+  page_title: 'Central heating',
   question: {
     id: 'central-heating-question',
     type: 'MutuallyExclusive',
