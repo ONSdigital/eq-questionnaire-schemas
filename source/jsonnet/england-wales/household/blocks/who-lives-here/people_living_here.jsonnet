@@ -181,7 +181,7 @@ local editQuestion(questionTitle) = {
   ],
   add_block: {
     id: 'people-living-here-add-person',
-    page_title: 'Name of Person',
+    page_title: 'Name of Person {list_item_position}',
     type: 'ListAddQuestion',
     question_variants: [
       {

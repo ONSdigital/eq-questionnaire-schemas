@@ -101,7 +101,7 @@ local addQuestion(visitorsListEmpty) = {
   add_block: {
     id: 'any-more-visitors-add-visitor',
     type: 'ListAddQuestion',
-    page_title: 'Name of Visitor',
+    page_title: 'Name of Visitor {list_item_position}',
     question_variants: [
       {
         question: addQuestion(visitorsListEmpty=true),

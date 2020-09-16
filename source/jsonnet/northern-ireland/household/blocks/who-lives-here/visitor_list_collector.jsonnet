@@ -83,7 +83,7 @@ local removePersonQuestionTitle = {
   add_block: {
     id: 'add-visitor',
     type: 'ListAddQuestion',
-    page_title: 'Name of Visitor',
+    page_title: 'Name of Visitor {list_item_position}',
     question: {
       id: 'visitor-add-question',
       type: 'General',
