@@ -178,7 +178,7 @@ local editQuestion(questionTitle) = {
   },
   add_block: {
     id: 'anyone-else-temp-away-add-person',
-    page_title: 'Add person living here',
+    page_title: 'Add name of Person {list_item_selector}',
     type: 'ListAddQuestion',
     question: {
       id: 'anyone-else-temp-away-add-question',
