@@ -35,6 +35,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'other-qualifications',
+  page_title: 'Any other qualifications',
   question_variants: [
     {
       question: question(nonProxyTitle),

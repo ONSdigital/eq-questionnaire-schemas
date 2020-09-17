@@ -43,6 +43,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'level-of-spoken-english',
+  page_title: 'Level of spoken English',
   question_variants: [
     {
       question: question(nonProxyTitle),

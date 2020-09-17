@@ -56,6 +56,7 @@ local question(title, otherDescription) = {
 {
   type: 'Question',
   id: 'national-identity',
+  page_title: 'National identity',
   question_variants: [
     {
       question: question(nonProxyTitle, 'You can enter your national identity on the next question'),

@@ -40,6 +40,7 @@ local question(title) = (
 {
   type: 'Question',
   id: 'business-type',
+  page_title: 'Business type',
   question_variants: [
     {
       question: question(nonProxyTitle),

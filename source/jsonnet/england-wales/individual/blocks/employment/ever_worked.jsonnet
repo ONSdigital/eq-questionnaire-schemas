@@ -41,6 +41,7 @@ local proxyLabel = 'No, has never worked';
 {
   type: 'Question',
   id: 'ever-worked',
+  page_title: 'Ever done any paid work',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyLabel),

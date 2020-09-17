@@ -75,6 +75,7 @@ local question(title, region_code, otherReligionDescription) = (
 function(region_code) {
   type: 'Question',
   id: 'religion',
+  page_title: 'Religion',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code, 'You can enter your religion on the next question'),

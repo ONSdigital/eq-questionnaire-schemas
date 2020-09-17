@@ -48,6 +48,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'not-employed-status-last-seven-days',
+  page_title: 'Not employed status in the last seven days',
   question_variants: [
     {
       question: question(nonProxyTitle),

@@ -58,6 +58,7 @@ local pastOption = 'No organisation or worked for a private individual';
 {
   type: 'Question',
   id: 'business-name',
+  page_title: 'Business name',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription, nonProxyoption),

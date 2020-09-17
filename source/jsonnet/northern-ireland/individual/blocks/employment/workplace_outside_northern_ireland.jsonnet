@@ -42,6 +42,7 @@ local pastProxyTitle = {
 {
   type: 'Question',
   id: 'workplace-outside-northern-ireland',
+  page_title: 'Main place of work town and county',
   question_variants: [
     {
       question: question(nonProxyTitle),

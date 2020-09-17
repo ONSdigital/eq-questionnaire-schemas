@@ -43,6 +43,7 @@ local proxyOver19Title = {
 {
   type: 'Question',
   id: 'in-education',
+  page_title: 'Student in full-time education',
   question_variants: [
     {
       question: question(nonProxyOver19Title),

@@ -20,6 +20,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'ethnic-group-black-african',
+  page_title: 'Other African ethnic group or background',
   question_variants: [
     {
       question: question('You selected “African”. How would you describe your African ethnic group or background?'),

@@ -90,6 +90,7 @@ local question(title, description, detailAnswerLabel, region_code, otherDescript
 function(region_code) {
   type: 'Question',
   id: 'national-identity',
+  page_title: 'National identity',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription, nonProxyDetailAnswerLabel, region_code, 'You can describe your national identity on the next question'),

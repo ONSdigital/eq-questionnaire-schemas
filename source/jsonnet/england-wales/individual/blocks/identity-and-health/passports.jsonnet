@@ -65,6 +65,7 @@ local proxyLabel = 'Enter passports held';
 {
   type: 'Question',
   id: 'passports',
+  page_title: 'Passports',
   question_variants: [
     {
       question: question(nonProxyTitle, 'passports and travel documents that have expired, if you are entitled to renew them'),

@@ -77,6 +77,7 @@ local question(title, definitionDescription, region_code, otherDescription) = (
 function(region_code) {
   type: 'Question',
   id: 'main-language',
+  page_title: 'Main language',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionDescription, region_code, 'You can enter your main language on the next question'),

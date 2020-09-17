@@ -60,6 +60,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'nvq-level',
+  page_title: 'NVQ or equivalent qualification',
   question_variants: [
     {
       question: question(nonProxyTitle),

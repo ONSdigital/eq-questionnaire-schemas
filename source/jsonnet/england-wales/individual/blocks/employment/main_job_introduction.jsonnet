@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Interstitial',
   id: 'main-job-introduction',
+  page_title: 'Introduction to main job questions',
   content_variants: [
     {
       content: {

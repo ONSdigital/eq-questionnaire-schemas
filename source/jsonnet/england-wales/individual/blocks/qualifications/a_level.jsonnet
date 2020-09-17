@@ -104,6 +104,7 @@ local question(region_code, isProxy) = (
 function(region_code) {
   type: 'Question',
   id: 'a-level',
+  page_title: 'AS, A level or equivalent qualification',
   question_variants: [
     {
       question: question(region_code, isProxy=false),

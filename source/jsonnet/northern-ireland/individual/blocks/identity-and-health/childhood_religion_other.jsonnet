@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'childhood-religion-other',
+  page_title: 'Other childhood religion',
   question_variants: [
     {
       question: question('You selected “Other”. What religion, religious denomination were you brought up in?'),
