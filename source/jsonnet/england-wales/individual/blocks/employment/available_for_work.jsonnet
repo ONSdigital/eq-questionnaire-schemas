@@ -35,6 +35,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'available-for-work',
+  page_title: 'Available to start work in the next two weeks',
   question_variants: [
     {
       question: question(nonProxyTitle),

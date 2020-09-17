@@ -41,6 +41,7 @@ local proxyTitle = {
 function(region_code) {
   type: 'Question',
   id: 'when-arrive-in-uk',
+  page_title: 'Arrived in the UK on or after 21 March 2020',
   question_variants: [
     {
       question: question(nonProxyTitle),

@@ -106,6 +106,7 @@ local question(region_code, isProxy) = (
 function(region_code) {
   type: 'Question',
   id: 'gcse',
+  page_title: 'GCSE or equivalent qualification',
   question_variants: [
     {
       question: question(region_code, isProxy=false),

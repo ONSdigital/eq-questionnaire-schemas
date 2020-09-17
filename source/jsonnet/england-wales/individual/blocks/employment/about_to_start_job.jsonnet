@@ -53,6 +53,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
 {
   type: 'Question',
   id: 'about-to-start-job',
+  page_title: 'Waiting to start a job already accepted',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader),

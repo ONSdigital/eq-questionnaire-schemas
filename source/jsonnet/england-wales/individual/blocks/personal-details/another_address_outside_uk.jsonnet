@@ -26,6 +26,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'another-address-outside-uk',
+  page_title: 'Other address outside the UK',
   question_variants: [
     {
       question: question('In which country outside the UK do you stay for more than 30 days a year?'),

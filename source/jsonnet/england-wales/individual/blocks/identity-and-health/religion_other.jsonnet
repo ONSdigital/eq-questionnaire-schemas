@@ -28,6 +28,7 @@ local question(title) = {
 function(region_code) {
   type: 'Question',
   id: 'religion-other',
+  page_title: 'Other religion',
   question_variants: [
     {
       question: question('You selected “Any other religion”. What is your religion?'),

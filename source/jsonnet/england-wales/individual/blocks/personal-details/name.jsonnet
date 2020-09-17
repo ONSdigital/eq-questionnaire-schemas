@@ -42,6 +42,7 @@ local proxyTitle = 'What is their name?';
 {
   type: 'Question',
   id: 'name',
+  page_title: 'Name',
   question_variants: [
     {
       question: question(nonProxyTitle),

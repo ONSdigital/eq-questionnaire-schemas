@@ -53,6 +53,7 @@ local proxyGuidanceHeader = 'Why we ask this question if they are retired or lon
 {
   type: 'Question',
   id: 'looking-for-work',
+  page_title: 'Looking for paid work',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader),

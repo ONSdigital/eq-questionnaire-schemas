@@ -71,6 +71,7 @@ local proxyDescription = 'Their answer will help their local community by provid
 {
   type: 'Question',
   id: 'armed-forces',
+  page_title: 'Served in the UK Armed Forces',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyDescription),

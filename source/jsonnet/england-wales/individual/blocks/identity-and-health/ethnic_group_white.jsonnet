@@ -73,6 +73,7 @@ local question(title, guidance, description, region_code, whiteBackgroundDescrip
 function(region_code) {
   type: 'Question',
   id: 'white-ethnic-group',
+  page_title: 'White ethnic group or background',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance, nonProxyDescription, region_code, 'You can enter your ethnic group or background on the next question'),

@@ -89,6 +89,7 @@ local question(title, region_code, elsewhereDescription) = (
 function(region_code) {
   type: 'Question',
   id: 'country-of-birth',
+  page_title: 'Country of birth',
   question_variants: [
     {
       question: question(nonProxyTitle, region_code, 'You can enter your country of birth on the next question'),

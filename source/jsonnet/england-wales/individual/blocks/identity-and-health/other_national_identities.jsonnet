@@ -28,6 +28,7 @@ local question(title, guidance) = {
 {
   type: 'Question',
   id: 'other-national-identities',
+  page_title: 'Other national identities',
   question_variants: [
     {
       question: question(

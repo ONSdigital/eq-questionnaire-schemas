@@ -52,6 +52,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'another-address',
+  page_title: 'Another address, more than 30 days a year',
   question_variants: [
     {
       question: question(nonProxyTitle),

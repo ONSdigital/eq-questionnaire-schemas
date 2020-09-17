@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'confirm-who-is-answering',
+  page_title: 'Who is answering',
   question: {
     id: 'confirm-who-is-answering-question',
     title: 'Are you answering these questions for yourself or for someone else?',

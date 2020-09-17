@@ -68,6 +68,7 @@ local proxyGuidanceContent = [
 {
   type: 'Question',
   id: 'depot-address',
+  page_title: 'Depot address',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyGuidanceContent),
