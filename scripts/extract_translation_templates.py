@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
+import argparse
+import difflib
+import logging
 import os
 import sys
 import tempfile
-import logging
-import argparse
-import difflib
 
 import coloredlogs
-
 from eq_translations.entrypoints import handle_extract_template
 
 logger = logging.getLogger(__name__)
@@ -20,7 +19,7 @@ SCHEMAS_TO_EXTRACT = [
     "census_individual_gb_nir",
     "census_household_gb_wls",
     "census_household_gb_nir",
-    "census_communal_establishment_gb_wls"
+    "census_communal_establishment_gb_wls",
 ]
 
 

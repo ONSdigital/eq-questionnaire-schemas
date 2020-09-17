@@ -8,16 +8,32 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
       - name: Install jsonnet
         run: |
           mkdir jsonnet
           curl -o jsonnet.tar.gz -L https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
           tar -xzf jsonnet.tar.gz -C jsonnet
           echo "::add-path::jsonnet"
+      - name: Install pipenv --dev
+        run: pip install pipenv==2018.11.26
+      - run: |
+          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+      - name: Cache virtualenv
+        id: cache-virtualenv
+        uses: actions/cache@v1
+        with:
+          path: ~/.local/share/virtualenvs/
+          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
+      - name: Install virtual environment
+        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
+        run: pipenv install --dev
       - name: Lint jsonnet
         run: make lint
       - name: Build schemas
-        run: make build-schemas
+        run: make build
       - name: Archive schema artifacts
         uses: actions/upload-artifact@v1
         with:
@@ -31,7 +47,7 @@ jobs:
       - uses: actions/setup-python@v1
         with:
           python-version: 3.8
-      - name: Download built schemas
+      - name: Download schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
@@ -55,7 +71,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Download built schemas
+      - name: Download schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
@@ -67,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Download built schemas
+      - name: Download schemas
         uses: actions/download-artifact@v1
         with:
           name: schemas
