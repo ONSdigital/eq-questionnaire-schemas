@@ -20,7 +20,7 @@ local rules = import 'rules.libsonnet';
         label: 'Current name of country',
         description: 'Enter your own answer or select from suggestions',
         mandatory: false,
-        suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v2.0.0/ni/countries-of-birth.json',
+        suggestions_url: '{suggestions_url_root}/countries-of-birth.json',
         type: 'TextField',
         max_length: 100,
       },

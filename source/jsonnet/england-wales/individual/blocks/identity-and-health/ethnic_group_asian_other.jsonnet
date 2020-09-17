@@ -13,7 +13,7 @@ local question(title, region_code) = (
         description: 'Enter your own answer or select from suggestions',
         max_length: 100,
         mandatory: false,
-        suggestions_url: 'https://cdn.eq.census-gcp.onsdigital.uk/data/v1.0.0/ethnic-groups.json',
+        suggestions_url: '{suggestions_url_root}/ethnic-groups.json',
         type: 'TextField',
       },
     ],
