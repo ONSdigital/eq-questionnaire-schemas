@@ -5,6 +5,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Question',
   id: 'visitor-date-of-birth',
+  page_title: 'Date of birth',
   question: {
     id: 'visitor-date-of-birth-question',
     title: {

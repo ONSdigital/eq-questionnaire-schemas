@@ -4,6 +4,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Interstitial',
   id: 'visitor-introduction',
+  page_title: 'Introduction to visitor questions',
   content: {
     title: {
       text: '{person_name}',

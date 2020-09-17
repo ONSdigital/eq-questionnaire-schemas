@@ -302,7 +302,10 @@ function(region_code, census_month_year_date) {
     {
       id: 'individual-section',
       title: 'Individual Section',
-      summary: { show_on_completion: false },
+      summary: {
+        show_on_completion: false,
+        page_title: 'Individual summary',
+      },
       repeat: {
         for_list: 'household',
         title: {
@@ -441,7 +444,10 @@ function(region_code, census_month_year_date) {
     {
       id: 'visitor-section',
       title: 'Visitors',
-      summary: { show_on_completion: false },
+      summary: {
+        show_on_completion: false,
+        page_title: 'Visitor summary',
+      },
       repeat: {
         for_list: 'visitors',
         title: {
