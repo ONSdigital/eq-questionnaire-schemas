@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 {
   type: 'Question',
   id: 'accommodation-type',
+  page_title: 'Accommodation type',
   question: {
     id: 'accommodation-type-question',
     title: {

@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'type-of-house',
+  page_title: 'Type of house',
   question: {
     id: 'type-of-house-question',
     title: 'Which of the following is your house or bungalow?',

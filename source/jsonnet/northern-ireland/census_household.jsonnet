@@ -164,6 +164,7 @@ function(region_code) {
       title: 'People who live here',
       summary: {
         show_on_completion: true,
+        page_title: 'People who live here and overnight visitors summary',
         title: {
           text: 'People who live at {household_address} and overnight visitors',
           placeholders: [
@@ -264,7 +265,10 @@ function(region_code) {
     {
       id: 'accommodation-section',
       title: 'Household and accommodation',
-      summary: { show_on_completion: false },
+      summary: {
+        show_on_completion: false,
+        page_title: 'Household and accommodation summary',
+      },
       groups: [
         {
           id: 'accommodation-group',

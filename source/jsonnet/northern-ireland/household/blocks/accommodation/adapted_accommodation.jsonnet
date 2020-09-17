@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'adapted-accommodation',
+  page_title: 'Adapted accommodation',
   question: {
     id: 'adapted-accommodation-question',
     mandatory: false,

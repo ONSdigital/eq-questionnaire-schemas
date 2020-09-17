@@ -122,6 +122,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
   id: 'any-more-people-living-here',
   type: 'ListCollector',
   for_list: 'household',
+  page_title: 'Any more people living here',
   question: {
     id: 'any-more-people-living-here-question',
     type: 'General',
@@ -203,6 +204,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
   },
   add_block: {
     id: 'any-more-people-living-here-add-person',
+    page_title: 'Add name of Person {list_item_position}',
     type: 'ListAddQuestion',
     question_variants: [
       {
@@ -217,6 +219,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
   },
   edit_block: {
     id: 'any-more-people-living-here-edit-person',
+    page_title: 'Change details for Person {list_item_position}',
     type: 'ListEditQuestion',
     question_variants: [
       {
@@ -231,6 +234,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
   },
   remove_block: {
     id: 'any-more-people-living-here-remove-person',
+    page_title: 'Remove Person {list_item_position}',
     type: 'ListRemoveQuestion',
     question: {
       id: 'any-more-people-living-here-remove-person-question',

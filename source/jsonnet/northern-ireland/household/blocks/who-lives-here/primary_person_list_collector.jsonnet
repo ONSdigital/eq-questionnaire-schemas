@@ -9,11 +9,13 @@ local questionTitle = {
 
 {
   id: 'primary-person-list-collector',
+  page_title: 'Where you usually live',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
   add_or_edit_block: {
     id: 'add-or-edit-primary-person',
     type: 'PrimaryPersonListAddOrEditQuestion',
+    page_title: 'Name of Person {list_item_position}',
     question: {
       id: 'primary-person-add-or-edit-question',
       type: 'General',

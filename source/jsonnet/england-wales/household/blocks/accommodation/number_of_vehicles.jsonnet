@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'number-of-vehicles',
+  page_title: 'Number of vehicles',
   question: {
     id: 'number-of-vehicles-question',
     title: 'In total, how many cars or vans are owned, or available for use, by members of this household?',

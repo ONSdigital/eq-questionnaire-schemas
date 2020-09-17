@@ -2,10 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 
 {
   id: 'do-you-usually-live-here',
+  page_title: 'Where you usually live',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
   add_or_edit_block: {
     id: 'what-is-your-name',
+    page_title: 'Name of Person {list_item_position}',
     type: 'PrimaryPersonListAddOrEditQuestion',
     question: {
       id: 'what-is-your-name-question',

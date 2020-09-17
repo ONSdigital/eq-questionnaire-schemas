@@ -11,6 +11,7 @@ local contentDescription = {
 {
   type: 'Interstitial',
   id: 'who-lives-here-interstitial',
+  page_title: 'Introduction to people who live here',
   content: {
     title: {
       text: 'People who live at {household_address}',

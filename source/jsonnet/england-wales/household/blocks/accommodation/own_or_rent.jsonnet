@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'own-or-rent',
+  page_title: 'Owned or rented accommodation',
   question: {
     id: 'own-or-rent-question',
     title: {

@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'number-of-bedrooms',
+  page_title: 'Number of bedrooms',
   question: {
     id: 'number-of-bedrooms-question',
     title: 'How many bedrooms are available for use only by this household?',
