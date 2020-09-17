@@ -204,7 +204,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
   },
   add_block: {
     id: 'any-more-people-living-here-add-person',
-    page_title: 'Add name of Person {list_item_selector}',
+    page_title: 'Add name of Person {list_item_position}',
     type: 'ListAddQuestion',
     question_variants: [
       {
