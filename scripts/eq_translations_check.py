@@ -1,9 +1,8 @@
 import logging
-import requests
 import sys
 
 import eq_translations
-
+import requests
 from requests.exceptions import RequestException
 
 logger = logging.getLogger(__name__)
@@ -13,7 +12,7 @@ try:
         "https://api.github.com/repos/ONSdigital/eq-translations/releases"
     )
     if response.status_code == 200:
-        version = f'v{eq_translations.__version__}'
+        version = f"v{eq_translations.__version__}"
         latest_tag = response.json()[0]["tag_name"]
         if latest_tag != version:
             logger.error(

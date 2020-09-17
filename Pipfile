@@ -5,9 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 coloredlogs = "*"
+black = "==20.8b1"
+isort = "*"
 
 [packages]
-eq-translations = {editable = true, git = "https://github.com/ONSDigital/eq-translations.git", ref = "v4.2.0"}
+eq-translations = {editable = true,git = "https://github.com/ONSDigital/eq-translations.git",ref = "v4.2.0"}
+jsonpointer = "*"
+jsonpath-rw = "*"
 
 [requires]
 python_version = "3.8"
