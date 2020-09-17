@@ -84,7 +84,7 @@ def update_schemas(schemas_dir):
                 with open(schema_filepath, "w") as schema_file:
                     json.dump(schema_data, schema_file, indent=4)
             else:
-                logger.warning(
+                logger.info(
                     f"{language_code}/{schema_name}: No suggestions urls to resolve"
                 )
 
