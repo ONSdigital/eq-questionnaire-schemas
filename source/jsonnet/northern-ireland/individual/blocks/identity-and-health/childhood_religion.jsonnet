@@ -60,6 +60,7 @@ local question(title, otherDescription) = {
 {
   type: 'Question',
   id: 'childhood-religion',
+  page_title: 'Childhood religion',
   question_variants: [
     {
       question: question(nonProxyTitle, 'You can enter your religion on the next question'),

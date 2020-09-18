@@ -20,6 +20,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'study-location-country',
+  page_title: 'Country of study',
   question_variants: [
     {
       question: question('In which country is your course of <em>study</em>, including school?'),

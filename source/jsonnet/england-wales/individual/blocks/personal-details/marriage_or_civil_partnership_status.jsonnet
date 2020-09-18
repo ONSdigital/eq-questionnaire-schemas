@@ -82,6 +82,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'marital-or-civil-partnership-status',
+  page_title: 'Legal marital or registered civil partnership status',
   question_variants: [
     {
       question: question(nonProxyTitle),

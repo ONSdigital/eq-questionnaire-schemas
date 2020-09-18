@@ -132,6 +132,7 @@ function(region_code) (
   {
     type: 'Question',
     id: 'ethnic-group',
+    page_title: 'Ethnic group',
     question_variants: [
       {
         question: question(nonProxyTitle, nonProxyGuidance, nonProxyDescription, region_code),

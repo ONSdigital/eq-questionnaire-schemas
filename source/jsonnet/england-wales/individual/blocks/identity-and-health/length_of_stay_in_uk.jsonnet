@@ -36,6 +36,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'length-of-stay-in-uk',
+  page_title: 'Planned length of stay in the UK',
   question_variants: [
     {
       question: question(nonProxyTitle),

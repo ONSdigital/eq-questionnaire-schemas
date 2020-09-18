@@ -53,6 +53,7 @@ local question(englandTitle, walesTitle, region_code, guidance, definitionDescri
   }
 );
 
+local englandPageTitle = 'Black, Black British, Caribbean or African ethnic group or background';
 local nonProxyEnglandTitle = 'Which one best describes your Black, Black British, Caribbean or African ethnic group or background?';
 local proxyEnglandTitle = {
   text: 'Which one best describes <em>{person_name_possessive}</em> Black, Black British, Caribbean or African ethnic group or background?',
@@ -60,6 +61,8 @@ local proxyEnglandTitle = {
     placeholders.personNamePossessive,
   ],
 };
+
+local walesPageTitle = 'Black, Black Welsh, Black British, Caribbean or African ethnic group or background';
 local nonProxyWalesTitle = 'Which one best describes your Black, Black Welsh, Black British, Caribbean or African ethnic group or background?';
 local proxyWalesTitle = {
   text: 'Which one best describes <em>{person_name_possessive}</em> Black, Black Welsh, Black British, Caribbean or African ethnic group or background?',
@@ -73,6 +76,7 @@ function(region_code) (
   {
     type: 'Question',
     id: 'black-black-british-caribbean-or-african-ethnic-group',
+    page_title: if region_code == 'GB-WLS' then walesPageTitle else englandPageTitle,
     question_variants: [
       {
         question: question(nonProxyEnglandTitle, nonProxyWalesTitle, region_code, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),

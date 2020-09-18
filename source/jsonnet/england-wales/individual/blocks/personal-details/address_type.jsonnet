@@ -95,6 +95,7 @@ local proxyNonUkAddressTitle = {
 {
   type: 'Question',
   id: 'address-type',
+  page_title: 'Type of address',
   question_variants: [
     {
       question: question(ukAddressTitle),

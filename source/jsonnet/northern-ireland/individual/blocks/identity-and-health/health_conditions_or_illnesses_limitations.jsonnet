@@ -47,6 +47,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'health-conditions-or-illnesses-limitations',
+  page_title: 'Health conditions or illnesses that reduce activity',
   question_variants: [
     {
       question: question(nonProxyTitle),

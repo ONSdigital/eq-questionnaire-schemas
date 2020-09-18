@@ -36,6 +36,7 @@ local pastProxyTitle = {
 {
   type: 'Question',
   id: 'job-description',
+  page_title: 'Job description',
   question_variants: [
     {
       question: question(nonProxyTitle),

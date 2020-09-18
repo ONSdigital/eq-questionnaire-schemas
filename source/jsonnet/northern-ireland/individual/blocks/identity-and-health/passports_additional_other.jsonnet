@@ -21,6 +21,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'passports-additional-other',
+  page_title: 'Other passports multiple',
   question_variants: [
     {
       question: question('You selected “Other”. What other passports do you hold?'),

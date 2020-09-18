@@ -28,6 +28,7 @@ local question(title, guidance) = {
 {
   type: 'Question',
   id: 'passports-other',
+  page_title: 'Other passports',
   question_variants: [
     {
       question: question(

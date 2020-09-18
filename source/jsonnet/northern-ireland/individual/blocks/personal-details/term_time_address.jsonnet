@@ -39,6 +39,7 @@ local proxyTitle = 'Enter details of their term time address.';
 {
   type: 'Question',
   id: 'term-time-address',
+  page_title: 'Term-time address UK',
   question_variants: [
     {
       question: question(nonProxyTitle),

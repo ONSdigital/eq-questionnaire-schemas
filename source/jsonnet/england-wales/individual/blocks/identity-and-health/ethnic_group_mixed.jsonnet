@@ -63,6 +63,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'mixed-or-multiple-ethnic-group',
+  page_title: 'Mixed or Multiple ethnic group or background',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidance, nonProxyDefinitionDescription, 'You can enter your ethnic group or background on the next question'),

@@ -61,6 +61,7 @@ local pastProxyAnswerDescription = 'Freelance means that they were self-employed
 {
   type: 'Question',
   id: 'main-job-status',
+  page_title: 'Main job employment status',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),

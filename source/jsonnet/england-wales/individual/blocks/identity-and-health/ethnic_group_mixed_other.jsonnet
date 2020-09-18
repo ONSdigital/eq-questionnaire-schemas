@@ -19,6 +19,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'other-mixed-or-multiple-ethnic-group',
+  page_title: 'Other Mixed or Multiple ethnic group or background',
   question_variants: [
     {
       question: question('You selected “Any other Mixed or Multiple background”. How would you describe your Mixed or Multiple ethnic group or background?'),

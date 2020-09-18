@@ -42,6 +42,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'date-of-birth',
+  page_title: 'Date of birth',
   question_variants: [
     {
       question: question(nonProxyTitle),

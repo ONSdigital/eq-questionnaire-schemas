@@ -64,6 +64,7 @@ local proxyTitle = {
 {
   type: 'Question',
   id: 'sexual-orientation',
+  page_title: 'Sexual orientation',
   question_variants: [
     {
       question: question(nonProxyTitle),

@@ -44,6 +44,7 @@ local question(title) = {
 {
   type: 'Question',
   id: 'degree-level-or-above',
+  page_title: 'Degree-level or higher qualification',
   question_variants: [
     {
       question: question(nonProxyTitle),

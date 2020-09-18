@@ -81,6 +81,7 @@ local proxyDescription = 'Their answer will help their local community by provid
 {
   type: 'Question',
   id: 'sexual-orientation',
+  page_title: 'Sexual orientation',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyGuidanceHeader, nonProxyDescription),

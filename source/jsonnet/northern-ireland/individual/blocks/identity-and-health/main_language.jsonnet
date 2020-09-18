@@ -47,6 +47,7 @@ local question(title, definitionDescription) = {
 {
   type: 'Question',
   id: 'main-language',
+  page_title: 'Main language',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDefinitionDescription),
