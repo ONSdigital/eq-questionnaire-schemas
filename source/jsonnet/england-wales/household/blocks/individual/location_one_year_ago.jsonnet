@@ -68,6 +68,7 @@ local additionalAnswerOption = [
 {
   type: 'Question',
   id: 'location-one-year-ago',
+  page_title: 'Location one year ago',
   question_variants: [
     {
       question: question(nonProxyTitle, nonProxyDescription),
