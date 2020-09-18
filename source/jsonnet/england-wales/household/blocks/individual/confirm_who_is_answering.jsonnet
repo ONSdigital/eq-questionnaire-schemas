@@ -4,6 +4,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'confirm-who-is-answering',
+  page_title: 'Who is answering',
   question: {
     id: 'confirm-who-is-answering-question',
     title: {
