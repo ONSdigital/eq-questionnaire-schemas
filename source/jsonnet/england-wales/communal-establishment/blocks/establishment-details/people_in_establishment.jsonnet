@@ -1,58 +1,60 @@
-local question = {
-  id: 'people-in-establishment-question',
-  title: 'How many people are currently living in this establishment?',
-  type: 'General',
-  guidance: {
-    contents: [
-      {
-        description: '<em>Include</em> everyone from the groups you selected for the previous question',
-      },
-      {
-        description: '<em>Do not include</em> visitors who have another UK address, or usually live outside the UK and intend to stay in the UK for 3 months or less',
-      },
-    ],
-  },
-  answers: [{
-    id: 'people-in-establishment-answer',
-    label: 'Number of residents',
-    mandatory: false,
-    type: 'Number',
-    minimum: {
-      value: 0,
-    },
-  }],
+local placeholders = import '../../../lib/placeholders.libsonnet';
+
+local alreadySpentAnswerLabel = {
+  text: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
+  placeholders: [
+    placeholders.censusDate,
+  ],
 };
 
-local questionWithExclusive = {
+local alreadyStayingAnswerLabel = {
+  text: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
+  placeholders: [
+    placeholders.censusDate,
+  ],
+};
+
+local question = {
   id: 'people-in-establishment-question',
-  title: 'How many people are currently living in this establishment?',
+  title: 'Do any of the following currently live in this establishment?',
   type: 'MutuallyExclusive',
   mandatory: false,
-  guidance: {
-    contents: [
-      {
-        description: '<em>Do not include</em> visitors who have another UK address, or usually live outside the UK and intend to stay in the UK for 3 months or less',
-      },
-    ],
-  },
   answers: [
     {
       id: 'people-in-establishment-answer',
-      label: 'Number of residents',
       mandatory: false,
-      type: 'Number',
-      minimum: {
-        value: 0,
-      },
+      type: 'Checkbox',
+      options: [
+        {
+          label: alreadySpentAnswerLabel,
+          value: 'Anyone who has already spent, or is expected to spend, 6 months or more in this establishment, even if they are away on {census_date}',
+        },
+        {
+          label: alreadyStayingAnswerLabel,
+          value: 'UK residents who are staying in this establishment on {census_date} and have no other usual UK address',
+        },
+        {
+          label: 'People who usually live outside the UK who have stayed, or intend to stay, in the UK for 3 months or more who do not have another UK address',
+          value: 'People who usually live outside the UK who have stayed, or intend to stay, in the UK for 3 months or more who do not have another UK address',
+        },
+        {
+          label: 'Students or schoolchildren who stay in this establishment during term time',
+          value: 'Students or schoolchildren who stay in this establishment during term time',
+        },
+        {
+          label: 'Yourself, your family, staff, and any others who live in this establishment',
+          value: 'Yourself, your family, staff, and any others who live in this establishment',
+        },
+      ],
     },
     {
-      id: 'people-in-establishment-answer-exclusive',
+      id: 'people-in-establishment-exclusive',
       type: 'Checkbox',
       mandatory: false,
       options: [
         {
-          label: 'No one is living in this establishment',
-          value: 'No one is living in this establishment',
+          label: 'None of these apply',
+          value: 'None of these apply',
         },
       ],
     },
@@ -62,33 +64,13 @@ local questionWithExclusive = {
 {
   type: 'Question',
   id: 'people-in-establishment',
-  question_variants: [
+  page_title: 'People who live in this establishment',
+  question: question,
+  routing_rules: [
     {
-      question: question,
-      when: [
-        {
-          id: 'live-in-establishment-answer',
-          condition: 'set',
-        },
-      ],
-    },
-    {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'live-in-establishment-exclusive',
-          condition: 'set',
-        },
-      ],
-    },
-    {
-      question: questionWithExclusive,
-      when: [
-        {
-          id: 'live-in-establishment-answer',
-          condition: 'not set',
-        },
-      ],
+      goto: {
+        block: 'number-of-people-in-establishment',
+      },
     },
   ],
 }

@@ -58,6 +58,7 @@ local question = {
 {
   type: 'Question',
   id: 'visitors-in-establishment',
+  page_title: 'Visitors staying in this establishment',
   question: question,
   routing_rules: [
     {

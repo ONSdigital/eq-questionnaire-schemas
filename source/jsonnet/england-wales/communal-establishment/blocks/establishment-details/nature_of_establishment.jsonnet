@@ -1,6 +1,7 @@
 {
   type: 'Question',
   id: 'nature-of-establishment',
+  page_title: 'Type of establishment',
   question: {
     id: 'nature-of-establishment-question',
     title: 'What is the nature of this establishment?',

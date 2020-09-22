@@ -64,6 +64,7 @@ local questionWithExclusive = {
 {
   type: 'Question',
   id: 'number-of-visitors-in-establishment',
+  page_title: 'Number of visitors staying in this establishment',
   question_variants: [
     {
       question: questionWithExclusive,

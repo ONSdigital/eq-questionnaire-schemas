@@ -1,9 +1,9 @@
 // establishment details
 local detention_establishment = import 'communal-establishment/blocks/establishment-details/detention_establishment.jsonnet';
 local education_establishment = import 'communal-establishment/blocks/establishment-details/education_establishment.jsonnet';
-local live_in_establishment = import 'communal-establishment/blocks/establishment-details/live_in_establishment.jsonnet';
 local medical_establishment = import 'communal-establishment/blocks/establishment-details/medical_establishment.jsonnet';
 local establishment_details = import 'communal-establishment/blocks/establishment-details/nature_of_establishment.jsonnet';
+local number_of_people_in_establishment = import 'communal-establishment/blocks/establishment-details/number_of_people_in_establishment.jsonnet';
 local number_of_visitors_in_establishment = import 'communal-establishment/blocks/establishment-details/number_of_visitors_in_establishment.jsonnet';
 local people_in_establishment = import 'communal-establishment/blocks/establishment-details/people_in_establishment.jsonnet';
 local responsible_for_establishment = import 'communal-establishment/blocks/establishment-details/responsible_for_establishment.jsonnet';
@@ -49,8 +49,8 @@ function(region_code, census_month_year_date) {
             detention_establishment,
             travel_establishment,
             responsible_for_establishment,
-            live_in_establishment,
             people_in_establishment,
+            number_of_people_in_establishment,
             visitors_in_establishment,
             number_of_visitors_in_establishment,
           ],

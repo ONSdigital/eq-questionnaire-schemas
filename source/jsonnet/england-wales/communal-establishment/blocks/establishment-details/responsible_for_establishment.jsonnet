@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'responsible-for-establishment',
+  page_title: 'Manager of this establishment',
   question: {
     id: 'responsible-for-establishment-question',
     title: 'Who is responsible for the management of this establishment?',
@@ -50,7 +51,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
   routing_rules: [
     {
       goto: {
-        block: 'live-in-establishment',
+        block: 'people-in-establishment',
       },
     },
   ],

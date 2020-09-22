@@ -3,6 +3,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 {
   type: 'Question',
   id: 'medical-establishment',
+  page_title: 'Type of medical or care establishment',
   question: {
     id: 'medical-establishment-question',
     title: {
