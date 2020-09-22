@@ -24,7 +24,7 @@ local question = {
 };
 
 local questionWithExclusive = {
-  id: 'pnumber-of-people-in-establishment-question',
+  id: 'number-of-people-in-establishment-question',
   title: 'How many people are currently living in this establishment?',
   type: 'MutuallyExclusive',
   mandatory: false,
