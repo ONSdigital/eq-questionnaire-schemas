@@ -68,7 +68,7 @@ local questionWithExclusive = {
       question: question,
       when: [
         {
-          id: 'number-of-people-in-establishment-answer',
+          id: 'people-in-establishment-answer',
           condition: 'set',
         },
       ],
@@ -77,7 +77,7 @@ local questionWithExclusive = {
       question: questionWithExclusive,
       when: [
         {
-          id: 'number-of-people-in-establishment-exclusive',
+          id: 'people-in-establishment-exclusive',
           condition: 'set',
         },
       ],
@@ -86,7 +86,7 @@ local questionWithExclusive = {
       question: questionWithExclusive,
       when: [
         {
-          id: 'number-of-people-in-establishment-answer',
+          id: 'people-in-establishment-answer',
           condition: 'not set',
         },
       ],
