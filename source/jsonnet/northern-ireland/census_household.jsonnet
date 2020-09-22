@@ -316,7 +316,7 @@ function(region_code) {
             },
           ],
         },
-        "page_title": "Person {list_item_position}",
+        page_title: 'Person {list_item_position}',
       },
       groups: [
         {
@@ -454,7 +454,7 @@ function(region_code) {
             },
           ],
         },
-        "page_title": "Visitor {list_item_position}"
+        page_title: 'Visitor {list_item_position}',
       },
       groups: [
         {
