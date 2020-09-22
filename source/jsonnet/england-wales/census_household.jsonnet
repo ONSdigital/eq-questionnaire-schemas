@@ -328,6 +328,7 @@ function(region_code, census_month_year_date) {
             },
           ],
         },
+        "page_title": "Person {list_item_position}",
       },
       groups: [
         {
@@ -470,6 +471,7 @@ function(region_code, census_month_year_date) {
             },
           ],
         },
+        "page_title": "Visitor {list_item_position}",
       },
       groups: [
         {
