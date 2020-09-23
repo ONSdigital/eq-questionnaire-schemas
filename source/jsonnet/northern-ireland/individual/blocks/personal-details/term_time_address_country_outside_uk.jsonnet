@@ -2,12 +2,12 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'term-time-country-outside-uk-question',
+  id: 'term-time-address-country-outside-uk-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'term-time-country-outside-uk-answer',
+      id: 'term-time-address-country-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
       suggestions_url: '{suggestions_url_root}/countries-of-birth.json',
@@ -19,7 +19,7 @@ local question(title) = {
 
 {
   type: 'Question',
-  id: 'term-time-country-outside-uk',
+  id: 'term-time-address-country-outside-uk',
   page_title: 'Term-time address outside UK',
   question_variants: [
     {

@@ -102,7 +102,7 @@ local editQuestion(questionTitle) = {
 };
 
 {
-  id: 'anyone-else-list-collector',
+  id: 'people-living-here',
   type: 'ListCollector',
   for_list: 'household',
   page_title: 'People living here',

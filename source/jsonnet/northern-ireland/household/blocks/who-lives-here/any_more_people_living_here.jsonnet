@@ -92,7 +92,7 @@ local editQuestion(questionTitle) = {
 
 
 {
-  id: 'anyone-else-temp-away-list-collector',
+  id: 'any-more-people-living-here',
   type: 'ListCollector',
   page_title: 'Any more people living here',
   for_list: 'household',
@@ -177,7 +177,7 @@ local editQuestion(questionTitle) = {
     ],
   },
   add_block: {
-    id: 'anyone-else-temp-away-add-person',
+    id: 'any-more-people-living-here-add-person',
     page_title: 'Add name of Person {list_item_position}',
     type: 'ListAddQuestion',
     question: {
@@ -217,7 +217,7 @@ local editQuestion(questionTitle) = {
     },
   },
   edit_block: {
-    id: 'anyone-else-temp-away-edit-person',
+    id: 'any-more-people-living-here-edit-person',
     page_title: 'Change details for Person {list_item_position}',
     type: 'ListEditQuestion',
     question_variants: [
@@ -232,7 +232,7 @@ local editQuestion(questionTitle) = {
     ],
   },
   remove_block: {
-    id: 'anyone-else-temp-away-remove-person',
+    id: 'any-more-people-living-here-remove-person',
     page_title: 'Remove Person {list_item_position}',
     type: 'ListRemoveQuestion',
     question: {

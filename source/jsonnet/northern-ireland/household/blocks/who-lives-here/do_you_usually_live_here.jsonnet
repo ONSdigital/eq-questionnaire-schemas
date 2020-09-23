@@ -8,16 +8,16 @@ local questionTitle = {
 };
 
 {
-  id: 'primary-person-list-collector',
+  id: 'do-you-usually-live-here',
   page_title: 'Where you usually live',
   type: 'PrimaryPersonListCollector',
   for_list: 'household',
   add_or_edit_block: {
-    id: 'add-or-edit-primary-person',
+    id: 'what-is-your-name',
     type: 'PrimaryPersonListAddOrEditQuestion',
     page_title: 'Name of Person {list_item_position}',
     question: {
-      id: 'primary-person-add-or-edit-question',
+      id: 'what-is-your-name-question',
       type: 'General',
       title: 'What is your name?',
       answers: [
@@ -53,7 +53,7 @@ local questionTitle = {
     },
   },
   question: {
-    id: 'primary-confirmation-question',
+    id: 'do-you-usually-live-here-question',
     type: 'General',
     title: questionTitle,
     definitions: [

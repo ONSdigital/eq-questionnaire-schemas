@@ -46,7 +46,7 @@ local removePersonQuestionTitle = {
 };
 
 {
-  id: 'visitor-list-collector',
+  id: 'any-more-visitors',
   type: 'ListCollector',
   for_list: 'visitors',
   page_title: 'Any more visitors',

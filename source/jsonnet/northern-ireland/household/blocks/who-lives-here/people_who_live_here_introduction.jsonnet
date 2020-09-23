@@ -10,7 +10,7 @@ local contentDescription = {
 
 {
   type: 'Interstitial',
-  id: 'who-lives-here-interstitial',
+  id: 'people-who-live-here-introduction',
   page_title: 'Introduction to people who live here',
   content: {
     title: {

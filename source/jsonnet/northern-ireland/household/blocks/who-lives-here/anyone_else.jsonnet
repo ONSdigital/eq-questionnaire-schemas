@@ -159,7 +159,7 @@ local question(hasPrimary) = {
   routing_rules: [
     {
       goto: {
-        block: 'anyone-else-temp-away-list-collector',
+        block: 'any-more-people-living-here',
         when: [
           {
             id: 'anyone-else-driving-question-answer-exclusive',
@@ -170,7 +170,7 @@ local question(hasPrimary) = {
     },
     {
       goto: {
-        block: 'anyone-else-list-collector',
+        block: 'people-living-here',
       },
     },
   ],

@@ -2,30 +2,30 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local question(title) = {
-  id: 'term-time-address-question',
+  id: 'term-time-address-uk-question',
   title: title,
   type: 'General',
   answers: [
     {
-      id: 'term-time-address-answer-building',
+      id: 'term-time-address-uk-answer-building',
       label: 'Address line 1',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'term-time-address-answer-street',
+      id: 'term-time-address-uk-answer-street',
       label: 'Address line 2',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'term-time-address-answer-city',
+      id: 'term-time-address-uk-answer-city',
       label: 'Town or city',
       mandatory: false,
       type: 'TextField',
     },
     {
-      id: 'term-time-address-answer-postcode',
+      id: 'term-time-address-uk-answer-postcode',
       label: 'Postcode',
       mandatory: false,
       type: 'TextField',
@@ -38,7 +38,7 @@ local proxyTitle = 'Enter details of their term time address.';
 
 {
   type: 'Question',
-  id: 'term-time-address',
+  id: 'term-time-address-uk',
   page_title: 'Term-time address UK',
   question_variants: [
     {

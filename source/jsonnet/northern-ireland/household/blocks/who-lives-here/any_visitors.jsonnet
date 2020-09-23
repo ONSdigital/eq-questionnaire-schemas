@@ -113,7 +113,7 @@ local exclusiveAnswerText = {
     },
     {
       goto: {
-        block: 'visitor-list-collector',
+        block: 'any-more-visitors',
       },
     },
   ],

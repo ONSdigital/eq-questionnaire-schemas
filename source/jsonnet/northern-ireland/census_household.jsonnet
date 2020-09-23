@@ -13,17 +13,17 @@ local type_of_house = import 'household/blocks/accommodation/type_of_house.jsonn
 local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonnet';
 
 // Who lives here
+local any_more_people_living_here = import 'household/blocks/who-lives-here/any_more_people_living_here.jsonnet';
+local any_more_visitors = import 'household/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
 local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
-local anyone_else_list_collector = import 'household/blocks/who-lives-here/anyone_else_list_collector.jsonnet';
-local anyone_else_temporarily_away_list_collector = import 'household/blocks/who-lives-here/anyone_else_temporarily_away_list_collector.jsonnet';
-local primary_person_list_collector = import 'household/blocks/who-lives-here/primary_person_list_collector.jsonnet';
-local visitor_list_collector = import 'household/blocks/who-lives-here/visitor_list_collector.jsonnet';
-local who_lives_here_interstitial = import 'household/blocks/who-lives-here/who_lives_here_interstitial.jsonnet';
+local do_you_usually_live_here = import 'household/blocks/who-lives-here/do_you_usually_live_here.jsonnet';
+local people_living_here = import 'household/blocks/who-lives-here/people_living_here.jsonnet';
+local people_who_live_here_introduction = import 'household/blocks/who-lives-here/people_who_live_here_introduction.jsonnet';
 
 // Relationships
 local relationships_collector = import 'household/blocks/relationships/relationships_collector.jsonnet';
-local relationships_interstitial = import 'household/blocks/relationships/relationships_interstitial.jsonnet';
+local relationships_introduction = import 'household/blocks/relationships/relationships_introduction.jsonnet';
 
 // Personal Details
 local proxy = import 'household/blocks/individual/confirm_who_is_answering.jsonnet';
@@ -34,8 +34,8 @@ local date_of_birth = import 'individual/blocks/personal-details/date_of_birth.j
 local in_education = import 'individual/blocks/personal-details/in_education.jsonnet';
 local marriage_or_civil_partnership_status = import 'individual/blocks/personal-details/marriage_or_civil_partnership_status.jsonnet';
 local sex = import 'individual/blocks/personal-details/sex.jsonnet';
-local term_time_address = import 'individual/blocks/personal-details/term_time_address.jsonnet';
-local term_time_country_outside_uk = import 'individual/blocks/personal-details/term_time_country_outside_uk.jsonnet';
+local term_time_address_country_outside_uk = import 'individual/blocks/personal-details/term_time_address_country_outside_uk.jsonnet';
+local term_time_address_uk = import 'individual/blocks/personal-details/term_time_address_uk.jsonnet';
 local term_time_location = import 'individual/blocks/personal-details/term_time_location.jsonnet';
 
 // Identity and Health
@@ -146,7 +146,7 @@ function(region_code) {
   ],
   hub: {
     enabled: true,
-    required_completed_sections: ['who-lives-here-section', 'relationships-section'],
+    required_completed_sections: ['people-who-live-here-and-overnight-visitors', 'relationships-section'],
   },
   individual_response: {
     for_list: 'household',
@@ -160,7 +160,7 @@ function(region_code) {
   },
   sections: [
     {
-      id: 'who-lives-here-section',
+      id: 'people-who-live-here-and-overnight-visitors',
       title: 'People who live here',
       summary: {
         show_on_completion: true,
@@ -225,13 +225,13 @@ function(region_code) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
-            who_lives_here_interstitial,
-            primary_person_list_collector,
+            people_who_live_here_introduction,
+            do_you_usually_live_here,
             anyone_else,
-            anyone_else_list_collector,
-            anyone_else_temporarily_away_list_collector,
+            people_living_here,
+            any_more_people_living_here,
             any_visitors,
-            visitor_list_collector,
+            any_more_visitors,
           ],
         },
       ],
@@ -245,7 +245,7 @@ function(region_code) {
           id: 'relationships-group',
           title: 'Relationships',
           blocks: [
-            relationships_interstitial,
+            relationships_introduction,
             relationships_collector,
           ],
         },
@@ -332,8 +332,8 @@ function(region_code) {
             marriage_or_civil_partnership_status,
             in_education,
             term_time_location,
-            term_time_address,
-            term_time_country_outside_uk,
+            term_time_address_uk,
+            term_time_address_country_outside_uk,
           ],
         },
         {
