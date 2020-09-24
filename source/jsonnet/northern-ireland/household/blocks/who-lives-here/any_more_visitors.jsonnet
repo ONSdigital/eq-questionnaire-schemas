@@ -81,11 +81,11 @@ local removePersonQuestionTitle = {
     ],
   },
   add_block: {
-    id: 'any-more-visitors-add-visitor',
+    id: 'add-visitor',
     type: 'ListAddQuestion',
     page_title: 'Name of Visitor {list_item_position}',
     question: {
-      id: 'any-more-visitors-add-visitor-question',
+      id: 'add-visitor-question',
       type: 'General',
       title: addVisitorQuestionTitle,
       answers: [
@@ -124,11 +124,11 @@ local removePersonQuestionTitle = {
     },
   },
   edit_block: {
-    id: 'any-more-visitors-edit-visitor',
+    id: 'edit-visitor',
     type: 'ListEditQuestion',
     page_title: 'Change details for Visitor {list_item_position}',
     question: {
-      id: 'any-more-visitors-edit-visitor-question',
+      id: 'edit-visitor-question',
       type: 'General',
       title: editPersonQuestionTitle,
       answers: [
@@ -158,17 +158,17 @@ local removePersonQuestionTitle = {
     },
   },
   remove_block: {
-    id: 'any-more-visitors-remove-visitor',
+    id: 'remove-visitor',
     type: 'ListRemoveQuestion',
     page_title: 'Remove Visitor {list_item_position}',
     question: {
-      id: 'any-more-visitors-remove-visitor-question',
+      id: 'remove-visitor-question',
       type: 'General',
       title: removePersonQuestionTitle,
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'any-more-visitors-remove-visitor-answer',
+          id: 'remove-visitor-answer',
           mandatory: true,
           type: 'Radio',
           options: [
