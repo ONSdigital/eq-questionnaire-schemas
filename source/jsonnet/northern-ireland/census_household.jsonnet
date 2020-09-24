@@ -110,9 +110,9 @@ local workplace_outside_northern_ireland = import 'individual/blocks/employment/
 local workplace_type = import 'individual/blocks/employment/workplace_type.jsonnet';
 
 // Visitor
-local visitor_dob = import 'household/blocks/visitor/date_of_birth.jsonnet';
-local visitor_sex = import 'household/blocks/visitor/sex.jsonnet';
+local visitor_date_of_birth = import 'household/blocks/visitor/visitor_date_of_birth.jsonnet';
 local visitor_introduction = import 'household/blocks/visitor/visitor_introduction.jsonnet';
+local visitor_sex = import 'household/blocks/visitor/visitor_sex.jsonnet';
 local visitor_usual_address = import 'household/blocks/visitor/visitor_usual_address.jsonnet';
 local visitor_usual_address_country = import 'household/blocks/visitor/visitor_usual_address_country.jsonnet';
 local visitor_usual_address_details = import 'household/blocks/visitor/visitor_usual_address_details.jsonnet';
@@ -461,7 +461,7 @@ function(region_code) {
           id: 'visitor-group',
           blocks: [
             visitor_introduction,
-            visitor_dob,
+            visitor_date_of_birth,
             visitor_sex,
             visitor_usual_address,
             visitor_usual_address_details,
