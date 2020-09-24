@@ -333,7 +333,7 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'personal-details-group',
-          title: 'Personal Details',
+          title: 'Personal details',
           blocks: [
             individual_introduction,
             proxy,
@@ -358,7 +358,7 @@ function(region_code, census_month_year_date) {
         },
         {
           id: 'identity-and-health-group',
-          title: 'Identity and Health',
+          title: 'Identity and health',
           blocks: [
             country_of_birth(region_code),
             country_of_birth_elsewhere,

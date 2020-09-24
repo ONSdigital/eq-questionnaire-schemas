@@ -118,7 +118,7 @@ function(region_code) {
       groups: [
         {
           id: 'personal-details-group',
-          title: 'Personal Details',
+          title: 'Personal details',
           blocks: [
             accommodation_type,
             proxy,
@@ -137,7 +137,7 @@ function(region_code) {
         },
         {
           id: 'identity-and-health-group',
-          title: 'Identity and Health',
+          title: 'Identity and health',
           blocks: [
             country_of_birth,
             country_of_birth_elsewhere,
