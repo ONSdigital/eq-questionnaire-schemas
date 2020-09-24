@@ -97,7 +97,7 @@ local editQuestion(questionTitle) = {
   page_title: 'Any more people living here',
   for_list: 'household',
   question: {
-    id: 'any-more-people-living-here-confirmation-question',
+    id: 'any-more-people-living-here-question',
     type: 'General',
     title: questionTitle,
     guidance: {
