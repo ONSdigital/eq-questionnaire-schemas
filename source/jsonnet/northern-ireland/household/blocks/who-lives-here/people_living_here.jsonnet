@@ -16,7 +16,7 @@ local addQuestionTitle(listIsEmpty) = (
 );
 
 local addQuestion(listIsEmpty) = {
-  id: 'add-question',
+  id: 'people-living-here-add-person-question',
   type: 'General',
   title: addQuestionTitle(listIsEmpty),
   answers: [
@@ -66,7 +66,7 @@ local nonPrimaryEditPersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'edit-question',
+  id: 'people-living-here-edit-person-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -110,7 +110,7 @@ local editQuestion(questionTitle) = {
     {
       question: {
         type: 'General',
-        id: 'anyone-usually-live-at-question',
+        id: 'people-living-here-question',
         title: {
           text: 'Does anyone live at {household_address}?',
           placeholders: [
@@ -119,7 +119,7 @@ local editQuestion(questionTitle) = {
         },
         answers: [
           {
-            id: 'anyone-else-answer',
+            id: 'people-living-here-answer',
             mandatory: true,
             type: 'Radio',
             options: [
@@ -142,7 +142,7 @@ local editQuestion(questionTitle) = {
     },
     {
       question: {
-        id: 'anyone-usually-live-at-question',
+        id: 'people-living-here-question',
         type: 'General',
         title: {
           text: 'Does anyone else live at {household_address}?',
@@ -152,7 +152,7 @@ local editQuestion(questionTitle) = {
         },
         answers: [
           {
-            id: 'anyone-else-answer',
+            id: 'people-living-here-answer',
             mandatory: true,
             type: 'Radio',
             options: [

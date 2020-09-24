@@ -122,12 +122,12 @@
     },
   },
   hasPrimary: {
-    id: 'you-live-here-answer',
+    id: 'do-you-usually-live-here-answer',
     condition: 'equals',
     value: 'Yes, I usually live here',
   },
   hasNoPrimary: {
-    id: 'you-live-here-answer',
+    id: 'do-you-usually-live-here-answer',
     condition: 'equals',
     value: 'No, I don’t usually live here',
   },

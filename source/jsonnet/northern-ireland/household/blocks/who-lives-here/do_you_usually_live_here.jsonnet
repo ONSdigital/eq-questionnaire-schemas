@@ -82,7 +82,7 @@ local questionTitle = {
     ],
     answers: [
       {
-        id: 'you-live-here-answer',
+        id: 'do-you-usually-live-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [

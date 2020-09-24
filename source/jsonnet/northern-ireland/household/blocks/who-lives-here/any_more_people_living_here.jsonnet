@@ -55,7 +55,7 @@ local removePersonQuestionTitle = {
 };
 
 local editQuestion(questionTitle) = {
-  id: 'anyone-else-temp-away-edit-question',
+  id: 'any-more-people-living-here-edit-person-question',
   type: 'General',
   title: questionTitle,
   answers: [
@@ -97,7 +97,7 @@ local editQuestion(questionTitle) = {
   page_title: 'Any more people living here',
   for_list: 'household',
   question: {
-    id: 'anyone-else-temp-away-confirmation-question',
+    id: 'any-more-people-living-here-confirmation-question',
     type: 'General',
     title: questionTitle,
     guidance: {
@@ -131,7 +131,7 @@ local editQuestion(questionTitle) = {
     },
     answers: [
       {
-        id: 'anyone-else-temp-away-answer',
+        id: 'any-more-people-living-here-answer',
         mandatory: true,
         type: 'Radio',
         options: [
@@ -181,7 +181,7 @@ local editQuestion(questionTitle) = {
     page_title: 'Add name of Person {list_item_position}',
     type: 'ListAddQuestion',
     question: {
-      id: 'anyone-else-temp-away-add-question',
+      id: 'any-more-people-living-here-add-person-question',
       type: 'General',
       title: addPersonQuestionTitle,
       answers: [
@@ -236,13 +236,13 @@ local editQuestion(questionTitle) = {
     page_title: 'Remove Person {list_item_position}',
     type: 'ListRemoveQuestion',
     question: {
-      id: 'anyone-else-temp-away-remove-question',
+      id: 'any-more-people-living-here-remove-person-question',
       type: 'General',
       title: removePersonQuestionTitle,
       warning: 'All of the information entered about this person will be deleted',
       answers: [
         {
-          id: 'anyone-else-temp-away-remove-confirmation',
+          id: 'any-more-people-living-here-remove-person-confirmation',
           mandatory: true,
           type: 'Radio',
           options: [
