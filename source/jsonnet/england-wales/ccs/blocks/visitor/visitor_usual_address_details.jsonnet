@@ -16,28 +16,13 @@ local rules = import 'rules.libsonnet';
     type: 'General',
     answers: [
       {
-        id: 'visitor-usual-address-details-answer-building',
-        label: 'Address line 1',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'visitor-usual-address-details-answer-street',
-        label: 'Address line 2',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'visitor-usual-address-details-answer-city',
-        label: 'Town or city',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'visitor-usual-address-details-answer-postcode',
-        label: 'Postcode',
-        mandatory: false,
-        type: 'TextField',
+        id: 'visitor-usual-address-details-answer',
+        mandatory: true,
+        type: 'Address',
+        lookup_options: {
+          address_type: 'Residential',
+          region_code: std.extVar('region_code'),
+        },
       },
     ],
   },

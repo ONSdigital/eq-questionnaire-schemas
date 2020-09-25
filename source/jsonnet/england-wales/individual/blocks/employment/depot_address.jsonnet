@@ -7,28 +7,13 @@ local question(title, guidanceHeader, guidanceContent) = {
   type: 'General',
   answers: [
     {
-      id: 'depot-address-answer-building',
-      label: 'Address line 1',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'depot-address-answer-street',
-      label: 'Address line 2',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'depot-address-answer-city',
-      label: 'Town or city',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'depot-address-answer-postcode',
-      label: 'Postcode',
-      mandatory: false,
-      type: 'TextField',
+      id: 'depot-address-answer',
+      mandatory: true,
+      type: 'Address',
+      lookup_options: {
+        address_type: 'Workplace',
+        region_code: std.extVar('region_code'),
+      },
       guidance: {
         show_guidance: guidanceHeader,
         hide_guidance: guidanceHeader,

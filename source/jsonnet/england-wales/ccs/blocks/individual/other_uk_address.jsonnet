@@ -10,28 +10,12 @@ local rules = import 'rules.libsonnet';
     type: 'General',
     answers: [
       {
-        id: 'other-uk-address-answer-building',
-        label: 'Address line 1',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'other-uk-address-answer-street',
-        label: 'Address line 2',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'other-uk-address-answer-city',
-        label: 'Town or city',
-        mandatory: false,
-        type: 'TextField',
-      },
-      {
-        id: 'other-uk-address-answer-postcode',
-        label: 'Postcode',
-        mandatory: false,
-        type: 'TextField',
+        id: 'other-uk-address-answer',
+        type: 'Address',
+        lookup_options: {
+          address_type: 'Residential',
+          region_code: std.extVar('region_code'),
+        },
       },
     ],
   },
