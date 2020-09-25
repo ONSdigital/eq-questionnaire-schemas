@@ -11,6 +11,7 @@ local rules = import 'rules.libsonnet';
     answers: [
       {
         id: 'other-uk-address-answer',
+        mandatory: false,
         type: 'Address',
         lookup_options: {
           address_type: 'Residential',

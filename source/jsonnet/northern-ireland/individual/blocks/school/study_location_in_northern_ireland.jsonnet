@@ -8,6 +8,7 @@ local question(title) = {
   answers: [
     {
       id: 'study-location-in-northern-ireland-answer',
+      mandatory: true,
       type: 'Address',
       lookup_options: {
         address_type: 'Educational',
