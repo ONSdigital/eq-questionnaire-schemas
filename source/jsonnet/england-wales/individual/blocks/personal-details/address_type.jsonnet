@@ -53,16 +53,11 @@ local ukAddressTitle = {
   placeholders: [
     {
       placeholder: 'household_address',
-      transforms: [{
-        transform: 'concatenate_list',
-        arguments: {
-          list_to_concatenate: {
-            source: 'answers',
-            identifier: ['other-address-uk-answer-building', 'other-address-uk-answer-street'],
-          },
-          delimiter: ', ',
-        },
-      }],
+      value: {
+        identifier: 'other-address-uk-answer',
+        source: 'answers',
+        selector: 'line1',
+      },
     },
   ],
 };

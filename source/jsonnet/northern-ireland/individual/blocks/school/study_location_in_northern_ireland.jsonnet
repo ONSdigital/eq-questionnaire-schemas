@@ -7,28 +7,13 @@ local question(title) = {
   title: title,
   answers: [
     {
-      id: 'study-location-in-northern-ireland-details-answer-building',
-      label: 'Address line 1',
+      id: 'study-location-in-northern-ireland-answer',
       mandatory: true,
-      type: 'TextField',
-    },
-    {
-      id: 'study-location-in-northern-ireland-details-answer-street',
-      label: 'Address line 2',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'study-location-in-northern-ireland-details-answer-city',
-      label: 'Town or city',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'study-location-in-northern-ireland-details-answer-postcode',
-      label: 'Postcode',
-      mandatory: false,
-      type: 'TextField',
+      type: 'Address',
+      lookup_options: {
+        address_type: 'Educational',
+        region_code: std.extVar('region_code'),
+      },
     },
   ],
 };

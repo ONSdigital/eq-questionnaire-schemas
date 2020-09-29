@@ -7,33 +7,13 @@ local question(title) = {
   type: 'General',
   answers: [
     {
-      id: 'other-address-uk-answer-building',
-      label: 'Address line 1',
+      id: 'other-address-uk-answer',
       mandatory: true,
-      type: 'TextField',
-      validation: {
-        messages: {
-          MANDATORY_TEXTFIELD: 'Enter an address',
-        },
+      type: 'Address',
+      lookup_options: {
+        address_type: 'Residential',
+        region_code: std.extVar('region_code'),
       },
-    },
-    {
-      id: 'other-address-uk-answer-street',
-      label: 'Address line 2',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'other-address-uk-answer-city',
-      label: 'Town or city',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'other-address-uk-answer-postcode',
-      label: 'Postcode',
-      mandatory: false,
-      type: 'TextField',
     },
   ],
 };

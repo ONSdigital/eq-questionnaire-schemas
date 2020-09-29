@@ -7,28 +7,13 @@ local question(title) = {
   title: title,
   answers: [
     {
-      id: 'workplace-address-details-answer-building',
-      label: 'Address line 1',
+      id: 'workplace-address-answer',
       mandatory: true,
-      type: 'TextField',
-    },
-    {
-      id: 'workplace-address-details-answer-street',
-      label: 'Address line 2',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'workplace-address-details-answer-city',
-      label: 'Town or city',
-      mandatory: false,
-      type: 'TextField',
-    },
-    {
-      id: 'workplace-address-details-answer-postcode',
-      label: 'Postcode',
-      mandatory: false,
-      type: 'TextField',
+      type: 'Address',
+      lookup_options: {
+        address_type: 'Workplace',
+        region_code: std.extVar('region_code'),
+      },
     },
   ],
 };

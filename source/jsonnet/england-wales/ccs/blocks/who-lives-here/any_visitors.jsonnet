@@ -14,18 +14,11 @@ local questionTitle(livesAtHouseholdAddress) = (
     placeholders: [
       {
         placeholder: 'other_address',
-        transforms: [
-          {
-            transform: 'concatenate_list',
-            arguments: {
-              list_to_concatenate: {
-                source: 'answers',
-                identifier: ['usual-address-answer-building', 'usual-address-answer-street'],
-              },
-              delimiter: ', ',
-            },
-          },
-        ],
+        value: {
+          identifier: 'usual-address-answer',
+          source: 'answers',
+          selector: 'line1',
+        },
       },
       placeholders.censusDate,
     ],

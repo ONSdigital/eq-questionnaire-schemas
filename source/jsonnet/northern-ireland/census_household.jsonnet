@@ -149,6 +149,7 @@ function(region_code) {
     required_completed_sections: ['people-who-live-here-and-overnight-visitors', 'relationships-section'],
   },
   individual_response: {
+    show_on_hub: false,
     for_list: 'household',
     individual_section_id: 'individual-section',
   },
