@@ -18,7 +18,7 @@ local rules = import 'rules.libsonnet';
     answers: [
       {
         id: 'visitor-usual-address-details-answer',
-        mandatory: true,
+        mandatory: false,
         type: 'Address',
         lookup_options: {
           address_type: 'Residential',

@@ -8,7 +8,7 @@ local question(title, guidanceHeader, guidanceContent) = {
   answers: [
     {
       id: 'workplace-address-answer',
-      mandatory: true,
+      mandatory: false,
       type: 'Address',
       lookup_options: {
         address_type: 'Workplace',

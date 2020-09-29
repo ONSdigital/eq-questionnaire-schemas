@@ -8,7 +8,7 @@ local question(title) = {
   answers: [
     {
       id: 'address-one-year-ago-answer',
-      mandatory: true,
+      mandatory: false,
       type: 'Address',
       lookup_options: {
         address_type: 'Residential',
