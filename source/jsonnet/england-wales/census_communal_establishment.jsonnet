@@ -34,6 +34,12 @@ function(region_code, census_month_year_date) {
       type: 'string',
     },
   ],
+  submission: {
+    button: 'Submit census',
+    guidance: 'By submitting this census you are confirming that, to the best of your knowledge and belief, the details provided are correct.',
+    title: 'Submit census',
+    warning: 'You must submit this census to complete it',
+  },
   sections: [
     {
       id: 'communal-establishment',
@@ -41,7 +47,6 @@ function(region_code, census_month_year_date) {
       groups: [
         {
           id: 'establishment-details-group',
-          title: 'Personal details',
           blocks: [
             establishment_details,
             medical_establishment,
