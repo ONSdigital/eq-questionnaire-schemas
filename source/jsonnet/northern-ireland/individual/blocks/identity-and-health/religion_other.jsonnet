@@ -31,7 +31,7 @@ local question(title) = {
       question: question({
         text: 'You selected “Other”. What religion, religious denomination or body does {person_name} belong to?',
         placeholders: [
-          placeholders.personNamePossessive,
+          placeholders.personName,
         ],
       }),
       when: [rules.isProxy],

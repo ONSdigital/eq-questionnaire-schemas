@@ -88,13 +88,6 @@ local proxyDescriptionStudy = {
     {
       goto: {
         block: 'travel-to-study-location',
-        when: [
-          {
-            id: 'study-location-type-answer',
-            condition: 'equals',
-            value: 'No fixed place',
-          },
-        ],
       },
     },
   ],
