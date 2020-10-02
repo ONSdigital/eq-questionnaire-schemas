@@ -21,7 +21,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           {
             label: 'Internal wheelchair usage',
             value: 'Internal wheelchair usage',
-            description: 'For example downstairs bathroom',
+            description: 'For example a downstairs bathroom',
           },
           {
             label: 'External wheelchair access',

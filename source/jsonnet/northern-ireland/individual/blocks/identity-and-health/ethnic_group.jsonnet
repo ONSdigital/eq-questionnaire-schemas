@@ -78,11 +78,11 @@ local question(title, otherEthnicGroupDescription) = {
   page_title: 'Ethnic group',
   question_variants: [
     {
-      question: question(nonProxyTitle, 'You can enter your ethnic group or background on the next question'),
+      question: question(nonProxyTitle, 'You can enter your ethnic group on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, 'You can enter their ethnic group or background on the next question'),
+      question: question(proxyTitle, 'You can enter their ethnic group on the next question'),
       when: [rules.isProxy],
     },
   ],

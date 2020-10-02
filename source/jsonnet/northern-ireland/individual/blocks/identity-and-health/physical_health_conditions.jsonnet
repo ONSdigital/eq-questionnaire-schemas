@@ -20,8 +20,8 @@ local question(title) = {
           value: 'Blindness or partial sight loss',
         },
         {
-          label: 'A mobility or dexterity difficulty, that requires the use of a wheelchair',
-          value: 'A mobility or dexterity difficulty, that requires the use of a wheelchair',
+          label: 'A mobility or dexterity difficulty that requires the use of a wheelchair',
+          value: 'A mobility or dexterity difficulty that requires the use of a wheelchair',
         },
         {
           label: 'A mobility or dexterity difficulty that limits basic physical activities',

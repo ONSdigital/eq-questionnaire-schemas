@@ -24,12 +24,12 @@ local question(title) = {
   page_title: 'Other childhood religion',
   question_variants: [
     {
-      question: question('You selected “Other”. What religion, religious denomination were you brought up in?'),
+      question: question('You selected “Other”. What religion, religious denomination or body were you brought up in?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Other”. What religion, religious denomination or body was <em>{person_name_possessive}</em> brought up in?',
+        text: 'You selected “Other”. What religion, religious denomination or body was <em>{person_name}</em> brought up in?',
         placeholders: [
           placeholders.personNamePossessive,
         ],

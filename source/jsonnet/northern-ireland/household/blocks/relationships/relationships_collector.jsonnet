@@ -154,7 +154,7 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Step-child',
               },
               {
-                description: 'Including half brother or half sister',
+                description: 'Including half-brother or half-sister',
                 label: 'Brother or sister',
                 playback: {
                   text: '{second_person_name} is your <em>brother or sister</em>',
@@ -339,7 +339,7 @@ local firstPersonNamePossessivePlaceholder = {
                 value: 'Step-child',
               },
               {
-                description: 'Including half brother or half sister',
+                description: 'Including half-brother or half-sister',
                 label: 'Brother or sister',
                 playback: {
                   text: '{second_person_name} is {first_person_name_possessive} <em>brother or sister</em>',

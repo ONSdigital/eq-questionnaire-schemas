@@ -63,11 +63,11 @@ local question(title, otherDescription) = {
   page_title: 'Childhood religion',
   question_variants: [
     {
-      question: question(nonProxyTitle, 'You can enter your religion on the next question'),
+      question: question(nonProxyTitle, 'You can enter the religion on the next question'),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, 'You can enter their religion on the next question'),
+      question: question(proxyTitle, 'You can enter the religion on the next question'),
       when: [rules.isProxy],
     },
   ],

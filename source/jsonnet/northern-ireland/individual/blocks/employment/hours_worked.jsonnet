@@ -18,20 +18,20 @@ local question(title) = {
       mandatory: false,
       options: [
         {
-          label: '0 to 15 hours',
-          value: '0 to 15 hours',
+          label: '0 to 15 hours a week',
+          value: '0 to 15 hours a week',
         },
         {
-          label: '16 to 30 hours',
-          value: '16 to 30 hours',
+          label: '16 to 30 hours a week',
+          value: '16 to 30 hours a week',
         },
         {
-          label: '31 to 48 hours',
-          value: '31 to 48 hours',
+          label: '31 to 48 hours a week',
+          value: '31 to 48 hours a week',
         },
         {
-          label: '49 hours or more',
-          value: '49 hours or more',
+          label: '49 hours or more a week',
+          value: '49 hours or more a week',
         },
       ],
       type: 'Radio',
