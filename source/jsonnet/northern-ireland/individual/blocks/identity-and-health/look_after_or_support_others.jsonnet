@@ -22,8 +22,8 @@ local question(title, guidance) = {
           value: 'No',
         },
         {
-          label: 'Yes, 1-19 hours a week',
-          value: 'Yes, 1-19 hours a week',
+          label: 'Yes, 1 to 19 hours a week',
+          value: 'Yes, 1 to 19 hours a week',
         },
         {
           label: 'Yes, 20 to 34 hours a week',
