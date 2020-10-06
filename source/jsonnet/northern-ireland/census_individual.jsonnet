@@ -116,6 +116,7 @@ function(region_code) {
     guidance: 'By submitting this census return you are confirming that, to the best of your knowledge and belief, the details provided are correct.',
     title: 'Submit census',
     warning: 'You must submit this census to complete it',
+    confirmation_email: true,
   },
   sections: [
     {
