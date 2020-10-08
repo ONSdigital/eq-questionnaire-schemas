@@ -41,7 +41,7 @@ local nonProxyTitle = 'Which of the following describes what you were doing in t
 local proxyTitle = {
   text: 'Which of the following describes what <em>{person_name}</em> was doing in the last seven days?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

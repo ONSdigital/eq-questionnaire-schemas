@@ -48,7 +48,7 @@ local nonProxyGuidance = 'Exclude anything you do in paid employment';
 local proxyTitle = {
   text: 'Does <em>{person_name}</em> look after, or give any help or support to, anyone because they have long-term physical or mental health conditions or illnesses, or problems related to old age?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyGuidance = 'Exclude anything they do in paid employment';

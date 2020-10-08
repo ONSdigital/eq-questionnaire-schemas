@@ -28,7 +28,7 @@ local nonProxyTitle = 'Do you mainly work in the UK?';
 local proxyTitle = {
   text: 'Does <em>{person_name}</em> mainly work in the UK?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

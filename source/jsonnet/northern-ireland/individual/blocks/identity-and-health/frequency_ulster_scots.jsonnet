@@ -36,7 +36,7 @@ local nonProxyTitle = 'How often do you speak Ulster-Scots?';
 local proxyTitle = {
   text: 'How often does <em>{person_name}</em> speak Ulster-Scots?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

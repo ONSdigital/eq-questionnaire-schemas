@@ -22,7 +22,7 @@ local nonProxyTitle = 'Enter details of the other UK address where you stay for 
 local proxyTitle = {
   text: 'Enter details of the other UK address where <em>{person_name}</em> stays for more than 30 days a year.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

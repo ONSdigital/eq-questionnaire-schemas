@@ -36,7 +36,7 @@ local nonProxyTitle = 'How well can you speak English?';
 local proxyTitle = {
   text: 'How well can <em>{person_name}</em> speak English?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

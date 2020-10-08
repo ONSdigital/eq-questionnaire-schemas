@@ -64,7 +64,7 @@ local nonProxyTitleSchool = 'How do you usually travel to your main place of <em
 local proxyTitleSchool = {
   text: 'How does <em>{person_name}</em> usually travel to their main place of <em>study</em>, including school?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

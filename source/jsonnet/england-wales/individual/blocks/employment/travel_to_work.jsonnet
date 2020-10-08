@@ -68,7 +68,7 @@ local nonProxyDescription = 'Answer for the longest part, <em>by distance</em>, 
 local proxyTitle = {
   text: 'How does <em>{person_name}</em> usually travel to work?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyDescription = 'Answer for the longest part, <em>by distance</em>, of their usual journey to work';

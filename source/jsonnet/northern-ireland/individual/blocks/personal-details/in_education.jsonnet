@@ -29,14 +29,14 @@ local nonProxyUnder16Title = 'Are you a schoolchild or student in full-time educ
 local proxyUnder16Title = {
   text: 'Is <em>{person_name}</em> a schoolchild or student in full-time education?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local nonProxyOver16Title = 'Are you a student in full-time education?';
 local proxyOver16Title = {
   text: 'Is <em>{person_name}</em> a student in full-time education?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

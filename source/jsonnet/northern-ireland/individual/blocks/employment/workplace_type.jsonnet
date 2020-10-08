@@ -36,14 +36,14 @@ local nonProxyTitleWork = 'Where do you mainly <em>work</em>?';
 local proxyTitleWork = {
   text: 'Where does <em>{person_name}</em> mainly <em>work</em>?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local nonProxyTitleDidWork = 'Where did you mainly <em>work</em>?';
 local proxyTitleDidWork = {
   text: 'Where did <em>{person_name}</em> mainly <em>work</em>?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -51,7 +51,7 @@ local nonProxyDescriptionWork = 'Answer for the place where you spend the most t
 local proxyDescriptionWork = {
   text: 'Answer for the place where <em>{person_name}</em> spends the most time. Even if ill, on maternity leave, holiday or temporarily laid off provide details of their main place of work.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -59,7 +59,7 @@ local nonProxyDescriptionDidWork = 'Answer for the place where you spent the mos
 local proxyDescriptionDidWork = {
   text: 'Answer for the place where <em>{person_name}</em> spent the most time.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

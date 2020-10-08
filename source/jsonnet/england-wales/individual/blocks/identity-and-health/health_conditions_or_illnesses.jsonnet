@@ -42,7 +42,7 @@ local nonProxyDefinitionContent = [
 local proxyTitle = {
   text: 'Does <em>{person_name}</em> have any physical or mental health conditions or illnesses lasting or expected to last 12 months or more?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyDefinitionContent = [

@@ -33,7 +33,7 @@ function(region_code) (
             {
               description: {
                 text: regionDescriptionProxy,
-                placeholders: [placeholders.personName],
+                placeholders: [placeholders.personName()],
               },
             },
           ],

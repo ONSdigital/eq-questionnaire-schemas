@@ -62,14 +62,14 @@ local nonProxyNoValue = 'No, I need to correct my date of birth';
 local proxyTitle = {
   text: '<em>{person_name}</em> is {age} old. Is this correct?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
     dateOfBirthPlaceholder,
   ],
 };
 local proxyYesLabel = {
   text: 'Yes, {person_name} is {age} old',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
     dateOfBirthPlaceholder,
   ],
 };

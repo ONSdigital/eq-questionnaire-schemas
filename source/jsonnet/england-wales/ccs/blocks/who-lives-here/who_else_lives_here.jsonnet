@@ -12,14 +12,14 @@ local questionTitle = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em>',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -266,7 +266,7 @@ local editQuestion(questionTitle) = {
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       },
       answers: [
@@ -296,7 +296,7 @@ local editQuestion(questionTitle) = {
     item_title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName,
+        placeholders.personName(),
       ],
     },
   },

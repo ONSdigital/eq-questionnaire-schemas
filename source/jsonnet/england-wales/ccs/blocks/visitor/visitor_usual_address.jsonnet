@@ -20,7 +20,7 @@ local question(additionalAnwerOptions=[]) = {
   title: {
     text: 'Did <em>{person_name}</em> usually live in the UK?',
     placeholders: [
-      placeholders.personName,
+      placeholders.personName(),
     ],
   },
   type: 'General',

@@ -45,7 +45,7 @@ local nonProxyTitle = 'Do you stay at another address for more than 30 days a ye
 local proxyTitle = {
   text: 'Does <em>{person_name}</em> stay at another address for more than 30 days a year?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

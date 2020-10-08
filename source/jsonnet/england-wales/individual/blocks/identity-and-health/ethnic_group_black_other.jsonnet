@@ -24,7 +24,7 @@ local nonProxyTitle = 'You selected “Any other Black, Black British or Caribbe
 local proxyTitle = {
   text: 'You selected “Any other Black, Black British or Caribbean background”. How would <em>{person_name}</em> describe their Black, Black British or Caribbean ethnic group or background?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

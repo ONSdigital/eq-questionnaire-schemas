@@ -35,14 +35,14 @@ local nonProxyTitleStudy = 'Where do you mainly <em>study</em>?';
 local proxyTitleStudy = {
   text: 'Where does <em>{person_name}</em> mainly <em>study</em>?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local nonProxyDescriptionStudy = 'Answer for the place where you spend the most time. If student or schoolchild, answer for your study address.';
 local proxyDescriptionStudy = {
   text: 'Answer for the place where <em>{person_name}</em> spends the most time. If student or schoolchild, answer for their study address.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

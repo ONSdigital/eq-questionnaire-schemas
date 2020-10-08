@@ -22,7 +22,7 @@ local nonProxyTitle = 'Enter details of the UK address where you usually stay du
 local proxyTitle = {
   text: 'Enter details of the UK address where <em>{person_name}</em> usually stays during term time.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

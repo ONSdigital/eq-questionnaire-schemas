@@ -131,7 +131,7 @@ local addQuestion(visitorsListEmpty) = {
       title: {
         text: 'Change details for <em>{person_name}</em>',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       },
       answers: [
@@ -170,7 +170,7 @@ local addQuestion(visitorsListEmpty) = {
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       },
       warning: 'All of the information entered about this person will be deleted',
@@ -206,7 +206,7 @@ local addQuestion(visitorsListEmpty) = {
     item_title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName,
+        placeholders.personName(),
       ],
     },
   },

@@ -33,7 +33,7 @@ local nonProxyLabel = 'No, have never worked';
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> ever done any paid work?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyLabel = 'No, has never worked';

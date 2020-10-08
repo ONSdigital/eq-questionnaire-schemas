@@ -42,7 +42,7 @@ local question(title, guidance) = {
         {
           text: 'You selected “Other”. How would <em>{person_name}</em> describe their other national identity?',
           placeholders: [
-            placeholders.personName,
+            placeholders.personName(),
           ],
         },
         'Include all other national identities. If they have more than one, enter them all separated by commas.'

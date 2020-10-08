@@ -63,7 +63,7 @@ local nonProxyTitleWork = 'How do you usually travel to your main place of <em>w
 local proxyTitleWork = {
   text: 'How does <em>{person_name}</em> usually travel to their main place of <em>work</em>?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -71,7 +71,7 @@ local pastNonProxyTitleWork = 'How did you usually travel to your main place of 
 local pastProxyTitleWork = {
   text: 'How did <em>{person_name}</em> usually travel to their main place of <em>work</em>?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

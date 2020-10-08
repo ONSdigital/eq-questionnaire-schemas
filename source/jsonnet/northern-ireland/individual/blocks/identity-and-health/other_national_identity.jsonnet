@@ -31,7 +31,7 @@ local question(title) = {
       question: question({
         text: 'You selected “Other”. How would <em>{person_name}</em> describe their national identity?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       }),
       when: [rules.isProxy],

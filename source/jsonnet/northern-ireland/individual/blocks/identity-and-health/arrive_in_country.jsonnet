@@ -32,7 +32,7 @@ local nonProxyTitle = 'What year did you come to live in Northern Ireland?';
 local proxyTitle = {
   text: 'What year did <em>{person_name}</em> come to live in Northern Ireland?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

@@ -28,7 +28,7 @@ local nonProxyTitle = 'Do you supervise or oversee the work of other employees o
 local proxyTitle = {
   text: 'Does <em>{person_name}</em> supervise or oversee the work of other employees on a day-to-day basis?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -36,7 +36,7 @@ local pastNonProxyTitle = 'Did you supervise or oversee the work of other employ
 local pastProxyTitle = {
   text: 'Did <em>{person_name}</em> supervise or oversee the work of other employees on a day-to-day basis?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

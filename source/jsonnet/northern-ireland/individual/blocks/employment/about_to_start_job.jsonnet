@@ -37,7 +37,7 @@ local nonProxyTitle = 'In the last seven days, were you waiting to start a job a
 local proxyTitle = {
   text: 'In the last seven days, was <em>{person_name}</em> waiting to start a job already accepted?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

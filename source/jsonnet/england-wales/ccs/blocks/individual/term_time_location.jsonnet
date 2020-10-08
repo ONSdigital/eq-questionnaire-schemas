@@ -18,7 +18,7 @@ local nonProxyTitle = 'During term time, where did you usually live?';
 local proxyTitle = {
   text: 'During term time, where did <em>{person_name}</em> usually live?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

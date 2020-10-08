@@ -57,7 +57,7 @@ local proxyDefinitionContent = 'Include current passports and any other travel d
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyLabel = 'Please specify the passports held';

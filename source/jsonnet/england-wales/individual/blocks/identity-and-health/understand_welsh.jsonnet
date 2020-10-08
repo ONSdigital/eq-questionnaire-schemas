@@ -48,7 +48,7 @@ local nonProxyTitle = 'Can you understand, speak, read or write Welsh?';
 local proxyTitle = {
   text: 'Can <em>{person_name}</em> understand, speak, read or write Welsh?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

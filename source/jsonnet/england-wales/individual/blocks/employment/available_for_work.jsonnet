@@ -28,7 +28,7 @@ local nonProxyTitle = 'Are you available to start work in the next two weeks?';
 local proxyTitle = {
   text: 'Is <em>{person_name}</em> available to start work in the next two weeks?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

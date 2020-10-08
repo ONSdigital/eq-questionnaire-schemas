@@ -33,7 +33,7 @@ local nonProxyTitle = {
 local proxyTitle = {
   text: 'Did <em>{person_name}</em> arrive in the UK on or after {year_before_census_date}?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
     placeholders.yearBeforeCensusDate,
   ],
 };

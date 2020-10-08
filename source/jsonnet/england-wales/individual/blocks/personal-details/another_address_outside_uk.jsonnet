@@ -36,7 +36,7 @@ local question(title) = {
       question: question({
         text: 'In which country outside the UK does <em>{person_name}</em> stay for more than 30 days a year?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       }),
       when: [rules.isProxy],

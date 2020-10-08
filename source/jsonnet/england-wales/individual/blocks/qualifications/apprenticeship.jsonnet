@@ -5,7 +5,7 @@ local nonProxyTitle = 'Have you completed an apprenticeship?';
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> completed an apprenticeship?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

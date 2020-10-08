@@ -10,7 +10,7 @@ local nonProxyTitle = {
 local proxyTitle = {
   text: 'Is there another UK address where <em>{person_name}</em> may have been included on a census questionnaire because they were a usual resident, or staying overnight there on Sunday {census_date}?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
     placeholders.censusDate,
   ],
 };

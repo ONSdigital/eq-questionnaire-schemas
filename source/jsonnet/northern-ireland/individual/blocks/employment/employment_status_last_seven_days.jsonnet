@@ -59,7 +59,7 @@ local nonProxyTitle = 'In the last seven days, were you doing any of the followi
 local proxyTitle = {
   text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

@@ -31,7 +31,7 @@ local question(title) = {
       question: question({
         text: 'You selected “Any other White background”. How would <em>{person_name}</em> describe their White ethnic group or background?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       }),
       when: [rules.isProxy],

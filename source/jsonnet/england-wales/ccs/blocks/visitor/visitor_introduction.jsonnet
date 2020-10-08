@@ -8,7 +8,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName,
+        placeholders.personName(),
       ],
     },
     contents: [
@@ -16,7 +16,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         description: {
           text: 'In this section, I’m going to ask you about your visitor, <em>{person_name}</em>',
           placeholders: [
-            placeholders.personName,
+            placeholders.personName(),
           ],
         },
       },

@@ -5,7 +5,7 @@ local nonProxyTitle = 'How would you describe your national identity?';
 local proxyTitle = {
   text: 'How would <em>{person_name}</em> describe their national identity?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

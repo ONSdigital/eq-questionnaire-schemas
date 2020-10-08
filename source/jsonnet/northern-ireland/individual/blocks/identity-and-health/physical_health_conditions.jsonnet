@@ -55,7 +55,7 @@ local nonProxyTitle = 'Do you have any of the following <em>physical health cond
 local proxyTitle = {
   text: 'Does {person_name} have any of the following <em>physical health conditions</em> which have lasted, or are expected to last, at least 12 months?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

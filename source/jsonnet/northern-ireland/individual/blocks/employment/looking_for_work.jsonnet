@@ -37,7 +37,7 @@ local nonProxyTitle = 'In the last four weeks, were you actively looking for any
 local proxyTitle = {
   text: 'In the last four weeks, was <em>{person_name}</em> actively looking for any kind of paid work?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local nonProxyGuidanceHeader = 'Why we ask this question if you are retired or long-term sick or disabled';

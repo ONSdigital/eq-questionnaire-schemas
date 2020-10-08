@@ -1,58 +1,21 @@
+local transforms = import '../../../lib/transforms.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local firstPersonPlaceholder = {
   placeholder: 'first_person_name',
-  transforms: [{
-    transform: 'concatenate_list',
-    arguments: {
-      list_to_concatenate: {
-        source: 'answers',
-        identifier: ['first-name', 'last-name'],
-        list_item_selector: {
-          source: 'location',
-          id: 'list_item_id',
-        },
-      },
-      delimiter: ' ',
-    },
-  }],
+  transforms: [transforms.listHasSameNameItems, transforms.formatFirstPersonName],
 };
 
 local secondPersonPlaceholder = {
   placeholder: 'second_person_name',
-  transforms: [{
-    transform: 'concatenate_list',
-    arguments: {
-      list_to_concatenate: {
-        source: 'answers',
-        identifier: ['first-name', 'last-name'],
-        list_item_selector: {
-          source: 'location',
-          id: 'to_list_item_id',
-        },
-      },
-      delimiter: ' ',
-    },
-  }],
+  transforms: [transforms.listHasSameNameItems, transforms.formatSecondPersonName],
 };
 
 local firstPersonNamePossessivePlaceholder = {
   placeholder: 'first_person_name_possessive',
   transforms: [
-    {
-      transform: 'concatenate_list',
-      arguments: {
-        list_to_concatenate: {
-          source: 'answers',
-          identifier: ['first-name', 'last-name'],
-          list_item_selector: {
-            source: 'location',
-            id: 'list_item_id',
-          },
-        },
-        delimiter: ' ',
-      },
-    },
+    transforms.listHasSameNameItems,
+    transforms.formatFirstPersonName,
     {
       transform: 'format_possessive',
       arguments: {
@@ -71,6 +34,7 @@ local firstPersonNamePossessivePlaceholder = {
   title: 'Household relationships',
   page_title: 'How Person {list_item_position} is related to Person {to_list_item_position}',
   for_list: 'household',
+  same_name_answer_ids: ['first-name', 'last-name'],
   question_variants: [
     {
       question: {

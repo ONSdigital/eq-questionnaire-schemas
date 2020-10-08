@@ -35,7 +35,7 @@ local nonProxyTitle = 'When did you most recently arrive to live in the United K
 local proxyTitle = {
   text: 'When did <em>{person_name}</em> most recently arrive to live in the United Kingdom?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

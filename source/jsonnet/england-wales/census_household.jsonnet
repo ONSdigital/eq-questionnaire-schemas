@@ -308,25 +308,10 @@ function(region_code, census_month_year_date) {
       },
       repeat: {
         for_list: 'household',
+        same_name_answer_ids: ['first-name', 'last-name'],
         title: {
           text: '{person_name}',
-          placeholders: [
-            {
-              placeholder: 'person_name',
-              transforms: [
-                {
-                  transform: 'concatenate_list',
-                  arguments: {
-                    list_to_concatenate: {
-                      source: 'answers',
-                      identifier: ['first-name', 'last-name'],
-                    },
-                    delimiter: ' ',
-                  },
-                },
-              ],
-            },
-          ],
+          placeholders: [placeholders.personName()],
         },
         page_title: 'Person {list_item_position}',
       },

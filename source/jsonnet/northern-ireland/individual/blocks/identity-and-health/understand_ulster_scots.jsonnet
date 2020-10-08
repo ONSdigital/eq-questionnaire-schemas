@@ -40,7 +40,7 @@ local nonProxyTitle = 'Can you understand, speak, read or write Ulster-Scots?';
 local proxyTitle = {
   text: 'Can <em>{person_name}</em> understand, speak, read or write Ulster-Scots?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

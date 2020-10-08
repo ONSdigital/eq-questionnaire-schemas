@@ -5,7 +5,7 @@ local nonProxyTitle = 'What religion, religious denomination or body were you <e
 local proxyTitle = {
   text: 'What religion, religious denomination or body was {person_name} <em>brought up</em> in?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

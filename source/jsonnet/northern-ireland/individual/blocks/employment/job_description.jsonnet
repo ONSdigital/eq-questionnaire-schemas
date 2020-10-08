@@ -21,7 +21,7 @@ local nonProxyTitle = 'Briefly describe what you do in your main job.';
 local proxyTitle = {
   text: 'Briefly describe what <em>{person_name}</em> does in their main job.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 
@@ -29,7 +29,7 @@ local pastNonProxyTitle = 'Briefly describe what you did in your main job.';
 local pastProxyTitle = {
   text: 'Briefly describe what <em>{person_name}</em> did in their main job.',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

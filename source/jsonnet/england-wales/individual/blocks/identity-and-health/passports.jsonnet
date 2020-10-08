@@ -57,7 +57,7 @@ local nonProxyLabel = 'Enter the passports you hold';
 local proxyTitle = {
   text: 'What passports does <em>{person_name}</em> hold?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyLabel = 'Enter passports held';

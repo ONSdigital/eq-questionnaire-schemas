@@ -5,7 +5,7 @@ local nonProxyTitle = 'Have you achieved any other qualifications, either within
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> achieved any other qualifications?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

@@ -52,7 +52,7 @@ local nonProxyTitle = {
 local proxyTitle = {
   text: '<em>{person_name}</em> is {age} old. Is this correct?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
     dateOfBirthPlaceholder,
   ],
 };

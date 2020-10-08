@@ -42,7 +42,7 @@ local question(title, guidance) = {
         {
           text: 'You selected “Other”. What other passports does <em>{person_name}</em> hold?',
           placeholders: [
-            placeholders.personName,
+            placeholders.personName(),
           ],
         },
         'Include all other passports. If they have more than one, enter them all separated by commas.'

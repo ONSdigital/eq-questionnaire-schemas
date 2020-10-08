@@ -7,7 +7,7 @@ local nonProxyDescription = 'This relates to where you feel you belong, such as 
 local proxyTitle = {
   text: 'How would <em>{person_name}</em> describe their national identity?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyDescription = 'This relates to where they feel they belong, such as the country or countries they think of as home.<p>This could be different from their citizenship or ethnic group.';

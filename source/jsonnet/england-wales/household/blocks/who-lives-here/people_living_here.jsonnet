@@ -1,4 +1,5 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
+local transforms = import '../../../lib/transforms.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local addQuestionTitle(listIsEmpty) = (
@@ -54,14 +55,14 @@ local addQuestion(listIsEmpty) = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(transforms.listHasSameNameItems),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em>',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(transforms.listHasSameNameItems),
   ],
 };
 
@@ -105,6 +106,7 @@ local editQuestion(questionTitle) = {
   id: 'people-living-here',
   type: 'ListCollector',
   for_list: 'household',
+  same_name_answer_ids: ['first-name', 'last-name'],
   page_title: 'People living here',
   question_variants: [
     {
@@ -219,7 +221,7 @@ local editQuestion(questionTitle) = {
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(transforms.listHasSameNameItems),
         ],
       },
       warning: 'All of the information entered about this person will be deleted',
@@ -250,7 +252,7 @@ local editQuestion(questionTitle) = {
     item_title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName,
+        placeholders.personName(transforms.listHasSameNameItems),
       ],
     },
   },

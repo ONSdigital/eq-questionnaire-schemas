@@ -29,7 +29,7 @@ local nonProxyTitle = 'Including the time already spent here, how long do you in
 local proxyTitle = {
   text: 'Including the time already spent here, how long does <em>{person_name}</em> intend to stay in the United Kingdom?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 

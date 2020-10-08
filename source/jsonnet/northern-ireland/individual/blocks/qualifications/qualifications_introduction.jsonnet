@@ -27,7 +27,7 @@ local descriptionProxy = 'The next set of questions is about the qualifications 
           {
             description: {
               text: descriptionProxy,
-              placeholders: [placeholders.personName],
+              placeholders: [placeholders.personName()],
             },
           },
         ],

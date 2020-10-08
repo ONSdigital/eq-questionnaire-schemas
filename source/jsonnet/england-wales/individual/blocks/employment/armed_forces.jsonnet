@@ -62,7 +62,7 @@ local nonProxyDescription = 'Your answer will help your local community by provi
 local proxyTitle = {
   text: 'Has <em>{person_name}</em> previously served in the UK Armed Forces?',
   placeholders: [
-    placeholders.personName,
+    placeholders.personName(),
   ],
 };
 local proxyGuidanceHeader = 'Why their answer is important';

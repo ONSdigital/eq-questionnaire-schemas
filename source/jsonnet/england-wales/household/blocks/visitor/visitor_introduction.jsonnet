@@ -9,7 +9,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName,
+        placeholders.personName(),
       ],
     },
     contents: [
@@ -17,7 +17,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         description: {
           text: 'In this section, we are going to ask you about your visitor, <strong>{person_name}</strong>.',
           placeholders: [
-            placeholders.personName,
+            placeholders.personName(),
           ],
         },
       },
