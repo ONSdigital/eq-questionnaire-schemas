@@ -298,7 +298,6 @@ function(region_code) {
       },
       repeat: {
         for_list: 'household',
-        same_name_answer_ids: ['first-name', 'last-name'],
         title: {
           text: '{person_name}',
           placeholders: [placeholders.personName('list_has_same_name_items')],

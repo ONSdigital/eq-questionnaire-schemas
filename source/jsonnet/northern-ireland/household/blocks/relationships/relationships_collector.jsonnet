@@ -34,7 +34,6 @@ local firstPersonNamePossessivePlaceholder = {
   title: 'Household relationships',
   page_title: 'How Person {list_item_position} is related to Person {to_list_item_position}',
   for_list: 'household',
-  same_name_answer_ids: ['first-name', 'last-name'],
   question_variants: [
     {
       question: {

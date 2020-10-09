@@ -309,7 +309,6 @@ function(region_code, census_month_year_date) {
       },
       repeat: {
         for_list: 'household',
-        same_name_answer_ids: ['first-name', 'last-name'],
         title: {
           text: '{person_name}',
           placeholders: [placeholders.personName('list_has_same_name_items')],
