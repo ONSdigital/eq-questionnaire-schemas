@@ -97,7 +97,7 @@ local firstPersonNamePossessiveForList(listName) = {
       },
       transform: 'concatenate_list',
     },
-    transforms.formatPossessive
+    transforms.formatPossessive,
   ],
 };
 
