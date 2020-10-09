@@ -31,7 +31,7 @@ local question(title) = {
       question: question({
         text: 'You selected “Other”. What religion, religious denomination or body was <em>{person_name}</em> brought up in?',
         placeholders: [
-          placeholders.personName,
+          placeholders.personName(),
         ],
       }),
       when: [rules.isProxy],
