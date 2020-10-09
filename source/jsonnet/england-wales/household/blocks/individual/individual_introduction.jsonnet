@@ -8,7 +8,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName('contains_same_name_items'),
+        placeholders.personName('is_same_name'),
       ],
     },
     contents: [
@@ -16,7 +16,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
         description: {
           text: 'In this section, we are going to ask you questions about <strong>{person_name}</strong>.',
           placeholders: [
-            placeholders.personName('contains_same_name_items'),
+            placeholders.personName('is_same_name'),
           ],
         },
       },

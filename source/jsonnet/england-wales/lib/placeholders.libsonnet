@@ -102,7 +102,7 @@ local firstPersonNamePossessiveForList(listName) = {
 };
 
 local personName(sameNameTransform='') = (
-  if sameNameTransform == 'contains_same_name_items' then
+  if sameNameTransform == 'is_same_name' then
     {
       placeholder: 'person_name',
       transforms: [transforms.isSameName, transforms.formatPersonName(sameNameTransform=true)],
