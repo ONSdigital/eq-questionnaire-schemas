@@ -25,8 +25,8 @@ local question(title, description, additionalAnswerOptions=[]) = {
           value: '{household_address}',
         },
         {
-          label: 'Student term-time address in the UK',
-          value: 'Student term-time address in the UK',
+          label: 'Student term-time or boarding school address in the UK',
+          value: 'Student term-time or boarding school address in the UK',
         },
         {
           label: 'Another address in the UK',
@@ -109,7 +109,7 @@ local additionalAnswerOption = [
             condition: 'equals any',
             values: [
               'Another address in the UK',
-              'Student term-time address in the UK',
+              'Student term-time or boarding school address in the UK',
             ],
           },
         ],

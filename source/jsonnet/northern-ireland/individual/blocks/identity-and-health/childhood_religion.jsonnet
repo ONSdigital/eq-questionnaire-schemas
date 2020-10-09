@@ -9,7 +9,7 @@ local proxyTitle = {
   ],
 };
 
-local question(title, otherDescription) = {
+local question(title) = {
   id: 'childhood-religion-question',
   title: title,
   type: 'MutuallyExclusive',
@@ -38,7 +38,7 @@ local question(title, otherDescription) = {
         {
           label: 'Other',
           value: 'Other',
-          description: otherDescription,
+          description: 'You can enter the religion on the next question',
         },
       ],
       type: 'Checkbox',
@@ -63,11 +63,11 @@ local question(title, otherDescription) = {
   page_title: 'Childhood religion',
   question_variants: [
     {
-      question: question(nonProxyTitle, 'You can enter your religion on the next question'),
+      question: question(nonProxyTitle),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, 'You can enter their religion on the next question'),
+      question: question(proxyTitle),
       when: [rules.isProxy],
     },
   ],

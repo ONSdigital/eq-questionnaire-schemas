@@ -24,12 +24,12 @@ local question(title) = {
   page_title: 'Other ethnic group describe',
   question_variants: [
     {
-      question: question('You selected “Any other ethnic group”. How would you describe your ethnic group or background?'),
+      question: question('You selected “Any other ethnic group”. How would you describe your ethnic group?'),
       when: [rules.isNotProxy],
     },
     {
       question: question({
-        text: 'You selected “Any other ethnic group”. How would <em>{person_name}</em> describe their ethnic group or background?',
+        text: 'You selected “Any other ethnic group”. How would <em>{person_name}</em> describe their ethnic group?',
         placeholders: [
           placeholders.personName(),
         ],
