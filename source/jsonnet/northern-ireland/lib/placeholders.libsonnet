@@ -83,17 +83,17 @@ local personName(sameNameTransform='') = (
   if sameNameTransform == 'contains_same_name_items' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.containsSameNameItems, transforms.formatFirstPersonName],
+      transforms: [transforms.isSameName, transforms.formatPersonName(sameNameTransform=true)],
     }
   else if sameNameTransform == 'list_has_same_name_items' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatFirstPersonName],
+      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName(sameNameTransform=true)],
     }
   else
     {
       placeholder: 'person_name',
-      transforms: [transforms.concatenateList],
+      transforms: [transforms.formatPersonName()],
     }
 );
 
@@ -101,7 +101,7 @@ local personName(sameNameTransform='') = (
   personName: personName,
   personNamePossessive: {
     placeholder: 'person_name_possessive',
-    transforms: [transforms.concatenateList, transforms.formatPossessive],
+    transforms: [transforms.formatPersonName(), transforms.formatPossessive],
   },
   address: {
     placeholder: 'household_address',

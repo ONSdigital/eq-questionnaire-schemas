@@ -1,7 +1,10 @@
-local formatFirstPersonName = {
+local formatPersonName(sameNameTransform=false) = (
+
+local includeMiddleNames = if sameNameTransform then { source: 'previous_transform' } else false;
+{
   transform: 'format_name',
   arguments: {
-    include_middle_names: { source: 'previous_transform' },
+    include_middle_names: includeMiddleNames,
     first_name: {
       source: 'answers',
       identifier: 'first-name',
@@ -15,7 +18,8 @@ local formatFirstPersonName = {
       identifier: 'last-name',
     },
   },
-};
+}
+);
 
 local formatSecondPersonName = {
   transform: 'format_name',
@@ -57,7 +61,7 @@ local formatPossessive = {
   },
 };
 
-local containsSameNameItems = {
+local isSameName = {
   transform: 'contains',
   arguments: {
     list_to_check: {
@@ -83,22 +87,10 @@ local listHasSameNameItems = {
   },
 };
 
-local concatenateList = {
-  transform: 'concatenate_list',
-  arguments: {
-    list_to_concatenate: {
-      source: 'answers',
-      identifier: ['first-name', 'last-name'],
-    },
-    delimiter: ' ',
-  },
-};
-
 {
-  formatFirstPersonName: formatFirstPersonName,
+  formatPersonName: formatPersonName,
   formatSecondPersonName: formatSecondPersonName,
-  containsSameNameItems: containsSameNameItems,
+  isSameName: isSameName,
   listHasSameNameItems: listHasSameNameItems,
   formatPossessive: formatPossessive,
-  concatenateList: concatenateList,
 }
