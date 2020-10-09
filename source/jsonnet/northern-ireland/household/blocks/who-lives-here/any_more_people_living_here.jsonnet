@@ -1,5 +1,4 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
-local transforms = import '../../../lib/transforms.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle = {
@@ -22,7 +21,7 @@ local questionTitle = {
 local summaryTitlePersonName = {
   text: '{person_name}',
   placeholders: [
-    placeholders.personName(transforms.listHasSameNameItems),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 
@@ -36,21 +35,21 @@ local addPersonQuestionTitle = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name} (You)',
   placeholders: [
-    placeholders.personName(transforms.listHasSameNameItems),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name}',
   placeholders: [
-    placeholders.personName(transforms.listHasSameNameItems),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 
 local removePersonQuestionTitle = {
   text: 'Are you sure you want to remove {person_name}?',
   placeholders: [
-    placeholders.personName(transforms.listHasSameNameItems),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 

@@ -60,35 +60,70 @@ local getListCardinality(listName) = {
 
 local firstPersonNameForList(listName) = {
   placeholder: 'first_person',
-  transforms: [transforms.containsSameNameItems, transforms.formatFirstPersonName],
+  transforms: [
+    {
+      arguments: {
+        delimiter: ' ',
+        list_to_concatenate: {
+          identifier: ['first-name', 'last-name'],
+          source: 'answers',
+          list_item_selector: {
+            source: 'list',
+            id: listName,
+            id_selector: 'first',
+          },
+        },
+      },
+      transform: 'concatenate_list',
+    },
+  ],
 };
 
 local firstPersonNamePossessiveForList(listName) = {
   placeholder: 'first_person_possessive',
   transforms: [
-    transforms.containsSameNameItems,
-    transforms.formatFirstPersonName,
-    transforms.formatPossessive,
+    {
+      arguments: {
+        delimiter: ' ',
+        list_to_concatenate: {
+          identifier: ['first-name', 'last-name'],
+          source: 'answers',
+          list_item_selector: {
+            source: 'list',
+            id: listName,
+            id_selector: 'first',
+          },
+        },
+      },
+      transform: 'concatenate_list',
+    },
+    transforms.formatPossessive
   ],
 };
 
-local personName(sameNameTransform ='') = (
-  local transforms = if sameNameTransform == '' then [transforms.concatenateList] else [sameNameTransform, transforms.formatFirstPersonName];
-  {
-    placeholder: 'person_name',
-    transforms: transforms,
-  }
+local personName(sameNameTransform='') = (
+  if sameNameTransform == 'contains_same_name_items' then
+    {
+      placeholder: 'person_name',
+      transforms: [transforms.containsSameNameItems, transforms.formatFirstPersonName],
+    }
+  else if sameNameTransform == 'list_has_same_name_items' then
+    {
+      placeholder: 'person_name',
+      transforms: [transforms.listHasSameNameItems, transforms.formatFirstPersonName],
+    }
+  else
+    {
+      placeholder: 'person_name',
+      transforms: [transforms.concatenateList],
+    }
 );
 
 {
   personName: personName,
   personNamePossessive: {
     placeholder: 'person_name_possessive',
-    transforms: [
-      transforms.containsSameNameItems,
-      transforms.formatFirstPersonName,
-      transforms.formatPossessive,
-    ],
+    transforms: [transforms.concatenateList, transforms.formatPossessive],
   },
   address: {
     placeholder: 'household_address',

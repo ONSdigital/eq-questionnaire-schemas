@@ -1,5 +1,4 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
-local transforms = import '../../../lib/transforms.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle = {
@@ -22,14 +21,14 @@ local questionTitle = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
-    placeholders.personName([transforms.listHasSameNameItems, transforms.formatFirstPersonName]),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em>',
   placeholders: [
-    placeholders.personName([transforms.listHasSameNameItems, transforms.formatFirstPersonName]),
+    placeholders.personName('list_has_same_name_items'),
   ],
 };
 
@@ -244,7 +243,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
-          placeholders.personName([transforms.listHasSameNameItems, transforms.formatFirstPersonName]),
+          placeholders.personName('list_has_same_name_items'),
         ],
       },
       warning: 'All of the information entered about this person will be deleted',
@@ -275,7 +274,7 @@ local addMorePeopleLivingHere(listIsEmpty) = {
     item_title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName(transforms.listHasSameNameItems),
+        placeholders.personName('list_has_same_name_items'),
       ],
     },
   },

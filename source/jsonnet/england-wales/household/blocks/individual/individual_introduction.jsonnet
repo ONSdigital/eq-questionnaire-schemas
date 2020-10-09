@@ -1,5 +1,4 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
-local transforms = import '../../../lib/transforms.libsonnet';
 
 {
   type: 'Interstitial',
@@ -9,7 +8,7 @@ local transforms = import '../../../lib/transforms.libsonnet';
     title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName(transforms.containsSameNameItems),
+        placeholders.personName('contains_same_name_items'),
       ],
     },
     contents: [
@@ -17,7 +16,7 @@ local transforms = import '../../../lib/transforms.libsonnet';
         description: {
           text: 'In this section, we are going to ask you questions about <strong>{person_name}</strong>.',
           placeholders: [
-            placeholders.personName(transforms.containsSameNameItems),
+            placeholders.personName('contains_same_name_items'),
           ],
         },
       },

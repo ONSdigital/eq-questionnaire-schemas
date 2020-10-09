@@ -311,7 +311,7 @@ function(region_code, census_month_year_date) {
         same_name_answer_ids: ['first-name', 'last-name'],
         title: {
           text: '{person_name}',
-          placeholders: [placeholders.personName()],
+          placeholders: [placeholders.personName('list_has_same_name_items')],
         },
         page_title: 'Person {list_item_position}',
       },
