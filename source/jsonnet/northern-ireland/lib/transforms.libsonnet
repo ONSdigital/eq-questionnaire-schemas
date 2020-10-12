@@ -1,4 +1,4 @@
-local formatPersonName() = {
+local formatPersonName = {
   transform: 'format_name',
   arguments: {
     include_middle_names: { source: 'previous_transform' },
@@ -83,7 +83,7 @@ local listHasSameNameItems = {
   },
 };
 
-local concatenateList = {
+local concatenateNames = {
   transform: 'concatenate_list',
   arguments: {
     list_to_concatenate: {
@@ -100,5 +100,5 @@ local concatenateList = {
   formatPossessive: formatPossessive,
   isSameName: isSameName,
   listHasSameNameItems: listHasSameNameItems,
-  concatenateList: concatenateList,
+  concatenateNames: concatenateNames,
 }

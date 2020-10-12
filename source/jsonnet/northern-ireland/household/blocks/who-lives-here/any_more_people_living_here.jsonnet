@@ -21,7 +21,7 @@ local questionTitle = {
 local summaryTitlePersonName = {
   text: '{person_name}',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 
@@ -35,21 +35,21 @@ local addPersonQuestionTitle = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name} (You)',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for {person_name}',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 
 local removePersonQuestionTitle = {
   text: 'Are you sure you want to remove {person_name}?',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 

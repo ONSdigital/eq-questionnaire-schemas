@@ -105,17 +105,17 @@ local personName(includeMiddleNames='') = (
   if includeMiddleNames == 'if_is_same_name' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.isSameName, transforms.formatPersonName()],
+      transforms: [transforms.isSameName, transforms.formatPersonName],
     }
   else if includeMiddleNames == 'if_same_names_exist' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName()],
+      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName],
     }
   else
     {
       placeholder: 'person_name',
-      transforms: [transforms.concatenateList],
+      transforms: [transforms.concatenateNames],
     }
 );
 
@@ -123,7 +123,7 @@ local personName(includeMiddleNames='') = (
   personName: personName,
   personNamePossessive: {
     placeholder: 'person_name_possessive',
-    transforms: [transforms.concatenateList, transforms.formatPossessive],
+    transforms: [transforms.concatenateNames, transforms.formatPossessive],
   },
   address: {
     placeholder: 'household_address',

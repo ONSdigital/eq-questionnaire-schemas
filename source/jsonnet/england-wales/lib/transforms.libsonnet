@@ -1,22 +1,21 @@
-local formatPersonName() =
-  {
-    transform: 'format_name',
-    arguments: {
-      include_middle_names: { source: 'previous_transform' },
-      first_name: {
-        source: 'answers',
-        identifier: 'first-name',
-      },
-      middle_names: {
-        source: 'answers',
-        identifier: 'middle-names',
-      },
-      last_name: {
-        source: 'answers',
-        identifier: 'last-name',
-      },
+local formatPersonName = {
+  transform: 'format_name',
+  arguments: {
+    include_middle_names: { source: 'previous_transform' },
+    first_name: {
+      source: 'answers',
+      identifier: 'first-name',
     },
-  };
+    middle_names: {
+      source: 'answers',
+      identifier: 'middle-names',
+    },
+    last_name: {
+      source: 'answers',
+      identifier: 'last-name',
+    },
+  },
+};
 
 local formatSecondPersonName = {
   transform: 'format_name',
@@ -84,7 +83,7 @@ local listHasSameNameItems = {
   },
 };
 
-local concatenateList = {
+local concatenateNames = {
   transform: 'concatenate_list',
   arguments: {
     list_to_concatenate: {
@@ -101,5 +100,5 @@ local concatenateList = {
   formatPossessive: formatPossessive,
   isSameName: isSameName,
   listHasSameNameItems: listHasSameNameItems,
-  concatenateList: concatenateList,
+  concatenateNames: concatenateNames,
 }
