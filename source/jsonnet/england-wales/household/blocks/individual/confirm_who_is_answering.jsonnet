@@ -10,7 +10,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
     title: {
       text: 'Are you <em>{person_name}?</em>',
       placeholders: [
-        placeholders.personName('is_same_name'),
+        placeholders.personName(includeMiddleNames='if_is_same_name'),
       ],
     },
     type: 'General',

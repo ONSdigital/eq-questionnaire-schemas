@@ -300,7 +300,7 @@ function(region_code) {
         for_list: 'household',
         title: {
           text: '{person_name}',
-          placeholders: [placeholders.personName('list_has_same_name_items')],
+          placeholders: [placeholders.personName(includeMiddleNames='if_same_names_exist')],
         },
         page_title: 'Person {list_item_position}',
       },

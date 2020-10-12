@@ -87,10 +87,22 @@ local listHasSameNameItems = {
   },
 };
 
+local concatenateList = {
+  transform: 'concatenate_list',
+  arguments: {
+    list_to_concatenate: {
+      source: 'answers',
+      identifier: ['first-name', 'last-name'],
+    },
+    delimiter: ' ',
+  },
+};
+
 {
   formatPersonName: formatPersonName,
   formatSecondPersonName: formatSecondPersonName,
+  formatPossessive: formatPossessive,
   isSameName: isSameName,
   listHasSameNameItems: listHasSameNameItems,
-  formatPossessive: formatPossessive,
+  concatenateList: concatenateList,
 }

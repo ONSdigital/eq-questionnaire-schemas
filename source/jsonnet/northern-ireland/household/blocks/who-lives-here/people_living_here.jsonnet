@@ -54,7 +54,7 @@ local addQuestion(listIsEmpty) = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 

@@ -54,14 +54,14 @@ local addQuestion(listIsEmpty) = {
 local primaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em> (You)',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 
 local nonPrimaryEditPersonQuestionTitle = {
   text: 'Change details for <em>{person_name}</em>',
   placeholders: [
-    placeholders.personName('list_has_same_name_items'),
+    placeholders.personName(includeMiddleNames='if_same_names_exist'),
   ],
 };
 
@@ -220,7 +220,7 @@ local editQuestion(questionTitle) = {
       title: {
         text: 'Are you sure you want to remove <em>{person_name}</em>?',
         placeholders: [
-          placeholders.personName('list_has_same_name_items'),
+          placeholders.personName(includeMiddleNames='if_same_names_exist'),
         ],
       },
       warning: 'All of the information entered about this person will be deleted',
@@ -251,7 +251,7 @@ local editQuestion(questionTitle) = {
     item_title: {
       text: '{person_name}',
       placeholders: [
-        placeholders.personName('list_has_same_name_items'),
+        placeholders.personName(includeMiddleNames='if_same_names_exist'),
       ],
     },
   },

@@ -101,21 +101,21 @@ local firstPersonNamePossessiveForList(listName) = {
   ],
 };
 
-local personName(sameNameTransform='') = (
-  if sameNameTransform == 'is_same_name' then
+local personName(includeMiddleNames='') = (
+  if includeMiddleNames == 'if_is_same_name' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.isSameName, transforms.formatPersonName(sameNameTransform=true)],
+      transforms: [transforms.isSameName, transforms.formatPersonName()],
     }
-  else if sameNameTransform == 'list_has_same_name_items' then
+  else if includeMiddleNames == 'if_same_names_exist' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName(sameNameTransform=true)],
+      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName()],
     }
   else
     {
       placeholder: 'person_name',
-      transforms: [transforms.formatPersonName()],
+      transforms: [transforms.concatenateList],
     }
 );
 
@@ -123,7 +123,7 @@ local personName(sameNameTransform='') = (
   personName: personName,
   personNamePossessive: {
     placeholder: 'person_name_possessive',
-    transforms: [transforms.formatPersonName(), transforms.formatPossessive],
+    transforms: [transforms.concatenateList, transforms.formatPossessive],
   },
   address: {
     placeholder: 'household_address',
