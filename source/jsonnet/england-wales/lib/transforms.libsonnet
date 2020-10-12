@@ -1,10 +1,8 @@
-local formatPersonName(sameNameTransform=false) = (
-
-  local includeMiddleNames = if sameNameTransform then { source: 'previous_transform' } else false;
+local formatPersonName() =
   {
     transform: 'format_name',
     arguments: {
-      include_middle_names: includeMiddleNames,
+      include_middle_names: { source: 'previous_transform' },
       first_name: {
         source: 'answers',
         identifier: 'first-name',
