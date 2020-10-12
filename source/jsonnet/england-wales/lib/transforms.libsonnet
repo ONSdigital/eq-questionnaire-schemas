@@ -16,8 +16,7 @@ local formatPersonName() =
         identifier: 'last-name',
       },
     },
-  }
-);
+  };
 
 local formatSecondPersonName = {
   transform: 'format_name',

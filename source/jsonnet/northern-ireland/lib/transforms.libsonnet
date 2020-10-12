@@ -1,22 +1,21 @@
 local formatPersonName() = {
-    transform: 'format_name',
-    arguments: {
-      include_middle_names: { source: 'previous_transform' },
-      first_name: {
-        source: 'answers',
-        identifier: 'first-name',
-      },
-      middle_names: {
-        source: 'answers',
-        identifier: 'middle-names',
-      },
-      last_name: {
-        source: 'answers',
-        identifier: 'last-name',
-      },
+  transform: 'format_name',
+  arguments: {
+    include_middle_names: { source: 'previous_transform' },
+    first_name: {
+      source: 'answers',
+      identifier: 'first-name',
     },
-  }
-);
+    middle_names: {
+      source: 'answers',
+      identifier: 'middle-names',
+    },
+    last_name: {
+      source: 'answers',
+      identifier: 'last-name',
+    },
+  },
+};
 
 local formatSecondPersonName = {
   transform: 'format_name',
