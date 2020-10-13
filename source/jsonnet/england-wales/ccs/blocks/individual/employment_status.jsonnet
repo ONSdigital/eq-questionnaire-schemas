@@ -1,10 +1,11 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local question(title, questionDescription, answerDescription) = {
   id: 'employment-status-question',
   title: title,
   description: [
+    questionDescription,
     'Include casual or temporary work, even if only for one hour',
   ],
   instruction: ['Tell the respondent to turn to <strong>Showcard 10</strong> or show them the options below'],
@@ -23,7 +24,7 @@ local question(title, description) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
-          description: description,
+          description: answerDescription,
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',
@@ -68,20 +69,24 @@ local proxyTitle = {
   ],
 };
 
-local nonProxyDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
+local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer "Temporarily away from work ill, on holiday or temporarily laid off".';
 
-local proxyDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
+local proxyQuestionDescription = 'If they have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer "Temporarily away from work ill, on holiday or temporarily laid off".';
+
+local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
+
+local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
 
 {
   type: 'Question',
   id: 'employment-status',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(proxyTitle, proxyQuestionDescription, proxyAnswerDescription),
       when: [rules.isProxy],
     },
   ],
