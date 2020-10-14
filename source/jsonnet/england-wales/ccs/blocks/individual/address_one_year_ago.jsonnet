@@ -47,7 +47,7 @@ local proxyTitle = {
 
 local nonProxyDescription = 'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, answer about where you were living <strong>before your circumstances changed</strong>.';
 
-local proxyDescription = 'If the <strong>coronavirus</strong> pandemic affected their usual address one year ago, answer about where they were living <strong>before your circumstances changed</strong>.';
+local proxyDescription = 'If the <strong>coronavirus</strong> pandemic affected their usual address one year ago, answer about where they were living <strong>before their circumstances changed</strong>.';
 
 {
   type: 'Question',
