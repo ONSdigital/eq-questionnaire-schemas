@@ -69,9 +69,9 @@ local proxyTitle = {
   ],
 };
 
-local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer "Temporarily away from work ill, on holiday or temporarily laid off".';
+local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.';
 
-local proxyQuestionDescription = 'If they have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer "Temporarily away from work ill, on holiday or temporarily laid off".';
+local proxyQuestionDescription = 'If they have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.';
 
 local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
 
