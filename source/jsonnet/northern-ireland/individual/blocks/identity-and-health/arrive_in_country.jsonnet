@@ -22,6 +22,8 @@ local question(title) = {
       validation: {
         messages: {
           MANDATORY_DATE: 'Enter a year of arrival',
+          SINGLE_DATE_PERIOD_TOO_EARLY: 'Enter a year of arrival after %(min)s',
+          SINGLE_DATE_PERIOD_TOO_LATE: 'Enter a year of arrival before %(max)s',
         },
       },
     },

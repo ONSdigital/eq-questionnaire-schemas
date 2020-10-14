@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, message) = {
   id: 'arrive-in-uk-question',
   title: title,
   type: 'General',
@@ -24,7 +24,9 @@ local question(title) = {
       },
       validation: {
         messages: {
-          MANDATORY_DATE: 'Enter a date of arrival',
+          MANDATORY_DATE: 'Enter a valid date of arrival',
+          SINGLE_DATE_PERIOD_TOO_EARLY: message,
+          SINGLE_DATE_PERIOD_TOO_LATE: 'Enter a date of arrival that is in the past',
         },
       },
     },
@@ -38,6 +40,8 @@ local proxyTitle = {
     placeholders.personName(),
   ],
 };
+local nonProxyErrorMessage = 'Enter a date of arrival that is after your date of birth';
+local proxyErrorMessage = 'Enter a date of arrival that is after their date of birth';
 
 function(region_code, census_month_year_date) {
   type: 'Question',
@@ -45,11 +49,11 @@ function(region_code, census_month_year_date) {
   page_title: 'Arrived to live in the UK',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyErrorMessage),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyErrorMessage),
       when: [rules.isProxy],
     },
   ],
