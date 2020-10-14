@@ -1,10 +1,13 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local question(title, questionDescription, answerDescription) = {
   id: 'employment-status-last-seven-days-question',
   title: title,
   type: 'MutuallyExclusive',
+  description: [
+    questionDescription,
+  ],
   mandatory: true,
   guidance: {
     contents: [
@@ -26,7 +29,7 @@ local question(title, description) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
-          description: description,
+          description: answerDescription,
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',
@@ -64,6 +67,9 @@ local proxyTitle = {
   ],
 };
 
+local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+local proxyQuestionDescription = 'If they have a job but have been off work in  <strong>quarantine</strong> or  <strong>self-isolating </strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+
 local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
 local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
 
@@ -73,11 +79,11 @@ local proxyAnswerDescription = 'Freelance means that they are self-employed and 
   page_title: 'Employment status in the last seven days',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyAnswerDescription),
+      question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyAnswerDescription),
+      question: question(proxyTitle, proxyQuestionDescription, proxyAnswerDescription),
       when: [rules.isProxy],
     },
   ],

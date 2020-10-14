@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, description) = {
   title: title,
   id: 'hours-worked-question',
   guidance: {
@@ -12,6 +12,9 @@ local question(title) = {
     ],
   },
   type: 'General',
+  description: [
+    description,
+  ],
   answers: [
     {
       id: 'hours-worked-answer',
@@ -47,17 +50,20 @@ local proxyTitle = {
   ],
 };
 
+local proxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>';
+local nonProxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>';
+
 {
   type: 'Question',
   id: 'hours-worked',
   page_title: 'Hours worked',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyDescription),
       when: [rules.isProxy],
     },
   ],

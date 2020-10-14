@@ -1,9 +1,16 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, guidanceContent) = {
+local question(title, guidanceContent, questionGuidance, questionDescription) = {
   id: 'workplace-type-question',
   title: title,
+  definitions: [{
+    title: 'What we mean by “mainly work”',
+    contents: questionGuidance,
+  }],
+  description: [
+    questionDescription,
+  ],
   type: 'General',
   answers: [
     {
@@ -58,6 +65,27 @@ local proxyGuidanceContent = [
   },
 ];
 
+local proxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected where they mainly work, select the answer that best describes their <strong>current circumstances</strong>.';
+local nonProxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected where you mainly work, select the answer that best describes your <strong>current circumstances</strong>.';
+
+local proxyQuestionGuidance = [
+  {
+    description: 'This is where they work most of the time in their main job.',
+  },
+  {
+    description: 'For example, if they work from home three days a week and go to another place of work two days, select  “At or from home”.',
+  },
+];
+
+local nonProxyQuestionGuidance = [
+  {
+    description: 'This is where you work most of the time in your main job.',
+  },
+  {
+    description: 'For example, if you work from home three days a week and go to another place of work two days, select “At or from home”.',
+  },
+];
+
 local nonProxyTitle = 'Where do you mainly work?';
 local proxyTitle = {
   text: 'Where does <em>{person_name}</em> mainly work?',
@@ -72,11 +100,11 @@ local proxyTitle = {
   page_title: 'Type of workplace',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyGuidanceContent),
+      question: question(nonProxyTitle, nonProxyGuidanceContent, nonProxyQuestionGuidance, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyGuidanceContent),
+      question: question(proxyTitle, proxyGuidanceContent, proxyQuestionGuidance, proxyDescription),
       when: [rules.isProxy],
     },
   ],
