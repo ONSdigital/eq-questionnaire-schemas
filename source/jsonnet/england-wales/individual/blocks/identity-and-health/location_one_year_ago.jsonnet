@@ -1,11 +1,32 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'One year ago, what was your usual address?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then [
+    'If they had no usual address one year ago, select the address where they were staying',
+    'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
+  ] else [
+    'If you had no usual address one year ago, select the address where you were staying',
+    'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
+  ]
+);
+
+
+local question(isProxy) = {
   id: 'location-one-year-ago-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'General',
-  description: description,
+  description: questionDescription(isProxy),
   answers: [
     {
       id: 'location-one-year-ago-answer',
@@ -38,34 +59,17 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitle = 'One year ago, what was your usual address?';
-local nonProxyDescription = [
-  'If you had no usual address one year ago, select the address where you were staying',
-  'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
-];
-
-local proxyTitle = {
-  text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-local proxyDescription = [
-  'If they had no usual address one year ago, select the address where they were staying',
-  'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
-];
-
 {
   type: 'Question',
   id: 'location-one-year-ago',
   page_title: 'Location one year ago',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],

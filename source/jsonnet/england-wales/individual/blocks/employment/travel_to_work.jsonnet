@@ -1,10 +1,30 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
-  title: title,
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'How does <em>{person_name}</em> usually travel to work?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'How do you usually travel to work?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then [
+    'Answer for the longest part, <em>by distance</em>, of their usual journey to work',
+    'If the <strong>coronavirus</strong> pandemic has affected how they travel to work, select the answer that best describes their <strong>current circumstances</strong>.',
+  ] else [
+    'Answer for the longest part, <em>by distance</em>, of your usual journey to work',
+    'If the <strong>coronavirus</strong> pandemic has affected how you travel to work, select the answer that best describes your <strong>current circumstances</strong>.',
+  ]
+);
+
+local question(isProxy) = {
+  title: questionTitle(isProxy),
   id: 'travel-to-work-question',
-  description: description,
+  description: questionDescription(isProxy),
   type: 'General',
   answers: [
     {
@@ -61,34 +81,17 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitle = 'How do you usually travel to work?';
-local nonProxyDescription = [
-  'Answer for the longest part, <em>by distance</em>, of your usual journey to work',
-  'If the <strong>coronavirus</strong> pandemic has affected how you travel to work, select the answer that best describes your <strong>current circumstances</strong>.',
-];
-
-local proxyTitle = {
-  text: 'How does <em>{person_name}</em> usually travel to work?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-local proxyDescription = [
-  'Answer for the longest part, <em>by distance</em>, of their usual journey to work',
-  'If the <strong>coronavirus</strong> pandemic has affected how they travel to work, select the answer that best describes their <strong>current circumstances</strong>.',
-];
-
 {
   type: 'Question',
   id: 'travel-to-work',
   page_title: 'Travel to work',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],

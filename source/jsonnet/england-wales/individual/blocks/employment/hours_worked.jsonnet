@@ -1,8 +1,23 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
-  title: title,
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'In <em>{person_name_possessive}</em> main job, how many hours a week do they usually work?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'In your main job, how many hours a week do you usually work?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then 'If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>'
+  else 'If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>'
+);
+
+local question(isProxy) = {
+  title: questionTitle(isProxy),
   id: 'hours-worked-question',
   guidance: {
     contents: [
@@ -13,7 +28,7 @@ local question(title, description) = {
   },
   type: 'General',
   description: [
-    description,
+    questionDescription(isProxy),
   ],
   answers: [
     {
@@ -42,28 +57,17 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitle = 'In your main job, how many hours a week do you usually work?';
-local proxyTitle = {
-  text: 'In <em>{person_name_possessive}</em> main job, how many hours a week do they usually work?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-
-local proxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>';
-local nonProxyDescription = 'If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>';
-
 {
   type: 'Question',
   id: 'hours-worked',
   page_title: 'Hours worked',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
