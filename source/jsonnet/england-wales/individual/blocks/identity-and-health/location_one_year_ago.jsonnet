@@ -5,7 +5,7 @@ local questionTitle(isProxy) = (
   if isProxy then {
     text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
     placeholders: [
-      placeholders.personName(),
+      placeholders.personNamePossessive,
     ],
   }
   else 'One year ago, what was your usual address?'
