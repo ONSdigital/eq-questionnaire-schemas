@@ -12,7 +12,7 @@ local questionTitle(isProxy) = (
 );
 
 local questionDescription(isProxy) = (
-  if isProxy then 'If they have a job but have been off work in  <strong>quarantine</strong> or  <strong>self-isolating </strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
+  if isProxy then 'If they have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating </strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
   else 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
 );
 

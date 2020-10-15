@@ -11,7 +11,7 @@ local rules = import 'rules.libsonnet';
         title: 'Main job',
         contents: [
           {
-            description: 'The next set of questions is about your main job. Your main job is the job in which you usually work the most hours.',
+            description: 'The next set of questions is about your main job. Your main job is the job in which you work the most hours.',
           },
           {
             description: '<strong>Coronavirus (COVID-19)</strong>',
@@ -29,7 +29,7 @@ local rules = import 'rules.libsonnet';
         contents: [
           {
             description: {
-              text: 'The next set of questions is about <em>{person_name_possessive}</em> main job. Their main job is the job in which they usually work the most hours.',
+              text: 'The next set of questions is about <em>{person_name_possessive}</em> main job. Their main job is the job in which they work the most hours.',
               placeholders: [placeholders.personNamePossessive],
             },
           },

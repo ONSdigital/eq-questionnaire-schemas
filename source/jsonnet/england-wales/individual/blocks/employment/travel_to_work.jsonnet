@@ -13,10 +13,10 @@ local questionTitle(isProxy) = (
 
 local questionDescription(isProxy) = (
   if isProxy then [
-    'Answer for the longest part, <em>by distance</em>, of their usual journey to work',
+    'Answer for the longest part, <em>by distance</em>, of their current journey to work',
     'If the <strong>coronavirus</strong> pandemic has affected how they travel to work, select the answer that best describes their <strong>current circumstances</strong>.',
   ] else [
-    'Answer for the longest part, <em>by distance</em>, of your usual journey to work',
+    'Answer for the longest part, <em>by distance</em>, of your current journey to work',
     'If the <strong>coronavirus</strong> pandemic has affected how you travel to work, select the answer that best describes your <strong>current circumstances</strong>.',
   ]
 );
