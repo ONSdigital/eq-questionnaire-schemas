@@ -26,6 +26,11 @@ local rules = import 'rules.libsonnet';
         maximum: {
           value: 115,
         },
+        validation: {
+          messages: {
+            NUMBER_TOO_LARGE: 'Enter an age less than or equal to %(max)s years',
+          },
+        },
       },
       {
         id: 'age-estimate-answer',

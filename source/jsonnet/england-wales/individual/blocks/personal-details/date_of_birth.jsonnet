@@ -25,6 +25,9 @@ local question(title) = {
       validation: {
         messages: {
           MANDATORY_DATE: 'Enter a date of birth',
+          INVALID_DATE: 'Enter a valid date of birth',
+          SINGLE_DATE_PERIOD_TOO_EARLY: 'Enter a date of birth after %(min)s',
+          SINGLE_DATE_PERIOD_TOO_LATE: 'Enter a date of birth before %(max)s',
         },
       },
     },
