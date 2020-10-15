@@ -5,7 +5,7 @@ local questionTitle(isProxy) = (
   if isProxy then {
     text: 'In <em>{person_name_possessive}</em> main job, how many hours a week do they usually work?',
     placeholders: [
-      placeholders.personName(),
+      placeholders.personNamePossessive,
     ],
   }
   else 'In your main job, how many hours a week do you usually work?'
