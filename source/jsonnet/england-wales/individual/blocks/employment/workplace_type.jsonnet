@@ -30,7 +30,7 @@ local questionGuidance(isProxy) = (
 );
 
 
-local guidanceContent(isProxy) = (
+local answerGuidance(isProxy) = (
   if isProxy then [
     {
       description: 'Their answer will help their community by allowing the government and councils to understand commuting patterns.',
@@ -60,7 +60,7 @@ local question(isProxy) = {
       guidance: {
         show_guidance: 'Why we ask for workplace',
         hide_guidance: 'Why we ask for workplace',
-        contents: guidanceContent(isProxy),
+        contents: answerGuidance(isProxy),
       },
       id: 'workplace-type-answer',
       mandatory: false,
