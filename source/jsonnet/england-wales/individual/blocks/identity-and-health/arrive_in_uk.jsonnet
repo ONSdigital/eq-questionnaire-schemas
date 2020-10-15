@@ -13,7 +13,7 @@ local questionTitle(isProxy) = (
 
 local errorMessage(isProxy) = (
   if isProxy then 'Enter a date of arrival that is after their date of birth'
-  else 'Enter a date of arrival that is after their date of birth'
+  else 'Enter a date of arrival that is after your date of birth'
 );
 
 local question(isProxy) = {
