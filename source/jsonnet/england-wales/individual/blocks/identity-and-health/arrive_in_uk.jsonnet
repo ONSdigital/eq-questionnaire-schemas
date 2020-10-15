@@ -39,7 +39,7 @@ local question(isProxy) = {
       },
       validation: {
         messages: {
-          MANDATORY_DATE: 'Enter a valid date of arrival',
+          INVALID_DATE: 'Enter a valid date of arrival',
           SINGLE_DATE_PERIOD_TOO_EARLY: errorMessage(isProxy),
           SINGLE_DATE_PERIOD_TOO_LATE: 'Enter a date of arrival that is in the past',
         },
