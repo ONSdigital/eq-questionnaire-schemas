@@ -20,9 +20,7 @@ local question(isProxy) = {
   id: 'mainly-work-in-uk-question',
   title: questionTitle(isProxy),
   type: 'General',
-  description: [
-    questionDescription(isProxy),
-  ],
+  description: [questionDescription(isProxy)],
   answers: [
     {
       id: 'mainly-work-in-uk-answer',
