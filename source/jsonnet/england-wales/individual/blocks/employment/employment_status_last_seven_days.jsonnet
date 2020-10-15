@@ -1,12 +1,33 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, questionDescription, answerDescription) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'In the last seven days, were you doing any of the following?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then 'If they have a job but have been off work in  <strong>quarantine</strong> or  <strong>self-isolating </strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
+  else 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
+);
+
+local answerDescription(isProxy) = (
+  if isProxy then 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work'
+  else 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work'
+);
+
+
+local question(isProxy) = {
   id: 'employment-status-last-seven-days-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'MutuallyExclusive',
   description: [
-    questionDescription,
+    questionDescription(isProxy),
   ],
   mandatory: true,
   guidance: {
@@ -29,7 +50,7 @@ local question(title, questionDescription, answerDescription) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
-          description: answerDescription,
+          description: answerDescription(isProxy),
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',
@@ -59,31 +80,17 @@ local question(title, questionDescription, answerDescription) = {
   ],
 };
 
-local nonProxyTitle = 'In the last seven days, were you doing any of the following?';
-local proxyTitle = {
-  text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-
-local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
-local proxyQuestionDescription = 'If they have a job but have been off work in  <strong>quarantine</strong> or  <strong>self-isolating </strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
-
-local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
-local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
-
 {
   type: 'Question',
   id: 'employment-status-last-seven-days',
   page_title: 'Employment status in the last seven days',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyQuestionDescription, proxyAnswerDescription),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
