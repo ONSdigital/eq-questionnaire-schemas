@@ -43,7 +43,10 @@ local question(title, description, additionalAnswerOptions=[]) = {
 };
 
 local nonProxyTitle = 'One year ago, what was your usual address?';
-local nonProxyDescription = 'If you had no usual address one year ago, select the address where you were staying';
+local nonProxyDescription = [
+  'If you had no usual address one year ago, select the address where you were staying',
+  'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
+];
 
 local proxyTitle = {
   text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
@@ -51,7 +54,10 @@ local proxyTitle = {
     placeholders.personNamePossessive,
   ],
 };
-local proxyDescription = 'If they had no usual address one year ago, select the address where they were staying';
+local proxyDescription = [
+  'If they had no usual address one year ago, select the address where they were staying',
+  'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
+];
 
 local additionalAnswerOption = [
   {
