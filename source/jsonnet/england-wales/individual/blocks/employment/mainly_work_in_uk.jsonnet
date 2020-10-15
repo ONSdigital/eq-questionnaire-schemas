@@ -21,7 +21,7 @@ local question(isProxy) = {
   title: questionTitle(isProxy),
   type: 'General',
   description: [
-    questionDescription(isProxy)
+    questionDescription(isProxy),
   ],
   answers: [
     {
