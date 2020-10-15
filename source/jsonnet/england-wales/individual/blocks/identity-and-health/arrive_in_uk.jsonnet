@@ -1,9 +1,24 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, message) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'When did <em>{person_name}</em> most recently arrive to live in the United Kingdom?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'When did you most recently arrive to live in the United Kingdom?'
+);
+
+local errorMessage(isProxy) = (
+  if isProxy then 'Enter a date of arrival that is after their date of birth'
+  else 'Enter a date of arrival that is after their date of birth'
+);
+
+local question(isProxy) = {
   id: 'arrive-in-uk-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'General',
   description: [
     'Do not count short visits away from the UK',
@@ -25,7 +40,7 @@ local question(title, message) = {
       validation: {
         messages: {
           MANDATORY_DATE: 'Enter a valid date of arrival',
-          SINGLE_DATE_PERIOD_TOO_EARLY: message,
+          SINGLE_DATE_PERIOD_TOO_EARLY: errorMessage(isProxy),
           SINGLE_DATE_PERIOD_TOO_LATE: 'Enter a date of arrival that is in the past',
         },
       },
@@ -33,27 +48,17 @@ local question(title, message) = {
   ],
 };
 
-local nonProxyTitle = 'When did you most recently arrive to live in the United Kingdom?';
-local proxyTitle = {
-  text: 'When did <em>{person_name}</em> most recently arrive to live in the United Kingdom?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-local nonProxyErrorMessage = 'Enter a date of arrival that is after your date of birth';
-local proxyErrorMessage = 'Enter a date of arrival that is after their date of birth';
-
 function(region_code, census_month_year_date) {
   type: 'Question',
   id: 'arrive-in-uk',
   page_title: 'Arrived to live in the UK',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyErrorMessage),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyErrorMessage),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
