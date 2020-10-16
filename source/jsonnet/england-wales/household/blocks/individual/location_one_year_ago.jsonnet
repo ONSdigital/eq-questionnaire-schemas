@@ -13,6 +13,19 @@ local questionTitle(isProxy) = (
   else 'One year ago, what was your usual address?'
 );
 
+local additionalAnswerOption(isFirstPerson) = (
+  if isFirstPerson then [{
+    label: {
+      text: 'Same as {first_person_possessive} address one year ago',
+      placeholders: [
+        placeholders.firstPersonNamePossessiveForList(listName),
+      ],
+    },
+    value: 'Same as {first_person_possessive} address one year ago',
+  }]
+  else []
+);
+
 local questionDescription(isProxy) = (
   if isProxy then [
     'If they had no usual address one year ago, select the address where they were staying.',
@@ -23,7 +36,7 @@ local questionDescription(isProxy) = (
   ]
 );
 
-local question(additionalAnswerOptions=[], isProxy) = {
+local question(isProxy, isFirstPerson) = {
   id: 'location-one-year-ago-question',
   title: questionTitle(isProxy),
   type: 'General',
@@ -32,7 +45,7 @@ local question(additionalAnswerOptions=[], isProxy) = {
     {
       id: 'location-one-year-ago-answer',
       mandatory: false,
-      options: additionalAnswerOptions + [
+      options: additionalAnswerOption(isFirstPerson) + [
         {
           label: {
             text: '{household_address}',
@@ -60,37 +73,25 @@ local question(additionalAnswerOptions=[], isProxy) = {
   ],
 };
 
-local additionalAnswerOption = [
-  {
-    label: {
-      text: 'Same as {first_person_possessive} address one year ago',
-      placeholders: [
-        placeholders.firstPersonNamePossessiveForList(listName),
-      ],
-    },
-    value: 'Same as {first_person_possessive} address one year ago',
-  },
-];
-
 {
   type: 'Question',
   id: 'location-one-year-ago',
   page_title: 'Location one year ago',
   question_variants: [
     {
-      question: question(isProxy=false),
+      question: question(isProxy=false, isFirstPerson=true),
       when: [rules.isNotProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(additionalAnswerOption, isProxy=false),
+      question: question(isProxy=false, isFirstPerson=false),
       when: [rules.isNotProxy, rules.isNotFirstPersonInList(listName)],
     },
     {
-      question: question(isProxy=true),
+      question: question(isProxy=true, isFirstPerson=true),
       when: [rules.isProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(additionalAnswerOption, isProxy=true),
+      question: question(isProxy=true, isFirstPerson=false),
       when: [rules.isProxy, rules.isNotFirstPersonInList(listName)],
     },
   ],
