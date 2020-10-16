@@ -15,7 +15,7 @@ local questionTitle(isProxy) = (
 
 local additionalAnswerOption(isFirstPerson) = (
   if isFirstPerson then []
-   else [{
+  else [{
     label: {
       text: 'Same as {first_person_possessive} address one year ago',
       placeholders: [
