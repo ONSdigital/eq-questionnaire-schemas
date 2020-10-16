@@ -69,16 +69,6 @@
       },
     },
   },
-  schoolYear5AndOver: {
-    id: 'date-of-birth-answer',
-    condition: 'less than or equal to',
-    date_comparison: {
-      value: '2020-06-30',
-      offset_by: {
-        years: -5,
-      },
-    },
-  },
   mainJob: {
     id: 'employment-status-last-seven-days-answer-exclusive',
     condition: 'not set',

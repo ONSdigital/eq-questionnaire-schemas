@@ -100,7 +100,7 @@ local proxyTitle = {
     {
       goto: {
         block: 'look-after-or-support-others',
-        when: [rules.schoolYear5AndOver],
+        when: [rules.over5],
       },
     },
     {
