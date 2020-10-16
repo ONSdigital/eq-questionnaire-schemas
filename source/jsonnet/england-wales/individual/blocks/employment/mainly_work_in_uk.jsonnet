@@ -1,10 +1,30 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'Does <em>{person_name}</em> mainly work in the UK?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'Do you mainly work in the UK?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then [
+    'If the <strong>coronavirus</strong> pandemic has affected where they mainly work, select the answer that best describes their <strong>current circumstances</strong>.',
+  ]
+  else [
+    'If the <strong>coronavirus</strong> pandemic has affected where you mainly work, select the answer that best describes your <strong>current circumstances</strong>.',
+  ]
+);
+
+local question(isProxy) = {
   id: 'mainly-work-in-uk-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'General',
+  description: questionDescription(isProxy),
   answers: [
     {
       id: 'mainly-work-in-uk-answer',
@@ -24,25 +44,17 @@ local question(title) = {
   ],
 };
 
-local nonProxyTitle = 'Do you mainly work in the UK?';
-local proxyTitle = {
-  text: 'Does <em>{person_name}</em> mainly work in the UK?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-
 {
   type: 'Question',
   id: 'mainly-work-in-uk',
   page_title: 'Mainly work in the UK',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],

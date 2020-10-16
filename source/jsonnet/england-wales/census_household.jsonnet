@@ -16,6 +16,7 @@ local who_rent_from = import 'household/blocks/accommodation/who_rent_from.jsonn
 local any_more_people_living_here = import 'household/blocks/who-lives-here/any_more_people_living_here.jsonnet';
 local any_more_visitors = import 'household/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
+local coronavirus_circumstances = import 'household/blocks/who-lives-here/coronavirus_circumstances.jsonnet';
 local do_you_usually_live_here = import 'household/blocks/who-lives-here/do_you_usually_live_here.jsonnet';
 local people_living_here = import 'household/blocks/who-lives-here/people_living_here.jsonnet';
 local people_who_live_here_introduction = import 'household/blocks/who-lives-here/people_who_live_here_introduction.jsonnet';
@@ -27,6 +28,7 @@ local relationships_introduction = import 'household/blocks/relationships/relati
 
 // Personal Details
 local proxy = import 'household/blocks/individual/confirm_who_is_answering.jsonnet';
+local individual_coronavirus_circumstances = import 'household/blocks/individual/individual_coronavirus_circumstances.jsonnet';
 local individual_introduction = import 'household/blocks/individual/individual_introduction.jsonnet';
 local address_type = import 'individual/blocks/personal-details/address_type.jsonnet';
 local another_address = import 'individual/blocks/personal-details/another_address.jsonnet';
@@ -238,6 +240,7 @@ function(region_code, census_month_year_date) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
+            coronavirus_circumstances,
             people_who_live_here_introduction,
             do_you_usually_live_here,
             who_else_lives_here,
@@ -321,6 +324,7 @@ function(region_code, census_month_year_date) {
           title: 'Personal details',
           blocks: [
             individual_introduction,
+            individual_coronavirus_circumstances,
             proxy,
             date_of_birth,
             confirm_age,

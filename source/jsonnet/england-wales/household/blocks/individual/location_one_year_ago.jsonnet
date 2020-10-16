@@ -3,18 +3,49 @@ local rules = import 'rules.libsonnet';
 
 local listName = 'household';
 
-local question(title, description, additionalAnswerOptions=[]) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
+    placeholders: [
+      placeholders.personNamePossessive,
+    ],
+  }
+  else 'One year ago, what was your usual address?'
+);
+
+local additionalAnswerOption(isFirstPerson) = (
+  if isFirstPerson then []
+  else [{
+    label: {
+      text: 'Same as {first_person_possessive} address one year ago',
+      placeholders: [
+        placeholders.firstPersonNamePossessiveForList(listName),
+      ],
+    },
+    value: 'Same as {first_person_possessive} address one year ago',
+  }]
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then [
+    'If they had no usual address one year ago, select the address where they were staying.',
+    'If the <strong>coronavirus</strong> pandemic affected their usual address one year ago, select where they were living <strong>before their circumstances changed</strong>.',
+  ] else [
+    'If you had no usual address one year ago, select the address where you were staying.',
+    'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
+  ]
+);
+
+local question(isProxy, isFirstPerson) = {
   id: 'location-one-year-ago-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'General',
-  description: [
-    description,
-  ],
+  description: questionDescription(isProxy),
   answers: [
     {
       id: 'location-one-year-ago-answer',
       mandatory: false,
-      options: additionalAnswerOptions + [
+      options: additionalAnswerOption(isFirstPerson) + [
         {
           label: {
             text: '{household_address}',
@@ -42,48 +73,25 @@ local question(title, description, additionalAnswerOptions=[]) = {
   ],
 };
 
-local nonProxyTitle = 'One year ago, what was your usual address?';
-local nonProxyDescription = 'If you had no usual address one year ago, select the address where you were staying';
-
-local proxyTitle = {
-  text: 'One year ago, what was <em>{person_name_possessive}</em> usual address?',
-  placeholders: [
-    placeholders.personNamePossessive,
-  ],
-};
-local proxyDescription = 'If they had no usual address one year ago, select the address where they were staying';
-
-local additionalAnswerOption = [
-  {
-    label: {
-      text: 'Same as {first_person_possessive} address one year ago',
-      placeholders: [
-        placeholders.firstPersonNamePossessiveForList(listName),
-      ],
-    },
-    value: 'Same as {first_person_possessive} address one year ago',
-  },
-];
-
 {
   type: 'Question',
   id: 'location-one-year-ago',
   page_title: 'Location one year ago',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(isProxy=false, isFirstPerson=true),
       when: [rules.isNotProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(nonProxyTitle, nonProxyDescription, additionalAnswerOption),
+      question: question(isProxy=false, isFirstPerson=false),
       when: [rules.isNotProxy, rules.isNotFirstPersonInList(listName)],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(isProxy=true, isFirstPerson=true),
       when: [rules.isProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(proxyTitle, proxyDescription, additionalAnswerOption),
+      question: question(isProxy=true, isFirstPerson=false),
       when: [rules.isProxy, rules.isNotFirstPersonInList(listName)],
     },
   ],
