@@ -32,9 +32,7 @@ local rules = import 'rules.libsonnet';
             },
           },
           {
-            description: '<strong>Coronavirus (COVID-19)</strong>',
-          },
-          {
+            title: 'Coronavirus (COVID-19)',
             description: 'Their circumstances may have changed during the coronavirus pandemic. Answer all questions based on their situation as it is now.',
           },
         ],

@@ -14,7 +14,8 @@ local questionTitle(isProxy) = (
 );
 
 local additionalAnswerOption(isFirstPerson) = (
-  if isFirstPerson then [{
+  if isFirstPerson then []
+   else [{
     label: {
       text: 'Same as {first_person_possessive} address one year ago',
       placeholders: [
@@ -23,7 +24,6 @@ local additionalAnswerOption(isFirstPerson) = (
     },
     value: 'Same as {first_person_possessive} address one year ago',
   }]
-  else []
 );
 
 local questionDescription(isProxy) = (
