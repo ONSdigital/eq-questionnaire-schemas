@@ -15,10 +15,10 @@ local questionTitle(isProxy) = (
 
 local questionDescription(isProxy) = (
   if isProxy then [
-    'If they had no usual address one year ago, select the address where they were staying',
+    'If they had no usual address one year ago, select the address where they were staying.',
     'If the <strong>coronavirus</strong> pandemic affected their usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
   ] else [
-    'If you had no usual address one year ago, select the address where you were staying',
+    'If you had no usual address one year ago, select the address where you were staying.',
     'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
   ]
 );
@@ -78,11 +78,11 @@ local additionalAnswerOption = [
   page_title: 'Location one year ago',
   question_variants: [
     {
-      question: question(isProxy=false,),
+      question: question(isProxy=false),
       when: [rules.isNotProxy, rules.isFirstPersonInList(listName)],
     },
     {
-      question: question(additionalAnswerOption, isProxy=false,),
+      question: question(additionalAnswerOption, isProxy=false),
       when: [rules.isNotProxy, rules.isNotFirstPersonInList(listName)],
     },
     {
