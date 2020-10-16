@@ -14,9 +14,7 @@ local rules = import 'rules.libsonnet';
             description: 'The next set of questions is about your main job. Your main job is the job in which you work the most hours.',
           },
           {
-            description: '<strong>Coronavirus (COVID-19)</strong>',
-          },
-          {
+            title: 'Coronavirus (COVID-19)',
             description: 'Your circumstances may have changed during the coronavirus pandemic. Answer all questions based on your situation as it is now.',
           },
         ],
