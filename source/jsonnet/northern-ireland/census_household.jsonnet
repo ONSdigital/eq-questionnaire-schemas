@@ -17,6 +17,7 @@ local any_more_people_living_here = import 'household/blocks/who-lives-here/any_
 local any_more_visitors = import 'household/blocks/who-lives-here/any_more_visitors.jsonnet';
 local any_visitors = import 'household/blocks/who-lives-here/any_visitors.jsonnet';
 local anyone_else = import 'household/blocks/who-lives-here/anyone_else.jsonnet';
+local coronavirus_circumstances = import 'household/blocks/who-lives-here/coronavirus_circumstances.jsonnet';
 local do_you_usually_live_here = import 'household/blocks/who-lives-here/do_you_usually_live_here.jsonnet';
 local people_living_here = import 'household/blocks/who-lives-here/people_living_here.jsonnet';
 local people_who_live_here_introduction = import 'household/blocks/who-lives-here/people_who_live_here_introduction.jsonnet';
@@ -227,6 +228,7 @@ function(region_code) {
           id: 'who-lives-here-group',
           title: 'Who lives here',
           blocks: [
+            coronavirus_circumstances,
             people_who_live_here_introduction,
             do_you_usually_live_here,
             anyone_else,

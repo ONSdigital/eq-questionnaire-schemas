@@ -28,6 +28,14 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
           'employment details',
         ],
       },
+      {
+        description: {
+          text: 'Circumstances for <strong>{person_name}</strong> may have changed during the coronavirus pandemic. Answer all questions based on the situation as it is now.',
+          placeholders: [
+            placeholders.personName(includeMiddleNames='if_is_same_name'),
+          ],
+        },
+      },
     ],
   },
 }

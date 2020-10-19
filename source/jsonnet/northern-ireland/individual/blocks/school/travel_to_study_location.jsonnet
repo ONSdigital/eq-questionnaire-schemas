@@ -26,8 +26,9 @@ local question(title, description) = {
           value: 'Car or van pool, sharing driving',
         },
         {
-          label: 'Bus, minibus or coach (public or private)',
-          value: 'Bus, minibus or coach (public or private)',
+          label: 'Bus, minibus or coach',
+          value: 'Bus, minibus or coach',
+          description: 'This could be public or private',
         },
         {
           label: 'Taxi',

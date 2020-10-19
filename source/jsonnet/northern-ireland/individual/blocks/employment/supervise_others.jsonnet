@@ -5,6 +5,7 @@ local question(title) = {
   id: 'supervise-others-question',
   title: title,
   type: 'General',
+  description: ['This could be remotely or in person'],
   answers: [
     {
       id: 'supervise-others-answer',
