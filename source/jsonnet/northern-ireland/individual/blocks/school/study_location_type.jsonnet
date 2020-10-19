@@ -11,7 +11,7 @@ local question(title, description) = {
   answers: [
     {
       id: 'study-location-type-answer',
-      mandatory: false,
+      mandatory: true,
       options: [
         {
           label: 'At a campus or school',
