@@ -2,7 +2,7 @@ local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
 local questionTitle(isProxy, isEmployed) = (
-  if isEmployed then (
+  local employedTitle = (
     if isProxy then
       {
         text: 'In <em>{person_name_possessive}</em> main job, how many hours a week do they usually work?',
@@ -11,7 +11,8 @@ local questionTitle(isProxy, isEmployed) = (
         ],
       }
     else 'In your main job, how many hours a week do you usually work?'
-  ) else (
+  );
+  local unemployedTitle = (
     if isProxy then
       {
         text: 'In <em>{person_name_possessive}</em> main job, how many hours a week did they usually work?',
@@ -20,7 +21,9 @@ local questionTitle(isProxy, isEmployed) = (
         ],
       }
     else 'In your main job, how many hours a week did you usually work?'
-  )
+  );
+
+  if isEmployed then employedTitle else unemployedTitle
 );
 
 local questionDescription(isProxy, isEmployed) = (
