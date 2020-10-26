@@ -83,21 +83,63 @@ local firstPersonNamePossessiveForList(listName) = {
   placeholder: 'first_person_possessive',
   transforms: [
     {
+      transform: 'contains',
       arguments: {
-        delimiter: ' ',
-        list_to_concatenate: {
-          identifier: ['first-name', 'last-name'],
+        list_to_check: {
+          source: 'list',
+          id_selector: 'same_name_items',
+          identifier: listName,
+        },
+        value: {
+          source: 'list',
+          id_selector: 'first',
+          identifier: listName,
+        },
+      },
+    },
+    {
+      transform: 'format_name',
+      arguments: {
+        include_middle_names: {
+          source: 'previous_transform',
+        },
+        first_name: {
           source: 'answers',
+          identifier: 'first-name',
           list_item_selector: {
-            source: 'list',
             id: listName,
             id_selector: 'first',
+            source: 'list',
+          },
+        },
+        middle_names: {
+          source: 'answers',
+          identifier: 'middle-names',
+          list_item_selector: {
+            id: listName,
+            id_selector: 'first',
+            source: 'list',
+          },
+        },
+        last_name: {
+          source: 'answers',
+          identifier: 'last-name',
+          list_item_selector: {
+            id: listName,
+            id_selector: 'first',
+            source: 'list',
           },
         },
       },
-      transform: 'concatenate_list',
     },
-    transforms.formatPossessive,
+    {
+      arguments: {
+        string_to_format: {
+          source: 'previous_transform',
+        },
+      },
+      transform: 'format_possessive',
+    },
   ],
 };
 
