@@ -69,7 +69,7 @@ local firstPersonNamePossessiveForList(listName) = {
           identifier: listName,
         },
         value: {
-         source: 'list',
+          source: 'list',
           id_selector: 'first',
           identifier: listName,
         },
