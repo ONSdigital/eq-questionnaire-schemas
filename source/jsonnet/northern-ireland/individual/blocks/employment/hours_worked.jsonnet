@@ -29,9 +29,9 @@ local questionTitle(isProxy, isEmployed) = (
 local questionDescription(isProxy, isEmployed) = (
   local employedDescription = (
     if isProxy then
-      ['If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>.']
+      ['If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>']
     else
-      ['If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>.']
+      ['If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>']
   );
 
   if isEmployed then employedDescription else []
