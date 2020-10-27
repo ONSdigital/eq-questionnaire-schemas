@@ -27,7 +27,7 @@ done
 
 exit=0
 
-file_path="./schemas"
+file_path="./schemas/en"
 
 echo "--- Testing Schemas in $file_path ---"
 failed=0
