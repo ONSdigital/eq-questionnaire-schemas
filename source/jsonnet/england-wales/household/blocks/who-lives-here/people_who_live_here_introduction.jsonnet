@@ -1,7 +1,7 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 
 local contentDescription = {
-  text: 'In this section, we are counting the people at {household_address} on <strong>Sunday {census_date}</strong>.',
+  text: 'In this section, we are counting the people the people who live in this household at {household_address} on <strong>Sunday {census_date}</strong>.',
   placeholders: [
     placeholders.censusDate,
     placeholders.address,
@@ -14,7 +14,7 @@ local contentDescription = {
   id: 'people-who-live-here-introduction',
   content: {
     title: {
-      text: 'People who live at {household_address}',
+      text: 'People who live in this household at {household_address}',
       placeholders: [
         placeholders.address,
       ],
@@ -23,6 +23,19 @@ local contentDescription = {
       {
         description: contentDescription,
       },
+      {
+        definition: {
+          title: 'What we mean by “household”',
+          contents: [
+            {
+              description: 'This is one person living alone or a group of people, not necessarily related, living at the same address, who share cooking facilities <em>and</em> share a living room <em>or</em> sitting room <em>or</em> dining area.',
+            },
+            {
+              description: 'For any other household at this address, you can request a new household access code to start another census.',
+            },
+          ],
+        },
+      }
       {
         title: 'You will need to know',
         list: [
