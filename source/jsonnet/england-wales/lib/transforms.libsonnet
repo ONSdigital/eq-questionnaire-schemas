@@ -1,4 +1,40 @@
-local formatPersonName = {
+local formatFirstPersonName(listName) = {
+  transform: 'format_name',
+  arguments: {
+    include_middle_names: {
+      source: 'previous_transform',
+    },
+    first_name: {
+      source: 'answers',
+      identifier: 'first-name',
+      list_item_selector: {
+        id: listName,
+        id_selector: 'first',
+        source: 'list',
+      },
+    },
+    middle_names: {
+      source: 'answers',
+      identifier: 'middle-names',
+      list_item_selector: {
+        id: listName,
+        id_selector: 'first',
+        source: 'list',
+      },
+    },
+    last_name: {
+      source: 'answers',
+      identifier: 'last-name',
+      list_item_selector: {
+        id: listName,
+        id_selector: 'first',
+        source: 'list',
+      },
+    },
+  },
+};
+
+local formatCurrentPersonName = {
   transform: 'format_name',
   arguments: {
     include_middle_names: { source: 'previous_transform' },
@@ -57,7 +93,23 @@ local formatPossessive = {
   },
 };
 
-local isSameName = {
+local isFirstPersonSameName(listName) = {
+  transform: 'contains',
+  arguments: {
+    list_to_check: {
+      source: 'list',
+      id_selector: 'same_name_items',
+      identifier: listName,
+    },
+    value: {
+      source: 'list',
+      id_selector: 'first',
+      identifier: listName,
+    },
+  },
+};
+
+local isCurrentPersonSameName = {
   transform: 'contains',
   arguments: {
     list_to_check: {
@@ -95,10 +147,12 @@ local concatenateNames = {
 };
 
 {
-  formatPersonName: formatPersonName,
+  formatFirstPersonName: formatFirstPersonName,
+  formatCurrentPersonName: formatCurrentPersonName,
   formatSecondPersonName: formatSecondPersonName,
   formatPossessive: formatPossessive,
-  isSameName: isSameName,
+  isFirstPersonSameName: isFirstPersonSameName,
+  isCurrentPersonSameName: isCurrentPersonSameName,
   listHasSameNameItems: listHasSameNameItems,
   concatenateNames: concatenateNames,
 }

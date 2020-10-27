@@ -60,64 +60,9 @@ local firstPersonNameForList(listName) = {
 local firstPersonNamePossessiveForList(listName) = {
   placeholder: 'first_person_possessive',
   transforms: [
-    {
-      transform: 'contains',
-      arguments: {
-        list_to_check: {
-          source: 'list',
-          id_selector: 'same_name_items',
-          identifier: listName,
-        },
-        value: {
-          source: 'list',
-          id_selector: 'first',
-          identifier: listName,
-        },
-      },
-    },
-    {
-      transform: 'format_name',
-      arguments: {
-        include_middle_names: {
-          source: 'previous_transform',
-        },
-        first_name: {
-          source: 'answers',
-          identifier: 'first-name',
-          list_item_selector: {
-            id: listName,
-            id_selector: 'first',
-            source: 'list',
-          },
-        },
-        middle_names: {
-          source: 'answers',
-          identifier: 'middle-names',
-          list_item_selector: {
-            id: listName,
-            id_selector: 'first',
-            source: 'list',
-          },
-        },
-        last_name: {
-          source: 'answers',
-          identifier: 'last-name',
-          list_item_selector: {
-            id: listName,
-            id_selector: 'first',
-            source: 'list',
-          },
-        },
-      },
-    },
-    {
-      arguments: {
-        string_to_format: {
-          source: 'previous_transform',
-        },
-      },
-      transform: 'format_possessive',
-    },
+    transforms.isFirstPersonSameName(listName),
+    transforms.formatFirstPersonName(listName),
+    transforms.formatPossessive,
   ],
 };
 
@@ -125,12 +70,12 @@ local personName(includeMiddleNames='') = (
   if includeMiddleNames == 'if_is_same_name' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.isSameName, transforms.formatPersonName],
+      transforms: [transforms.isCurrentPersonSameName, transforms.formatCurrentPersonName],
     }
   else if includeMiddleNames == 'if_same_names_exist' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName],
+      transforms: [transforms.listHasSameNameItems, transforms.formatCurrentPersonName],
     }
   else
     {
