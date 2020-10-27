@@ -70,7 +70,7 @@ local lastNameToListItem = {
   },
 };
 
-local formatPersonName(source='', listName='') = (
+local formatPersonName(source='', listName='household') = (
   local firstNameSource = if source == 'first_list_item' then firstNameFirstListItem(listName) else if source == 'to_list_item' then firstNameToListItem else firstNameCurrentListItem;
   local middleNamesSource = if source == 'first_list_item' then middleNamesFirstListItem(listName) else if source == 'to_list_item' then middleNamesToListItem else middleNamesCurrentListItem;
   local lastNameSource = if source == 'first_list_item' then lastNameFirstListItem(listName) else if source == 'to_list_item' then lastNameToListItem else lastNameCurrentListItem;
@@ -96,7 +96,7 @@ local formatPossessive = {
   },
 };
 
-local isSameName(source='', listName='') = (
+local isSameName(source='', listName='household') = (
   local valueSource = if source == 'first_list_item' then {
     source: 'list',
     id_selector: 'first',
