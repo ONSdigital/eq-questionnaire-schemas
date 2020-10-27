@@ -121,6 +121,7 @@ function(region_code) {
     title: 'Submit census',
     warning: 'You must submit this census to complete it',
     confirmation_email: true,
+    feedback: true,
   },
   sections: [
     {
