@@ -3,12 +3,12 @@ local rules = import 'rules.libsonnet';
 
 local firstPersonPlaceholder = {
   placeholder: 'first_person_name',
-  transforms: [transforms.listHasSameNameItems, transforms.formatCurrentPersonName],
+  transforms: [transforms.listHasSameNameItems, transforms.formatPersonName()],
 };
 
 local secondPersonPlaceholder = {
   placeholder: 'second_person_name',
-  transforms: [transforms.listHasSameNameItems, transforms.formatSecondPersonName],
+  transforms: [transforms.listHasSameNameItems, transforms.formatPersonName(source='to_list_item')],
 
 };
 
@@ -16,7 +16,7 @@ local firstPersonNamePossessivePlaceholder = {
   placeholder: 'first_person_name_possessive',
   transforms: [
     transforms.listHasSameNameItems,
-    transforms.formatCurrentPersonName,
+    transforms.formatPersonName(),
     transforms.formatPossessive,
   ],
 };

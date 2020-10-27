@@ -60,8 +60,8 @@ local firstPersonNameForList(listName) = {
 local firstPersonNamePossessiveForList(listName) = {
   placeholder: 'first_person_possessive',
   transforms: [
-    transforms.isFirstPersonSameName(listName),
-    transforms.formatFirstPersonName(listName),
+    transforms.isSameName(source='first_list_item', listName=listName),
+    transforms.formatPersonName(source='first_list_item', listName=listName),
     transforms.formatPossessive,
   ],
 };
@@ -70,12 +70,12 @@ local personName(includeMiddleNames='') = (
   if includeMiddleNames == 'if_is_same_name' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.isCurrentPersonSameName, transforms.formatCurrentPersonName],
+      transforms: [transforms.isSameName(), transforms.formatPersonName()],
     }
   else if includeMiddleNames == 'if_same_names_exist' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatCurrentPersonName],
+      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName()],
     }
   else
     {
