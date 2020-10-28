@@ -175,6 +175,7 @@ function(region_code, census_month_year_date) {
     title: 'Submit census',
     warning: 'You must submit this census to complete it',
     confirmation_email: true,
+    feedback: true,
   },
   sections: [
     {
