@@ -25,7 +25,7 @@ local contentDescription = {
       },
       {
         definition: {
-          title: 'What we mean by “household”',
+          title: 'What we mean by “this household”',
           contents: [
             {
               description: 'This is one person living alone or a group of people, not necessarily related, living at the same address, who share cooking facilities <em>and</em> share a living room <em>or</em> sitting room <em>or</em> dining area.',
