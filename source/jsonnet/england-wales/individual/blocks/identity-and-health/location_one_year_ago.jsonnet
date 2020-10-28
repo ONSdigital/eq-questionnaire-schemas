@@ -13,10 +13,10 @@ local questionTitle(isProxy) = (
 
 local questionDescription(isProxy) = (
   if isProxy then [
-    'If they had no usual address one year ago, select the address where they were staying',
+    'If they had no usual address one year ago, select the address where they were staying.',
     'If the <strong>coronavirus</strong> pandemic affected their usual address one year ago, select where they were living <strong>before their circumstances changed</strong>.',
   ] else [
-    'If you had no usual address one year ago, select the address where you were staying',
+    'If you had no usual address one year ago, select the address where you were staying.',
     'If the <strong>coronavirus</strong> pandemic affected your usual address one year ago, select where you were living <strong>before your circumstances changed</strong>.',
   ]
 );

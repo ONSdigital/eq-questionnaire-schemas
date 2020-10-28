@@ -1,50 +1,80 @@
-local formatPersonName = {
-  transform: 'format_name',
-  arguments: {
-    include_middle_names: { source: 'previous_transform' },
-    first_name: {
-      source: 'answers',
-      identifier: 'first-name',
+local firstNameSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'first-name',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
     },
-    middle_names: {
-      source: 'answers',
-      identifier: 'middle-names',
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'first-name',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
     },
-    last_name: {
-      source: 'answers',
-      identifier: 'last-name',
-    },
-  },
-};
+  } else {
+    source: 'answers',
+    identifier: 'first-name',
+  }
+);
 
-local formatSecondPersonName = {
+local middleNamesSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'middle-names',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
+    },
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'middle-names',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
+    },
+  }
+  else {
+    source: 'answers',
+    identifier: 'middle-names',
+  }
+);
+
+local lastNameSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'last-name',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
+    },
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'last-name',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
+    },
+  }
+  else {
+    source: 'answers',
+    identifier: 'last-name',
+  }
+);
+
+local formatPersonName(source='', listName='household') = {
   transform: 'format_name',
   arguments: {
-    include_middle_names: { source: 'previous_transform' },
-    first_name: {
-      source: 'answers',
-      identifier: 'first-name',
-      list_item_selector: {
-        source: 'location',
-        id: 'to_list_item_id',
-      },
+    include_middle_names: {
+      source: 'previous_transform',
     },
-    middle_names: {
-      source: 'answers',
-      identifier: 'middle-names',
-      list_item_selector: {
-        source: 'location',
-        id: 'to_list_item_id',
-      },
-    },
-    last_name: {
-      source: 'answers',
-      identifier: 'last-name',
-      list_item_selector: {
-        source: 'location',
-        id: 'to_list_item_id',
-      },
-    },
+    first_name: firstNameSource(source, listName),
+    middle_names: middleNamesSource(source, listName),
+    last_name: lastNameSource(source, listName),
   },
 };
 
@@ -57,20 +87,28 @@ local formatPossessive = {
   },
 };
 
-local isSameName = {
-  transform: 'contains',
-  arguments: {
-    list_to_check: {
-      source: 'list',
-      id_selector: 'same_name_items',
-      identifier: 'household',
+local isSameName(source='', listName='household') = (
+  local valueSource = if source == 'first_list_item' then {
+    source: 'list',
+    id_selector: 'first',
+    identifier: listName,
+  } else {
+    source: 'location',
+    identifier: 'list_item_id',
+  };
+
+  {
+    transform: 'contains',
+    arguments: {
+      list_to_check: {
+        source: 'list',
+        id_selector: 'same_name_items',
+        identifier: listName,
+      },
+      value: valueSource,
     },
-    value: {
-      source: 'location',
-      identifier: 'list_item_id',
-    },
-  },
-};
+  }
+);
 
 local listHasSameNameItems = {
   transform: 'list_has_items',
@@ -96,7 +134,6 @@ local concatenateNames = {
 
 {
   formatPersonName: formatPersonName,
-  formatSecondPersonName: formatSecondPersonName,
   formatPossessive: formatPossessive,
   isSameName: isSameName,
   listHasSameNameItems: listHasSameNameItems,

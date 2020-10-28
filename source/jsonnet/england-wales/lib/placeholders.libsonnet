@@ -82,21 +82,8 @@ local firstPersonNameForList(listName) = {
 local firstPersonNamePossessiveForList(listName) = {
   placeholder: 'first_person_possessive',
   transforms: [
-    {
-      arguments: {
-        delimiter: ' ',
-        list_to_concatenate: {
-          identifier: ['first-name', 'last-name'],
-          source: 'answers',
-          list_item_selector: {
-            source: 'list',
-            id: listName,
-            id_selector: 'first',
-          },
-        },
-      },
-      transform: 'concatenate_list',
-    },
+    transforms.isSameName(source='first_list_item', listName=listName),
+    transforms.formatPersonName(source='first_list_item', listName=listName),
     transforms.formatPossessive,
   ],
 };
@@ -105,12 +92,12 @@ local personName(includeMiddleNames='') = (
   if includeMiddleNames == 'if_is_same_name' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.isSameName, transforms.formatPersonName],
+      transforms: [transforms.isSameName(), transforms.formatPersonName()],
     }
   else if includeMiddleNames == 'if_same_names_exist' then
     {
       placeholder: 'person_name',
-      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName],
+      transforms: [transforms.listHasSameNameItems, transforms.formatPersonName()],
     }
   else
     {
