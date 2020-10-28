@@ -1,91 +1,82 @@
-local firstNameFirstListItem(listName) = {
-  source: 'answers',
-  identifier: 'first-name',
-  list_item_selector: {
-    id: listName,
-    id_selector: 'first',
-    source: 'list',
-  },
-};
-
-local middleNamesFirstListItem(listName) = {
-  source: 'answers',
-  identifier: 'middle-names',
-  list_item_selector: {
-    id: listName,
-    id_selector: 'first',
-    source: 'list',
-  },
-};
-
-local lastNameFirstListItem(listName) = {
-  source: 'answers',
-  identifier: 'last-name',
-  list_item_selector: {
-    id: listName,
-    id_selector: 'first',
-    source: 'list',
-  },
-};
-
-local firstNameCurrentListItem = {
-  source: 'answers',
-  identifier: 'first-name',
-};
-
-local middleNamesCurrentListItem = {
-  source: 'answers',
-  identifier: 'middle-names',
-};
-
-local lastNameCurrentListItem = {
-  source: 'answers',
-  identifier: 'last-name',
-};
-
-local firstNameToListItem = {
-  source: 'answers',
-  identifier: 'first-name',
-  list_item_selector: {
-    source: 'location',
-    id: 'to_list_item_id',
-  },
-};
-
-local middleNamesToListItem = {
-  source: 'answers',
-  identifier: 'middle-names',
-  list_item_selector: {
-    source: 'location',
-    id: 'to_list_item_id',
-  },
-};
-
-local lastNameToListItem = {
-  source: 'answers',
-  identifier: 'last-name',
-  list_item_selector: {
-    source: 'location',
-    id: 'to_list_item_id',
-  },
-};
-
-local formatPersonName(source='', listName='household') = (
-  local firstNameSource = if source == 'first_list_item' then firstNameFirstListItem(listName) else if source == 'to_list_item' then firstNameToListItem else firstNameCurrentListItem;
-  local middleNamesSource = if source == 'first_list_item' then middleNamesFirstListItem(listName) else if source == 'to_list_item' then middleNamesToListItem else middleNamesCurrentListItem;
-  local lastNameSource = if source == 'first_list_item' then lastNameFirstListItem(listName) else if source == 'to_list_item' then lastNameToListItem else lastNameCurrentListItem;
-  {
-    transform: 'format_name',
-    arguments: {
-      include_middle_names: {
-        source: 'previous_transform',
-      },
-      first_name: firstNameSource,
-      middle_names: middleNamesSource,
-      last_name: lastNameSource,
+local firstNameSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'first-name',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
     },
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'first-name',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
+    },
+  } else {
+    source: 'answers',
+    identifier: 'first-name',
   }
 );
+
+local middleNamesSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'middle-names',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
+    },
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'middle-names',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
+    },
+  }
+  else {
+    source: 'answers',
+    identifier: 'middle-names',
+  }
+);
+
+local lastNameSource(source, listName) = (
+  if source == 'first_list_item' then {
+    source: 'answers',
+    identifier: 'last-name',
+    list_item_selector: {
+      id: listName,
+      id_selector: 'first',
+      source: 'list',
+    },
+  } else if source == 'to_list_item' then {
+    source: 'answers',
+    identifier: 'last-name',
+    list_item_selector: {
+      source: 'location',
+      id: 'to_list_item_id',
+    },
+  }
+  else {
+    source: 'answers',
+    identifier: 'last-name',
+  }
+);
+
+local formatPersonName(source='', listName='household') = {
+  transform: 'format_name',
+  arguments: {
+    include_middle_names: {
+      source: 'previous_transform',
+    },
+    first_name: firstNameSource(source, listName),
+    middle_names: middleNamesSource(source, listName),
+    last_name: lastNameSource(source, listName),
+  },
+};
 
 local formatPossessive = {
   transform: 'format_possessive',
