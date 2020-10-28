@@ -110,21 +110,6 @@ local isSameName(source='', listName='household') = (
   }
 );
 
-local isCurrentPersonSameName = {
-  transform: 'contains',
-  arguments: {
-    list_to_check: {
-      source: 'list',
-      id_selector: 'same_name_items',
-      identifier: 'household',
-    },
-    value: {
-      source: 'location',
-      identifier: 'list_item_id',
-    },
-  },
-};
-
 local listHasSameNameItems = {
   transform: 'list_has_items',
   arguments: {
