@@ -1,3 +1,4 @@
+local placeholders = import '../../../lib/placeholders.libsonnet';
 local transforms = import '../../../lib/transforms.libsonnet';
 local rules = import 'rules.libsonnet';
 
@@ -17,6 +18,58 @@ local firstPersonNamePossessivePlaceholder = {
     transforms.listHasSameNameItems,
     transforms.formatPersonName(),
     transforms.formatPossessive,
+  ],
+};
+
+local unrelatedQuestionTitle(isPrimary) = (
+  if isPrimary then 'Are any of these people related to you?'
+  else {
+    text: 'Are any of these people related to <em>{person_name}</em>?',
+    placeholders: [
+      placeholders.personName(includeMiddleNames='if_same_names_exist'),
+    ],
+  }
+);
+
+local unrelatedNoOption(isPrimary) = (
+  if isPrimary then {
+    label: 'No, none of these people are related to me',
+    value: 'No, none of these people are related to me',
+  } else {
+    label: {
+      text: 'No, none of these people are related to {person_name}',
+      placeholders: [
+        placeholders.personName(includeMiddleNames='if_same_names_exist'),
+      ],
+    },
+    value: 'No, none of these people are related to {person_name}',
+  }
+);
+
+local unrelatedQuestion(isPrimary) = {
+  id: 'related-to-anyone-else-question',
+  type: 'General',
+  title: unrelatedQuestionTitle(isPrimary),
+  guidance: {
+    contents: [
+      {
+        description: 'Remember to include partners, step-parents, and stepchildren as related',
+      },
+    ],
+  },
+  answers: [
+    {
+      id: 'related-to-anyone-else-answer',
+      mandatory: true,
+      type: 'Radio',
+      options: [
+        {
+          label: 'Yes',
+          value: 'Yes',
+        },
+        unrelatedNoOption(isPrimary),
+      ],
+    },
   ],
 };
 
@@ -399,4 +452,31 @@ local firstPersonNamePossessivePlaceholder = {
       when: [rules.isNotPrimary],
     },
   ],
+  unrelated_block: {
+    type: 'UnrelatedQuestion',
+    id: 'related-to-anyone-else',
+    page_title: 'How person {list_item_position} is related to anyone else',
+    title: 'Related to anyone else',
+    list_summary: {
+      for_list: 'household',
+      summary: {
+        item_title: {
+          text: '{person_name}',
+          placeholders: [
+            placeholders.personName(includeMiddleNames='if_same_names_exist'),
+          ],
+        },
+      },
+    },
+    question_variants: [
+      {
+        question: unrelatedQuestion(isPrimary=true),
+        when: [rules.isPrimary],
+      },
+      {
+        question: unrelatedQuestion(isPrimary=false),
+        when: [rules.isNotPrimary],
+      },
+    ],
+  },
 }
