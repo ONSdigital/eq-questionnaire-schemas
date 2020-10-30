@@ -54,7 +54,7 @@ local unrelatedQuestion(isPrimary) = {
   guidance: {
     contents: [
       {
-        description: 'Remember to include partners, step-parents, and stepchildren as related',
+        description: 'Remember to include partners, step-parents and stepchildren as related',
       },
     ],
   },
