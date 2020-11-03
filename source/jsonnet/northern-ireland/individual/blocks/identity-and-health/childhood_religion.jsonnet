@@ -18,6 +18,7 @@ local question(title) = {
     {
       id: 'childhood-religion-answer',
       mandatory: false,
+      no_label: true,
       options: [
         {
           label: 'Roman Catholic',
