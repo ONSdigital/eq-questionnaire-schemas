@@ -11,7 +11,7 @@ local question(title) = {
       id: 'sexual-orientation-answer',
       mandatory: false,
       type: 'Checkbox',
-      no_label: true,
+      show_label: false,
       options: [
         {
           label: 'Straight or Heterosexual',
