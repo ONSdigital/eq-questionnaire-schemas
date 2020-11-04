@@ -159,12 +159,12 @@ local editQuestion(questionTitle) = {
             options: [
               {
                 label: {
-                  text: 'Yes, I want to add {ordinality} person',
+                  text: 'Yes, I need to add {ordinality} person',
                   placeholders: [
                     placeholders.getListOrdinality('household'),
                   ],
                 },
-                value: 'Yes, I want to add {ordinality} person',
+                value: 'Yes, I need to add {ordinality} person',
                 action: {
                   type: 'RedirectToListAddBlock',
                 },
