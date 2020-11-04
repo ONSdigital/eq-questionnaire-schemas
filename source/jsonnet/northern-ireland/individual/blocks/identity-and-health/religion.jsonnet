@@ -19,7 +19,7 @@ local question(title, otherReligionDescription) = {
       id: 'religion-answer',
       mandatory: false,
       type: 'Checkbox',
-      show_label: false,
+      label: null,
       options: [
         {
           label: 'Roman Catholic',
