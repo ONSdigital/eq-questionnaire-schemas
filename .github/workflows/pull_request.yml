@@ -17,7 +17,7 @@ jobs:
           mkdir jsonnet
           curl -o jsonnet.tar.gz -L https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
           tar -xzf jsonnet.tar.gz -C jsonnet
-          echo "{jsonnet}" >> $GITHUB_ENV
+          echo "jsonnet" >> $GITHUB_ENV
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
