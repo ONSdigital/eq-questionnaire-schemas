@@ -31,7 +31,7 @@ local contentDescription = {
               description: 'This is one person living alone or a group of people, not necessarily related, living at the same address, who share cooking facilities <em>and</em> share a living room <em>or</em> sitting room <em>or</em> dining area.',
             },
             {
-              description: 'For any other household at this address, you can request a new household access code to start another census.',
+              description: 'Any other household at this address will need to request a new household access code to start their own census.',
             },
           ],
         },
