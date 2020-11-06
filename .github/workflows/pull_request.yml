@@ -1,7 +1,6 @@
 name: PR
 
-on:
-  pull_request
+on: pull_request
 
 jobs:
   build:
@@ -9,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(cat .python-version)"
+          echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -18,11 +17,11 @@ jobs:
           mkdir jsonnet
           curl -o jsonnet.tar.gz -L https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
           tar -xzf jsonnet.tar.gz -C jsonnet
-          echo "::add-path::jsonnet"
+          echo "jsonnet" >> $GITHUB_PATH
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+          echo "PYTHON_VERSION=$(python -c 'import platform; print(platform.python_version())')" >> $GITHUB_ENV
       - name: Cache virtualenv
         id: cache-virtualenv
         uses: actions/cache@v1
@@ -47,7 +46,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(cat .python-version)"
+          echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -58,7 +57,7 @@ jobs:
       - name: Install pipenv
         run: pip install pipenv==2018.11.26
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+          echo "PYTHON_VERSION=$(python -c 'import platform; print(platform.python_version())')" >> $GITHUB_ENV
       - name: Cache virtualenv
         id: cache-virtualenv
         uses: actions/cache@v1
@@ -94,7 +93,7 @@ jobs:
       - name: Authenticate With Google Cloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          version: 'latest'
+          version: "latest"
           project_id: ${{ secrets.GCP_PROJECT_ID }}
           service_account_key: ${{ secrets.GCP_SCHEMAS_BUCKET_SA_KEY }}
       - name: Upload Schemas To GCS & Set Cache Control Headers

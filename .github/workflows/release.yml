@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(cat .python-version)"
+          echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v2
         with:
           python-version: ${{ env.PYTHON_VERSION }}
@@ -20,11 +20,11 @@ jobs:
           mkdir jsonnet
           curl -o jsonnet.tar.gz -L https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
           tar -xzf jsonnet.tar.gz -C jsonnet
-          echo "::add-path::jsonnet"
+          echo "jsonnet" >> $GITHUB_PATH
       - name: Install pipenv --dev
         run: pip install pipenv==2018.11.26
       - run: |
-          echo "::set-env name=PYTHON_VERSION::$(python -c 'import platform; print(platform.python_version())')"
+          echo "PYTHON_VERSION=$(python -c 'import platform; print(platform.python_version())')" >> $GITHUB_ENV
       - name: Cache virtualenv
         id: cache-virtualenv
         uses: actions/cache@v1
@@ -70,7 +70,7 @@ jobs:
       - run: |
           GITHUB_REF=`echo ${{ github.ref }}`
           TAG_CLEAN="${GITHUB_REF/refs\/tags\//}"
-          echo "::set-env name=TAG::$TAG_CLEAN"
+          echo "TAG=$TAG_CLEAN" >> $GITHUB_ENV
       - name: Notify Runner
         uses: peter-evans/repository-dispatch@v1.0.0
         with:
