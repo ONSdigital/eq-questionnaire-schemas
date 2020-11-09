@@ -35,6 +35,9 @@ local unrelatedNoOption(isPrimary) = (
   if isPrimary then {
     label: 'No, none of these people are related to me',
     value: 'No, none of these people are related to me',
+    action: {
+      type: 'AddUnrelatedRelationships',
+    },
   } else {
     label: {
       text: 'No, none of these people are related to {person_name}',
@@ -43,6 +46,9 @@ local unrelatedNoOption(isPrimary) = (
       ],
     },
     value: 'No, none of these people are related to {person_name}',
+    action: {
+      type: 'AddUnrelatedRelationships',
+    },
   }
 );
 
@@ -66,6 +72,9 @@ local unrelatedQuestion(isPrimary) = {
         {
           label: 'Yes',
           value: 'Yes',
+          action: {
+            type: 'RemoveUnrelatedRelationships',
+          },
         },
         unrelatedNoOption(isPrimary),
       ],
