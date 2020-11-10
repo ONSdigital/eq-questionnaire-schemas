@@ -127,7 +127,7 @@ local question(isProxy, isFirstPerson) = {
           {
             id: 'location-one-year-ago-answer',
             condition: 'equals',
-            value: 'An address outside the UK',
+            value: 'Another address outside the UK',
           },
         ],
       },
