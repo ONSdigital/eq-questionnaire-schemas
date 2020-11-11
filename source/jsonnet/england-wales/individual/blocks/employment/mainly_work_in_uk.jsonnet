@@ -93,6 +93,22 @@ local question(isProxy) = {
     },
     {
       goto: {
+        block: 'workplace-address',
+        when: [
+          {
+            id: 'workplace-type-answer',
+            condition: 'not set',
+          },
+          {
+            id: 'mainly-work-in-uk-answer',
+            condition: 'equals',
+            value: 'Yes',
+          },
+        ],
+      },
+    },
+    {
+      goto: {
         block: 'depot-address',
         when: [
           {
