@@ -69,7 +69,8 @@ local question(isProxy) = {
           },
           {
             id: 'mainly-work-in-uk-answer',
-            condition: 'not set',
+            condition: 'not equals',
+            value: 'No',
           },
         ],
       },
@@ -87,22 +88,6 @@ local question(isProxy) = {
             id: 'mainly-work-in-uk-answer',
             condition: 'not equals',
             value: 'No',
-          },
-        ],
-      },
-    },
-    {
-      goto: {
-        block: 'workplace-address',
-        when: [
-          {
-            id: 'workplace-type-answer',
-            condition: 'not set',
-          },
-          {
-            id: 'mainly-work-in-uk-answer',
-            condition: 'equals',
-            value: 'Yes',
           },
         ],
       },
