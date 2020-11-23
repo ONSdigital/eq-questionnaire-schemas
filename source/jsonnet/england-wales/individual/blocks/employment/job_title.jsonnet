@@ -35,8 +35,8 @@ local pastProxyTitle = {
   ],
 };
 
-local nonProxyDescription = 'For example, retail assistant, office cleaner, district nurse, primary school teacher. Do not state your grade or pay band';
-local proxyDescription = 'For example, retail assistant, office cleaner, district nurse, primary school teacher. Do not state their grade or pay band';
+local nonProxyDescription = 'For example, retail assistant, office cleaner, district nurse, primary school teacher. Do not state your grade or pay band.';
+local proxyDescription = 'For example, retail assistant, office cleaner, district nurse, primary school teacher. Do not state their grade or pay band.';
 
 {
   type: 'Question',

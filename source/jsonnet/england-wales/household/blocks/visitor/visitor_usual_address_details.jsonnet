@@ -9,7 +9,7 @@ local rules = import 'rules.libsonnet';
   question: {
     id: 'visitor-usual-address-details-question',
     title: {
-      text: 'What is <em>{person_name_possessive}</em> usual UK address?',
+      text: 'What is <em>{person_name_possessive}</em> usual address in the UK?',
       placeholders: [
         placeholders.personNamePossessive,
       ],

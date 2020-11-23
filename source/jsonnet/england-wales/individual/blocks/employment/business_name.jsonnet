@@ -32,7 +32,7 @@ local question(title, description, option) = {
 };
 
 local nonProxyTitle = 'What is the name of the organisation or business you work for?';
-local nonProxyDescription = 'If you are self-employed in your own business, give the business name.';
+local nonProxyDescription = 'If you are self-employed in your own business, give the business name';
 
 local proxyTitle = {
   text: 'What is the name of the organisation or business <em>{person_name}</em> works for?',
@@ -40,7 +40,7 @@ local proxyTitle = {
     placeholders.personName(),
   ],
 };
-local proxyDescription = 'If they are self-employed in their own business, give the business name.';
+local proxyDescription = 'If they are self-employed in their own business, give the business name';
 
 local pastNonProxyTitle = 'What was the name of the organisation or business you worked for?';
 local pastNonProxyDescription = 'If you were self-employed in your own business, give the business name.';

@@ -17,7 +17,7 @@ local rules = import 'rules.libsonnet';
       ],
     },
     description: [
-      'These people will be counted as visitors',
+      'These people are counted as visitors',
     ],
     mandatory: true,
     answers: [
