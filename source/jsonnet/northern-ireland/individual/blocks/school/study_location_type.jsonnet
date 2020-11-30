@@ -31,11 +31,11 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitleStudy = 'Where do you mainly <em>study</em>?';
+local nonProxyTitleStudy = 'Where is your main place of <em>study</em>?';
 local proxyTitleStudy = {
-  text: 'Where does <em>{person_name}</em> mainly <em>study</em>?',
+  text: 'Where is <em>{person_name_possessive}</em> main place of <em>study</em>?',
   placeholders: [
-    placeholders.personName(),
+    placeholders.personNamePossessive,
   ],
 };
 local nonProxyDescriptionStudy = 'Answer for the place where you spend the most time. If student or schoolchild, answer for your study address.';
