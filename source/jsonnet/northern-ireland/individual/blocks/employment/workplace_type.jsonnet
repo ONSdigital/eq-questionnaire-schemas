@@ -32,11 +32,11 @@ local question(title, description) = {
 };
 
 
-local nonProxyTitleWork = 'Where do you mainly <em>work</em>?';
+local nonProxyTitleWork = 'Where is your main place of <em>work</em>?';
 local proxyTitleWork = {
-  text: 'Where does <em>{person_name}</em> mainly <em>work</em>?',
+  text: 'Where is <em>{person_name_possessive}</em> main place of <em>work</em>?',
   placeholders: [
-    placeholders.personName(),
+    placeholders.personNamePossessive,
   ],
 };
 local nonProxyTitleDidWork = 'Where did you mainly <em>work</em>?';
