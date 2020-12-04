@@ -1,6 +1,6 @@
 {
   type: 'Question',
-  id: 'relationships',
+  id: 'anyone-related',
   skip_conditions: [
     {
       when: [
@@ -13,14 +13,14 @@
     },
   ],
   question: {
-    id: 'relationships-question',
+    id: 'anyone-related-question',
     title: 'Are any of these people related to each other?',
     description: [
       'Remember to include partners and stepchildren as related',
     ],
     type: 'General',
     answers: [{
-      id: 'relationships-answer',
+      id: 'anyone-related-answer',
       mandatory: false,
       options: [
         {

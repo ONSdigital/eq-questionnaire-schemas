@@ -8,8 +8,8 @@ local any_more_visitors = import 'ccs/blocks/who-lives-here/any_more_visitors.js
 local any_visitors = import 'ccs/blocks/who-lives-here/any_visitors.jsonnet';
 local anyone_else_driver = import 'ccs/blocks/who-lives-here/anyone_else_driver.jsonnet';
 local anyone_else_usually_living_here = import 'ccs/blocks/who-lives-here/anyone_else_usually_living_here.jsonnet';
+local anyone_related = import 'ccs/blocks/who-lives-here/anyone_related.jsonnet';
 local outside_uk_note = import 'ccs/blocks/who-lives-here/outside_uk_note.jsonnet';
-local relationships = import 'ccs/blocks/who-lives-here/relationships.jsonnet';
 local usual_address = import 'ccs/blocks/who-lives-here/usual_address.jsonnet';
 local usual_address_in_uk = import 'ccs/blocks/who-lives-here/usual_address_in_uk.jsonnet';
 local were_you_usually_living_here = import 'ccs/blocks/who-lives-here/were_you_usually_living_here.jsonnet';
@@ -140,7 +140,7 @@ function(region_code, census_month_year_date) {
             another_address_interviewer_note,
             who_else_lives_here,
             any_more_people_living_here,
-            relationships,
+            anyone_related,
             any_visitors,
             any_more_visitors,
           ],
