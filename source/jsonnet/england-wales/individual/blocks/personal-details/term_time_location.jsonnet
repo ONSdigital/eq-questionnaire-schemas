@@ -1,12 +1,35 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, options, questionDescription, answerDescription) = {
+local title(isProxy) = (
+  if isProxy then
+    {
+      text: 'During term time, where does <em>{person_name}</em> usually live?',
+      placeholders: [
+        placeholders.personName(),
+      ],
+    }
+  else 'During term time, where do you usually live?'
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then
+    'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation as it is now'
+  else 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation as it is now'
+);
+
+local answerDescription(isProxy) = (
+  if isProxy then
+    'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.'
+  else 'Your answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.'
+);
+
+local question(options, isProxy) = {
   id: 'term-time-location-question',
   type: 'General',
-  title: title,
+  title: title(isProxy),
   description: [
-    questionDescription,
+    questionDescription(isProxy),
   ],
   answers: [
     {
@@ -18,27 +41,13 @@ local question(title, options, questionDescription, answerDescription) = {
         hide_guidance: 'Why we ask for term-time address',
         contents: [
           {
-            description: answerDescription,
+            description: answerDescription(isProxy),
           },
         ],
       },
     } + options,
   ],
 };
-
-local nonProxyTitle = 'During term time, where do you usually live?';
-local proxyTitle = {
-  text: 'During term time, where does <em>{person_name}</em> usually live?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-
-local nonProxyQuestionDescription = 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation as it is now';
-local proxyQuestionDescription = 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation as it is now';
-
-local nonProxyAnswerDescription = 'Your answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
-local proxyAnswerDescription = 'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
 
 local noOtherAddressOptions = {
   options: [
@@ -131,7 +140,7 @@ local otherNonUkAddressOptions = {
   page_title: 'Term-time location',
   question_variants: [
     {
-      question: question(nonProxyTitle, otherNonUkAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(otherNonUkAddressOptions, isProxy=false),
       when: [
         rules.isNotProxy,
         {
@@ -142,7 +151,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherNonUkAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
+      question: question(otherNonUkAddressOptions, isProxy=true),
       when: [
         rules.isProxy,
         {
@@ -153,7 +162,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, otherUkAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(otherUkAddressOptions, isProxy=false),
       when: [
         rules.isNotProxy,
         {
@@ -164,7 +173,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherUkAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
+      question: question(otherUkAddressOptions, isProxy=true),
       when: [
         rules.isProxy,
         {
@@ -175,11 +184,11 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, noOtherAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(noOtherAddressOptions, isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, noOtherAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
+      question: question(noOtherAddressOptions, isProxy=true),
       when: [rules.isProxy],
     },
   ],
