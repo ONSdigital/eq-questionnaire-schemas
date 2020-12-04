@@ -4,6 +4,7 @@ local rules = import 'rules.libsonnet';
 local question(title, label) = {
   id: 'ever-worked-question',
   title: title,
+  description: '<strong>Furlough</strong> is considered paid work',
   type: 'General',
   answers: [
     {

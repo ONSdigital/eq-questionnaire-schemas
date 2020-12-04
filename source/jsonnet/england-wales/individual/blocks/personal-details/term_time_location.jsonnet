@@ -1,10 +1,11 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, options, description) = {
+local question(title, options, questionDescription, answerDescription) = {
   id: 'term-time-location-question',
   type: 'General',
   title: title,
+  description: questionDescription,
   answers: [
     {
       id: 'term-time-location-answer',
@@ -15,7 +16,7 @@ local question(title, options, description) = {
         hide_guidance: 'Why we ask for term-time address',
         contents: [
           {
-            description: description,
+            description: answerDescription,
           },
         ],
       },
@@ -31,8 +32,11 @@ local proxyTitle = {
   ],
 };
 
-local nonProxyDescription = 'Your answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
-local proxyDescription = 'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
+local nonProxyQuestionDescription = 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation as it is now';
+local proxyQuestionDescription = 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation as it is now';
+
+local nonProxyAnswerDescription = 'Your answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
+local proxyAnswerDescription = 'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.';
 
 local noOtherAddressOptions = {
   options: [
@@ -125,7 +129,7 @@ local otherNonUkAddressOptions = {
   page_title: 'Term-time location',
   question_variants: [
     {
-      question: question(nonProxyTitle, otherNonUkAddressOptions, nonProxyDescription),
+      question: question(nonProxyTitle, otherNonUkAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
       when: [
         rules.isNotProxy,
         {
@@ -136,7 +140,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherNonUkAddressOptions, proxyDescription),
+      question: question(proxyTitle, otherNonUkAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
       when: [
         rules.isProxy,
         {
@@ -147,7 +151,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, otherUkAddressOptions, nonProxyDescription),
+      question: question(nonProxyTitle, otherUkAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
       when: [
         rules.isNotProxy,
         {
@@ -158,7 +162,7 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(proxyTitle, otherUkAddressOptions, proxyDescription),
+      question: question(proxyTitle, otherUkAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
       when: [
         rules.isProxy,
         {
@@ -169,11 +173,11 @@ local otherNonUkAddressOptions = {
       ],
     },
     {
-      question: question(nonProxyTitle, noOtherAddressOptions, nonProxyDescription),
+      question: question(nonProxyTitle, noOtherAddressOptions, nonProxyQuestionDescription, nonProxyAnswerDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, noOtherAddressOptions, proxyDescription),
+      question: question(proxyTitle, noOtherAddressOptions, proxyQuestionDescription, proxyAnswerDescription),
       when: [rules.isProxy],
     },
   ],
