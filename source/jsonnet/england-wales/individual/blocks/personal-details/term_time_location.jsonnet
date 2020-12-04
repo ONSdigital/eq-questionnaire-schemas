@@ -5,7 +5,9 @@ local question(title, options, questionDescription, answerDescription) = {
   id: 'term-time-location-question',
   type: 'General',
   title: title,
-  description: questionDescription,
+  description: [
+    questionDescription,
+  ],
   answers: [
     {
       id: 'term-time-location-answer',

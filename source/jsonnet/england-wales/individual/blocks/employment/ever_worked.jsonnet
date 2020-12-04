@@ -1,10 +1,28 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, label) = {
+local title(isProxy) = (
+  if isProxy then
+    {
+      text: 'Has <em>{person_name}</em> ever done any paid work?',
+      placeholders: [
+        placeholders.personName(),
+      ],
+    }
+  else 'Have you ever done any paid work?'
+);
+
+local label(isProxy) = (
+  if isProxy then
+    'No, has never worked'
+  else 'No, have never worked'
+);
+local question(isProxy) = {
   id: 'ever-worked-question',
-  title: title,
-  description: '<strong>Furlough</strong> is considered paid work',
+  title: title(isProxy),
+  description: [
+    '<strong>Furlough</strong> is considered paid work',
+  ],
   type: 'General',
   answers: [
     {
@@ -20,8 +38,8 @@ local question(title, label) = {
           value: 'Yes, but not in the last 12 months',
         },
         {
-          label: label,
-          value: label,
+          label: label(isProxy),
+          value: label(isProxy),
         },
       ],
       type: 'Radio',
@@ -29,27 +47,17 @@ local question(title, label) = {
   ],
 };
 
-local nonProxyTitle = 'Have you ever done any paid work?';
-local nonProxyLabel = 'No, have never worked';
-local proxyTitle = {
-  text: 'Has <em>{person_name}</em> ever done any paid work?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
-local proxyLabel = 'No, has never worked';
-
 {
   type: 'Question',
   id: 'ever-worked',
   page_title: 'Ever done any paid work',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyLabel),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyLabel),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
