@@ -1,12 +1,37 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, questionDescription, answerDescription) = {
+local title(isProxy) = (
+  if isProxy then {
+    text: 'During the week of 15 to {census_date}, was <em>{person_name}</em> doing any of the following?',
+    placeholders: [
+      placeholders.personName(),
+      placeholders.censusDate,
+    ],
+  } else {
+    text: 'During the week of 15 to {census_date}, were you doing any of the following?',
+    placeholders: [
+      placeholders.censusDate,
+    ],
+  }
+);
+
+local questionDescription(isProxy) = (
+  if isProxy then 'If they had a job but were off work on <strong>furlough</strong>, in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.' else
+    'If you had a job but were off work on <strong>furlough</strong>, in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.'
+
+);
+
+local answerDescription(isProxy) = (
+  if isProxy then 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work' else 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work'
+);
+
+local question(isProxy) = {
   id: 'employment-status-question',
-  title: title,
+  title: title(isProxy),
   description: [
-    questionDescription,
-    'Include casual or temporary work, even if only for one hour',
+    questionDescription(isProxy),
+    'Include casual or temporary work, even if only for one hour.',
   ],
   instruction: ['Tell the respondent to turn to <strong>Showcard 10</strong> or show them the options below'],
   type: 'MutuallyExclusive',
@@ -24,7 +49,7 @@ local question(title, questionDescription, answerDescription) = {
         {
           label: 'Self-employed or freelance',
           value: 'Self-employed or freelance',
-          description: answerDescription,
+          description: answerDescription(isProxy),
         },
         {
           label: 'Temporarily away from work ill, on holiday or temporarily laid off',
@@ -54,39 +79,16 @@ local question(title, questionDescription, answerDescription) = {
   ],
 };
 
-local nonProxyTitle = {
-  text: 'During the week of 15 to {census_date}, were you doing any of the following?',
-  placeholders: [
-    placeholders.censusDate,
-  ],
-};
-
-local proxyTitle = {
-  text: 'During the week of 15 to {census_date}, was <em>{person_name}</em> doing any of the following?',
-  placeholders: [
-    placeholders.personName(),
-    placeholders.censusDate,
-  ],
-};
-
-local nonProxyQuestionDescription = 'If you have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.';
-
-local proxyQuestionDescription = 'If they have a job but have been off work in <strong>quarantine</strong> or <strong>self-isolating</strong>, answer “Temporarily away from work ill, on holiday or temporarily laid off”.';
-
-local nonProxyAnswerDescription = 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work';
-
-local proxyAnswerDescription = 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work';
-
 {
   type: 'Question',
   id: 'employment-status',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyQuestionDescription, nonProxyAnswerDescription),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyQuestionDescription, proxyAnswerDescription),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
