@@ -31,7 +31,7 @@ local question(isProxy) = {
   title: title(isProxy),
   description: [
     questionDescription(isProxy),
-    'Include casual or temporary work, even if only for one hour',
+    'Include casual or temporary work, even if only for one hour.',
   ],
   instruction: ['Tell the respondent to turn to <strong>Showcard 10</strong> or show them the options below'],
   type: 'MutuallyExclusive',

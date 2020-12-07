@@ -12,12 +12,12 @@ local title(isProxy) = (
 
 local description(isProxy) = (
   if isProxy then {
-    text: 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation on Sunday {census_date}?',
+    text: 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation on Sunday {census_date}.',
     placeholders: [
       placeholders.censusDate,
     ],
   } else {
-    text: 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation on Sunday {census_date}?',
+    text: 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation on Sunday {census_date}.',
     placeholders: [
       placeholders.censusDate,
     ],
