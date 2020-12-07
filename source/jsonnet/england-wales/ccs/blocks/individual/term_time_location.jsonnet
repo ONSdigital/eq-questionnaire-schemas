@@ -1,24 +1,40 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, options) = {
+local title(isProxy) = (
+  if isProxy then {
+    text: 'During term time, where did <em>{person_name}</em> usually live?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  } else 'During term time, where did you usually live?'
+);
+
+local description(isProxy) = (
+  if isProxy then {
+    text: 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation on Sunday {census_date}?',
+    placeholders: [
+      placeholders.censusDate,
+    ],
+  } else {
+    text: 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation on Sunday {census_date}?',
+    placeholders: [
+      placeholders.censusDate,
+    ],
+  }
+);
+
+local question(options, isProxy) = {
   id: 'term-time-location-question',
   type: 'General',
-  title: title,
+  title: title(isProxy),
+  description: [description(isProxy)],
   answers: [
     {
       id: 'term-time-location-answer',
       mandatory: false,
       type: 'Radio',
     } + options,
-  ],
-};
-
-local nonProxyTitle = 'During term time, where did you usually live?';
-local proxyTitle = {
-  text: 'During term time, where did <em>{person_name}</em> usually live?',
-  placeholders: [
-    placeholders.personName(),
   ],
 };
 
@@ -40,11 +56,11 @@ local noOtherAddressOptions = {
   id: 'term-time-location',
   question_variants: [
     {
-      question: question(nonProxyTitle, noOtherAddressOptions),
+      question: question(noOtherAddressOptions, isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, noOtherAddressOptions),
+      question: question(noOtherAddressOptions, isProxy=true),
       when: [rules.isProxy],
     },
   ],
