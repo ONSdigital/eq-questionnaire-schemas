@@ -17,6 +17,7 @@ local label(isProxy) = (
     'No, has never worked'
   else 'No, have never worked'
 );
+
 local question(isProxy) = {
   id: 'ever-worked-question',
   title: title(isProxy),
