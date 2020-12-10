@@ -66,10 +66,9 @@ local questionTitle(isProxy) = (
   else 'In the last seven days, were you doing any of the following?'
 );
 
-local questionDescription(isProxy) = (
-  if isProxy then 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+local questionDescription(isProxy) =
+  if isProxy then 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
   else 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
-);
 
 {
   type: 'Question',
