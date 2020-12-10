@@ -56,16 +56,20 @@ local question(title, description) = {
   ],
 };
 
-local nonProxyTitle = 'In the last seven days, were you doing any of the following?';
-local proxyTitle = {
-  text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
-  placeholders: [
-    placeholders.personName(),
-  ],
-};
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'In the last seven days, were you doing any of the following?'
+);
 
-local nonProxyDescription = 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
-local proxyDescription = 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+local questionDescription(isProxy) = (
+  if isProxy then 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+  else 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+);
 
 {
   type: 'Question',
@@ -73,11 +77,11 @@ local proxyDescription = 'If they have a job but have been off work on <em>furlo
   page_title: 'Employment status in the last seven days',
   question_variants: [
     {
-      question: question(nonProxyTitle, nonProxyDescription),
+      question: question(questionTitle(false), questionDescription(false)),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle, proxyDescription),
+      question: question(questionTitle(true), questionDescription(true)),
       when: [rules.isProxy],
     },
   ],
