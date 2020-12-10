@@ -1,11 +1,12 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title) = {
+local question(title, description) = {
   id: 'employment-status-last-seven-days-question',
   title: title,
   type: 'MutuallyExclusive',
   mandatory: true,
+  description: [description],
   guidance: {
     contents: [
       {
@@ -63,17 +64,20 @@ local proxyTitle = {
   ],
 };
 
+local nonProxyDescription = 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+local proxyDescription = 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+
 {
   type: 'Question',
   id: 'employment-status-last-seven-days',
   page_title: 'Employment status in the last seven days',
   question_variants: [
     {
-      question: question(nonProxyTitle),
+      question: question(nonProxyTitle, nonProxyDescription),
       when: [rules.isNotProxy],
     },
     {
-      question: question(proxyTitle),
+      question: question(proxyTitle, proxyDescription),
       when: [rules.isProxy],
     },
   ],

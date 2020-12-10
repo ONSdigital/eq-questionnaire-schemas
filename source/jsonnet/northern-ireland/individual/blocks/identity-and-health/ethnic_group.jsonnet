@@ -58,7 +58,7 @@ local question(title, otherEthnicGroupDescription) = {
             id: 'ethnic-group-mixed',
             type: 'TextField',
             mandatory: false,
-            label: 'Please specify mixed ethnic group',
+            label: 'Enter mixed ethnic group',
           },
         },
         {

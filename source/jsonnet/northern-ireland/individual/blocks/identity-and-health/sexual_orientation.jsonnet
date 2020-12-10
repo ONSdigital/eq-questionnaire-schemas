@@ -34,7 +34,7 @@ local question(title) = {
             mandatory: false,
             max_length: 100,
             visible: true,
-            label: 'Please specify sexual orientation',
+            label: 'Enter sexual orientation',
           },
         },
       ],
