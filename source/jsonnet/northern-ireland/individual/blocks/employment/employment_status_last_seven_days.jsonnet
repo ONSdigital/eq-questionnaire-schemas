@@ -1,12 +1,26 @@
 local placeholders = import '../../../lib/placeholders.libsonnet';
 local rules = import 'rules.libsonnet';
 
-local question(title, description) = {
+local questionTitle(isProxy) = (
+  if isProxy then {
+    text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
+    placeholders: [
+      placeholders.personName(),
+    ],
+  }
+  else 'In the last seven days, were you doing any of the following?'
+);
+
+local questionDescription(isProxy) =
+  if isProxy then 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
+  else 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
+
+local question(isProxy) = {
   id: 'employment-status-last-seven-days-question',
-  title: title,
+  title: questionTitle(isProxy),
   type: 'MutuallyExclusive',
   mandatory: true,
-  description: [description],
+  description: [questionDescription(isProxy)],
   guidance: {
     contents: [
       {
@@ -56,31 +70,17 @@ local question(title, description) = {
   ],
 };
 
-local questionTitle(isProxy) = (
-  if isProxy then {
-    text: 'In the last seven days, was <em>{person_name}</em> doing any of the following?',
-    placeholders: [
-      placeholders.personName(),
-    ],
-  }
-  else 'In the last seven days, were you doing any of the following?'
-);
-
-local questionDescription(isProxy) =
-  if isProxy then 'If they have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
-  else 'If you have a job but have been off work on <em>furlough</em>, select “Temporarily away from work ill, on holiday or temporarily laid off”';
-
 {
   type: 'Question',
   id: 'employment-status-last-seven-days',
   page_title: 'Employment status in the last seven days',
   question_variants: [
     {
-      question: question(questionTitle(false), questionDescription(false)),
+      question: question(isProxy=false),
       when: [rules.isNotProxy],
     },
     {
-      question: question(questionTitle(true), questionDescription(true)),
+      question: question(isProxy=true),
       when: [rules.isProxy],
     },
   ],
