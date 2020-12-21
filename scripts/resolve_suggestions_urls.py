@@ -8,7 +8,7 @@ import coloredlogs
 from jsonpath_rw import parse
 from jsonpointer import set_pointer
 
-SUGGESTIONS_URL_BASE = "https://cdn.eq.census-gcp.onsdigital.uk/eq-lookup-suggestions-data/v5.2.0"
+SUGGESTIONS_URL_BASE = "https://cdn.eq.census-gcp.onsdigital.uk/eq-lookup-suggestions-data/v5.3.0"
 
 logger = logging.getLogger(__name__)
 
