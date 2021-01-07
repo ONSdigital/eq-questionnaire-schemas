@@ -10,7 +10,7 @@ local question(title) = {
       id: 'term-time-address-country-outside-uk-answer',
       label: 'Current name of country',
       description: 'Enter your own answer or select from suggestions',
-      suggestions_url: '{suggestions_url_root}/countries-of-birth.json',
+      suggestions: { url: '{suggestions_url_root}/countries-of-birth.json' },
       mandatory: false,
       type: 'TextField',
     },

@@ -12,7 +12,7 @@ local question(title) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions_url: '{suggestions_url_root}/religions.json',
+      suggestions: { url: '{suggestions_url_root}/religions.json' },
       type: 'TextField',
     },
   ],

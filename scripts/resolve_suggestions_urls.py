@@ -26,7 +26,7 @@ def json_path_to_pointer(json_path):
 
 
 def find_suggestion_urls(data):
-    json_path = parse("$..suggestions_url")
+    json_path = parse("$..url")
     for match in json_path.find(data):
         suggestions_url = match.value
         if "suggestions_url_root" in suggestions_url:
@@ -48,7 +48,7 @@ def remove_suggestions_urls(data) -> int:
     for match in find_suggestion_urls(data):
         parent_pointer = json_path_to_pointer(str(match.context.full_path))
         parent_object = match.context.value
-        del parent_object["suggestions_url"]
+        del parent_object["url"]
         set_pointer(data, parent_pointer, parent_object)
 
         removed_pointer_count += 1
