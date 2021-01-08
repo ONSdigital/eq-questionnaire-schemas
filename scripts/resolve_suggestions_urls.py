@@ -26,7 +26,7 @@ def json_path_to_pointer(json_path):
 
 
 def find_suggestion_urls(data):
-    json_path = parse("$..url")
+    json_path = parse("$..suggestions.url")
     for match in json_path.find(data):
         suggestions_url = match.value
         if "suggestions_url_root" in suggestions_url:
