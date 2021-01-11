@@ -28,8 +28,8 @@ def json_path_to_pointer(json_path):
 def find_suggestion_urls(data):
     json_path = parse("$..suggestions")
     for match in json_path.find(data):
-        suggestions_url = match.value
-        if "suggestions_url_root" in suggestions_url["url"]:
+        suggestions_url = match.value["url"]
+        if "suggestions_url_root" in suggestions_url:
             yield match
 
 
