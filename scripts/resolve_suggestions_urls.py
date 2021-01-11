@@ -36,7 +36,7 @@ def find_suggestion_urls(data):
 def replace_suggestions_urls(data, replacement_url_root) -> int:
     replaced_pointer_count = 0
     for match in find_suggestion_urls(data):
-        pointer = json_path_to_pointer(f"{str(match.full_path)}.url")
+        pointer = json_path_to_pointer(f"{match.full_path}.url")
         replacement_url = match.value['url'].format(suggestions_url_root=replacement_url_root)
         set_pointer(data, pointer, replacement_url)
         replaced_pointer_count += 1
