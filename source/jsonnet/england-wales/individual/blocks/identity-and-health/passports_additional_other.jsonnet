@@ -19,7 +19,7 @@ local question(title, guidance) = {
       description: 'Enter your own answer or select from suggestions',
       max_length: 100,
       mandatory: false,
-      suggestions: { url: '{suggestions_url_root}/passport-countries.json' },
+      suggestions: { url: '{suggestions_url_root}/passport-countries.json', allow_multiple: true },
       type: 'TextField',
     },
   ],
