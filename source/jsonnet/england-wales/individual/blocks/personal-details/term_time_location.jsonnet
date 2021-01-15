@@ -12,12 +12,6 @@ local title(isProxy) = (
   else 'During term time, where do you usually live?'
 );
 
-local questionDescription(isProxy) = (
-  if isProxy then
-    'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation as it is now'
-  else 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation as it is now'
-);
-
 local answerDescription(isProxy) = (
   if isProxy then
     'Their answer helps us produce an accurate count of the population during term time. These figures can be used to plan services such as healthcare and transport. This is particularly important in areas with large universities and student populations.'
@@ -28,9 +22,6 @@ local question(options, isProxy) = {
   id: 'term-time-location-question',
   type: 'General',
   title: title(isProxy),
-  description: [
-    questionDescription(isProxy),
-  ],
   answers: [
     {
       id: 'term-time-location-answer',
