@@ -15,7 +15,7 @@ local question(title) = {
   guidance: {
     contents: [
       {
-        description: 'Include qualifications achieved either within or outside of Northern Ireland',
+        description: 'Include qualifications achieved either within or outside Northern Ireland',
       },
     ],
   },
