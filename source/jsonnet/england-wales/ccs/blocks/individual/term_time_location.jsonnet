@@ -10,25 +10,10 @@ local title(isProxy) = (
   } else 'During term time, where did you usually live?'
 );
 
-local description(isProxy) = (
-  if isProxy then {
-    text: 'If the <strong>coronavirus</strong> pandemic affected their usual term-time address, answer based on their situation on Sunday {census_date}.',
-    placeholders: [
-      placeholders.censusDate,
-    ],
-  } else {
-    text: 'If the <strong>coronavirus</strong> pandemic affected your usual term-time address, answer based on your situation on Sunday {census_date}.',
-    placeholders: [
-      placeholders.censusDate,
-    ],
-  }
-);
-
 local question(options, isProxy) = {
   id: 'term-time-location-question',
   type: 'General',
   title: title(isProxy),
-  description: [description(isProxy)],
   answers: [
     {
       id: 'term-time-location-answer',
