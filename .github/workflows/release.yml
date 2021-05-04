@@ -61,20 +61,3 @@ jobs:
           files: schemas.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  notify-runner:
-    needs: release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get schema version
-        uses: actions/checkout@v2
-      - run: |
-          GITHUB_REF=`echo ${{ github.ref }}`
-          TAG_CLEAN="${GITHUB_REF/refs\/tags\//}"
-          echo "TAG=$TAG_CLEAN" >> $GITHUB_ENV
-      - name: Notify Runner
-        uses: peter-evans/repository-dispatch@v1.0.0
-        with:
-          token: "${{ secrets.REPO_ACCESS_TOKEN }}"
-          repository: "ONSdigital/eq-questionnaire-runner"
-          event-type: "schemas_release"
-          client-payload: '{"tag": "${{ env.TAG }}"}'
