@@ -6,45 +6,7 @@ on:
       - v*
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-          echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
-      - uses: actions/setup-python@v2
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-      - name: Install jsonnet
-        run: |
-          mkdir jsonnet
-          curl -o jsonnet.tar.gz -L https://github.com/google/jsonnet/releases/download/v0.14.0/jsonnet-bin-v0.14.0-linux.tar.gz
-          tar -xzf jsonnet.tar.gz -C jsonnet
-          echo "jsonnet" >> $GITHUB_PATH
-      - name: Install pipenv --dev
-        run: pip install pipenv==2018.11.26
-      - run: |
-          echo "PYTHON_VERSION=$(python -c 'import platform; print(platform.python_version())')" >> $GITHUB_ENV
-      - name: Cache virtualenv
-        id: cache-virtualenv
-        uses: actions/cache@v1
-        with:
-          path: ~/.local/share/virtualenvs/
-          key: ${{ runner.os }}-${{ env.PYTHON_VERSION }}-virtualenvs-${{ hashFiles('Pipfile.lock') }}
-      - name: Install virtual environment
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-        run: pipenv install --dev
-      - name: Lint jsonnet
-        run: make lint
-      - name: Build schemas
-        run: make build
-      - name: Archive schema artifacts
-        uses: actions/upload-artifact@v1
-        with:
-          name: schemas
-          path: schemas
   release:
-    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
