@@ -16,7 +16,7 @@ jobs:
         with:
           name: schemas
       - name: Zip artifacts
-        run: zip -r schemas.zip schemas
+        run: zip -r schemas.zip schema
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
