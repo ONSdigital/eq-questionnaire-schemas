@@ -1,0 +1,17 @@
+name: PR
+
+on: pull_request
+
+jobs:
+  validate-schemas:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download schemas
+        uses: actions/download-artifact@v1
+        with:
+          name: schemas
+      - run: make run-validator
+      - name: Validate schemas
+        run: make validate-schemas
