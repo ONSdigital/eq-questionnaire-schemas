@@ -1,16 +1,8 @@
 # eq-questionnaire-schemas
 
-A repo for building questionnaire schemas for eq-questionnaire-runner.
+A registry for questionnaire schemas for eq-questionnaire-runner.
 
-A number of make targets exist in order to create/test schemas locally:
-
-| Build Command |       |
-| ------- |-------|
-| validate-schemas | Validate schemas using eq-questionnaire-validator docker image |
-
-Build commands are only executed for english versions of schemas, due to changes necessary to validator in order to accommodate characters from other languages.
-
-
+A make target exists (`validate-schemas`) in order to validate schemas locally using eq-questionnaire-validator docker image
 ## Testing built schemas with eq-questionnaire-runner
 
 In order to test the schemas built in this repo you will need to create a symbolic link between a /schemas directory in runner and the schemas directory that is generated here. 
@@ -23,7 +15,7 @@ Remove the `/schema` directory if it already exists
 
 Create a symbolic link pointing at your generated schema files by running the following command:
 ```
-ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schema <PATH_TO_REPO>/eq-questionnaire-runner/schema
+ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas <PATH_TO_REPO>/eq-questionnaire-runner/schemas
 ```
 You should now be able launch a questionnaire using one of the schemas.
 
