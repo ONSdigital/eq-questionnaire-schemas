@@ -8,15 +8,11 @@ To do this run `make run-validator` to run the validator and then run `make vali
 
 ## Testing built schemas with eq-questionnaire-runner
 
-In order to test the schemas in this repo you will need to create a symbolic link between a `/schemas` directory in runner and the schemas directory here. 
+In order to test the schemas in this repo you will need to create symbolic links between the `/schemas` directory in runner and the folders in the schemas directory here. 
 
-In your local eq-questionnaire-runner repository:
-
-Remove the `/schema` directory if it already exists
-
-Create a symbolic link pointing at your generated schema files by running the following command:
+For example in your local eq-questionnaire-runner repository, running the following command will create a symbolic link between the business folder here and the schemas directory in runner.
 ```
-ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas <PATH_TO_REPO>/eq-questionnaire-runner/schemas
+ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas/business <PATH_TO_REPO>/eq-questionnaire-runner/schemas
 ```
 You should now be able launch a questionnaire using one of the schemas.
 
