@@ -5,7 +5,7 @@ A registry for questionnaire schemas for eq-questionnaire-runner.
 A make target exists (`validate-schemas`) in order to validate schemas locally using eq-questionnaire-validator docker image
 ## Testing built schemas with eq-questionnaire-runner
 
-In order to test the schemas built in this repo you will need to create a symbolic link between a /schemas directory in runner and the schemas directory that is generated here. 
+In order to test the schemas in this repo you will need to create a symbolic link between a `/schemas` directory in runner and the schemas directory here. 
 
 In eq-questionnaire-schemas:
 
