@@ -7,8 +7,6 @@ A make target exists (`validate-schemas`) in order to validate schemas locally u
 
 In order to test the schemas in this repo you will need to create a symbolic link between a `/schemas` directory in runner and the schemas directory here. 
 
-In eq-questionnaire-schemas:
-
 In your local eq-questionnaire-runner repository:
 
 Remove the `/schema` directory if it already exists
