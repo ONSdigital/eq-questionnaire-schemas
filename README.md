@@ -14,6 +14,6 @@ For example in your local eq-questionnaire-runner repository, running the follow
 ```
 ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas/business <PATH_TO_REPO>/eq-questionnaire-runner/schemas
 ```
-You should now be able launch a questionnaire using one of the schemas.
+You should now be able to launch a questionnaire using one of the schemas.
 
 **CAVEAT - while `raw.githubusercontent.com` can be used for development and sandbox integrations, it is NOT a formally hosted survey questionnaire registry**
