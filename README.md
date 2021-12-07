@@ -6,6 +6,8 @@ A make target exists (`validate-schemas`) in order to validate schemas locally u
 
 To do this run `make run-validator` to run the validator and then run `make validate-schemas` to validate the schemas.
 
+**Schema file names must use snake case to be compatible with runner**
+
 ## Testing built schemas with eq-questionnaire-runner
 
 In order to test the schemas in this repo you will need to create symbolic links between the `/schemas` directory in runner and the folders in the schemas directory here. 
