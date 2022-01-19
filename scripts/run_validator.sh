@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-tag=v3.2.0
+tag=v3.3.0
 TAG=${tag} docker-compose -f docker-compose-schema-validator.yml up -d
