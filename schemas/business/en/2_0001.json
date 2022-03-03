@@ -32,25 +32,19 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {trad_as} ({ru_name})",
+                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
                     "placeholders": [
                       {
-                        "placeholder": "trad_as",
+                        "placeholder": "conditional_trad_as",
                         "transforms": [
                           {
-                            "transform": "first_non_empty_item",
                             "arguments": {
-                              "items": [
-                                {
-                                  "source": "metadata",
-                                  "identifier": "trad_as"
-                                },
-                                {
-                                  "source": "metadata",
-                                  "identifier": "ru_name"
-                                }
-                              ]
-                            }
+                              "trad_as": {
+                                "source": "metadata",
+                                "identifier": "trad_as"
+                              }
+                            },
+                            "transform": "conditional_trad_as"
                           }
                         ]
                       },
@@ -472,7 +466,9 @@
                       "answeraebbf9ea-ba26-4126-878d-eac5c8dc8ce5",
                       "answer6b20bead-e1ac-45ea-b7d3-eca6086308e7"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -483,7 +479,9 @@
                       "answeraebbf9ea-ba26-4126-878d-eac5c8dc8ce5",
                       "answer6b20bead-e1ac-45ea-b7d3-eca6086308e7"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "answer_id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
                   }
                 ]
@@ -513,7 +511,11 @@
             }
           ]
         }
-      ]
+      ],
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      }
     }
   ],
   "theme": "default",
@@ -565,5 +567,11 @@
         }
       ]
     }
+  },
+  "submission": {
+    "button": "Submit",
+    "guidance": "You will have the opportunity to view, save or print a copy of your answers after submitting this survey.",
+    "title": "Submit your questionnaire",
+    "warning": "You cannot view your answers after submission"
   }
 }
