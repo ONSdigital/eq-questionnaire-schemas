@@ -369,15 +369,11 @@
                 {
                   "section": "End",
                   "when": {
-                    "and": [
+                    "any-in": [
+                      ["Yes, I can report for this period"],
                       {
-                        "any-in": [
-                          ["Yes, I can report for this period"],
-                          {
-                            "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
-                            "source": "answers"
-                          }
-                        ]
+                        "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
+                        "source": "answers"
                       }
                     ]
                   }
@@ -944,16 +940,12 @@
                 {
                   "block": "blockc102510b-e675-4074-8cdb-d6b8c5729a29",
                   "when": {
-                    "and": [
-                      {
-                        "any-in": [
-                          ["Yes, we carried out work on housing"],
-                          {
-                            "identifier": "answera75253f4-438c-4bdf-8613-cbfa2a3a1fb6",
-                            "source": "answers"
-                          }
-                        ]
-                      }
+                      "any-in": [
+                        ["Yes, we carried out work on housing"],
+                        {
+                          "identifier": "answera75253f4-438c-4bdf-8613-cbfa2a3a1fb6",
+                          "source": "answers"
+                        }
                     ]
                   }
                 },
@@ -1624,15 +1616,11 @@
                 {
                   "block": "block8ce84076-2099-4ee2-aa26-79bb386f44a9",
                   "when": {
-                    "and": [
+                    "any-in": [
+                      ["Yes, we carried out work on infrastructure"],
                       {
-                        "any-in": [
-                          ["Yes, we carried out work on infrastructure"],
-                          {
-                            "identifier": "answer01c0c84f-7282-42a3-b1c3-13b6d10f39bf",
-                            "source": "answers"
-                          }
-                        ]
+                        "identifier": "answer01c0c84f-7282-42a3-b1c3-13b6d10f39bf",
+                        "source": "answers"
                       }
                     ]
                   }
