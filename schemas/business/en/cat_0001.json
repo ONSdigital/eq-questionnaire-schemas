@@ -361,11 +361,15 @@
                 {
                   "section": "End",
                   "when": {
-                    "in": [
-                      ["Yes, I can report for this period"],
+                    "and": [
                       {
-                        "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
-                        "source": "answers"
+                        "any-in": [
+                          ["Yes, I can report for this period"],
+                          {
+                            "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
+                            "source": "answers"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -933,11 +937,15 @@
                 {
                   "block": "blockc102510b-e675-4074-8cdb-d6b8c5729a29",
                   "when": {
-                    "in": [
-                      ["Yes, we carried out work on housing"],
+                    "and": [
                       {
-                        "identifier": "answera75253f4-438c-4bdf-8613-cbfa2a3a1fb6",
-                        "source": "answers"
+                        "any-in": [
+                          ["Yes, we carried out work on housing"],
+                          {
+                            "identifier": "answera75253f4-438c-4bdf-8613-cbfa2a3a1fb6",
+                            "source": "answers"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -1093,7 +1101,7 @@
                 "when": {
                   "not": [
                     {
-                      "in": [
+                      "any-in": [
                         ["Public sector projects"],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
@@ -1177,7 +1185,7 @@
                 "when": {
                   "not": [
                     {
-                      "in": [
+                      "any-in": [
                         ["Public sector projects"],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
@@ -1284,7 +1292,7 @@
                 "when": {
                   "not": [
                     {
-                      "in": [
+                      "any-in": [
                         ["Private sector projects"],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
@@ -1368,7 +1376,7 @@
                 "when": {
                   "not": [
                     {
-                      "in": [
+                      "any-in": [
                         ["Private sector projects"],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
@@ -1623,11 +1631,15 @@
                 {
                   "block": "block8ce84076-2099-4ee2-aa26-79bb386f44a9",
                   "when": {
-                    "in": [
-                      ["Yes, we carried out work on infrastructure"],
+                    "and": [
                       {
-                        "identifier": "answer01c0c84f-7282-42a3-b1c3-13b6d10f39bf",
-                        "source": "answers"
+                        "any-in": [
+                          ["Yes, we carried out work on infrastructure"],
+                          {
+                            "identifier": "answer01c0c84f-7282-42a3-b1c3-13b6d10f39bf",
+                            "source": "answers"
+                          }
+                        ]
                       }
                     ]
                   }
@@ -2074,7 +2086,7 @@
                 {
                   "section": "End",
                   "when": {
-                    "in": [
+                    "any-in": [
                       ["No, we did not"],
                       {
                         "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2089,7 +2101,7 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "any-in": [
                     ["No, we did not"],
                     {
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2173,7 +2185,7 @@
               },
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "any-in": [
                     ["No, we did not"],
                     {
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2280,7 +2292,7 @@
                 "when": {
                   "or": [
                     {
-                      "in": [
+                      "any-in": [
                         ["No, we did not"],
                         {
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2291,7 +2303,7 @@
                     {
                       "not": [
                         {
-                          "in": [
+                          "any-in": [
                             ["Public sector projects"],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
@@ -2400,7 +2412,7 @@
                 "when": {
                   "or": [
                     {
-                      "in": [
+                      "any-in": [
                         ["No, we did not"],
                         {
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2411,7 +2423,7 @@
                     {
                       "not": [
                         {
-                          "in": [
+                          "any-in": [
                             ["Public sector projects"],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
@@ -2523,7 +2535,7 @@
                 "when": {
                   "or": [
                     {
-                      "in": [
+                      "any-in": [
                         ["No, we did not"],
                         {
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2534,7 +2546,7 @@
                     {
                       "not": [
                         {
-                          "in": [
+                          "any-in": [
                             ["Private commercial sector projects"],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
@@ -2642,7 +2654,7 @@
                 "when": {
                   "or": [
                     {
-                      "in": [
+                      "any-in": [
                         ["No, we did not"],
                         {
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2653,7 +2665,7 @@
                     {
                       "not": [
                         {
-                          "in": [
+                          "any-in": [
                             ["Private industrial sector projects"],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
@@ -2771,7 +2783,7 @@
                 "when": {
                   "or": [
                     {
-                      "in": [
+                      "any-in": [
                         ["No, we did not"],
                         {
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
@@ -2780,20 +2792,24 @@
                       ]
                     },
                     {
-                      "not": [
+                      "and": [
                         {
-                          "in": [
-                            ["Private industrial sector projects"],
+                          "not": [
                             {
-                              "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
-                              "source": "answers"
+                              "any-in": [
+                                ["Private industrial sector projects"],
+                                {
+                                  "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
+                                  "source": "answers"
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "not": [
                             {
-                              "in": [
+                              "any-in": [
                                 ["Private commercial sector projects"],
                                 {
                                   "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
@@ -2826,7 +2842,7 @@
               },
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "any-in": [
                     ["No, we did not"],
                     {
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
