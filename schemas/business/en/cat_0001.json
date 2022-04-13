@@ -2802,13 +2802,17 @@
                       ]
                     },
                     {
-                      "not": [
+                      "and": [
                         {
-                          "any-in": [
-                            ["Private industrial sector projects"],
+                          "not": [
                             {
-                              "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
-                              "source": "answers"
+                              "any-in": [
+                                ["Private industrial sector projects"],
+                                {
+                                  "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
+                                  "source": "answers"
+                                }
+                              ]
                             }
                           ]
                         },
