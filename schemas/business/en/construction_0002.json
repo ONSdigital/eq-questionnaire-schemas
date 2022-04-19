@@ -371,8 +371,8 @@
                   "when": {
                     "in": [
                       {
-                        "source": "answers",
-                        "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e"
+                        "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
+                        "source": "answers"
                       },
                       ["Yes, I can report for this period"]
                     ]
@@ -3215,6 +3215,17 @@
                       "answer3af9ba2d-d839-4b3e-a258-14ca5c6405a9"
                     ],
                     "conditions": ["equals"],
+                    "value": 0
+                  },
+                  {
+                    "calculation_type": "sum",
+                    "answers_to_calculate": [
+                      "answerda0c20eb-8487-41c4-8723-5c2413704251",
+                      "answer8325aa2b-ef51-4d0b-b221-7174ede87b19",
+                      "answer0b4a75d8-32c8-4722-b8e8-71e5dffbaabc",
+                      "answer3af9ba2d-d839-4b3e-a258-14ca5c6405a9"
+                    ],
+                    "conditions": ["equals"],
                     "answer_id": "answer9aae4831-f747-431d-9384-5d6802a37ce2"
                   }
                 ]
@@ -3318,7 +3329,7 @@
     },
     {
       "name": "trad_as",
-      "type": "string"
+      "type": "optional_string"
     },
     {
       "name": "ref_p_start_date",
