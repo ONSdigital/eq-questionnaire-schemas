@@ -366,7 +366,9 @@
                         "identifier": "answerdadafe6c-4875-43bc-87e2-6097ff0d106e",
                         "source": "answers"
                       },
-                      ["Yes, I can report for this period"]
+                      [
+                        "Yes, I can report for this period"
+                      ]
                     ]
                   }
                 },
@@ -488,7 +490,7 @@
               "question": {
                 "id": "question69ae90ee-65a6-49ef-8ca9-1c55c9eb6688",
                 "title": {
-                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, what was the total value of all construction work carried out by {trad_as}?",
+                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, what was the total value of all construction work carried out by {ru_name}?",
                   "placeholders": [
                     {
                       "placeholder": "answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from",
@@ -549,24 +551,11 @@
                       ]
                     },
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -637,27 +626,14 @@
               "question": {
                 "id": "questionconfirmation-page-for-69ae90ee-65a6-49ef-8ca9-1c55c9eb6688",
                 "title": {
-                  "text": "You stated that the total value of all construction work carried out by {trad_as} was {answer24502b57_1962_4d88_b3a1_40facd7f0661}. Is that correct?",
+                  "text": "You stated that the total value of all construction work carried out by {ru_name} was {answer24502b57_1962_4d88_b3a1_40facd7f0661}. Is that correct?",
                   "placeholders": [
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     },
                     {
                       "placeholder": "answer24502b57_1962_4d88_b3a1_40facd7f0661",
@@ -791,7 +767,7 @@
               "question": {
                 "id": "questionbaffab41-96f6-4f04-901d-5ff18c15bb90",
                 "title": {
-                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {trad_as} carry out any work on housing?",
+                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {ru_name} carry out any work on housing?",
                   "placeholders": [
                     {
                       "placeholder": "answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from",
@@ -852,24 +828,11 @@
                       ]
                     },
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -938,7 +901,9 @@
                         "identifier": "answera75253f4-438c-4bdf-8613-cbfa2a3a1fb6",
                         "source": "answers"
                       },
-                      ["Yes, we carried out work on housing"]
+                      [
+                        "Yes, we carried out work on housing"
+                      ]
                     ]
                   }
                 },
@@ -953,27 +918,14 @@
               "question": {
                 "id": "questionc102510b-e675-4074-8cdb-d6b8c5729a29",
                 "title": {
-                  "text": "Which sector did {trad_as} carry out housing work for?",
+                  "text": "Which sector did {ru_name} carry out housing work for?",
                   "placeholders": [
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -1094,7 +1046,9 @@
                   "not": [
                     {
                       "any-in": [
-                        ["Public sector projects"],
+                        [
+                          "Public sector projects"
+                        ],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
                           "source": "answers"
@@ -1178,7 +1132,9 @@
                   "not": [
                     {
                       "any-in": [
-                        ["Public sector projects"],
+                        [
+                          "Public sector projects"
+                        ],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
                           "source": "answers"
@@ -1285,7 +1241,9 @@
                   "not": [
                     {
                       "any-in": [
-                        ["Private sector projects"],
+                        [
+                          "Private sector projects"
+                        ],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
                           "source": "answers"
@@ -1369,7 +1327,9 @@
                   "not": [
                     {
                       "any-in": [
-                        ["Private sector projects"],
+                        [
+                          "Private sector projects"
+                        ],
                         {
                           "identifier": "answer35ce4949-ad6d-4137-b28b-ce3b5723831e",
                           "source": "answers"
@@ -1467,7 +1427,7 @@
               "question": {
                 "id": "question01c41114-3ca3-432f-b7e6-95f8c702f308",
                 "title": {
-                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {trad_as} carry out any work on infrastructure?",
+                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {ru_name} carry out any work on infrastructure?",
                   "placeholders": [
                     {
                       "placeholder": "answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from",
@@ -1528,24 +1488,11 @@
                       ]
                     },
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -1628,7 +1575,9 @@
                         "identifier": "answer01c0c84f-7282-42a3-b1c3-13b6d10f39bf",
                         "source": "answers"
                       },
-                      ["Yes, we carried out work on infrastructure"]
+                      [
+                        "Yes, we carried out work on infrastructure"
+                      ]
                     ]
                   }
                 },
@@ -1891,7 +1840,7 @@
               "question": {
                 "id": "question92bf4040-ae9c-4245-889c-c11ec6d52ce4",
                 "title": {
-                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {trad_as} carry out any non-housing work, excluding work on infrastructure?",
+                  "text": "For the period {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from} to {answer440c8850_b115_4f6b_b0f5_52d911dd6ef6to}, did {ru_name} carry out any non-housing work, excluding work on infrastructure?",
                   "placeholders": [
                     {
                       "placeholder": "answer440c8850_b115_4f6b_b0f5_52d911dd6ef6from",
@@ -1952,24 +1901,11 @@
                       ]
                     },
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -2079,7 +2015,9 @@
                         "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                         "source": "answers"
                       },
-                      ["No, we did not"]
+                      [
+                        "No, we did not"
+                      ]
                     ]
                   }
                 },
@@ -2094,7 +2032,9 @@
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                       "source": "answers"
                     },
-                    ["No, we did not"]
+                    [
+                      "No, we did not"
+                    ]
                   ]
                 }
               }
@@ -2105,27 +2045,14 @@
               "question": {
                 "id": "questioncb22fe8e-4000-418d-b0f1-ca57306a2c0e",
                 "title": {
-                  "text": "Which sector did {trad_as} carry out non-housing work for?",
+                  "text": "Which sector did {ru_name} carry out non-housing work for?",
                   "placeholders": [
                     {
-                      "placeholder": "trad_as",
-                      "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ru_name"
-                              }
-                            ]
-                          }
-                        }
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
@@ -2178,7 +2105,9 @@
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                       "source": "answers"
                     },
-                    ["No, we did not"]
+                    [
+                      "No, we did not"
+                    ]
                   ]
                 }
               }
@@ -2285,14 +2214,18 @@
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                           "source": "answers"
                         },
-                        ["No, we did not"]
+                        [
+                          "No, we did not"
+                        ]
                       ]
                     },
                     {
                       "not": [
                         {
                           "any-in": [
-                            ["Public sector projects"],
+                            [
+                              "Public sector projects"
+                            ],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                               "source": "answers"
@@ -2405,14 +2338,18 @@
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                           "source": "answers"
                         },
-                        ["No, we did not"]
+                        [
+                          "No, we did not"
+                        ]
                       ]
                     },
                     {
                       "not": [
                         {
                           "any-in": [
-                            ["Public sector projects"],
+                            [
+                              "Public sector projects"
+                            ],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                               "source": "answers"
@@ -2528,14 +2465,18 @@
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                           "source": "answers"
                         },
-                        ["No, we did not"]
+                        [
+                          "No, we did not"
+                        ]
                       ]
                     },
                     {
                       "not": [
                         {
                           "any-in": [
-                            ["Private commercial sector projects"],
+                            [
+                              "Private commercial sector projects"
+                            ],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                               "source": "answers"
@@ -2647,14 +2588,18 @@
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                           "source": "answers"
                         },
-                        ["No, we did not"]
+                        [
+                          "No, we did not"
+                        ]
                       ]
                     },
                     {
                       "not": [
                         {
                           "any-in": [
-                            ["Private industrial sector projects"],
+                            [
+                              "Private industrial sector projects"
+                            ],
                             {
                               "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                               "source": "answers"
@@ -2776,7 +2721,9 @@
                           "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                           "source": "answers"
                         },
-                        ["No, we did not"]
+                        [
+                          "No, we did not"
+                        ]
                       ]
                     },
                     {
@@ -2785,7 +2732,9 @@
                           "not": [
                             {
                               "any-in": [
-                                ["Private industrial sector projects"],
+                                [
+                                  "Private industrial sector projects"
+                                ],
                                 {
                                   "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                                   "source": "answers"
@@ -2798,7 +2747,9 @@
                           "not": [
                             {
                               "any-in": [
-                                ["Private commercial sector projects"],
+                                [
+                                  "Private commercial sector projects"
+                                ],
                                 {
                                   "identifier": "answer27e92f6a-21af-4432-b94c-5157746ebc9e",
                                   "source": "answers"
@@ -2835,7 +2786,9 @@
                       "identifier": "answer50ae0d8f-dd41-43ab-8e29-431028500270",
                       "source": "answers"
                     },
-                    ["No, we did not"]
+                    [
+                      "No, we did not"
+                    ]
                   ]
                 }
               }
@@ -2886,7 +2839,7 @@
                         "adverse weather conditions",
                         "contract variations",
                         "seasonal work",
-                        "sector changes (for example installing a kitchen in a domestic property one month to refurbishing a kitchen in commercial premises another month)",
+                        "sector changes (for example, installing a kitchen in a domestic property one month to refurbishing a kitchen in commercial premises another month)",
                         "business structure change",
                         "staffing levels"
                       ]
