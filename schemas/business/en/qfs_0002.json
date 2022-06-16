@@ -1,5 +1,4 @@
 {
-  "eq_id": "qfs_0002",
   "language": "en",
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
@@ -141,7 +140,12 @@
                     "description": "The fuel types included in this survey are:"
                   },
                   {
-                    "list": ["oil", "coal", "gas", "electricity"]
+                    "list": [
+                      "oil",
+                      "coal",
+                      "gas",
+                      "electricity"
+                    ]
                   },
                   {
                     "description": "The survey has the following sections:"
@@ -273,7 +277,12 @@
                     "description": "Select which fuels your business has purchased during the reporting period and then complete the questions for each relevant fuel type. The fuel types included in this survey are:"
                   },
                   {
-                    "list": ["oil", "coal", "gas", "electricity"]
+                    "list": [
+                      "oil",
+                      "coal",
+                      "gas",
+                      "electricity"
+                    ]
                   },
                   {
                     "description": "You will be asked to provide the following information for each fuel you select:"
@@ -400,7 +409,9 @@
                   "section": "End",
                   "when": {
                     "all-in": [
-                      ["None of the above"],
+                      [
+                        "None of the above"
+                      ],
                       {
                         "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c-exclusive",
                         "source": "answers"
@@ -443,13 +454,21 @@
                     "description": "<strong>Examples of heavy fuel oil:</strong>"
                   },
                   {
-                    "list": ["marine fuel", "bunker fuel", "furnace fuel"]
+                    "list": [
+                      "marine fuel",
+                      "bunker fuel",
+                      "furnace fuel"
+                    ]
                   },
                   {
                     "description": "<strong>Examples of light fuel oil:</strong>"
                   },
                   {
-                    "list": ["diesel", "kerosene", "gasoline"]
+                    "list": [
+                      "diesel",
+                      "kerosene",
+                      "gasoline"
+                    ]
                   }
                 ]
               }
@@ -460,7 +479,9 @@
               "question": {
                 "id": "question507c3111-b659-4f5a-9155-8835945c4c91",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of heavy fuel oil?",
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -561,7 +582,9 @@
                         "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                         "source": "answers"
                       },
-                      ["Litres"]
+                      [
+                        "Litres"
+                      ]
                     ]
                   }
                 },
@@ -573,7 +596,9 @@
                         "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                         "source": "answers"
                       },
-                      ["Tonnes"]
+                      [
+                        "Tonnes"
+                      ]
                     ]
                   }
                 },
@@ -632,7 +657,9 @@
                       "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                       "source": "answers"
                     },
-                    ["Litres"]
+                    [
+                      "Litres"
+                    ]
                   ]
                 }
               }
@@ -643,7 +670,9 @@
               "question": {
                 "id": "questionffc13911-6bb3-4ec6-a8fa-e0070ffbcb47",
                 "title": "During the reporting period, what was your business&#39;s purchase cost of <em>light</em> fuel oil?",
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -744,7 +773,9 @@
                         "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                         "source": "answers"
                       },
-                      ["Litres"]
+                      [
+                        "Litres"
+                      ]
                     ]
                   }
                 },
@@ -756,7 +787,9 @@
                         "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                         "source": "answers"
                       },
-                      ["Tonnes"]
+                      [
+                        "Tonnes"
+                      ]
                     ]
                   }
                 },
@@ -815,7 +848,9 @@
                       "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                       "source": "answers"
                     },
-                    ["Litres"]
+                    [
+                      "Litres"
+                    ]
                   ]
                 }
               }
@@ -826,7 +861,9 @@
       "enabled": {
         "when": {
           "all-in": [
-            ["Oil"],
+            [
+              "Oil"
+            ],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
@@ -907,7 +944,9 @@
                     }
                   ]
                 },
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -922,7 +961,11 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["slurry purchases", "coke", "VAT and levy"]
+                      "list": [
+                        "slurry purchases",
+                        "coke",
+                        "VAT and levy"
+                      ]
                     }
                   ]
                 },
@@ -957,7 +1000,9 @@
               "question": {
                 "id": "questionb92de2ac-c873-4910-8f16-4ddfff67f644",
                 "title": "For the reporting period, what was the total quantity of coal purchased?",
-                "description": ["<p>Please report your figures in tonnes.</p>"],
+                "description": [
+                  "<p>Please report your figures in tonnes.</p>"
+                ],
                 "type": "General",
                 "answers": [
                   {
@@ -1108,7 +1153,9 @@
       "enabled": {
         "when": {
           "all-in": [
-            ["Coal"],
+            [
+              "Coal"
+            ],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
@@ -1234,7 +1281,9 @@
                         "identifier": "answer8cd001aa-86aa-4e54-8fc3-bfb48ca5e8e5",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -1249,7 +1298,9 @@
               "question": {
                 "id": "question7ecc765f-7664-447e-9dec-9914784f4752",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of gas under a firm contract?",
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -1558,7 +1609,9 @@
                         "identifier": "answer31336970-4cc0-4eed-b0d3-1afb5c1f8619",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -1573,7 +1626,9 @@
               "question": {
                 "id": "questiondf5ff1fc-df55-4558-8f8f-87261dc4711f",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of gas under an interruptible contract?",
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -1802,7 +1857,9 @@
       "enabled": {
         "when": {
           "all-in": [
-            ["Gas"],
+            [
+              "Gas"
+            ],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
@@ -1904,7 +1961,9 @@
                     }
                   ]
                 },
-                "description": ["<p>Informed estimates are acceptable.</p>"],
+                "description": [
+                  "<p>Informed estimates are acceptable.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -2094,7 +2153,9 @@
       "enabled": {
         "when": {
           "all-in": [
-            ["Electricity"],
+            [
+              "Electricity"
+            ],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
