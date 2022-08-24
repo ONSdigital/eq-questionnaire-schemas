@@ -488,7 +488,7 @@
                 "answers": [
                   {
                     "id": "answerc6856b17-6e06-44e9-a371-402e4d117e2d",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total turnover excluding VAT",
                     "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#39;56&#39; for &#xA3;56,000.",
@@ -955,6 +955,17 @@
                   }
                 ],
                 "calculations": [
+                  {
+                    "calculation_type": "sum",
+                    "answers_to_calculate": [
+                      "answer0cacd800-ad66-4593-bb10-5c54560825ff",
+                      "answer5ccada23-0757-44db-a29f-0cffaea99c00",
+                      "answer49c1c25e-7e7b-46f6-975f-a3d3dcdae519",
+                      "answer0443dc73-0546-4c61-a996-1a253d930ae6"
+                    ],
+                    "conditions": ["equals"],
+                    "value": 0
+                  },
                   {
                     "calculation_type": "sum",
                     "answers_to_calculate": [
