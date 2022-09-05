@@ -4,7 +4,7 @@
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
   "survey_id": "009",
-  "form_type": "0253",
+  "form_type": "0173",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
   "title": "Monthly Business Survey",
   "questionnaire_flow": {
@@ -17,11 +17,11 @@
   },
   "sections": [
     {
-      "id": "section49589199-8a13-4fda-b6fb-68dbb1218535",
+      "id": "section0fa77f60-03f6-4e9a-ab95-e547215094ed",
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group17c46bdd-8de3-4ffb-88e3-6522d46e4bca",
+          "id": "groupdcfd71a2-e595-4bb7-9b5d-4803e8289396",
           "title": "Introduction",
           "blocks": [
             {
@@ -98,7 +98,7 @@
                   "contents": [
                     {
                       "list": [
-                        "Data should relate to all sites in England, Scotland, Wales and Northern Ireland unless otherwise stated.",
+                        "Data should relate to all sites in England, Scotland and Wales  unless otherwise stated.",
                         "You can provide informed estimates if actual figures are not available.",
                         "We will treat your data securely and confidentially."
                       ]
@@ -125,10 +125,26 @@
                 ],
                 "questions": [
                   {
-                    "question": "Potable water",
+                    "question": "Commission and fees",
                     "contents": [
                       {
-                        "description": "This section asks for the volume of potable water that was supplied to customers, in megalitres."
+                        "description": "Exclude VAT"
+                      }
+                    ]
+                  },
+                  {
+                    "question": "Sales on own account and turnover from other activities",
+                    "contents": [
+                      {
+                        "description": "<strong>Exclude:</strong>"
+                      },
+                      {
+                        "list": [
+                          "VAT",
+                          "commission and fees",
+                          "income from the sale of fixed capital assets",
+                          "grants"
+                        ]
                       }
                     ]
                   },
@@ -227,13 +243,13 @@
           ]
         },
         {
-          "id": "group49589199-8a13-4fda-b6fb-68dbb1218535",
+          "id": "group0fa77f60-03f6-4e9a-ab95-e547215094ed",
           "blocks": [
             {
-              "id": "block9f347416-6359-4b31-914a-80cd50d52ea1",
+              "id": "block61d4a2bd-d9e7-4b9c-afe0-2069832968b7",
               "type": "Question",
               "question": {
-                "id": "question9f347416-6359-4b31-914a-80cd50d52ea1",
+                "id": "question61d4a2bd-d9e7-4b9c-afe0-2069832968b7",
                 "title": {
                   "text": "Are you able to report for the period from {ref_p_start_date} to {ref_p_end_date}?",
                   "placeholders": [
@@ -272,7 +288,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer4d55ff07-14ea-405a-8220-cc5bb3f3d87d",
+                    "id": "answer569ff634-c7ca-42b3-ad18-2263da93f1e9",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "9999",
@@ -291,11 +307,11 @@
               },
               "routing_rules": [
                 {
-                  "block": "blocka1119bbb-9f3f-4aa7-9edf-65fd04ea0a4d",
+                  "block": "block5b65b60b-d5d2-4fbf-913c-20dadc50245f",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answer4d55ff07-14ea-405a-8220-cc5bb3f3d87d",
+                        "identifier": "answer569ff634-c7ca-42b3-ad18-2263da93f1e9",
                         "source": "answers"
                       },
                       ["Yes, I can report for this period"]
@@ -303,20 +319,20 @@
                   }
                 },
                 {
-                  "block": "block65232a1f-cd6d-4af4-807f-e5a45bfbf1de"
+                  "block": "block59b155de-73bc-4661-a284-41943f9d25ed"
                 }
               ]
             },
             {
-              "id": "block65232a1f-cd6d-4af4-807f-e5a45bfbf1de",
+              "id": "block59b155de-73bc-4661-a284-41943f9d25ed",
               "type": "Question",
               "question": {
-                "id": "question65232a1f-cd6d-4af4-807f-e5a45bfbf1de",
+                "id": "question59b155de-73bc-4661-a284-41943f9d25ed",
                 "title": "What are the dates of the period that you will be reporting for?",
                 "type": "DateRange",
                 "answers": [
                   {
-                    "id": "answer95b7f0ff-aaac-4e9f-a2e4-8dabf4605d5afrom",
+                    "id": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefafrom",
                     "type": "Date",
                     "mandatory": true,
                     "label": "From",
@@ -332,7 +348,7 @@
                     }
                   },
                   {
-                    "id": "answer95b7f0ff-aaac-4e9f-a2e4-8dabf4605d5ato",
+                    "id": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefato",
                     "type": "Date",
                     "mandatory": true,
                     "label": "To",
@@ -359,15 +375,15 @@
               }
             },
             {
-              "id": "blocka1119bbb-9f3f-4aa7-9edf-65fd04ea0a4d",
+              "id": "block5b65b60b-d5d2-4fbf-913c-20dadc50245f",
               "type": "Question",
               "question": {
-                "id": "questiona1119bbb-9f3f-4aa7-9edf-65fd04ea0a4d",
+                "id": "question5b65b60b-d5d2-4fbf-913c-20dadc50245f",
                 "title": {
-                  "text": "For the period {answer95b7f0ff_aaac_4e9f_a2e4_8dabf4605d5afrom} to {answer95b7f0ff_aaac_4e9f_a2e4_8dabf4605d5ato}, what was the total volume of {ru_name}&#39;s potable water supplied to customers, in megalitres?",
+                  "text": "For the period {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom} to {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato}, what was {ru_name}&#39;s commission and fees, excluding VAT?",
                   "placeholders": [
                     {
-                      "placeholder": "answer95b7f0ff_aaac_4e9f_a2e4_8dabf4605d5afrom",
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
@@ -375,7 +391,7 @@
                             "items": [
                               {
                                 "source": "answers",
-                                "identifier": "answer95b7f0ff-aaac-4e9f-a2e4-8dabf4605d5afrom"
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefafrom"
                               },
                               {
                                 "source": "metadata",
@@ -396,7 +412,7 @@
                       ]
                     },
                     {
-                      "placeholder": "answer95b7f0ff_aaac_4e9f_a2e4_8dabf4605d5ato",
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
@@ -404,7 +420,7 @@
                             "items": [
                               {
                                 "source": "answers",
-                                "identifier": "answer95b7f0ff-aaac-4e9f-a2e4-8dabf4605d5ato"
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefato"
                               },
                               {
                                 "source": "metadata",
@@ -433,28 +449,256 @@
                     }
                   ]
                 },
+                "description": [
+                  "<p>For example, as a travel agent, where you do not hold title to goods/services.</p>"
+                ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerea344d16-b69b-441e-aef5-8adf6c6c4cb0",
+                    "id": "answer0ed98cea-5342-467d-bb8d-f4c1906f3d30",
                     "mandatory": true,
-                    "type": "Unit",
-                    "label": "Total volume of potable water that was supplied to customers, in megalitres",
-                    "q_code": "110",
-                    "unit": "volume-megaliter",
-                    "unit_length": "short",
-                    "decimal_places": 0
+                    "type": "Currency",
+                    "label": "Total commission and fees excluding VAT",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#39;56&#39; for &#xA3;56,000.",
+                    "q_code": "42",
+                    "decimal_places": 2,
+                    "currency": "GBP"
                   }
                 ]
               }
             },
             {
-              "id": "block043c1a68-a000-45cd-b8d0-fdcce2da2448",
+              "id": "blockconfirmation-page-for-5b65b60b-d5d2-4fbf-913c-20dadc50245f",
+              "type": "ConfirmationQuestion",
+              "question": {
+                "id": "questionconfirmation-page-for-5b65b60b-d5d2-4fbf-913c-20dadc50245f",
+                "title": {
+                  "text": "For the period {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom} to {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato}, the total commission and fees was <em>{answer0ed98cea_5342_467d_bb8d_f4c1906f3d30}</em>, is this correct?",
+                  "placeholders": [
+                    {
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom",
+                      "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "source": "answers",
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefafrom"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_start_date"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "transform": "format_date",
+                          "arguments": {
+                            "date_to_format": {
+                              "source": "previous_transform"
+                            },
+                            "date_format": "d MMMM yyyy"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato",
+                      "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "source": "answers",
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefato"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_end_date"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "transform": "format_date",
+                          "arguments": {
+                            "date_to_format": {
+                              "source": "previous_transform"
+                            },
+                            "date_format": "d MMMM yyyy"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "placeholder": "answer0ed98cea_5342_467d_bb8d_f4c1906f3d30",
+                      "transforms": [
+                        {
+                          "transform": "format_currency",
+                          "arguments": {
+                            "number": {
+                              "source": "answers",
+                              "identifier": "answer0ed98cea-5342-467d-bb8d-f4c1906f3d30"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerconfirmation-answer-for-5b65b60b-d5d2-4fbf-913c-20dadc50245f",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes, this is correct",
+                        "value": "Yes, this is correct"
+                      },
+                      {
+                        "label": "No, I need to change this",
+                        "value": "No, I need to change this"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "routing_rules": [
+                {
+                  "block": "block5b65b60b-d5d2-4fbf-913c-20dadc50245f",
+                  "when": {
+                    "==": [
+                      {
+                        "source": "answers",
+                        "identifier": "answerconfirmation-answer-for-5b65b60b-d5d2-4fbf-913c-20dadc50245f"
+                      },
+                      "No, I need to change this"
+                    ]
+                  }
+                },
+                {
+                  "block": "block746d46a4-e632-49c1-a369-83c7814098af"
+                }
+              ]
+            },
+            {
+              "id": "block746d46a4-e632-49c1-a369-83c7814098af",
               "type": "Question",
               "question": {
-                "id": "question043c1a68-a000-45cd-b8d0-fdcce2da2448",
+                "id": "question746d46a4-e632-49c1-a369-83c7814098af",
                 "title": {
-                  "text": "On {employment_date} what was the number of employees for {ru_name}?",
+                  "text": "For the period {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom} to {answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato}, what was {ru_name}&#39;s <em>sales on own account and turnover from other activities</em>, excluding VAT?",
+                  "placeholders": [
+                    {
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefafrom",
+                      "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "source": "answers",
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefafrom"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_start_date"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "transform": "format_date",
+                          "arguments": {
+                            "date_to_format": {
+                              "source": "previous_transform"
+                            },
+                            "date_format": "d MMMM yyyy"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "placeholder": "answer7d26a400_f82c_4bf1_8142_7cf5bd3cfefato",
+                      "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "source": "answers",
+                                "identifier": "answer7d26a400-f82c-4bf1-8142-7cf5bd3cfefato"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_end_date"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "transform": "format_date",
+                          "arguments": {
+                            "date_to_format": {
+                              "source": "previous_transform"
+                            },
+                            "date_format": "d MMMM yyyy"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
+                "description": ["<p>For example, as a tour operator.</p>"],
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Exclude:</strong>"
+                    },
+                    {
+                      "list": [
+                        "VAT",
+                        "commission and fees",
+                        "income from sales of fixed capital assests",
+                        "grants"
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer48a8e52b-b2a5-4a44-88be-3a697129d4b0",
+                    "mandatory": true,
+                    "type": "Currency",
+                    "label": "Total sales on own account and turnover from other activities, excluding VAT",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#39;56&#39; for &#xA3;56,000.",
+                    "q_code": "43",
+                    "decimal_places": 2,
+                    "currency": "GBP"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "blockba39ac30-2382-48eb-ba1d-ac318d8f42ac",
+              "type": "Question",
+              "question": {
+                "id": "questionba39ac30-2382-48eb-ba1d-ac318d8f42ac",
+                "title": {
+                  "text": "On {employment_date}, what was the number of employees for {ru_name}?",
                   "placeholders": [
                     {
                       "placeholder": "employment_date",
@@ -523,7 +767,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5",
+                    "id": "answerbaf50cc3-1467-4510-b797-882cae750fed",
                     "mandatory": true,
                     "type": "Number",
                     "label": "Total number of employees",
@@ -534,12 +778,12 @@
               }
             },
             {
-              "id": "blockconfirmation-page-for-043c1a68-a000-45cd-b8d0-fdcce2da2448",
+              "id": "blockconfirmation-page-for-ba39ac30-2382-48eb-ba1d-ac318d8f42ac",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-043c1a68-a000-45cd-b8d0-fdcce2da2448",
+                "id": "questionconfirmation-page-for-ba39ac30-2382-48eb-ba1d-ac318d8f42ac",
                 "title": {
-                  "text": "On {employment_date}, the number of employees for was <em>{answer60e59706_8fa4_4fee_bc19_622a1b71f2b5}</em>, is this correct?",
+                  "text": "On {employment_date}, the number of employees for {ru_name} was <em>{answerbaf50cc3_1467_4510_b797_882cae750fed}</em>, is this correct?",
                   "placeholders": [
                     {
                       "placeholder": "employment_date",
@@ -557,14 +801,21 @@
                       ]
                     },
                     {
-                      "placeholder": "answer60e59706_8fa4_4fee_bc19_622a1b71f2b5",
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    },
+                    {
+                      "placeholder": "answerbaf50cc3_1467_4510_b797_882cae750fed",
                       "transforms": [
                         {
                           "transform": "format_number",
                           "arguments": {
                             "number": {
                               "source": "answers",
-                              "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                              "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                             }
                           }
                         }
@@ -575,7 +826,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-043c1a68-a000-45cd-b8d0-fdcce2da2448",
+                    "id": "answerconfirmation-answer-for-ba39ac30-2382-48eb-ba1d-ac318d8f42ac",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -593,31 +844,31 @@
               },
               "routing_rules": [
                 {
-                  "block": "block043c1a68-a000-45cd-b8d0-fdcce2da2448",
+                  "block": "blockba39ac30-2382-48eb-ba1d-ac318d8f42ac",
                   "when": {
                     "==": [
                       {
                         "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-043c1a68-a000-45cd-b8d0-fdcce2da2448"
+                        "identifier": "answerconfirmation-answer-for-ba39ac30-2382-48eb-ba1d-ac318d8f42ac"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "blockce09fe9f-9249-4535-8015-410fc03c7c27",
+                  "block": "block53b2d24d-a4d5-4ea4-9e7c-5c79b807ff7b",
                   "when": {
                     "==": [
                       {
                         "source": "answers",
-                        "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                        "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "block333fc519-2228-42e8-8e8d-72c7d0e33761"
+                  "block": "blockb08ef92e-8c93-4fa9-8331-ad735f8015c4"
                 }
               ],
               "skip_conditions": {
@@ -625,7 +876,7 @@
                   ">": [
                     {
                       "source": "answers",
-                      "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                      "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                     },
                     0
                   ]
@@ -633,22 +884,22 @@
               }
             },
             {
-              "id": "block333fc519-2228-42e8-8e8d-72c7d0e33761",
+              "id": "blockb08ef92e-8c93-4fa9-8331-ad735f8015c4",
               "type": "Question",
               "question": {
-                "id": "question333fc519-2228-42e8-8e8d-72c7d0e33761",
+                "id": "questionb08ef92e-8c93-4fa9-8331-ad735f8015c4",
                 "title": {
-                  "text": "Of the <em>{answer60e59706_8fa4_4fee_bc19_622a1b71f2b5}</em> total employees employed on {employment_date}, how many male and female employees worked the following hours?",
+                  "text": "Of the <em>{answerbaf50cc3_1467_4510_b797_882cae750fed}</em> total employees employed on {employment_date}, how many male and female employees worked the following hours?",
                   "placeholders": [
                     {
-                      "placeholder": "answer60e59706_8fa4_4fee_bc19_622a1b71f2b5",
+                      "placeholder": "answerbaf50cc3_1467_4510_b797_882cae750fed",
                       "transforms": [
                         {
                           "transform": "format_number",
                           "arguments": {
                             "number": {
                               "source": "answers",
-                              "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                              "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                             }
                           }
                         }
@@ -701,7 +952,7 @@
                 "type": "Calculated",
                 "answers": [
                   {
-                    "id": "answer4375fa2c-086f-49fe-b8d2-665f88c4cdbe",
+                    "id": "answerb49ec909-15a9-4d8c-8886-b2841be29a83",
                     "mandatory": false,
                     "type": "Number",
                     "label": "Number of male employees working more than 30 hours per week",
@@ -713,14 +964,14 @@
                     "maximum": {
                       "value": {
                         "source": "answers",
-                        "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                        "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                       },
                       "exclusive": false
                     },
                     "decimal_places": 0
                   },
                   {
-                    "id": "answerdc9cb3bc-46e1-4570-9e88-1547a11d2f48",
+                    "id": "answer75a5d411-cabe-4e12-a153-4f6780e6c292",
                     "mandatory": false,
                     "type": "Number",
                     "label": "Number of male employees working 30 hours or less per week",
@@ -732,14 +983,14 @@
                     "maximum": {
                       "value": {
                         "source": "answers",
-                        "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                        "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                       },
                       "exclusive": false
                     },
                     "decimal_places": 0
                   },
                   {
-                    "id": "answerb7ee1257-e740-4e85-bbda-fad42ae70c27",
+                    "id": "answer537bc926-3c0e-4342-a2be-047a6ef1ed36",
                     "mandatory": false,
                     "type": "Number",
                     "label": "Number of female employees working more than 30 hours per week",
@@ -751,14 +1002,14 @@
                     "maximum": {
                       "value": {
                         "source": "answers",
-                        "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                        "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                       },
                       "exclusive": false
                     },
                     "decimal_places": 0
                   },
                   {
-                    "id": "answer7c697777-7ec9-485c-9825-3ce60f7ed7cb",
+                    "id": "answer4968ad2a-b337-4ea4-9d7a-35ed58ea4546",
                     "mandatory": false,
                     "type": "Number",
                     "label": "Number of female employees working 30 hours or less per week",
@@ -770,7 +1021,7 @@
                     "maximum": {
                       "value": {
                         "source": "answers",
-                        "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                        "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                       },
                       "exclusive": false
                     },
@@ -781,10 +1032,10 @@
                   {
                     "calculation_type": "sum",
                     "answers_to_calculate": [
-                      "answer4375fa2c-086f-49fe-b8d2-665f88c4cdbe",
-                      "answerdc9cb3bc-46e1-4570-9e88-1547a11d2f48",
-                      "answerb7ee1257-e740-4e85-bbda-fad42ae70c27",
-                      "answer7c697777-7ec9-485c-9825-3ce60f7ed7cb"
+                      "answerb49ec909-15a9-4d8c-8886-b2841be29a83",
+                      "answer75a5d411-cabe-4e12-a153-4f6780e6c292",
+                      "answer537bc926-3c0e-4342-a2be-047a6ef1ed36",
+                      "answer4968ad2a-b337-4ea4-9d7a-35ed58ea4546"
                     ],
                     "conditions": ["equals"],
                     "value": 0
@@ -792,13 +1043,13 @@
                   {
                     "calculation_type": "sum",
                     "answers_to_calculate": [
-                      "answer4375fa2c-086f-49fe-b8d2-665f88c4cdbe",
-                      "answerdc9cb3bc-46e1-4570-9e88-1547a11d2f48",
-                      "answerb7ee1257-e740-4e85-bbda-fad42ae70c27",
-                      "answer7c697777-7ec9-485c-9825-3ce60f7ed7cb"
+                      "answerb49ec909-15a9-4d8c-8886-b2841be29a83",
+                      "answer75a5d411-cabe-4e12-a153-4f6780e6c292",
+                      "answer537bc926-3c0e-4342-a2be-047a6ef1ed36",
+                      "answer4968ad2a-b337-4ea4-9d7a-35ed58ea4546"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                    "answer_id": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                   }
                 ]
               },
@@ -807,7 +1058,7 @@
                   "==": [
                     {
                       "source": "answers",
-                      "identifier": "answer60e59706-8fa4-4fee-bc19-622a1b71f2b5"
+                      "identifier": "answerbaf50cc3-1467-4510-b797-882cae750fed"
                     },
                     0
                   ]
@@ -815,18 +1066,18 @@
               }
             },
             {
-              "id": "blockce09fe9f-9249-4535-8015-410fc03c7c27",
+              "id": "block53b2d24d-a4d5-4ea4-9e7c-5c79b807ff7b",
               "type": "Question",
               "question": {
-                "id": "questionce09fe9f-9249-4535-8015-410fc03c7c27",
-                "title": "Please explain any changes in your potable water volume or employment figures from the previous return, if applicable.",
+                "id": "question53b2d24d-a4d5-4ea4-9e7c-5c79b807ff7b",
+                "title": "Please explain any changes in your commission and fees, sales on own account or employment figures from the previous return, if applicable.",
                 "description": [
                   "<p>If you provide comments we are less likely to contact you with data queries.</p>"
                 ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer9ccfc69f-34a3-413f-af86-6701c381a4ee",
+                    "id": "answer1cf01727-bb5f-40dc-94cf-ff827b6040b9",
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Comments",
