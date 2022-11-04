@@ -94,23 +94,6 @@
                   ]
                 },
                 {
-                  "id": "additional-guidance",
-                  "contents": [
-                    {
-                      "guidance": {
-                        "contents": [
-                          {
-                            "title": "<strong>Coronavirus (COVID-19) guidance</strong>"
-                          },
-                          {
-                            "description": "<strong>Explain your figures</strong> in the comments section to minimise us contacting you and to help us tell an industry story."
-                          }
-                        ]
-                      }
-                    }
-                  ]
-                },
-                {
                   "id": "description",
                   "contents": [
                     {
@@ -224,7 +207,7 @@
                   ]
                 },
                 "description": [
-                  "<p>An employee is anyone aged 16 years or over who is working directly for the business.</p><p>They may be paid direct from the business, from elsewhere within the wider group, or by an external payroll provider on behalf of the company. If your business uses a central payroll to pay employees who work within the wider group, only include employees working directly for the business.</p>"
+                  "<p>An employee is anyone aged 16 years or over who is working directly for the business.</p><p>They may be paid direct from the business, from elsewhere within the wider group, or by an external payroll provider on behalf of the company.  If your business uses a central payroll to pay employees who work within the wider group, only include employees working directly for the business.</p>"
                 ],
                 "guidance": {
                   "contents": [
@@ -334,46 +317,44 @@
               },
               "routing_rules": [
                 {
-                  "goto": {
-                    "block": "block2a49398c-45bb-4a50-883a-3dab2dfb23b5",
-                    "when": [
+                  "block": "block2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+                  "when": {
+                    "==": [
                       {
-                        "id": "answerconfirmation-answer-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5",
-                        "condition": "equals",
-                        "value": "No, I need to change this"
-                      }
+                        "source": "answers",
+                        "identifier": "answerconfirmation-answer-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5"
+                      },
+                      "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "goto": {
-                    "block": "block9380147d-8d77-4fae-a8ff-c3c328150206",
-                    "when": [
+                  "block": "block9380147d-8d77-4fae-a8ff-c3c328150206",
+                  "when": {
+                    "==": [
                       {
-                        "id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
-                        "condition": "equals",
-                        "value": 0
-                      }
+                        "source": "answers",
+                        "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                      },
+                      0
                     ]
                   }
                 },
                 {
-                  "goto": {
-                    "block": "blockc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b"
-                  }
+                  "block": "blockc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b"
                 }
               ],
-              "skip_conditions": [
-                {
-                  "when": [
+              "skip_conditions": {
+                "when": {
+                  ">": [
                     {
-                      "id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
-                      "condition": "greater than",
-                      "value": 0
-                    }
+                      "source": "answers",
+                      "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                    },
+                    0
                   ]
                 }
-              ]
+              }
             },
             {
               "id": "blockc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b",
@@ -485,9 +466,7 @@
                       "answeraebbf9ea-ba26-4126-878d-eac5c8dc8ce5",
                       "answer6b20bead-e1ac-45ea-b7d3-eca6086308e7"
                     ],
-                    "conditions": [
-                      "equals"
-                    ],
+                    "conditions": ["equals"],
                     "value": 0
                   },
                   {
@@ -498,9 +477,7 @@
                       "answeraebbf9ea-ba26-4126-878d-eac5c8dc8ce5",
                       "answer6b20bead-e1ac-45ea-b7d3-eca6086308e7"
                     ],
-                    "conditions": [
-                      "equals"
-                    ],
+                    "conditions": ["equals"],
                     "answer_id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
                   }
                 ]
