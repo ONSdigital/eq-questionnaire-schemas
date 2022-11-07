@@ -14,12 +14,12 @@ To do this run `make run-validator` to run the validator and then run `make vali
 
 Before running any translations script it is important to check that the latest release of the eq-translations repo is being
 used. This can be done using:
-```angular2html
+```
 make translations-check
 ```
 
 To generate a translation template `.pot` file in order to translate a schema, use the following command. It will generate a template file containing all the strings to be translated:
-```angular2html
+```
 make translation-templates
 ```
 
@@ -30,7 +30,7 @@ The `.po` file needs to be named in the following format: `{SCHEMA_NAME}_{LANGUA
 
 Once this in place, the following command can be run in order to generate a translated
 schema:
-```angular2html
+```
 make translate-schemas
 ```
 The translated schema will be added to the `/schemas/{THEME}/{LANGUAGE_CODE}` directory.
