@@ -11,6 +11,11 @@ services:
 
   py-validator:
     image: onsdigital/eq-questionnaire-validator:${TAG}
+    healthcheck:
+      test: "curl -f localhost:5002"
+      interval: 5s
+      timeout: 5s
+      retries: 20
     networks:
       - eq-schema
     environment:
