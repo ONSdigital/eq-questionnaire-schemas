@@ -23,7 +23,7 @@ def translate_schemas(runner_directory):
 
         filenames = []
         for pattern in schemas:
-            filenames = glob(pattern)
+            filenames.extend(glob(pattern))
 
         for schema in filenames:
             schema_name = os.path.basename(schema).replace(".json", "")

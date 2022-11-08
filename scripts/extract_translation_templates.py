@@ -85,7 +85,7 @@ def check_schema_templates(source_dir, target_dir):
     filenames = []
 
     for pattern in SCHEMAS_TO_EXTRACT:
-        filenames = glob(pattern)
+        filenames.extend(glob(pattern))
 
     for schema in filenames:
         schema_name = os.path.basename(schema)
