@@ -35,6 +35,10 @@ make translate-schemas
 ```
 The translated schema will be added to the `/schemas/{THEME}/{LANGUAGE_CODE}` directory.
 
+To check that translations are up to date use the following command (This check will run automatically when a pull request is raised):
+```
+make test-translate-templates
+```
 
 ## Testing built schemas with eq-questionnaire-runner
 
