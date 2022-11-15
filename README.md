@@ -8,7 +8,7 @@ To do this run `make run-validator` to run the validator and then run `make vali
 
 **Schema file names must use snake case to be compatible with runner**
 
-## Generating translated schemas
+## Translations
 
 ** N.B. Currently only supporting translations for Health themed surveys (PHM).
 
