@@ -12,16 +12,16 @@ To do this run `make run-validator` to run the validator and then run `make vali
 
 ** N.B. Currently only supporting translations for Health themed surveys (PHM).
 
-Before running any translations script it is important to check that the latest release of the eq-translations repo is being
-used. This can be done using:
-```
-make translations-check
-```
+Ensure that the latest release of the eq-translations repository has been installed before running any of the following scripts (the release version is checked automatically when running translations, scripts will not run if the release is out of date.)
+
+### Generating Translation Templates
 
 To generate a translation template `.pot` file in order to translate a schema, use the following command. It will generate a template file containing all the strings to be translated:
 ```
 make translation-templates
 ```
+
+### Generating Translated Schemas
 
 To translate a schema, a `.po` file for the schema will need to be added to the `translations/{THEME}/{LANGUAGE_CODE}` directory containing strings from the schema
 and the matching translations. 
@@ -34,6 +34,8 @@ schema:
 make translate-schemas
 ```
 The translated schema will be added to the `/schemas/{THEME}/{LANGUAGE_CODE}` directory.
+
+### Testing Translation Templates
 
 To check that translations are up to date use the following command (This check will run automatically when a pull request is raised):
 ```
