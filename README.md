@@ -2,6 +2,26 @@
 
 A registry for questionnaire schemas for eq-questionnaire-runner.
 
+
+## Setup
+
+It is recommended that you use [Pyenv](https://github.com/pyenv/pyenv) to manage your Python installations.
+
+### Install Poetry
+
+We use poetry to manage the dependencies in this repository, to install poetry use:
+
+```
+curl -sSL https://install.python-poetry.org | python3 -
+```
+
+Install the dependencies for this project using
+```
+poetry install
+```
+
+## Validating Schemas
+
 A make target exists (`validate-schemas`) in order to validate schemas locally using eq-questionnaire-validator docker image.
 
 To do this run `make run-validator` to run the validator and then run `make validate-schemas` to validate the schemas.
