@@ -4,6 +4,9 @@ run-validator:
 validate-schemas:
 	./scripts/validate_schemas.sh
 
+lint:
+	poetry run ./scripts/run_lint_python.sh
+
 translations-check:
 	poetry run python -m scripts.eq_translations_check
 

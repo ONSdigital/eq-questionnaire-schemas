@@ -23,7 +23,7 @@ def get_template_content(filename, ignore_context=False):
     if ignore_context:
         line_beginnings_to_ignore += ["#:"]
 
-    with open(filename) as file:
+    with open(filename, encoding="utf-8") as file:
         return list(
             filter(
                 lambda l: all(
@@ -34,11 +34,11 @@ def get_template_content(filename, ignore_context=False):
         )
 
 
-def print_filename_results(filename, success=True):
-    if success:
-        logger.debug("%s - NO CHANGES", filename)
+def print_filename_results(filename, is_successful=True):
+    if is_successful:
+        logger.debug(f"{filename} - NO CHANGES")
     else:
-        logger.error("%s - CHANGES FOUND", filename)
+        logger.error(f"{filename} - CHANGES FOUND")
 
 
 def compare_files(source_dir, target_dir, filename):
@@ -73,11 +73,11 @@ def build_schema_templates(output_dir):
     for file in filenames:
         template_file = os.path.basename(file).replace(".json", ".pot")
 
-        logger.info("Building %s/%s", output_dir, template_file)
+        logger.info(f"Building {output_dir}/{template_file}")
 
         handle_extract_template(file, output_dir)
 
-        logger.info("Built %s/%s", output_dir, template_file)
+        logger.info(f"Built {output_dir}/{template_file}")
 
 
 def check_schema_templates(source_dir, target_dir):

@@ -17,7 +17,7 @@ TRANSLATION_MAP = {
 
 
 def translate_schemas(runner_directory):
-    logger.info("Using runner directory: %s", runner_directory)
+    logger.info(f"Using runner directory: {runner_directory}")
 
     for language, schemas in TRANSLATION_MAP.items():
 
@@ -36,9 +36,9 @@ def translate_schemas(runner_directory):
                 "schemas", "translations"
             )
 
-            logger.info(
-                "\n-------\n" "Building %s/%s", relative_dir, f"{schema_name}.json"
-            )
+            logger_file_path = f"{relative_dir}/{schema_name}.json"
+
+            logger.info(f"\n-------\n" f"Building {logger_file_path}")
 
             os.makedirs(relative_dir, exist_ok=True)
 
