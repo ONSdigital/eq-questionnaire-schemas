@@ -6,23 +6,24 @@
   "survey_id": "023",
   "form_type": "0215",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
-  "title": "Monthly Business Survey - Retail Sales Index",
+  "title": "Copy of Monthly Business Survey - Retail Sales Index",
   "questionnaire_flow": {
-    "type": "Linear",
+    "type": "Hub",
     "options": {
-      "summary": {
-        "collapsible": false
-      }
+      "required_completed_sections": [
+        "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
+        "section907ed71e-2910-473c-89f4-225b3791c424",
+        "sectionbef43b93-1ad2-43c3-a10e-facafafd22e3",
+        "section549c8a70-adbd-4281-8b59-ce4e273c8f98",
+        "section2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91"
+      ]
     }
   },
   "sections": [
     {
-      "id": "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      },
-      "show_on_hub": true,
+      "id": "section2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91",
+      "title": "Introduction",
+      "show_on_hub": false,
       "groups": [
         {
           "id": "group2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91",
@@ -397,7 +398,18 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
+      "title": "Reporting Period",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
         {
           "id": "groupe950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
           "blocks": [
@@ -475,7 +487,7 @@
                   }
                 },
                 {
-                  "block": "block6658f716-7f5f-4488-ab20-2af1dc694294"
+                  "section": "End"
                 }
               ]
             },
@@ -518,11 +530,12 @@
     },
     {
       "id": "section907ed71e-2910-473c-89f4-225b3791c424",
+      "title": "Retail Turnover",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": true,
+      "show_on_hub": false,
       "groups": [
         {
           "id": "group907ed71e-2910-473c-89f4-225b3791c424",
@@ -1123,11 +1136,12 @@
     },
     {
       "id": "sectionbef43b93-1ad2-43c3-a10e-facafafd22e3",
+      "title": "Changes in Turnover",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": true,
+      "show_on_hub": false,
       "groups": [
         {
           "id": "groupbef43b93-1ad2-43c3-a10e-facafafd22e3",
@@ -1200,7 +1214,7 @@
               },
               "routing_rules": [
                 {
-                  "group": "group549c8a70-adbd-4281-8b59-ce4e273c8f98",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
@@ -1350,11 +1364,12 @@
     },
     {
       "id": "section549c8a70-adbd-4281-8b59-ce4e273c8f98",
+      "title": "Employees",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": true,
+      "show_on_hub": false,
       "groups": [
         {
           "id": "group549c8a70-adbd-4281-8b59-ce4e273c8f98",
