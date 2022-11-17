@@ -3,7 +3,7 @@
 # Run project through linting
 #
 # NOTE: This script expects to be run from the project root with
-# ./scripts/run_lint.sh
+# ./scripts/run_lint_python.sh
 
 function display_result {
   RESULT=$1
