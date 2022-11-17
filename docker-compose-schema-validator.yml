@@ -8,6 +8,11 @@ services:
       - eq-schema
     ports:
       - 5002:5002
+    healthcheck:
+      test: "curl localhost:5002/status"
+      interval: 5s
+      timeout: 5s
+      retries: 20
 
   py-validator:
     image: onsdigital/eq-questionnaire-validator:${TAG}
@@ -18,7 +23,8 @@ services:
     ports:
       - 5001:5000
     depends_on:
-      - ajv-validator
+      ajv-validator:
+        condition: service_healthy
 networks:
   eq-schema:
     driver: bridge
