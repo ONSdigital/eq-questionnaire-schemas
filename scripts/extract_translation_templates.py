@@ -125,4 +125,6 @@ if __name__ == "__main__":
             logger.debug("Translation templates are up to date.")
         sys.exit(0)
 
-    build_schema_templates(f"{os.getcwd()}/translations")
+    translations_dir = f"{os.getcwd()}/translations"
+    pathlib.Path(translations_dir).mkdir(parents=True, exist_ok=True)
+    build_schema_templates(translations_dir)
