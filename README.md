@@ -43,7 +43,7 @@ make translation-templates
 
 ### Generating Translated Schemas
 
-To translate a schema, a `.po` file for the schema will need to be added to the `translations/{THEME}/{LANGUAGE_CODE}` directory containing strings from the schema
+To translate a schema, a `.po` file for the schema will need to be added to the `translations/{SURVEY_TYPE}/{LANGUAGE_CODE}/` directory containing strings from the schema. For example, `translations/health/cy/`
 and the matching translations. 
 
 The `.po` file needs to be named in the following format: `{SCHEMA_NAME}_{LANGUAGE_CODE}.po`
