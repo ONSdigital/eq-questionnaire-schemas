@@ -32,7 +32,7 @@ To do this run `make run-validator` to run the validator and then run `make vali
 
 ** N.B. Currently only supporting translations for Health themed surveys (PHM).
 
-Ensure that the latest release of the eq-translations repository has been installed before running any of the following scripts (the release version is checked automatically when running translations, scripts will not run if the release is out of date.)
+The latest release of the eq-translations package is required to successfully run the translation scripts. The release version is checked automatically when running translations commands and the scripts will error if the release version does not match the installed version.
 
 ### Generating Translation Templates
 
