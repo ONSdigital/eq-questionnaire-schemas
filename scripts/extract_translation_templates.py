@@ -3,6 +3,7 @@ import argparse
 import difflib
 import logging
 import os
+import pathlib
 import sys
 import tempfile
 from glob import glob
