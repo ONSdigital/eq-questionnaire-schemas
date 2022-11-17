@@ -29,7 +29,7 @@ def translate_schemas(runner_directory):
             schema_name = os.path.basename(schema).replace(".json", "")
             theme_path = os.path.dirname(schema)
 
-            translation_file = f"{schema_name}_{language}.po"
+            translation_file = f"{schema_name}.po"
             relative_dir = theme_path.replace("en", language)
             output_dir = f"{runner_directory}/{relative_dir}"
             language_dir = f"{runner_directory}/{relative_dir}".replace(

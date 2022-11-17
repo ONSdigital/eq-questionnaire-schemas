@@ -7,6 +7,17 @@ A registry for questionnaire schemas for eq-questionnaire-runner.
 
 It is recommended that you use [Pyenv](https://github.com/pyenv/pyenv) to manage your Python installations.
 
+Use pyenv to install the desired version of Python:
+```
+pyenv install <version>
+```
+
+Check the installed version of Python is correct with:
+```
+python --version
+```
+
+
 ### Install Poetry
 
 We use poetry to manage the dependencies in this repository, to install poetry use:
@@ -15,7 +26,7 @@ We use poetry to manage the dependencies in this repository, to install poetry u
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-Install the dependencies for this project using
+Install the dependencies for this project using, add the option `--without dev` to ignore dev dependencies. 
 ```
 poetry install
 ```
@@ -46,7 +57,7 @@ make translation-templates
 To translate a schema, a `.po` file for the schema will need to be added to the `translations/{SURVEY_TYPE}/{LANGUAGE_CODE}/` directory containing strings from the schema. For example, `translations/health/cy/`
 and the matching translations. 
 
-The `.po` file needs to be named in the following format: `{SCHEMA_NAME}_{LANGUAGE_CODE}.po`
+The `.po` file needs to be named in the following format: `{SCHEMA_NAME}.po`
 
 Once this in place, the following command can be run in order to generate a translated
 schema:
