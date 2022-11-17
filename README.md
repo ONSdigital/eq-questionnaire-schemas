@@ -53,7 +53,7 @@ schema:
 ```
 make translate-schemas
 ```
-The translated schema will be added to the `/schemas/{THEME}/{LANGUAGE_CODE}` directory.
+The translated schema will be added to the `/schemas/{SURVEY_TYPE}/{LANGUAGE_CODE}/` directory. For example, `schemas/health/cy/`
 
 ### Testing Translation Templates
 
