@@ -7,7 +7,7 @@ A registry for questionnaire schemas for eq-questionnaire-runner.
 
 It is recommended that you use [Pyenv](https://github.com/pyenv/pyenv) to manage your Python installations.
 
-Use pyenv to install the desired version of Python:
+Use pyenv to install the Python version specified by the `.python-version` file.
 ```
 pyenv install <version>
 ```
