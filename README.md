@@ -26,7 +26,7 @@ We use poetry to manage the dependencies in this repository, to install poetry u
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-Install the dependencies for this project using, add the option `--without dev` to ignore dev dependencies. 
+Install the dependencies for this project. Add the option `--without dev` to ignore dev dependencies. 
 ```
 poetry install
 ```
