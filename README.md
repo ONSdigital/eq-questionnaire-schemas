@@ -9,7 +9,7 @@ It is recommended that you use [Pyenv](https://github.com/pyenv/pyenv) to manage
 
 Use pyenv to install the Python version specified by the `.python-version` file.
 ```
-pyenv install <version>
+pyenv install
 ```
 
 Check the installed version of Python is correct with:
