@@ -4,25 +4,26 @@
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
   "survey_id": "023",
-  "form_type": "0203",
+  "form_type": "0213",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
   "title": "Monthly Business Survey - Retail Sales Index",
   "questionnaire_flow": {
-    "type": "Linear",
+    "type": "Hub",
     "options": {
-      "summary": {
-        "collapsible": false
-      }
+      "required_completed_sections": [
+        "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
+        "section907ed71e-2910-473c-89f4-225b3791c424",
+        "sectionbef43b93-1ad2-43c3-a10e-facafafd22e3",
+        "section549c8a70-adbd-4281-8b59-ce4e273c8f98",
+        "section2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91"
+      ]
     }
   },
   "sections": [
     {
-      "id": "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      },
-      "show_on_hub": true,
+      "id": "section2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91",
+      "title": "Introduction",
+      "show_on_hub": false,
       "groups": [
         {
           "id": "group2f2c19a2-baba-4a5a-b0b0-45b5d06ffc91",
@@ -102,14 +103,11 @@
                   "contents": [
                     {
                       "list": [
-                        "On average it takes 10 minutes to complete this survey once you have collected the information.",
+                        "On average it takes 10 minutes to complete this survey once you&#x2019;ve collected the information.",
                         "Data should relate to all sites in England, Scotland and Wales.",
-                        "You can provide informed estimates if actual figures are not available.",
+                        "You can provide informed estimates if actual figures aren&#39;t available.",
                         "We will treat your data securely and confidentially."
                       ]
-                    },
-                    {
-                      "description": "<strong>If you have closed for all, or some, of the period</strong>: select &#39;yes, you can provide figures&#39; and enter retail turnover, even if this is &#39;0&#39;."
                     }
                   ]
                 }
@@ -119,13 +117,7 @@
                 "title": "Information you need",
                 "contents": [
                   {
-                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/monthlybusinesssurveyretailsalesindex\"target=\"_blank\"rel=\"noopener noreferrer\">View the survey information before you start the survey (this link opens in a new tab)</a>"
-                  },
-                  {
                     "description": "You can select the dates of the period you are reporting for, if the given dates are not appropriate."
-                  },
-                  {
-                    "description": "Explain figures in the comments section to minimise us contacting you and to help us tell an industry story."
                   }
                 ],
                 "questions": [
@@ -133,7 +125,7 @@
                     "question": "Total retail turnover",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
@@ -143,7 +135,7 @@
                         ]
                       },
                       {
-                        "description": "<strong>Exclude:</strong>"
+                        "description": "Exclude:"
                       },
                       {
                         "list": [
@@ -160,17 +152,17 @@
                     "question": "Food sales",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
                           "all fresh food",
-                          "other food for human consumption, except chocolate and sugar confectionery",
+                          "other food for human consumption (except chocolate and sugar confectionery)",
                           "soft drinks"
                         ]
                       },
                       {
-                        "description": "<strong>Exclude:</strong>"
+                        "description": "Exclude:"
                       },
                       {
                         "list": [
@@ -180,14 +172,13 @@
                     ]
                   },
                   {
-                    "question": "Alcohol, confectionery and tobacco sales",
+                    "question": "Alcohol, confectionary and tobacco sales",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
-                          "alcoholic drink",
                           "chocolate and sugar confectionery",
                           "tobacco and smokers&#x2019; requisites"
                         ]
@@ -198,11 +189,10 @@
                     "question": "Clothing and footwear sales",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
-                          "clothing and footwear",
                           "clothing fabrics",
                           "haberdashery and furs",
                           "leather and travel goods",
@@ -215,7 +205,7 @@
                     "question": "Household goods sales",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
@@ -224,7 +214,7 @@
                           "household textiles and soft furnishings",
                           "prints and picture frames",
                           "antiques and works of art",
-                          "domestic electrical and gas appliances, audio or visual equipment, and home computers",
+                          "domestic electrical and gas appliances, audio/visual equipment and home computers",
                           "lighting and minor electrical supplies",
                           "records, compact discs, audio and video tapes",
                           "musical instruments and goods",
@@ -242,11 +232,11 @@
                     "question": "Other sales",
                     "contents": [
                       {
-                        "description": "<strong>Include:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
-                          "toiletries and medications, except NHS receipts",
+                          "toiletries and medications (except NHS receipts)",
                           "newspapers and periodicals",
                           "books, stationery and office supplies",
                           "photographic and optical goods",
@@ -254,17 +244,17 @@
                           "toys and games",
                           "cycles and cycle accessories",
                           "sport and camping equipment",
-                          "jewellery",
+                          "jewelry",
                           "silverware and plates, clocks and watches",
                           "household cleaning products and kitchen paper products",
                           "pets, pets&#x2019; requisites and pet foods",
                           "cut flowers, plants, seeds and other garden sundries",
-                          "other new and second hand goods",
+                          "other new and secondhand goods",
                           "mobile phones"
                         ]
                       },
                       {
-                        "description": "<strong>Exclude:</strong>"
+                        "description": "Exclude:"
                       },
                       {
                         "list": [
@@ -280,32 +270,86 @@
                     "question": "Internet sales",
                     "contents": [
                       {
-                        "description": "<strong>Include: </strong>"
+                        "description": "Include: VAT"
+                      }
+                    ]
+                  },
+                  {
+                    "question": "Significant changes to the total retail turnover",
+                    "contents": [
+                      {
+                        "description": "For example:"
                       },
                       {
                         "list": [
-                          "VAT",
-                          "sales from orders received over the internet, irrespective of the payment or delivery method"
+                          "in-store / online promotions",
+                          "special events (e.g. sporting events)",
+                          "calendar events (e.g. Christmas, Easter, Bank Holiday)",
+                          "weather",
+                          "store closures/openings"
                         ]
                       }
                     ]
                   },
                   {
-                    "question": "Additional comments",
+                    "question": "Employees",
                     "contents": [
                       {
-                        "description": "Please provide any additional comments about your data."
-                      },
-                      {
-                        "description": "<strong>For example:</strong>"
+                        "description": "Include:"
                       },
                       {
                         "list": [
-                          "in-store or online promotions",
-                          "special events, for example sporting events",
-                          "calendar events, for example Christmas, Easter, Bank Holiday",
-                          "weather",
-                          "store closures or openings"
+                          "all workers paid directly from this business&#39;s payroll(s)",
+                          "those temporarily absent but still being paid, for example on maternity leave"
+                        ]
+                      },
+                      {
+                        "description": "Exclude:"
+                      },
+                      {
+                        "list": [
+                          "agency workers paid directly from the agency payroll",
+                          "voluntary workers",
+                          "former employees only receiving a pension",
+                          "self-employed workers",
+                          "working owners who are not paid via PAYE"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "Working hours",
+                    "contents": [
+                      {
+                        "description": "The number of:"
+                      },
+                      {
+                        "list": [
+                          "male employees working more than 30 hours per week",
+                          "male employees working 30 hours or less per week",
+                          "female employees working more than 30 hours per week",
+                          "female employees working 30 hours or less per week"
+                        ]
+                      },
+                      {
+                        "description": "Include:"
+                      },
+                      {
+                        "list": [
+                          "all workers paid directly from this business&#39;s payroll(s)",
+                          "those temporarily absent but still being paid, for example on maternity leave"
+                        ]
+                      },
+                      {
+                        "description": "Exclude:"
+                      },
+                      {
+                        "list": [
+                          "agency workers paid directly from the agency payroll",
+                          "voluntary workers",
+                          "former employees only receiving a pension",
+                          "self-employed workers",
+                          "working owners who are not paid via PAYE"
                         ]
                       }
                     ]
@@ -330,7 +374,18 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "sectione950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
+      "title": "Reporting Period",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
         {
           "id": "groupe950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
           "blocks": [
@@ -396,19 +451,19 @@
               },
               "routing_rules": [
                 {
-                  "block": "block6658f716-7f5f-4488-ab20-2af1dc694294",
+                  "block": "block97bfcacd-1741-41df-9b38-a12a9e6d0e2b",
                   "when": {
                     "in": [
                       {
                         "identifier": "answera45d38f3-cb54-4885-ac11-98144f09477f",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      ["No"]
                     ]
                   }
                 },
                 {
-                  "block": "block97bfcacd-1741-41df-9b38-a12a9e6d0e2b"
+                  "section": "End"
                 }
               ]
             },
@@ -424,76 +479,60 @@
                     "id": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5efrom",
                     "type": "Date",
                     "mandatory": true,
-                    "label": "From",
-                    "q_code": "11",
-                    "minimum": {
-                      "value": {
-                        "source": "metadata",
-                        "identifier": "ref_p_start_date"
-                      },
-                      "offset_by": {
-                        "days": -19
-                      }
-                    }
+                    "label": "From:",
+                    "q_code": "11"
                   },
                   {
                     "id": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5eto",
                     "type": "Date",
                     "mandatory": true,
-                    "label": "To",
-                    "q_code": "12",
-                    "maximum": {
-                      "value": {
-                        "source": "metadata",
-                        "identifier": "ref_p_end_date"
-                      },
-                      "offset_by": {
-                        "days": 20
-                      }
-                    }
+                    "label": "To:",
+                    "q_code": "12"
                   }
                 ],
                 "period_limits": {
                   "minimum": {
-                    "days": 23
+                    "days": 21
                   },
                   "maximum": {
                     "days": 50
                   }
                 }
               }
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section907ed71e-2910-473c-89f4-225b3791c424",
+      "title": "Retail Turnover",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "group907ed71e-2910-473c-89f4-225b3791c424",
+          "blocks": [
             {
               "id": "block6658f716-7f5f-4488-ab20-2af1dc694294",
               "type": "Question",
               "question": {
                 "id": "question6658f716-7f5f-4488-ab20-2af1dc694294",
                 "title": {
-                  "text": "For the period {from} to {to}, what was the value of {ru_name}&#39;s <em>total retail turnover</em>?",
+                  "text": "For the period {ref_p_start_date} to {ref_p_end_date}, what was the value of {ru_name}&#39;s <em>total retail turnover</em>?",
                   "placeholders": [
                     {
-                      "placeholder": "from",
+                      "placeholder": "ref_p_start_date",
                       "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "identifier": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5efrom",
-                                "source": "answers"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ref_p_start_date"
-                              }
-                            ]
-                          }
-                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "previous_transform"
+                              "source": "metadata",
+                              "identifier": "ref_p_start_date"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -501,28 +540,14 @@
                       ]
                     },
                     {
-                      "placeholder": "to",
+                      "placeholder": "ref_p_end_date",
                       "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "identifier": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5eto",
-                                "source": "answers"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ref_p_end_date"
-                              }
-                            ]
-                          }
-                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "previous_transform"
+                              "source": "metadata",
+                              "identifier": "ref_p_end_date"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -541,7 +566,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "<strong>Include</strong>"
                     },
                     {
                       "list": [
@@ -551,7 +576,7 @@
                       ]
                     },
                     {
-                      "description": "<strong>Exclude:</strong>"
+                      "description": "<strong>Exclude</strong>"
                     },
                     {
                       "list": [
@@ -568,16 +593,11 @@
                 "answers": [
                   {
                     "id": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total retail turnover",
                     "q_code": "20",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
                     "decimal_places": 2,
-                    "default": 0,
                     "currency": "GBP"
                   }
                 ]
@@ -589,31 +609,17 @@
               "question": {
                 "id": "questionconfirmation-page-for-6658f716-7f5f-4488-ab20-2af1dc694294",
                 "title": {
-                  "text": "For the period {from} to {to}, the value of the total retail turnover was <em>{total_retail_turnover}</em>, is this correct?",
+                  "text": "For the period {ref_p_start_date} to {ref_p_end_date}, the value of the total retail turnover was <em>{total_retail_turnover}</em>, is this correct?",
                   "placeholders": [
                     {
-                      "placeholder": "from",
+                      "placeholder": "ref_p_start_date",
                       "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "identifier": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5efrom",
-                                "source": "answers"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ref_p_start_date"
-                              }
-                            ]
-                          }
-                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "previous_transform"
+                              "source": "metadata",
+                              "identifier": "ref_p_start_date"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -621,28 +627,14 @@
                       ]
                     },
                     {
-                      "placeholder": "to",
+                      "placeholder": "ref_p_end_date",
                       "transforms": [
-                        {
-                          "transform": "first_non_empty_item",
-                          "arguments": {
-                            "items": [
-                              {
-                                "identifier": "answerfdaf44e6-373d-4b4e-b5fa-13caf04d9b5eto",
-                                "source": "answers"
-                              },
-                              {
-                                "source": "metadata",
-                                "identifier": "ref_p_end_date"
-                              }
-                            ]
-                          }
-                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "previous_transform"
+                              "source": "metadata",
+                              "identifier": "ref_p_end_date"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -673,12 +665,12 @@
                     "type": "Radio",
                     "options": [
                       {
-                        "label": "Yes, this is correct",
-                        "value": "Yes, this is correct"
+                        "label": "Yes this is correct",
+                        "value": "Yes this is correct"
                       },
                       {
-                        "label": "No, I need to change this",
-                        "value": "No, I need to change this"
+                        "label": "No I need to change this",
+                        "value": "No I need to change this"
                       }
                     ]
                   }
@@ -693,12 +685,12 @@
                         "source": "answers",
                         "identifier": "answerconfirmation-answer-for-6658f716-7f5f-4488-ab20-2af1dc694294"
                       },
-                      "No, I need to change this"
+                      "No I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block94192f6c-a726-457f-a6c4-13da42940b05",
+                  "block": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b",
                   "when": {
                     "==": [
                       {
@@ -712,18 +704,7 @@
                 {
                   "block": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b"
                 }
-              ],
-              "skip_conditions": {
-                "when": {
-                  "!=": [
-                    {
-                      "source": "answers",
-                      "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f"
-                    },
-                    0
-                  ]
-                }
-              }
+              ]
             },
             {
               "id": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b",
@@ -752,17 +733,17 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "<strong>Include</strong>"
                     },
                     {
                       "list": [
                         "all fresh food",
-                        "other food for human consumption, except chocolate and sugar confectionery",
+                        "other food for human consumption (except chocolate and sugar confectionery)",
                         "soft drinks"
                       ]
                     },
                     {
-                      "description": "<strong>Exclude:</strong>"
+                      "description": "<strong>Exclude</strong>"
                     },
                     {
                       "list": [
@@ -777,20 +758,9 @@
                     "id": "answer45bbf36e-a929-48ea-bdf8-d6db9f6a4e0f",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of food sales",
+                    "label": "Food",
                     "q_code": "22",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                        "source": "answers"
-                      },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
+                    "decimal_places": 0,
                     "currency": "GBP"
                   }
                 ]
@@ -802,7 +772,7 @@
               "question": {
                 "id": "questionc6fdf75d-b478-45b0-8a1f-e581632a63b6",
                 "title": {
-                  "text": "Of the {total_retail_turnover} total retail turnover, what was the value of <em>alcohol, confectionery and tobacco</em> sales?",
+                  "text": "Of the {total_retail_turnover} total retail turnover, what was the value of<em> alcohol, confectionary and tobacco</em> sales?",
                   "placeholders": [
                     {
                       "placeholder": "total_retail_turnover",
@@ -823,7 +793,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "<strong>Include</strong>"
                     },
                     {
                       "list": [
@@ -840,20 +810,9 @@
                     "id": "answer9068cf91-9f77-4327-838a-f32070f382bd",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of alcohol, confectionery and tobacco sales",
+                    "label": "Alcohol, confectionary and tobacco",
                     "q_code": "23",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                        "source": "answers"
-                      },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
+                    "decimal_places": 0,
                     "currency": "GBP"
                   }
                 ]
@@ -886,7 +845,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "<strong>Include</strong>"
                     },
                     {
                       "list": [
@@ -905,20 +864,9 @@
                     "id": "answera5b5c2ef-650d-4a30-a794-37cf7dfba559",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of clothing and footwear sales",
+                    "label": "Clothing and footwear",
                     "q_code": "24",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                        "source": "answers"
-                      },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
+                    "decimal_places": 0,
                     "currency": "GBP"
                   }
                 ]
@@ -954,27 +902,16 @@
                     "id": "answera1898f82-2cca-4be2-b0a2-4b8565e2bb68",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of sales for household goods",
+                    "label": "Household goods",
                     "q_code": "25",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                        "source": "answers"
-                      },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
+                    "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
                       "show_guidance": "Show household goods to include",
                       "hide_guidance": "Show household goods to include",
                       "contents": [
                         {
-                          "description": "<strong>Include:</strong>"
+                          "description": "<strong>Include</strong>"
                         },
                         {
                           "list": [
@@ -983,7 +920,7 @@
                             "household textiles and soft furnishings",
                             "prints and picture frames",
                             "antiques and works of art",
-                            "domestic electrical and gas appliances, audio or visual equipment, and home computers",
+                            "domestic electrical and gas appliances, audio/visual equipment and home computers",
                             "lighting and minor electrical supplies",
                             "records, compact discs, audio and video tapes",
                             "musical instruments and goods",
@@ -1007,7 +944,7 @@
               "question": {
                 "id": "question63a9c2f1-0ecb-4891-a8b5-f0c8b6622ecb",
                 "title": {
-                  "text": "Of the {total_retail_turnover} total retail turnover, what was the value of <em>other</em> sales?",
+                  "text": "Of the {total_retail_turnover} total retail turnover, what was the value of <em>other </em>sales?",
                   "placeholders": [
                     {
                       "placeholder": "total_retail_turnover",
@@ -1031,31 +968,20 @@
                     "id": "answer0b9fb1d1-41e3-4322-85ef-d76a79d82764",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of sales for other goods",
+                    "label": "Other goods",
                     "q_code": "26",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
-                        "source": "answers"
-                      },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
+                    "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
-                      "show_guidance": "Show sale items to include and exclude",
-                      "hide_guidance": "Show sale items to include and exclude",
+                      "show_guidance": "Show sale items to include/exclude",
+                      "hide_guidance": "Show sale items to include/exclude",
                       "contents": [
                         {
-                          "description": "<strong>Include:</strong>"
+                          "description": "<strong>Include</strong>"
                         },
                         {
                           "list": [
-                            "toiletries and medications, except NHS receipts",
+                            "toiletries and medications (except NHS receipts)",
                             "newspapers and periodicals",
                             "books, stationery and office supplies",
                             "photographic and optical goods",
@@ -1063,8 +989,8 @@
                             "toys and games",
                             "cycles and cycle accessories",
                             "sport and camping equipment",
-                            "jewellery",
-                            "silverware and plates, clocks and watches",
+                            "jewelry",
+                            "silverware and plate, clocks and watches",
                             "household cleaning products and kitchen paper products",
                             "pets, pets&#x2019; requisites and pet foods",
                             "cut flowers, plants, seeds and other garden sundries",
@@ -1073,7 +999,7 @@
                           ]
                         },
                         {
-                          "description": "<strong>Exclude:</strong>"
+                          "description": "<strong>Exclude</strong>"
                         },
                         {
                           "list": [
@@ -1116,7 +1042,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "<strong>Include</strong>"
                     },
                     {
                       "list": [
@@ -1132,69 +1058,493 @@
                     "id": "answerd2be9903-31d4-4c55-83e2-c4007809eb08",
                     "mandatory": false,
                     "type": "Currency",
-                    "label": "Value of internet sales",
+                    "label": "Internet sales",
                     "q_code": "21",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
+                    "decimal_places": 0,
+                    "currency": "GBP"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sectionbef43b93-1ad2-43c3-a10e-facafafd22e3",
+      "title": "Changes in Turnover",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "groupbef43b93-1ad2-43c3-a10e-facafafd22e3",
+          "blocks": [
+            {
+              "id": "block2fde6906-8c4e-408a-bee5-efe957498dfa",
+              "type": "Question",
+              "question": {
+                "id": "question2fde6906-8c4e-408a-bee5-efe957498dfa",
+                "title": {
+                  "text": "Did any significant changes occur to the total retail turnover for {ru_name}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
                       "value": {
-                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>For example</strong>"
+                    },
+                    {
+                      "list": [
+                        "in-store / online promotions",
+                        "special events (e.g. sporting events)",
+                        "calendar events (e.g. Christmas, Easter, Bank Holiday)",
+                        "weather",
+                        "store closures/openings"
+                      ]
+                    }
+                  ]
+                },
+                "definitions": [
+                  {
+                    "title": "What constitutes a significant change?",
+                    "contents": [
+                      {
+                        "description": "What constitutes a &#x2018;significant change&#x2019; is dependent on your own interpretation in relation to ESSENTIAL ENTERPRISE LTD.&#x2019;s figures from the previous reporting period and the same reporting period last year."
+                      },
+                      {
+                        "description": "This information will help us to validate your data and should reduce the need to query any figures with you."
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answera8a2d2aa-277f-4a04-8af7-ef41b730222b",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "146a",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answera8a2d2aa-277f-4a04-8af7-ef41b730222b",
                         "source": "answers"
                       },
-                      "exclusive": false
-                    },
-                    "decimal_places": 2,
-                    "currency": "GBP"
+                      ["No"]
+                    ]
+                  }
+                },
+                {
+                  "block": "block8dc73926-bf8d-4856-98ad-ff6aaa697c6f"
+                }
+              ]
+            },
+            {
+              "id": "block8dc73926-bf8d-4856-98ad-ff6aaa697c6f",
+              "type": "Question",
+              "question": {
+                "id": "question8dc73926-bf8d-4856-98ad-ff6aaa697c6f",
+                "title": {
+                  "text": "Please indicate the reasons for any changes in the total retail turnover for {ru_name}",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerf1158d53-b944-49c8-bdc9-69d8441088f4",
+                    "mandatory": true,
+                    "type": "Checkbox",
+                    "label": "Select all that apply",
+                    "options": [
+                      {
+                        "label": "In-store / online promotions",
+                        "value": "In-store / online promotions",
+                        "q_code": "146b"
+                      },
+                      {
+                        "label": "Special events",
+                        "value": "Special events",
+                        "q_code": "146c",
+                        "description": "[For example, sporting events]"
+                      },
+                      {
+                        "label": "Calendar events",
+                        "value": "Calendar events",
+                        "q_code": "146d",
+                        "description": "[For example, Christmas, Easter, Bank Holiday]"
+                      },
+                      {
+                        "label": "Weather",
+                        "value": "Weather",
+                        "q_code": "146e"
+                      },
+                      {
+                        "label": "Store closures",
+                        "value": "Store closures",
+                        "q_code": "146f"
+                      },
+                      {
+                        "label": "Store openings",
+                        "value": "Store openings",
+                        "q_code": "146g"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "146h"
+                      }
+                    ]
                   }
                 ]
               }
             },
             {
-              "id": "block94192f6c-a726-457f-a6c4-13da42940b05",
+              "id": "block2b3e2d39-1c70-44b1-bc75-cdabbf5f3633",
               "type": "Question",
               "question": {
-                "id": "question94192f6c-a726-457f-a6c4-13da42940b05",
-                "title": "Please explain any changes in your figures from previous returns, if applicable",
+                "id": "question2b3e2d39-1c70-44b1-bc75-cdabbf5f3633",
+                "title": {
+                  "text": "Please describe the changes in total retail turnover for {ru_name} in more detail",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
                 "description": [
-                  "<p>If you provide comments we are less likely to contact you with data queries.</p><p>You have nearly finished! <em>Make sure you continue to the next page and select &#39;submit answers&#39; at the bottom.</em></p>"
+                  "<p>We rely on your commentary to &quot;tell the story&quot; behind changes in figures. By commenting here it will reduce the need for us to call you.</p>"
+                ],
+                "definitions": [
+                  {
+                    "title": "How you might answer this question",
+                    "contents": [
+                      {
+                        "description": "Examples of commentary:"
+                      },
+                      {
+                        "description": "<strong>&#x2018;In-store promotion&#x2019;</strong>"
+                      },
+                      {
+                        "description": "&#x201C;Offer on wine for the whole month (save 25% when you buy 6 bottles). The promotion was available in-store and online, contributing to an increase in both total retail turnover and internet sales.&#x201D;"
+                      },
+                      {
+                        "description": "<strong>&#x2018;Special events (for example, sporting events)&#x2019;</strong>"
+                      },
+                      {
+                        "description": "&#x201C;This was the month before the start of Euro 2016 (football), we recorded an increase in sales of audio-visual equipment (for example, televisions and audio equipment). This led to an increase in sales both in-store and online.&#x201D;"
+                      },
+                      {
+                        "description": "<strong>&#x2018;Weather&#x2019;</strong>"
+                      },
+                      {
+                        "description": "&#x201C;The bad weather has decreased our sales of summer clothing. This has led to a reduction in total retail turnover and internet sales this month.&#x201D;"
+                      }
+                    ]
+                  }
                 ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerbe4a15db-111a-434b-b766-04d313e2bf54",
-                    "mandatory": false,
+                    "id": "answerf7c6cb99-cd7b-4e5a-9dec-b9d2a83a4fae",
+                    "mandatory": true,
                     "type": "TextArea",
                     "label": "Comments",
                     "q_code": "146",
-                    "max_length": 2000,
-                    "guidance": {
-                      "show_guidance": "Show examples of comments on changes to figures from previous returns",
-                      "hide_guidance": "Show examples of comments on changes to figures from previous returns",
-                      "contents": [
+                    "max_length": 2000
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section549c8a70-adbd-4281-8b59-ce4e273c8f98",
+      "title": "Employees",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "group549c8a70-adbd-4281-8b59-ce4e273c8f98",
+          "blocks": [
+            {
+              "id": "blockfe134556-653a-4738-a0df-6e0e27119127",
+              "type": "Question",
+              "question": {
+                "id": "questionfe134556-653a-4738-a0df-6e0e27119127",
+                "title": {
+                  "text": "On 10 June 2016 what was the number of employees for {ru_name}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
+                "description": [
+                  "<p>An employee is anyone aged 16 years or over that your organisation directly pays from its payroll(s), in return for carrying out a full-time or part-time job or being on a training scheme.</p>"
+                ],
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Include</strong>"
+                    },
+                    {
+                      "list": [
+                        "all workers paid directly from this business&#x2019;s payroll(s)",
+                        "those temporarily absent but still being paid, for example on maternity leave"
+                      ]
+                    },
+                    {
+                      "description": "<strong>Exclude</strong>"
+                    },
+                    {
+                      "list": [
+                        "agency workers paid directly from the agency payroll",
+                        "voluntary workers",
+                        "former employees only receiving pension",
+                        "self-employed workers",
+                        "working owners who are not paid via PAYE"
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer8eb514ac-7b48-47ee-81bf-756c89b0348d",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Total number of employees",
+                    "q_code": "50",
+                    "decimal_places": 0
+                  }
+                ]
+              }
+            },
+            {
+              "id": "blockconfirmation-page-for-fe134556-653a-4738-a0df-6e0e27119127",
+              "type": "ConfirmationQuestion",
+              "question": {
+                "id": "questionconfirmation-page-for-fe134556-653a-4738-a0df-6e0e27119127",
+                "title": {
+                  "text": "On 10 June 2016, the number of employees for {ru_name} was {total_number_of_employees}, is this correct?",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    },
+                    {
+                      "placeholder": "total_number_of_employees",
+                      "transforms": [
                         {
-                          "description": "Examples of comments:"
-                        },
-                        {
-                          "description": "<strong>&#x2018;In-store promotion&#x2019;</strong>"
-                        },
-                        {
-                          "description": "&#x201C;Offer on wine for the whole month, save 25% when you buy 6 bottles. The promotion was available in-store and online, contributing to an increase in both total retail turnover and internet sales.&#x201D;"
-                        },
-                        {
-                          "description": "<strong>&#x2018;Special events, for example sporting events&#x2019;</strong>"
-                        },
-                        {
-                          "description": "&#x201C;This was the month before the start of the Euro 2020 football tournament, we recorded an increase in sales of audio-visual equipment. For example, televisions and audio equipment. This led to an increase in sales both in-store and online.&#x201D;"
-                        },
-                        {
-                          "description": "<strong>&#x2018;Weather&#x2019;</strong>"
-                        },
-                        {
-                          "description": "&#x201C;The bad weather has decreased our sales of summer clothing. This has led to a reduction in total retail turnover and internet sales this month.&#x201D;"
+                          "transform": "format_number",
+                          "arguments": {
+                            "number": {
+                              "identifier": "answer8eb514ac-7b48-47ee-81bf-756c89b0348d",
+                              "source": "answers"
+                            }
+                          }
                         }
                       ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerconfirmation-answer-for-fe134556-653a-4738-a0df-6e0e27119127",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes this is correct",
+                        "value": "Yes this is correct"
+                      },
+                      {
+                        "label": "No I need to change this",
+                        "value": "No I need to change this"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "routing_rules": [
+                {
+                  "block": "blockfe134556-653a-4738-a0df-6e0e27119127",
+                  "when": {
+                    "==": [
+                      {
+                        "source": "answers",
+                        "identifier": "answerconfirmation-answer-for-fe134556-653a-4738-a0df-6e0e27119127"
+                      },
+                      "No I need to change this"
+                    ]
+                  }
+                },
+                {
+                  "block": "blockd12dd07b-14de-4a0a-ba4d-76b4f21f290f",
+                  "when": {
+                    ">": [
+                      {
+                        "source": "answers",
+                        "identifier": "answer8eb514ac-7b48-47ee-81bf-756c89b0348d"
+                      },
+                      0
+                    ]
+                  }
+                },
+                {
+                  "block": "blockd12dd07b-14de-4a0a-ba4d-76b4f21f290f"
+                }
+              ]
+            },
+            {
+              "id": "blockd12dd07b-14de-4a0a-ba4d-76b4f21f290f",
+              "type": "Question",
+              "question": {
+                "id": "questiond12dd07b-14de-4a0a-ba4d-76b4f21f290f",
+                "title": {
+                  "text": "Of the {total_number_of_employees} total employees employed on 10 June 2016, please specify the number of:",
+                  "placeholders": [
+                    {
+                      "placeholder": "total_number_of_employees",
+                      "transforms": [
+                        {
+                          "transform": "format_number",
+                          "arguments": {
+                            "number": {
+                              "identifier": "answer8eb514ac-7b48-47ee-81bf-756c89b0348d",
+                              "source": "answers"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Include</strong>"
+                    },
+                    {
+                      "list": [
+                        "all workers paid directly from this business&#x2019;s payroll(s)",
+                        "those temporarily absent but still being paid, for example on maternity leave"
+                      ]
+                    },
+                    {
+                      "description": "<strong>Exclude</strong>"
+                    },
+                    {
+                      "list": [
+                        "agency workers paid directly from the agency payroll",
+                        "voluntary workers",
+                        "former employees only receiving pension",
+                        "self-employed workers",
+                        "working owners who are not paid via PAYE"
+                      ]
+                    }
+                  ]
+                },
+                "type": "Calculated",
+                "answers": [
+                  {
+                    "id": "answer9c9aa1f9-613a-49ab-9216-b450e98a66ec",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of male employees working more than 30 hours per week",
+                    "q_code": "51",
+                    "decimal_places": 0
+                  },
+                  {
+                    "id": "answer7036c753-c14c-44ca-9c0e-46a1133a57ab",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of male employees working 30 hours or less per week",
+                    "q_code": "52",
+                    "decimal_places": 0
+                  },
+                  {
+                    "id": "answera63e5bb5-b843-4a53-888f-3d1e57fe613d",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of female employees working more than 30 hours per week",
+                    "q_code": "53",
+                    "decimal_places": 0
+                  },
+                  {
+                    "id": "answer3f19e63a-912f-41f1-8382-e4ae6e0c3854",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of female employees working 30 hours or less per week",
+                    "q_code": "54",
+                    "decimal_places": 0
+                  }
+                ],
+                "calculations": [
+                  {
+                    "calculation_type": "sum",
+                    "answers_to_calculate": [
+                      "answer9c9aa1f9-613a-49ab-9216-b450e98a66ec",
+                      "answer7036c753-c14c-44ca-9c0e-46a1133a57ab",
+                      "answera63e5bb5-b843-4a53-888f-3d1e57fe613d",
+                      "answer3f19e63a-912f-41f1-8382-e4ae6e0c3854"
+                    ],
+                    "conditions": ["equals"],
+                    "value": {
+                      "identifier": "answer8eb514ac-7b48-47ee-81bf-756c89b0348d",
+                      "source": "answers"
                     }
                   }
                 ]
