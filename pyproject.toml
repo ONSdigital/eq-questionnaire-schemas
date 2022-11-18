@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "eq-questionnaire-schemas"
+version = "0.1.0"
+description = "Questionnaire Schemas Repository"
+authors = ["ONSDigital"]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+coloredlogs = "*"
+eq-translations = {git = "https://github.com/ONSDigital/eq-translations.git", rev = "v4.7.0"}
+
+[tool.poetry.dev-dependencies]
+black = "*"
+isort = "*"
+pylint = "*"
+pylint_quotes = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
