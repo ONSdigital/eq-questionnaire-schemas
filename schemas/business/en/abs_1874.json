@@ -12,6 +12,14 @@
     "options": {
       "required_completed_sections": [
         "section483919c0-b47e-4fc1-b5b3-c961870368a8",
+        "section940d0123-dd5f-4dec-bfaa-fcf84c7ca40d",
+        "section19991c0f-50a9-4b03-b0da-efeb9c5ca148",
+        "section3ab7c355-52fa-4478-9a7d-7faa20b3e06d",
+        "section739ac8ba-4133-4ca9-97e0-ece36eecdf42",
+        "sectionff3748b8-c9e4-4e4e-a2e1-54af1a44e3c1",
+        "section7d004aff-4139-4091-a78f-d1d215388a9c",
+        "sectionc718c7c3-257e-4bea-887b-4bc0ac471c38",
+        "sectionec78732e-4da0-4b2d-9411-2c6cdb4b6c0d",
         "section74bb197c-2353-4259-99e5-d21ab7c0db5e"
       ]
     }
@@ -444,7 +452,7 @@
                     "label": "From",
                     "q_code": "11",
                     "minimum": {
-                      "value": "2020-01-01",
+                      "value": "2021-01-01",
                       "offset_by": {
                         "days": 0
                       }
@@ -457,7 +465,7 @@
                     "label": "To",
                     "q_code": "12",
                     "maximum": {
-                      "value": "2021-04-05",
+                      "value": "2022-04-05",
                       "offset_by": {
                         "days": 0
                       }
@@ -771,12 +779,12 @@
                     "type": "Radio",
                     "options": [
                       {
-                        "label": "Yes this is correct",
-                        "value": "Yes this is correct"
+                        "label": "Yes, this is correct",
+                        "value": "Yes, this is correct"
                       },
                       {
-                        "label": "No I need to change this",
-                        "value": "No I need to change this"
+                        "label": "No, I need to change this",
+                        "value": "No, I need to change this"
                       }
                     ]
                   }
@@ -791,7 +799,7 @@
                         "source": "answers",
                         "identifier": "answerconfirmation-answer-for-5e9943ec-5896-48dd-8427-12c14d80baca"
                       },
-                      "No I need to change this"
+                      "No, I need to change this"
                     ]
                   }
                 },
@@ -976,7 +984,7 @@
               "question": {
                 "id": "question875190a3-16e4-4fe7-a689-2c4f7dd097d5",
                 "title": {
-                  "text": "What was {ru_name}&#39;s expenditure on employments costs for the period {from} to {to}?",
+                  "text": "What was {ru_name}&#39;s expenditure on employment costs for the period {from} to {to}?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1977,7 +1985,7 @@
               "question": {
                 "id": "questiona70993ac-b550-4370-bb7d-c5df471eb970",
                 "title": {
-                  "text": "What was {ru_name}&#39;s <em>income</em> from services provided to individuals, enterprises or other organisations based outside the UK, for the period {ref_p_start_date} to {ref_p_end_date}?",
+                  "text": "What was {ru_name}&#39;s <em>income</em> from services provided to individuals, enterprises or other organisations based outside the UK, for the period {from} to {to}?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1987,14 +1995,28 @@
                       }
                     },
                     {
-                      "placeholder": "ref_p_start_date",
+                      "placeholder": "from",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddfrom",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_start_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_start_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -2002,14 +2024,28 @@
                       ]
                     },
                     {
-                      "placeholder": "ref_p_end_date",
+                      "placeholder": "to",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddto",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_end_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_end_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -2084,17 +2120,31 @@
               "question": {
                 "id": "questionff833a8f-ab25-4a36-a4d2-6c994f764199",
                 "title": {
-                  "text": "What was your business&#39;s <em>expenditure</em> on services provided by individuals, enterprises or other organisations based outside the UK, for the period {ref_p_start_date} to {ref_p_end_date}?",
+                  "text": "What was your business&#39;s <em>expenditure</em> on services provided by individuals, enterprises or other organisations based outside the UK, for the period {from} to {to}?",
                   "placeholders": [
                     {
-                      "placeholder": "ref_p_start_date",
+                      "placeholder": "from",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddfrom",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_start_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_start_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -2102,14 +2152,28 @@
                       ]
                     },
                     {
-                      "placeholder": "ref_p_end_date",
+                      "placeholder": "to",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddto",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_end_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_end_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -2404,7 +2468,7 @@
               "question": {
                 "id": "question7a465c7b-c889-495b-bc43-07df87294248",
                 "title": {
-                  "text": "Did {ru_name} carry out any in-house Research and Development for the period {ref_p_start_date} to {ref_p_end_date}, or intend to do so in the next?",
+                  "text": "Did {ru_name} carry out any in-house Research and Development for the period {from} to {to}, or intend to do so in the next?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2414,14 +2478,28 @@
                       }
                     },
                     {
-                      "placeholder": "ref_p_start_date",
+                      "placeholder": "from",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddfrom",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_start_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_start_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
@@ -2429,14 +2507,28 @@
                       ]
                     },
                     {
-                      "placeholder": "ref_p_end_date",
+                      "placeholder": "to",
                       "transforms": [
+                        {
+                          "transform": "first_non_empty_item",
+                          "arguments": {
+                            "items": [
+                              {
+                                "identifier": "answer92c53562-4eda-438f-9767-1af697a3fcddto",
+                                "source": "answers"
+                              },
+                              {
+                                "source": "metadata",
+                                "identifier": "ref_p_end_date"
+                              }
+                            ]
+                          }
+                        },
                         {
                           "transform": "format_date",
                           "arguments": {
                             "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "ref_p_end_date"
+                              "source": "previous_transform"
                             },
                             "date_format": "d MMMM yyyy"
                           }
