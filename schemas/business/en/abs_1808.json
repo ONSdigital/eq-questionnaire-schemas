@@ -12,6 +12,14 @@
     "options": {
       "required_completed_sections": [
         "sectiona9fe9c27-08c0-45a2-be1b-93e52307ce85",
+        "section940d0123-dd5f-4dec-bfaa-fcf84c7ca40d",
+        "section19991c0f-50a9-4b03-b0da-efeb9c5ca148",
+        "section3ab7c355-52fa-4478-9a7d-7faa20b3e06d",
+        "section739ac8ba-4133-4ca9-97e0-ece36eecdf42",
+        "sectionff3748b8-c9e4-4e4e-a2e1-54af1a44e3c1",
+        "section461d7adb-2702-4af0-9e02-f0d74e0f1e7d",
+        "sectionc718c7c3-257e-4bea-887b-4bc0ac471c38",
+        "sectionec78732e-4da0-4b2d-9411-2c6cdb4b6c0d",
         "section74bb197c-2353-4259-99e5-d21ab7c0db5e"
       ]
     }
@@ -369,7 +377,7 @@
                 "answers": [
                   {
                     "id": "answer678d287f-f095-4c67-9afe-1011519ab9ce",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "9999",
                     "options": [
@@ -443,7 +451,7 @@
                     "label": "From",
                     "q_code": "11",
                     "minimum": {
-                      "value": "2020-01-01",
+                      "value": "2021-01-01",
                       "offset_by": {
                         "days": 0
                       }
@@ -456,7 +464,7 @@
                     "label": "To",
                     "q_code": "12",
                     "maximum": {
-                      "value": "2021-04-05",
+                      "value": "2022-04-05",
                       "offset_by": {
                         "days": 0
                       }
@@ -764,12 +772,12 @@
                     "type": "Radio",
                     "options": [
                       {
-                        "label": "Yes. this is correct",
-                        "value": "Yes. this is correct"
+                        "label": "Yes, this is correct",
+                        "value": "Yes, this is correct"
                       },
                       {
-                        "label": "No,  I need to change this",
-                        "value": "No,  I need to change this"
+                        "label": "No, I need to change this",
+                        "value": "No, I need to change this"
                       }
                     ]
                   }
@@ -784,7 +792,7 @@
                         "source": "answers",
                         "identifier": "answerconfirmation-answer-for-5e9943ec-5896-48dd-8427-12c14d80baca"
                       },
-                      "No,  I need to change this"
+                      "No, I need to change this"
                     ]
                   }
                 },
@@ -832,7 +840,7 @@
                 "answers": [
                   {
                     "id": "answer4772a4af-cc57-4973-a9ec-2684efcfd515",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "80",
                     "options": [
@@ -895,7 +903,7 @@
                 "answers": [
                   {
                     "id": "answer585a72f3-5297-43a0-adf9-9c9c1efd945b",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "81",
                     "options": [
@@ -955,7 +963,7 @@
                   {
                     "list": [
                       "employment costs",
-                      "costs of energy. goods, materials and services",
+                      "costs of energy, goods, materials and services",
                       "rates, duties, levies and taxes paid"
                     ]
                   }
@@ -968,7 +976,7 @@
               "question": {
                 "id": "question875190a3-16e4-4fe7-a689-2c4f7dd097d5",
                 "title": {
-                  "text": "What was {ru_name}&#39;s expenditure on employments costs for the period {from} to {to}?",
+                  "text": "What was {ru_name}&#39;s expenditure on employment costs for the period {from} to {to}?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1073,7 +1081,7 @@
                 "answers": [
                   {
                     "id": "answer27e41d8e-1a79-43e6-a313-ad020ddfa387",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total employment costs",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1180,7 +1188,7 @@
                 "answers": [
                   {
                     "id": "answer9e10ec5e-7edb-4d85-a9d0-344e62706783",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total expenditure on energy, goods, materials and services bought for resale",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1300,7 +1308,7 @@
                 "answers": [
                   {
                     "id": "answer2cda2ab4-dcc3-4a7b-bb3d-bda169bd3df4",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Expenditure on rates, duties, levies and taxes paid to the government",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1504,7 +1512,7 @@
                 "answers": [
                   {
                     "id": "answerfd187835-4974-497b-9fd3-f62ab5818379",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total value of all stocks at the beginning of the period",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1514,7 +1522,7 @@
                   },
                   {
                     "id": "answer44fe8e1f-2fed-42f0-9a5b-a1dc6cda4b62",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total value of all stocks at the end of the period",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1843,7 +1851,7 @@
                 "answers": [
                   {
                     "id": "answerc10f92bc-5884-46c3-a077-1e19338f4b51",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total value of acquisitions",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1853,7 +1861,7 @@
                   },
                   {
                     "id": "answer6bbbdbd6-f408-421c-9eeb-0dfd41739109",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total value of proceeds from disposals",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -1898,7 +1906,7 @@
               "question": {
                 "id": "questiona70993ac-b550-4370-bb7d-c5df471eb970",
                 "title": {
-                  "text": "What was {ru_name}&#39;s <em>income</em> from services provided to individuals, enterprises or other organisations based outside the UK, for the period {from}to {to}?",
+                  "text": "What was {ru_name}&#39;s <em>income</em> from services provided to individuals, enterprises or other organisations based outside the UK, for the period {from} to {to}?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2019,7 +2027,7 @@
                 "answers": [
                   {
                     "id": "answerdc1031f2-b696-4c4d-ad40-669a30b25310",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total income from services provided to individuals, enterprises or other organisations",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -2088,7 +2096,7 @@
                 "answers": [
                   {
                     "id": "answerf926827d-7e21-4173-b779-533855f72a2a",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Currency",
                     "label": "Total income from services provided by individuals, enterprises or other organisations",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
@@ -2178,7 +2186,7 @@
                 "answers": [
                   {
                     "id": "answer39cb7a4a-b442-4169-a275-42a7254e53f1",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "15",
                     "options": [
@@ -2246,7 +2254,7 @@
                 "answers": [
                   {
                     "id": "answer21283534-d358-4b82-bf88-a007656b0581",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "16",
                     "options": [
@@ -2433,7 +2441,7 @@
                 "answers": [
                   {
                     "id": "answerba87ec7b-159e-47b7-b331-fc2bf49b3d4e",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "q_code": "9",
                     "options": [
