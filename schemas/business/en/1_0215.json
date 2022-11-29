@@ -408,7 +408,7 @@
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": false,
+      "show_on_hub": true,
       "groups": [
         {
           "id": "groupe950c0fb-44a1-4dbc-acda-6e92bb31d8d5",
@@ -535,7 +535,7 @@
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": false,
+      "show_on_hub": true,
       "groups": [
         {
           "id": "group907ed71e-2910-473c-89f4-225b3791c424",
@@ -715,7 +715,7 @@
                   }
                 },
                 {
-                  "block": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b",
+                  "section": "End",
                   "when": {
                     "==": [
                       {
@@ -729,7 +729,18 @@
                 {
                   "block": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b"
                 }
-              ]
+              ],
+              "skip_conditions": {
+                "when": {
+                  ">": [
+                    {
+                      "source": "answers",
+                      "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f"
+                    },
+                    0
+                  ]
+                }
+              }
             },
             {
               "id": "blocke1ddd2ff-78ee-4476-8b9d-ea7a2b9d7c9b",
@@ -785,6 +796,13 @@
                     "type": "Currency",
                     "label": "Food",
                     "q_code": "22",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP"
                   }
@@ -837,6 +855,13 @@
                     "type": "Currency",
                     "label": "Alcohol, confectionary and tobacco",
                     "q_code": "23",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP"
                   }
@@ -891,6 +916,13 @@
                     "type": "Currency",
                     "label": "Clothing and footwear",
                     "q_code": "24",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP"
                   }
@@ -929,6 +961,13 @@
                     "type": "Currency",
                     "label": "Household goods",
                     "q_code": "25",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
@@ -995,6 +1034,13 @@
                     "type": "Currency",
                     "label": "Other goods",
                     "q_code": "26",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
@@ -1085,6 +1131,13 @@
                     "type": "Currency",
                     "label": "Internet sales",
                     "q_code": "21",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP"
                   }
@@ -1124,6 +1177,13 @@
                     "type": "Currency",
                     "label": "Automotive fuel",
                     "q_code": "27",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer6b01328d-73f6-4b9b-877b-b7d4a2b68b4f",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
                     "decimal_places": 0,
                     "currency": "GBP"
                   }
@@ -1141,7 +1201,7 @@
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": false,
+      "show_on_hub": true,
       "groups": [
         {
           "id": "groupbef43b93-1ad2-43c3-a10e-facafafd22e3",
@@ -1369,7 +1429,7 @@
         "show_on_completion": false,
         "collapsible": false
       },
-      "show_on_hub": false,
+      "show_on_hub": true,
       "groups": [
         {
           "id": "group549c8a70-adbd-4281-8b59-ce4e273c8f98",
