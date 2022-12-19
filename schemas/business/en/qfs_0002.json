@@ -140,12 +140,7 @@
                     "description": "The fuel types included in this survey are:"
                   },
                   {
-                    "list": [
-                      "oil",
-                      "coal",
-                      "gas",
-                      "electricity"
-                    ]
+                    "list": ["oil", "coal", "gas", "electricity"]
                   },
                   {
                     "description": "The survey has the following sections:"
@@ -247,6 +242,10 @@
     {
       "id": "section2c7d2ff2-90ae-4c81-b694-644de77d168d",
       "title": "Fuels purchased",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -276,12 +275,7 @@
                     "description": "Select which fuels your business has purchased during the reporting period and then complete the questions for each relevant fuel type. The fuel types included in this survey are:"
                   },
                   {
-                    "list": [
-                      "oil",
-                      "coal",
-                      "gas",
-                      "electricity"
-                    ]
+                    "list": ["oil", "coal", "gas", "electricity"]
                   },
                   {
                     "description": "You will be asked to provide the following information for each fuel you select:"
@@ -390,7 +384,7 @@
                     ]
                   },
                   {
-                    "id": "answerb30aefc2-5807-4499-b164-5394574d869c-exclusive",
+                    "id": "answer2da6bf75-12a3-4bc9-a2a7-a8d6589a8f13-exclusive",
                     "mandatory": false,
                     "type": "Checkbox",
                     "options": [
@@ -407,12 +401,10 @@
                 {
                   "section": "End",
                   "when": {
-                    "all-in": [
-                      [
-                        "None of the above"
-                      ],
+                    "==": [
+                      null,
                       {
-                        "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c-exclusive",
+                        "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
                         "source": "answers"
                       }
                     ]
@@ -425,15 +417,15 @@
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
-      }
+      ]
     },
     {
       "id": "section5b375c46-6375-4b6c-8af5-c592dc1a09df",
       "title": "Oil",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -452,21 +444,13 @@
                     "description": "<strong>Examples of heavy fuel oil:</strong>"
                   },
                   {
-                    "list": [
-                      "marine fuel",
-                      "bunker fuel",
-                      "furnace fuel"
-                    ]
+                    "list": ["marine fuel", "bunker fuel", "furnace fuel"]
                   },
                   {
                     "description": "<strong>Examples of light fuel oil:</strong>"
                   },
                   {
-                    "list": [
-                      "diesel",
-                      "kerosene",
-                      "gasoline"
-                    ]
+                    "list": ["diesel", "kerosene", "gasoline"]
                   }
                 ]
               }
@@ -477,9 +461,7 @@
               "question": {
                 "id": "question507c3111-b659-4f5a-9155-8835945c4c91",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of heavy fuel oil?",
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -580,9 +562,7 @@
                         "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                         "source": "answers"
                       },
-                      [
-                        "Litres"
-                      ]
+                      ["Litres"]
                     ]
                   }
                 },
@@ -594,9 +574,7 @@
                         "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                         "source": "answers"
                       },
-                      [
-                        "Tonnes"
-                      ]
+                      ["Tonnes"]
                     ]
                   }
                 },
@@ -655,9 +633,7 @@
                       "identifier": "answerdadc5b9d-7717-4ac7-a704-16e4a7865603",
                       "source": "answers"
                     },
-                    [
-                      "Litres"
-                    ]
+                    ["Litres"]
                   ]
                 }
               }
@@ -667,10 +643,8 @@
               "type": "Question",
               "question": {
                 "id": "questionffc13911-6bb3-4ec6-a8fa-e0070ffbcb47",
-                "title": "During the reporting period, what was your business&#39;s purchase cost of <em>light</em> fuel oil?",
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "title": "For the reporting period, what was your business&#39;s purchase cost of <em>light</em> fuel oil?",
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -771,9 +745,7 @@
                         "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                         "source": "answers"
                       },
-                      [
-                        "Litres"
-                      ]
+                      ["Litres"]
                     ]
                   }
                 },
@@ -785,9 +757,7 @@
                         "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                         "source": "answers"
                       },
-                      [
-                        "Tonnes"
-                      ]
+                      ["Tonnes"]
                     ]
                   }
                 },
@@ -801,7 +771,7 @@
               "type": "Question",
               "question": {
                 "id": "questioneebff6f6-8840-495a-b63c-269262bb2bec",
-                "title": "During the reporting period, what was the total quantity of light fuel oil purchased?",
+                "title": "For the reporting period, what was the total quantity of light fuel oil purchased?",
                 "type": "General",
                 "answers": [
                   {
@@ -823,7 +793,7 @@
               "type": "Question",
               "question": {
                 "id": "questionc83eb18b-d786-48fe-9092-5dc60836fd80",
-                "title": "During the reporting period, what was the total quantity of light fuel oil purchased?",
+                "title": "For the reporting period, what was the total quantity of light fuel oil purchased?",
                 "type": "General",
                 "answers": [
                   {
@@ -846,9 +816,7 @@
                       "identifier": "answercefa7db7-22fb-4bfd-be8e-e3f73367cb57",
                       "source": "answers"
                     },
-                    [
-                      "Litres"
-                    ]
+                    ["Litres"]
                   ]
                 }
               }
@@ -859,24 +827,22 @@
       "enabled": {
         "when": {
           "all-in": [
-            [
-              "Oil"
-            ],
+            ["Oil"],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
       "id": "section6c5c45d6-7adb-4807-b46b-9f207af73b2f",
       "title": "Coal",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -941,9 +907,7 @@
                     }
                   ]
                 },
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -958,11 +922,7 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": [
-                        "slurry purchases",
-                        "coke",
-                        "VAT and levy"
-                      ]
+                      "list": ["slurry purchases", "coke", "VAT and levy"]
                     }
                   ]
                 },
@@ -997,9 +957,7 @@
               "question": {
                 "id": "questionb92de2ac-c873-4910-8f16-4ddfff67f644",
                 "title": "For the reporting period, what was the total quantity of coal purchased?",
-                "description": [
-                  "<p>Please report your figures in tonnes.</p>"
-                ],
+                "description": ["<p>Please report your figures in tonnes.</p>"],
                 "type": "General",
                 "answers": [
                   {
@@ -1076,15 +1034,14 @@
                     "decimal_places": 0
                   },
                   {
-                    "id": "answerebbd3995-8f2b-43e4-aca8-8952948012db-exclusive",
+                    "id": "answer6ae9cb9b-8be2-408a-a646-f420cf9d7878-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "description": "Please provide your figures rounded to the nearest whole number.",
-                    "q_code": "190",
                     "options": [
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
+                        "value": "Not sure",
+                        "q_code": "9999"
                       }
                     ]
                   }
@@ -1148,24 +1105,22 @@
       "enabled": {
         "when": {
           "all-in": [
-            [
-              "Coal"
-            ],
+            ["Coal"],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
       "id": "section17c630fe-34a2-4098-a8ab-e316d406e624",
       "title": "Gas",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -1275,9 +1230,7 @@
                         "identifier": "answer8cd001aa-86aa-4e54-8fc3-bfb48ca5e8e5",
                         "source": "answers"
                       },
-                      [
-                        "No"
-                      ]
+                      ["No"]
                     ]
                   }
                 },
@@ -1292,9 +1245,7 @@
               "question": {
                 "id": "question7ecc765f-7664-447e-9dec-9914784f4752",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of gas under a firm contract?",
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -1302,6 +1253,7 @@
                     },
                     {
                       "list": [
+                        "deductions and discounts through the Energy Bills Relief Scheme (EBRS)",
                         "maximum demand charges",
                         "standing charges",
                         "meter charges"
@@ -1338,7 +1290,19 @@
                     "description": "Please provide your figures rounded to the nearest whole number. Enter &#39;0&#39;, rather than leave blank.",
                     "q_code": "211",
                     "decimal_places": 0,
-                    "currency": "GBP"
+                    "currency": "GBP",
+                    "guidance": {
+                      "show_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "hide_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "contents": [
+                        {
+                          "description": "This scheme will provide energy bill relief for non-domestic customers in Great Britain."
+                        },
+                        {
+                          "description": "<a href=\"https://www.gov.uk/guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers\"target=\"_blank\"rel=\"noopener noreferrer\">View the latest guidance for the EBRS (this link opens in a new tab)</a>"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -1431,15 +1395,14 @@
                     "decimal_places": 0
                   },
                   {
-                    "id": "answer8fd0973b-8329-4549-b4e0-dc637f0719f5-exclusive",
+                    "id": "answer3f49ce18-1751-424b-8545-0d7fbe02832a-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "description": "Please provide your figures rounded to the nearest whole number.",
-                    "q_code": "240",
                     "options": [
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
+                        "value": "Not sure",
+                        "q_code": "9998"
                       }
                     ]
                   }
@@ -1601,9 +1564,7 @@
                         "identifier": "answer31336970-4cc0-4eed-b0d3-1afb5c1f8619",
                         "source": "answers"
                       },
-                      [
-                        "No"
-                      ]
+                      ["No"]
                     ]
                   }
                 },
@@ -1618,9 +1579,7 @@
               "question": {
                 "id": "questiondf5ff1fc-df55-4558-8f8f-87261dc4711f",
                 "title": "For the reporting period, what was your business&#39;s purchase cost of gas under an interruptible contract?",
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -1628,6 +1587,7 @@
                     },
                     {
                       "list": [
+                        "deductions and discounts through the Energy Bills Relief Scheme (EBRS)",
                         "maximum demand charges",
                         "standing charges",
                         "meter charges"
@@ -1664,7 +1624,19 @@
                     "description": "Please provide your figures rounded to the nearest whole number. Enter &#39;0&#39;, rather than leave blank.",
                     "q_code": "271",
                     "decimal_places": 0,
-                    "currency": "GBP"
+                    "currency": "GBP",
+                    "guidance": {
+                      "show_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "hide_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "contents": [
+                        {
+                          "description": "This scheme will provide energy bill relief for non-domestic customers in Great Britain."
+                        },
+                        {
+                          "description": "<a href=\"https://www.gov.uk/guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers\"target=\"_blank\"rel=\"noopener noreferrer\">View the latest guidance for the EBRS (this link opens in a new tab)</a>"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -1730,7 +1702,7 @@
               "type": "Question",
               "question": {
                 "id": "question85fb7674-e070-4c65-9ce2-fcb8e1f87e00",
-                "title": "What percentage rate of Climate Change Levy was paid by your business?",
+                "title": "What <em>percentage rate</em> of Climate Change Levy was paid by your business?",
                 "description": [
                   "<p>This refers to gas purchased under an interruptible contract.</p>"
                 ],
@@ -1757,15 +1729,14 @@
                     "decimal_places": 0
                   },
                   {
-                    "id": "answer11e140ba-a508-4e4b-af9e-889ed2ed6088-exclusive",
+                    "id": "answerb6af10dd-f507-4c63-aef0-ed86d5769473-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "description": "Please provide your figures rounded to the nearest whole number.",
-                    "q_code": "300",
                     "options": [
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
+                        "value": "Not sure",
+                        "q_code": "9997"
                       }
                     ]
                   }
@@ -1847,24 +1818,22 @@
       "enabled": {
         "when": {
           "all-in": [
-            [
-              "Gas"
-            ],
+            ["Gas"],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
       "id": "sectione61df721-9cdc-4a72-9f03-567a4627d04f",
       "title": "Electricity",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -1950,9 +1919,7 @@
                     }
                   ]
                 },
-                "description": [
-                  "<p>Informed estimates are acceptable.</p>"
-                ],
+                "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
                     {
@@ -1960,6 +1927,7 @@
                     },
                     {
                       "list": [
+                        "deductions and discounts through the Energy Bills Relief Scheme (EBRS)",
                         "only electricity supplied from external sources",
                         "maximum demand charges",
                         "standing charges",
@@ -1998,7 +1966,19 @@
                     "description": "Please provide your figures rounded to the nearest whole number. Enter &#39;0&#39;, rather than leave blank.",
                     "q_code": "330",
                     "decimal_places": 0,
-                    "currency": "GBP"
+                    "currency": "GBP",
+                    "guidance": {
+                      "show_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "hide_guidance": "What we mean by &#39;Energy Bills Relief Scheme (EBRS)&#39;",
+                      "contents": [
+                        {
+                          "description": "This scheme will provide energy bill relief for non-domestic customers in Great Britain."
+                        },
+                        {
+                          "description": "<a href=\"https://www.gov.uk/guidance/energy-bill-relief-scheme-help-for-businesses-and-other-non-domestic-customers\"target=\"_blank\"rel=\"noopener noreferrer\">View the latest guidance for the EBRS (this link opens in a new tab)</a>"
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -2088,15 +2068,14 @@
                     "decimal_places": 0
                   },
                   {
-                    "id": "answer0c832f2f-128a-4d89-99ed-9511003580e2-exclusive",
+                    "id": "answer80d69c6c-fdf4-42be-b118-8aacdb5f6c3d-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive-exclusive",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "description": "Please provide your figures rounded to the nearest whole number.",
-                    "q_code": "360",
                     "options": [
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
+                        "value": "Not sure",
+                        "q_code": "9996"
                       }
                     ]
                   }
@@ -2140,24 +2119,22 @@
       "enabled": {
         "when": {
           "all-in": [
-            [
-              "Electricity"
-            ],
+            ["Electricity"],
             {
               "identifier": "answerb30aefc2-5807-4499-b164-5394574d869c",
               "source": "answers"
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
       "id": "section985d3fe9-09ae-4dfb-be1d-e83f1ab3fbf0",
       "title": "Comments",
+      "summary": {
+        "show_on_completion": true,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -2212,11 +2189,7 @@
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
-      }
+      ]
     }
   ],
   "theme": "default",
