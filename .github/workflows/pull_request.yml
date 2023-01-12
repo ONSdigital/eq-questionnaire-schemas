@@ -9,10 +9,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
@@ -24,7 +24,7 @@ jobs:
           virtualenvs-path: ~/.virtualenvs
 
       - name: Cache Poetry virtualenv
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache-virtualenv
         with:
           path: ~/.virtualenvs
@@ -37,10 +37,10 @@ jobs:
   validate-schemas:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
@@ -52,7 +52,7 @@ jobs:
           virtualenvs-path: ~/.virtualenvs
 
       - name: Cache Poetry virtualenv
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache-virtualenv
         with:
           path: ~/.virtualenvs
@@ -60,7 +60,7 @@ jobs:
       - name: Install virtual environment
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
         run: poetry install
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Spin up validator
         run: make run-validator
       - name: Validate schemas
@@ -68,10 +68,10 @@ jobs:
   test-translation-templates:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
-      - uses: actions/setup-python@v2
+      - uses: actions/setup-python@v4
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
@@ -83,7 +83,7 @@ jobs:
           virtualenvs-path: ~/.virtualenvs
 
       - name: Cache Poetry virtualenv
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         id: cache-virtualenv
         with:
           path: ~/.virtualenvs
