@@ -4,7 +4,7 @@
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
   "survey_id": "738",
-  "form_type": "0001",
+  "form_type": "9999",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
   "title": "COVID-19 Infection Survey",
   "questionnaire_flow": {
@@ -153,7 +153,35 @@
               "type": "Question",
               "question": {
                 "id": "question3bc3f3f8-8259-4909-b4d3-8af2a4a27fec",
-                "title": "There has been a problem accessing the survey. Please call the helpline on 0xxxxxxxxxx",
+                "title": "There has been a problem accessing the survey",
+                "description": [
+                  {
+                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name}or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0xxxxxxxxxx. You will need your Participant ID. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &#x201C;COVID-19 Infection Survey&#x201D;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      },
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      },
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      }
+                    ]
+                  }
+                ],
                 "type": "General",
                 "answers": [
                   {
@@ -169,30 +197,6 @@
                     ]
                   }
                 ]
-              },
-              "skip_conditions": {
-                "when": {
-                  "or": [
-                    {
-                      "in": [
-                        {
-                          "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
-                          "source": "answers"
-                        },
-                        ["Yes"]
-                      ]
-                    },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer3cbbbc81-3d85-4eca-b230-9a24e7203f38",
-                          "source": "answers"
-                        },
-                        ["Yes"]
-                      ]
-                    }
-                  ]
-                }
               }
             },
             {
@@ -200,7 +204,7 @@
               "type": "Question",
               "question": {
                 "id": "questionb58f12f0-d4ae-46cd-9cf0-ca63dfea45c0",
-                "title": "Looking at your email or letter with the dates for your testing window. Have you been asked to...",
+                "title": "Looking at your email or letter with the dates for you to take part this time. Have you been asked to...",
                 "type": "General",
                 "answers": [
                   {
@@ -224,6 +228,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "any-in": [
+                    ["Continue"],
+                    {
+                      "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07",
+                      "source": "answers"
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -250,6 +265,20 @@
                 "contents": [
                   {
                     "description": "This section will ask about the swab and / or blood samples we have asked you to take in this testing window."
+                  },
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &#39;you&#39; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -261,7 +290,7 @@
                 "id": "question23530584-48bc-45c5-bb02-e662a5516b50",
                 "title": "Have you successfully taken your swab sample?",
                 "description": [
-                  "<p>If you are planning to take your sample but have not yet done so, please exit the questionnaire and return when you have taken it.  This is because we will ask questions about your samples that help us to understand if you are eligible for a voucher.</p>"
+                  "<p>If you are planning to take your sample but have not yet done so, please exit the questionnaire and return when you have taken it.  This is because we will ask questions about your samples that help us to understand if you are eligible for a voucher.</p><p>If your swab test kit arrived damaged or with parts missing, select &quot;No&quot;.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -373,7 +402,7 @@
                   ]
                 },
                 "description": [
-                  "<p>This can be found on your swab sample pot and also at the top of the helpful information sheet that was included in your swab test kit. It is in the format SWT followed by 8 numbers.</p>"
+                  "<p>This can be found on your swab sample pot and also at the top of the Important Information sheet that was included in your swab test kit. It is in the format SWT followed by 8 numbers.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -429,9 +458,9 @@
               "type": "Question",
               "question": {
                 "id": "questionf3a486e6-6b19-4104-9870-d6f7b1338cef",
-                "title": "Please enter the barcode of the swab sample kit you used",
+                "title": "Please enter the barcode of the swab sample kit you used.",
                 "description": [
-                  "<p>This can be found on your swab sample pot and also at the top of the helpful information sheet  that was included in your swab test kit. </p><p>Please enter the 8 numbers that come after the letters SWT.</p>"
+                  "<p>This can be found on your swab sample pot and also at the top of the Important Information sheet that was included in your swab test kit. </p><p>Please enter the 8 numbers that come after the letters SWT.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -480,12 +509,9 @@
                     "label": "Date (enter as DD MM YYYY)",
                     "q_code": "PHM-FUP-SAM-005",
                     "minimum": {
-                      "value": {
-                        "source": "metadata",
-                        "identifier": "COLLEX_OPEN_DATE"
-                      },
+                      "value": "now",
                       "offset_by": {
-                        "days": -2
+                        "days": -16
                       }
                     },
                     "maximum": {
@@ -715,18 +741,21 @@
                     "label": "Date (enter as DD MM YYYY)",
                     "q_code": "PHM-FUP-SAM-011",
                     "minimum": {
-                      "value": "now",
+                      "value": {
+                        "identifier": "answer97353689-ec6c-40f1-aa0c-c9bd65b6b509",
+                        "source": "answers"
+                      },
                       "offset_by": {
                         "days": 0
                       }
                     },
                     "maximum": {
                       "value": {
-                        "source": "metadata",
-                        "identifier": "COLLEX_END_DATE"
+                        "identifier": "answer97353689-ec6c-40f1-aa0c-c9bd65b6b509",
+                        "source": "answers"
                       },
                       "offset_by": {
-                        "days": 0
+                        "days": 14
                       }
                     }
                   }
@@ -794,7 +823,7 @@
                 "id": "question527b977f-eea5-4884-80be-9a4f2ac30346",
                 "title": "Have you successfully taken your blood sample?",
                 "description": [
-                  "<p>If you are planning to take your sample but have not yet done so, please exit the questionnaire and return when you have taken it.  This is because we will ask questions about your samples that help us to understand if you are eligible for a voucher.</p>"
+                  "<p>If you are planning to take your sample but have not yet done so, please exit the questionnaire and return when you have taken it.  This is because we will ask questions about your samples that help us to understand if you are eligible for a voucher.</p><p>If your blood test kit arrived damaged or with parts missing, select &quot;No&quot;.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -966,7 +995,7 @@
                   ]
                 },
                 "description": [
-                  "<p>This can be found on your large sample carrier tube and also at the top of the helpful information sheet that was included in your blood test kit. It is in the format BLT followed by 8 numbers.</p>"
+                  "<p>This can be found on your large sample carrier tube and also at the top of the Important Information sheet that was included in your blood test kit. It is in the format BLT followed by 8 numbers.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1005,9 +1034,9 @@
               "type": "Question",
               "question": {
                 "id": "question8d97c1d1-3b3f-46bb-a44a-88d7b2805755",
-                "title": "Please enter the barcode of the blood sample kit you used",
+                "title": "Please enter the barcode of the blood sample kit you used.",
                 "description": [
-                  "<p>This can be found on your large sample carrier tube and also at the top of the helpful information sheet  that was included in your blood test kit. </p><p>Please enter the 8 numbers that come after the letters BLT.</p>"
+                  "<p>This can be found on your large sample carrier tube and also at the top of the Important Information sheet that was included in your blood test kit. </p><p>Please enter the 8 numbers that come after the letters BLT.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1069,12 +1098,9 @@
                     "label": "Date (enter as DD MM YYYY)",
                     "q_code": "PHM-FUP-SAM-024",
                     "minimum": {
-                      "value": {
-                        "source": "metadata",
-                        "identifier": "COLLEX_OPEN_DATE"
-                      },
+                      "value": "now",
                       "offset_by": {
-                        "days": -2
+                        "days": -16
                       }
                     },
                     "maximum": {
@@ -1304,18 +1330,21 @@
                     "label": "Date (enter as DD MM YYYY)",
                     "q_code": "PHM-FUP-SAM-030",
                     "minimum": {
-                      "value": "now",
+                      "value": {
+                        "identifier": "answer07c9b62f-20a6-4bb8-af4e-9ce91c21dbc6",
+                        "source": "answers"
+                      },
                       "offset_by": {
                         "days": 0
                       }
                     },
                     "maximum": {
                       "value": {
-                        "source": "metadata",
-                        "identifier": "COLLEX_END_DATE"
+                        "identifier": "answer07c9b62f-20a6-4bb8-af4e-9ce91c21dbc6",
+                        "source": "answers"
                       },
                       "offset_by": {
-                        "days": 0
+                        "days": 14
                       }
                     }
                   }
@@ -1380,7 +1409,7 @@
                 "id": "question0e4e6d7b-7f29-4cdf-a26f-235d9cf85818",
                 "title": "Would you like to complete this questionnaire even though we cannot send you a voucher this time?",
                 "description": [
-                  "<p>Thank you for letting us know about your test kits. Unfortunately, due to the short timescale we have for each testing window, we cannot send you replacement kits for this testing window. </p><p>If you would like to complete the questionnaire, you are very welcome to do so because your data is still valuable to us. </p><p>Unfortunately, we cannot send you a voucher this time because you must take a sample and complete the questionnaire to be eligible for it. We are sorry for any disappointment this may cause, and we will monitor the reasons for the damaged kits to prevent this happening in the future. </p>"
+                  "<p>Thank you for letting us know about your test kits. Unfortunately, due to the short timescale we have for each testing window, we cannot send replacement kits. </p><p>If you would like to complete the questionnaire, please do so because your data is still extremely valuable to us. </p><p>Unfortunately, we cannot send you a voucher this time because you must take a sample and complete the questionnaire to be eligible. We are sorry for any disappointment this may cause, and we will monitor the reasons for the damaged kits to prevent this happening in the future. </p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1408,7 +1437,7 @@
               "type": "Question",
               "question": {
                 "id": "questiondd1cad72-134f-44ed-b74d-39db29f4b0f7",
-                "title": "Thank you for letting us know about your test kit",
+                "title": "Thank you for letting us know about your test kit.",
                 "description": [
                   "<p>We&#39;ll be in touch again about your next testing window.</p><p>You will be taken to the final page where you can finish this questionnaire and select &quot;submit&quot;.</p><p>Please select continue to go to the next page.</p>"
                 ],
@@ -1518,6 +1547,20 @@
                   },
                   {
                     "description": "We ask these questions to understand the risk of current and past respiratory infections depending on where you work or study."
+                  },
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &#39;you&#39; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -1585,7 +1628,7 @@
               "type": "Question",
               "question": {
                 "id": "question8a6c86b6-876a-4b06-bb09-e9230a2f47ac",
-                "title": "What is your current work, education or other status? That is where you spend most of your time, even if you are currently absent",
+                "title": "What is your current work, education or other status? That is where you spend most of your time, even if you are currently absent.",
                 "description": [
                   "<p>If for example, you are working and studying, please tell us where you spend most of your time.</p>"
                 ],
@@ -2476,7 +2519,7 @@
               "type": "Question",
               "question": {
                 "id": "question6434bbe0-e54f-4c7e-89d6-52d762fa46f7",
-                "title": "On a day-to-day basis, does your current role primarily involve face-to-face contact with people you do not work with? For example patients, clients, residents, service users or customers",
+                "title": "On a day-to-day basis, does your current role primarily involve face-to-face contact with people you do not work with? For example patients, clients, residents, service users or customers.",
                 "description": [
                   "<p>If primarily office based, please answer &#39;No&#39;.</p>"
                 ],
@@ -2922,6 +2965,21 @@
         "when": {
           "or": [
             {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
               "in": [
                 {
                   "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
@@ -2929,6 +2987,23 @@
                 },
                 ["Yes"]
               ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
             },
             {
               "==": [
@@ -2939,6 +3014,8 @@
                 null
               ]
             }
+          ]
+        }
           ]
         }
       }
@@ -2963,6 +3040,20 @@
                 "contents": [
                   {
                     "description": "This section asks about how your health has been recently.  This provides important information that helps inform policies to protect the country."
+                  },
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &#39;you&#39; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -2979,19 +3070,19 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
-                        "symptoms you have experienced in the last 7 days, regardless of whether you thought you had COVID-19."
+                        "symptoms you have experienced in the last 7 days, regardless of whether you thought you had COVID-19"
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
-                        "symptoms experienced regularly as part of a pre-existing condition, <strong>unless</strong> they have been <strong>worse</strong> than usual in the last 7 days."
+                        "symptoms experienced regularly as part of a pre-existing condition, <strong>unless</strong> they have been <strong>worse</strong> than usual in the last 7 days"
                       ]
                     }
                   ]
@@ -3085,19 +3176,19 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
-                        "symptoms you have experienced in the last 7 days, regardless of whether you thought you had COVID-19."
+                        "symptoms you have experienced in the last 7 days, regardless of whether you thought you had COVID-19"
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
-                        "symptoms experienced regularly as part of a pre-existing condition, <strong>unless</strong> they have been <strong>worse</strong> than usual in the last 7 days."
+                        "symptoms experienced regularly as part of a pre-existing condition, <strong>unless</strong> they have been <strong>worse</strong> than usual in the last 7 days"
                       ]
                     }
                   ]
@@ -3179,7 +3270,7 @@
                 "id": "question47264920-b616-4d02-a951-17c7b9c81a8d",
                 "title": "What was the <em>earliest date</em> that any of these symptoms became worse than usual for you, or first started if they are new?",
                 "description": [
-                  "<p>Enter the earliest date, including if this was more than 7 days ago.</p><p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>Enter the earliest date, including if this was more than 7 days ago.</p><p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4638,7 +4729,7 @@
                 "id": "questionb33a8206-92cb-444f-8b3a-95fc3c26273e",
                 "title": "On what date did you last return to the UK?",
                 "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4671,6 +4762,22 @@
         "when": {
           "or": [
             {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Yes",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
               "in": [
                 {
                   "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
@@ -4678,6 +4785,23 @@
                 },
                 ["Yes"]
               ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
             },
             {
               "==": [
@@ -4688,6 +4812,8 @@
                 null
               ]
             }
+          ]
+        }
           ]
         }
       }
@@ -4712,6 +4838,20 @@
                 "contents": [
                   {
                     "description": "The next section is about any experience you have had of any respiratory infections including coronavirus (COVID-19). This helps us to understand how these viruses are affecting society."
+                  },
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &#39;you&#39; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -4878,7 +5018,7 @@
                 "id": "questionb7867f8c-5d0f-4bd4-9787-33d78664d5e5",
                 "title": "When did this most recent COVID-19 infection start?",
                 "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -5079,7 +5219,7 @@
                 "id": "questiondebfaf85-ecd2-47fd-8041-4493bf58f338",
                 "title": "When did this most recent flu infection start?",
                 "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -5313,7 +5453,7 @@
                 "id": "questioncce90c5f-9d29-4368-aff1-67d91b9f0488",
                 "title": "When did this most recent respiratory infection or illness start?",
                 "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -5599,40 +5739,9 @@
                   }
                 },
                 {
-                  "block": "block49776e59-cf0b-4688-911b-7ab695c34321"
+                  "block": "blockac903d5f-42a1-4af4-9e3b-c059a264867d"
                 }
               ]
-            },
-            {
-              "id": "block49776e59-cf0b-4688-911b-7ab695c34321",
-              "type": "Question",
-              "question": {
-                "id": "question49776e59-cf0b-4688-911b-7ab695c34321",
-                "title": "What type of test was this?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer17bcde4b-95f7-4cb0-beba-02c997a030b9",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "PHM-FUP-C19-076",
-                    "options": [
-                      {
-                        "label": "A lateral flow test. That is the test you can do yourself and you do not have to send it to a laboratory because the result shows in the device in about 30 minutes",
-                        "value": "A lateral flow test. That is the test you can do yourself and you do not have to send it to a laboratory because the result shows in the device in about 30 minutes"
-                      },
-                      {
-                        "label": "A PCR test. That is the test that is sent off to a laboratory",
-                        "value": "A PCR test. That is the test that is sent off to a laboratory"
-                      },
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      }
-                    ]
-                  }
-                ]
-              }
             },
             {
               "id": "blockac903d5f-42a1-4af4-9e3b-c059a264867d",
@@ -5679,7 +5788,7 @@
                 "id": "questionc74cfe9c-46ec-4ee8-9721-081eda86bcc7",
                 "title": "What was the date of the first positive swab test you had since you last completed this questionnaire?",
                 "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
+                  "<p>If you can&#39;t remember the day of the month, make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -5721,34 +5830,32 @@
               }
             },
             {
-              "id": "block2b05cb41-304e-4422-ab45-890289d4d62d",
+              "id": "block49776e59-cf0b-4688-911b-7ab695c34321",
               "type": "Question",
               "question": {
-                "id": "question2b05cb41-304e-4422-ab45-890289d4d62d",
-                "title": "What was the date of the last negative swab test you had since you last completed this questionnaire?",
-                "description": [
-                  "<p>If you can&#39;t remember the day of the month make your best guess. If you can&#39;t make a best guess, put the 15th.</p>"
-                ],
+                "id": "question49776e59-cf0b-4688-911b-7ab695c34321",
+                "title": "What type of test was the first positive swab test you had since you last completed this questionnaire?",
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answered1e2569-db5e-4d18-a3f3-15fbf4b2ca1f",
+                    "id": "answer17bcde4b-95f7-4cb0-beba-02c997a030b9",
                     "mandatory": true,
-                    "type": "Date",
-                    "label": "Date (enter as DD MM YYYY)",
-                    "q_code": "PHM-FUP-C19-079",
-                    "minimum": {
-                      "value": "2020-04-01",
-                      "offset_by": {
-                        "days": 0
-                      }
+                    "type": "Radio",
+                    "q_code": "PHM-FUP-C19-076",
+                    "options": [
+                      {
+                        "label": "A lateral flow test. That is the test you can do yourself and you do not have to send it to a laboratory because the result shows in the device in about 30 minutes",
+                        "value": "A lateral flow test. That is the test you can do yourself and you do not have to send it to a laboratory because the result shows in the device in about 30 minutes"
                     },
-                    "maximum": {
-                      "value": "now",
-                      "offset_by": {
-                        "days": 0
+                      {
+                        "label": "A PCR test. That is the test that is sent off to a laboratory",
+                        "value": "A PCR test. That is the test that is sent off to a laboratory"
+                      },
+                      {
+                        "label": "Do not know",
+                        "value": "Do not know"
                       }
-                    }
+                    ]
                   }
                 ]
               },
@@ -5760,7 +5867,7 @@
                       "source": "answers"
                     },
                     [
-                      "One or more tests were positive",
+                      "One or more tests were negative and none were positive",
                       "All tests failed",
                       "Waiting for all results"
                     ]
@@ -6039,7 +6146,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
@@ -6098,7 +6205,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
@@ -6376,7 +6483,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
@@ -6385,7 +6492,7 @@
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
@@ -6443,7 +6550,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
@@ -6452,7 +6559,7 @@
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
@@ -6901,6 +7008,22 @@
         "when": {
           "or": [
             {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample",
+                      "Yes",
+                      "Do this questionnaire only"
+                    ]
+                  ]
+                },
+                {
               "in": [
                 {
                   "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
@@ -6908,6 +7031,23 @@
                 },
                 ["Yes"]
               ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
             },
             {
               "==": [
@@ -6918,6 +7058,8 @@
                 null
               ]
             }
+          ]
+        }
           ]
         }
       }
@@ -6945,6 +7087,20 @@
                   },
                   {
                     "description": "We ask these questions to understand how contact with others across different settings affects the risk of current and past respiratory infections."
+                  },
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &#39;you&#39; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
               }
@@ -7010,64 +7166,6 @@
               }
             },
             {
-              "id": "blockf3053d56-41e9-4242-8c16-317c53b71fab",
-              "type": "Question",
-              "question": {
-                "id": "questionf3053d56-41e9-4242-8c16-317c53b71fab",
-                "title": "In the last 7 days, how many <em>hours a day</em>, on average, have you spent within 2 metres of someone else in your home, including when sleeping?",
-                "description": [
-                  "<p>For example, in the last 7 days you spent on average 2 hours a day within 2 meters of your mum and a different 3 hours a day within 2 meters of your brother. You&#39;d add these together to get 5 hours a day on average.</p>"
-                ],
-                "type": "MutuallyExclusive",
-                "mandatory": false,
-                "answers": [
-                  {
-                    "id": "answeraa471547-5b70-43e2-a0f0-6d99a9b410d7",
-                    "mandatory": false,
-                    "type": "Number",
-                    "label": "Hours",
-                    "q_code": "PHM-FUP-CON-003",
-                    "minimum": {
-                      "value": 0,
-                      "exclusive": false
-                    },
-                    "maximum": {
-                      "value": 24,
-                      "exclusive": false
-                    },
-                    "decimal_places": 0
-                  },
-                  {
-                    "id": "answer3825d2bf-90f4-45cd-834d-1d3bfebe35c7",
-                    "mandatory": false,
-                    "type": "Radio",
-                    "q_code": "PHM-FUP-CON-004",
-                    "options": [
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      },
-                      {
-                        "label": "Prefer not to say",
-                        "value": "Prefer not to say"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "skip_conditions": {
-                "when": {
-                  "in": [
-                    {
-                      "identifier": "answer526656a5-1a4c-4dcd-823e-a5496b574817",
-                      "source": "answers"
-                    },
-                    ["Yes", "No"]
-                  ]
-                }
-              }
-            },
-            {
               "id": "block94d341af-dc5d-42c7-8929-848429b98593",
               "type": "Question",
               "question": {
@@ -7115,6 +7213,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7165,6 +7274,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7215,6 +7335,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7265,6 +7396,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7315,6 +7457,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7365,6 +7518,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7427,6 +7591,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7489,6 +7664,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7548,6 +7734,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7610,6 +7807,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7652,6 +7860,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7666,15 +7885,15 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
-                        "indoor and outdoor events. For example, sports events, festivals or concerts."
+                        "indoor and outdoor events. For example, sports events, festivals or concerts"
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
@@ -7706,6 +7925,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7720,15 +7950,15 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include</strong>"
+                      "description": "<strong>Include:</strong>"
                     },
                     {
                       "list": [
-                        "indoor and outdoor events. For example, concerts, weddings, sports events, or conferences."
+                        "indoor and outdoor events. For example, concerts, weddings, sports events, or conferences"
                       ]
                     },
                     {
-                      "description": "<strong>Exclude</strong>"
+                      "description": "<strong>Exclude:</strong>"
                     },
                     {
                       "list": [
@@ -7760,6 +7990,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7767,7 +8008,7 @@
               "type": "Question",
               "question": {
                 "id": "question25d630af-8f45-4ee5-a4dc-1af9a29a50dc",
-                "title": "In the last 28 days, have you used any transport where you have shared with people outside of your home? Exclude travel to your place of work or education",
+                "title": "In the last 28 days, have you used any transport where you have shared with people outside of your home? Exclude travel to your place of work or education.",
                 "description": [
                   "<p>For example, to the shops, to a restaurant, to see family or to go to an appointment.</p>"
                 ],
@@ -7834,6 +8075,17 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
@@ -7880,29 +8132,59 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
               }
             },
             {
-              "id": "block8d507841-4661-4125-9571-8b5dd32ba04a",
+              "id": "blockb066a969-4719-4085-b11c-425b4de0c851",
               "type": "Question",
               "question": {
-                "id": "question8d507841-4661-4125-9571-8b5dd32ba04a",
-                "title": "Thank you, please continue to the next page to submit your questionnaire",
+                "id": "questionb066a969-4719-4085-b11c-425b4de0c851",
+                "title": "Do you generally wear any kind of face covering or mask when you are at work or your place of education, because of respiratory infections?",
                 "description": [
-                  "<p>This is the end of your questionnaire.  Thank you very much for taking part.</p>"
+                  "<p>If you are currently unwell, choose what you would usually do when you are well.</p>"
                 ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer6f8b5eb2-eabc-4018-993d-825fddcfe418",
+                    "id": "answer97b9a2a7-fceb-42a4-a000-c43442fd1b3f",
                     "mandatory": true,
-                    "type": "Checkbox",
-                    "label": "Tick to continue",
+                    "type": "Radio",
+                    "q_code": "PHM-FUP-CON-028",
                     "options": [
                       {
-                        "label": "Continue",
-                        "value": "Continue",
-                        "q_code": "PHM-FUP-END-001"
+                        "label": "I am not going to my place of work or education",
+                        "value": "I am not going to my place of work or education"
+                      },
+                      {
+                        "label": "Yes always",
+                        "value": "Yes always"
+                      },
+                      {
+                        "label": "Yes sometimes",
+                        "value": "Yes sometimes"
+                      },
+                      {
+                        "label": "Never",
+                        "value": "Never"
+                      },
+                      {
+                        "label": "I cover my face for other reasons - for example for religious or cultural reasons",
+                        "value": "I cover my face for other reasons - for example for religious or cultural reasons"
+                      },
+                      {
+                        "label": "Prefer not to say",
+                        "value": "Prefer not to say"
                       }
                     ]
                   }
@@ -7910,41 +8192,12 @@
               },
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
                     },
-                    {
-                      "and": [
-                        {
-                          "in": [
-                            {
-                              "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                              "source": "answers"
-                            },
-                            [
-                              "Do this questionnaire and take a swab sample",
-                              "Do this questionnaire and take a swab sample and a blood sample"
-                            ]
-                          ]
-                        },
-                        {
-                          "==": [
-                            {
-                              "source": "answers",
-                              "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                            },
-                            null
-                          ]
-                        }
-                      ]
-                    }
+                    ["Yes", "No"]
                   ]
                 }
               }
@@ -7978,15 +8231,6 @@
               "skip_conditions": {
                 "when": {
                   "or": [
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    },
                     {
                       "in": [
                         {
@@ -8024,6 +8268,60 @@
                   ]
                 }
               }
+            },
+            {
+              "id": "block8d507841-4661-4125-9571-8b5dd32ba04a",
+              "type": "Question",
+              "question": {
+                "id": "question8d507841-4661-4125-9571-8b5dd32ba04a",
+                "title": "Thank you, please continue to the next page to submit your questionnaire",
+                "description": [
+                  "<p>This is the end of your questionnaire.  Thank you very much for taking part.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6f8b5eb2-eabc-4018-993d-825fddcfe418",
+                    "mandatory": true,
+                    "type": "Checkbox",
+                    "label": "Tick to continue",
+                    "options": [
+                      {
+                        "label": "Continue",
+                        "value": "Continue",
+                        "q_code": "PHM-FUP-END-001"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "and": [
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                          "source": "answers"
+                        },
+                        [
+                          "Do this questionnaire and take a swab sample",
+                          "Do this questionnaire and take a swab sample and a blood sample"
+                        ]
+                      ]
+                    },
+                    {
+                      "==": [
+                        {
+                          "source": "answers",
+                          "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                        },
+                        null
+                      ]
+                    }
+                  ]
+                }
+              }
             }
           ]
         }
@@ -8031,13 +8329,46 @@
       "enabled": {
         "when": {
           "or": [
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                              "source": "answers"
+                            },
+                            [
+                      "Do this questionnaire only",
+                              "Do this questionnaire and take a swab sample",
+                      "Yes",
+                              "Do this questionnaire and take a swab sample and a blood sample"
+                            ]
+                          ]
+                        },
+                        {
+                          "in": [
+                            {
+                              "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                              "source": "answers"
+                            },
+                            ["Yes"]
+                          ]
+                        }
+                      ]
+            },
+            {
+              "and": [
             {
               "in": [
                 {
-                  "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
                   "source": "answers"
                 },
-                ["Yes"]
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
               ]
             },
             {
@@ -8047,6 +8378,8 @@
                   "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
                 },
                 null
+                  ]
+                }
               ]
             }
           ]
@@ -8087,7 +8420,28 @@
     "guidance": {
       "contents": [
         {
-          "description": "If another household member wants to start their questionnaire using the same device, you will need to click the &quot;leave this page&quot; link below."
+          "description": "<strong>Your views are essential to us</strong>"
+        },
+        {
+          "description": "As you are one of the first participants to continue taking part in the COVID-19 Infection Survey after the recent changes, finding out what you think is extremely important to us."
+        },
+        {
+          "description": "We are offering you the chance to give some short feedback about your experience."
+        },
+        {
+          "description": "Questions can be answered online or over the telephone. You do not have to give feedback, it is completely up to you."
+        },
+        {
+          "description": "The feedback survey can be completed online through the following link <a href=\"https://studies.ons.gov.uk/s/feedback7/\"target=\"_blank\"rel=\"noopener noreferrer\">https://studies.ons.gov.uk/s/feedback7/</a>"
+        },
+        {
+          "description": "Alternatively, if you would like to complete this feedback survey over the phone, please email <a href=\"mailto:COVID19.RAD@ons.gov.uk\"target=\"_blank\"rel=\"noopener noreferrer\">COVID19.RAD@ons.gov.uk</a> or call 0300 067 2138 to arrange this."
+        },
+        {
+          "description": "<strong>If another household member wants to start their questionnaire using the same device</strong>"
+        },
+        {
+          "description": "You will need to click the &quot;leave this page&quot; link below."
         },
         {
           "description": "They will then need to log in using their unique 16 character access code in the email or letter they were sent."
