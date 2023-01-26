@@ -7,7 +7,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -35,7 +35,7 @@ jobs:
       - name: Lint Python
         run: make lint
   validate-schemas:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - run: |
@@ -66,7 +66,7 @@ jobs:
       - name: Validate schemas
         run: make validate-schemas
   test-translation-templates:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
       - run: |
