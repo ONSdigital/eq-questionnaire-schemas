@@ -32,7 +32,7 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} ({trad_as})",
+                    "text": "You are completing this for {ru_name} {trad_as}",
                     "placeholders": [
                       {
                         "placeholder": "ru_name",
@@ -45,13 +45,13 @@
                         "placeholder": "trad_as",
                         "transforms": [
                           {
+                            "transform": "conditional_trad_as",
                             "arguments": {
                               "trad_as": {
                                 "source": "metadata",
                                 "identifier": "trad_as"
                               }
-                            },
-                            "transform": "conditional_trad_as"
+                            }
                           }
                         ]
                       }
@@ -1212,7 +1212,7 @@
               "type": "Question",
               "question": {
                 "id": "questiond1b4a528-4ddf-4b6a-b196-c7df667cc82d",
-                "title": "How much did your business spend on the market introduction of innovations in the calendar year <em>2020</em>?",
+                "title": "How much did your business spend on the market introduction of innovations in the calendar year 2022?",
                 "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
@@ -5092,7 +5092,7 @@
               "type": "Question",
               "question": {
                 "id": "question0115c44b-ca62-4668-8d00-9609abcefe9f",
-                "title": "During the 3 year period 2018 to 2020, what proportions of your innovations were protected by <em>trademarks</em>?",
+                "title": "During the 3 year period 2020 to 2022, what proportions of your innovations were protected by <em>trademarks</em>?",
                 "definitions": [
                   {
                     "title": "What we mean by &#39;trademarks&#39;",
