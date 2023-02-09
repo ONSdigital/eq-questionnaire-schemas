@@ -728,7 +728,7 @@
         "code": "6000"
       }
     ],
-    "title": "Business Enterprise Research and Development",
+    "title": "MC - Copy of Business Enterprise Research and Development",
     "questionnaire_flow": {
       "type": "Hub",
       "options": {
@@ -1350,7 +1350,7 @@
           "items": [
             {
               "type": "List",
-              "for_list": "Product codes",
+              "for_list": "product_codes",
               "title": "For the reporting period, for which of the following product codes has your business carried out in-house R&amp;D?",
               "add_link_text": "Add item to this list",
               "empty_list_text": "There are no items"
@@ -1391,7 +1391,7 @@
               {
                 "id": "block-driving09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
                 "type": "ListCollectorDrivingQuestion",
-                "for_list": "Product codes",
+                "for_list": "product_codes",
                 "question": {
                   "id": "question-driving-09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
                   "type": "General",
@@ -1478,7 +1478,7 @@
                             "type": "RedirectToListAddBlock",
                             "params": {
                               "block_id": "add-block-09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
-                              "list_name": "Product codes"
+                              "list_name": "product_codes"
                             }
                           }
                         },
@@ -1513,7 +1513,7 @@
               {
                 "id": "block09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
                 "type": "ListCollector",
-                "for_list": "Product codes",
+                "for_list": "product_codes",
                 "question": {
                   "id": "list-collector-question-09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
                   "type": "General",
@@ -2071,10 +2071,10 @@
                 "summary": {
                   "title": "Summary",
                   "item_title": {
-                    "text": "{item-text-09491ca7-11c4-4fd3-9e66-e1a69d8c3932}",
+                    "text": "{listcollector_summary_placeholder}",
                     "placeholders": [
                       {
-                        "placeholder": "item-text-09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
+                        "placeholder": "listcollector_summary_placeholder",
                         "transforms": [
                           {
                             "arguments": {
@@ -2115,12 +2115,12 @@
         "id": "sectionea2aafb0-0fb5-4752-9933-2b4d79443a39",
         "title": "In-house R&D",
         "repeat": {
-          "for_list": "Product codes",
+          "for_list": "product_codes",
           "title": {
-            "text": "{item-text-ea2aafb0-0fb5-4752-9933-2b4d79443a39}",
+            "text": "{repeat_title_placeholder}",
             "placeholders": [
               {
-                "placeholder": "item-text-ea2aafb0-0fb5-4752-9933-2b4d79443a39",
+                "placeholder": "repeat_title_placeholder",
                 "transforms": [
                   {
                     "arguments": {
@@ -5136,7 +5136,7 @@
           "items": [
             {
               "type": "List",
-              "for_list": "Product codes 2",
+              "for_list": "product_codes_2",
               "title": {
                 "text": "For the reporting period, for which of the following product codes has {ru_name} purchased R&amp;D conducted outside the business?",
                 "placeholders": [
@@ -5180,7 +5180,7 @@
               {
                 "id": "block-driving520046b4-ec3c-4d91-85c5-3c4565811379",
                 "type": "ListCollectorDrivingQuestion",
-                "for_list": "Product codes 2",
+                "for_list": "product_codes_2",
                 "question": {
                   "id": "question-driving-520046b4-ec3c-4d91-85c5-3c4565811379",
                   "type": "General",
@@ -5279,7 +5279,7 @@
                             "type": "RedirectToListAddBlock",
                             "params": {
                               "block_id": "add-block-520046b4-ec3c-4d91-85c5-3c4565811379",
-                              "list_name": "Product codes 2"
+                              "list_name": "product_codes_2"
                             }
                           }
                         },
@@ -5314,7 +5314,7 @@
               {
                 "id": "block520046b4-ec3c-4d91-85c5-3c4565811379",
                 "type": "ListCollector",
-                "for_list": "Product codes 2",
+                "for_list": "product_codes_2",
                 "question": {
                   "id": "list-collector-question-520046b4-ec3c-4d91-85c5-3c4565811379",
                   "type": "General",
@@ -5894,10 +5894,10 @@
                 "summary": {
                   "title": "Summary",
                   "item_title": {
-                    "text": "{item-text-520046b4-ec3c-4d91-85c5-3c4565811379}",
+                    "text": "{listcollector_summary_placeholder}",
                     "placeholders": [
                       {
-                        "placeholder": "item-text-520046b4-ec3c-4d91-85c5-3c4565811379",
+                        "placeholder": "listcollector_summary_placeholder",
                         "transforms": [
                           {
                             "arguments": {
@@ -5938,12 +5938,12 @@
         "id": "sectione4f472e4-9aaa-409e-9717-f7c6d1f3f8fc",
         "title": "Purchase of R&D conducted outside the business",
         "repeat": {
-          "for_list": "Product codes 2",
+          "for_list": "product_codes_2",
           "title": {
-            "text": "{item-text-e4f472e4-9aaa-409e-9717-f7c6d1f3f8fc}",
+            "text": "{repeat_title_placeholder}",
             "placeholders": [
               {
-                "placeholder": "item-text-e4f472e4-9aaa-409e-9717-f7c6d1f3f8fc",
+                "placeholder": "repeat_title_placeholder",
                 "transforms": [
                   {
                     "arguments": {
@@ -11063,6 +11063,14 @@
       {
         "name": "ref_p_end_date",
         "type": "date"
+      },
+      {
+        "name": "user_id",
+        "type": "string"
+      },
+      {
+        "name": "ru_ref",
+        "type": "string"
       }
     ],
     "post_submission": {
@@ -11084,3 +11092,4 @@
       "guidance": "You will have the opportunity to view, save or print a copy of your answers after submitting this survey."
     }
   }
+  
