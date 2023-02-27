@@ -4,6 +4,10 @@ run-validator: validator-check
 lint:
 	poetry run ./scripts/run_lint_python.sh
 
+format:
+	poetry run isort .
+	poetry run black .
+
 validator-check:
 	poetry run python -m scripts.eq_validator_check
 
