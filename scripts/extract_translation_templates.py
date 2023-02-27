@@ -72,7 +72,7 @@ def build_schema_templates(output_dir):
     filenames = []
 
     for pattern in SCHEMAS_TO_EXTRACT:
-        filenames = glob(pattern)
+        filenames.extend(glob(pattern))
 
     for file in filenames:
         template_file = os.path.basename(file).replace(".json", ".pot")
