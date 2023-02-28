@@ -12,7 +12,7 @@ logger.setLevel(logging.DEBUG)
 logger.addHandler(logging.StreamHandler(sys.stdout))
 
 TRANSLATION_MAP = {
-    "cy": ["schemas/health/en/phm*"],
+    "cy": ["schemas/health/en/phm*", "schemas/health/en/cris*"],
 }
 
 
