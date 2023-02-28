@@ -552,7 +552,7 @@
       "code": "PHM-FUP-END-001"
     }
   ],
-  "title": "COVID-19 and Respiratory Infections Survey",
+  "title": "COVID-19 Infection Survey",
   "questionnaire_flow": {
     "type": "Hub",
     "options": {
@@ -619,7 +619,7 @@
               },
               "routing_rules": [
                 {
-                  "section": "End",
+                  "block": "blockb58f12f0-d4ae-46cd-9cf0-ca63dfea45c0",
                   "when": {
                     "in": [
                       {
@@ -676,7 +676,7 @@
               },
               "routing_rules": [
                 {
-                  "section": "End",
+                  "block": "blockb58f12f0-d4ae-46cd-9cf0-ca63dfea45c0",
                   "when": {
                     "in": [
                       {
@@ -700,7 +700,7 @@
                 "title": "There has been a problem accessing the survey",
                 "description": [
                   {
-                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name} or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0xxxxxxxxxx. You will need your Participant ID. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &#x201C;COVID-19 and Respiratory Infections Survey&#x201D;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
+                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name} or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0xxxxxxxxxx. You will need your Participant ID. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &#x201C;COVID-19 Infection Survey&#x201D;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
                     "placeholders": [
                       {
                         "placeholder": "first_name",
@@ -773,12 +773,12 @@
               },
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "any-in": [
+                    ["Continue"],
                     {
-                      "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
+                      "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07",
                       "source": "answers"
-                    },
-                    ["Yes", "No"]
+                    }
                   ]
                 }
               }
@@ -1322,12 +1322,15 @@
       ],
       "enabled": {
         "when": {
-          "==": [
-            null,
+          "in": [
             {
-              "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
+              "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
               "source": "answers"
-            }
+            },
+            [
+              "Do this questionnaire and take a swab sample",
+              "Do this questionnaire and take a swab sample and a blood sample"
+            ]
           ]
         }
       }
@@ -1891,12 +1894,12 @@
       ],
       "enabled": {
         "when": {
-          "==": [
-            null,
+          "in": [
             {
-              "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
+              "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
               "source": "answers"
-            }
+            },
+            ["Do this questionnaire and take a swab sample and a blood sample"]
           ]
         }
       }
@@ -1984,12 +1987,51 @@
       ],
       "enabled": {
         "when": {
-          "==": [
+          "or": [
             {
-              "source": "answers",
-              "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850"
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answere532d57d-217c-40e9-a934-f0a01c66bfd5",
+                      "source": "answers"
+                    },
+                    ["No"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "source": "answers",
+                      "identifier": "answerc4d02838-5c8a-4083-897c-d80efe8e19b4"
+                    },
+                    null
+                  ]
+                }
+              ]
             },
-            null
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerc4d02838-5c8a-4083-897c-d80efe8e19b4",
+                      "source": "answers"
+                    },
+                    ["No"]
+                  ]
+                },
+                {
+                  "in": [
+                    {
+                      "identifier": "answere532d57d-217c-40e9-a934-f0a01c66bfd5",
+                      "source": "answers"
+                    },
+                    ["No"]
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
@@ -2480,10 +2522,7 @@
               "type": "Question",
               "question": {
                 "id": "questionbfae0aa9-e245-4bf4-bd32-984369f21932",
-                "title": "Has your main job or business changed since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
-                "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p>"
-                ],
+                "title": "Has your main job or business changed since the last time you completed your questionnaire?",
                 "type": "General",
                 "answers": [
                   {
@@ -3417,12 +3456,59 @@
       ],
       "enabled": {
         "when": {
-          "==": [
+          "or": [
             {
-              "source": "answers",
-              "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "in": [
+                    {
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                }
+              ]
             },
-            null
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "source": "answers",
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                    },
+                    null
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
@@ -4058,9 +4144,9 @@
               "type": "Question",
               "question": {
                 "id": "questionc48aa260-4726-4045-91b6-c20829d103bf",
-                "title": "Have you been vaccinated against COVID-19 since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you been vaccinated against COVID-19 since the last time you completed this questionnaire?",
                 "description": [
-                  "<p>Answer &quot;Yes&quot; if you have received a first, second or later dose, or a booster dose, since the questionnaire you completed most recently.</p>"
+                  "<p>Answer &quot;Yes&quot; if you have received a first, second, or later dose, or a booster dose, since you last completed this questionnaire</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4264,9 +4350,9 @@
               "type": "Question",
               "question": {
                 "id": "questioneb99fbd2-9b40-473f-aa6c-c8275deb8bef",
-                "title": "Have you been vaccinated against flu since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you been vaccinated against flu since you last completed this questionnaire?",
                 "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p><p>This is commonly known as the &quot;flu jab&quot; or &quot;seasonal flu vaccination&quot;.</p>"
+                  "<p>This is commonly known as the &quot;flu jab&quot; or &quot;seasonal flu vaccination&quot;.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4344,10 +4430,7 @@
               "type": "Question",
               "question": {
                 "id": "questionba3c1460-7b19-4c6d-bc7b-0685f2fda618",
-                "title": "Have you been outside of the UK since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
-                "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p>"
-                ],
+                "title": "Have you been outside of the UK since you last completed this questionnaire?",
                 "type": "General",
                 "answers": [
                   {
@@ -5222,12 +5305,59 @@
       ],
       "enabled": {
         "when": {
-          "==": [
+          "or": [
             {
-              "source": "answers",
-              "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "in": [
+                    {
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                }
+              ]
             },
-            null
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "source": "answers",
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                    },
+                    null
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
@@ -6041,9 +6171,9 @@
               "type": "Question",
               "question": {
                 "id": "question73143af8-91f6-4445-9335-fc7ca5de8c02",
-                "title": "Have you had a swab test for COVID-19 infection since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you had a swab test for COVID-19 infection since you last completed this questionnaire?",
                 "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p><p>Exclude any tests done as part of the COVID-19 Infection Survey.</p><p>Include any type of swab test for COVID-19 infection, such as a lateral flow or a PCR test.</p>"
+                  "<p>Exclude any tests done as part of this survey.</p><p>Include any type of swab test for COVID-19 infection, such as a lateral flow or a PCR test.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6087,9 +6217,9 @@
               "type": "Question",
               "question": {
                 "id": "questionac903d5f-42a1-4af4-9e3b-c059a264867d",
-                "title": "What were the results of all the swab tests you have had recently?",
+                "title": "What were the results of all the swab tests you have had since you last completed this questionnaire?",
                 "description": [
-                  "<p>Answer for the tests you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p><p>Please choose the <em>first</em> answer option that applies.</p>"
+                  "<p>Please choose the <em>first</em> option that applies.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6124,9 +6254,9 @@
               "type": "Question",
               "question": {
                 "id": "questionc74cfe9c-46ec-4ee8-9721-081eda86bcc7",
-                "title": "What was the date of the first positive swab test you had recently?",
+                "title": "What was the date of the first positive swab test you had since you last completed this questionnaire?",
                 "description": [
-                  "<p>Answer for your first positive swab test you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p><p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th.</p>"
+                  "<p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6171,10 +6301,7 @@
               "type": "Question",
               "question": {
                 "id": "question49776e59-cf0b-4688-911b-7ab695c34321",
-                "title": "What type of test was the first positive swab test you had recently?",
-                "description": [
-                  "<p>Answer for your first positive swab test you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p>"
-                ],
+                "title": "What type of test was the first positive swab test you had since you last completed this questionnaire?",
                 "type": "General",
                 "answers": [
                   {
@@ -6249,7 +6376,7 @@
               "question": {
                 "id": "question1f4d97f5-93f2-464d-99fb-b5ffbf84b0bd",
                 "title": {
-                  "text": "Out of the {number_of_days} days you were unable to do usual daily activities, how many days were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_days} days you were unable to do usual daily activities, how many days were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_days",
@@ -6395,7 +6522,7 @@
               "question": {
                 "id": "question607ccd35-a134-421a-962c-2c847fc2b93b",
                 "title": {
-                  "text": "Out of the {number_of_days} days you spent off work or education, how many days were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_days} days you spent off work or education, how many days were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_days",
@@ -6518,7 +6645,7 @@
               "question": {
                 "id": "question9aecac89-0db8-4f91-95e9-ba6d74a10fd5",
                 "title": {
-                  "text": "Out of the {number_of_days} days you had an appointment at a GP surgery, how many days were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_days} days you had an appointment at a GP surgery, how many days were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_days",
@@ -6632,7 +6759,7 @@
               "question": {
                 "id": "questionc5011cab-74b1-4f46-8a1a-d595b8a4428b",
                 "title": {
-                  "text": "Out of the {number_of_days} days you spoke to a pharmacist or called 111, how many days were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_days} days you spoke to a pharmacist or called 111, how many days were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_days",
@@ -6735,7 +6862,7 @@
               "question": {
                 "id": "question69f801a3-cab1-4993-b165-9d686434a21c",
                 "title": {
-                  "text": "Out of the {number_of_times} times you attended urgent care, how many times were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_times} times you attended urgent care, how many times were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_times",
@@ -6857,7 +6984,7 @@
               "question": {
                 "id": "questione408547c-fdc8-494c-9233-ad4cbccbaa65",
                 "title": {
-                  "text": "Out of the {number_of_times} times you have been admitted to hospital, how many times were due to respiratory infections you had?",
+                  "text": "Out of the {number_of_times} times you have been admitted to hospital, how many times were due to respiratory infections?",
                   "placeholders": [
                     {
                       "placeholder": "number_of_times",
@@ -7027,7 +7154,7 @@
                 "id": "questionc1b453de-0caa-45ea-90a0-6015292aaec3",
                 "title": "Do you have any of the following symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following pages.</p>"
+                  "<p>Please include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following pages.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -7108,7 +7235,7 @@
                 "id": "question7da56820-5a6e-45d3-8e41-4531e39b6ead",
                 "title": "And do you have any of these symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following page.</p>"
+                  "<p>Please include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following page.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -7185,7 +7312,7 @@
                 "id": "questionb55ff1a1-749a-490b-be53-555297ffadd2",
                 "title": "And do you have any of these symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p>"
+                  "<p>Please include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -7293,12 +7420,59 @@
       ],
       "enabled": {
         "when": {
-          "==": [
+          "or": [
             {
-              "source": "answers",
-              "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample",
+                      "Do this questionnaire only"
+                    ]
+                  ]
+                },
+                {
+                  "in": [
+                    {
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                }
+              ]
             },
-            null
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "source": "answers",
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                    },
+                    null
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
@@ -8025,7 +8199,7 @@
               "type": "Question",
               "question": {
                 "id": "question3f2b54c3-556d-49f2-b4e3-c576b22fe44b",
-                "title": "In the last 7 days, how many times have you been outside of your home to socialise? Exclude going into other people&#39;s homes.",
+                "title": "In the last 7 days, how many times have you been outside of your home to socialise? Exclude going into other people&#39;s homes",
                 "description": [
                   "<p>For example, going into restaurants or going to the cinema.</p>"
                 ],
@@ -8431,12 +8605,41 @@
               },
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                          "source": "answers"
+                        },
+                        ["Do this questionnaire only"]
+                      ]
                     },
-                    ["Yes", "No"]
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                              "source": "answers"
+                            },
+                            [
+                              "Do this questionnaire and take a swab sample",
+                              "Do this questionnaire and take a swab sample and a blood sample"
+                            ]
+                          ]
+                        },
+                        {
+                          "in": [
+                            {
+                              "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                              "source": "answers"
+                            },
+                            ["Yes"]
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               }
@@ -8465,6 +8668,33 @@
                     ]
                   }
                 ]
+              },
+              "skip_conditions": {
+                "when": {
+                  "and": [
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                          "source": "answers"
+                        },
+                        [
+                          "Do this questionnaire and take a swab sample",
+                          "Do this questionnaire and take a swab sample and a blood sample"
+                        ]
+                      ]
+                    },
+                    {
+                      "==": [
+                        {
+                          "source": "answers",
+                          "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                        },
+                        null
+                      ]
+                    }
+                  ]
+                }
               }
             }
           ]
@@ -8472,12 +8702,59 @@
       ],
       "enabled": {
         "when": {
-          "==": [
+          "or": [
             {
-              "source": "answers",
-              "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "in": [
+                    {
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                }
+              ]
             },
-            null
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                      "source": "answers"
+                    },
+                    [
+                      "Do this questionnaire only",
+                      "Do this questionnaire and take a swab sample",
+                      "Do this questionnaire and take a swab sample and a blood sample"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "source": "answers",
+                      "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
+                    },
+                    null
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
@@ -8511,7 +8788,7 @@
           "description": "<strong>Your views are essential to us</strong>"
         },
         {
-          "description": "As you are one of the first participants to take part in the COVID-19 and Respiratory Infections Survey, finding out what you think is extremely important to us."
+          "description": "As you are one of the first participants to continue taking part in the COVID-19 Infection Survey after the recent changes, finding out what you think is extremely important to us."
         },
         {
           "description": "We are offering you the chance to give some short feedback about your experience."
