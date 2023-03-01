@@ -15,7 +15,10 @@ logger = logging.getLogger(__name__)
 
 coloredlogs.install(level="DEBUG", logger=logger, fmt="%(message)s")
 
-SCHEMAS_TO_EXTRACT = ["schemas/health/en/phm*.json"]
+SCHEMAS_TO_EXTRACT = [
+    "schemas/health/en/phm*.json",
+    "schemas/health/en/cris*.json",
+]
 
 
 def get_template_content(filename, ignore_context=False):
@@ -69,7 +72,7 @@ def build_schema_templates(output_dir):
     filenames = []
 
     for pattern in SCHEMAS_TO_EXTRACT:
-        filenames = glob(pattern)
+        filenames.extend(glob(pattern))
 
     for file in filenames:
         template_file = os.path.basename(file).replace(".json", ".pot")
