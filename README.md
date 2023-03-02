@@ -70,7 +70,7 @@ The translated schema will be added to the `/schemas/{SURVEY_TYPE}/{LANGUAGE_COD
 
 To check that translations are up to date use the following command (This check will run automatically when a pull request is raised):
 ```
-make test-translate-templates
+make test-translation-templates
 ```
 
 ## Testing built schemas with eq-questionnaire-runner
