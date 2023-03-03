@@ -1204,7 +1204,9 @@
                         "identifier": "answerb3840e82-aeaf-4a85-8556-84f2e1e5388a",
                         "source": "answers"
                       },
-                      ["Yes, I can report for this period"]
+                      [
+                        "Yes, I can report for this period"
+                      ]
                     ]
                   }
                 },
@@ -1325,7 +1327,9 @@
                         "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -1515,21 +1519,21 @@
               },
               "routing_rules": [
                 {
-                  "goto": {
-                    "section": "End",
-                    "when": [
+                  "section": "End",
+                  "when": {
+                    "in": [
                       {
-                        "id": "answer-driving-09491ca7-11c4-4fd3-9e66-e1a69d8c3932",
-                        "condition": "equals",
-                        "value": "No"
-                      }
+                        "source": "answers",
+                        "identifier": "answer-driving-09491ca7-11c4-4fd3-9e66-e1a69d8c3932"
+                      },
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
                 {
-                  "goto": {
-                    "block": "block09491ca7-11c4-4fd3-9e66-e1a69d8c3932"
-                  }
+                  "block": "block09491ca7-11c4-4fd3-9e66-e1a69d8c3932"
                 }
               ]
             },
@@ -2127,7 +2131,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -2374,7 +2380,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2414,7 +2422,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -2438,7 +2448,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2538,7 +2550,9 @@
                       "answerc5590835-dba2-4d11-bc31-6d343278483a",
                       "answer3d2229c0-1fee-410b-b664-607ef423037c"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "answer5b690209-d004-4432-acd6-813edfc2da75",
                       "source": "answers"
@@ -2555,7 +2569,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Defence Research and Development"]
+                        [
+                          "Defence Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -2580,12 +2596,12 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer09bc8860-ff73-4a54-ab62-bc230260582c"
+                      "identifier": "answer09bc8860-ff73-4a54-ab62-bc230260582c",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer5b690209-d004-4432-acd6-813edfc2da75"
+                      "identifier": "answer5b690209-d004-4432-acd6-813edfc2da75",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -2598,7 +2614,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2609,10 +2627,10 @@
               "question": {
                 "id": "questionce827fe9-329e-4b1f-903c-b104dc39dd40",
                 "title": {
-                  "text": "Of the {ptotal_inhouse_noncapital_expenditure_for_civil_rampdp} total in-house non-capital expenditure for civil R&amp;D, how much related to the following?",
+                  "text": "Of the {total_inhouse_noncapital_expenditure_for_civil_rampd} total in-house non-capital expenditure for civil R&amp;D, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_inhouse_noncapital_expenditure_for_civil_rampdp",
+                      "placeholder": "total_inhouse_noncapital_expenditure_for_civil_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -2686,7 +2704,9 @@
                       "answer7910b106-2803-4eee-80a4-9246bdf6ff8c",
                       "answer0756fdb3-5297-4540-a16b-bf5e4731b659"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -2696,7 +2716,9 @@
                       "answer7910b106-2803-4eee-80a4-9246bdf6ff8c",
                       "answer0756fdb3-5297-4540-a16b-bf5e4731b659"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "block2c2e4965-18f7-45b1-8265-5e5f498e6c00",
                       "source": "calculated_summary"
@@ -2713,7 +2735,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Defence Research and Development"]
+                        [
+                          "Defence Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -2795,7 +2819,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2855,7 +2881,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2894,7 +2922,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["routine computer software"]
+                      "list": [
+                        "routine computer software"
+                      ]
                     }
                   ]
                 },
@@ -2918,7 +2948,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -2990,7 +3022,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Defence Research and Development"]
+                        [
+                          "Defence Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -3015,16 +3049,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer1d7005a2-bb00-4c04-b829-3d09cfee25e2"
+                      "identifier": "answer1d7005a2-bb00-4c04-b829-3d09cfee25e2",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer44c42b2d-6439-4aa2-8ed1-d30a941ddb86"
+                      "identifier": "answer44c42b2d-6439-4aa2-8ed1-d30a941ddb86",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer260fe2c6-d1b5-4032-853f-38bc7e5c53de"
+                      "identifier": "answer260fe2c6-d1b5-4032-853f-38bc7e5c53de",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -3037,7 +3071,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3051,24 +3087,24 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer09bc8860-ff73-4a54-ab62-bc230260582c"
+                      "identifier": "answer09bc8860-ff73-4a54-ab62-bc230260582c",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer5b690209-d004-4432-acd6-813edfc2da75"
+                      "identifier": "answer5b690209-d004-4432-acd6-813edfc2da75",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer1d7005a2-bb00-4c04-b829-3d09cfee25e2"
+                      "identifier": "answer1d7005a2-bb00-4c04-b829-3d09cfee25e2",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer44c42b2d-6439-4aa2-8ed1-d30a941ddb86"
+                      "identifier": "answer44c42b2d-6439-4aa2-8ed1-d30a941ddb86",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer260fe2c6-d1b5-4032-853f-38bc7e5c53de"
+                      "identifier": "answer260fe2c6-d1b5-4032-853f-38bc7e5c53de",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -3081,7 +3117,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3092,10 +3130,10 @@
               "question": {
                 "id": "question6c8f0b63-a381-470f-a1b0-68bd6ae730a5",
                 "title": {
-                  "text": "In relation to your business&#39;s {ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp} total expenditure for in-house civil R&amp;D, has your business submitted, or does it intend to submit, a claim for R&amp;D tax credits?",
+                  "text": "In relation to your business&#39;s {total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd} total expenditure for in-house civil R&amp;D, has your business submitted, or does it intend to submit, a claim for R&amp;D tax credits?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -3150,7 +3188,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3161,10 +3201,10 @@
               "question": {
                 "id": "question47aa3909-1bfe-43fd-a0c2-06af7fd3d161",
                 "title": {
-                  "text": "Of the {ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp} total expenditure for in-house civil R&amp;D, how much was funded by the following UK sources?",
+                  "text": "Of the {total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd} total expenditure for in-house civil R&amp;D, how much was funded by the following UK sources?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -3257,7 +3297,10 @@
                       "answer80940039-1812-4760-8d84-a32e8173837e",
                       "answer89c4e9e3-7034-4424-aa14-ad9d5e2b85bf"
                     ],
-                    "conditions": ["less than", "equals"],
+                    "conditions": [
+                      "less than",
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockb55b8b7b-4ebf-4ad4-9855-a37a33950f8f",
                       "source": "calculated_summary"
@@ -3272,7 +3315,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3283,10 +3328,10 @@
               "question": {
                 "id": "question6cf4f800-2a96-44c9-833d-151641e88c77",
                 "title": {
-                  "text": "Of the {ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp} total expenditure for in-house civil R&amp;D, how much was funded by the following sources <em>outside the UK</em>?",
+                  "text": "Of the {total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd} total expenditure for in-house civil R&amp;D, how much was funded by the following sources <em>outside the UK</em>?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -3395,7 +3440,10 @@
                       "answer3f0e81cb-8895-4599-bd90-b73be7db4a6a",
                       "answere979af0a-8013-4df1-a5c6-01dce020b408"
                     ],
-                    "conditions": ["less than", "equals"],
+                    "conditions": [
+                      "less than",
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockb55b8b7b-4ebf-4ad4-9855-a37a33950f8f",
                       "source": "calculated_summary"
@@ -3410,7 +3458,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3424,52 +3474,52 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answerb6fb249e-35f6-4f70-9dd6-0592ef98fbc0"
+                      "identifier": "answerb6fb249e-35f6-4f70-9dd6-0592ef98fbc0",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer64c0ac8c-b1d9-4d54-b1fa-2d38c6f33516"
+                      "identifier": "answer64c0ac8c-b1d9-4d54-b1fa-2d38c6f33516",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer0a94e896-352b-447a-aecb-21da4665a80e"
+                      "identifier": "answer0a94e896-352b-447a-aecb-21da4665a80e",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer80940039-1812-4760-8d84-a32e8173837e"
+                      "identifier": "answer80940039-1812-4760-8d84-a32e8173837e",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer89c4e9e3-7034-4424-aa14-ad9d5e2b85bf"
+                      "identifier": "answer89c4e9e3-7034-4424-aa14-ad9d5e2b85bf",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer636efcd2-c73c-43ce-badb-bae6c7e38049"
+                      "identifier": "answer636efcd2-c73c-43ce-badb-bae6c7e38049",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerdd1d251a-dff2-4b5f-915d-730d8a466863"
+                      "identifier": "answerdd1d251a-dff2-4b5f-915d-730d8a466863",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answere4bb23c6-c13f-453c-9cf8-3cabba4da0ac"
+                      "identifier": "answere4bb23c6-c13f-453c-9cf8-3cabba4da0ac",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerd1993844-1f2c-4713-bc62-987b5252c455"
+                      "identifier": "answerd1993844-1f2c-4713-bc62-987b5252c455",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer252c6e13-c87c-4b4b-aa99-13d7770a19e0"
+                      "identifier": "answer252c6e13-c87c-4b4b-aa99-13d7770a19e0",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer3f0e81cb-8895-4599-bd90-b73be7db4a6a"
+                      "identifier": "answer3f0e81cb-8895-4599-bd90-b73be7db4a6a",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answere979af0a-8013-4df1-a5c6-01dce020b408"
+                      "identifier": "answere979af0a-8013-4df1-a5c6-01dce020b408",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -3482,7 +3532,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3493,10 +3545,10 @@
               "question": {
                 "id": "question7d504c90-3b23-49ce-82cc-730a88062e74",
                 "title": {
-                  "text": "For the reporting period, of the {ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp} total expenditure for in-house civil R&amp;D, how much of your business&#39;s R&amp;D assets are, or will be, owned by the following?",
+                  "text": "For the reporting period, of the {total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd} total expenditure for in-house civil R&amp;D, how much of your business&#39;s R&amp;D assets are, or will be, owned by the following?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_on_inhouse_civil_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_on_inhouse_civil_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -3618,7 +3670,9 @@
                       "answer38c46716-ad02-4285-b91b-6982aab123e7",
                       "answer1f50a7eb-9ad3-449a-b256-d10264f1a01c"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockb55b8b7b-4ebf-4ad4-9855-a37a33950f8f",
                       "source": "calculated_summary"
@@ -3633,7 +3687,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3767,7 +3823,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3807,7 +3865,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -3831,7 +3891,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -3931,7 +3993,9 @@
                       "answer824bd59b-384b-4e4e-8e00-1a038787b7c5",
                       "answerfb3032d1-600a-4cb8-b0f9-bf4e0ed09659"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "answerda8ed6fc-b27a-44ea-b5da-3bf80a61afda",
                       "source": "answers"
@@ -3948,7 +4012,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Civil Research and Development"]
+                        [
+                          "Civil Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -3973,12 +4039,12 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer9fa7c84b-a140-4a9a-8e22-ae91e0ac6463"
+                      "identifier": "answer9fa7c84b-a140-4a9a-8e22-ae91e0ac6463",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerda8ed6fc-b27a-44ea-b5da-3bf80a61afda"
+                      "identifier": "answerda8ed6fc-b27a-44ea-b5da-3bf80a61afda",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -3991,7 +4057,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4002,10 +4070,10 @@
               "question": {
                 "id": "question2a332fc5-f352-4db5-84a5-de15bd7a6e3b",
                 "title": {
-                  "text": "Of the {ptotal_inhouse_noncapital_expenditure_for_defence_rampdp} total in-house non-capital expenditure for defence R&amp;D, how much related to the following?",
+                  "text": "Of the {total_inhouse_noncapital_expenditure_for_defence_rampd} total in-house non-capital expenditure for defence R&amp;D, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_inhouse_noncapital_expenditure_for_defence_rampdp",
+                      "placeholder": "total_inhouse_noncapital_expenditure_for_defence_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -4079,7 +4147,9 @@
                       "answer289eb425-5b5b-466d-b3af-6fced586eac4",
                       "answerf6bb1d01-1d43-4fbc-affc-029a2d53c727"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -4089,7 +4159,9 @@
                       "answer289eb425-5b5b-466d-b3af-6fced586eac4",
                       "answerf6bb1d01-1d43-4fbc-affc-029a2d53c727"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "block30036890-4728-46cf-80c8-8f910b13a673",
                       "source": "calculated_summary"
@@ -4106,7 +4178,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Civil Research and Development"]
+                        [
+                          "Civil Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -4188,7 +4262,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4248,7 +4324,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4287,7 +4365,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["routine computer software"]
+                      "list": [
+                        "routine computer software"
+                      ]
                     }
                   ]
                 },
@@ -4311,7 +4391,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4383,7 +4465,9 @@
                           "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                           "source": "answers"
                         },
-                        ["Civil Research and Development"]
+                        [
+                          "Civil Research and Development"
+                        ]
                       ]
                     },
                     {
@@ -4408,16 +4492,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer43755d9d-7ec2-4394-81c7-9478f80adea5"
+                      "identifier": "answer43755d9d-7ec2-4394-81c7-9478f80adea5",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer7a08364f-f79e-4765-b0ae-e62e50c79692"
+                      "identifier": "answer7a08364f-f79e-4765-b0ae-e62e50c79692",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer0d1467c5-0b6c-46f0-8e5d-a5213850d77e"
+                      "identifier": "answer0d1467c5-0b6c-46f0-8e5d-a5213850d77e",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -4430,7 +4514,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4444,24 +4530,24 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer9fa7c84b-a140-4a9a-8e22-ae91e0ac6463"
+                      "identifier": "answer9fa7c84b-a140-4a9a-8e22-ae91e0ac6463",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerda8ed6fc-b27a-44ea-b5da-3bf80a61afda"
+                      "identifier": "answerda8ed6fc-b27a-44ea-b5da-3bf80a61afda",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer43755d9d-7ec2-4394-81c7-9478f80adea5"
+                      "identifier": "answer43755d9d-7ec2-4394-81c7-9478f80adea5",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer7a08364f-f79e-4765-b0ae-e62e50c79692"
+                      "identifier": "answer7a08364f-f79e-4765-b0ae-e62e50c79692",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer0d1467c5-0b6c-46f0-8e5d-a5213850d77e"
+                      "identifier": "answer0d1467c5-0b6c-46f0-8e5d-a5213850d77e",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -4474,7 +4560,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4485,10 +4573,10 @@
               "question": {
                 "id": "questiona5cf4c11-5e52-4099-aef1-0763ee7700e2",
                 "title": {
-                  "text": "In relation to your business&#39;s {ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp} total expenditure for in-house defence R&amp;D, has your business submitted, or does it intend to submit, a claim for R&amp;D tax credits?",
+                  "text": "In relation to your business&#39;s {total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd} total expenditure for in-house defence R&amp;D, has your business submitted, or does it intend to submit, a claim for R&amp;D tax credits?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -4543,7 +4631,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4554,10 +4644,10 @@
               "question": {
                 "id": "question22ce9d0c-3cbd-4442-8cfe-329c52525605",
                 "title": {
-                  "text": "Of the {ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp} total expenditure for in-house defence R&amp;D, how much was funded by the following UK sources?",
+                  "text": "Of the {total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd} total expenditure for in-house defence R&amp;D, how much was funded by the following UK sources?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -4650,7 +4740,10 @@
                       "answer006b37dd-04ae-4164-9f43-d8f14ee53c96",
                       "answer8a30381b-99a1-41df-906c-dad80b2bcf3e"
                     ],
-                    "conditions": ["less than", "equals"],
+                    "conditions": [
+                      "less than",
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockcb1b6090-8374-4ffe-bfcb-743919570f9d",
                       "source": "calculated_summary"
@@ -4665,7 +4758,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4676,10 +4771,10 @@
               "question": {
                 "id": "questione9bb9549-6fe9-497e-ae08-6342d1272c24",
                 "title": {
-                  "text": "Of the {ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp} total expenditure for in-house defence R&amp;D, how much was funded by the following sources <em>outside the UK</em>?",
+                  "text": "Of the {total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd} total expenditure for in-house defence R&amp;D, how much was funded by the following sources <em>outside the UK</em>?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -4788,7 +4883,10 @@
                       "answer59f4da03-8eb1-42c5-951e-61735a06948a",
                       "answer438ad0fd-6112-420e-8908-15cd7761d14b"
                     ],
-                    "conditions": ["less than", "equals"],
+                    "conditions": [
+                      "less than",
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockcb1b6090-8374-4ffe-bfcb-743919570f9d",
                       "source": "calculated_summary"
@@ -4803,7 +4901,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4817,52 +4917,52 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answerb7f390a7-b1b4-44f5-b2e6-8efbec3b3169"
+                      "identifier": "answerb7f390a7-b1b4-44f5-b2e6-8efbec3b3169",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerbfce700a-e14d-49fe-9758-febd51e1d144"
+                      "identifier": "answerbfce700a-e14d-49fe-9758-febd51e1d144",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer12eda16b-b12e-4eb1-b951-643ea1c7a9e2"
+                      "identifier": "answer12eda16b-b12e-4eb1-b951-643ea1c7a9e2",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer006b37dd-04ae-4164-9f43-d8f14ee53c96"
+                      "identifier": "answer006b37dd-04ae-4164-9f43-d8f14ee53c96",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer8a30381b-99a1-41df-906c-dad80b2bcf3e"
+                      "identifier": "answer8a30381b-99a1-41df-906c-dad80b2bcf3e",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerc299619d-1ce5-43cb-b9fc-7b26d68fa6e1"
+                      "identifier": "answerc299619d-1ce5-43cb-b9fc-7b26d68fa6e1",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answera4f63915-0afc-4c01-a868-f168e830c92e"
+                      "identifier": "answera4f63915-0afc-4c01-a868-f168e830c92e",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer600f6dd2-07bb-4011-bc60-596b23d24ddc"
+                      "identifier": "answer600f6dd2-07bb-4011-bc60-596b23d24ddc",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer4048b6a8-0854-443b-a7c9-f2cdc18ece38"
+                      "identifier": "answer4048b6a8-0854-443b-a7c9-f2cdc18ece38",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer7a0cb440-bdc2-468a-98c5-dc0136159f7b"
+                      "identifier": "answer7a0cb440-bdc2-468a-98c5-dc0136159f7b",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer59f4da03-8eb1-42c5-951e-61735a06948a"
+                      "identifier": "answer59f4da03-8eb1-42c5-951e-61735a06948a",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer438ad0fd-6112-420e-8908-15cd7761d14b"
+                      "identifier": "answer438ad0fd-6112-420e-8908-15cd7761d14b",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -4875,7 +4975,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -4886,10 +4988,10 @@
               "question": {
                 "id": "question5965cd0c-22b1-411e-9e72-27e23f9b3633",
                 "title": {
-                  "text": "For the reporting period, of the {ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp} total expenditure for in-house defence R&amp;D, how much of your business&#39;s R&amp;D assets are, or will be, owned by the following?",
+                  "text": "For the reporting period, of the {total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd} total expenditure for in-house defence R&amp;D, how much of your business&#39;s R&amp;D assets are, or will be, owned by the following?",
                   "placeholders": [
                     {
-                      "placeholder": "ptotal_capital_and_noncapital_expenditure_for_inhouse_defence_rampdp",
+                      "placeholder": "total_capital_and_noncapital_expenditure_for_inhouse_defence_rampd",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -5011,7 +5113,9 @@
                       "answerf59ea21c-7723-4083-a941-8cd16a371418",
                       "answer65ba5dc2-a75c-4254-8992-a9334894cd48"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": {
                       "identifier": "blockcb1b6090-8374-4ffe-bfcb-743919570f9d",
                       "source": "calculated_summary"
@@ -5026,7 +5130,9 @@
                       "identifier": "answerefef3546-ea2f-4c88-b068-819d171f4872",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -5041,7 +5147,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -5212,21 +5320,21 @@
               },
               "routing_rules": [
                 {
-                  "goto": {
-                    "section": "End",
-                    "when": [
+                  "section": "End",
+                  "when": {
+                    "in": [
                       {
-                        "id": "answer-driving-520046b4-ec3c-4d91-85c5-3c4565811379",
-                        "condition": "equals",
-                        "value": "No"
-                      }
+                        "source": "answers",
+                        "identifier": "answer-driving-520046b4-ec3c-4d91-85c5-3c4565811379"
+                      },
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
                 {
-                  "goto": {
-                    "block": "block520046b4-ec3c-4d91-85c5-3c4565811379"
-                  }
+                  "block": "block520046b4-ec3c-4d91-85c5-3c4565811379"
                 }
               ]
             },
@@ -5846,7 +5954,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -5991,7 +6101,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -6032,7 +6144,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6101,7 +6215,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6141,7 +6257,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -6182,7 +6300,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6251,7 +6371,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6335,7 +6457,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6404,7 +6528,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6418,16 +6544,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer414c9d3e-5ee5-47e7-b233-ea64a45c8586"
+                      "identifier": "answer414c9d3e-5ee5-47e7-b233-ea64a45c8586",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer3f8b371d-ac9c-4d72-a3b4-088151f50f17"
+                      "identifier": "answer3f8b371d-ac9c-4d72-a3b4-088151f50f17",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer80b358b4-6973-4d1c-9a79-138bdd731326"
+                      "identifier": "answer80b358b4-6973-4d1c-9a79-138bdd731326",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -6440,7 +6566,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Defence Research and Development"]
+                    [
+                      "Defence Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6480,7 +6608,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -6521,7 +6651,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6590,7 +6722,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6630,7 +6764,9 @@
                       "description": "<strong>Exclude:</strong>"
                     },
                     {
-                      "list": ["VAT"]
+                      "list": [
+                        "VAT"
+                      ]
                     }
                   ]
                 },
@@ -6671,7 +6807,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6740,7 +6878,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6824,7 +6964,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6893,7 +7035,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6907,16 +7051,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer0ce80862-dd7c-4ca4-9d73-05a10c76e738"
+                      "identifier": "answer0ce80862-dd7c-4ca4-9d73-05a10c76e738",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer5e764e6d-dd48-4144-9208-758963c47cc3"
+                      "identifier": "answer5e764e6d-dd48-4144-9208-758963c47cc3",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer8fcc3d65-1a72-4e50-a2f3-548251d24212"
+                      "identifier": "answer8fcc3d65-1a72-4e50-a2f3-548251d24212",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -6929,7 +7073,9 @@
                       "identifier": "answer27e45a6b-76d8-4053-8d52-1311cb326ef5",
                       "source": "answers"
                     },
-                    ["Civil Research and Development"]
+                    [
+                      "Civil Research and Development"
+                    ]
                   ]
                 }
               }
@@ -6944,7 +7090,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -7177,16 +7325,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer5e468284-ea51-4707-955d-51c01b617b57"
+                      "identifier": "answer5e468284-ea51-4707-955d-51c01b617b57",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer1a533ece-54b1-4a20-8f63-e501b4dffa97"
+                      "identifier": "answer1a533ece-54b1-4a20-8f63-e501b4dffa97",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer4891296e-3068-436b-838b-59d8459cb78e"
+                      "identifier": "answer4891296e-3068-436b-838b-59d8459cb78e",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -7202,16 +7350,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answer7b7b9157-83d9-4613-9611-4545ca1313b1"
+                      "identifier": "answer7b7b9157-83d9-4613-9611-4545ca1313b1",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerf8a289e3-098f-4707-8bba-74b714e6c91b"
+                      "identifier": "answerf8a289e3-098f-4707-8bba-74b714e6c91b",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerf8006b8a-39b4-4f68-8449-2fcadabedf6c"
+                      "identifier": "answerf8006b8a-39b4-4f68-8449-2fcadabedf6c",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -7496,16 +7644,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answerbf424b9f-d0ae-460d-955e-239cc86fe376"
+                      "identifier": "answerbf424b9f-d0ae-460d-955e-239cc86fe376",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answera715ee60-bd53-4244-aa7e-c002ddbcb302"
+                      "identifier": "answera715ee60-bd53-4244-aa7e-c002ddbcb302",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer15c4edce-4e7c-4cdd-9532-0082fc8326bb"
+                      "identifier": "answer15c4edce-4e7c-4cdd-9532-0082fc8326bb",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -7521,16 +7669,16 @@
                 "operation": {
                   "+": [
                     {
-                      "source": "answers",
-                      "identifier": "answercbdf23c6-42a4-4ab6-aba7-cedcaa71f550"
+                      "identifier": "answercbdf23c6-42a4-4ab6-aba7-cedcaa71f550",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answerb2fa4091-ce24-404a-8618-4ad2f1ff34c5"
+                      "identifier": "answerb2fa4091-ce24-404a-8618-4ad2f1ff34c5",
+                      "source": "answers"
                     },
                     {
-                      "source": "answers",
-                      "identifier": "answer9806cfc6-d6f9-487d-852f-f1419d42bf2e"
+                      "identifier": "answer9806cfc6-d6f9-487d-852f-f1419d42bf2e",
+                      "source": "answers"
                     }
                   ]
                 },
@@ -7547,7 +7695,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -7653,7 +7803,9 @@
                         "identifier": "answer52a7b8a3-bddc-4a24-b636-ac0b57351f8d",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -7737,7 +7889,9 @@
                         "identifier": "answer3d6ad727-bdce-41c1-aaf9-610872510c01",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -7805,7 +7959,9 @@
                       "answer6c5177b8-65bd-4f53-9d5f-7ebb5d4ffaff",
                       "answere7f2e8c7-348b-42f0-803e-8524a887e489"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -7814,7 +7970,9 @@
                       "answer6c5177b8-65bd-4f53-9d5f-7ebb5d4ffaff",
                       "answere7f2e8c7-348b-42f0-803e-8524a887e489"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -7828,7 +7986,9 @@
                         "identifier": "answer3d6ad727-bdce-41c1-aaf9-610872510c01",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -7919,7 +8079,9 @@
                         "identifier": "answer89b5068a-8896-4fd7-a352-c64b47cd314a",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -8006,7 +8168,9 @@
                       "answer3ffb7491-6364-4b55-bd2d-0ea3c0b16d24",
                       "answerdc034a38-143e-463f-8912-fad01d20d005"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -8016,7 +8180,9 @@
                       "answer3ffb7491-6364-4b55-bd2d-0ea3c0b16d24",
                       "answerdc034a38-143e-463f-8912-fad01d20d005"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -8030,7 +8196,9 @@
                         "identifier": "answer89b5068a-8896-4fd7-a352-c64b47cd314a",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -8128,7 +8296,9 @@
                         "identifier": "answer63a3f325-b54b-47cf-abc3-56c2efb63f1b",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -8234,7 +8404,9 @@
                       "answer0dfea99d-dc9b-4aeb-b489-2aa83edc0078",
                       "answer1424831c-e32f-41ba-868a-2f503229e8f9"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -8245,7 +8417,9 @@
                       "answer0dfea99d-dc9b-4aeb-b489-2aa83edc0078",
                       "answer1424831c-e32f-41ba-868a-2f503229e8f9"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -8259,7 +8433,9 @@
                         "identifier": "answer63a3f325-b54b-47cf-abc3-56c2efb63f1b",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -8364,7 +8540,9 @@
                         "identifier": "answer6cb2eb84-454c-43ac-a58b-03375d3cb065",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -8489,7 +8667,9 @@
                       "answer885a42d8-4638-4a26-a73e-7cc7b6f0bac2",
                       "answere8f3a1c7-d27d-4914-9654-01cfcb0c503d"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -8501,7 +8681,9 @@
                       "answer885a42d8-4638-4a26-a73e-7cc7b6f0bac2",
                       "answere8f3a1c7-d27d-4914-9654-01cfcb0c503d"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -8515,7 +8697,9 @@
                         "identifier": "answer6cb2eb84-454c-43ac-a58b-03375d3cb065",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -8627,7 +8811,9 @@
                         "identifier": "answer662fdca7-eb9e-446c-b629-7cfa06978c10",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -8771,7 +8957,9 @@
                       "answer73d0c4b3-7655-40cf-8bec-dd65721553cd",
                       "answer661b648c-48ee-4443-983f-d593cf884001"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -8784,7 +8972,9 @@
                       "answer73d0c4b3-7655-40cf-8bec-dd65721553cd",
                       "answer661b648c-48ee-4443-983f-d593cf884001"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -8798,7 +8988,9 @@
                         "identifier": "answer662fdca7-eb9e-446c-b629-7cfa06978c10",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -8917,7 +9109,9 @@
                         "identifier": "answere7a461b4-c1b1-42c1-863f-2cee3ad575ce",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -9080,7 +9274,9 @@
                       "answerb3508db5-7fd9-4884-9610-11ea0ebb2c7b",
                       "answer4bfd753e-fe90-4ca7-a02c-6f7facee971c"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -9094,7 +9290,9 @@
                       "answerb3508db5-7fd9-4884-9610-11ea0ebb2c7b",
                       "answer4bfd753e-fe90-4ca7-a02c-6f7facee971c"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -9108,7 +9306,9 @@
                         "identifier": "answere7a461b4-c1b1-42c1-863f-2cee3ad575ce",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -9234,7 +9434,9 @@
                         "identifier": "answer11020b6e-6163-4e15-b376-fc1ec6052966",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -9416,7 +9618,9 @@
                       "answer3d35321e-32d0-4716-9a6a-5047d983ab51",
                       "answer763f33b8-819e-45fa-8a1c-756cc03ca834"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -9431,7 +9635,9 @@
                       "answer3d35321e-32d0-4716-9a6a-5047d983ab51",
                       "answer763f33b8-819e-45fa-8a1c-756cc03ca834"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -9445,7 +9651,9 @@
                         "identifier": "answer11020b6e-6163-4e15-b376-fc1ec6052966",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -9578,7 +9786,9 @@
                         "identifier": "answer04ef0e28-8d6c-4a38-bfb1-29963ea623aa",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -9779,7 +9989,9 @@
                       "answerae44d1c7-160d-4a31-bedc-7b5198fd6de9",
                       "answer9a402357-48ff-4a47-976b-4ca76a94168e"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -9795,7 +10007,9 @@
                       "answerae44d1c7-160d-4a31-bedc-7b5198fd6de9",
                       "answer9a402357-48ff-4a47-976b-4ca76a94168e"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -9809,7 +10023,9 @@
                         "identifier": "answer04ef0e28-8d6c-4a38-bfb1-29963ea623aa",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -9949,7 +10165,9 @@
                         "identifier": "answer8a59fac9-c085-4c97-bf7b-de7a86f02b83",
                         "source": "answers"
                       },
-                      ["Yes"]
+                      [
+                        "Yes"
+                      ]
                     ]
                   }
                 },
@@ -10169,7 +10387,9 @@
                       "answer54d38881-00f7-4506-9e71-acef256d99cd",
                       "answer7c538ab8-b17c-42ad-8670-26a15b72ecaf"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -10186,7 +10406,9 @@
                       "answer54d38881-00f7-4506-9e71-acef256d99cd",
                       "answer7c538ab8-b17c-42ad-8670-26a15b72ecaf"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 100
                   }
                 ]
@@ -10200,7 +10422,9 @@
                         "identifier": "answer8a59fac9-c085-4c97-bf7b-de7a86f02b83",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -10420,7 +10644,9 @@
                       "answer0c71f58e-5f5d-44f2-aec4-1865857281a7",
                       "answerff592661-4b65-4e62-80d0-a2c88c5c6a98"
                     ],
-                    "conditions": ["equals"],
+                    "conditions": [
+                      "equals"
+                    ],
                     "value": 0
                   },
                   {
@@ -10437,7 +10663,9 @@
                       "answer0c71f58e-5f5d-44f2-aec4-1865857281a7",
                       "answerff592661-4b65-4e62-80d0-a2c88c5c6a98"
                     ],
-                    "conditions": ["less than"],
+                    "conditions": [
+                      "less than"
+                    ],
                     "value": 100
                   }
                 ]
@@ -10695,7 +10923,9 @@
               "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
               "source": "answers"
             },
-            ["Yes"]
+            [
+              "Yes"
+            ]
           ]
         }
       }
@@ -10770,7 +11000,9 @@
                         "identifier": "answere1284f74-47d5-4992-9d83-691c91bcc5f6",
                         "source": "answers"
                       },
-                      ["No"]
+                      [
+                        "No"
+                      ]
                     ]
                   }
                 },
@@ -10812,7 +11044,9 @@
                   "identifier": "answer828a8d5f-cee8-43d9-addb-f41624a04e23",
                   "source": "answers"
                 },
-                ["Yes"]
+                [
+                  "Yes"
+                ]
               ]
             },
             {
@@ -10821,7 +11055,9 @@
                   "identifier": "answer17cc14c8-62d6-47f9-b84d-a238460d1d24",
                   "source": "answers"
                 },
-                ["Yes"]
+                [
+                  "Yes"
+                ]
               ]
             }
           ]
