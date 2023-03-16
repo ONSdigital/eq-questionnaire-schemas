@@ -3,7 +3,7 @@
     "mime_type": "application/json/ons/eq",
     "schema_version": "0.0.1",
     "data_version": "0.0.3",
-    "survey_id": "738",
+    "survey_id": "739",
     "form_type": "0001",
     "legal_basis": "Rhoddir hysbysiad o dan adran 1 o Ddeddf Ystadegau Masnach 1947.",
     "answer_codes": [
@@ -552,7 +552,7 @@
             "code": "PHM-FUP-END-001"
         }
     ],
-    "title": "Arolwg Heintiadau COVID-19",
+    "title": "Arolwg COVID-19 a Heintiadau Anadlol",
     "questionnaire_flow": {
         "type": "Hub",
         "options": {
@@ -619,7 +619,7 @@
                             },
                             "routing_rules": [
                                 {
-                                    "block": "blockb58f12f0-d4ae-46cd-9cf0-ca63dfea45c0",
+                                    "section": "End",
                                     "when": {
                                         "in": [
                                             {
@@ -678,7 +678,7 @@
                             },
                             "routing_rules": [
                                 {
-                                    "block": "blockb58f12f0-d4ae-46cd-9cf0-ca63dfea45c0",
+                                    "section": "End",
                                     "when": {
                                         "in": [
                                             {
@@ -704,7 +704,7 @@
                                 "title": "Cafwyd problem wrth agor yr arolwg",
                                 "description": [
                                     {
-                                        "text": "<p>Mae\u2019r holiadur hwn ar gyfer {first_name}. Rydych chi wedi nodi nad chi yw {first_name} ac nad ydych yn cwblhau\u2019r holiadur ar ei ran/rhan. </p><p>Os yw hyn yn gywir:</p><p>1.Ticiwch y blwch parhau ac yna dewiswch &#x201C;Cadw a pharhau&#x201D;.</p><p>2.Ar y dudalen nesaf, dewiswch y botwm &#x201C;Cyflwyno&#x201D; i gyflwyno\u2019r holiadur.</p><p>3.Ffoniwch y llinell gymorth ar 0xxxxxxxxxx. Bydd angen eich Rhif Adnabod Cyfranogwr arnoch. Bydd yr aelod o d\u00eem yr arolwg sydd ar y ff\u00f4n yn dweud wrthych beth i\u2019w wneud nesaf.</p><p><em>Os mai chi yw {first_name}</em>, neu os ydych chi\u2019n ateb y cwestiynau ar ran yr unigolyn:</p><p>1.Dewiswch <em>&#x201C;&lt; Blaenorol&#x201D;</em> ddwywaith. Gallwch ddod o hyd iddo ar frig y dudalen hon <em>ar yr ochr chwith</em>, o dan y faner las sy\u2019n dweud &#x201C;Arolwg Heintiadau COVID-19&#x201D;.</p><p>2.Yna bydd angen i chi ddiwygio\u2019r atebion er mwyn gallu cwblhau\u2019r arolwg.</p>",
+                                        "text": "<p>Mae\u2019r holiadur hwn ar gyfer {first_name}. Rydych chi wedi nodi nad chi yw {first_name} ac nad ydych yn cwblhau\u2019r holiadur ar ei ran/rhan. </p><p>Os yw hyn yn gywir:</p><p>1.Ticiwch y blwch parhau ac yna dewiswch &#x201C;Cadw a pharhau&#x201D;.</p><p>2.Ar y dudalen nesaf, dewiswch y botwm &#x201C;Cyflwyno&#x201D; i gyflwyno\u2019r holiadur.</p><p>3.Ffoniwch y llinell gymorth ar 0xxxxxxxxxx. Bydd angen eich Rhif Adnabod Cyfranogwr arnoch. Bydd yr aelod o d\u00eem yr arolwg sydd ar y ff\u00f4n yn dweud wrthych beth i\u2019w wneud nesaf.</p><p><em>Os mai chi yw {first_name}</em>, neu os ydych chi\u2019n ateb y cwestiynau ar ran yr unigolyn:</p><p>1.Dewiswch <em>&#x201C;&lt; Blaenorol&#x201D;</em> ddwywaith. Gallwch ddod o hyd iddo ar frig y dudalen hon <em>ar yr ochr chwith</em>, o dan y faner las sy\u2019n dweud &#x201C;Arolwg COVID-19 a Heintiadau Anadlol&#x201D;.</p><p>2.Yna bydd angen i chi ddiwygio\u2019r atebion er mwyn gallu cwblhau\u2019r arolwg.</p>",
                                         "placeholders": [
                                             {
                                                 "placeholder": "first_name",
@@ -777,14 +777,15 @@
                             },
                             "skip_conditions": {
                                 "when": {
-                                    "any-in": [
-                                        [
-                                            "Continue"
-                                        ],
+                                    "in": [
                                         {
-                                            "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07",
+                                            "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
                                             "source": "answers"
-                                        }
+                                        },
+                                        [
+                                            "Yes",
+                                            "No"
+                                        ]
                                     ]
                                 }
                             }
@@ -966,7 +967,7 @@
                                                 "value": "Yes"
                                             },
                                             {
-                                                "label": "Na",
+                                                "label": "Na ",
                                                 "value": "No"
                                             }
                                         ]
@@ -1011,7 +1012,7 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionf3a486e6-6b19-4104-9870-d6f7b1338cef",
-                                "title": "Rhowch god bar y pecyn samplu swab y gwnaethoch chi ei ddefnyddio.",
+                                "title": "Rhowch god bar y pecyn samplu swab y gwnaethoch chi ei ddefnyddio. ",
                                 "description": [
                                     "<p>Gellir dod o hyd i hwn ar eich pot sampl swab ac ar frig y daflen Gwybodaeth Bwysig a oedd yn eich pecyn prawf swab hefyd. </p><p>Rhowch yr 8 rhif sy\u2019n dod ar \u00f4l y llythrennau SWT.</p>"
                                 ],
@@ -1354,15 +1355,12 @@
             ],
             "enabled": {
                 "when": {
-                    "in": [
+                    "==": [
+                        null,
                         {
-                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                            "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
                             "source": "answers"
-                        },
-                        [
-                            "Do this questionnaire and take a swab sample",
-                            "Do this questionnaire and take a swab sample and a blood sample"
-                        ]
+                        }
                     ]
                 }
             }
@@ -1778,7 +1776,7 @@
                                         "type": "Radio",
                                         "options": [
                                             {
-                                                "label": "Ydw",
+                                                "label": "Ydw ",
                                                 "value": "Yes"
                                             },
                                             {
@@ -1950,14 +1948,12 @@
             ],
             "enabled": {
                 "when": {
-                    "in": [
+                    "==": [
+                        null,
                         {
-                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
+                            "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850",
                             "source": "answers"
-                        },
-                        [
-                            "Do this questionnaire and take a swab sample and a blood sample"
-                        ]
+                        }
                     ]
                 }
             }
@@ -2047,57 +2043,12 @@
             ],
             "enabled": {
                 "when": {
-                    "or": [
+                    "==": [
                         {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answere532d57d-217c-40e9-a934-f0a01c66bfd5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "No"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "==": [
-                                        {
-                                            "source": "answers",
-                                            "identifier": "answerc4d02838-5c8a-4083-897c-d80efe8e19b4"
-                                        },
-                                        null
-                                    ]
-                                }
-                            ]
+                            "source": "answers",
+                            "identifier": "answerbbdb0b77-e4d2-4a94-bb52-c7b6e91ab850"
                         },
-                        {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerc4d02838-5c8a-4083-897c-d80efe8e19b4",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "No"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answere532d57d-217c-40e9-a934-f0a01c66bfd5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "No"
-                                        ]
-                                    ]
-                                }
-                            ]
-                        }
+                        null
                     ]
                 }
             }
@@ -2286,7 +2237,7 @@
                                         "type": "Radio",
                                         "options": [
                                             {
-                                                "label": "Yn gweithio ar hyn o bryd - mae hyn yn cynnwys os ydych chi\u2019n absennol oherwydd salwch neu\u2019n absennol am reswm arall am lai na 4 wythnos",
+                                                "label": "Yn gweithio ar hyn o bryd - mae hyn yn cynnwys os ydych chi\u2019n absennol oherwydd salwch neu\u2019n absennol am reswm arall am lai na 4 wythnos ",
                                                 "value": "Currently working - this includes if you are on sick leave or other leave for less than 4 weeks"
                                             },
                                             {
@@ -2393,11 +2344,11 @@
                                         "type": "Radio",
                                         "options": [
                                             {
-                                                "label": "Plentyn o dan oedran ysgol heb fod yn mynychu meithrinfa na lleoliad cyn ysgol na gwarchodwr plant",
+                                                "label": "Plentyn o dan oedran ysgol heb fod yn mynychu meithrinfa na lleoliad cyn ysgol na gwarchodwr plant  ",
                                                 "value": "A child below school age and not attending a nursery or pre-school or childminder"
                                             },
                                             {
-                                                "label": "Plentyn o dan oedran ysgol ac yn mynychu meithrinfa neu leoliad cyn ysgol neu warchodwr plant",
+                                                "label": "Plentyn o dan oedran ysgol ac yn mynychu meithrinfa neu leoliad cyn ysgol neu warchodwr plant  ",
                                                 "value": "A child below school age and attending a nursery or a pre-school or childminder"
                                             },
                                             {
@@ -2413,7 +2364,7 @@
                                                 "value": "Attending a college or other further education provider including apprenticeships"
                                             },
                                             {
-                                                "label": "Mynychu prifysgol",
+                                                "label": "Mynychu prifysgol ",
                                                 "value": "Attending university"
                                             }
                                         ]
@@ -2603,7 +2554,10 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionbfae0aa9-e245-4bf4-bd32-984369f21932",
-                                "title": "Ydy eich prif swydd neu fusnes wedi newid ers i chi gwblhau\u2019r holiadur ddiwethaf?",
+                                "title": "A yw eich prif swydd neu fusnes wedi newid ers i chi gwblhau\u2019r holidaur hwn ddiwethaf neu holidaur yr Arolwg Heintiadau COVID-19?",
+                                "description": [
+                                    "<p>Atebwch yn seiliedig ar yr holiadur a gwblhawyd gennych yn fwyaf diweddar.</p>"
+                                ],
                                 "type": "General",
                                 "answers": [
                                     {
@@ -2844,7 +2798,7 @@
                                                 "value": "Financial services. This includes insurance"
                                             },
                                             {
-                                                "label": "Gweithgynhyrchu neu adeiladu",
+                                                "label": "Gweithgynhyrchu neu adeiladu ",
                                                 "value": "Manufacturing or construction"
                                             },
                                             {
@@ -2856,11 +2810,11 @@
                                                 "value": "Armed forces"
                                             },
                                             {
-                                                "label": "Y celfyddydau neu adloniant neu hamdden",
+                                                "label": "Y celfyddydau neu adloniant neu hamdden         ",
                                                 "value": "Arts or entertainment or recreation"
                                             },
                                             {
-                                                "label": "Sector cyflogaeth arall",
+                                                "label": "Sector cyflogaeth arall ",
                                                 "value": "Other employment sector",
                                                 "detail_answer": {
                                                     "label": "Nodwch",
@@ -3035,7 +2989,7 @@
                                                 "value": "Primary care - for example in a GP or dentist"
                                             },
                                             {
-                                                "label": "Gofal eilaidd - er enghraifft ysbyty",
+                                                "label": "Gofal eilaidd - er enghraifft ysbyty ",
                                                 "value": "Secondary care - for example in a hospital"
                                             },
                                             {
@@ -3567,61 +3521,12 @@
             ],
             "enabled": {
                 "when": {
-                    "or": [
+                    "==": [
                         {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Yes"
-                                        ]
-                                    ]
-                                }
-                            ]
+                            "source": "answers",
+                            "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
                         },
-                        {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "==": [
-                                        {
-                                            "source": "answers",
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                                        },
-                                        null
-                                    ]
-                                }
-                            ]
-                        }
+                        null
                     ]
                 }
             }
@@ -4269,9 +4174,9 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionc48aa260-4726-4045-91b6-c20829d103bf",
-                                "title": "Ydych chi wedi cael eich brechu rhag COVID-19 ers y tro diwethaf i chi gwblhau\u2019r holiadur hwn?",
+                                "title": "Ydy chi wedi cael eich brechu rhag COVID-19 ers i chi gwblhau\u2019r holiadur hwn ddiwethaf neu holiadur Arolwg Heintiadau COVID-19?",
                                 "description": [
-                                    "<p>Atebwch &quot;Ydw&quot; os ydych chi wedi cael dos cyntaf, ail ddos, neu ddos mwy diweddar, neu ddos atgyfnerthu, ers i chi gwblhau\u2019r holiadur hwn ddiwethaf</p>"
+                                    "<p>Atebwch &quot;Ydw&quot; os ydych chi wedi cael dos cyntaf, ail ddos, neu ddos mwy diweddar, neu ddos atgyfnerthu, ers yr holiadur a gwblhawyd gennych yn fwyaf diweddar</p>"
                                 ],
                                 "type": "General",
                                 "answers": [
@@ -4477,9 +4382,9 @@
                             "type": "Question",
                             "question": {
                                 "id": "questioneb99fbd2-9b40-473f-aa6c-c8275deb8bef",
-                                "title": "Ydych chi wedi cael eich brechu rhag y ffliw ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Ydy chi wedi cael eich brechu rhag y ffliw ers i chi gwblhau\u2019r holiadur hwn ddiwethaf neu holiadur Arolwg Heintiadau COVID-19?",
                                 "description": [
-                                    "<p>Caiff hyn ei alw\u2019n &quot;bigiad ffliw&quot; neu\u2019n &quot;frechiad ffliw tymhorol&quot;.</p>"
+                                    "<p>Atebwch ar sail yr holiadur a gwblhawyd gennych yn fwyaf diweddar.</p><p>Mae hyn yn cael ei adnabod yn gyffredin fel y &quot;pigiad ffliw&quot; neu &quot;brechiad ffliw tymhorol&quot;.</p>"
                                 ],
                                 "type": "General",
                                 "answers": [
@@ -4561,7 +4466,10 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionba3c1460-7b19-4c6d-bc7b-0685f2fda618",
-                                "title": "Ydych chi wedi bod y tu allan i\u2019r DU ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Ydy chi wedi bod y tu allan i\u2019r DU ers i chi lenwi\u2019r holiadur hwn ddiwethaf neu holiadur yr Arolwg Heintiadau COVID-19?",
+                                "description": [
+                                    "<p>Atebwch yn seiliedig ar yr holiadur a gwblhawyd gennych yn fwyaf diweddar.</p>"
+                                ],
                                 "type": "General",
                                 "answers": [
                                     {
@@ -5440,61 +5348,12 @@
             ],
             "enabled": {
                 "when": {
-                    "or": [
+                    "==": [
                         {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Yes"
-                                        ]
-                                    ]
-                                }
-                            ]
+                            "source": "answers",
+                            "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
                         },
-                        {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "==": [
-                                        {
-                                            "source": "answers",
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                                        },
-                                        null
-                                    ]
-                                }
-                            ]
-                        }
+                        null
                     ]
                 }
             }
@@ -6157,7 +6016,7 @@
                                                 "description": "Mae\u2019r rhain yn cynnwys annwyd a heintiau fel y ffliw, COVID-19 a heintiau ar y frest. Gall y rhain achosi symptomau fel peswch, dolur gwddf, trwyn sy\u2019n llawn neu\u2019n rhedeg, tymheredd uchel (twymyn), blinder, newidiadau i synnwyr blasu neu arogli, cyhyrau yn brifo neu ddiffyg anadl."
                                             },
                                             {
-                                                "description": "Peidiwch \u00e2 chynnwys cyflyrau a oedd eisoes gennych chi, er enghraifft asthma."
+                                                "description": "Peidiwch \u00e2 chynnwys cyflyrau a oedd eisoes gennych chi, er enghraifft asthma. "
                                             }
                                         ]
                                     }
@@ -6332,9 +6191,9 @@
                             "type": "Question",
                             "question": {
                                 "id": "question73143af8-91f6-4445-9335-fc7ca5de8c02",
-                                "title": "Ydych chi wedi cael prawf swab ar gyfer haint COVID-19 ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Ydy chi wedi cael prawf swab ar gyfer haint COVID-19 ers i chi gwblhau\u2019r holiadur hwn ddiwethaf neu holiadur yr Arolwg Heintiadau COVID-19?",
                                 "description": [
-                                    "<p>Peidiwch \u00e2 chynnwys unrhyw brofion a wnaed fel rhan o\u2019r arolwg hwn.</p><p>Dylech gynnwys unrhyw fath o brawf swab am haint COVID-19, fel prawf llif unffordd neu brawf PCR.</p>"
+                                    "<p>Atebwch yn seiliedig ar yr holiadur a gwblhawyd gennych yn fwyaf diweddar.</p><p>Peidiwch \u00e2 chynnwys unrhyw brofion a wnaed fel rhan o\u2019r Arolwg Heintiadau COVID-19.</p><p>Cynnwys unrhyw fath o brawf swab ar gyfer haint COVID-19, megis llif ochrol neu brawf PCR.</p>"
                                 ],
                                 "type": "General",
                                 "answers": [
@@ -6380,9 +6239,9 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionac903d5f-42a1-4af4-9e3b-c059a264867d",
-                                "title": "Beth oedd canlyniadau\u2019r holl brofion swab rydych chi wedi\u2019u cael ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Beth oedd canlyniadau\u2019r holl brofion swab a gawsoch yn ddiweddar?",
                                 "description": [
-                                    "<p>Dewiswch yr opsiwn <em>cyntaf</em> sy\u2019n gymwys.</p>"
+                                    "<p>Atebwch ar gyfer y profion rydych wedi\u2019u cymryd ers i chi gwblhau hwn ddiwethaf, neu holiadur yr Arolwg Heintiadau COVID-19, pa un bynnag oedd y mwyaf diweddar.</p><p>Dewiswch yr opsiwn ateb <em>cyntaf</em> sy\u2019n berthnasol.</p>"
                                 ],
                                 "type": "General",
                                 "answers": [
@@ -6417,9 +6276,9 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionc74cfe9c-46ec-4ee8-9721-081eda86bcc7",
-                                "title": "Beth oedd dyddiad y prawf swab positif cyntaf a gawsoch chi ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Beth oedd dyddiad y prawf swab positif cyntaf a gawsoch yn ddiweddar?",
                                 "description": [
-                                    "<p>Os na allwch chi gofio pa ddiwrnod o\u2019r mis, gwnewch eich gorau i ddyfalu. Os na allwch chi ddyfalu, rhowch y 15fed.</p>"
+                                    "<p>Atebwch ar gyfer eich prawf swab positif cyntaf yr ydych wedi ei gymryd ers i chi ei gwblhau ddiwethaf, neu holiadur yr Arolwg Heintiadau COVID-19, pa un bynnag oedd y diweddaraf.</p><p>Os na allwch gofio diwrnod y mis, gwnewch eich gorau dyfalu. Os na allwch chi ddyfalu orau, rhowch y 15fed.</p>"
                                 ],
                                 "type": "General",
                                 "answers": [
@@ -6464,7 +6323,10 @@
                             "type": "Question",
                             "question": {
                                 "id": "question49776e59-cf0b-4688-911b-7ab695c34321",
-                                "title": "Pa fath o brawf oedd y prawf swab positif cyntaf a gawsoch chi ers i chi gwblhau\u2019r holiadur hwn ddiwethaf?",
+                                "title": "Pa fath o brawf oedd y prawf swab positif cyntaf a gawsoch yn ddiweddar?",
+                                "description": [
+                                    "<p>Atebwch ar gyfer eich prawf swab positif cyntaf yr ydych wedi ei gymryd ers i chi ei gwblhau ddiwethaf, neu holiadur yr Arolwg Heintiadau COVID-19, pa un bynnag oedd y diweddaraf.</p>"
+                                ],
                                 "type": "General",
                                 "answers": [
                                     {
@@ -6539,7 +6401,7 @@
                             "question": {
                                 "id": "question1f4d97f5-93f2-464d-99fb-b5ffbf84b0bd",
                                 "title": {
-                                    "text": "O\u2019r {number_of_days} diwrnod pan nad oeddech chi\u2019n gallu gwneud gweithgareddau dyddiol arferol, sawl diwrnod oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_days} diwrnod pan nad oeddech chi\u2019n gallu gwneud gweithgareddau dyddiol arferol, sawl diwrnod oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_days",
@@ -6566,7 +6428,7 @@
                                         "id": "answeref912f7a-f5a9-4684-a30e-469912e57d56",
                                         "mandatory": true,
                                         "type": "Number",
-                                        "label": "Sawl diwrnod",
+                                        "label": "Nifer o weithiau",
                                         "minimum": {
                                             "value": 0,
                                             "exclusive": false
@@ -6687,7 +6549,7 @@
                             "question": {
                                 "id": "question607ccd35-a134-421a-962c-2c847fc2b93b",
                                 "title": {
-                                    "text": "O\u2019r {number_of_days} diwrnod pan oeddech chi i ffwrdd o\u2019r gwaith neu addysg, sawl diwrnod oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_days} diwrnod pan oeddech chi i ffwrdd o\u2019r gwaith neu addysg, sawl diwrnod oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_days",
@@ -6714,7 +6576,7 @@
                                         "id": "answer55ccc0e5-3052-407f-bb12-2e5108cd5d51",
                                         "mandatory": true,
                                         "type": "Number",
-                                        "label": "Sawl diwrnod",
+                                        "label": "Nifer o weithiau",
                                         "minimum": {
                                             "value": 0,
                                             "exclusive": false
@@ -6771,7 +6633,7 @@
                             "type": "Question",
                             "question": {
                                 "id": "questionbac98837-3fd9-4fbf-9335-bfa51ad708eb",
-                                "title": "Yn ystod y 28 diwrnod diwethaf, ar sawl diwrnod oedd gennych chi apwyntiad mewn meddygfa am unrhyw resymau iechyd personol?",
+                                "title": "Yn ystod y 28 diwrnod diwethaf, ar sawl diwrnod oedd gennych chi apwyntiad mewn meddygfa am unrhyw resymau iechyd personol? ",
                                 "guidance": {
                                     "contents": [
                                         {
@@ -6812,7 +6674,7 @@
                             "question": {
                                 "id": "question9aecac89-0db8-4f91-95e9-ba6d74a10fd5",
                                 "title": {
-                                    "text": "O\u2019r {number_of_days} diwrnod pan oedd gennych chi apwyntiad mewn meddygfa, sawl diwrnod oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_days} diwrnod pan oedd gennych chi apwyntiad mewn meddygfa, sawl diwrnod oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_days",
@@ -6850,7 +6712,7 @@
                                         "id": "answer3d4db71a-c071-4f4c-a1eb-8d2f21805e9f",
                                         "mandatory": true,
                                         "type": "Number",
-                                        "label": "Sawl diwrnod",
+                                        "label": "Nifer o weithiau",
                                         "minimum": {
                                             "value": 0,
                                             "exclusive": false
@@ -6928,7 +6790,7 @@
                             "question": {
                                 "id": "questionc5011cab-74b1-4f46-8a1a-d595b8a4428b",
                                 "title": {
-                                    "text": "O\u2019r {number_of_days} diwrnod y gwnaethoch chi siarad \u00e2 fferyllydd neu ffonio 111, sawl diwrnod oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_days} diwrnod y gwnaethoch chi siarad \u00e2 fferyllydd neu ffonio 111, sawl diwrnod oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_days",
@@ -6955,7 +6817,7 @@
                                         "id": "answerb30bd212-17dd-48d4-8dd8-0de47efe5854",
                                         "mandatory": true,
                                         "type": "Number",
-                                        "label": "Sawl diwrnod",
+                                        "label": "Nifer o weithiau",
                                         "minimum": {
                                             "value": 0,
                                             "exclusive": false
@@ -7033,7 +6895,7 @@
                             "question": {
                                 "id": "question69f801a3-cab1-4993-b165-9d686434a21c",
                                 "title": {
-                                    "text": "O\u2019r {number_of_times} gwaith y cawsoch ofal brys, sawl gwaith oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_times} gwaith y cawsoch ofal brys, sawl gwaith oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_times",
@@ -7060,7 +6922,7 @@
                                         "id": "answer59b6252d-89ea-4509-8368-84160146cb79",
                                         "mandatory": true,
                                         "type": "Number",
-                                        "label": "Sawl gwaith",
+                                        "label": "Nifer o weithiau",
                                         "minimum": {
                                             "value": 0,
                                             "exclusive": false
@@ -7157,7 +7019,7 @@
                             "question": {
                                 "id": "questione408547c-fdc8-494c-9233-ad4cbccbaa65",
                                 "title": {
-                                    "text": "O\u2019r {number_of_times} gwaith y cawsoch eich derbyn i\u2019r ysbyty, sawl gwaith oedd o ganlyniad i heintiau anadlol?",
+                                    "text": "O\u2019r {number_of_times} gwaith y cawsoch eich derbyn i\u2019r ysbyty, sawl gwaith oedd oherwydd bod gennych heintiau anadlol?",
                                     "placeholders": [
                                         {
                                             "placeholder": "number_of_times",
@@ -7439,8 +7301,8 @@
                                                 "value": "Loss of appetite or eating less than usual"
                                             },
                                             {
-                                                "label": "Poen yn y cyhyrau",
-                                                "value": "Muschle ache"
+                                                "label": "Muscle ache",
+                                                "value": "Muscle ache"
                                             },
                                             {
                                                 "label": "Poen yn y cymalau",
@@ -7489,7 +7351,7 @@
                                 "id": "questionb55ff1a1-749a-490b-be53-555297ffadd2",
                                 "title": "Ac a oes gennych chi unrhyw rai o\u2019r symptomau hyn fel rhan o\u2019ch profiad chi o COVID hir?",
                                 "description": [
-                                    "<p>Dylech gynnwys unrhyw symptomau a oedd yn bodoli eisoes y mae COVID hir wedi\u2019u gwneud yn waeth, ond peidiwch \u00e2 chynnwys unrhyw symptomau a oedd yn bodoli eisoes nad ydynt wedi newid oherwydd COVID hir."
+                                    "<p>Dylech gynnwys unrhyw symptomau a oedd yn bodoli eisoes y mae COVID hir wedi\u2019u gwneud yn waeth, ond peidiwch \u00e2 chynnwys unrhyw symptomau a oedd yn bodoli eisoes nad ydynt wedi newid oherwydd COVID hir.</p>"
                                 ],
                                 "type": "MutuallyExclusive",
                                 "mandatory": true,
@@ -7597,61 +7459,12 @@
             ],
             "enabled": {
                 "when": {
-                    "or": [
+                    "==": [
                         {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample",
-                                            "Do this questionnaire only"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Yes"
-                                        ]
-                                    ]
-                                }
-                            ]
+                            "source": "answers",
+                            "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
                         },
-                        {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "==": [
-                                        {
-                                            "source": "answers",
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                                        },
-                                        null
-                                    ]
-                                }
-                            ]
-                        }
+                        null
                     ]
                 }
             }
@@ -7714,7 +7527,7 @@
                                         "type": "Radio",
                                         "options": [
                                             {
-                                                "label": "Ydw",
+                                                "label": "Ydw ",
                                                 "value": "Yes"
                                             },
                                             {
@@ -8405,7 +8218,7 @@
                             "type": "Question",
                             "question": {
                                 "id": "question3f2b54c3-556d-49f2-b4e3-c576b22fe44b",
-                                "title": "Yn y 7 diwrnod diwethaf, sawl gwaith ydych chi wedi mynd allan i gymdeithasu? Peidiwch \u00e2 chynnwys mynd i gartrefi pobl eraill",
+                                "title": "Yn y 7 diwrnod diwethaf, sawl gwaith ydych chi wedi mynd allan i gymdeithasu? Peidiwch \u00e2 chynnwys mynd i gartrefi pobl eraill.",
                                 "description": [
                                     "<p>Er enghraifft, mynd i fwytai neu i\u2019r sinema.</p>"
                                 ],
@@ -8829,45 +8642,15 @@
                             },
                             "skip_conditions": {
                                 "when": {
-                                    "or": [
+                                    "in": [
                                         {
-                                            "in": [
-                                                {
-                                                    "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                                    "source": "answers"
-                                                },
-                                                [
-                                                    "Do this questionnaire only"
-                                                ]
-                                            ]
+                                            "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                                            "source": "answers"
                                         },
-                                        {
-                                            "and": [
-                                                {
-                                                    "in": [
-                                                        {
-                                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                                            "source": "answers"
-                                                        },
-                                                        [
-                                                            "Do this questionnaire and take a swab sample",
-                                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                                        ]
-                                                    ]
-                                                },
-                                                {
-                                                    "in": [
-                                                        {
-                                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                                                            "source": "answers"
-                                                        },
-                                                        [
-                                                            "Yes"
-                                                        ]
-                                                    ]
-                                                }
-                                            ]
-                                        }
+                                        [
+                                            "Yes",
+                                            "No"
+                                        ]
                                     ]
                                 }
                             }
@@ -8896,33 +8679,6 @@
                                         ]
                                     }
                                 ]
-                            },
-                            "skip_conditions": {
-                                "when": {
-                                    "and": [
-                                        {
-                                            "in": [
-                                                {
-                                                    "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                                    "source": "answers"
-                                                },
-                                                [
-                                                    "Do this questionnaire and take a swab sample",
-                                                    "Do this questionnaire and take a swab sample and a blood sample"
-                                                ]
-                                            ]
-                                        },
-                                        {
-                                            "==": [
-                                                {
-                                                    "source": "answers",
-                                                    "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                                                },
-                                                null
-                                            ]
-                                        }
-                                    ]
-                                }
                             }
                         }
                     ]
@@ -8930,61 +8686,12 @@
             ],
             "enabled": {
                 "when": {
-                    "or": [
+                    "==": [
                         {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Yes"
-                                        ]
-                                    ]
-                                }
-                            ]
+                            "source": "answers",
+                            "identifier": "answer3d3e4020-8795-444f-98e4-057ec571ec07"
                         },
-                        {
-                            "and": [
-                                {
-                                    "in": [
-                                        {
-                                            "identifier": "answerced62ae4-c449-4690-85b4-3049b27e0e6e",
-                                            "source": "answers"
-                                        },
-                                        [
-                                            "Do this questionnaire only",
-                                            "Do this questionnaire and take a swab sample",
-                                            "Do this questionnaire and take a swab sample and a blood sample"
-                                        ]
-                                    ]
-                                },
-                                {
-                                    "==": [
-                                        {
-                                            "source": "answers",
-                                            "identifier": "answer21025e3f-8ba7-49a8-a363-b9a1b90a5af5"
-                                        },
-                                        null
-                                    ]
-                                }
-                            ]
-                        }
+                        null
                     ]
                 }
             }
@@ -9018,7 +8725,7 @@
                     "description": "<strong>Mae eich barn yn hanfodol i ni</strong>"
                 },
                 {
-                    "description": "Gan mai chi yw un o\u2019r cyfranogwyr cyntaf i barhau i gymryd rhan yn Arolwg Heintiadau COVID-19 ar \u00f4l y newidiadau diweddar, mae clywed eich barn yn bwysig iawn i ni."
+                    "description": "Gan mai chi yw un o\u2019r cyfranogwyr cyntaf i gymryd rhan yn Arolwg COVID-19 a Heintiadau Anadlol, mae clywed eich barn yn bwysig iawn i ni."
                 },
                 {
                     "description": "Rydym ni\u2019n cynnig y cyfle i chi roi adborth cryno ar eich profiad."
@@ -9030,7 +8737,7 @@
                     "description": "Gallwch gwblhau\u2019r arolwg adborth ar lein drwy\u2019r ddolen ganlynol <a href='https://studies.ons.gov.uk/s/feedback7/\u201ctarget=\u201c_blank'rel='noopener noreferrer'>https://studies.ons.gov.uk/s/feedback7/</a>"
                 },
                 {
-                    "description": "Fel arall, os hoffech chi gwblhau\u2019r arolwg adborth hwn dros y ff\u00f4n, anfonwch e-bost i <a href='mailto:COVID19.RAD@ons.gov.uk'target='_blank'rel='noopener noreferrer'>COVID19.RAD@ons.gov.uk</a> neu ffoniwch 0300 067 2138 i drefnu hyn."
+                    "description": "Fel arall, os hoffech chi gwblhau\u2019r arolwg adborth hwn dros y ff\u00f4n, anfonwch e-bost i  <a href='mailto:COVID19.RAD@ons.gov.uk'target='_blank'rel='noopener noreferrer'>COVID19.RAD@ons.gov.uk</a> neu ffoniwch 0300 067 2138 i drefnu hyn."
                 },
                 {
                     "description": "<strong>Os bydd aelod arall o\u2019r cartref am ddechrau ei holiadur gan ddefnyddio\u2019r un ddyfais</strong>"
