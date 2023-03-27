@@ -20,6 +20,7 @@
       "id": "section5b375c46-6375-4b6c-8af5-c592dc1a09df",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Section page",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -35,21 +36,14 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
+                    "text": "You are completing this for {trad_as} ({ru_name})",
                     "placeholders": [
                       {
-                        "placeholder": "conditional_trad_as",
-                        "transforms": [
-                          {
-                            "arguments": {
-                              "trad_as": {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              }
-                            },
-                            "transform": "conditional_trad_as"
-                          }
-                        ]
+                        "placeholder": "trad_as",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "trad_as"
+                        }
                       },
                       {
                         "placeholder": "ru_name",
@@ -140,7 +134,7 @@
                     ]
                   },
                   {
-                    "question": "Rolling Stock",
+                    "question": "Rolling stock",
                     "contents": [
                       {
                         "description": "<strong>Include:</strong>"
@@ -181,7 +175,7 @@
                     ]
                   },
                   {
-                    "question": "Other Rail",
+                    "question": "Other rail",
                     "contents": [
                       {
                         "description": "<strong>Include:</strong>"
@@ -314,7 +308,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total value of acquisitions and disposals for track and signalling"
             },
             {
               "id": "block58e5a705-cbfb-4119-9a2c-0f62472f9d8c",
@@ -364,7 +359,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total value of acquisitions and disposals for rolling stock"
             },
             {
               "id": "block616cfa6b-6cc5-456e-9bbd-647337686e27",
@@ -435,7 +431,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total value of acquisitions and disposals for stations"
             },
             {
               "id": "block44031246-d838-4d61-8265-2b5e72107cb3",
@@ -502,7 +499,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total value of acquisitions and disposals for other rail"
             },
             {
               "id": "block11020211-b6d8-4118-b73d-745709a1fa8d",
@@ -537,24 +535,21 @@
                     "max_length": 2000
                   }
                 ]
-              }
+              },
+              "page_title": "Further comments"
             }
           ]
         }
       ]
     }
   ],
-  "theme": "default",
+  "theme": "orr",
   "navigation": {
     "visible": false
   },
   "metadata": [
     {
       "name": "user_id",
-      "type": "string"
-    },
-    {
-      "name": "period_id",
       "type": "string"
     },
     {
@@ -569,6 +564,10 @@
       "name": "trad_as",
       "type": "string",
       "optional": true
+    },
+    {
+      "name": "period_id",
+      "type": "string"
     },
     {
       "name": "ref_p_start_date",
@@ -586,10 +585,7 @@
     "guidance": {
       "contents": [
         {
-          "description": "Your response will help inform decision-makers how best to support the UK population and economy at this challenging time."
-        },
-        {
-          "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data</a>"
+          "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
         }
       ]
     }
