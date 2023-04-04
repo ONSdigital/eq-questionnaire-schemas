@@ -114,8 +114,12 @@
                         "If this business is part of an enterprise group, please answer all questions for this business in the UK only.",
                         "Do not include results for subsidiaries or parent enterprises.",
                         "You can provide informed estimates if actual figures are not available.",
-                        "We will treat your data securely and confidentially."
+                        "Your business was selected to give us a comprehensive view of the UK economy.",
+                        "We will treat your data <strong>securely</strong> and <strong>confidentially</strong>."
                       ]
+                    },
+                    {
+                      "description": "<a href=\"https://www.gov.uk/government/collections/uk-innovation-survey\"target=\"_blank\"rel=\"noopener noreferrer\">View more information about this survey, including the privacy notice, here (this link opens in a new tab)</a>"
                     },
                     {
                       "description": "<strong>Definition of Innovation</strong>"
@@ -124,11 +128,19 @@
                       "list": [
                         "Innovation, for the purpose of this survey, is defined as <strong>new</strong> or <strong>improved goods or services</strong> as well as business <strong>processes</strong> used to produce or supply all goods or services that have been introduced, regardless of their origin.",
                         "These innovations may be new to you or new to the market.",
-                        "Investments for future innovation and changes that ESSENTIAL ENTERPRISE LTD. has introduced at a <strong>strategic</strong> level (in organisation and practices) are also covered."
+                        {
+                          "text": "Investments for future innovation and changes that {ru_name} has introduced at a <strong>strategic</strong> level (in organisation and practices) are also covered.",
+                          "placeholders": [
+                            {
+                              "placeholder": "ru_name",
+                              "value": {
+                                "source": "metadata",
+                                "identifier": "ru_name"
+                              }
+                            }
+                          ]
+                        }
                       ]
-                    },
-                    {
-                      "description": "<a href=\"https://www.gov.uk/government/collections/uk-innovation-survey\"target=\"_blank\"rel=\"noopener noreferrer\">Read more information about this survey here (this link opens in a new tab)</a>"
                     }
                   ]
                 }
@@ -164,8 +176,9 @@
                     },
                     {
                       "list": [
-                        "Your business was selected to give us a comprehensive view of the UK economy.",
-                        "The information you provide contributes to Gross Domestic Product (GDP)."
+                        "The UK Innovation Survey (UKIS) is used as the main data source for business innovation in the UK, helping the government develop, improve, and evaluate innovation policy.",
+                        "Survey information may also be provided to other government departments, approved organisations and approved researchers for statistical purposes only.",
+                        "<a href=\"https://www.gov.uk/government/statistics/uk-innovation-survey-2021-report\"target=\"_blank\"rel=\"noopener noreferrer\">View the latest publication produced from this survey (this link opens in a new tab)</a>"
                       ]
                     }
                   ]
@@ -181,6 +194,7 @@
       "title": "Business process innovation",
       "summary": {
         "show_on_completion": true,
+        "page_title": "Business process innovation section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -301,6 +315,7 @@
                   }
                 ]
               },
+              "page_title": "New or improved processes",
               "routing_rules": [
                 {
                   "block": "block335b0722-eb96-47f8-b267-2b01e2fc83f7",
@@ -363,7 +378,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Innovation process developers"
             }
           ]
         }
@@ -374,6 +390,7 @@
       "title": "Innovation investment",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Innovation investment section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -452,6 +469,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in internal Research and Development",
               "routing_rules": [
                 {
                   "block": "block9b2bdc2f-5e31-4ed9-88f9-3ca5f7d053d6",
@@ -503,7 +521,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on internal Research and Development"
             },
             {
               "id": "block9b2bdc2f-5e31-4ed9-88f9-3ca5f7d053d6",
@@ -549,6 +568,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in the acquisition of Research and Development",
               "routing_rules": [
                 {
                   "block": "blockdd8e4ddd-14f9-43e5-b304-86bc7974916b",
@@ -604,7 +624,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on acquisition of Research and Development"
             },
             {
               "id": "blockdd8e4ddd-14f9-43e5-b304-86bc7974916b",
@@ -683,6 +704,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in the acquisition of machinery and equipment, computer hardware or software",
               "routing_rules": [
                 {
                   "block": "block41952246-492f-42d1-b166-a791da44377c",
@@ -735,7 +757,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Machinery and equipment, computer hardware or software investment"
             },
             {
               "id": "block3eb5b5cf-b92f-4bf3-8ee3-72cea7404553",
@@ -774,7 +797,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on the acquisition of advanced machinery, equipment and software"
             },
             {
               "id": "block41952246-492f-42d1-b166-a791da44377c",
@@ -820,6 +844,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in the acquisition of existing knowledge",
               "routing_rules": [
                 {
                   "block": "blocke2124768-b398-463a-a8ec-fb77256de6b4",
@@ -875,7 +900,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on acquisitions of existing knowledge"
             },
             {
               "id": "blocke2124768-b398-463a-a8ec-fb77256de6b4",
@@ -921,6 +947,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in training for innovative activities",
               "routing_rules": [
                 {
                   "block": "block3c7ec634-9ae5-4654-9353-5c58d9bd227f",
@@ -976,7 +1003,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on training for innovative activities"
             },
             {
               "id": "block3c7ec634-9ae5-4654-9353-5c58d9bd227f",
@@ -1032,6 +1060,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in design activity",
               "routing_rules": [
                 {
                   "block": "block357e1eac-545b-4960-b869-4535ef08fdfe",
@@ -1087,7 +1116,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on design activity"
             },
             {
               "id": "block357e1eac-545b-4960-b869-4535ef08fdfe",
@@ -1151,6 +1181,7 @@
                   }
                 ]
               },
+              "page_title": "Investment in market introduction of innovations",
               "routing_rules": [
                 {
                   "section": "End",
@@ -1205,7 +1236,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Product design and marketing investment"
             },
             {
               "id": "blockd1b4a528-4ddf-4b6a-b196-c7df667cc82d",
@@ -1244,7 +1276,8 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on the market introduction of innovations"
             }
           ]
         }
@@ -1255,6 +1288,7 @@
       "title": "Product (goods and services) innovation",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Product innovation section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1355,7 +1389,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Introduction of new or improved goods"
             },
             {
               "id": "block6211278b-c824-4e7e-a0dc-860ace6a2faa",
@@ -1407,6 +1442,7 @@
                   }
                 ]
               },
+              "page_title": "Introduction of new or improved services",
               "routing_rules": [
                 {
                   "section": "End",
@@ -1474,7 +1510,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Product innovation developers"
             },
             {
               "id": "block6854d9c5-42ee-470b-85b5-ae186350a198",
@@ -1501,7 +1538,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "New product innovation"
             },
             {
               "id": "blockc924bf59-1b54-4c51-b7ed-eae1863e0c8f",
@@ -1528,7 +1566,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Existing product innovation"
             },
             {
               "id": "block954e530b-6ec5-45c8-aa1d-62a2c1d0b030",
@@ -1604,7 +1643,8 @@
                     "decimal_places": 2
                   }
                 ]
-              }
+              },
+              "page_title": "Total turnover percentage from products"
             }
           ]
         }
@@ -1615,6 +1655,7 @@
       "title": "Constraints on innovation",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Innovation constraints section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1687,7 +1728,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Abandoned or ongoing innovation activities"
             },
             {
               "id": "block180ad053-9945-41bb-ab89-2ab7fbd40d99",
@@ -1736,7 +1778,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of excessive perceived economic risk"
             },
             {
               "id": "block53d0de68-5514-4bdb-803b-6b582ffa5300",
@@ -1785,7 +1828,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of direct innovation costs"
             },
             {
               "id": "block594dad86-047c-477d-81d1-ff7d6a1e036c",
@@ -1834,7 +1878,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the cost of finance"
             },
             {
               "id": "blockbf11b99b-f008-4921-b21d-495625e04c86",
@@ -1883,7 +1928,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the availability of finance"
             },
             {
               "id": "block6fbe71f0-ea11-4e6a-ab4d-8c11f59f394d",
@@ -1932,7 +1978,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the lack of available qualified personnel"
             },
             {
               "id": "blockc8907ebf-8513-422a-8d92-5e5d100a60c7",
@@ -1981,7 +2028,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the lack of information on technology"
             },
             {
               "id": "block9064aabe-10b5-4021-a55f-a37a6fbeedc6",
@@ -2030,7 +2078,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the lack of information on markets"
             },
             {
               "id": "block0ce74b3f-2026-4538-bdd6-828cf183823a",
@@ -2079,7 +2128,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the effect of a market dominated by established businesses"
             },
             {
               "id": "blockd08b06cd-0771-4bc7-b4ee-527c7b15e428",
@@ -2128,7 +2178,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of a perceived uncertain demand for innovative goods or services"
             },
             {
               "id": "blockc7c1b342-4a81-4d86-9cc3-35a436639122",
@@ -2187,7 +2238,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of UK government regulations"
             },
             {
               "id": "block2cdb218c-d5d0-4def-b801-fe9ae297b251",
@@ -2236,7 +2288,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of EU regulations"
             },
             {
               "id": "blockd162cb53-0c1e-443f-941c-89be97c4ac16",
@@ -2285,7 +2338,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the withdrawal of the United Kingdom from the European Union"
             },
             {
               "id": "blockf61534b0-ccbd-485c-88e2-089d5369ad49",
@@ -2334,7 +2388,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of constraining issues arising from the coronavirus pandemic"
             },
             {
               "id": "block2be40e92-d628-4bcc-b8af-3d1f19635733",
@@ -2393,7 +2448,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of technical, industry or service standards"
             },
             {
               "id": "block315dea8b-d386-483d-83ca-d788a244de10",
@@ -2442,7 +2498,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of recent increases in energy prices to constraining activities"
             },
             {
               "id": "block3a0dfc4a-361b-42cd-97dd-fce3c4612dc7",
@@ -2491,6 +2548,7 @@
                   }
                 ]
               },
+              "page_title": "Reasons for innovation not being possible",
               "skip_conditions": {
                 "when": {
                   "or": [
@@ -2617,6 +2675,7 @@
       "title": "Factors affecting innovation",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Innovation factors section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -2669,7 +2728,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of increasing the range of goods or services"
             },
             {
               "id": "blockc50a3e1f-2fa3-4f21-9ac4-9b05077b0532",
@@ -2704,7 +2764,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of entering new markets"
             },
             {
               "id": "block9c0afd84-9f88-4909-90d9-bd370a92a9bd",
@@ -2739,14 +2800,15 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of increasing market share"
             },
             {
               "id": "block8520b85d-eebf-4d53-a207-d2c62f9c59dc",
               "type": "Question",
               "question": {
                 "id": "question8520b85d-eebf-4d53-a207-d2c62f9c59dc",
-                "title": "During the 3 year period 2020 to 2022, how important was <em>improving the quality of goods or services</em> in your decision to innovate?",
+                "title": "During the 3 year period 2020 to 2022, how important was <em>improving the quality of goods or services </em>in your decision to innovate?",
                 "type": "General",
                 "answers": [
                   {
@@ -2774,7 +2836,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of improving the quality of goods or services"
             },
             {
               "id": "block2a680749-1c3f-4cb9-befa-6ee4c7711859",
@@ -2809,7 +2872,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of improving production flexibility"
             },
             {
               "id": "block3938d7bc-ebf8-4b8e-a07b-63a923b69c8d",
@@ -2844,7 +2908,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of improving production capacity"
             },
             {
               "id": "block4e1b191e-0798-491c-827f-094f8bca897f",
@@ -2889,7 +2954,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of increasing value added"
             },
             {
               "id": "blockb55de230-9c28-45b9-8bf4-de28e964fa8d",
@@ -2924,7 +2990,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of reducing costs"
             },
             {
               "id": "blockc06a9312-cda6-43a7-b54c-97402abc205f",
@@ -2959,7 +3026,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of improving health and safety"
             },
             {
               "id": "block4ac9d841-b97c-45f9-ba7a-0ab8dfdd33bc",
@@ -2994,7 +3062,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of reducing environmental impacts"
             },
             {
               "id": "block1ce10274-edce-41d3-aad6-b9e630cbc6e2",
@@ -3029,7 +3098,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of product or process replacement"
             },
             {
               "id": "block56bb29e6-7eba-46bb-a4ff-e67336980e2f",
@@ -3077,7 +3147,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of meeting regulatory requirements"
             },
             {
               "id": "block5d4d5b7b-34cd-4765-8167-06efa09375ac",
@@ -3112,7 +3183,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of meeting technical, industry or service standards"
             },
             {
               "id": "block1392e47b-4d93-465a-adeb-f81a74019d83",
@@ -3147,7 +3219,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of innovation issues arising from the coronavirus pandemic"
             },
             {
               "id": "block2bb4be3f-c65c-4a57-ac95-c3662ce9438f",
@@ -3182,7 +3255,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of the recent increases in energy prices to innovation"
             }
           ]
         }
@@ -3309,6 +3383,7 @@
       "title": "Information needed for innovation",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Innovation information section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -3382,7 +3457,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of information from within your business or enterprise group"
             },
             {
               "id": "block996f8a77-3ab4-4032-961b-e22f9fab4c5a",
@@ -3417,7 +3493,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of suppliers of equipment, materials, services or software"
             },
             {
               "id": "blockd0545405-76ee-4f85-ab8f-a380dc31b7ff",
@@ -3474,7 +3551,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of clients or customers from the private sector"
             },
             {
               "id": "block417547e1-6b43-4752-aec9-fc90141da8d5",
@@ -3530,7 +3608,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of clients or customers from the public sector"
             },
             {
               "id": "block5d7c1f89-07cd-4b6f-8f4b-c94f76e1dc24",
@@ -3565,7 +3644,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of competitors or other businesses"
             },
             {
               "id": "block4b1844cc-6a8d-4bdb-a681-ff2be81bb35c",
@@ -3600,7 +3680,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of consultants, commercial laboratories or private Research and Development institutes"
             },
             {
               "id": "blockdf98f163-e1b3-4873-8789-ff432702b69d",
@@ -3635,7 +3716,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of universities or other higher education institutes"
             },
             {
               "id": "blockb6e034ef-09b0-41da-bc6e-ffb5bf035e9b",
@@ -3680,7 +3762,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of government or public research institutes"
             },
             {
               "id": "block1708def0-dfaf-4693-bc2b-2bbea676d75b",
@@ -3715,7 +3798,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of conferences, trade fairs or exhibitions"
             },
             {
               "id": "blockd01555e6-ccb3-4300-b47e-a723c174347c",
@@ -3750,7 +3834,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of professional and industry associations"
             },
             {
               "id": "blockf73b9175-a991-4cce-94c4-cb46f88ee442",
@@ -3785,7 +3870,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of technical, industry or service standards"
             },
             {
               "id": "blocka1c15948-ae74-43e3-bf91-1e3cb3eaa915",
@@ -3820,7 +3906,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of scientific journals and trade or technical publications"
             },
             {
               "id": "blockf6835e0b-f777-48da-bebb-a9b943318861",
@@ -3855,7 +3942,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of social web-based networks or crowd-sourcing"
             },
             {
               "id": "blockb784aa8c-678e-437e-8a2b-ad123eb8da03",
@@ -3890,7 +3978,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Importance of regulators or regulations"
             }
           ]
         }
@@ -4017,6 +4106,7 @@
       "title": "Co-operation on innovation and R&D",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Co-operation on innovation and R&D section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -4093,6 +4183,7 @@
                   }
                 ]
               },
+              "page_title": "Co-operation with other businesses or organisations",
               "routing_rules": [
                 {
                   "block": "block356c1d16-8295-4850-ac8a-0a08b6552da2",
@@ -4173,7 +4264,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of other businesses within your enterprise group"
             },
             {
               "id": "block6ddecc54-e835-4df0-9308-d640ce77b840",
@@ -4219,7 +4311,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of suppliers of equipment, materials, services or software"
             },
             {
               "id": "blockfffa11fc-cbab-4d01-9e70-3082a2a58dce",
@@ -4287,7 +4380,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of clients or customers from the private sector"
             },
             {
               "id": "blocka1e9217d-c830-44e7-be29-fab1de65bf4a",
@@ -4354,7 +4448,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of clients or customers from the public sector"
             },
             {
               "id": "block31cadcd0-6184-40a2-9a96-1c3389331faa",
@@ -4400,7 +4495,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of competitors or other businesses"
             },
             {
               "id": "block46aecb92-6700-486e-9514-75d4e99ea47d",
@@ -4446,7 +4542,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of consultants, commercial laboratories or private research and development institutes"
             },
             {
               "id": "block3ad3bf39-90d2-4d70-b499-0eb2d1c86de9",
@@ -4493,6 +4590,7 @@
                   }
                 ]
               },
+              "page_title": "Location of universities or other higher education institutions",
               "routing_rules": [
                 {
                   "block": "block3d16641c-fdf1-4cce-947b-43a420b6ea6d",
@@ -4545,7 +4643,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of the most recent university or other higher education institution worked with"
             },
             {
               "id": "blocka7499eca-bd42-4527-9ebe-fd35f9d47988",
@@ -4602,6 +4701,7 @@
                   }
                 ]
               },
+              "page_title": "Location of government or public research institutes",
               "routing_rules": [
                 {
                   "block": "block2ffe7b44-272d-4b86-92c9-1558704cc70d",
@@ -4655,6 +4755,7 @@
                   }
                 ]
               },
+              "page_title": "Location of the most recent government or public research institute worked with",
               "routing_rules": [
                 {
                   "block": "blockc2c6168a-5901-4ec5-aec1-692dc1e4a040",
@@ -4711,7 +4812,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Co-operation carried out via a public procurement process"
             },
             {
               "id": "blockc2c6168a-5901-4ec5-aec1-692dc1e4a040",
@@ -4757,7 +4859,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of other businesses outside your enterprise group"
             },
             {
               "id": "blocke654cb39-44d2-4072-9ae5-0734c7cdc16f",
@@ -4803,7 +4906,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of non-profit organisations"
             },
             {
               "id": "blockdafb5974-7f07-42c1-afe3-dfda6ba3bfc1",
@@ -4862,7 +4966,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of regulatory bodies"
             },
             {
               "id": "blockefda7bb4-5a39-4430-80ad-bbc1c8a95d53",
@@ -4922,7 +5027,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Location of standard developing organisations"
             }
           ]
         }
@@ -4933,6 +5039,7 @@
       "title": "Innovation protection",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Innovation protection section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -4995,7 +5102,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by patents"
             },
             {
               "id": "blockd596a731-144c-4565-b358-543db91d939f",
@@ -5040,7 +5148,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by patents design registration"
             },
             {
               "id": "block82328084-2d08-485b-b0a8-9c707f6a626b",
@@ -5085,7 +5194,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by copyright"
             },
             {
               "id": "block0115c44b-ca62-4668-8d00-9609abcefe9f",
@@ -5130,7 +5240,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by trademark"
             },
             {
               "id": "blockc3756d91-cfd0-4d9e-a208-bc5f4495b253",
@@ -5184,7 +5295,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by lead time advantages"
             },
             {
               "id": "block3cd1a1e8-cde3-41ca-819c-58101aa2de05",
@@ -5219,7 +5331,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by complexity of goods or services"
             },
             {
               "id": "block5a9cf27b-2fba-44dd-9080-23023410033c",
@@ -5261,7 +5374,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Proportions of innovations protected by secrecy"
             }
           ]
         }
@@ -5388,6 +5502,7 @@
       "title": "Public financial support for innovation",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Public financial support for innovation section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -5485,6 +5600,7 @@
                   }
                 ]
               },
+              "page_title": "Public financial support for innovation activities",
               "routing_rules": [
                 {
                   "block": "blockdf9560f5-7e0b-45c1-9849-d0f02aaab649",
@@ -5548,7 +5664,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Financial support received from UK government"
             }
           ]
         }
@@ -5675,6 +5792,7 @@
       "title": "Exports and skills",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Exports and skills section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -5730,7 +5848,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Exports in 2022"
             },
             {
               "id": "blockb0b4e092-41c8-4ba8-bfa4-90cb702276e6",
@@ -5776,7 +5895,8 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Proportion of employees with a higher qualification degree"
             },
             {
               "id": "block4ffc4a40-0d1d-402f-b448-b87dc8d6ffed",
@@ -5830,7 +5950,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Individuals employed with specialist skills"
             },
             {
               "id": "block31de6b6d-97a1-4b9c-a03e-0f4b6c4e5018",
@@ -5880,7 +6001,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Management technologies used in 2022"
             },
             {
               "id": "blockee3c0a85-6c2b-4341-b613-df6c5a202508",
@@ -5930,7 +6052,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Production-enhancing technologies used in 2022"
             }
           ]
         }
@@ -5941,6 +6064,7 @@
       "title": "Environmental innovations",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Environmental innovations section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -6031,6 +6155,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that reduced material or water use",
               "routing_rules": [
                 {
                   "block": "blockd44d4097-5c25-44a2-b99c-b959a48f794d",
@@ -6074,7 +6199,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that reduced material or water use"
             },
             {
               "id": "blockd44d4097-5c25-44a2-b99c-b959a48f794d",
@@ -6130,6 +6256,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that reduced energy usage or CO2 footprint",
               "routing_rules": [
                 {
                   "block": "block6d6d88f0-dffe-4cb2-8324-7f071e5eeb2d",
@@ -6173,7 +6300,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that reduced energy usage or CO2 footprint"
             },
             {
               "id": "block6d6d88f0-dffe-4cb2-8324-7f071e5eeb2d",
@@ -6229,6 +6357,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that reduced soil, noise, water or air pollution",
               "routing_rules": [
                 {
                   "block": "block5410d4ea-d028-41a3-bd6e-c0533f795508",
@@ -6272,7 +6401,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that reduced soil, noise, water or air pollution"
             },
             {
               "id": "block5410d4ea-d028-41a3-bd6e-c0533f795508",
@@ -6328,6 +6458,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that replaced a share of materials with less polluting or hazardous substitutes",
               "routing_rules": [
                 {
                   "block": "block51f289db-72dd-4a3a-9219-ad4ee7124b3a",
@@ -6371,7 +6502,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that replaced a share of materials with less polluting or hazardous substitutes"
             },
             {
               "id": "block51f289db-72dd-4a3a-9219-ad4ee7124b3a",
@@ -6427,6 +6559,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that replaced a share of fossil energy with renewable energy sources",
               "routing_rules": [
                 {
                   "block": "blocked303c94-46fb-414d-af9f-d57f073e9f91",
@@ -6470,7 +6603,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that replaced a share of fossil energy with renewable energy sources"
             },
             {
               "id": "blocked303c94-46fb-414d-af9f-d57f073e9f91",
@@ -6526,6 +6660,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that recycled waste, water or materials for own use or sale",
               "routing_rules": [
                 {
                   "block": "blockf587189c-ad57-4904-b9db-021c7d5202b3",
@@ -6569,7 +6704,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that recycled waste, water or materials for own use or sale"
             },
             {
               "id": "blockf587189c-ad57-4904-b9db-021c7d5202b3",
@@ -6618,6 +6754,7 @@
                   }
                 ]
               },
+              "page_title": "Reduced energy innovations during the use of a good or service",
               "routing_rules": [
                 {
                   "block": "block8c9a006b-8c3f-4d15-8593-d00e7da94ae5",
@@ -6661,7 +6798,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of reduced energy innovations during the use of a good or service"
             },
             {
               "id": "block8c9a006b-8c3f-4d15-8593-d00e7da94ae5",
@@ -6710,6 +6848,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that reduced air, water, soil or noise pollution during the use of a good or service",
               "routing_rules": [
                 {
                   "block": "block01bd3024-946e-410c-b15b-d8c1711fe57e",
@@ -6753,7 +6892,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that reduced air, water, soil or noise pollution during the use of a good or service"
             },
             {
               "id": "block01bd3024-946e-410c-b15b-d8c1711fe57e",
@@ -6802,6 +6942,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that facilitated recycling of product after use during the use of a good or service",
               "routing_rules": [
                 {
                   "block": "block17775d51-c089-485b-a114-6fd886bc7247",
@@ -6845,7 +6986,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that facilitated recycling of product after use during the use of a good or service"
             },
             {
               "id": "block17775d51-c089-485b-a114-6fd886bc7247",
@@ -6894,6 +7036,7 @@
                   }
                 ]
               },
+              "page_title": "Innovations that extended product life during the use of a good or service",
               "routing_rules": [
                 {
                   "section": "End",
@@ -6937,7 +7080,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significance of innovations that extended product life during the use of a good or service"
             }
           ]
         }
@@ -7064,6 +7208,7 @@
       "title": "General information",
       "summary": {
         "show_on_completion": false,
+        "page_title": "General information section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -7100,7 +7245,8 @@
                     "max_length": 2000
                   }
                 ]
-              }
+              },
+              "page_title": "Additional information"
             },
             {
               "id": "block0f6547d6-49b6-4916-9fb5-8c5a0ff66691",
@@ -7150,7 +7296,8 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Questionnaire completion time"
             },
             {
               "id": "block3ea2bbda-ad6a-4208-b932-0c8956e23848",
@@ -7188,7 +7335,8 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Contact for further questions"
             }
           ]
         }
