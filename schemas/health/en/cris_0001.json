@@ -703,7 +703,7 @@
                 "title": "There has been a problem accessing the survey",
                 "description": [
                   {
-                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name} or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0xxxxxxxxxx. You will need your Participant ID. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &#x201C;COVID-19 and Respiratory Infections Survey&#x201D;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
+                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name} or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0808 196 1270. You will need your Participant ID. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &#x201C;COVID-19 and Respiratory Infections Survey&#x201D;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
                     "placeholders": [
                       {
                         "placeholder": "first_name",
@@ -938,13 +938,13 @@
               "question": {
                 "id": "question684926b7-264e-4d57-a0b0-220c7e05fbd4",
                 "title": {
-                  "text": "Is this your swab sample barcode {swab_test_barcode} ?",
+                  "text": "Is this your swab sample barcode {first_name} ?",
                   "placeholders": [
                     {
-                      "placeholder": "swab_test_barcode",
+                      "placeholder": "first_name",
                       "value": {
                         "source": "metadata",
-                        "identifier": "SWAB_TEST_BARCODE"
+                        "identifier": "FIRST_NAME"
                       }
                     }
                   ]
@@ -1522,13 +1522,13 @@
               "question": {
                 "id": "question0c5283dd-80b3-4926-9dee-b25b7b3e8e29",
                 "title": {
-                  "text": "Is this your blood sample barcode {blood_test_barcode} ?",
+                  "text": "Is this your blood sample barcode {first_name} ?",
                   "placeholders": [
                     {
-                      "placeholder": "blood_test_barcode",
+                      "placeholder": "first_name",
                       "value": {
                         "source": "metadata",
-                        "identifier": "BLOOD_TEST_BARCODE"
+                        "identifier": "FIRST_NAME"
                       }
                     }
                   ]
@@ -7981,7 +7981,7 @@
                   }
                 ]
               },
-              "page_title": "Contact with other people - Time spent in another person&#39s home",
+              "page_title": "Contact with other people - Time spent in another person&#39;s home",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -8615,14 +8615,6 @@
   "metadata": [
     {
       "name": "FIRST_NAME",
-      "type": "string"
-    },
-    {
-      "name": "SWAB_TEST_BARCODE",
-      "type": "string"
-    },
-    {
-      "name": "BLOOD_TEST_BARCODE",
       "type": "string"
     }
   ],
