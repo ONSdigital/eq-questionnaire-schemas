@@ -102,7 +102,6 @@ def check_schema_templates(source_dir, target_dir):
 
 
 if __name__ == "__main__":
-
     parser = argparse.ArgumentParser(
         description="Extract translation templates from runner"
     )

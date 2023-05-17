@@ -20,7 +20,6 @@ def translate_schemas(runner_directory):
     logger.info(f"Using runner directory: {runner_directory}")
 
     for language, schemas in TRANSLATION_MAP.items():
-
         filenames = []
         for pattern in schemas:
             filenames.extend(glob(pattern))
