@@ -574,7 +574,7 @@
       "title": "About you",
       "summary": {
         "show_on_completion": false,
-        "page_title": "New section - Introduction",
+        "page_title": "New section- Introduction",
         "collapsible": false
       },
       "show_on_hub": false,
@@ -2516,10 +2516,7 @@
               "type": "Question",
               "question": {
                 "id": "questionbfae0aa9-e245-4bf4-bd32-984369f21932",
-                "title": "Has your main job or business changed since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
-                "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p>"
-                ],
+                "title": "Has your main job or business changed since you last completed this questionnaire?",
                 "type": "General",
                 "answers": [
                   {
@@ -3021,7 +3018,7 @@
               "type": "Question",
               "question": {
                 "id": "question6434bbe0-e54f-4c7e-89d6-52d762fa46f7",
-                "title": "On a day-to-day basis, does your current role primarily involve face-to-face contact with people you do not work with? For example patients, clients, residents, service users or customers.",
+                "title": "On a day-to-day basis, does your current job mainly involve face-to-face contact with people you do not work with? For example patients, clients, residents, service users or customers.",
                 "description": [
                   "<p>If primarily office based, please answer &quot;No&quot;.</p>"
                 ],
@@ -3270,7 +3267,7 @@
                 "id": "questionb55228ff-2697-4408-85fc-893cfa2ee544",
                 "title": "How do you mainly get to and from your work, nursery or education provider?",
                 "description": [
-                  "<p>If you use multiple types of transport, choose the transport you use for the longest part of your journey in time.</p>"
+                  "<p>If you use multiple types of transport, choose the transport you use for the longest part of your journey in time.</p><p>If you are working and studying, answer based on where you spend most of your time. </p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -3379,6 +3376,9 @@
               "question": {
                 "id": "question264d0c01-f8be-462b-8156-77f8e462b5d7",
                 "title": "At your place of work or education, on average how easy it is to maintain 1 to 2 metres between yourself and other people?",
+                "description": [
+                  "<p>If you are working and studying, answer based on where you spend most of your time. </p>"
+                ],
                 "type": "General",
                 "answers": [
                   {
@@ -3530,7 +3530,7 @@
                     },
                     {
                       "list": [
-                        "regardless of the cause",
+                        "regardless of the cause, for example, symptoms relating the general health, age or recent work or exercise",
                         "even if you experience them regularly as part of a long-term health condition"
                       ]
                     }
@@ -3618,7 +3618,7 @@
                     },
                     {
                       "list": [
-                        "regardless of the cause",
+                        "regardless of the cause, for example, symptoms relating to general health, age or recent work or exercise",
                         "even if you experience them regularly as part of a long-term health condition"
                       ]
                     }
@@ -3691,18 +3691,9 @@
               "question": {
                 "id": "questionecf772e0-513d-4e26-bea7-72e282c7f282",
                 "title": "Which of these symptoms are new or worse than usual for you?",
-                "guidance": {
-                  "contents": [
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "symptoms experienced regularly as part of a long-term health condition that have <strong>not </strong>been worse than usual"
-                      ]
-                    }
-                  ]
-                },
+                "description": [
+                  "<p>If your symptoms are experienced as part of a long-term health condition, only include those that have been worse than usual for you.</p>"
+                ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
                 "answers": [
@@ -3756,18 +3747,9 @@
               "question": {
                 "id": "question246fbf04-84e0-4d8b-953d-5d46927ff476",
                 "title": "And which of these symptoms are new or worse than usual for you?",
-                "guidance": {
-                  "contents": [
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "symptoms experienced regularly as part of a long-term health condition that have <strong>not </strong>been worse than usual"
-                      ]
-                    }
-                  ]
-                },
+                "description": [
+                  "<p>If your symptoms are experienced as part of a long-term health condition, only include those that have been worse than usual for you.</p>"
+                ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
                 "answers": [
@@ -3822,39 +3804,15 @@
                 "id": "question47264920-b616-4d02-a951-17c7b9c81a8d",
                 "title": "What was the <em>earliest</em> date that <em>any</em> of these symptoms became worse than usual for you, or first started if they are new?",
                 "description": [
-                  "<p>Enter the earliest date, including if this was more than 7 days ago.</p><p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th.</p>"
+                  "<p>Enter the earliest date, including if this was more than 7 days ago.</p><p>If the symptoms are new, please select the date that they first started. </p><p>If the symptoms are regularly experienced as a part of a long-term health condition, please select the date they got worse than normal for you.</p><p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th. </p>"
                 ],
-                "guidance": {
-                  "contents": [
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "symptoms experienced regularly as part of a long-term health condition that have <strong>not</strong> been worse than usual"
-                      ]
-                    }
-                  ]
-                },
                 "type": "General",
                 "answers": [
                   {
                     "id": "answerae066bc2-5566-4583-af3c-b6ed825071dc",
                     "mandatory": true,
                     "type": "Date",
-                    "label": "Date (enter as DD MM YYYY)",
-                    "minimum": {
-                      "value": "now",
-                      "offset_by": {
-                        "years": -1
-                      }
-                    },
-                    "maximum": {
-                      "value": "now",
-                      "offset_by": {
-                        "days": 0
-                      }
-                    }
+                    "label": "Date (enter as DD MM YYYY)"
                   }
                 ]
               },
@@ -3925,7 +3883,7 @@
                 "id": "question3fec4f7d-161c-47c0-b97d-fe6f286a8bf3",
                 "title": "Do any of these conditions or illnesses reduce your ability to carry-out day-to-day activities?",
                 "description": [
-                  "<p>Do not include any effects of Long COVID alone, we ask about this later. </p>"
+                  "<p>Do not include any effects of long COVID alone, we ask about this later. </p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4119,9 +4077,9 @@
               "type": "Question",
               "question": {
                 "id": "questionc48aa260-4726-4045-91b6-c20829d103bf",
-                "title": "Have you been vaccinated against COVID-19 since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you been vaccinated against COVID-19 since you last completed this questionnaire?",
                 "description": [
-                  "<p>Answer &quot;Yes&quot; if you have received a first, second or later dose, or a booster dose, since the questionnaire you completed most recently.</p>"
+                  "<p>Answer &quot;Yes&quot; if you have received a first, second or later dose, or a booster dose, since the last time you completed this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4329,9 +4287,9 @@
               "type": "Question",
               "question": {
                 "id": "questioneb99fbd2-9b40-473f-aa6c-c8275deb8bef",
-                "title": "Have you been vaccinated against flu since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you been vaccinated against flu since you last completed this questionnaire?",
                 "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p><p>This is commonly known as the &quot;flu jab&quot; or &quot;seasonal flu vaccination&quot;.</p>"
+                  "<p>This is commonly known as the &quot;flu jab&quot; or &quot;seasonal flu vaccination&quot;.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -4411,10 +4369,7 @@
               "type": "Question",
               "question": {
                 "id": "questionba3c1460-7b19-4c6d-bc7b-0685f2fda618",
-                "title": "Have you been outside of the UK since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
-                "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p>"
-                ],
+                "title": "Have you been outside of the UK since you last completed this questionnaire?",
                 "type": "General",
                 "answers": [
                   {
@@ -6123,9 +6078,9 @@
               "type": "Question",
               "question": {
                 "id": "question73143af8-91f6-4445-9335-fc7ca5de8c02",
-                "title": "Have you had a swab test for COVID-19 infection since you last completed this questionnaire or the COVID-19 Infection Survey questionnaire?",
+                "title": "Have you had a swab test for COVID-19 infection since you last completed this questionnaire?",
                 "description": [
-                  "<p>Please answer based on the questionnaire you completed most recently.</p><p>Exclude any tests done as part of the COVID-19 Infection Survey.</p><p>Include any type of swab test for COVID-19 infection, such as a lateral flow or a PCR test.</p>"
+                  "<p>Exclude any tests done as part of the COVID-19 Infection Survey.</p><p>Include any type of swab test for COVID-19 infection, such as a lateral flow or a PCR test.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6172,7 +6127,7 @@
                 "id": "questionac903d5f-42a1-4af4-9e3b-c059a264867d",
                 "title": "What were the results of all the swab tests you have had recently?",
                 "description": [
-                  "<p>Answer for the tests you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p><p>Please choose the <em>first</em> answer option that applies.</p>"
+                  "<p>Answer for the tests you have taken since you last completed this questionnaire.</p><p>Please choose the <em>first</em> answer option that applies.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6210,7 +6165,7 @@
                 "id": "questionc74cfe9c-46ec-4ee8-9721-081eda86bcc7",
                 "title": "What was the date of the first positive swab test you had recently?",
                 "description": [
-                  "<p>Answer for your first positive swab test you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p><p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th.</p>"
+                  "<p>Answer for your first positive swab test you have taken since you last completed this questionnaire.</p><p>If you cannot remember the day of the month, make your best guess. If you cannot make a best guess, put the 15th.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6258,7 +6213,7 @@
                 "id": "question49776e59-cf0b-4688-911b-7ab695c34321",
                 "title": "What type of test was the first positive swab test you had recently?",
                 "description": [
-                  "<p>Answer for your first positive swab test you have taken since you last completed this, or the COVID-19 Infection Survey questionnaire, whichever was most recent.</p>"
+                  "<p>Answer for your first positive swab test you have taken since you last completed this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -6912,8 +6867,7 @@
                     },
                     {
                       "list": [
-                        "if you were admitted to hospital pre-planned or as an emergency",
-                        "if you were admitted to hospital after attending A&amp;E (accident and emergency)"
+                        "if you were admitted to hospital pre-planned, as an emergency or after attending A&amp;E (accident and emergency)"
                       ]
                     },
                     {
@@ -6921,8 +6875,8 @@
                     },
                     {
                       "list": [
-                        "if you attended A&amp;E (accident and emergency) and were then referred somewhere else or discharged",
-                        "hospital appointments where you are not admitted to hospital"
+                        "if you attended A&amp;E and were then referred outside of the hospital or discharged without being admitted",
+                        "hospital outpatient appointments"
                       ]
                     }
                   ]
@@ -6979,8 +6933,7 @@
                     },
                     {
                       "list": [
-                        "if you were admitted to hospital pre-planned or as an emergency",
-                        "if you were admitted to hospital after attending A&amp;E (accident and emergency)"
+                        "if you were admitted to hospital pre-planned, as an emergency or after attending A&amp;E (accident and emergency)"
                       ]
                     },
                     {
@@ -6988,8 +6941,8 @@
                     },
                     {
                       "list": [
-                        "if you attended A&amp;E (accident and emergency) and were then referred somewhere else or discharged",
-                        "hospital appointments where you are not admitted to hospital"
+                        "if you attended A&amp;E and were then referred outside of the hospital or discharged without being admitted",
+                        "hospital outpatient appointments"
                       ]
                     }
                   ]
@@ -7127,7 +7080,7 @@
                 "id": "questionc1b453de-0caa-45ea-90a0-6015292aaec3",
                 "title": "Do you have any of the following symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following pages.</p>"
+                  "<p>Only include pre-existing symptoms if long COVID has made these symptoms worse. </p><p>You will be asked about other symptoms on the following pages.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -7209,7 +7162,7 @@
                 "id": "question7da56820-5a6e-45d3-8e41-4531e39b6ead",
                 "title": "And do you have any of these symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p><p>You will be asked about other symptoms on the following page.</p>"
+                  "<p>Only include pre-existing symptoms if long COVID has made these symptoms worse.</p><p>You will be asked about other symptoms on the following page.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -7287,7 +7240,7 @@
                 "id": "questionb55ff1a1-749a-490b-be53-555297ffadd2",
                 "title": "And do you have any of these symptoms as part of your experience of long COVID?",
                 "description": [
-                  "<p>Include any pre-existing symptoms which long COVID has made worse, but exclude any pre-existing symptoms that have not changed due to long COVID.</p>"
+                  "<p>Only include pre-existing symptoms if long COVID has made these symptoms worse.</p>"
                 ],
                 "type": "MutuallyExclusive",
                 "mandatory": true,
@@ -8624,24 +8577,6 @@
     "view_response": false,
     "guidance": {
       "contents": [
-        {
-          "description": "<strong>Your views are essential to us</strong>"
-        },
-        {
-          "description": "As you are one of the first participants to take part in the COVID-19 and Respiratory Infections Survey, finding out what you think is extremely important to us."
-        },
-        {
-          "description": "We are offering you the chance to give some short feedback about your experience."
-        },
-        {
-          "description": "Questions can be answered online or over the telephone. You do not have to give feedback, it is completely up to you."
-        },
-        {
-          "description": "The feedback survey can be completed online through the following link <a href=\"https://studies.ons.gov.uk/s/feedback7/\"target=\"_blank\"rel=\"noopener noreferrer\">https://studies.ons.gov.uk/s/feedback7/</a>"
-        },
-        {
-          "description": "Alternatively, if you would like to complete this feedback survey over the phone, please email <a href=\"mailto:COVID19.RAD@ons.gov.uk\"target=\"_blank\"rel=\"noopener noreferrer\">COVID19.RAD@ons.gov.uk</a> or call 0300 067 2138 to arrange this."
-        },
         {
           "description": "<strong>If another household member wants to start their questionnaire using the same device</strong>"
         },
