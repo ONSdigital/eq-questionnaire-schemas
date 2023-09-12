@@ -16,7 +16,7 @@ try:
         latest_tag = response.json()[0]["tag_name"]
         if latest_tag != version:
             logger.error(
-                f"eq-translations is out of date. aUpdate using: 'poetry add git+https://github.com/ONSDigital/eq-translations.git#{latest_tag}'"
+                f"eq-translations is out of date. Update using: 'poetry add git+https://github.com/ONSDigital/eq-translations.git#{latest_tag}'"
             )
             sys.exit(1)
     else:
