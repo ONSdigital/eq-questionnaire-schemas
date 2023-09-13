@@ -13,8 +13,9 @@ try:
     )
     if response.status_code == 200:
         version = f"v{eq_translations.__version__}"
-        latest_tag = r"\#" + response.json()[0]["tag_name"]
+        latest_tag = response.json()[0]["tag_name"]
         if latest_tag != version:
+            latest_tag = r"\#" + latest_tag
             logger.error(
                 f"eq-translations is out of date. Update using: 'poetry add git+https://github.com/ONSDigital/eq-translations{latest_tag}'"
             )
