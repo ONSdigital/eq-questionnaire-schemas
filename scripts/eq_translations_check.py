@@ -15,8 +15,9 @@ try:
         version = f"v{eq_translations.__version__}"
         latest_tag = response.json()[0]["tag_name"]
         if latest_tag != version:
+            latest_tag_with_prefix = r"\#" + latest_tag
             logger.error(
-                f"eq-translations is out of date. Update using: 'poetry add git+https://github.com/ONSDigital/eq-translations.git#{latest_tag}'"
+                f"eq-translations is out of date. Update using: 'poetry add git+https://github.com/ONSDigital/eq-translations{latest_tag_with_prefix}'"
             )
             sys.exit(1)
     else:
