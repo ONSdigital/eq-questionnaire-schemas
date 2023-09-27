@@ -132,7 +132,7 @@
                     "question": "Trading status of your business",
                     "contents": [
                       {
-                        "description": "This section asks for general information on your business&#39;s trading status."
+                        "description": "This section asks for general information on the business&#39;s trading status."
                       }
                     ]
                   },
@@ -163,7 +163,15 @@
                     "question": "Stock levels",
                     "contents": [
                       {
-                        "description": "This section asks for information about your business&#39;s stock levels and stockpiling."
+                        "description": "This section asks for information about:"
+                      },
+                      {
+                        "list": [
+                          "the business&#39;s stock levels and stockpiling",
+                          "expectations for capital expenditure",
+                          "scrapping capital assets",
+                          "plans to use, and previous use of, the full expensing capital allowance"
+                        ]
                       }
                     ]
                   },
@@ -171,7 +179,7 @@
                     "question": "Workforce trends",
                     "contents": [
                       {
-                        "description": "This section asks for information about your business&#39;s workforce such as the:"
+                        "description": "This section asks for information about your workforce such as the:"
                       },
                       {
                         "list": [
@@ -192,6 +200,7 @@
                         "list": [
                           "debt obligations",
                           "insolvency",
+                          "expectations for cash reserves",
                           "business&#39;s overall performance"
                         ]
                       }
@@ -225,6 +234,7 @@
       "title": "Trading status of your business",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Trading status of your business",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -234,13 +244,13 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "trading-status-of-your-business",
-              "page_title": "Trading status of your business",
+              "id": "trading-status-of-your-business-section",
+              "page_title": "Trading status of your business section",
               "content": {
                 "title": "Trading status of your business",
                 "contents": [
                   {
-                    "description": "This section asks for general information on your business&#39;s trading status."
+                    "description": "This section asks for general information on the business&#39;s trading status."
                   }
                 ]
               }
@@ -309,6 +319,7 @@
       "title": "Turnover",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Turnover",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -318,8 +329,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "turnover",
-              "page_title": "Turnover",
+              "id": "turnover-section",
+              "page_title": "Turnover section",
               "content": {
                 "title": "Turnover",
                 "contents": [
@@ -335,7 +346,7 @@
               "question": {
                 "id": "questionturnover-comparison-to-last-month",
                 "title": {
-                  "text": "How did {ru_name}&#x2019;s turnover in August 2023 compare with the previous calendar month?",
+                  "text": "How did {ru_name}&#x2019;s turnover in September 2023 compare with the previous calendar month?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -384,11 +395,116 @@
               "page_title": "Turnover comparison to last month"
             },
             {
+              "id": "turnover-challenges",
+              "type": "Question",
+              "question": {
+                "id": "questionturnover-challenges",
+                "title": "Which of the following challenges, if any, are <em>currently</em> impacting your business&#39;s turnover?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer69da65ad-94b4-4083-b5cb-018df94bf863",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Competition",
+                        "value": "Competition",
+                        "q_code": "641",
+                        "description": "This includes competitive imports and competition within your sector"
+                      },
+                      {
+                        "label": "Cost of labour",
+                        "value": "Cost of labour",
+                        "q_code": "642"
+                      },
+                      {
+                        "label": "Cost of materials",
+                        "value": "Cost of materials",
+                        "q_code": "643"
+                      },
+                      {
+                        "label": "Economic uncertainty",
+                        "value": "Economic uncertainty",
+                        "q_code": "644"
+                      },
+                      {
+                        "label": "Financial costs",
+                        "value": "Financial costs",
+                        "q_code": "645",
+                        "description": "This includes interest rates and access to bank credit"
+                      },
+                      {
+                        "label": "Insufficient domestic demand",
+                        "value": "Insufficient domestic demand",
+                        "q_code": "646"
+                      },
+                      {
+                        "label": "Insufficient international demand",
+                        "value": "Insufficient international demand",
+                        "q_code": "647"
+                      },
+                      {
+                        "label": "Lack of equipment",
+                        "value": "Lack of equipment",
+                        "q_code": "648"
+                      },
+                      {
+                        "label": "Shortage of labour",
+                        "value": "Shortage of labour",
+                        "q_code": "649"
+                      },
+                      {
+                        "label": "Shortage of materials",
+                        "value": "Shortage of materials",
+                        "q_code": "6410"
+                      },
+                      {
+                        "label": "Weather conditions",
+                        "value": "Weather conditions",
+                        "q_code": "6411"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "6412",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer23779dde-fc43-4cd2-a588-354b1ca5e1db",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "6499"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer6402fca4-097e-49a4-82a0-f5a60599031c",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not currently experiencing any challenges",
+                        "value": "Not currently experiencing any challenges",
+                        "q_code": "6400"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Turnover challenges"
+            },
+            {
               "id": "turnover-expectations",
               "type": "Question",
               "question": {
                 "id": "questionturnover-expectations",
-                "title": "What are your business&#x2019;s expectations for turnover in <em>October 2023</em>?",
+                "title": "What are your business&#x2019;s expectations for turnover in <em>November 2023</em>?",
                 "description": [
                   "<p>When considering expectations, compare to your business&#39;s current turnover.</p>"
                 ],
@@ -442,6 +558,7 @@
       "title": "Prices",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Prices",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -451,8 +568,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "prices",
-              "page_title": "Prices",
+              "id": "prices-section",
+              "page_title": "Prices section",
               "content": {
                 "title": "Prices",
                 "contents": [
@@ -475,7 +592,7 @@
               "question": {
                 "id": "questionprices-of-goods-or-services-bought",
                 "title": {
-                  "text": "How did the prices of goods or services bought by {ru_name} in August 2023 compare with the previous calendar month?",
+                  "text": "How did the prices of goods or services bought by {ru_name} in September 2023 compare with the previous calendar month?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -532,7 +649,7 @@
               "type": "Question",
               "question": {
                 "id": "questionprices-of-goods-or-services-sold",
-                "title": "How did the prices of goods or services <em>sold</em> by your business in August 2023 compare with the previous calendar month?",
+                "title": "How did the prices of goods or services <em>sold</em> by your business in September 2023 compare with the previous calendar month?",
                 "guidance": {
                   "contents": [
                     {
@@ -579,7 +696,7 @@
               "type": "Question",
               "question": {
                 "id": "questionexpectations-for-prices-of-goods-or-services-sold",
-                "title": "What are your business&#39;s expectations for the prices of goods or services sold in <em>October 2023</em>?",
+                "title": "What are your business&#39;s expectations for the prices of goods or services sold in <em>November 2023</em>?",
                 "description": [
                   "<p>When considering expectations, compare to your business&#39;s current prices of goods or services.</p>"
                 ],
@@ -629,7 +746,7 @@
               "type": "Question",
               "question": {
                 "id": "questionfactors-causing-business-to-consider-raising-prices",
-                "title": "Which of the following factors, if any, are causing your business to <em>consider</em> raising prices in October 2023?",
+                "title": "Which of the following factors, if any, are causing your business to <em>consider</em> raising prices in November 2023?",
                 "type": "MutuallyExclusive",
                 "mandatory": true,
                 "answers": [
@@ -698,7 +815,7 @@
               "type": "Question",
               "question": {
                 "id": "questiondomestic-demand-for-goods-and-services",
-                "title": "How did your business&#x2019;s domestic demand for goods and services in <em>August 2023</em> compare with the previous calendar month?",
+                "title": "How did your business&#x2019;s domestic demand for goods and services in <em>September 2023</em> compare with the previous calendar month?",
                 "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
@@ -757,7 +874,7 @@
               "type": "Question",
               "question": {
                 "id": "questioninternational-demand-for-goods-and-services",
-                "title": "How did your business&#x2019;s <em>international</em> demand for goods and services in August 2023 compare with the previous calendar month?",
+                "title": "How did your business&#x2019;s <em>international</em> demand for goods and services in September 2023 compare with the previous calendar month?",
                 "description": ["<p>Informed estimates are acceptable.</p>"],
                 "guidance": {
                   "contents": [
@@ -918,7 +1035,7 @@
                         "label": "Had to access more financial support",
                         "value": "Had to access more financial support",
                         "q_code": "8083",
-                        "description": "For example, borrowing loans, issuing shares and bonds, or taking on debt"
+                        "description": "For example, borrowing loans, issuing shares and bonds or taking on debt"
                       },
                       {
                         "label": "Had to change suppliers",
@@ -1005,6 +1122,7 @@
       "title": "Stock levels",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Stock levels",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1014,13 +1132,21 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "stock-levels",
-              "page_title": "Stock levels",
+              "id": "stock-levels-section",
+              "page_title": "Stock levels section",
               "content": {
                 "title": "Stock levels",
                 "contents": [
                   {
-                    "description": "This section asks for information about your business&#39;s stock levels and stockpiling."
+                    "description": "This section asks for information about:"
+                  },
+                  {
+                    "list": [
+                      "the business&#39;s stock levels and stockpiling",
+                      "expectations for capital expenditure",
+                      "scrapping capital assets",
+                      "plans to use, and previous use of, the full expensing capital allowance"
+                    ]
                   }
                 ]
               }
@@ -1031,7 +1157,7 @@
               "question": {
                 "id": "questionstock-levels-of-raw-materials",
                 "title": {
-                  "text": "How did {ru_name}&#39;s stock levels of raw materials in August 2023 compare with the previous calendar month?",
+                  "text": "How did {ru_name}&#39;s stock levels of raw materials in September 2023 compare with the previous calendar month?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1107,7 +1233,7 @@
               "type": "Question",
               "question": {
                 "id": "questionstock-levels-of-finished-goods",
-                "title": "How did your business&#39;s stock levels of <em>finished goods</em> in August 2023 compare with the previous calendar month?",
+                "title": "How did your business&#39;s stock levels of <em>finished goods</em> in September 2023 compare with the previous calendar month?",
                 "guidance": {
                   "contents": [
                     {
@@ -1193,6 +1319,453 @@
                 ]
               },
               "page_title": "Stockpiling of goods or materials"
+            },
+            {
+              "id": "expectations-for-capital-expenditure",
+              "type": "Question",
+              "question": {
+                "id": "questionexpectations-for-capital-expenditure",
+                "title": "What are your business&#39;s <em>expectations</em> for capital expenditure between October and December 2023?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Include:</strong>"
+                    },
+                    {
+                      "list": [
+                        "new buildings and major improvements to existing buildings",
+                        "purchased software",
+                        "spending on plant and machinery",
+                        "transport and energy infrastructures, such as roads and powerlines",
+                        "transport equipment"
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer51f99354-adc2-410e-889f-668bc4cb1c98",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "188",
+                    "options": [
+                      {
+                        "label": "Capital expenditure will increase",
+                        "value": "Capital expenditure will increase"
+                      },
+                      {
+                        "label": "Capital expenditure will stay the same",
+                        "value": "Capital expenditure will stay the same"
+                      },
+                      {
+                        "label": "Capital expenditure will decrease",
+                        "value": "Capital expenditure will decrease"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      },
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Expectations for capital expenditure",
+              "routing_rules": [
+                {
+                  "block": "factors-limiting-businesss-capital-expenditure",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer51f99354-adc2-410e-889f-668bc4cb1c98",
+                        "source": "answers"
+                      },
+                      ["Not applicable"]
+                    ]
+                  }
+                },
+                {
+                  "block": "authorising-capital-expenditure"
+                }
+              ]
+            },
+            {
+              "id": "authorising-capital-expenditure",
+              "type": "Question",
+              "question": {
+                "id": "questionauthorising-capital-expenditure",
+                "title": "Why is your business expecting to authorise capital expenditure in <em>November 2023</em>?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer4366410e-4dd7-490b-97bb-0084ca5b6fbb",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "For replacements",
+                        "value": "For replacements",
+                        "q_code": "741",
+                        "description": "For example, to replace worn out or out of date equipment"
+                      },
+                      {
+                        "label": "To expand capacity",
+                        "value": "To expand capacity",
+                        "q_code": "742",
+                        "description": "For example, to increase future activity, outputs or production"
+                      },
+                      {
+                        "label": "To increase efficiency",
+                        "value": "To increase efficiency",
+                        "q_code": "743"
+                      },
+                      {
+                        "label": "To provide new services",
+                        "value": "To provide new services",
+                        "q_code": "744"
+                      },
+                      {
+                        "label": "To reach new customers",
+                        "value": "To reach new customers",
+                        "q_code": "745"
+                      },
+                      {
+                        "label": "To use new technology",
+                        "value": "To use new technology",
+                        "q_code": "746"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "747",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer7c37c43a-d0f6-4764-8b91-3c54de3c5afe",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "749"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answerd1655b35-4d26-4d95-9add-43b65962fdd7",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable",
+                        "q_code": "740"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Authorising capital expenditure"
+            },
+            {
+              "id": "factors-limiting-businesss-capital-expenditure",
+              "type": "Question",
+              "question": {
+                "id": "questionfactors-limiting-businesss-capital-expenditure",
+                "title": "Which of the following, if any, do you expect to limit your business&#39;s capital expenditure in November 2023?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answeree06a4d5-b4cf-4bdb-acd8-51f96adeda93",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Inability to raise external finance",
+                        "value": "Inability to raise external finance",
+                        "q_code": "751"
+                      },
+                      {
+                        "label": "Inadequate return on proposed investment",
+                        "value": "Inadequate return on proposed investment",
+                        "q_code": "752"
+                      },
+                      {
+                        "label": "Shortage of internal finance",
+                        "value": "Shortage of internal finance",
+                        "q_code": "753"
+                      },
+                      {
+                        "label": "Shortage of labour",
+                        "value": "Shortage of labour",
+                        "q_code": "754"
+                      },
+                      {
+                        "label": "Uncertainty about demand or business prospects",
+                        "value": "Uncertainty about demand or business prospects",
+                        "q_code": "755"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "756",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer7cf36135-86d7-49e9-8527-3aadbf781688",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "759"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer8f670d0c-6383-4ec9-a09e-916d2449246b",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not expecting any limits to capital expenditure",
+                        "value": "Not expecting any limits to capital expenditure",
+                        "q_code": "750"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Factors limiting business&#39;s capital expenditure"
+            },
+            {
+              "id": "assets-scrapped-by-business",
+              "type": "Question",
+              "question": {
+                "id": "questionassets-scrapped-by-business",
+                "title": "Did your business scrap any capital assets earlier than intended in September 2023?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "Exclude capital assets which are sold"
+                    }
+                  ]
+                },
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;scrap&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to assets that are retired from their use in the production process."
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answere30797c9-7a09-43bd-8521-534bf28706ae",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "202",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      },
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Assets scrapped by business",
+              "routing_rules": [
+                {
+                  "block": "investing-in-plant-and-machinery",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answere30797c9-7a09-43bd-8521-534bf28706ae",
+                        "source": "answers"
+                      },
+                      ["No", "Not sure", "Not applicable"]
+                    ]
+                  }
+                },
+                {
+                  "block": "details-of-assets-scrapped-by-business"
+                }
+              ]
+            },
+            {
+              "id": "details-of-assets-scrapped-by-business",
+              "type": "Question",
+              "question": {
+                "id": "questiondetails-of-assets-scrapped-by-business",
+                "title": "Please explain in more detail what type of assets your business scrapped early and why",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer0c2a0d7b-ed1d-4052-a01b-ac63fc684064",
+                    "mandatory": false,
+                    "type": "TextArea",
+                    "label": "Comments",
+                    "q_code": "77",
+                    "max_length": 2000
+                  }
+                ]
+              },
+              "page_title": "Details of assets scrapped by business"
+            },
+            {
+              "id": "investing-in-plant-and-machinery",
+              "type": "Question",
+              "question": {
+                "id": "questioninvesting-in-plant-and-machinery",
+                "title": "Did your business invest in plant and machinery between <em>July and September 2023</em>?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Examples of plant and machinery:</strong>"
+                    },
+                    {
+                      "list": [
+                        "machines such as, computers, printers, lathes and planers",
+                        "office equipment such as, desks and chairs",
+                        "vehicles such as, vans, lorries and tractors, excluding cars",
+                        "warehousing equipment such as, forklift trucks, pallet trucks, shelving and stackers",
+                        "tools such as, ladders and drills",
+                        "construction equipment such as, excavators, compactors, and bulldozers",
+                        "some fixtures such as, kitchen and bathroom fittings and fire alarm systems in non-residential property"
+                      ]
+                    },
+                    {
+                      "description": "This list is not exhaustive. <a href=\"https://www.gov.uk/government/publications/full-expensing/spring-budget-2023-full-expensing\"target=\"_blank\"rel=\"noopener noreferrer\">View further information on the gov.uk website (this link opens in a new tab).</a>"
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answercaa9abd5-c059-4b22-bff1-f677ce552d66",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "10023",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Investing in plant and machinery",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answercaa9abd5-c059-4b22-bff1-f677ce552d66",
+                        "source": "answers"
+                      },
+                      ["No", "Not sure"]
+                    ]
+                  }
+                },
+                {
+                  "block": "using-full-expensing-on-plant-and-machinery"
+                }
+              ]
+            },
+            {
+              "id": "using-full-expensing-on-plant-and-machinery",
+              "type": "Question",
+              "question": {
+                "id": "questionusing-full-expensing-on-plant-and-machinery",
+                "title": "Did your business use the <em>full expensing</em> capital allowance on qualifying plant and machinery investments between July and September 2023?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;full expensing capital allowance&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to a measure announced in the March 2023 budget in which companies can claim 100% capital allowances on qualifying plant and machinery investments from 1 April 2023 until 31 March 2026."
+                      },
+                      {
+                        "description": "<strong>Examples of plant and machinery assets that qualify for the new capital allowance:</strong>"
+                      },
+                      {
+                        "list": [
+                          "solar panels",
+                          "computer equipment and servers",
+                          "tractors, lorries and vans",
+                          "ladders, drills and cranes",
+                          "office chairs and desks",
+                          "electric vehicle charge points",
+                          "refrigeration units",
+                          "compressors",
+                          "foundry equipment"
+                        ]
+                      },
+                      {
+                        "description": "This list is not exhaustive. <a href=\"https://www.gov.uk/government/publications/full-expensing/spring-budget-2023-full-expensing\"target=\"_blank\"rel=\"noopener noreferrer\">View further information on the gov.uk website (this link opens in a new tab).</a>"
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answera4d8e026-4745-40ae-8c82-50de9289f64e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "10024",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Using full expensing on plant and machinery"
             }
           ]
         }
@@ -1219,6 +1792,7 @@
       "title": "Workforce trends",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Workforce trends",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1228,13 +1802,13 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "workforce-trends",
-              "page_title": "Workforce trends",
+              "id": "workforce-trends-section",
+              "page_title": "Workforce trends section",
               "content": {
                 "title": "Workforce trends",
                 "contents": [
                   {
-                    "description": "This section asks for information about your business&#39;s workforce such as the:"
+                    "description": "This section asks for information about your workforce such as the:"
                   },
                   {
                     "list": [
@@ -1252,7 +1826,7 @@
               "question": {
                 "id": "questionways-of-working",
                 "title": {
-                  "text": "In August 2023, approximately what percentage of {ru_name}&#39;s workforce were:",
+                  "text": "In September 2023, approximately what percentage of {ru_name}&#39;s workforce were:",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1420,7 +1994,7 @@
               "type": "Question",
               "question": {
                 "id": "questionnumber-of-employees-at-business",
-                "title": "How did the number of employees at your business in August 2023 compare with the previous calendar month?",
+                "title": "How did the number of employees at your business in September 2023 compare with the previous calendar month?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p><p>If you are a <em>sole trader</em> and do not have a workforce, please base your answers on your own working arrangement.</p>"
                 ],
@@ -1466,7 +2040,7 @@
               "type": "Question",
               "question": {
                 "id": "questionexpectations-for-businesss-number-of-employees",
-                "title": "What are your business&#x2019;s expectations for the number of employees in <em>October 2023</em>?",
+                "title": "What are your business&#x2019;s expectations for the number of employees in <em>November 2023</em>?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p><p>If you are a <em>sole trader</em> and do not have a workforce, please base your answers on your own working arrangement.</p><p>When considering expectations, compare to your business&#39;s current number of employees.</p>"
                 ],
@@ -1508,11 +2082,143 @@
               "page_title": "Expectations for business&#39;s number of employees"
             },
             {
+              "id": "changes-in-staffing-costs",
+              "type": "Question",
+              "question": {
+                "id": "questionchanges-in-staffing-costs",
+                "title": "How has your business&#x2019;s staffing costs changed over the <em>last three months</em>?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Include: </strong>"
+                    },
+                    {
+                      "list": [
+                        "allowances and bonuses",
+                        "employer pension contributions",
+                        "national insurance contributions",
+                        "wages and salaries"
+                      ]
+                    },
+                    {
+                      "description": "<strong>Exclude:</strong>"
+                    },
+                    {
+                      "list": [
+                        "recruitment costs",
+                        "redundancy costs",
+                        "seasonal changes",
+                        "training costs"
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer928ac241-848c-4aaa-9edc-c1506614af30",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "235",
+                    "options": [
+                      {
+                        "label": "Costs have increased",
+                        "value": "Costs have increased"
+                      },
+                      {
+                        "label": "Costs have stayed the same",
+                        "value": "Costs have stayed the same"
+                      },
+                      {
+                        "label": "Costs have decreased",
+                        "value": "Costs have decreased"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      },
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Changes in staffing costs"
+            },
+            {
+              "id": "expectations-for-staffing-costs",
+              "type": "Question",
+              "question": {
+                "id": "questionexpectations-for-staffing-costs",
+                "title": "How does your business expect staffing costs to change over the <em>next</em> three months?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Include:</strong>"
+                    },
+                    {
+                      "list": [
+                        "allowances and bonuses",
+                        "employer pension contributions",
+                        "national insurance contributions",
+                        "wages and salaries"
+                      ]
+                    },
+                    {
+                      "description": "<strong>Exclude:</strong>"
+                    },
+                    {
+                      "list": [
+                        "recruitment costs",
+                        "redundancy costs",
+                        "seasonal changes",
+                        "training costs"
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answeraeedc2ec-8806-431d-9c1e-5ad29b1ab68c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "258",
+                    "options": [
+                      {
+                        "label": "Costs will increase",
+                        "value": "Costs will increase"
+                      },
+                      {
+                        "label": "Costs will stay the same",
+                        "value": "Costs will stay the same"
+                      },
+                      {
+                        "label": "Costs will decrease",
+                        "value": "Costs will decrease"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      },
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Expectations for staffing costs"
+            },
+            {
               "id": "difficulties-in-recruiting-employees",
               "type": "Question",
               "question": {
                 "id": "questiondifficulties-in-recruiting-employees",
-                "title": "Did your business experience any difficulties recruiting employees in August 2023?",
+                "title": "Did your business experience any difficulties recruiting employees in September 2023?",
                 "type": "General",
                 "answers": [
                   {
@@ -1541,7 +2247,172 @@
                   }
                 ]
               },
-              "page_title": "Difficulties in recruiting employees"
+              "page_title": "Difficulties in recruiting employees",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc1030d04-64a9-49bb-874f-bb27d71ac37d",
+                        "source": "answers"
+                      },
+                      ["No", "Not sure", "Not applicable"]
+                    ]
+                  }
+                },
+                {
+                  "block": "type-of-employees-business-had-difficulties-in-recruiting"
+                }
+              ]
+            },
+            {
+              "id": "type-of-employees-business-had-difficulties-in-recruiting",
+              "type": "Question",
+              "question": {
+                "id": "questiontype-of-employees-business-had-difficulties-in-recruiting",
+                "title": "Which of the following employees has your business had difficulties in recruiting?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer88231873-bd81-43a2-811f-b2bd66750ecd",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Clerical employees",
+                        "value": "Clerical employees",
+                        "q_code": "791",
+                        "description": "For example, payroll clerks and secretaries"
+                      },
+                      {
+                        "label": "Professional or managerial employees",
+                        "value": "Professional or managerial employees",
+                        "q_code": "792",
+                        "description": "For example, accountants, lawyers and sales managers"
+                      },
+                      {
+                        "label": "Semi-skilled or unskilled employees",
+                        "value": "Semi-skilled or unskilled employees",
+                        "q_code": "793",
+                        "description": "For example, bartenders, retail salespersons and security guards"
+                      },
+                      {
+                        "label": "Skilled, manual or technical employees",
+                        "value": "Skilled, manual or technical employees",
+                        "q_code": "794",
+                        "description": "For example, carpenters, electricians and plumbers"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "795",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer62f13718-2914-4481-9f49-d5949e259a07",
+                          "mandatory": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer70add636-48d5-4766-bd29-7f185a13a28b",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "799"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Type of employees business had difficulties in recruiting"
+            },
+            {
+              "id": "reasons-for-difficulties-faced-in-recruiting-employees",
+              "type": "Question",
+              "question": {
+                "id": "questionreasons-for-difficulties-faced-in-recruiting-employees",
+                "title": "Why did your business experience difficulties in recruiting employees?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer2ee4d5b4-e395-41c4-b0a4-92397cf27c03",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Business cannot offer an attractive pay package to applicants",
+                        "value": "Business cannot offer an attractive pay package to applicants",
+                        "q_code": "881",
+                        "description": "For example, additional benefits, competitive pay and flexible working hours"
+                      },
+                      {
+                        "label": "Increased number of vacancies",
+                        "value": "Increased number of vacancies",
+                        "q_code": "882",
+                        "description": "For example, business growth and diversification, or new work opportunities"
+                      },
+                      {
+                        "label": "Lack of qualified applicants for the roles on offer",
+                        "value": "Lack of qualified applicants for the roles on offer",
+                        "q_code": "883",
+                        "description": "For example, applicants lacking the experience, qualifications or skills required"
+                      },
+                      {
+                        "label": "Low number of applications for the roles on offer",
+                        "value": "Low number of applications for the roles on offer",
+                        "q_code": "884"
+                      },
+                      {
+                        "label": "Reduced number of applicants aged 16 to 24 years",
+                        "value": "Reduced number of applicants aged 16 to 24 years",
+                        "q_code": "885"
+                      },
+                      {
+                        "label": "Reduced number of applicants aged over 50 years",
+                        "value": "Reduced number of applicants aged over 50 years",
+                        "q_code": "886"
+                      },
+                      {
+                        "label": "Reduced number of EU applicants",
+                        "value": "Reduced number of EU applicants",
+                        "q_code": "887"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "888",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer67ee88b3-c4e5-4049-80d4-e1f25ad11018",
+                          "mandatory": false
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answere492877c-00e7-4e38-8355-2072e095bf81",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "889"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Reasons for difficulties faced in recruiting employees"
             }
           ]
         }
@@ -1568,6 +2439,7 @@
       "title": "Business confidence",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Business confidence",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1577,8 +2449,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "business-confidence",
-              "page_title": "Business confidence",
+              "id": "business-confidence-section",
+              "page_title": "Business confidence section",
               "content": {
                 "title": "Business confidence",
                 "contents": [
@@ -1589,6 +2461,7 @@
                     "list": [
                       "debt obligations",
                       "insolvency",
+                      "expectations for cash reserves",
                       "business&#39;s overall performance"
                     ]
                   }
@@ -1601,7 +2474,7 @@
               "question": {
                 "id": "questiondebt-repayments",
                 "title": {
-                  "text": "In August 2023, how did {ru_name}&#39;s debt repayments compare with turnover?",
+                  "text": "In September 2023, how did {ru_name}&#39;s debt repayments compare with turnover?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1696,8 +2569,8 @@
                         "value": "Not sure"
                       },
                       {
-                        "label": "Business does not have any debt obligations",
-                        "value": "Business does not have any debt obligations"
+                        "label": "Do not have any debt obligations",
+                        "value": "Do not have any debt obligations"
                       }
                     ]
                   }
@@ -1750,8 +2623,8 @@
                         "value": "Not sure"
                       },
                       {
-                        "label": "Business is insolvent",
-                        "value": "Business is insolvent"
+                        "label": "The business is insolvent",
+                        "value": "The business is insolvent"
                       }
                     ]
                   }
@@ -1760,11 +2633,55 @@
               "page_title": "Risk of insolvency"
             },
             {
+              "id": "cash-reserves",
+              "type": "Question",
+              "question": {
+                "id": "questioncash-reserves",
+                "title": "How long do you expect your business&#39;s cash reserves will last?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6363fbd6-f7f9-44d0-8b56-3c3acb7f3a97",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "73",
+                    "options": [
+                      {
+                        "label": "Less than 1 month",
+                        "value": "Less than 1 month"
+                      },
+                      {
+                        "label": "1 to 3 months",
+                        "value": "1 to 3 months"
+                      },
+                      {
+                        "label": "4 to 6 months",
+                        "value": "4 to 6 months"
+                      },
+                      {
+                        "label": "More than 6 months",
+                        "value": "More than 6 months"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure"
+                      },
+                      {
+                        "label": "Business has no cash reserves",
+                        "value": "Business has no cash reserves"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Cash reserves"
+            },
+            {
               "id": "businesss-overall-performance",
               "type": "Question",
               "question": {
                 "id": "questionbusinesss-overall-performance",
-                "title": "How would you describe your business&#x2019;s overall performance in August 2023, compared with this calendar month last year?",
+                "title": "How would you describe your business&#x2019;s overall performance in September 2023, compared with this calendar month last year?",
                 "description": [
                   "<p>Consider <em>all aspects</em> of your business contributing to overall performance such as pricing, trading and workforce.</p>"
                 ],
@@ -1871,10 +2788,10 @@
           "id": "groupddf6e0c6-a61d-48cb-92db-f24e4ee40049",
           "blocks": [
             {
-              "id": "comments-about-anything-else-relating-to-your-business",
+              "id": "comments-section",
               "type": "Question",
               "question": {
-                "id": "questioncomments-about-anything-else-relating-to-your-business",
+                "id": "questioncomments-section",
                 "title": "Please tell us anything else about your business&#39;s current situation relating to topics covered in this survey",
                 "guidance": {
                   "contents": [
@@ -1895,7 +2812,7 @@
                   }
                 ]
               },
-              "page_title": "Comments about anything else relating to your business"
+              "page_title": "Comments section"
             }
           ]
         }
@@ -1938,11 +2855,13 @@
     }
   ],
   "post_submission": {
-    "confirmation_email": true,
     "feedback": true,
     "view_response": true,
     "guidance": {
       "contents": [
+        {
+          "description": "Your response will help inform decision-makers how best to support the UK population and economy."
+        },
         {
           "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
         }
