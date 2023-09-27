@@ -3,6 +3,7 @@
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
+  "preview_questions": false,
   "survey_id": "147",
   "form_type": "0003",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
@@ -11,7 +12,7 @@
     "type": "Hub",
     "options": {
       "required_completed_sections": [
-        "section3ec3685a-5b99-4014-8763-976b7c91f563",
+        "3ec3685a-5b99-4014-8763-976b7c91f563",
         "sectiondfa9048a-4c6b-431f-a901-5d4f8752ddc9"
       ]
     }
@@ -26,27 +27,20 @@
           "title": "Introduction",
           "blocks": [
             {
-              "id": "introduction-block",
+              "id": "introduction",
               "type": "Introduction",
               "primary_content": [
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
+                    "text": "You are completing this for {trad_as} ({ru_name})",
                     "placeholders": [
                       {
-                        "placeholder": "conditional_trad_as",
-                        "transforms": [
-                          {
-                            "arguments": {
-                              "trad_as": {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              }
-                            },
-                            "transform": "conditional_trad_as"
-                          }
-                        ]
+                        "placeholder": "trad_as",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "trad_as"
+                        }
                       },
                       {
                         "placeholder": "ru_name",
@@ -177,8 +171,12 @@
       ]
     },
     {
-      "id": "section3ec3685a-5b99-4014-8763-976b7c91f563",
+      "id": "3ec3685a-5b99-4014-8763-976b7c91f563",
       "title": "Reporting Period",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -186,7 +184,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group3ec3685a-5b99-4014-8763-976b7c91f563-introduction",
+              "id": "reporting-period-section",
+              "page_title": "Reporting period section",
               "content": {
                 "title": "Environmental protection expenditure",
                 "contents": [
@@ -231,10 +230,10 @@
               }
             },
             {
-              "id": "block23b85201-b524-435c-86be-ba211bd87b90",
+              "id": "calendar-year-reporting-period",
               "type": "Question",
               "question": {
-                "id": "question23b85201-b524-435c-86be-ba211bd87b90",
+                "id": "questioncalendar-year-reporting-period",
                 "title": {
                   "text": "Are you able to report for the period {ref_p_start_date} to {ref_p_end_date}?",
                   "placeholders": [
@@ -293,6 +292,7 @@
                   }
                 ]
               },
+              "page_title": "Calendar year reporting period",
               "routing_rules": [
                 {
                   "section": "End",
@@ -307,15 +307,15 @@
                   }
                 },
                 {
-                  "block": "block0d65dfe6-1a3d-439d-9e2e-fa00ee2d178b"
+                  "block": "alternative-reporting-period-dates"
                 }
               ]
             },
             {
-              "id": "block0d65dfe6-1a3d-439d-9e2e-fa00ee2d178b",
+              "id": "alternative-reporting-period-dates",
               "type": "Question",
               "question": {
-                "id": "question0d65dfe6-1a3d-439d-9e2e-fa00ee2d178b",
+                "id": "questionalternative-reporting-period-dates",
                 "title": "What dates are you reporting for?",
                 "description": [
                   "<p>If you can report for a full 12 months, provide dates that end between <em>6 April 2021</em> and <em>5 April 2022</em>.</p><p>If you traded for only part of the year, please provide the dates for the period in which you were trading.</p>"
@@ -348,19 +348,20 @@
                     "months": 12
                   }
                 }
-              }
+              },
+              "page_title": "Alternative reporting period dates"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "5b375c46-6375-4b6c-8af5-c592dc1a09df",
+      "title": "External operating expenditure",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "section5b375c46-6375-4b6c-8af5-c592dc1a09df",
-      "title": "External operating expenditure",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -368,7 +369,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group5b375c46-6375-4b6c-8af5-c592dc1a09df-introduction",
+              "id": "external-operating-expenditure-section",
+              "page_title": "External operating expenditure section",
               "content": {
                 "title": "External operating expenditure",
                 "contents": [
@@ -385,23 +387,23 @@
               }
             },
             {
-              "id": "block6daba657-6e10-4cb4-bc21-b84239b08ff5",
+              "id": "external-operating-costs-for-environmental-protection-services",
               "type": "Question",
               "question": {
-                "id": "question6daba657-6e10-4cb4-bc21-b84239b08ff5",
+                "id": "questionexternal-operating-costs-for-environmental-protection-services",
                 "title": {
-                  "text": "For the period {answereb6d71bb_f694_47b9_8552_50087b7aaf74from} to {answereb6d71bb_f694_47b9_8552_50087b7aaf74to}, did {ru_name} <em>pay an external organisation</em> for a service that helped to protect the environment?",
+                  "text": "For the period {from} to {to}, did {ru_name} <em>pay an external organisation</em> for a service that helped to protect the environment?",
                   "placeholders": [
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74from",
+                      "placeholder": "from",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -422,15 +424,15 @@
                       ]
                     },
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74to",
+                      "placeholder": "to",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -499,6 +501,7 @@
                   }
                 ]
               },
+              "page_title": "External operating costs for environmental protection services",
               "routing_rules": [
                 {
                   "section": "End",
@@ -513,15 +516,15 @@
                   }
                 },
                 {
-                  "block": "blocke23adaf4-56c5-4b21-99e0-57998a0c68e2"
+                  "block": "value-of-external-operating-costs-for-environmental-protection-services"
                 }
               ]
             },
             {
-              "id": "blocke23adaf4-56c5-4b21-99e0-57998a0c68e2",
+              "id": "value-of-external-operating-costs-for-environmental-protection-services",
               "type": "Question",
               "question": {
-                "id": "questione23adaf4-56c5-4b21-99e0-57998a0c68e2",
+                "id": "questionvalue-of-external-operating-costs-for-environmental-protection-services",
                 "title": "For the reporting period, how much did your business pay to external organisations for environmental protection services?",
                 "guidance": {
                   "contents": [
@@ -557,25 +560,26 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Value of external operating costs for environmental protection services"
             },
             {
-              "id": "block58e5a705-cbfb-4119-9a2c-0f62472f9d8c",
+              "id": "external-operating-costs-breakdown",
               "type": "Question",
               "question": {
-                "id": "question58e5a705-cbfb-4119-9a2c-0f62472f9d8c",
+                "id": "questionexternal-operating-costs-breakdown",
                 "title": {
-                  "text": "Of the {answerd49825a9_3298_438e_9561_78e98472866a}, how much related to the following?",
+                  "text": "Of the {value_of_external_operating_costs}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "answerd49825a9_3298_438e_9561_78e98472866a",
+                      "placeholder": "value_of_external_operating_costs",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answerd49825a9-3298-438e-9561-78e98472866a"
+                              "identifier": "answerd49825a9-3298-438e-9561-78e98472866a",
+                              "source": "answers"
                             }
                           }
                         }
@@ -643,16 +647,20 @@
                       "answer2ccabc94-1339-41c4-924f-ad7723d2fd73"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answerd49825a9-3298-438e-9561-78e98472866a"
+                    "value": {
+                      "identifier": "answerd49825a9-3298-438e-9561-78e98472866a",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "External operating costs breakdown"
             },
             {
-              "id": "blockbdf7d521-dc64-489c-97eb-8300a9062609",
+              "id": "more-detail-about-external-operating-expenditure",
               "type": "Question",
               "question": {
-                "id": "questionbdf7d521-dc64-489c-97eb-8300a9062609",
+                "id": "questionmore-detail-about-external-operating-expenditure",
                 "title": "Please give more detail about the reasons for external operating expenditure, in relation to protecting the environment",
                 "description": [
                   "<p>Explain why these environmental protection activities have taken place and the environmental considerations involved in this decision.</p>"
@@ -677,19 +685,20 @@
                     }
                   }
                 ]
-              }
+              },
+              "page_title": "More detail about external operating expenditure"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "6c5c45d6-7adb-4807-b46b-9f207af73b2f",
+      "title": "In-house operating expenditure",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "section6c5c45d6-7adb-4807-b46b-9f207af73b2f",
-      "title": "In-house operating expenditure",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -697,7 +706,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group6c5c45d6-7adb-4807-b46b-9f207af73b2f-introduction",
+              "id": "in-house-operating-expenditure-section",
+              "page_title": "In-house operating expenditure section",
               "content": {
                 "title": "In-house operating expenditure",
                 "contents": [
@@ -720,23 +730,23 @@
               }
             },
             {
-              "id": "blockb7834fea-041a-41fc-8dc5-d35e7571434e",
+              "id": "in-house-costs-for-environmental-protection-activities",
               "type": "Question",
               "question": {
-                "id": "questionb7834fea-041a-41fc-8dc5-d35e7571434e",
+                "id": "questionin-house-costs-for-environmental-protection-activities",
                 "title": {
-                  "text": "For the period {answereb6d71bb_f694_47b9_8552_50087b7aaf74from} to {answereb6d71bb_f694_47b9_8552_50087b7aaf74to}, did {ru_name} have any <em>in-house</em> operating costs for environmental protection activities?",
+                  "text": "For the period {from} to {to}, did {ru_name} have any <em>in-house</em> operating costs for environmental protection activities?",
                   "placeholders": [
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74from",
+                      "placeholder": "from",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -757,15 +767,15 @@
                       ]
                     },
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74to",
+                      "placeholder": "to",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -841,6 +851,7 @@
                   }
                 ]
               },
+              "page_title": "In-house costs for environmental protection activities",
               "routing_rules": [
                 {
                   "section": "End",
@@ -855,15 +866,15 @@
                   }
                 },
                 {
-                  "block": "block8e34183b-6a62-4925-8959-e7a3f0500574"
+                  "block": "in-house-operating-costs-for-all-environmental-protection-facilities-and-environmental-management"
                 }
               ]
             },
             {
-              "id": "block8e34183b-6a62-4925-8959-e7a3f0500574",
+              "id": "in-house-operating-costs-for-all-environmental-protection-facilities-and-environmental-management",
               "type": "Question",
               "question": {
-                "id": "question8e34183b-6a62-4925-8959-e7a3f0500574",
+                "id": "questionin-house-operating-costs-for-all-environmental-protection-facilities-and-environmental-management",
                 "title": "For the reporting period, what was the value of your business&#39;s in-house operating costs for all environmental protection facilities and environmental management?",
                 "guidance": {
                   "contents": [
@@ -905,25 +916,26 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "In-house operating costs for all environmental protection facilities and environmental management"
             },
             {
-              "id": "block219a8709-03e7-4889-8fe9-d8123b96c9b8",
+              "id": "in-house-operating-costs-breakdown",
               "type": "Question",
               "question": {
-                "id": "question219a8709-03e7-4889-8fe9-d8123b96c9b8",
+                "id": "questionin-house-operating-costs-breakdown",
                 "title": {
-                  "text": "Of the {answer2f53e51a_6549_4f63_a8c9_a2309b657a24}, how much related to the following?",
+                  "text": "Of the {value_of_inhouse_operating_costs}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "answer2f53e51a_6549_4f63_a8c9_a2309b657a24",
+                      "placeholder": "value_of_inhouse_operating_costs",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer2f53e51a-6549-4f63-a8c9-a2309b657a24"
+                              "identifier": "answer2f53e51a-6549-4f63-a8c9-a2309b657a24",
+                              "source": "answers"
                             }
                           }
                         }
@@ -991,16 +1003,20 @@
                       "answer69c06bd2-2d14-469c-b749-84922d0ce217"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answer2f53e51a-6549-4f63-a8c9-a2309b657a24"
+                    "value": {
+                      "identifier": "answer2f53e51a-6549-4f63-a8c9-a2309b657a24",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "In-house operating costs breakdown"
             },
             {
-              "id": "blockc49f2c72-7962-4da2-a244-13895f8becd9",
+              "id": "more-detail-about-in-house-operating-expenditure",
               "type": "Question",
               "question": {
-                "id": "questionc49f2c72-7962-4da2-a244-13895f8becd9",
+                "id": "questionmore-detail-about-in-house-operating-expenditure",
                 "title": "Please give more detail about the reasons for in-house operating expenditure, in relation to protecting the environment",
                 "description": [
                   "<p>Explain why these environmental protection activities have taken place and the environmental considerations involved in this decision.</p>"
@@ -1025,19 +1041,20 @@
                     }
                   }
                 ]
-              }
+              },
+              "page_title": "More detail about in-house operating expenditure"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "216d2b92-e5e6-48ba-9977-11e9f62adf93",
+      "title": "Capital expenditure for environmental protection",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "section216d2b92-e5e6-48ba-9977-11e9f62adf93",
-      "title": "Capital expenditure for environmental protection",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -1045,12 +1062,13 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group216d2b92-e5e6-48ba-9977-11e9f62adf93-introduction",
+              "id": "capital-expenditure-for-environmental-protection-section",
+              "page_title": "Capital expenditure for environmental protection section",
               "content": {
                 "title": "Capital expenditure for environmental protection",
                 "contents": [
                   {
-                    "description": "This section asks for information about fixed assets purchased for environmental protection purposes, including end-of-pipe equipment, integrated equipment and additional costs of environmentally friendly processes."
+                    "description": "This section asks for information about fixed assets purchased for  environmental protection purposes, including end-of-pipe equipment,  integrated equipment and additional costs of environmentally friendly processes."
                   },
                   {
                     "description": "<strong>What we mean by &#39;capital expenditure&#39;</strong>"
@@ -1062,23 +1080,23 @@
               }
             },
             {
-              "id": "block17db2b4e-dde2-4349-b458-eaa18abb43cf",
+              "id": "expenditure-on-end-of-pipe-equipment",
               "type": "Question",
               "question": {
-                "id": "question17db2b4e-dde2-4349-b458-eaa18abb43cf",
+                "id": "questionexpenditure-on-end-of-pipe-equipment",
                 "title": {
-                  "text": "For the period {answereb6d71bb_f694_47b9_8552_50087b7aaf74from} to {answereb6d71bb_f694_47b9_8552_50087b7aaf74to}, did {ru_name} have any capital expenditure on <em>end-of-pipe equipment</em> that reduced or cleaned pollution generated by your business activity?",
+                  "text": "For the period {from} to {to}, did {ru_name} have any capital expenditure on <em>end-of-pipe equipment</em> that reduced or cleaned pollution generated by your business activity?",
                   "placeholders": [
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74from",
+                      "placeholder": "from",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -1099,15 +1117,15 @@
                       ]
                     },
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74to",
+                      "placeholder": "to",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -1169,9 +1187,10 @@
                   }
                 ]
               },
+              "page_title": "Expenditure on end-of-pipe equipment",
               "routing_rules": [
                 {
-                  "block": "block39db5c80-bbcb-4aa9-8875-56e8a4e03bd7",
+                  "block": "expenditure-on-integrated-equipment",
                   "when": {
                     "in": [
                       {
@@ -1183,15 +1202,15 @@
                   }
                 },
                 {
-                  "block": "block909a3de7-1945-4f8a-9b9e-6672548cf3c4"
+                  "block": "value-of-expenditure-on-end-of-pipe-pollution-control-equipment"
                 }
               ]
             },
             {
-              "id": "block909a3de7-1945-4f8a-9b9e-6672548cf3c4",
+              "id": "value-of-expenditure-on-end-of-pipe-pollution-control-equipment",
               "type": "Question",
               "question": {
-                "id": "question909a3de7-1945-4f8a-9b9e-6672548cf3c4",
+                "id": "questionvalue-of-expenditure-on-end-of-pipe-pollution-control-equipment",
                 "title": "For the reporting period, what was your business&#39;s capital expenditure on <em>end-of-pipe pollution control equipment</em>?",
                 "guidance": {
                   "contents": [
@@ -1238,25 +1257,26 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Value of expenditure on end-of-pipe pollution control equipment"
             },
             {
-              "id": "block2f951338-14b0-47b0-8d3b-4d9ef17f5c12",
+              "id": "expenditure-on-end-of-pipe-pollution-control-equipment-breakdown",
               "type": "Question",
               "question": {
-                "id": "question2f951338-14b0-47b0-8d3b-4d9ef17f5c12",
+                "id": "questionexpenditure-on-end-of-pipe-pollution-control-equipment-breakdown",
                 "title": {
-                  "text": "Of the {answer953897e9_b7c3_4782_b103_a6978f949709}, how much related to the following?",
+                  "text": "Of the {_capital_expenditure_on_endofpipe_pollution_control_equipment}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "answer953897e9_b7c3_4782_b103_a6978f949709",
+                      "placeholder": "_capital_expenditure_on_endofpipe_pollution_control_equipment",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer953897e9-b7c3-4782-b103-a6978f949709"
+                              "identifier": "answer953897e9-b7c3-4782-b103-a6978f949709",
+                              "source": "answers"
                             }
                           }
                         }
@@ -1324,16 +1344,20 @@
                       "answer54e680e5-020d-4f34-99e0-1e68fa9786a5"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answer953897e9-b7c3-4782-b103-a6978f949709"
+                    "value": {
+                      "identifier": "answer953897e9-b7c3-4782-b103-a6978f949709",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Expenditure on end-of-pipe pollution control equipment breakdown"
             },
             {
-              "id": "block39db5c80-bbcb-4aa9-8875-56e8a4e03bd7",
+              "id": "expenditure-on-integrated-equipment",
               "type": "Question",
               "question": {
-                "id": "question39db5c80-bbcb-4aa9-8875-56e8a4e03bd7",
+                "id": "questionexpenditure-on-integrated-equipment",
                 "title": "For the reporting period, did your business have any capital expenditure on <em>integrated equipment</em> which made environmental protection part of the process?",
                 "description": [
                   "<p>Most new integrated processes are more efficient and contribute to reducing pollution and the use of raw materials in some way.</p>"
@@ -1371,9 +1395,10 @@
                   }
                 ]
               },
+              "page_title": "Expenditure on integrated equipment",
               "routing_rules": [
                 {
-                  "block": "blocka522a11f-16c1-44e1-bfa7-dd20da10e873",
+                  "block": "more-detail-about-capital-expenditure-for-environmental-protection",
                   "when": {
                     "in": [
                       {
@@ -1385,15 +1410,15 @@
                   }
                 },
                 {
-                  "block": "blockfbd3ddd7-af8f-4a55-84a8-cbc9ee9c9dac"
+                  "block": "value-of-expenditure-on-integrated-equipment"
                 }
               ]
             },
             {
-              "id": "blockfbd3ddd7-af8f-4a55-84a8-cbc9ee9c9dac",
+              "id": "value-of-expenditure-on-integrated-equipment",
               "type": "Question",
               "question": {
-                "id": "questionfbd3ddd7-af8f-4a55-84a8-cbc9ee9c9dac",
+                "id": "questionvalue-of-expenditure-on-integrated-equipment",
                 "title": "For the reporting period, what was your business&#39;s capital expenditure on integrated equipment?",
                 "description": [
                   "<p>Most new integrated processes are more efficient and contribute to reducing pollution and the use of raw materials in some way.</p>"
@@ -1424,13 +1449,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Value of expenditure on integrated equipment"
             },
             {
-              "id": "block0f92412b-218b-4616-ac89-baa26e544bae",
+              "id": "purchase-of-integrated-equipment-specifically-for-its-environmental-benefits",
               "type": "Question",
               "question": {
-                "id": "question0f92412b-218b-4616-ac89-baa26e544bae",
+                "id": "questionpurchase-of-integrated-equipment-specifically-for-its-environmental-benefits",
                 "title": "For the reporting period, did your business purchase any integrated equipment <em>specifically for its environmental benefits</em>, even though there may have been a cheaper, less environmentally friendly, alternative available?",
                 "guidance": {
                   "contents": [
@@ -1473,9 +1499,10 @@
                   }
                 ]
               },
+              "page_title": "Purchase of integrated equipment specifically for its environmental benefits",
               "routing_rules": [
                 {
-                  "block": "blocka522a11f-16c1-44e1-bfa7-dd20da10e873",
+                  "block": "more-detail-about-capital-expenditure-for-environmental-protection",
                   "when": {
                     "in": [
                       {
@@ -1487,15 +1514,15 @@
                   }
                 },
                 {
-                  "block": "block616e435a-edff-4a56-8bb0-40c143a6a55d"
+                  "block": "additional-cost-of-environmentally-friendly-integrated-equipment"
                 }
               ]
             },
             {
-              "id": "block616e435a-edff-4a56-8bb0-40c143a6a55d",
+              "id": "additional-cost-of-environmentally-friendly-integrated-equipment",
               "type": "Question",
               "question": {
-                "id": "question616e435a-edff-4a56-8bb0-40c143a6a55d",
+                "id": "questionadditional-cost-of-environmentally-friendly-integrated-equipment",
                 "title": "For the reporting period, what was the additional cost for the environmentally friendly integrated equipment, compared with the cheaper alternative?",
                 "definitions": [
                   {
@@ -1524,8 +1551,8 @@
                     "q_code": "81",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer9ca1eef7-03bd-48b8-af8d-48641f1740df"
+                        "identifier": "answer9ca1eef7-03bd-48b8-af8d-48641f1740df",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1533,25 +1560,26 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Additional cost of environmentally friendly integrated equipment"
             },
             {
-              "id": "blockdbca5780-9f08-4709-8c17-fb708d736757",
+              "id": "additional-cost-of-environmentally-friendly-integrated-equipment-breakdown",
               "type": "Question",
               "question": {
-                "id": "questiondbca5780-9f08-4709-8c17-fb708d736757",
+                "id": "questionadditional-cost-of-environmentally-friendly-integrated-equipment-breakdown",
                 "title": {
-                  "text": "Of the {answerfc011ada_ba84_4e8b_84bc_2e4586ecd5a8}, how much related to the following?",
+                  "text": "Of the {additional_cost_of_environmentally_friendly_integrated_equipment}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "answerfc011ada_ba84_4e8b_84bc_2e4586ecd5a8",
+                      "placeholder": "additional_cost_of_environmentally_friendly_integrated_equipment",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answerfc011ada-ba84-4e8b-84bc-2e4586ecd5a8"
+                              "identifier": "answerfc011ada-ba84-4e8b-84bc-2e4586ecd5a8",
+                              "source": "answers"
                             }
                           }
                         }
@@ -1631,16 +1659,20 @@
                       "answer47b9e2b6-9945-4d7c-bbd2-3ca24278da7e"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answerfc011ada-ba84-4e8b-84bc-2e4586ecd5a8"
+                    "value": {
+                      "identifier": "answerfc011ada-ba84-4e8b-84bc-2e4586ecd5a8",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Additional cost of environmentally friendly integrated equipment breakdown"
             },
             {
-              "id": "blocka522a11f-16c1-44e1-bfa7-dd20da10e873",
+              "id": "more-detail-about-capital-expenditure-for-environmental-protection",
               "type": "Question",
               "question": {
-                "id": "questiona522a11f-16c1-44e1-bfa7-dd20da10e873",
+                "id": "questionmore-detail-about-capital-expenditure-for-environmental-protection",
                 "title": "Please give more detail about the reasons for capital expenditure, in relation to protecting the environment",
                 "description": [
                   "<p>Explain why these environmental protection activities have taken place and the environmental considerations involved in this decision.</p>"
@@ -1665,19 +1697,20 @@
                     }
                   }
                 ]
-              }
+              },
+              "page_title": "More detail about capital expenditure for environmental protection"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "e61df721-9cdc-4a72-9f03-567a4627d04f",
+      "title": "Disposals of environmental protection assets",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "sectione61df721-9cdc-4a72-9f03-567a4627d04f",
-      "title": "Disposals of environmental protection assets",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -1685,7 +1718,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "groupe61df721-9cdc-4a72-9f03-567a4627d04f-introduction",
+              "id": "disposals-of-environmental-protection-assets-section",
+              "page_title": "Disposals of environmental protection assets section",
               "content": {
                 "title": "Disposals of environmental protection assets",
                 "contents": [
@@ -1696,23 +1730,23 @@
               }
             },
             {
-              "id": "blockd39b8670-9a98-4fb2-8ade-c085df87d261",
+              "id": "proceeds-from-the-disposal-of-capital-assets",
               "type": "Question",
               "question": {
-                "id": "questiond39b8670-9a98-4fb2-8ade-c085df87d261",
+                "id": "questionproceeds-from-the-disposal-of-capital-assets",
                 "title": {
-                  "text": "For the period {answereb6d71bb_f694_47b9_8552_50087b7aaf74from} to {answereb6d71bb_f694_47b9_8552_50087b7aaf74to}, did {ru_name} receive any proceeds from the disposal of capital assets, originally purchased for environmental protection purposes?",
+                  "text": "For the period {from} to {to}, did {ru_name} receive any proceeds from the disposal of capital assets, originally purchased for environmental protection purposes?",
                   "placeholders": [
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74from",
+                      "placeholder": "from",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -1733,15 +1767,15 @@
                       ]
                     },
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74to",
+                      "placeholder": "to",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -1790,6 +1824,7 @@
                   }
                 ]
               },
+              "page_title": "Proceeds from the disposal of capital assets",
               "routing_rules": [
                 {
                   "section": "End",
@@ -1804,15 +1839,15 @@
                   }
                 },
                 {
-                  "block": "block721a0aba-cf6d-4d99-8a6f-a5bed10820bc"
+                  "block": "value-of-proceeds-from-the-disposal-of-capital-assets"
                 }
               ]
             },
             {
-              "id": "block721a0aba-cf6d-4d99-8a6f-a5bed10820bc",
+              "id": "value-of-proceeds-from-the-disposal-of-capital-assets",
               "type": "Question",
               "question": {
-                "id": "question721a0aba-cf6d-4d99-8a6f-a5bed10820bc",
+                "id": "questionvalue-of-proceeds-from-the-disposal-of-capital-assets",
                 "title": "For the reporting period, what were the total proceeds from disposals of capital assets that were purchased for environmental protection purposes?",
                 "type": "General",
                 "answers": [
@@ -1827,25 +1862,26 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Value of proceeds from the disposal of capital assets"
             },
             {
-              "id": "block1cc0ac21-6f73-49e3-bb53-c9cdb1dcbd61",
+              "id": "value-of-proceeds-from-the-disposal-of-capital-assets-breakdown",
               "type": "Question",
               "question": {
-                "id": "question1cc0ac21-6f73-49e3-bb53-c9cdb1dcbd61",
+                "id": "questionvalue-of-proceeds-from-the-disposal-of-capital-assets-breakdown",
                 "title": {
-                  "text": "Of the {answer20445f31_127f_4982_8295_d417e92bed72}, how much related to the following?",
+                  "text": "Of the {value_of_proceeds_from_disposals_of_capital_assets_for_environmental_protection}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "answer20445f31_127f_4982_8295_d417e92bed72",
+                      "placeholder": "value_of_proceeds_from_disposals_of_capital_assets_for_environmental_protection",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer20445f31-127f-4982-8295-d417e92bed72"
+                              "identifier": "answer20445f31-127f-4982-8295-d417e92bed72",
+                              "source": "answers"
                             }
                           }
                         }
@@ -1913,22 +1949,26 @@
                       "answer9b485384-e2e1-46ce-be65-f8d7ccb132f4"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answer20445f31-127f-4982-8295-d417e92bed72"
+                    "value": {
+                      "identifier": "answer20445f31-127f-4982-8295-d417e92bed72",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Value of proceeds from the disposal of capital assets breakdown"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "b134afc6-c15f-4ed2-9a91-f9c53064878e",
+      "title": "Climate change adaptation",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "sectionb134afc6-c15f-4ed2-9a91-f9c53064878e",
-      "title": "Climate change adaptation expenditure",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -1936,34 +1976,35 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "groupb134afc6-c15f-4ed2-9a91-f9c53064878e-introduction",
+              "id": "climate-change-adaptation-section",
+              "page_title": "Climate change adaptation section",
               "content": {
-                "title": "Climate change adaptation expenditure",
+                "title": "Climate change adaptation",
                 "contents": [
                   {
-                    "description": "This section asks for information about your business&#39;s expenditure on adaptations to address the impacts of climate change."
+                    "description": "This section asks for information about your business&#39;s adaptations to address address actual or expected changes in the climate."
                   }
                 ]
               }
             },
             {
-              "id": "block0542f421-35ce-42d5-8aea-3928fc50c19d",
+              "id": "climate-change-adaptations",
               "type": "Question",
               "question": {
-                "id": "question0542f421-35ce-42d5-8aea-3928fc50c19d",
+                "id": "questionclimate-change-adaptations",
                 "title": {
-                  "text": "For the period {answereb6d71bb_f694_47b9_8552_50087b7aaf74from} to {answereb6d71bb_f694_47b9_8552_50087b7aaf74to}, was any of {ru_name}&#39;s expenditure influenced by adaptations to address the impacts of climate change?",
+                  "text": "For the period {from} to {to}, did {ru_name} <em>adapt</em> to address actual or expected changes in the climate?",
                   "placeholders": [
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74from",
+                      "placeholder": "from",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74from",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -1984,15 +2025,15 @@
                       ]
                     },
                     {
-                      "placeholder": "answereb6d71bb_f694_47b9_8552_50087b7aaf74to",
+                      "placeholder": "to",
                       "transforms": [
                         {
                           "transform": "first_non_empty_item",
                           "arguments": {
                             "items": [
                               {
-                                "source": "answers",
-                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to"
+                                "identifier": "answereb6d71bb-f694-47b9-8552-50087b7aaf74to",
+                                "source": "answers"
                               },
                               {
                                 "source": "metadata",
@@ -2021,25 +2062,28 @@
                     }
                   ]
                 },
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Exclude </strong>any actions intended to limit or prevent emissions of greenhouse gases"
+                    }
+                  ]
+                },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;adaptations to address the impacts of climate change&#39;",
+                    "title": "Examples of adaptations to address actual or expected changes in the climate",
                     "contents": [
                       {
-                        "description": "This means adjusting any aspect of your business to actual or expected changes in the climate. This could include adjustments to your supply chains, business premises, staff, product sales, customers, networks and communications."
-                      },
-                      {
-                        "description": "<strong>For example:</strong>"
+                        "description": "Adaptations to address actual or expected changes in the climate, such as extreme weather, can include but are not limited to:"
                       },
                       {
                         "list": [
-                          "diversifying your products and services",
+                          "rethinking business strategies and finances",
+                          "diversifying products, services and supply chains",
                           "installing back up power",
                           "installing heating or cooling systems",
                           "installing new flood defences",
-                          "investing in resources including staffing and training",
-                          "rethinking business strategies",
-                          "upgrading infrastructure and technology"
+                          "investing in resources including staffing and training"
                         ]
                       }
                     ]
@@ -2065,6 +2109,7 @@
                   }
                 ]
               },
+              "page_title": "Climate change adaptations",
               "routing_rules": [
                 {
                   "section": "End",
@@ -2079,35 +2124,38 @@
                   }
                 },
                 {
-                  "block": "blocka68058d6-c270-429a-8ea8-9c2f4147a1b3"
+                  "block": "more-detail-of-adaptations-made-to-address-changes-in-the-climate"
                 }
               ]
             },
             {
-              "id": "blocka68058d6-c270-429a-8ea8-9c2f4147a1b3",
+              "id": "more-detail-of-adaptations-made-to-address-changes-in-the-climate",
               "type": "Question",
               "question": {
-                "id": "questiona68058d6-c270-429a-8ea8-9c2f4147a1b3",
-                "title": "What adaptations were made to address the impacts of climate change?",
+                "id": "questionmore-detail-of-adaptations-made-to-address-changes-in-the-climate",
+                "title": "What adaptations were made to address actual or expected changes in the climate?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Exclude </strong>any actions intended to limit or prevent emissions of greenhouse gases"
+                    }
+                  ]
+                },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;adaptations to address the impacts of climate change&#39;",
+                    "title": "Examples of adaptations to address actual or expected changes in the climate",
                     "contents": [
                       {
-                        "description": "This means adjusting any aspect of your business to actual or expected changes in the climate. This could include adjustments to your supply chains, business premises, staff, product sales, customers, networks and communications."
-                      },
-                      {
-                        "description": "<strong>For example:</strong>"
+                        "description": "Adaptations to address actual or expected changes in the climate, such as extreme weather, can include but are not limited to:"
                       },
                       {
                         "list": [
-                          "diversifying your products and services",
+                          "rethinking business strategies and finances",
+                          "diversifying products, services and supply chains",
                           "installing back up power",
                           "installing heating or cooling systems",
                           "installing new flood defences",
-                          "investing in resources including staffing and training",
-                          "rethinking business strategies",
-                          "upgrading infrastructure and technology"
+                          "investing in resources including staffing and training"
                         ]
                       }
                     ]
@@ -2124,19 +2172,20 @@
                     "max_length": 1000
                   }
                 ]
-              }
+              },
+              "page_title": "More detail of adaptations made to address changes in the climate"
             }
           ]
         }
-      ],
+      ]
+    },
+    {
+      "id": "4c883ffd-16c1-49fa-a529-6ecb9a676cfb",
+      "title": "General Comments",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
-      }
-    },
-    {
-      "id": "section4c883ffd-16c1-49fa-a529-6ecb9a676cfb",
-      "title": "General Comments",
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -2144,7 +2193,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group4c883ffd-16c1-49fa-a529-6ecb9a676cfb-introduction",
+              "id": "general-comments-section",
+              "page_title": "General comments section",
               "content": {
                 "title": "General Comments",
                 "contents": [
@@ -2155,10 +2205,10 @@
               }
             },
             {
-              "id": "blocka6896d45-8861-40af-8582-ce2ef18b93cf",
+              "id": "additional-commentary",
               "type": "Question",
               "question": {
-                "id": "questiona6896d45-8861-40af-8582-ce2ef18b93cf",
+                "id": "questionadditional-commentary",
                 "title": "Please provide any additional information that will help us understand your figures and to tell an industry story",
                 "description": [
                   "<p>You have nearly finished! <em>Make sure you continue to the next page and select &#39;submit answers&#39; at the bottom.</em></p>"
@@ -2187,18 +2237,15 @@
                     "max_length": 2000
                   }
                 ]
-              }
+              },
+              "page_title": "Additional commentary"
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      }
+      ]
     }
   ],
-  "theme": "default",
+  "theme": "business",
   "navigation": {
     "visible": true
   },
@@ -2208,21 +2255,16 @@
       "type": "string"
     },
     {
-      "name": "period_id",
-      "type": "string"
-    },
-    {
       "name": "ru_name",
       "type": "string"
     },
     {
-      "name": "ru_ref",
+      "name": "trad_as",
       "type": "string"
     },
     {
-      "name": "trad_as",
-      "type": "string",
-      "optional": true
+      "name": "period_id",
+      "type": "string"
     },
     {
       "name": "ref_p_start_date",
@@ -2234,7 +2276,6 @@
     }
   ],
   "post_submission": {
-    "confirmation_email": true,
     "feedback": true,
     "view_response": true,
     "guidance": {
