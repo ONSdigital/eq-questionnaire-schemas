@@ -1866,7 +1866,24 @@
                   }
                 ]
               },
-              "page_title": "Expenditure on energy, goods materials and services"
+              "page_title": "Expenditure on energy, goods materials and services",
+              "routing_rules": [
+                {
+                  "block": "expenditure-on-national-non-domestic-business-rates",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answerbc2845e4-4302-437d-9fd1-56f02518a8bc",
+                        "source": "answers"
+                      },
+                      0
+                    ]
+                  }
+                },
+                {
+                  "block": "claims-paid-and-costs-linked-to-policies"
+                }
+              ]
             },
             {
               "id": "claims-paid-and-costs-linked-to-policies",
@@ -4210,15 +4227,15 @@
   },
   "metadata": [
     {
+      "name": "ru_ref",
+      "type": "string"
+    },
+    {
       "name": "user_id",
       "type": "string"
     },
     {
       "name": "ru_name",
-      "type": "string"
-    },
-    {
-      "name": "ru_ref",
       "type": "string"
     },
     {
@@ -4240,7 +4257,6 @@
     }
   ],
   "post_submission": {
-    "confirmation_email": true,
     "feedback": true,
     "view_response": true,
     "guidance": {

@@ -4786,7 +4786,24 @@
                   }
                 ]
               },
-              "page_title": "Total non-retail turnover"
+              "page_title": "Total non-retail turnover",
+              "routing_rules": [
+                {
+                  "block": "value-of-insurance-claims-received",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answerb785c073-0cde-406d-870e-8d75bb481fb0",
+                        "source": "answers"
+                      },
+                      0
+                    ]
+                  }
+                },
+                {
+                  "block": "turnover-from-the-repair-of-all-household-goods"
+                }
+              ]
             },
             {
               "id": "turnover-from-the-repair-of-all-household-goods",
@@ -10380,15 +10397,15 @@
   },
   "metadata": [
     {
+      "name": "ru_ref",
+      "type": "string"
+    },
+    {
       "name": "user_id",
       "type": "string"
     },
     {
       "name": "ru_name",
-      "type": "string"
-    },
-    {
-      "name": "ru_ref",
       "type": "string"
     },
     {
@@ -10410,7 +10427,6 @@
     }
   ],
   "post_submission": {
-    "confirmation_email": true,
     "feedback": true,
     "view_response": true,
     "guidance": {
