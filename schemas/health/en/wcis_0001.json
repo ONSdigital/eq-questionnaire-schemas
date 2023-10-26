@@ -7572,6 +7572,23 @@
                 ]
               },
               "page_title": "NHS questions - GP contact",
+              "routing_rules": [
+                {
+                  "block": "nhs-questions-gp-contact-success",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerad4302f0-7aaa-45e6-9510-0a52273229d8",
+                        "source": "answers"
+                      },
+                      ["Yes"]
+                    ]
+                  }
+                },
+                {
+                  "block": "nhs-questions-awaiting-appointment"
+                }
+              ],
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -7629,6 +7646,27 @@
                 ]
               },
               "page_title": "NHS questions - GP contact success",
+              "routing_rules": [
+                {
+                  "block": "nhs-questions-how-gp-contact-was-made",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer764b6583-c879-46c2-9ffd-14ad893f9214",
+                        "source": "answers"
+                      },
+                      [
+                        "Yes on the same day",
+                        "Yes on the next day",
+                        "Yes two or more days later"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "block": "nhs-questions-awaiting-appointment"
+                }
+              ],
               "skip_conditions": {
                 "when": {
                   "in": [
