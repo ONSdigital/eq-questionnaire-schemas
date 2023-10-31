@@ -1,0 +1,3639 @@
+{
+  "language": "en",
+  "mime_type": "application/json/ons/eq",
+  "schema_version": "0.0.1",
+  "data_version": "0.0.1",
+  "survey_id": "738",
+  "form_type": "0001",
+  "title": "Winter CIS - follow-up questionnaire",
+  "questionnaire_flow": {
+    "type": "Hub",
+    "options": {
+      "required_completed_sections": [
+        "cd531b1d-9482-4868-b362-2f4cf719735e",
+        "11179ce0-85b4-4fc7-9df5-ec105c37996e",
+        "863c3225-cfc4-479c-ad38-9cf11ccf2e9c"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "cd531b1d-9482-4868-b362-2f4cf719735e",
+      "title": "About you",
+      "summary": {
+        "show_on_completion": false,
+        "page_title": "New section- Introduction",
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "groupcd531b1d-9482-4868-b362-2f4cf719735e",
+          "blocks": [
+            {
+              "id": "introduction-section-participant-confirmation",
+              "type": "Question",
+              "question": {
+                "id": "questionintroduction-section-participant-confirmation",
+                "title": {
+                  "text": "Are you {first_name}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "first_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "FIRST_NAME"
+                      }
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc1142b7b-d9db-4b77-b605-de63593671a5",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-INT-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Introduction Section - Participant Confirmation",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc1142b7b-d9db-4b77-b605-de63593671a5",
+                        "source": "answers"
+                      },
+                      ["Yes"]
+                    ]
+                  }
+                },
+                {
+                  "block": "introduction-section-completing-for-someone-else"
+                }
+              ]
+            },
+            {
+              "id": "introduction-section-completing-for-someone-else",
+              "type": "Question",
+              "question": {
+                "id": "questionintroduction-section-completing-for-someone-else",
+                "title": {
+                  "text": "Are you completing the questions on behalf of {first_name}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "first_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "FIRST_NAME"
+                      }
+                    }
+                  ]
+                },
+                "description": [
+                  "<p>For example, you are a parent or guardian completing the questions for a child.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc7cd3ea1-cbe3-4132-acd0-5e6fda4773dd",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-INT-004",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Introduction Section - Completing for someone else",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc7cd3ea1-cbe3-4132-acd0-5e6fda4773dd",
+                        "source": "answers"
+                      },
+                      ["Yes"]
+                    ]
+                  }
+                },
+                {
+                  "block": "introduction-section-access-error-message"
+                }
+              ]
+            },
+            {
+              "id": "introduction-section-access-error-message",
+              "type": "Question",
+              "question": {
+                "id": "questionintroduction-section-access-error-message",
+                "title": "There has been a problem accessing the survey",
+                "description": [
+                  {
+                    "text": "<p>This questionnaire is intended for {first_name}. You have indicated that you are not {first_name} or completing the questionnaire on behalf of them.</p><p>If this is correct, please:</p><p>1.Tick the continue box and then select &#x201C;Save and continue&#x201D;.</p><p>2.On the next page, select the &#x201C;Submit&#x201D; button to submit the questionnaire.</p><p>3.Call the helpline on 0808 196 1270. You will need your Participant ID. You can find your participant ID in your window notification email. The survey team member on the phone will tell you what to do next.</p><p><em>If you are {first_name}</em>, or completing the questions on behalf of them:</p><p>1.Select <em>&#x201C;&lt; Previous&#x201D;</em> two times. You can find this at the <em>top left-hand side</em> of this page, underneath the blue banner that says &quot;Winter CIS - follow-up questionnaire&quot;.</p><p>2.You will then need to amend the answers to be able to complete the survey.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      },
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      },
+                      {
+                        "placeholder": "first_name",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "FIRST_NAME"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answere5b983ee-bf06-4158-9701-cd508b8903c9",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Continue",
+                        "value": "Continue",
+                        "q_code": "WCIS-FUP-INT-005"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Introduction Section - Access error message"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11179ce0-85b4-4fc7-9df5-ec105c37996e",
+      "title": "Your test results",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "group11179ce0-85b4-4fc7-9df5-ec105c37996e",
+          "blocks": [
+            {
+              "type": "Interstitial",
+              "id": "intro",
+              "page_title": "Intro",
+              "content": {
+                "title": "Your test results",
+                "contents": [
+                  {
+                    "description": "This section will ask you about the follow-up lateral flow tests you have taken."
+                  },
+                  {
+                    "description": "Please take a lateral flow test every other day until you have two consecutive negative test results two days apart."
+                  },
+                  {
+                    "description": {
+                      "text": "Note, throughout this questionnaire &quot;you&quot; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "first-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfirst-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your first follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p><p></p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer3842563e-8b42-46d0-a5e2-330f8f91cbe2",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF1-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "First lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer3842563e-8b42-46d0-a5e2-330f8f91cbe2",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "first-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "first-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfirst-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your first follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer902e521f-ca04-4c8b-9dca-46c66ff240bf",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF1-002",
+                    "minimum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_START_DATE"
+                      },
+                      "offset_by": {
+                        "days": -5
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "First lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "first-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfirst-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your first follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer720ae647-45e0-4b7e-a492-688e1445738d",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF1-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "First lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "first-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfirst-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your first follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer1c57ae42-7bce-499a-90a6-515e8f6eb2b6",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF1-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "First lateral flow test result - Winter CIS follow-up"
+            },
+            {
+              "id": "first-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfirst-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your first follow up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc8313143-4463-42ce-ab98-9e76dd470cd1",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF1-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "First follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc8313143-4463-42ce-ab98-9e76dd470cd1",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "second-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "second-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsecond-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your second follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4894bfec-cb22-4dec-a53f-935a74556658",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF2-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Second lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer4894bfec-cb22-4dec-a53f-935a74556658",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "second-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "second-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsecond-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your second follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerce656580-2a2e-4167-b254-69029fe6159d",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF2-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer902e521f-ca04-4c8b-9dca-46c66ff240bf",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Second lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "second-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsecond-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your second follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer8d158d8c-b373-4562-862c-e4dfd977740c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF2-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Second lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "second-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsecond-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your second follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerebd1a782-283c-4eb1-b127-6718e3714021",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF2-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Second lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer1c57ae42-7bce-499a-90a6-515e8f6eb2b6",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerebd1a782-283c-4eb1-b127-6718e3714021",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "second-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "second-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsecond-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your second follow up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answere3880add-3ee0-4f23-aa3c-aa050f778cff",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF2-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Second follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answere3880add-3ee0-4f23-aa3c-aa050f778cff",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "third-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "third-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthird-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your third follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer63354e56-31af-4916-b538-406c3341b39a",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF3-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Third lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer63354e56-31af-4916-b538-406c3341b39a",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "third-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "third-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthird-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your third follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6cbbf667-e100-465e-8df2-6c317409c676",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF3-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answerce656580-2a2e-4167-b254-69029fe6159d",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Third lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "third-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthird-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your third follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb1599b3a-0738-4ff8-8ee8-c863e84d3572",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF3-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Third lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "third-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthird-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your third follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer9173291e-7782-40d9-a12b-33ac3adebcb5",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF3-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Third lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerebd1a782-283c-4eb1-b127-6718e3714021",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer9173291e-7782-40d9-a12b-33ac3adebcb5",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "third-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "third-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthird-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your third follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer953d5336-86de-4c01-a0d7-791af14ac00b",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF3-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Third follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer953d5336-86de-4c01-a0d7-791af14ac00b",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "fourth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fourth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfourth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your fourth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer69bfb93b-4e14-406f-90e2-56fe1943536d",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF4-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fourth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer69bfb93b-4e14-406f-90e2-56fe1943536d",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "fourth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fourth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfourth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your fourth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer44bae36a-ce2b-463c-b1f8-61ff9b6e829c",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF4-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer6cbbf667-e100-465e-8df2-6c317409c676",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Fourth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "fourth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfourth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your fourth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc48ea816-6184-4237-877a-fd826d041276",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF4-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fourth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "fourth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfourth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your fourth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer155a68a8-eec3-400c-8a3f-f56fe22376de",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF4-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fourth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer9173291e-7782-40d9-a12b-33ac3adebcb5",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer155a68a8-eec3-400c-8a3f-f56fe22376de",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "fourth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fourth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfourth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your fourth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer0eae104c-0377-45ac-858e-6a61bca7c1f3",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF4-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fourth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer0eae104c-0377-45ac-858e-6a61bca7c1f3",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "fifth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fifth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfifth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your fifth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answercf588823-ef1d-4c5f-aabb-1c38d4ec13b9",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF5-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fifth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answercf588823-ef1d-4c5f-aabb-1c38d4ec13b9",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "fifth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fifth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfifth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your fifth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer93be5024-a0a0-4374-97b3-c9ad323fad76",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF5-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer44bae36a-ce2b-463c-b1f8-61ff9b6e829c",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Fifth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "fifth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfifth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your fifth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer8934fcd5-4b8a-496e-9100-5c7a935ed7da",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF5-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fifth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "fifth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfifth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your fifth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer2f528449-fb85-4827-9d8c-a54a1dc11de5",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF5-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fifth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer155a68a8-eec3-400c-8a3f-f56fe22376de",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer2f528449-fb85-4827-9d8c-a54a1dc11de5",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "fifth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "fifth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionfifth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your fifth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer9c198311-13e0-4c36-ac39-19b2a3b9e23e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF5-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Fifth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer9c198311-13e0-4c36-ac39-19b2a3b9e23e",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "sixth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "sixth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsixth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your sixth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer67e5f3dc-0b3a-4553-b4b9-5b49fd533ae5",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF6-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Sixth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer67e5f3dc-0b3a-4553-b4b9-5b49fd533ae5",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "sixth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "sixth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsixth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your sixth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer18af9ecf-631d-4ba7-a280-31cafa6d34f8",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF6-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer93be5024-a0a0-4374-97b3-c9ad323fad76",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Sixth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "sixth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsixth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your sixth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer2e6bc2bc-8d95-4af8-bef1-514c61dce426",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF6-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Sixth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "sixth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsixth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your sixth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer145f8199-c42b-4162-91bd-31aac3ba92e9",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF6-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Sixth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer2f528449-fb85-4827-9d8c-a54a1dc11de5",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer145f8199-c42b-4162-91bd-31aac3ba92e9",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "sixth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "sixth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsixth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your sixth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4201f837-62aa-4745-99bf-9cb7a6ded4a2",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF6-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Sixth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer4201f837-62aa-4745-99bf-9cb7a6ded4a2",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "seventh-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "seventh-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionseventh-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your seventh follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer68f6262f-639b-4037-8e74-f627ebd2884c",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF7-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Seventh lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer68f6262f-639b-4037-8e74-f627ebd2884c",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "seventh-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "seventh-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionseventh-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your seventh follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answere42e14cf-fe2f-4e19-8aa9-8703200fb35a",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF7-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer18af9ecf-631d-4ba7-a280-31cafa6d34f8",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Seventh lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "seventh-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionseventh-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your seventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb4a45354-00eb-47cd-ab49-ae0a9931e20c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF7-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Seventh lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "seventh-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionseventh-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your seventh follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerff01e20e-048d-48c1-86d3-2e9738fd5ee8",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF7-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Seventh lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer145f8199-c42b-4162-91bd-31aac3ba92e9",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerff01e20e-048d-48c1-86d3-2e9738fd5ee8",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "seventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "seventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionseventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your seventh follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer54ab20d3-2630-423d-8724-2084371c2e01",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF7-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Seventh follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer54ab20d3-2630-423d-8724-2084371c2e01",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "eighth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eighth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneighth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your eighth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer0ff2bbb3-941e-41b4-8cd2-4fb6193c099b",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF8-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eighth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer0ff2bbb3-941e-41b4-8cd2-4fb6193c099b",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "eighth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eighth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneighth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your eighth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer95afb7b2-2310-4d98-af54-b80b5c1fc1ab",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF8-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answere42e14cf-fe2f-4e19-8aa9-8703200fb35a",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Eighth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "eighth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneighth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your eighth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer663a8a6a-3635-4683-8364-ad0db71a4413",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF8-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eighth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "eighth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneighth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your eighth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb8212e04-0aa8-402d-b020-d918b8e4acd6",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF8-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eighth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerff01e20e-048d-48c1-86d3-2e9738fd5ee8",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerb8212e04-0aa8-402d-b020-d918b8e4acd6",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "eighth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eighth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneighth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your eighth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to<em> save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerd4aad2ab-3333-47de-939d-ef038763671e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF8-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eighth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerd4aad2ab-3333-47de-939d-ef038763671e",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "ninth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "ninth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionninth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your ninth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer1f39659b-b454-4993-a838-0c1abfd8259c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF9-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Ninth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer1f39659b-b454-4993-a838-0c1abfd8259c",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "ninth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "ninth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionninth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your ninth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answercc3b0004-b6ad-481a-aa91-2c1b88d4d079",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF9-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer95afb7b2-2310-4d98-af54-b80b5c1fc1ab",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Ninth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "ninth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionninth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your ninth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer556be6ff-10fc-4e6a-9db8-aab283c056ce",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF9-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Ninth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "ninth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionninth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your ninth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer0dbde5da-1684-40f8-86eb-bdeef9763c15",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF9-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Ninth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answerb8212e04-0aa8-402d-b020-d918b8e4acd6",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer0dbde5da-1684-40f8-86eb-bdeef9763c15",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "ninth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "ninth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionninth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your ninth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer5cb03e8f-f3cb-4f58-9dee-493ea4cb72f7",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF9-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Ninth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer5cb03e8f-f3cb-4f58-9dee-493ea4cb72f7",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "tenth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "tenth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontenth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your tenth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc35025b4-747e-4de2-8271-756c4742444b",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF10-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Tenth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc35025b4-747e-4de2-8271-756c4742444b",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "tenth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "tenth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontenth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your tenth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerbaa0469f-6427-4d2c-b55f-ff0ce0e3c462",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF10-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answercc3b0004-b6ad-481a-aa91-2c1b88d4d079",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Tenth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "tenth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontenth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your tenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc1d9ddb4-1a0c-492e-9507-b87bb7e5e4e3",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF10-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Tenth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "tenth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontenth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your tenth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer18d5b80a-2e87-41cf-949e-d49526caf2f9",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF10-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Tenth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer0dbde5da-1684-40f8-86eb-bdeef9763c15",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer18d5b80a-2e87-41cf-949e-d49526caf2f9",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "tenth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "tenth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontenth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your tenth follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer22f5f8dc-3a30-4c51-80db-ff7b0d72e9cf",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF10-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Tenth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer22f5f8dc-3a30-4c51-80db-ff7b0d72e9cf",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "eleventh-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eleventh-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneleventh-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your eleventh follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answera57858c0-1912-4f6e-b0ae-0c7b7098fa72",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF11-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eleventh lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answera57858c0-1912-4f6e-b0ae-0c7b7098fa72",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "eleventh-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eleventh-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneleventh-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your eleventh follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer61c6db29-ce2f-4b44-9964-8895f217ddc1",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF11-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answerbaa0469f-6427-4d2c-b55f-ff0ce0e3c462",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Eleventh lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "eleventh-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneleventh-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your eleventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answeree7c275e-1060-4d69-b798-195e58f2d834",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF11-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eleventh lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "eleventh-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneleventh-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your eleventh follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answercfec1530-3423-420b-b499-85d66da21e76",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF11-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eleventh lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer18d5b80a-2e87-41cf-949e-d49526caf2f9",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answercfec1530-3423-420b-b499-85d66da21e76",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "eleventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "eleventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questioneleventh-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your eleventh follow-up lateral flow test",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer3b89b746-0ec9-4f3e-8e98-4d180411b13e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF11-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Eleventh follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer3b89b746-0ec9-4f3e-8e98-4d180411b13e",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "twelfth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "twelfth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontwelfth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your twelfth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb56430b8-d91e-469b-82c3-244bc08ab925",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF12-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Twelfth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerb56430b8-d91e-469b-82c3-244bc08ab925",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "twelfth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "twelfth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontwelfth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your twelfth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerbabdd37d-6c84-47da-9724-4d114b9ca26e",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF12-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answer61c6db29-ce2f-4b44-9964-8895f217ddc1",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Twelfth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "twelfth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontwelfth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your twelfth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6a410092-6a2a-4e5f-a7ac-4ce4c08e941d",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF12-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Twelfth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "twelfth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontwelfth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your twelfth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6d42ee31-7f6f-4fd4-b95d-c1443a7e166c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF12-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Twelfth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answercfec1530-3423-420b-b499-85d66da21e76",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer6d42ee31-7f6f-4fd4-b95d-c1443a7e166c",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "twelfth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "twelfth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questiontwelfth-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
+                "title": "Thank you for letting us know about your twelfth follow-up lateral flow test.",
+                "description": [
+                  {
+                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to<em> report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer87308ecc-d446-4d20-8c53-224a9d5c425d",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF12-005",
+                    "options": [
+                      {
+                        "label": "Report another test result",
+                        "value": "Report another test result"
+                      },
+                      {
+                        "label": "Continue to symptoms questions",
+                        "value": "Continue to symptoms questions"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Twelfth follow-up lateral flow test thank you - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer87308ecc-d446-4d20-8c53-224a9d5c425d",
+                        "source": "answers"
+                      },
+                      ["Continue to symptoms questions"]
+                    ]
+                  }
+                },
+                {
+                  "block": "thirteenth-lateral-lateral-flow-test-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "thirteenth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthirteenth-lateral-lateral-flow-test-taken-winter-cis-follow-up",
+                "title": "Have you successfully taken your thirteenth follow-up lateral flow test?",
+                "description": [
+                  "<p>If you are planning to take your test but have not yet done so, please exit the questionnaire and return when you have taken it.</p><p>If the test result was void, please take another test.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer7f9ad7bc-c246-4039-b839-ee378a6ae485",
+                    "mandatory": false,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF13-001",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No - I have run out of useable lateral flow tests",
+                        "value": "No - I have run out of useable lateral flow tests"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Thirteenth lateral lateral flow test taken - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer7f9ad7bc-c246-4039-b839-ee378a6ae485",
+                        "source": "answers"
+                      },
+                      ["No - I have run out of useable lateral flow tests"]
+                    ]
+                  }
+                },
+                {
+                  "block": "thirteenth-lateral-flow-test-date-taken-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "thirteenth-lateral-flow-test-date-taken-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthirteenth-lateral-flow-test-date-taken-winter-cis-follow-up",
+                "title": "On which date did you take your thirteenth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc42adc4d-8d25-41cc-9fb9-ca3964697d9f",
+                    "mandatory": true,
+                    "type": "Date",
+                    "label": "Date (enter as DD MM YYYY)",
+                    "q_code": "WCIS-FUP-LF13-002",
+                    "minimum": {
+                      "value": {
+                        "identifier": "answerbabdd37d-6c84-47da-9724-4d114b9ca26e",
+                        "source": "answers"
+                      },
+                      "offset_by": {
+                        "days": 1
+                      }
+                    },
+                    "maximum": {
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "WINDOW_CLOSE_DATE"
+                      },
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
+                  }
+                ]
+              },
+              "page_title": "Thirteenth lateral flow test date taken - Winter CIS follow-up"
+            },
+            {
+              "id": "thirteenth-lateral-flow-test-symptoms-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthirteenth-lateral-flow-test-symptoms-winter-cis-follow-up",
+                "title": "Did you have any symptoms on the day you took your thirteenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "description": [
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4e677d0f-84aa-47fb-bdae-4ac92c043e2a",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF13-003",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Thirteenth lateral flow test symptoms - Winter CIS follow-up"
+            },
+            {
+              "id": "thirteenth-lateral-flow-test-result-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionthirteenth-lateral-flow-test-result-winter-cis-follow-up",
+                "title": "What was the result of your thirteenth follow-up lateral flow test?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4881702b-6ab2-49f3-8614-2111bc9643db",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "WCIS-FUP-LF13-004",
+                    "options": [
+                      {
+                        "label": "Positive",
+                        "value": "Positive"
+                      },
+                      {
+                        "label": "Negative",
+                        "value": "Negative"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Thirteenth lateral flow test result - Winter CIS follow-up",
+              "routing_rules": [
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up",
+                  "when": {
+                    "and": [
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer6d42ee31-7f6f-4fd4-b95d-c1443a7e166c",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      },
+                      {
+                        "in": [
+                          {
+                            "identifier": "answer4881702b-6ab2-49f3-8614-2111bc9643db",
+                            "source": "answers"
+                          },
+                          ["Negative"]
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "block": "lateral-flow-tests-end-winter-cis-follow-up"
+                }
+              ]
+            },
+            {
+              "id": "lateral-flow-tests-end-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionlateral-flow-tests-end-winter-cis-follow-up",
+                "title": "Thank you, you have now finished the questions about your follow-up lateral flow tests",
+                "description": [
+                  "<p>Please click continue to move onto the symptoms questions.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerbd9287a6-9002-4887-8b09-40d7c9fd11ea",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "label": "Continue",
+                    "options": [
+                      {
+                        "label": "Continue",
+                        "value": "Continue",
+                        "q_code": "WCIS-FUP-LFE-001"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Lateral Flow Tests end - Winter CIS follow-up"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "==": [
+            null,
+            {
+              "identifier": "answere5b983ee-bf06-4158-9701-cd508b8903c9",
+              "source": "answers"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "863c3225-cfc4-479c-ad38-9cf11ccf2e9c",
+      "title": "Your symptoms",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "group863c3225-cfc4-479c-ad38-9cf11ccf2e9c",
+          "blocks": [
+            {
+              "id": "symptoms-first-question-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsymptoms-first-question-winter-cis-follow-up",
+                "title": "Have you had any of the following symptoms as part of your most recent COVID-19 infection?",
+                "description": [
+                  "<p>Select the symptoms you thought were caused or made worse by the COVID-19 infection you had.</p><p>You will be asked about other symptoms on the next page.</p>"
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer0b496378-7463-4091-8b3d-59296e26255b",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Runny nose or sneezing",
+                        "value": "Runny nose or sneezing",
+                        "q_code": "WCIS-FUP-SYM-001"
+                      },
+                      {
+                        "label": "Loss of smell",
+                        "value": "Loss of smell",
+                        "q_code": "WCIS-FUP-SYM-002"
+                      },
+                      {
+                        "label": "Loss of taste",
+                        "value": "Loss of taste",
+                        "q_code": "WCIS-FUP-SYM-003"
+                      },
+                      {
+                        "label": "Sore throat",
+                        "value": "Sore throat",
+                        "q_code": "WCIS-FUP-SYM-004"
+                      },
+                      {
+                        "label": "Cough",
+                        "value": "Cough",
+                        "q_code": "WCIS-FUP-SYM-005"
+                      },
+                      {
+                        "label": "Shortness of breath",
+                        "value": "Shortness of breath",
+                        "q_code": "WCIS-FUP-SYM-006"
+                      },
+                      {
+                        "label": "Noisy breathing or wheezing",
+                        "value": "Noisy breathing or wheezing",
+                        "q_code": "WCIS-FUP-SYM-007"
+                      },
+                      {
+                        "label": "Abdominal pain",
+                        "value": "Abdominal pain",
+                        "q_code": "WCIS-FUP-SYM-008"
+                      },
+                      {
+                        "label": "Nausea or vomiting",
+                        "value": "Nausea or vomiting",
+                        "q_code": "WCIS-FUP-SYM-009"
+                      },
+                      {
+                        "label": "Diarrhoea",
+                        "value": "Diarrhoea",
+                        "q_code": "WCIS-FUP-SYM-010"
+                      },
+                      {
+                        "label": "Loss of appetite or eating less than usual",
+                        "value": "Loss of appetite or eating less than usual",
+                        "q_code": "WCIS-FUP-SYM-011"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer3e032dee-f239-4a97-a820-9030f431aaac",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "None of these symptoms",
+                        "value": "None of these symptoms",
+                        "q_code": "WCIS-FUP-SYM-012"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Symptoms first question - Winter CIS follow-up"
+            },
+            {
+              "id": "symptoms-second-question-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionsymptoms-second-question-winter-cis-follow-up",
+                "title": "Have you had any of these other symptoms as part of your most recent COVID-19 infection?",
+                "description": [
+                  "<p>Select the symptoms you thought were caused or made worse by the COVID-19 infection you had.</p>"
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answere521da22-b275-46cd-b142-2c637bb74070",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Headache",
+                        "value": "Headache",
+                        "q_code": "WCIS-FUP-SYM-013"
+                      },
+                      {
+                        "label": "Muscle ache",
+                        "value": "Muscle ache",
+                        "q_code": "WCIS-FUP-SYM-014"
+                      },
+                      {
+                        "label": "Weakness or tiredness",
+                        "value": "Weakness or tiredness",
+                        "q_code": "WCIS-FUP-SYM-015"
+                      },
+                      {
+                        "label": "Fever including high temperature",
+                        "value": "Fever including high temperature",
+                        "q_code": "WCIS-FUP-SYM-016"
+                      },
+                      {
+                        "label": "More trouble sleeping than usual",
+                        "value": "More trouble sleeping than usual",
+                        "q_code": "WCIS-FUP-SYM-017"
+                      },
+                      {
+                        "label": "Memory loss or confusion",
+                        "value": "Memory loss or confusion",
+                        "q_code": "WCIS-FUP-SYM-018"
+                      },
+                      {
+                        "label": "Difficulty concentrating",
+                        "value": "Difficulty concentrating",
+                        "q_code": "WCIS-FUP-SYM-019"
+                      },
+                      {
+                        "label": "Worry or anxiety",
+                        "value": "Worry or anxiety",
+                        "q_code": "WCIS-FUP-SYM-020"
+                      },
+                      {
+                        "label": "Low mood or not enjoying anything",
+                        "value": "Low mood or not enjoying anything",
+                        "q_code": "WCIS-FUP-SYM-021"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer6f9dbf3b-0cf8-4b36-8752-437084c387d8",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "None of these symptoms",
+                        "value": "None of these symptoms",
+                        "q_code": "WCIS-FUP-SYM-022"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Symptoms second question - Winter CIS follow-up"
+            },
+            {
+              "id": "medicine-for-covid-19-infection-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionmedicine-for-covid-19-infection-winter-cis-follow-up",
+                "title": "Did you take any medicine for your most recent COVID-19 infection?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answereb522805-83e9-4b14-9853-d37fb3a746a1",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "I took prescribed antiviral or antibody treatments for COVID-19",
+                        "value": "I took prescribed antiviral or antibody treatments for COVID-19",
+                        "q_code": "WCIS-FUP-SYM-023"
+                      },
+                      {
+                        "label": "I took another medicine prescribed to treat my symptoms",
+                        "value": "I took another medicine prescribed to treat my symptoms",
+                        "q_code": "WCIS-FUP-SYM-024"
+                      },
+                      {
+                        "label": "I took non-prescription medication",
+                        "value": "I took non-prescription medication",
+                        "q_code": "WCIS-FUP-SYM-025",
+                        "description": "For example medicine you can buy over the counter from a shop or chemist"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer987916c4-b89d-4efe-9ed7-de11f18a3efb",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "I did not take any medicine",
+                        "value": "I did not take any medicine",
+                        "q_code": "WCIS-FUP-SYM-026"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Medicine for COVID-19 infection - Winter CIS follow-up"
+            },
+            {
+              "id": "end-page-winter-cis-follow-up",
+              "type": "Question",
+              "question": {
+                "id": "questionend-page-winter-cis-follow-up",
+                "title": "Thank you, please continue to the next page to submit your questionnaire",
+                "description": [
+                  "<p>This is the end of your questionnaire. Thank you very much for taking part.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer71f58894-d397-4cc3-9774-183e1416a279",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "label": "Tick to continue",
+                    "options": [
+                      {
+                        "label": "Continue",
+                        "value": "Continue",
+                        "q_code": "WCIS-FUP-END-001"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "End page - Winter CIS follow-up"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "==": [
+            {
+              "identifier": "answere5b983ee-bf06-4158-9701-cd508b8903c9",
+              "source": "answers"
+            },
+            null
+          ]
+        }
+      }
+    }
+  ],
+  "theme": "ukhsa-ons",
+  "navigation": {
+    "visible": false
+  },
+  "metadata": [
+    {
+      "name": "FIRST_NAME",
+      "type": "string"
+    },
+    {
+      "name": "WINDOW_CLOSE_DATE",
+      "type": "date"
+    },
+    {
+      "name": "WINDOW_START_DATE",
+      "type": "date"
+    }
+  ],
+  "post_submission": {
+    "feedback": true,
+    "view_response": false,
+    "guidance": {
+      "contents": [
+        {
+          "description": "<strong>If another household member wants to start their questionnaire using the same device</strong>"
+        },
+        {
+          "description": "You will need to click the &quot;leave this page&quot; link below."
+        },
+        {
+          "description": "They will then need to log in using their unique 16 character access code in the email or letter they were sent."
+        }
+      ]
+    }
+  },
+  "submission": {
+    "button": "Submit",
+    "title": "Submit your questionnaire",
+    "warning": "You cannot view your answers after submission"
+  }
+}
