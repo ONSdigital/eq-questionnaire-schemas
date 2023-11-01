@@ -345,11 +345,11 @@
     },
     {
       "answer_id": "answer6ed95c67-8e62-413f-b15a-8330cc2cd5ee",
-      "code": "WCIS-MAIN-C19-15"
+      "code": "WCIS-MAIN-C19-015"
     },
     {
       "answer_id": "answer91870ef1-4e0e-4a7b-a379-b0db8b470cac",
-      "code": "WCIS-MAIN-C19-16"
+      "code": "WCIS-MAIN-C19-016"
     },
     {
       "answer_id": "answer245aa1ab-d65b-4274-9b3c-32663d1c4c22",
@@ -1248,13 +1248,13 @@
                 "id": "questionabout-you-your-household",
                 "title": "How many people live in your household in the following age groups (including yourself)?",
                 "description": [
-                  "<p>By household, we mean the group of people you live with, in a single house or dwelling.</p><p>Please enter the number of people in your household for each age group.</p><p>Enter a number for each age group, including zero where needed. </p>"
+                  "<p>By household, we mean the group of people you live with, in a single house or dwelling.</p><p>Please enter the number of people in your household for each age group.</p>"
                 ],
                 "type": "Calculated",
                 "answers": [
                   {
                     "id": "answera2e6574b-764f-40a5-9a64-8ec6d117b2e6",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "0 to 11 years",
                     "minimum": {
@@ -1265,11 +1265,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answercaabcd8d-a18e-41dd-8da6-35ef6b3be51e",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "12 to 17 years",
                     "minimum": {
@@ -1280,11 +1281,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer0fa508e3-04cb-4b54-b036-490f3b37b751",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "18 to 29 years",
                     "minimum": {
@@ -1295,11 +1297,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer76eadd69-ff72-4103-a512-b05e64088981",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "30 to 39 years",
                     "minimum": {
@@ -1310,11 +1313,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer5616cf38-f2d1-45d4-bcfb-a43e7ac1d5c2",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "40 to 49 years",
                     "minimum": {
@@ -1325,11 +1329,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer76839ec7-cd19-494a-81ca-54edcb9b4d8e",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "50 to 59 years",
                     "minimum": {
@@ -1340,11 +1345,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer57519aea-2123-4504-989b-56904e7c8599",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "60 to 69 years",
                     "minimum": {
@@ -1355,11 +1361,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer2a5578d6-b488-43ea-b5ca-19e1eccf884e",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "70 to 79 years",
                     "minimum": {
@@ -1370,11 +1377,12 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   },
                   {
                     "id": "answer785974df-8acc-4027-889a-6343f34fa005",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "80 years and above",
                     "minimum": {
@@ -1385,7 +1393,8 @@
                       "value": 20,
                       "exclusive": false
                     },
-                    "decimal_places": 0
+                    "decimal_places": 0,
+                    "default": 0
                   }
                 ],
                 "calculations": [
@@ -1741,7 +1750,7 @@
                 "id": "questiontest-result-positive-lateral-flow-test",
                 "title": "Positive lateral flow test",
                 "description": [
-                  "<p>As you have reported a positive test result, we now ask you to continue to test every other day until you have two consecutive negative test results two days apart.</p><p>We will email you a link within the next five days to complete a short, follow-up questionnaire.</p><p>Please keep a note of the date you take each lateral flow test and the result, so that you can enter this information into the follow-up questionnaire.</p><p>Please click &quot;continue&quot; to continue with this questionnaire.</p>"
+                  "<p>As you have reported a positive test result, we now ask you to continue to test every other day until you have two negative test results in a row.</p><p>We will email you a link within the next five days to complete a short, follow-up questionnaire.</p><p>Please keep a note of the date you take each lateral flow test and the result, so that you can enter this information into the follow-up questionnaire.</p><p>Please click &quot;continue&quot; to continue with this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1755,7 +1764,16 @@
                         "label": "Continue",
                         "value": "Continue"
                       }
-                    ]
+                    ],
+                    "guidance": {
+                      "show_guidance": "What do we mean by &quot;every other day&quot;",
+                      "hide_guidance": "What do we mean by &quot;every other day&quot;",
+                      "contents": [
+                        {
+                          "description": "Day 1 - positive test. Repeat lateral flow tests on day 3, day 5, day 7, day 9... Stop testing when you test negative two times in a row."
+                        }
+                      ]
+                    }
                   }
                 ]
               },
@@ -3234,7 +3252,7 @@
                     },
                     {
                       "list": [
-                        "regardless of the cause, for example, symptoms relating the general health, age or recent work or exercise",
+                        "regardless of the cause, for example, symptoms relating to general health, age or recent work or exercise",
                         "even if you experience them regularly as part of a long-term health condition"
                       ]
                     }
@@ -3516,7 +3534,19 @@
                     "id": "answerae066bc2-5566-4583-af3c-b6ed825071dc",
                     "mandatory": true,
                     "type": "Date",
-                    "label": "Date (enter as DD MM YYYY)"
+                    "label": "Date (enter as DD MM YYYY)",
+                    "minimum": {
+                      "value": "now",
+                      "offset_by": {
+                        "years": -1
+                      }
+                    },
+                    "maximum": {
+                      "value": "now",
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
                   }
                 ]
               },
@@ -4076,8 +4106,8 @@
                         "value": "Oxford / AstraZeneca / Vaxzevria / Covishield"
                       },
                       {
-                        "label": "Janssen / Johnson&amp;Johnson",
-                        "value": "Janssen / Johnson&amp;Johnson"
+                        "label": "Janssen / Johnson and Johnson",
+                        "value": "Janssen / Johnson and Johnson"
                       },
                       {
                         "label": "Novavax",
@@ -4190,7 +4220,18 @@
                 {
                   "block": "health-status-today-date-of-covid-19-vaccination"
                 }
-              ]
+              ],
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answer05a07c3e-c6a9-49ad-99b5-00b3e2787d9d",
+                      "source": "answers"
+                    },
+                    ["No"]
+                  ]
+                }
+              }
             },
             {
               "id": "health-status-today-date-of-covid-19-vaccination",
@@ -6015,7 +6056,19 @@
                     "id": "answer6ed95c67-8e62-413f-b15a-8330cc2cd5ee",
                     "mandatory": false,
                     "type": "Date",
-                    "label": "Date (enter as DD MM YYYY)"
+                    "label": "Date (enter as DD MM YYYY)",
+                    "minimum": {
+                      "value": "2020-03-01",
+                      "offset_by": {
+                        "days": 0
+                      }
+                    },
+                    "maximum": {
+                      "value": "now",
+                      "offset_by": {
+                        "days": 0
+                      }
+                    }
                   },
                   {
                     "id": "answer91870ef1-4e0e-4a7b-a379-b0db8b470cac",
@@ -7480,9 +7533,9 @@
               "type": "Question",
               "question": {
                 "id": "questionnhs-questions-intro",
-                "title": "The next few questions are being asked on behalf of the National Health Service (NHS England) to help their understanding of winter pressures on the NHS. The questions ask about your experience accessing GP care and waiting for NHS treatment. There are 8 questions, which will take around 3 minutes to complete.",
+                "title": "The next few questions are being asked on behalf of the National Health Service (NHS) England to help their understanding of winter pressures on the NHS",
                 "description": [
-                  "<p>Please note, we will not share your data with NHS England. We will only share the statistics produced on groups of respondents. </p>"
+                  "<p>The questions ask about your experience accessing GP care and waiting for NHS treatment. There are a maximum of 8 questions, which will take around 3 minutes to complete.</p><p>Please note, we will not share your data with NHS England. We will only share the statistics produced on groups of respondents.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -7664,7 +7717,7 @@
                   }
                 },
                 {
-                  "block": "nhs-questions-awaiting-appointment"
+                  "block": "nhs-question-gp-access-easy-or-difficult"
                 }
               ],
               "skip_conditions": {
@@ -7790,6 +7843,43 @@
                 ]
               },
               "page_title": "NHS question - GP access easy or difficult",
+              "routing_rules": [
+                {
+                  "block": "nhs-questions-gp",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer764b6583-c879-46c2-9ffd-14ad893f9214",
+                        "source": "answers"
+                      },
+                      [
+                        "No I did not manage to make contact with the GP practice",
+                        "Do not know",
+                        "Prefer not to say"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "block": "nhs-questions-gp-contact-next-steps",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer764b6583-c879-46c2-9ffd-14ad893f9214",
+                        "source": "answers"
+                      },
+                      [
+                        "Yes on the same day",
+                        "Yes on the next day",
+                        "Yes two or more days later"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "block": "nhs-questions-gp-contact-next-steps"
+                }
+              ],
               "skip_conditions": {
                 "when": {
                   "in": [
