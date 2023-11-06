@@ -1766,8 +1766,8 @@
                       }
                     ],
                     "guidance": {
-                      "show_guidance": "What do we mean by &quot;every other day&quot;",
-                      "hide_guidance": "What do we mean by &quot;every other day&quot;",
+                      "show_guidance": "What do we mean by &quot;every other day&quot;?",
+                      "hide_guidance": "What do we mean by &quot;every other day&quot;?",
                       "contents": [
                         {
                           "description": "Day 1 - positive test. Repeat lateral flow tests on day 3, day 5, day 7, day 9... Stop testing when you test negative two times in a row."
@@ -7586,7 +7586,18 @@
                 {
                   "block": "nhs-questions-gp-contact"
                 }
-              ]
+              ],
+              "skip_conditions": {
+                "when": {
+                  "in": [
+                    {
+                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                      "source": "answers"
+                    },
+                    ["Yes", "No"]
+                  ]
+                }
+              }
             },
             {
               "id": "nhs-questions-gp-contact",
@@ -7644,12 +7655,25 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -7722,12 +7746,25 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -7787,12 +7824,25 @@
               "page_title": "NHS questions - How GP contact was made",
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -7882,12 +7932,25 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -7964,12 +8027,25 @@
               "page_title": "NHS questions - GP contact next steps",
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -8022,12 +8098,25 @@
               "page_title": "NHS questions - GP",
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -8085,12 +8174,25 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
@@ -8150,12 +8252,25 @@
               "page_title": "NHS questions - waiting for hospital appointment",
               "skip_conditions": {
                 "when": {
-                  "in": [
+                  "or": [
                     {
-                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                      "source": "answers"
+                      "in": [
+                        {
+                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
+                          "source": "answers"
+                        },
+                        ["Yes", "No"]
+                      ]
                     },
-                    ["No"]
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    }
                   ]
                 }
               }
