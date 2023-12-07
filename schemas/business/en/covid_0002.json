@@ -140,15 +140,7 @@
                     "question": "Exporting",
                     "contents": [
                       {
-                        "description": "This section asks for information about:"
-                      },
-                      {
-                        "list": [
-                          "your business&#39;s exporting activities",
-                          "border performance",
-                          "any related exporting challenges",
-                          "rules of origin"
-                        ]
+                        "description": "This section asks for information about your business&#39;s exporting activities and any related challenges."
                       }
                     ]
                   },
@@ -156,14 +148,7 @@
                     "question": "Importing",
                     "contents": [
                       {
-                        "description": "This section asks for information about:"
-                      },
-                      {
-                        "list": [
-                          "your business&#39;s importing activities",
-                          "border performance",
-                          "any related importing challenges"
-                        ]
+                        "description": "This section asks for information about your business&#39;s importing activities and any related challenges."
                       }
                     ]
                   },
@@ -175,26 +160,20 @@
                       },
                       {
                         "list": [
-                          "the availability of materials, goods and services within the EU",
                           "the availability of materials, goods and services within the UK",
-                          "global supply chain disruption",
-                          "the main concern to your business",
-                          "intra-UK purchases"
+                          "global supply chain disruption"
                         ]
                       }
                     ]
                   },
                   {
-                    "question": "Sending goods to and from Northern Ireland",
+                    "question": "Sending goods to Northern Ireland",
                     "contents": [
                       {
-                        "description": "This section asks for information about sending goods <strong>from </strong>GB <strong>to </strong>Northern Ireland, as well as <strong>from</strong> Northern Ireland <strong>to</strong> GB, and any related challenges."
+                        "description": "This section asks for information about sending goods <strong>from </strong>GB <strong>to </strong>Northern Ireland and any related challenges."
                       },
                       {
-                        "description": "<strong>Include</strong>"
-                      },
-                      {
-                        "description": "Goods sent to:"
+                        "description": "<strong>Include </strong>goods sent to:"
                       },
                       {
                         "list": [
@@ -209,17 +188,21 @@
                     ]
                   },
                   {
+                    "question": "Artificial intelligence",
+                    "contents": [
+                      {
+                        "description": "This section asks for information about your business&#39;s use of artificial intelligence."
+                      }
+                    ]
+                  },
+                  {
                     "question": "Workforce trends",
                     "contents": [
                       {
                         "description": "This section asks for information about your workforce such as:"
                       },
                       {
-                        "list": [
-                          "skills in high demand and support or training in skills",
-                          "changes in hourly wages",
-                          "worker shortages"
-                        ]
+                        "list": ["wages", "worker shortages"]
                       }
                     ]
                   },
@@ -259,6 +242,7 @@
       "title": "Trading status of your business",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Trading status of your business section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -343,6 +327,7 @@
       "title": "Exporting",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Exporting section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -358,15 +343,7 @@
                 "title": "Exporting",
                 "contents": [
                   {
-                    "description": "This section asks for information about:"
-                  },
-                  {
-                    "list": [
-                      "your business&#39;s exporting activities",
-                      "border performance",
-                      "any related exporting challenges",
-                      "rules of origin"
-                    ]
+                    "description": "This section asks for information about your business&#39;s exporting activities and any related challenges."
                   }
                 ]
               }
@@ -440,16 +417,62 @@
                   }
                 },
                 {
-                  "block": "exporting-compared-to-last-year"
+                  "block": "exporting-to-additional-countries"
                 }
               ]
+            },
+            {
+              "id": "exporting-to-additional-countries",
+              "type": "Question",
+              "question": {
+                "id": "questionexporting-to-additional-countries",
+                "title": "In November 2023, did your business export to <em>additional</em> countries compared with this calendar month last year?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;additional countries&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to countries that are in addition to, or a change from, the countries that your business was trading with this calendar month last year."
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer04f10873-1db4-4009-b110-56ac4ac5c5fc",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "200070",
+                    "options": [
+                      {
+                        "label": "Yes, to countries within the EU",
+                        "value": "Yes, to countries within the EU"
+                      },
+                      {
+                        "label": "Yes, to non-EU countries",
+                        "value": "Yes, to non-EU countries"
+                      },
+                      {
+                        "label": "Yes, to both EU and non-EU countries",
+                        "value": "Yes, to both EU and non-EU countries"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Exporting to additional countries"
             },
             {
               "id": "exporting-compared-to-last-year",
               "type": "Question",
               "question": {
                 "id": "questionexporting-compared-to-last-year",
-                "title": "How did your business&#39;s exporting in <em>September 2023</em> compare with this calendar month last year?",
+                "title": "How did your business&#39;s exporting in November 2023 compare with this calendar month last year?",
                 "type": "General",
                 "answers": [
                   {
@@ -485,7 +508,7 @@
               "page_title": "Exporting compared to last year",
               "routing_rules": [
                 {
-                  "block": "use-of-rules-of-origin",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
@@ -497,88 +520,16 @@
                   }
                 },
                 {
-                  "block": "cost-of-exporting"
+                  "block": "increase-in-exporting-challenges"
                 }
               ]
-            },
-            {
-              "id": "cost-of-exporting",
-              "type": "Question",
-              "question": {
-                "id": "questioncost-of-exporting",
-                "title": "How did your business&#39;s <em>cost</em> of exporting in September 2023 compare with this calendar month last year?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerd9d47683-9ddc-4f66-b050-2243c12b30c1",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "325",
-                    "options": [
-                      {
-                        "label": "Cost increased",
-                        "value": "Cost increased"
-                      },
-                      {
-                        "label": "Cost stayed the same",
-                        "value": "Cost stayed the same"
-                      },
-                      {
-                        "label": "Cost decreased",
-                        "value": "Cost decreased"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Cost of exporting"
-            },
-            {
-              "id": "time-spent-on-exporting",
-              "type": "Question",
-              "question": {
-                "id": "questiontime-spent-on-exporting",
-                "title": "How did the <em>time</em> spent on exporting in September 2023 compare with this calendar month last year?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerbf3a982b-e127-4dcf-b58d-48d64ea490b0",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "326",
-                    "options": [
-                      {
-                        "label": "Time spent increased",
-                        "value": "Time spent increased"
-                      },
-                      {
-                        "label": "Time spent stayed the same",
-                        "value": "Time spent stayed the same"
-                      },
-                      {
-                        "label": "Time spent decreased",
-                        "value": "Time spent decreased"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Time spent on exporting"
             },
             {
               "id": "increase-in-exporting-challenges",
               "type": "Question",
               "question": {
                 "id": "questionincrease-in-exporting-challenges",
-                "title": "Did your business experience an <em>increase</em> in any of the following exporting challenges in September 2023, compared with the previous calendar month?",
+                "title": "Did your business experience an <em>increase</em> in any of the following exporting challenges in November 2023, compared with the previous calendar month?",
                 "definitions": [
                   {
                     "title": "What we mean by an &#39;increase&#39;",
@@ -684,294 +635,7 @@
                   }
                 ]
               },
-              "page_title": "Increase in exporting challenges",
-              "routing_rules": [
-                {
-                  "block": "use-of-rules-of-origin",
-                  "when": {
-                    "==": [
-                      {
-                        "identifier": "answerba3b115f-a73b-4c57-bd68-736077252d3d",
-                        "source": "answers"
-                      },
-                      null
-                    ]
-                  }
-                },
-                {
-                  "block": "main-cause-of-exporting-challenges"
-                }
-              ]
-            },
-            {
-              "id": "main-cause-of-exporting-challenges",
-              "type": "Question",
-              "question": {
-                "id": "questionmain-cause-of-exporting-challenges",
-                "title": "What was the main cause of these exporting challenges?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer5aed64a1-c7ba-40b5-a9dd-5eff480c7f5d",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "229",
-                    "options": [
-                      {
-                        "label": "Coronavirus (COVID-19) pandemic",
-                        "value": "Coronavirus (COVID-19) pandemic"
-                      },
-                      {
-                        "label": "End of the EU transition period",
-                        "value": "End of the EU transition period"
-                      },
-                      {
-                        "label": "Coronavirus (COVID-19) pandemic and the end of the EU transition period",
-                        "value": "Coronavirus (COVID-19) pandemic and the end of the EU transition period"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answer5535b11c-e33b-4569-aa48-46e58cd26bcd",
-                          "mandatory": true,
-                          "q_code": "1229"
-                        }
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Main cause of exporting challenges"
-            },
-            {
-              "id": "use-of-rules-of-origin",
-              "type": "Question",
-              "question": {
-                "id": "questionuse-of-rules-of-origin",
-                "title": "Does your business currently use <em>rules of origin</em> to access lower or zero tariffs on exports?",
-                "definitions": [
-                  {
-                    "title": "What we mean by &#39;rules of origin&#39;",
-                    "contents": [
-                      {
-                        "description": "This is the criteria used to determine where a product was made. They exist in all Free Trade Agreements to ensure only goods made in countries that are part of the agreement can benefit from lower tariffs."
-                      },
-                      {
-                        "description": "<a href=\"https://www.gov.uk/government/collections/rules-of-origin-for-goods-moving-between-the-uk-and-eu\"target=\"_blank\"rel=\"noopener noreferrer\">View further information about rules of origin on the gov.uk website (this link opens in a new tab)</a>"
-                      }
-                    ]
-                  }
-                ],
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerd2e3d125-c3be-41cd-bd76-287f3656efd7",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "39",
-                    "options": [
-                      {
-                        "label": "Yes, to EU countries",
-                        "value": "Yes, to EU countries"
-                      },
-                      {
-                        "label": "Yes, to non-EU countries",
-                        "value": "Yes, to non-EU countries"
-                      },
-                      {
-                        "label": "Yes, to both EU and non-EU countries",
-                        "value": "Yes, to both EU and non-EU countries"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Use of rules of origin",
-              "routing_rules": [
-                {
-                  "block": "reasons-for-not-using-rules-of-origin",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answerd2e3d125-c3be-41cd-bd76-287f3656efd7",
-                        "source": "answers"
-                      },
-                      ["No"]
-                    ]
-                  }
-                },
-                {
-                  "section": "End",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answerd2e3d125-c3be-41cd-bd76-287f3656efd7",
-                        "source": "answers"
-                      },
-                      ["Yes, to non-EU countries", "Not sure"]
-                    ]
-                  }
-                },
-                {
-                  "block": "effect-of-rules-of-origin-on-administration"
-                }
-              ]
-            },
-            {
-              "id": "effect-of-rules-of-origin-on-administration",
-              "type": "Question",
-              "question": {
-                "id": "questioneffect-of-rules-of-origin-on-administration",
-                "title": "How has using rules of origin when exporting to the EU changed the amount of administration for your business?",
-                "definitions": [
-                  {
-                    "title": "What we mean by &#39;administration&#39;",
-                    "contents": [
-                      {
-                        "description": "This is referring to gathering the information and completing the paperwork to prove goods comply with rules of origin."
-                      }
-                    ]
-                  }
-                ],
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer96fe59fa-31c2-4550-b116-dbb7d4547b27",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "40",
-                    "options": [
-                      {
-                        "label": "Administration has increased",
-                        "value": "Administration has increased"
-                      },
-                      {
-                        "label": "Administration has stayed the same",
-                        "value": "Administration has stayed the same"
-                      },
-                      {
-                        "label": "Administration has decreased",
-                        "value": "Administration has decreased"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Effect of rules of origin on administration",
-              "routing_rules": [
-                {
-                  "section": "End",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answer96fe59fa-31c2-4550-b116-dbb7d4547b27",
-                        "source": "answers"
-                      },
-                      [
-                        "Administration has increased",
-                        "Administration has stayed the same",
-                        "Administration has decreased",
-                        "Not sure"
-                      ]
-                    ]
-                  }
-                },
-                {
-                  "block": "reasons-for-not-using-rules-of-origin"
-                }
-              ]
-            },
-            {
-              "id": "reasons-for-not-using-rules-of-origin",
-              "type": "Question",
-              "question": {
-                "id": "questionreasons-for-not-using-rules-of-origin",
-                "title": "Why does your business not currently use rules of origin to access lower or zero tariffs?",
-                "type": "MutuallyExclusive",
-                "mandatory": true,
-                "answers": [
-                  {
-                    "id": "answer16c52c1e-ff4f-43af-8aa1-cf2d3dc7956e",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Administrative costs of rules of origin outweigh the potential tariff saving",
-                        "value": "Administrative costs of rules of origin outweigh the potential tariff saving",
-                        "q_code": "301"
-                      },
-                      {
-                        "label": "Exports do not meet rules of origin requirements",
-                        "value": "Exports do not meet rules of origin requirements",
-                        "q_code": "302"
-                      },
-                      {
-                        "label": "Lack of understanding, staffing or expertise to use rules of origin",
-                        "value": "Lack of understanding, staffing or expertise to use rules of origin",
-                        "q_code": "303"
-                      },
-                      {
-                        "label": "The business has attempted to use rules of origin but has been unsuccessful",
-                        "value": "The business has attempted to use rules of origin but has been unsuccessful",
-                        "q_code": "304"
-                      },
-                      {
-                        "label": "The EU does not charge tariffs on the goods the business exports",
-                        "value": "The EU does not charge tariffs on the goods the business exports",
-                        "q_code": "305"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "q_code": "306",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answer89c00389-28e6-4f37-bcfb-aec16b96242a",
-                          "mandatory": false
-                        }
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure",
-                        "q_code": "309"
-                      }
-                    ]
-                  },
-                  {
-                    "id": "answer79c681ea-95e8-4f4c-a3e9-ac89932e08cc",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Not applicable",
-                        "value": "Not applicable",
-                        "q_code": "300"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Reasons for not using rules of origin"
+              "page_title": "Increase in exporting challenges"
             }
           ]
         }
@@ -993,6 +657,7 @@
       "title": "Importing",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Importing section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -1008,14 +673,7 @@
                 "title": "Importing",
                 "contents": [
                   {
-                    "description": "This section asks for information about:"
-                  },
-                  {
-                    "list": [
-                      "your business&#39;s importing activities",
-                      "border performance",
-                      "any related importing challenges"
-                    ]
+                    "description": "This section asks for information about your business&#39;s importing activities and any related challenges."
                   }
                 ]
               }
@@ -1084,16 +742,62 @@
                   }
                 },
                 {
-                  "block": "importing-compared-to-last-year"
+                  "block": "importing-from-additional-countries"
                 }
               ]
+            },
+            {
+              "id": "importing-from-additional-countries",
+              "type": "Question",
+              "question": {
+                "id": "questionimporting-from-additional-countries",
+                "title": "In November 2023, did your business import from <em>additional</em> countries compared with this calendar month last year?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;additional countries&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to countries that are in addition to, or a change from, the countries that your business was trading with this calendar month last year."
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc8f56d3b-6f76-4943-bc27-91aa27e24b4e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "q_code": "200071",
+                    "options": [
+                      {
+                        "label": "Yes, from countries within the EU",
+                        "value": "Yes, from countries within the EU"
+                      },
+                      {
+                        "label": "Yes, from non-EU countries",
+                        "value": "Yes, from non-EU countries"
+                      },
+                      {
+                        "label": "Yes, from both EU and non-EU countries",
+                        "value": "Yes, from both EU and non-EU countries"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Importing from additional countries"
             },
             {
               "id": "importing-compared-to-last-year",
               "type": "Question",
               "question": {
                 "id": "questionimporting-compared-to-last-year",
-                "title": "How did your business&#39;s importing in <em>September 2023</em> compare with this calendar month last year?",
+                "title": "How did your business&#39;s importing in November 2023 compare with this calendar month last year?",
                 "type": "General",
                 "answers": [
                   {
@@ -1141,88 +845,16 @@
                   }
                 },
                 {
-                  "block": "cost-of-importing"
+                  "block": "increase-in-importing-challenges"
                 }
               ]
-            },
-            {
-              "id": "cost-of-importing",
-              "type": "Question",
-              "question": {
-                "id": "questioncost-of-importing",
-                "title": "How did your business&#39;s <em>cost</em> of importing in September 2023 compare with this calendar month last year?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerf295232d-d06c-4e1a-84ad-8da3de0b69da",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "330",
-                    "options": [
-                      {
-                        "label": "Cost increased",
-                        "value": "Cost increased"
-                      },
-                      {
-                        "label": "Cost stayed the same",
-                        "value": "Cost stayed the same"
-                      },
-                      {
-                        "label": "Cost decreased",
-                        "value": "Cost decreased"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Cost of importing"
-            },
-            {
-              "id": "time-spent-on-importing",
-              "type": "Question",
-              "question": {
-                "id": "questiontime-spent-on-importing",
-                "title": "How did the <em>time</em> spent on importing in September 2023 compare with this calendar month last year?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerf33630d3-e588-4a92-bebf-f04a93c615d2",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "334",
-                    "options": [
-                      {
-                        "label": "Time spent increased",
-                        "value": "Time spent increased"
-                      },
-                      {
-                        "label": "Time spent stayed the same",
-                        "value": "Time spent stayed the same"
-                      },
-                      {
-                        "label": "Time spent decreased",
-                        "value": "Time spent decreased"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Time spent on importing"
             },
             {
               "id": "increase-in-importing-challenges",
               "type": "Question",
               "question": {
                 "id": "questionincrease-in-importing-challenges",
-                "title": "Did your business experience an <em>increase</em> in any of the following importing challenges in September 2023, compared with the previous calendar month?",
+                "title": "Did your business experience an <em>increase</em> in any of the following importing challenges in November 2023, compared with the previous calendar month?",
                 "definitions": [
                   {
                     "title": "What we mean by an &#39;increase&#39;",
@@ -1318,71 +950,7 @@
                   }
                 ]
               },
-              "page_title": "Increase in importing challenges",
-              "routing_rules": [
-                {
-                  "section": "End",
-                  "when": {
-                    "==": [
-                      {
-                        "identifier": "answer644b45de-96eb-4f3d-a933-751ae732f917",
-                        "source": "answers"
-                      },
-                      null
-                    ]
-                  }
-                },
-                {
-                  "block": "main-cause-of-importing-challenges"
-                }
-              ]
-            },
-            {
-              "id": "main-cause-of-importing-challenges",
-              "type": "Question",
-              "question": {
-                "id": "questionmain-cause-of-importing-challenges",
-                "title": "What was the main cause of these importing challenges?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer19976283-fcbe-48b7-92b8-a70f561d96cf",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "233",
-                    "options": [
-                      {
-                        "label": "Coronavirus (COVID-19) pandemic",
-                        "value": "Coronavirus (COVID-19) pandemic"
-                      },
-                      {
-                        "label": "End of the EU transition period",
-                        "value": "End of the EU transition period"
-                      },
-                      {
-                        "label": "Coronavirus (COVID-19) pandemic and the end of the EU transition period",
-                        "value": "Coronavirus (COVID-19) pandemic and the end of the EU transition period"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answer35ad421a-c969-4962-b586-308a9027e70b",
-                          "mandatory": true,
-                          "q_code": "1233"
-                        }
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Main cause of importing challenges"
+              "page_title": "Increase in importing challenges"
             }
           ]
         }
@@ -1405,7 +973,7 @@
       }
     },
     {
-      "id": "b4689d63-d9fe-41e5-9aa3-5a38a96be5ac",
+      "id": "9c078094-4844-44c0-9dac-c120e0800b41",
       "title": "Supply chains",
       "summary": {
         "show_on_completion": false,
@@ -1414,37 +982,15 @@
       "show_on_hub": true,
       "groups": [
         {
-          "id": "groupb4689d63-d9fe-41e5-9aa3-5a38a96be5ac",
+          "id": "group9c078094-4844-44c0-9dac-c120e0800b41",
           "blocks": [
             {
-              "type": "Interstitial",
-              "id": "supply-chains",
-              "page_title": "Supply chains",
-              "content": {
-                "title": "Supply chains",
-                "contents": [
-                  {
-                    "description": "This section asks for information about:"
-                  },
-                  {
-                    "list": [
-                      "the availability of materials, goods and services within the EU",
-                      "the availability of materials, goods and services within the UK",
-                      "global supply chain disruption",
-                      "the main concern to your business",
-                      "intra-UK purchases"
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "id": "materials-goods-or-services-from-the-eu",
+              "id": "materials-goods-or-services-from-within-the-uk",
               "type": "Question",
               "question": {
-                "id": "questionmaterials-goods-or-services-from-the-eu",
+                "id": "questionmaterials-goods-or-services-from-within-the-uk",
                 "title": {
-                  "text": "Was {ru_name} able to get the materials, goods or services it needed from the EU in September 2023?",
+                  "text": "Was {ru_name} able to get the materials, goods or services it needed from within the UK in November 2023?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1458,43 +1004,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer10f8c341-b722-4dd5-b086-c9b5db2e5a6d",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "734",
-                    "options": [
-                      {
-                        "label": "Yes, the business was able to get the materials, goods or services it needed",
-                        "value": "Yes, the business was able to get the materials, goods or services it needed"
-                      },
-                      {
-                        "label": "Yes, but the business had to change suppliers or find alternative solutions",
-                        "value": "Yes, but the business had to change suppliers or find alternative solutions"
-                      },
-                      {
-                        "label": "No, the business was not able to get the materials, goods or services needed",
-                        "value": "No, the business was not able to get the materials, goods or services needed"
-                      },
-                      {
-                        "label": "Not applicable",
-                        "value": "Not applicable"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Materials, goods or services from the EU"
-            },
-            {
-              "id": "materials-goods-or-services-from-within-the-uk",
-              "type": "Question",
-              "question": {
-                "id": "questionmaterials-goods-or-services-from-within-the-uk",
-                "title": "Was your business able to get the materials, goods or services it needed from <em>within the UK</em> in September 2023?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerd78e6bbe-01aa-4acb-8c55-5ca6613761ec",
+                    "id": "answer007539bf-32fe-4d75-9182-299ccbbd941a",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "735",
@@ -1526,7 +1036,7 @@
               "type": "Question",
               "question": {
                 "id": "questionglobal-supply-chain-disruption",
-                "title": "Did your business experience any global supply chain disruption in September 2023?",
+                "title": "Did your business experience any global supply chain disruption in November 2023?",
                 "definitions": [
                   {
                     "title": "Examples of global supply chain disruption",
@@ -1545,7 +1055,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerf91fa326-31f7-413d-b44f-87c1826283c8",
+                    "id": "answer467a768a-babc-4153-a560-901a08bb2de4",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "736",
@@ -1573,11 +1083,11 @@
               "page_title": "Global supply chain disruption",
               "routing_rules": [
                 {
-                  "block": "main-concern-for-your-business",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answerf91fa326-31f7-413d-b44f-87c1826283c8",
+                        "identifier": "answer467a768a-babc-4153-a560-901a08bb2de4",
                         "source": "answers"
                       },
                       ["No", "Not sure", "Not applicable"]
@@ -1598,7 +1108,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerd3a7a44c-1f17-4010-a763-1c1f79b95ee0",
+                    "id": "answer6da711b4-994d-4ce3-9e66-a98f05b86de3",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "731",
@@ -1639,7 +1149,7 @@
                         "detail_answer": {
                           "label": "Please describe",
                           "type": "TextField",
-                          "id": "answer0b2bb6da-e657-4401-9c18-6503a3ea7833",
+                          "id": "answerce91b35f-3b5d-4958-8e2b-1cce8ae156ad",
                           "mandatory": true,
                           "q_code": "732"
                         }
@@ -1653,264 +1163,6 @@
                 ]
               },
               "page_title": "Main reason for global supply chain disruption"
-            },
-            {
-              "id": "main-concern-for-your-business",
-              "type": "Question",
-              "question": {
-                "id": "questionmain-concern-for-your-business",
-                "title": "Which of the following, if any, will be the <em>main</em> concern for your business in <em>November 2023</em>?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer650ab95f-36b7-4a58-874b-c1dd1eb0ff97",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "737",
-                    "options": [
-                      {
-                        "label": "Business rates",
-                        "value": "Business rates"
-                      },
-                      {
-                        "label": "Competition with other UK businesses",
-                        "value": "Competition with other UK businesses"
-                      },
-                      {
-                        "label": "Energy prices",
-                        "value": "Energy prices"
-                      },
-                      {
-                        "label": "Exchange rates",
-                        "value": "Exchange rates"
-                      },
-                      {
-                        "label": "Falling demand of goods and services",
-                        "value": "Falling demand of goods and services"
-                      },
-                      {
-                        "label": "Inflation of goods and services prices",
-                        "value": "Inflation of goods and services prices"
-                      },
-                      {
-                        "label": "Interest rates",
-                        "value": "Interest rates",
-                        "description": "Including mortgages"
-                      },
-                      {
-                        "label": "Property rental costs",
-                        "value": "Property rental costs"
-                      },
-                      {
-                        "label": "Supply chain disruption",
-                        "value": "Supply chain disruption"
-                      },
-                      {
-                        "label": "Taxation",
-                        "value": "Taxation"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answer135701d3-5732-40c9-ad70-de1d6fd6a87b",
-                          "mandatory": true,
-                          "q_code": "1737"
-                        }
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      },
-                      {
-                        "label": "No concerns for the business",
-                        "value": "No concerns for the business"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Main concern for your business"
-            },
-            {
-              "id": "purchases-from-suppliers-in-other-uk-nations",
-              "type": "Question",
-              "question": {
-                "id": "questionpurchases-from-suppliers-in-other-uk-nations",
-                "title": "In the last 12 months, has your business purchased goods or services from suppliers in <em>other UK nations</em>?",
-                "guidance": {
-                  "contents": [
-                    {
-                      "description": "Exclude trade within the same UK nation"
-                    }
-                  ]
-                },
-                "definitions": [
-                  {
-                    "title": "What we mean by &#39;other UK nations&#39;",
-                    "contents": [
-                      {
-                        "description": "This refers to purchasing from suppliers in a UK nation outside of the nation where the majority of your business resides.&#x202F;The four nations that make up the UK are England, Scotland, Wales and Northern Ireland."
-                      }
-                    ]
-                  }
-                ],
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer87309b0e-1977-4d6d-b900-63900c6e3d9c",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "200059",
-                    "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure"
-                      }
-                    ],
-                    "guidance": {
-                      "show_guidance": "Examples of goods or services",
-                      "hide_guidance": "Examples of goods or services",
-                      "contents": [
-                        {
-                          "list": [
-                            "casual labour",
-                            "financial services",
-                            "finished goods",
-                            "professional services",
-                            "semi-finished or immediate goods",
-                            "raw materials"
-                          ]
-                        }
-                      ]
-                    }
-                  }
-                ]
-              },
-              "page_title": "Purchases from suppliers in other UK nations",
-              "routing_rules": [
-                {
-                  "section": "End",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answer87309b0e-1977-4d6d-b900-63900c6e3d9c",
-                        "source": "answers"
-                      },
-                      ["No", "Not sure"]
-                    ]
-                  }
-                },
-                {
-                  "block": "type-of-purchases-from-other-uk-nations"
-                }
-              ]
-            },
-            {
-              "id": "type-of-purchases-from-other-uk-nations",
-              "type": "Question",
-              "question": {
-                "id": "questiontype-of-purchases-from-other-uk-nations",
-                "title": "In the last 12 months, which of the following goods or services has your business purchased from suppliers in other UK nations?",
-                "guidance": {
-                  "contents": [
-                    {
-                      "description": "Exclude trade within the same UK nation"
-                    }
-                  ]
-                },
-                "definitions": [
-                  {
-                    "title": "What we mean by &#39;other UK nations&#39;",
-                    "contents": [
-                      {
-                        "description": "This refers to purchasing from suppliers in a UK nation outside of the nation where the majority of your business resides.&#x202F;The four nations that make up the UK are England, Scotland, Wales and Northern Ireland."
-                      }
-                    ]
-                  }
-                ],
-                "type": "MutuallyExclusive",
-                "mandatory": true,
-                "answers": [
-                  {
-                    "id": "answerc551a335-c89c-42bf-9635-3826bfb11759",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Casual labour",
-                        "value": "Casual labour",
-                        "q_code": "200060",
-                        "description": "Include the location of the supplier or their local branch, not where the labourers live"
-                      },
-                      {
-                        "label": "Financial services",
-                        "value": "Financial services",
-                        "q_code": "200061",
-                        "description": "This refers to the investment, lending and management of money and assets as well as the provision of insurance, reinsurance and pension funding activities"
-                      },
-                      {
-                        "label": "Professional services",
-                        "value": "Professional services",
-                        "q_code": "200062",
-                        "description": "This refers to activities that require a high degree of training, and make specialised knowledge and skills available to users. For example, legal, consultancy, advertising or engineering services"
-                      },
-                      {
-                        "label": "Finished goods",
-                        "value": "Finished goods",
-                        "q_code": "200063",
-                        "description": "This refers to goods that have completed the manufacturing process and are ready for sale"
-                      },
-                      {
-                        "label": "Semi-finished or intermediate goods",
-                        "value": "Semi-finished or intermediate goods",
-                        "q_code": "200064",
-                        "description": "This refers to goods that have been partly made or processed and require further processing to become a finished good. For example, car or machine parts"
-                      },
-                      {
-                        "label": "Raw materials",
-                        "value": "Raw materials",
-                        "q_code": "200065",
-                        "description": "This refers to the basic input goods that your business requires to manufacture its products"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "q_code": "200066",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answer837a0c63-c7d6-4490-bfd0-55f9f290fcd2",
-                          "mandatory": false
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "answera2e795fb-6dc7-4620-a112-8bddfbfcedf4",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Not sure",
-                        "value": "Not sure",
-                        "q_code": "200067"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Type of purchases from other UK nations"
             }
           ]
         }
@@ -1925,41 +1177,38 @@
             [
               "Currently fully trading",
               "Currently partially trading",
-              "Paused trading but intends to restart in the next two weeks",
-              "Paused trading and does not intend to restart in the next two weeks"
+              "Paused trading and does not intend to restart in the next two weeks",
+              "Paused trading but intends to restart in the next two weeks"
             ]
           ]
         }
       }
     },
     {
-      "id": "54c81f8c-6267-4788-9ae8-a0f230766e27",
-      "title": "Sending goods to and from Northern Ireland",
+      "id": "a048fd1d-d434-4845-8464-6c1ec225a315",
+      "title": "Sending goods to Northern Ireland",
       "summary": {
         "show_on_completion": false,
-        "page_title": "Sending goods to Northern Ireland",
+        "page_title": "Sending goods to Northern Ireland section",
         "collapsible": false
       },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group54c81f8c-6267-4788-9ae8-a0f230766e27",
+          "id": "groupa048fd1d-d434-4845-8464-6c1ec225a315",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "sending-goods",
-              "page_title": "Sending goods",
+              "id": "sending-goods-to-northern-ireland",
+              "page_title": "Sending goods to Northern Ireland",
               "content": {
-                "title": "Sending goods to and from Northern Ireland",
+                "title": "Sending goods to Northern Ireland",
                 "contents": [
                   {
-                    "description": "This section asks for information about sending goods <strong>from </strong>GB <strong>to </strong>Northern Ireland, as well as <strong>from</strong> Northern Ireland <strong>to</strong> GB, and any related challenges."
+                    "description": "This section asks for information about sending goods <strong>from </strong>GB <strong>to </strong>Northern Ireland and any related challenges."
                   },
                   {
-                    "description": "<strong>Include</strong>"
-                  },
-                  {
-                    "description": "Goods sent to:"
+                    "description": "<strong>Include </strong>goods sent to:"
                   },
                   {
                     "list": [
@@ -2021,7 +1270,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer8c7a6949-68e2-4ed6-a114-2c3d7d211baf",
+                    "id": "answer5305bce4-9691-4dac-ac8c-d4b8a1a54091",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "238",
@@ -2045,11 +1294,11 @@
               "page_title": "Sending goods to Northern Ireland in the last year",
               "routing_rules": [
                 {
-                  "block": "sending-goods-to-gb-in-the-last-year",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answer8c7a6949-68e2-4ed6-a114-2c3d7d211baf",
+                        "identifier": "answer5305bce4-9691-4dac-ac8c-d4b8a1a54091",
                         "source": "answers"
                       },
                       ["No", "Not sure"]
@@ -2066,11 +1315,11 @@
               "type": "Question",
               "question": {
                 "id": "questionvolume-of-goods-sent-to-northern-ireland",
-                "title": "In September 2023, how did the <em>volume of goods</em> your business sent from GB to Northern Ireland compare with the previous calendar month?",
+                "title": "In <em>November 2023</em>, how did the <em>volume of goods</em> your business sent from GB to Northern Ireland compare with the previous calendar month?",
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer7e1bda25-92b2-41a0-ac94-e2a3c336fa5e",
+                    "id": "answer484febf9-0097-464b-b2f3-d2b6db47d24c",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "738",
@@ -2106,11 +1355,11 @@
               "page_title": "Volume of goods sent to Northern Ireland",
               "routing_rules": [
                 {
-                  "block": "sending-goods-to-gb-in-the-last-year",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answer7e1bda25-92b2-41a0-ac94-e2a3c336fa5e",
+                        "identifier": "answer484febf9-0097-464b-b2f3-d2b6db47d24c",
                         "source": "answers"
                       },
                       ["Volume stayed the same", "Not sure", "Not applicable"]
@@ -2127,11 +1376,11 @@
               "type": "Question",
               "question": {
                 "id": "questiondetails-about-volume-of-goods-sent-to-northern-ireland",
-                "title": "Please give more details about why the volume of goods sent from GB to Northern Ireland changed in September 2023",
+                "title": "Please give more details about why the volume of goods sent from GB to Northern Ireland changed in November 2023",
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer3900c4fb-a5a1-45bb-9346-d192fffa36bd",
+                    "id": "answer96044afa-3218-4397-abb0-0f9deaea2d3b",
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Comments",
@@ -2141,163 +1390,635 @@
                 ]
               },
               "page_title": "Details about volume of goods sent to Northern Ireland"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "in": [
+            {
+              "identifier": "answerf4d8d1e0-1474-4eb7-8377-9218d0825f10",
+              "source": "answers"
+            },
+            [
+              "Currently fully trading",
+              "Currently partially trading",
+              "Paused trading but intends to restart in the next two weeks",
+              "Paused trading and does not intend to restart in the next two weeks"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "3d4365b7-9de0-4191-a98c-d3a7fc061bc8",
+      "title": "Artificial intelligence",
+      "summary": {
+        "show_on_completion": false,
+        "page_title": "Artificial intelligence section",
+        "collapsible": false
+      },
+      "show_on_hub": true,
+      "groups": [
+        {
+          "id": "group3d4365b7-9de0-4191-a98c-d3a7fc061bc8",
+          "blocks": [
+            {
+              "type": "Interstitial",
+              "id": "artificial-intelligence",
+              "page_title": "Artificial intelligence",
+              "content": {
+                "title": "Artificial intelligence",
+                "contents": [
+                  {
+                    "description": "This section asks for information about your business&#39;s use of artificial intelligence."
+                  }
+                ]
+              }
             },
             {
-              "id": "sending-goods-to-gb-in-the-last-year",
+              "id": "current-use-of-artificial-intelligence-technologies",
               "type": "Question",
               "question": {
-                "id": "questionsending-goods-to-gb-in-the-last-year",
-                "title": "Has your business sent goods <em>from Northern Ireland to GB</em> in the last 12 months?",
-                "guidance": {
-                  "contents": [
+                "id": "questioncurrent-use-of-artificial-intelligence-technologies",
+                "title": {
+                  "text": "Which, if any, of the following artificial intelligence technologies does {ru_name} currently use?",
+                  "placeholders": [
                     {
-                      "description": "<strong>Include</strong>"
-                    },
-                    {
-                      "description": "Goods sent from Northern Ireland to GB to:"
-                    },
-                    {
-                      "list": [
-                        "other businesses",
-                        "other parts of your business",
-                        "individual customers"
-                      ]
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
                     }
                   ]
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;GB&#39;",
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
                     "contents": [
                       {
-                        "description": "This refers to &#x2018;Great Britain&#x2019; which includes England, Scotland and Wales, but excludes Northern Ireland."
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
                       }
                     ]
                   }
                 ],
-                "type": "General",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
                 "answers": [
                   {
-                    "id": "answerd123fc51-6a5c-40c8-87d0-ef0a7d2585cc",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "181",
+                    "id": "answer07656461-3dd5-42f6-a3b4-a4778e8ff6c0",
+                    "mandatory": false,
+                    "type": "Checkbox",
                     "options": [
                       {
-                        "label": "Yes",
-                        "value": "Yes"
+                        "label": "Autonomous vehicles",
+                        "value": "Autonomous vehicles",
+                        "q_code": "200014"
                       },
                       {
-                        "label": "No",
-                        "value": "No"
+                        "label": "Data processing using machine learning",
+                        "value": "Data processing using machine learning",
+                        "q_code": "200012",
+                        "description": "For example, personalisation of shopping or product recommendations, fraud prevention or cybersecurity"
+                      },
+                      {
+                        "label": "Image processing using machine learning",
+                        "value": "Image processing using machine learning",
+                        "q_code": "200013",
+                        "description": "For example, for facial recognition, quality control or object detection"
+                      },
+                      {
+                        "label": "Robotics",
+                        "value": "Robotics",
+                        "q_code": "200015",
+                        "description": "For example, for carrying goods in hospitals or warehouses"
+                      },
+                      {
+                        "label": "Text generation using Large Language Models",
+                        "value": "Text generation using Large Language Models",
+                        "q_code": "200010",
+                        "description": "For example, chatbots that interact in a conversational way and can answer complex questions, computer coding assistance, creating first drafts of papers or topic research or social media posts and public communications"
+                      },
+                      {
+                        "label": "Visual content creation",
+                        "value": "Visual content creation",
+                        "q_code": "200011",
+                        "description": "For example, for use in graphic design or videos"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200016",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer64c55181-e036-4514-8177-397e462fefab",
+                          "mandatory": false
+                        }
                       },
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
+                        "value": "Not sure",
+                        "q_code": "200017"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer73d860ab-42a6-4b2a-bc2b-1ce605f6e33f",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Business is not currently using artificial intelligence technologies",
+                        "value": "Business is not currently using artificial intelligence technologies",
+                        "q_code": "200018"
                       }
                     ]
                   }
                 ]
               },
-              "page_title": "Sending goods to GB in the last year",
+              "page_title": "Current use of artificial intelligence technologies",
               "routing_rules": [
                 {
-                  "section": "End",
+                  "block": "plans-to-adopt-artificial-intelligence-technologies",
                   "when": {
-                    "in": [
+                    "==": [
                       {
-                        "identifier": "answerd123fc51-6a5c-40c8-87d0-ef0a7d2585cc",
+                        "identifier": "answer07656461-3dd5-42f6-a3b4-a4778e8ff6c0",
                         "source": "answers"
                       },
-                      ["No", "Not sure"]
+                      null
                     ]
                   }
                 },
                 {
-                  "block": "volume-of-goods-sent-to-gb"
+                  "block": "how-artificial-intelligence-technologies-are-used"
                 }
               ]
             },
             {
-              "id": "volume-of-goods-sent-to-gb",
+              "id": "how-artificial-intelligence-technologies-are-used",
               "type": "Question",
               "question": {
-                "id": "questionvolume-of-goods-sent-to-gb",
-                "title": "In September 2023, how did the volume of goods your business sent from <em>Northern Ireland to GB</em> compare with the previous calendar month?",
-                "type": "General",
+                "id": "questionhow-artificial-intelligence-technologies-are-used",
+                "title": "What does your business currently use artificial intelligence technologies for?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
+                      }
+                    ]
+                  }
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
                 "answers": [
                   {
-                    "id": "answer2d2aa725-7491-4aee-836d-884e4c7830e3",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "q_code": "369",
+                    "id": "answer6ea4ae35-9306-4681-a1a7-309a8b9e032e",
+                    "mandatory": false,
+                    "type": "Checkbox",
                     "options": [
                       {
-                        "label": "Volume increased",
-                        "value": "Volume increased"
+                        "label": "Develop a new product or service, or explore a new market",
+                        "value": "Develop a new product or service, or explore a new market",
+                        "q_code": "200021",
+                        "description": "Including forecasting and user testing"
                       },
                       {
-                        "label": "Volume stayed the same",
-                        "value": "Volume stayed the same"
+                        "label": "Image processing using machine learning",
+                        "value": "Image processing using machine learning",
+                        "q_code": "200022",
+                        "description": "For example, for facial recognition, quality control, or object detection"
                       },
                       {
-                        "label": "Volume decreased",
-                        "value": "Volume decreased"
+                        "label": "Improve business operations",
+                        "value": "Improve business operations",
+                        "q_code": "200019",
+                        "description": "For example, to increase productivity, create efficiencies or to reduce costs"
                       },
                       {
-                        "label": "Stopped sending goods to GB",
-                        "value": "Stopped sending goods to GB"
+                        "label": "Provide, or personalise, products or services to customers",
+                        "value": "Provide, or personalise, products or services to customers",
+                        "q_code": "200020"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200023",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answereda93314-c5ff-43ac-b513-45c4f3a3a233",
+                          "mandatory": false
+                        }
                       },
                       {
                         "label": "Not sure",
-                        "value": "Not sure"
-                      },
+                        "value": "Not sure",
+                        "q_code": "200024"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer21d68e42-fbdf-49de-86cc-82b758876eb1",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
                       {
                         "label": "Not applicable",
-                        "value": "Not applicable"
+                        "value": "Not applicable",
+                        "q_code": "200025"
                       }
                     ]
                   }
                 ]
               },
-              "page_title": "Volume of goods sent to GB",
+              "page_title": "How artificial intelligence technologies are used",
               "routing_rules": [
                 {
-                  "section": "End",
+                  "block": "plans-to-adopt-artificial-intelligence-technologies",
                   "when": {
-                    "in": [
+                    "==": [
                       {
-                        "identifier": "answer2d2aa725-7491-4aee-836d-884e4c7830e3",
+                        "identifier": "answer6ea4ae35-9306-4681-a1a7-309a8b9e032e",
                         "source": "answers"
                       },
-                      ["Volume stayed the same", "Not sure", "Not applicable"]
+                      null
                     ]
                   }
                 },
                 {
-                  "block": "details-about-volume-of-goods-sent-to-gb"
+                  "block": "adopting-artificial-intelligence-technologies"
                 }
               ]
             },
             {
-              "id": "details-about-volume-of-goods-sent-to-gb",
+              "id": "adopting-artificial-intelligence-technologies",
               "type": "Question",
               "question": {
-                "id": "questiondetails-about-volume-of-goods-sent-to-gb",
-                "title": "Please give more details about why the volume of goods sent from Northern Ireland to GB changed in September 2023",
-                "type": "General",
+                "id": "questionadopting-artificial-intelligence-technologies",
+                "title": "How did your business adopt these artificial intelligence technologies?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
+                      }
+                    ]
+                  }
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
                 "answers": [
                   {
-                    "id": "answer6e991fcc-9a58-4efd-a92a-9313b9779bd4",
+                    "id": "answere6aef4dc-53ca-47ff-b2b4-64590ff2d8e4",
                     "mandatory": false,
-                    "type": "TextArea",
-                    "label": "Comments",
-                    "q_code": "1850",
-                    "max_length": 2000
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Developed in-house",
+                        "value": "Developed in-house",
+                        "q_code": "200026",
+                        "description": "Fully, or by adapting existing software"
+                      },
+                      {
+                        "label": "Outsourced to external providers or third parties",
+                        "value": "Outsourced to external providers or third parties",
+                        "q_code": "200028"
+                      },
+                      {
+                        "label": "Through purchase of external software or ready-to-use",
+                        "value": "Through purchase of external software or ready-to-use",
+                        "q_code": "200027"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200029",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answerb0ea2eda-957e-49af-b5c9-3a6942015849",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "200030"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer638a4a54-5a2a-4fa2-aac0-c196f080b71e",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable",
+                        "q_code": "200031"
+                      }
+                    ]
                   }
                 ]
               },
-              "page_title": "Details about volume of goods sent to GB"
+              "page_title": "Adopting artificial intelligence technologies"
+            },
+            {
+              "id": "plans-to-adopt-artificial-intelligence-technologies",
+              "type": "Question",
+              "question": {
+                "id": "questionplans-to-adopt-artificial-intelligence-technologies",
+                "title": "Which, if any, of the following artificial intelligence technologies does your business plan to adopt within the <em>next 3 months</em>?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
+                      }
+                    ]
+                  }
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer8a335ffa-fd8d-4f8b-bc6f-ce984f12ebfe",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Autonomous vehicles",
+                        "value": "Autonomous vehicles",
+                        "q_code": "200036"
+                      },
+                      {
+                        "label": "Data processing using machine learning",
+                        "value": "Data processing using machine learning",
+                        "q_code": "200034",
+                        "description": "For example, personalisation of shopping or product recommendations, fraud prevention or cybersecurity"
+                      },
+                      {
+                        "label": "Image processing using machine learning",
+                        "value": "Image processing using machine learning",
+                        "q_code": "200035",
+                        "description": "For example, for facial recognition, quality control or object detection"
+                      },
+                      {
+                        "label": "Robotics",
+                        "value": "Robotics",
+                        "q_code": "200037",
+                        "description": "For example, for carrying goods in hospitals or warehouses"
+                      },
+                      {
+                        "label": "Text generation using Large Language Models",
+                        "value": "Text generation using Large Language Models",
+                        "q_code": "200032",
+                        "description": "For example, chatbots that interact in a conversational way and can answer complex questions, computer coding assistance, creating first drafts of papers or topic research or social media posts and public communications"
+                      },
+                      {
+                        "label": "Visual content creation",
+                        "value": "Visual content creation",
+                        "q_code": "200033",
+                        "description": "For example, for use in graphic design or videos"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200038",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer86e0f2e5-fd0b-4dae-8295-d5553c71b901",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "200039"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answere51af4fb-45fe-47de-b851-0bb36e90d022",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Business does not plan to adopt artificial intelligence technologies in the next 3 months",
+                        "value": "Business does not plan to adopt artificial intelligence technologies in the next 3 months",
+                        "q_code": "200040"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Plans to adopt artificial intelligence technologies",
+              "routing_rules": [
+                {
+                  "block": "delayed-use-of-artificial-intelligence-technologies",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answer8a335ffa-fd8d-4f8b-bc6f-ce984f12ebfe",
+                        "source": "answers"
+                      },
+                      null
+                    ]
+                  }
+                },
+                {
+                  "block": "plans-for-how-artificial-intelligence-technologies-will-be-used"
+                }
+              ]
+            },
+            {
+              "id": "plans-for-how-artificial-intelligence-technologies-will-be-used",
+              "type": "Question",
+              "question": {
+                "id": "questionplans-for-how-artificial-intelligence-technologies-will-be-used",
+                "title": "What does your business plan to adopt artificial intelligence technologies for?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
+                      }
+                    ]
+                  }
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer8b9784e7-b6cf-458f-a4c7-c74888126425",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Develop a new product or service or explore a new market",
+                        "value": "Develop a new product or service or explore a new market",
+                        "q_code": "200043",
+                        "description": "Including forecasting and user testing"
+                      },
+                      {
+                        "label": "Image processing using machine learning",
+                        "value": "Image processing using machine learning",
+                        "q_code": "200044",
+                        "description": "For example, for facial recognition, quality control or object detection"
+                      },
+                      {
+                        "label": "Improve business operations",
+                        "value": "Improve business operations",
+                        "q_code": "200041",
+                        "description": "For example, to increase productivity, create efficiencies or to reduce costs"
+                      },
+                      {
+                        "label": "Provide, or personalise, products or services to customers",
+                        "value": "Provide, or personalise, products or services to customers",
+                        "q_code": "200042"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200045",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answer91d6ee6e-f578-49ac-a37c-5cd662b5c250",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "200046"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer60f616e3-d506-453c-8f72-7dd54f2668e1",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Not applicable",
+                        "value": "Not applicable",
+                        "q_code": "200047"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Plans for how artificial intelligence technologies will be used"
+            },
+            {
+              "id": "delayed-use-of-artificial-intelligence-technologies",
+              "type": "Question",
+              "question": {
+                "id": "questiondelayed-use-of-artificial-intelligence-technologies",
+                "title": "In the <em>last 3 months</em>, which, if any, of the following factors have prevented or delayed your business in the adoption of artificial intelligence technologies?",
+                "definitions": [
+                  {
+                    "title": "What we mean by &#39;artificial intelligence technologies&#39;",
+                    "contents": [
+                      {
+                        "description": "This refers to computer programs or machines that can learn from data and perform tasks usually done by humans."
+                      }
+                    ]
+                  }
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answereb0261c7-c2db-48b2-9c04-01be5995e823",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Cost",
+                        "value": "Cost",
+                        "q_code": "200048"
+                      },
+                      {
+                        "label": "Difficulty identifying business use cases",
+                        "value": "Difficulty identifying business use cases",
+                        "q_code": "200049"
+                      },
+                      {
+                        "label": "Employee concern about any potential impact of using artificial intelligence technologies",
+                        "value": "Employee concern about any potential impact of using artificial intelligence technologies",
+                        "q_code": "200050",
+                        "description": "For example, concern about job security, safety of implementation and usage, efficiency, impacts on workload, privacy or other moral concerns"
+                      },
+                      {
+                        "label": "Level of expertise in artificial intelligence",
+                        "value": "Level of expertise in artificial intelligence",
+                        "q_code": "200051"
+                      },
+                      {
+                        "label": "Product or service availability",
+                        "value": "Product or service availability",
+                        "q_code": "200052"
+                      },
+                      {
+                        "label": "Security concerns",
+                        "value": "Security concerns",
+                        "q_code": "200053"
+                      },
+                      {
+                        "label": "Uncertainty about government regulations or industry standards",
+                        "value": "Uncertainty about government regulations or industry standards",
+                        "q_code": "200054"
+                      },
+                      {
+                        "label": "Other",
+                        "value": "Other",
+                        "q_code": "200055",
+                        "detail_answer": {
+                          "label": "Please describe",
+                          "type": "TextField",
+                          "id": "answerceaad562-0b52-4cf8-953a-ccf8d1e88793",
+                          "mandatory": false
+                        }
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "Not sure",
+                        "q_code": "200056"
+                      },
+                      {
+                        "label": "Business has not attempted to use artificial intelligence technologies",
+                        "value": "Business has not attempted to use artificial intelligence technologies",
+                        "q_code": "200057"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answerb8a1784b-8138-4500-a51d-626dd8e2b15d",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Business has not been prevented or experienced delays in the adoption of artificial intelligence technologies",
+                        "value": "Business has not been prevented or experienced delays in the adoption of artificial intelligence technologies",
+                        "q_code": "200058"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Delayed use of artificial intelligence technologies"
             }
           ]
         }
@@ -2324,6 +2045,7 @@
       "title": "Workforce trends",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Workforce trends section",
         "collapsible": false
       },
       "show_on_hub": true,
@@ -2342,190 +2064,17 @@
                     "description": "This section asks for information about your workforce such as:"
                   },
                   {
-                    "list": [
-                      "skills in high demand and support or training in skills",
-                      "changes in hourly wages",
-                      "worker shortages"
-                    ]
+                    "list": ["wages", "worker shortages"]
                   }
                 ]
               }
-            },
-            {
-              "id": "skills-in-high-demand",
-              "type": "Question",
-              "question": {
-                "id": "questionskills-in-high-demand",
-                "title": {
-                  "text": "Which, if any, of the following skills has {ru_name} had a <em>high demand</em> for in the last 12 months?",
-                  "placeholders": [
-                    {
-                      "placeholder": "ru_name",
-                      "value": {
-                        "source": "metadata",
-                        "identifier": "ru_name"
-                      }
-                    }
-                  ]
-                },
-                "type": "MutuallyExclusive",
-                "mandatory": true,
-                "answers": [
-                  {
-                    "id": "answerfb22574e-82b1-429b-83c4-09cc42c7ce28",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Advanced digital skills",
-                        "value": "Advanced digital skills",
-                        "q_code": "501",
-                        "description": "For example, animation, data science and programming skills"
-                      },
-                      {
-                        "label": "Basic digital skills",
-                        "value": "Basic digital skills",
-                        "q_code": "502",
-                        "description": "For example, emails, office based applications, using the internet and video conferencing"
-                      },
-                      {
-                        "label": "Customer service skills",
-                        "value": "Customer service skills",
-                        "q_code": "503",
-                        "description": "For example, skills used in retail and hospitality"
-                      },
-                      {
-                        "label": "Management or leadership skills",
-                        "value": "Management or leadership skills",
-                        "q_code": "504",
-                        "description": "For example, influencing others, managing staff and setting objectives"
-                      },
-                      {
-                        "label": "Manual skills",
-                        "value": "Manual skills",
-                        "q_code": "506",
-                        "description": "For example, skills used in construction and industrial trades"
-                      },
-                      {
-                        "label": "Transferable skills",
-                        "value": "Transferable skills",
-                        "q_code": "505",
-                        "description": "For example, managing your own time, task prioritisation and teamwork"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "q_code": "509",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answere93a2bcd-87c3-4cfb-b5e3-5674cd0d82ac",
-                          "mandatory": false
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "answer3b46b35a-46e8-4ecd-92bf-9fab8f9e5148",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "None of the above",
-                        "value": "None of the above",
-                        "q_code": "500"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Skills in high demand"
-            },
-            {
-              "id": "support-or-training-in-skills",
-              "type": "Question",
-              "question": {
-                "id": "questionsupport-or-training-in-skills",
-                "title": "Which, if any, of the following skills does your workforce require <em>extra support</em> or training in?",
-                "type": "MutuallyExclusive",
-                "mandatory": true,
-                "answers": [
-                  {
-                    "id": "answer1603770a-9e3d-418f-b1e0-6ac91ca9876f",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "Advanced digital skills",
-                        "value": "Advanced digital skills",
-                        "q_code": "511",
-                        "description": "For example, animation, data science and programming skills"
-                      },
-                      {
-                        "label": "Basic digital skills",
-                        "value": "Basic digital skills",
-                        "q_code": "512",
-                        "description": "For example, emails, office based applications, using the internet and video conferencing"
-                      },
-                      {
-                        "label": "Customer service skills",
-                        "value": "Customer service skills",
-                        "q_code": "513",
-                        "description": "For example, skills used in retail and hospitality"
-                      },
-                      {
-                        "label": "Management or leadership skills",
-                        "value": "Management or leadership skills",
-                        "q_code": "514",
-                        "description": "For example, influencing others, managing staff and setting objectives"
-                      },
-                      {
-                        "label": "Manual skills",
-                        "value": "Manual skills",
-                        "q_code": "516",
-                        "description": "For example, skills used in construction and industrial trades"
-                      },
-                      {
-                        "label": "Transferable skills",
-                        "value": "Transferable skills",
-                        "q_code": "515",
-                        "description": "For example, managing your own time, task prioritisation and teamwork"
-                      },
-                      {
-                        "label": "Other",
-                        "value": "Other",
-                        "q_code": "519",
-                        "detail_answer": {
-                          "label": "Please describe",
-                          "type": "TextField",
-                          "id": "answerb0c6abaf-78fc-45a1-857b-82833b0bf57a",
-                          "mandatory": false
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "id": "answerdad46c96-6acd-40f4-b91f-69bb6c9a95d6",
-                    "mandatory": false,
-                    "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "None of the above",
-                        "value": "None of the above",
-                        "q_code": "510"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Support or training in skills"
             },
             {
               "id": "changes-in-employee-wages",
               "type": "Question",
               "question": {
                 "id": "questionchanges-in-employee-wages",
-                "title": "On average, how did employees&#x2019; hourly wages in September 2023 compare with employees&#x2019; hourly wages in the previous calendar month?",
+                "title": "On average, how did employees&#x2019; hourly wages in November 2023 compare with employees&#x2019; hourly wages in the previous calendar month?",
                 "description": [
                   "<p>If you are a sole trader and do not have a workforce, please base your answers on your own working arrangement.</p>"
                 ],
@@ -2627,24 +2176,24 @@
                     "type": "Checkbox",
                     "options": [
                       {
-                        "label": "Business had to pause trading entirely",
-                        "value": "Business had to pause trading entirely",
-                        "q_code": "3162"
-                      },
-                      {
-                        "label": "Business had to recruit temporary workers",
-                        "value": "Business had to recruit temporary workers",
-                        "q_code": "3164"
-                      },
-                      {
                         "label": "Employees working increased hours",
                         "value": "Employees working increased hours",
                         "q_code": "3161"
                       },
                       {
+                        "label": "Business had to pause trading entirely",
+                        "value": "Business had to pause trading entirely",
+                        "q_code": "3162"
+                      },
+                      {
                         "label": "Had to pause trading of some of the business",
                         "value": "Had to pause trading of some of the business",
                         "q_code": "3163"
+                      },
+                      {
+                        "label": "Business had to recruit temporary workers",
+                        "value": "Business had to recruit temporary workers",
+                        "q_code": "3164"
                       },
                       {
                         "label": "Unable to meet demands",
@@ -2706,7 +2255,7 @@
       }
     },
     {
-      "id": "c74bb7c3-df4d-4721-a9a3-30cbeba8839a",
+      "id": "647bae92-4e5f-41ff-8189-fb4a9ff1585d",
       "title": "Industrial action",
       "summary": {
         "show_on_completion": false,
@@ -2716,7 +2265,7 @@
       "show_on_hub": true,
       "groups": [
         {
-          "id": "groupc74bb7c3-df4d-4721-a9a3-30cbeba8839a",
+          "id": "group647bae92-4e5f-41ff-8189-fb4a9ff1585d",
           "blocks": [
             {
               "type": "Interstitial",
@@ -2737,7 +2286,7 @@
               "question": {
                 "id": "questionexperience-of-industrial-action",
                 "title": {
-                  "text": "Was {ru_name} affected by industrial action in September 2023?",
+                  "text": "Was {ru_name} affected by industrial action in November 2023?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2751,7 +2300,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Include<strong> </strong>direct or indirect impact of industrial action to your business"
+                      "description": "<strong>Include</strong> direct or indirect impact of industrial action to your business"
                     }
                   ]
                 },
@@ -2768,7 +2317,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answere6cf082f-76b6-4edb-bdf7-3dae667a379a",
+                    "id": "answer10ee5c43-5c9c-47b9-a30c-f58ed59cf120",
                     "mandatory": true,
                     "type": "Radio",
                     "q_code": "1540",
@@ -2800,19 +2349,24 @@
               "page_title": "Experience of industrial action",
               "routing_rules": [
                 {
-                  "block": "effect-of-industrial-action",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answere6cf082f-76b6-4edb-bdf7-3dae667a379a",
+                        "identifier": "answer10ee5c43-5c9c-47b9-a30c-f58ed59cf120",
                         "source": "answers"
                       },
-                      ["Yes, the business was affected"]
+                      [
+                        "No, the business was not affected",
+                        "Not sure",
+                        "Not applicable",
+                        "Prefer not to say"
+                      ]
                     ]
                   }
                 },
                 {
-                  "section": "End"
+                  "block": "effect-of-industrial-action"
                 }
               ]
             },
@@ -2821,11 +2375,11 @@
               "type": "Question",
               "question": {
                 "id": "questioneffect-of-industrial-action",
-                "title": "How was your business affected by industrial action in September 2023?",
+                "title": "How was your business affected by industrial action in November 2023?",
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Include direct or indirect impact of industrial action to your business"
+                      "description": "<strong>Include</strong> direct or indirect impact of industrial action to your business"
                     }
                   ]
                 },
@@ -2833,7 +2387,7 @@
                 "mandatory": true,
                 "answers": [
                   {
-                    "id": "answere82c233b-2e7e-42c2-9e50-c13b3c7175f8",
+                    "id": "answerdf5cd57a-3b6f-4c9c-87dc-83ef54d639df",
                     "mandatory": false,
                     "type": "Checkbox",
                     "options": [
@@ -2874,14 +2428,14 @@
                         "detail_answer": {
                           "label": "Please describe",
                           "type": "TextField",
-                          "id": "answer7f3cc8cb-4daf-4451-93e3-091de0d9ecf6",
+                          "id": "answer1bb028a6-7a10-414a-8dd1-a6534a144721",
                           "mandatory": false
                         }
                       }
                     ]
                   },
                   {
-                    "id": "answerb5b69aef-a0c9-4f36-82ec-c760b602a02e",
+                    "id": "answer3cd8d145-21ff-4d87-aa08-0276c65ce853",
                     "mandatory": false,
                     "type": "Checkbox",
                     "options": [
@@ -2921,6 +2475,7 @@
       "title": "Comments",
       "summary": {
         "show_on_completion": false,
+        "page_title": "Comments section",
         "collapsible": false
       },
       "show_on_hub": true,
