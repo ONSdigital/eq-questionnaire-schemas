@@ -597,11 +597,23 @@
                           },
                           {
                             "placeholder": "localunits_address",
-                            "value": {
-                              "source": "supplementary_data",
-                              "identifier": "local-units",
-                              "selectors": ["address"]
-                            }
+                            "transforms": [
+                              {
+                                "arguments": {
+                                  "delimiter": ", ",
+                                  "list_to_concatenate": [
+                                    {
+                                      "source": "supplementary_data",
+                                      "identifier": "local-units",
+                                      "selectors": [
+                                        "address"
+                                      ]
+                                    }
+                                  ]
+                                },
+                                "transform": "concatenate_list"
+                              }
+                            ]
                           }
                         ]
                       }
