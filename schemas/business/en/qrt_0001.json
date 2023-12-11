@@ -601,11 +601,13 @@
                               {
                                 "transform": "concatenate_list",
                                 "arguments": {
-                                  "list_to_concatenate": {
-                                    "source": "supplementary_data",
-                                    "identifier": "local-units",
-                                    "selectors": ["address"]
-                                  },
+                                  "list_to_concatenate": [
+                                    {
+                                      "source": "supplementary_data",
+                                      "identifier": "local-units",
+                                      "selectors": ["address"]
+                                    }
+                                  ],
                                   "delimiter": ","
                                 }
                               }
