@@ -3,14 +3,15 @@
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
-  "survey_id": "074",
-  "form_type": "0002",
-  "title": "Monthly Survey of Building Materials - Bricks",
+  "preview_questions": false,
+  "survey_id": "068",
+  "form_type": "0003",
+  "title": "TEST USE ONLY Monthly Survey of Building Materials - Bricks",
   "questionnaire_flow": {
     "type": "Hub",
     "options": {
       "required_completed_sections": [
-        "section46ac2fd4-9750-4792-a58c-ec655a685668",
+        "46ac2fd4-9750-4792-a58c-ec655a685668",
         "sectionquestionnaire-introduction"
       ]
     }
@@ -26,7 +27,7 @@
           "title": "Introduction",
           "blocks": [
             {
-              "id": "introduction-block",
+              "id": "introduction",
               "type": "Introduction",
               "primary_content": [
                 {
@@ -260,7 +261,7 @@
       ]
     },
     {
-      "id": "section46ac2fd4-9750-4792-a58c-ec655a685668",
+      "id": "46ac2fd4-9750-4792-a58c-ec655a685668",
       "title": "Brick types",
       "summary": {
         "show_on_completion": false,
@@ -273,10 +274,10 @@
           "id": "group46ac2fd4-9750-4792-a58c-ec655a685668",
           "blocks": [
             {
-              "id": "block5516e6ca-ae3c-4234-a858-d45728109204",
+              "id": "brick-types-produced-and-delivered",
               "type": "Question",
               "question": {
-                "id": "question5516e6ca-ae3c-4234-a858-d45728109204",
+                "id": "questionbrick-types-produced-and-delivered",
                 "title": {
                   "text": "For the period {ref_p_start_date} to {ref_p_end_date}, which of the following bricks has {ru_name} produced and delivered?",
                   "placeholders": [
@@ -365,7 +366,7 @@
       ]
     },
     {
-      "id": "section157",
+      "id": "157",
       "title": "Details of production and delivery",
       "summary": {
         "show_on_completion": false,
@@ -378,10 +379,10 @@
           "id": "group157",
           "blocks": [
             {
-              "id": "block647",
+              "id": "production-and-delivery-for-common-bricks",
               "type": "Question",
               "question": {
-                "id": "question647",
+                "id": "questionproduction-and-delivery-for-common-bricks",
                 "title": "For the reporting period, what are the details of production and delivery for <em>common</em> bricks?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p><p>Enter a value to the nearest thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for 56,000.</p>"
@@ -459,10 +460,10 @@
               }
             },
             {
-              "id": "block37a50b72-7248-4819-8a8d-cde3c9716df7",
+              "id": "production-and-delivery-for-facing-bricks",
               "type": "Question",
               "question": {
-                "id": "question37a50b72-7248-4819-8a8d-cde3c9716df7",
+                "id": "questionproduction-and-delivery-for-facing-bricks",
                 "title": "For the reporting period, what are the details of production and delivery for <em>facing</em> bricks?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p><p>Enter a value to the nearest thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for 56,000.</p>"
@@ -540,10 +541,10 @@
               }
             },
             {
-              "id": "block08a06dd7-836b-48c4-b326-41eb27a9825a",
+              "id": "production-and-delivery-for-engineering-bricks",
               "type": "Question",
               "question": {
-                "id": "question08a06dd7-836b-48c4-b326-41eb27a9825a",
+                "id": "questionproduction-and-delivery-for-engineering-bricks",
                 "title": "For the reporting period, what are the details of production and delivery for <em>engineering</em> bricks?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p><p>Enter a value to the nearest thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for 56,000.</p>"
@@ -621,7 +622,7 @@
               }
             },
             {
-              "id": "block9d295fff-a053-489f-99c1-83cfd08dc661",
+              "id": "total-of-bricks-in-opening-stock",
               "type": "CalculatedSummary",
               "page_title": "Total of bricks in opening stock",
               "title": "We have calculated your business&#39;s total number of bricks in your <em>opening stock</em> to be %(total)s. Is this correct?",
@@ -646,7 +647,7 @@
               }
             },
             {
-              "id": "blockda1a5300-b03c-42c0-83f4-0a8e6f817a88",
+              "id": "total-of-bricks-drawn-from-kiln-or-autoclave",
               "type": "CalculatedSummary",
               "page_title": "Total of bricks drawn from kiln or autoclave",
               "title": "We have calculated your business&#39;s total number of bricks <em>drawn from kiln or autoclave</em> to be %(total)s. Is this correct?",
@@ -671,7 +672,7 @@
               }
             },
             {
-              "id": "block44d34990-11fe-46c4-a577-36368c288669",
+              "id": "total-of-bricks-delivered-to-customers",
               "type": "CalculatedSummary",
               "page_title": "Total of bricks delivered to customers",
               "title": "We have calculated your business&#39;s total number of bricks <em>delivered to customers</em> to be %(total)s. Is this correct?",
@@ -696,7 +697,7 @@
               }
             },
             {
-              "id": "blocke0bd1b13-9542-4ab9-81bd-06b74f936c76",
+              "id": "total-of-bricks-in-closing-stock",
               "type": "CalculatedSummary",
               "page_title": "Total of bricks in closing stock",
               "title": "We have calculated your business&#39;s total number of bricks in your <em>closing stock</em> to be %(total)s. Is this correct?",
@@ -721,10 +722,10 @@
               }
             },
             {
-              "id": "blockb22f49d8-c830-4d7c-b146-7a930317f54f",
+              "id": "type-of-brick",
               "type": "Question",
               "question": {
-                "id": "questionb22f49d8-c830-4d7c-b146-7a930317f54f",
+                "id": "questiontype-of-brick",
                 "title": "What type of brick does your business produce?",
                 "type": "General",
                 "answers": [
@@ -768,7 +769,7 @@
       }
     },
     {
-      "id": "section206",
+      "id": "206",
       "title": "Comments",
       "summary": {
         "show_on_completion": false,
@@ -781,10 +782,10 @@
           "id": "group206",
           "blocks": [
             {
-              "id": "block821",
+              "id": "new-works-since-your-last-return",
               "type": "Question",
               "question": {
-                "id": "question821",
+                "id": "questionnew-works-since-your-last-return",
                 "title": "Please provide details of any new works your business has brought into use since your last return",
                 "type": "General",
                 "answers": [
@@ -812,10 +813,10 @@
               }
             },
             {
-              "id": "block823",
+              "id": "further-details",
               "type": "Question",
               "question": {
-                "id": "question823",
+                "id": "questionfurther-details",
                 "title": "Please provide any further details that will help us understand your figures and tell an industry story",
                 "description": [
                   "<p>You have nearly finished. Make sure you continue to the next page and select submit answers at the bottom.</p>"
@@ -865,7 +866,7 @@
       ]
     }
   ],
-  "theme": "dbt",
+  "theme": "dbt-dsit",
   "navigation": {
     "visible": true
   },
@@ -876,8 +877,7 @@
     },
     {
       "name": "trad_as",
-      "type": "string",
-      "optional": true
+      "type": "string"
     },
     {
       "name": "period_id",
@@ -889,6 +889,10 @@
     },
     {
       "name": "ref_p_end_date",
+      "type": "date"
+    },
+    {
+      "name": "employmentDate",
       "type": "date"
     },
     {
