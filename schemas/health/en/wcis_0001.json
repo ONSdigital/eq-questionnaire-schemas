@@ -7529,13 +7529,13 @@
               }
             },
             {
-              "id": "nhs-questions-intro",
+              "id": "nhs-questions-introduction",
               "type": "Question",
               "question": {
-                "id": "questionnhs-questions-intro",
-                "title": "The next few questions are being asked on behalf of the National Health Service (NHS) England to help their understanding of winter pressures on the NHS",
+                "id": "questionnhs-questions-introduction",
+                "title": "Accessing GP and National Health Service (NHS) services in England",
                 "description": [
-                  "<p>The questions ask about your experience accessing GP care and waiting for NHS treatment. There are a maximum of 8 questions, which will take around 3 minutes to complete.</p><p>Please note, we will not share your data with NHS England. We will only share the statistics produced on groups of respondents.</p>"
+                  "<p><em>You have now completed all your questions for the Winter CIS.</em></p><p>The next few questions are voluntary. They ask about your experience accessing GP care and waiting for NHS treatment in England. They should take no longer than 2 to 3 minutes to complete.</p><p><em>These questions are separate from the Winter CIS</em>, with new privacy information. Please read the <a href=\"https://www.ons.gov.uk/surveys/informationforhouseholdsandindividuals/householdandindividualsurveys/wintercoronaviruscovid19infectionstudy/dataprivacyandprotection#accessing-gp-and-national-health-service-nhs-services-in-england-section\"target=\"_blank\"rel=\"noopener noreferrer\">data privacy and protection information</a> for these questions.</p><p>Your data collected from these questions will not be shared outside of ONS.</p><p>The questions are about access to these services in England only. <em>If you live in Scotland, please select &quot;No&quot;.</em></p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -7557,7 +7557,7 @@
                   }
                 ]
               },
-              "page_title": "NHS Questions - intro",
+              "page_title": "NHS Questions - introduction",
               "routing_rules": [
                 {
                   "block": "nhs-questions-gp-contact",
@@ -7586,18 +7586,7 @@
                 {
                   "block": "nhs-questions-gp-contact"
                 }
-              ],
-              "skip_conditions": {
-                "when": {
-                  "in": [
-                    {
-                      "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                      "source": "answers"
-                    },
-                    ["Yes", "No"]
-                  ]
-                }
-              }
+              ]
             },
             {
               "id": "nhs-questions-gp-contact",
@@ -7606,7 +7595,7 @@
                 "id": "questionnhs-questions-gp-contact",
                 "title": "In the past month, have you tried to contact a GP practice for yourself or someone else?&#x202F;&#x202F;&#x202F;",
                 "description": [
-                  "<p>This could be in person, on the phone or online.&#x202F;&#x202F; </p><p></p>"
+                  "<p>This could be in person, on the phone or online.</p><p>By GP we mean General Practitioner Medical Doctor.</p><p></p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -7655,25 +7644,12 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -7746,25 +7722,12 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -7824,25 +7787,12 @@
               "page_title": "NHS questions - How GP contact was made",
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -7895,7 +7845,7 @@
               "page_title": "NHS question - GP access easy or difficult",
               "routing_rules": [
                 {
-                  "block": "nhs-questions-gp",
+                  "block": "nhs-questions-gp-overall-experience",
                   "when": {
                     "in": [
                       {
@@ -7932,25 +7882,12 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -8027,34 +7964,21 @@
               "page_title": "NHS questions - GP contact next steps",
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
             },
             {
-              "id": "nhs-questions-gp",
+              "id": "nhs-questions-gp-overall-experience",
               "type": "Question",
               "question": {
-                "id": "questionnhs-questions-gp",
+                "id": "questionnhs-questions-gp-overall-experience",
                 "title": "Overall, how would you describe your experience of the GP practice?&#x202F;",
                 "type": "General",
                 "answers": [
@@ -8095,28 +8019,15 @@
                   }
                 ]
               },
-              "page_title": "NHS questions - GP",
+              "page_title": "NHS questions - GP overall experience",
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -8174,25 +8085,12 @@
               ],
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
@@ -8238,8 +8136,8 @@
                         "value": "More than 18 months"
                       },
                       {
-                        "label": "Not sure",
-                        "value": "Not sure"
+                        "label": "Do not know",
+                        "value": "Do not know"
                       },
                       {
                         "label": "Prefer not to say",
@@ -8252,25 +8150,12 @@
               "page_title": "NHS questions - waiting for hospital appointment",
               "skip_conditions": {
                 "when": {
-                  "or": [
+                  "in": [
                     {
-                      "in": [
-                        {
-                          "identifier": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
-                          "source": "answers"
-                        },
-                        ["Yes", "No"]
-                      ]
+                      "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
+                      "source": "answers"
                     },
-                    {
-                      "in": [
-                        {
-                          "identifier": "answer7cd6799e-4efd-4991-83c6-280a2729a21e",
-                          "source": "answers"
-                        },
-                        ["No"]
-                      ]
-                    }
+                    ["No"]
                   ]
                 }
               }
