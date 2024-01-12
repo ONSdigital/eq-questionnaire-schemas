@@ -53,7 +53,7 @@
                     "id": "answerc1142b7b-d9db-4b77-b605-de63593671a5",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-INT-003",
+                    "q_code": "WCIS-FUP-INT-003  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -112,7 +112,7 @@
                     "id": "answerc7cd3ea1-cbe3-4132-acd0-5e6fda4773dd",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-INT-004",
+                    "q_code": "WCIS-FUP-INT-004  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -221,10 +221,13 @@
                 "title": "Your test results",
                 "contents": [
                   {
-                    "description": "This section will ask you about the follow-up lateral flow tests you have taken."
+                    "description": "<strong>This section will ask about all your follow-up lateral flow test results. </strong>"
                   },
                   {
                     "description": "Please take a lateral flow test every other day until you have two negative test results in a row."
+                  },
+                  {
+                    "description": "<strong>Only move onto the symptoms section after you have entered all your follow-up lateral flow test results.</strong>"
                   },
                   {
                     "description": {
@@ -336,9 +339,9 @@
               "type": "Question",
               "question": {
                 "id": "questionfirst-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your first follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your first follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire. </p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -395,10 +398,10 @@
               "type": "Question",
               "question": {
                 "id": "questionfirst-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
-                "title": "Thank you for letting us know about your first follow up lateral flow test",
+                "title": "Thank you for letting us know about your first follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &quot;Report next test result&quot;</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire using &quot;Save and exit survey&quot; at the top of this page. You will return to this page when you next access the questionnaire to enter your next test result.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -427,12 +430,13 @@
                     "q_code": "WCIS-FUP-LF1-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -448,7 +452,7 @@
                         "identifier": "answerc8313143-4463-42ce-ab98-9e76dd470cd1",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -472,7 +476,7 @@
                     "id": "answer4894bfec-cb22-4dec-a53f-935a74556658",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF2-001",
+                    "q_code": "WCIS-FUP-LF2-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -547,9 +551,9 @@
               "type": "Question",
               "question": {
                 "id": "questionsecond-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your second follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your second follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -636,10 +640,10 @@
               "type": "Question",
               "question": {
                 "id": "questionsecond-follow-up-lateral-flow-test-thank-you-winter-cis-follow-up",
-                "title": "Thank you for letting us know about your second follow up lateral flow test",
+                "title": "Thank you for letting us know about your second follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -668,12 +672,13 @@
                     "q_code": "WCIS-FUP-LF2-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -689,7 +694,7 @@
                         "identifier": "answere3880add-3ee0-4f23-aa3c-aa050f778cff",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -788,9 +793,9 @@
               "type": "Question",
               "question": {
                 "id": "questionthird-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your third follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your third follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -880,7 +885,7 @@
                 "title": "Thank you for letting us know about your third follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -909,12 +914,13 @@
                     "q_code": "WCIS-FUP-LF3-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -930,7 +936,7 @@
                         "identifier": "answer953d5336-86de-4c01-a0d7-791af14ac00b",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -954,7 +960,7 @@
                     "id": "answer69bfb93b-4e14-406f-90e2-56fe1943536d",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF4-001",
+                    "q_code": "WCIS-FUP-LF4-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -1029,9 +1035,9 @@
               "type": "Question",
               "question": {
                 "id": "questionfourth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your fourth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your fourth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1121,7 +1127,7 @@
                 "title": "Thank you for letting us know about your fourth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test </em>result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -1150,12 +1156,13 @@
                     "q_code": "WCIS-FUP-LF4-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -1171,7 +1178,7 @@
                         "identifier": "answer0eae104c-0377-45ac-858e-6a61bca7c1f3",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -1195,7 +1202,7 @@
                     "id": "answercf588823-ef1d-4c5f-aabb-1c38d4ec13b9",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF5-001",
+                    "q_code": "WCIS-FUP-LF5-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -1270,9 +1277,9 @@
               "type": "Question",
               "question": {
                 "id": "questionfifth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your fifth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your fifth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1362,7 +1369,7 @@
                 "title": "Thank you for letting us know about your fifth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -1391,12 +1398,13 @@
                     "q_code": "WCIS-FUP-LF5-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -1412,7 +1420,7 @@
                         "identifier": "answer9c198311-13e0-4c36-ac39-19b2a3b9e23e",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -1436,7 +1444,7 @@
                     "id": "answer67e5f3dc-0b3a-4553-b4b9-5b49fd533ae5",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF6-001",
+                    "q_code": "WCIS-FUP-LF6-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -1511,9 +1519,9 @@
               "type": "Question",
               "question": {
                 "id": "questionsixth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your sixth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your sixth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1603,7 +1611,7 @@
                 "title": "Thank you for letting us know about your sixth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test result</em>, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -1632,12 +1640,13 @@
                     "q_code": "WCIS-FUP-LF6-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -1653,7 +1662,7 @@
                         "identifier": "answer4201f837-62aa-4745-99bf-9cb7a6ded4a2",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -1677,7 +1686,7 @@
                     "id": "answer68f6262f-639b-4037-8e74-f627ebd2884c",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF7-001",
+                    "q_code": "WCIS-FUP-LF7-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -1752,9 +1761,9 @@
               "type": "Question",
               "question": {
                 "id": "questionseventh-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your seventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your seventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -1844,7 +1853,7 @@
                 "title": "Thank you for letting us know about your seventh follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -1873,12 +1882,13 @@
                     "q_code": "WCIS-FUP-LF7-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -1894,7 +1904,7 @@
                         "identifier": "answer54ab20d3-2630-423d-8724-2084371c2e01",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -1918,7 +1928,7 @@
                     "id": "answer0ff2bbb3-941e-41b4-8cd2-4fb6193c099b",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF8-001",
+                    "q_code": "WCIS-FUP-LF8-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -1993,9 +2003,9 @@
               "type": "Question",
               "question": {
                 "id": "questioneighth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your eighth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your eighth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -2085,7 +2095,7 @@
                 "title": "Thank you for letting us know about your eighth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to<em> save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -2114,12 +2124,13 @@
                     "q_code": "WCIS-FUP-LF8-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -2135,7 +2146,7 @@
                         "identifier": "answerd4aad2ab-3333-47de-939d-ef038763671e",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -2159,7 +2170,7 @@
                     "id": "answer1f39659b-b454-4993-a838-0c1abfd8259c",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF9-001",
+                    "q_code": "WCIS-FUP-LF9-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -2234,9 +2245,9 @@
               "type": "Question",
               "question": {
                 "id": "questionninth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your ninth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your ninth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -2326,7 +2337,7 @@
                 "title": "Thank you for letting us know about your ninth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test </em>result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -2355,12 +2366,13 @@
                     "q_code": "WCIS-FUP-LF9-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -2376,7 +2388,7 @@
                         "identifier": "answer5cb03e8f-f3cb-4f58-9dee-493ea4cb72f7",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -2400,7 +2412,7 @@
                     "id": "answerc35025b4-747e-4de2-8271-756c4742444b",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF10-001",
+                    "q_code": "WCIS-FUP-LF10-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -2475,9 +2487,9 @@
               "type": "Question",
               "question": {
                 "id": "questiontenth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your tenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your tenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -2567,7 +2579,7 @@
                 "title": "Thank you for letting us know about your tenth follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -2596,12 +2608,13 @@
                     "q_code": "WCIS-FUP-LF10-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -2617,7 +2630,7 @@
                         "identifier": "answer22f5f8dc-3a30-4c51-80db-ff7b0d72e9cf",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -2641,7 +2654,7 @@
                     "id": "answera57858c0-1912-4f6e-b0ae-0c7b7098fa72",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF11-001",
+                    "q_code": "WCIS-FUP-LF11-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -2716,9 +2729,9 @@
               "type": "Question",
               "question": {
                 "id": "questioneleventh-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your eleventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your eleventh follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -2808,7 +2821,7 @@
                 "title": "Thank you for letting us know about your eleventh follow-up lateral flow test",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to <em>report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report another follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -2837,12 +2850,13 @@
                     "q_code": "WCIS-FUP-LF11-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -2858,7 +2872,7 @@
                         "identifier": "answer3b89b746-0ec9-4f3e-8e98-4d180411b13e",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -2882,7 +2896,7 @@
                     "id": "answerb56430b8-d91e-469b-82c3-244bc08ab925",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF12-001",
+                    "q_code": "WCIS-FUP-LF12-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -2957,9 +2971,9 @@
               "type": "Question",
               "question": {
                 "id": "questiontwelfth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your twelfth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your twelfth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -3049,7 +3063,7 @@
                 "title": "Thank you for letting us know about your twelfth follow-up lateral flow test.",
                 "description": [
                   {
-                    "text": "<p>- If you want to <em>save and exit until you take your next lateral flow test</em>, click &quot;Save and exit survey&quot; at the top right-hand corner of this page. You will then return to this page when you next access the questionnaire.</p><p>- If you need to<em> report your next lateral flow test result</em>, please select &#x201C;Report another test result&#x201D;.</p><p>- If you need to submit because your <em>testing window is closing</em> or you have <em>run out of useable lateral flow tests</em>, please select &quot;Continue to symptoms questions&quot;.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "text": "<p><em>Please keep testing until you have two negative test results in a row.</em></p><p>- To <em>report your next follow-up lateral flow test</em> result, please select &#x201C;Report next test result&#x201D;.</p><p>- If you have <em>not taken your next lateral flow test yet</em>, please exit the questionnaire and return when you have taken it.</p><p>Only select &quot;Continue to symptoms section&quot; if your <em>testing window is closing</em> or you have <em>run out of lateral flow tests</em>. Once you move onto the symptoms section, you cannot enter any more follow-up lateral flow test results in this questionnaire.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
                     "placeholders": [
                       {
                         "placeholder": "window_close_date",
@@ -3078,12 +3092,13 @@
                     "q_code": "WCIS-FUP-LF12-005",
                     "options": [
                       {
-                        "label": "Report another test result",
-                        "value": "Report another test result"
+                        "label": "Report next test result",
+                        "value": "Report next test result"
                       },
                       {
-                        "label": "Continue to symptoms questions",
-                        "value": "Continue to symptoms questions"
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
+                        "description": "if you have run out of tests or your testing window is closing"
                       }
                     ]
                   }
@@ -3099,7 +3114,7 @@
                         "identifier": "answer87308ecc-d446-4d20-8c53-224a9d5c425d",
                         "source": "answers"
                       },
-                      ["Continue to symptoms questions"]
+                      ["Continue to symptoms section"]
                     ]
                   }
                 },
@@ -3123,7 +3138,7 @@
                     "id": "answer7f9ad7bc-c246-4039-b839-ee378a6ae485",
                     "mandatory": false,
                     "type": "Radio",
-                    "q_code": "WCIS-FUP-LF13-001",
+                    "q_code": "WCIS-FUP-LF13-001  ",
                     "options": [
                       {
                         "label": "Yes",
@@ -3198,9 +3213,9 @@
               "type": "Question",
               "question": {
                 "id": "questionthirteenth-lateral-flow-test-symptoms-winter-cis-follow-up",
-                "title": "Did you have any symptoms on the day you took your thirteenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection?",
+                "title": "Did you have any symptoms on the day you took your thirteenth follow-up lateral flow test, that you thought were caused or made worse by the COVID-19 infection? ",
                 "description": [
-                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were once you have finished your follow-up lateral flow testing, so please keep a note of the symptoms you have experienced.</p>"
+                  "<p>Please select an answer even if this test result was negative.</p><p>We will ask you to tell us what these symptoms were after you have entered all your follow-up lateral flow test results in this questionnaire.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -3287,21 +3302,21 @@
               "type": "Question",
               "question": {
                 "id": "questionlateral-flow-tests-end-winter-cis-follow-up",
-                "title": "Thank you, you have now finished the questions about your follow-up lateral flow tests",
+                "title": "Thank you, you have now finished the questions about all your follow-up lateral flow tests",
                 "description": [
-                  "<p>Please click continue to move onto the symptoms questions.</p>"
+                  "<p>Once you move onto the symptoms questions, you will <em>not be able to return to this section to enter more follow-up lateral flow test results</em>.</p><p>If you need to enter another follow-up lateral flow test result, please click on &quot;previous&quot; at the top left of this page.</p><p>If you have entered all your follow-up lateral flow test results, please click continue to move onto the symptoms section.<br></p>"
                 ],
                 "type": "General",
                 "answers": [
                   {
                     "id": "answerbd9287a6-9002-4887-8b09-40d7c9fd11ea",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Checkbox",
                     "label": "Continue",
                     "options": [
                       {
-                        "label": "Continue",
-                        "value": "Continue",
+                        "label": "Continue to symptoms section",
+                        "value": "Continue to symptoms section",
                         "q_code": "WCIS-FUP-LFE-001"
                       }
                     ]
@@ -3337,6 +3352,30 @@
         {
           "id": "group863c3225-cfc4-479c-ad38-9cf11ccf2e9c",
           "blocks": [
+            {
+              "type": "Interstitial",
+              "id": "your-symptoms-winter-cis-follow-up",
+              "page_title": "Your symptoms - Winter CIS follow-up",
+              "content": {
+                "title": "Your symptoms",
+                "contents": [
+                  {
+                    "description": {
+                      "text": "Remember, in the following questions &quot;you&quot; refers to {first_name}.",
+                      "placeholders": [
+                        {
+                          "placeholder": "first_name",
+                          "value": {
+                            "source": "metadata",
+                            "identifier": "FIRST_NAME"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
             {
               "id": "symptoms-first-question-winter-cis-follow-up",
               "type": "Question",
@@ -3562,22 +3601,62 @@
                 "id": "questionend-page-winter-cis-follow-up",
                 "title": "Thank you, please continue to the next page to submit your questionnaire",
                 "description": [
-                  "<p>This is the end of your questionnaire. Thank you very much for taking part.</p>"
+                  {
+                    "text": "<p>This is the end of your questionnaire. Thank you very much for taking part.</p><p>Your testing window closing date for this follow-up questionnaire is {window_close_date}.</p>",
+                    "placeholders": [
+                      {
+                        "placeholder": "window_close_date",
+                        "transforms": [
+                          {
+                            "transform": "format_date",
+                            "arguments": {
+                              "date_to_format": {
+                                "source": "metadata",
+                                "identifier": "WINDOW_CLOSE_DATE"
+                              },
+                              "date_format": "d MMMM yyyy"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
                 ],
                 "type": "General",
                 "answers": [
                   {
                     "id": "answer71f58894-d397-4cc3-9774-183e1416a279",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Checkbox",
                     "label": "Tick to continue",
                     "options": [
                       {
-                        "label": "Continue",
-                        "value": "Continue",
+                        "label": "Continue to submit",
+                        "value": "Continue to submit",
                         "q_code": "WCIS-FUP-END-001"
                       }
-                    ]
+                    ],
+                    "guidance": {
+                      "show_guidance": "If you have not entered two negative lateral flow test results",
+                      "hide_guidance": "If you have not entered two negative lateral flow test results",
+                      "contents": [
+                        {
+                          "description": "If you have<strong> not had two negative lateral flow test results yet</strong>, and"
+                        },
+                        {
+                          "description": "- you still have useable lateral flow tests, and"
+                        },
+                        {
+                          "description": "- your follow up testing window is not closing yet"
+                        },
+                        {
+                          "description": "<strong>please do not submit this questionnaire</strong>."
+                        },
+                        {
+                          "description": "Continue to test every other day until you have two negative test results in a row, and wait for your follow-up reminder email. This will include a new access code. Use this to enter all your follow-up lateral flow test results and to complete and submit the follow-up questionnaire.<br>"
+                        }
+                      ]
+                    }
                   }
                 ]
               },
