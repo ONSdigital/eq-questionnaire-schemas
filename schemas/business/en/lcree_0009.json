@@ -34,14 +34,21 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {trad_as} ({ru_name})",
+                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
                     "placeholders": [
                       {
-                        "placeholder": "trad_as",
-                        "value": {
-                          "source": "metadata",
-                          "identifier": "trad_as"
-                        }
+                        "placeholder": "conditional_trad_as",
+                        "transforms": [
+                          {
+                            "arguments": {
+                              "trad_as": {
+                                "source": "metadata",
+                                "identifier": "trad_as"
+                              }
+                            },
+                            "transform": "conditional_trad_as"
+                          }
+                        ]
                       },
                       {
                         "placeholder": "ru_name",
