@@ -384,6 +384,30 @@
       "code": "WCIS-MAIN-C19-024"
     },
     {
+      "answer_id": "answer05ba2d4d-b8ac-492b-bf07-0875a95a7762",
+      "code": "WCIS-MAIN-CON-20"
+    },
+    {
+      "answer_id": "answer442c9269-4f0e-4ea0-8951-d64940b8fb60",
+      "code": "WCIS-MAIN-CON-21"
+    },
+    {
+      "answer_id": "answer9762535c-71c6-40db-b920-cbd4eb2b27fb",
+      "code": "WCIS-MAIN-CON-22"
+    },
+    {
+      "answer_id": "answer106e2909-d053-4138-ae83-149d4908f5ea",
+      "code": "WCIS-MAIN-CON-23"
+    },
+    {
+      "answer_id": "answer97b2b987-8aa2-40b3-bb6d-8982a04a1575",
+      "code": "WCIS-MAIN-CON-24"
+    },
+    {
+      "answer_id": "answer67bb343c-7414-4bbf-98b7-dde924fec5d7",
+      "code": "WCIS-MAIN-CON-25"
+    },
+    {
       "answer_id": "answerc4a54f91-f947-4cb4-b166-1cefbf3d05eb",
       "code": "WCIS-MAIN-CON-001"
     },
@@ -6451,6 +6475,445 @@
               }
             },
             {
+              "id": "illness-at-work-days-worked",
+              "type": "Question",
+              "question": {
+                "id": "questionillness-at-work-days-worked",
+                "title": "In the last 28 days, how many days did you work?",
+                "description": [
+                  "<p><em>Exclude</em> leave or days off sick you have taken in the last 28 days.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer05ba2d4d-b8ac-492b-bf07-0875a95a7762",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of days",
+                    "maximum": {
+                      "value": 28,
+                      "exclusive": false
+                    },
+                    "decimal_places": 0
+                  }
+                ]
+              },
+              "page_title": "Illness at work - days worked",
+              "routing_rules": [
+                {
+                  "block": "contact-with-other-people-been-inside-a-hospital",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answer05ba2d4d-b8ac-492b-bf07-0875a95a7762",
+                        "source": "answers"
+                      },
+                      0
+                    ]
+                  }
+                },
+                {
+                  "block": "illness-at-work-days-worked-while-sick"
+                }
+              ],
+              "skip_conditions": {
+                "when": {
+                  "or": [
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerd2413511-4309-436e-8ac3-37ff7385fc3a",
+                              "source": "answers"
+                            },
+                            [
+                              "Employed",
+                              "Self-employed",
+                              "Not in paid work. This includes being unemployed or retired or doing voluntary work"
+                            ]
+                          ]
+                        },
+                        {
+                          "==": [
+                            {
+                              "identifier": "answerf711fc7e-e672-4ff6-834d-2ecf71c14823",
+                              "source": "answers"
+                            },
+                            null
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer50fa146c-9cb0-4d69-a09d-61df4dd50f8a",
+                          "source": "answers"
+                        },
+                        [
+                          "A child below school age and not attending a nursery or pre-school or childminder",
+                          "A child below school age and attending a nursery or a pre-school or childminder",
+                          "A child aged 4 or over at school",
+                          "A child aged 4 or over at home-school"
+                        ]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answercf74f667-76fc-404a-9ae7-7e5dab63a70e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerde357b25-d593-4dba-9b42-b79ae708734c",
+                          "source": "answers"
+                        },
+                        ["No", "Prefer not to say"]
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "illness-at-work-days-worked-while-sick",
+              "type": "Question",
+              "question": {
+                "id": "questionillness-at-work-days-worked-while-sick",
+                "title": "In the last 28 days, how many days did you work while you were sick with a respiratory infection?",
+                "description": [
+                  "<p>If you cannot remember exactly, make your best guess.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer442c9269-4f0e-4ea0-8951-d64940b8fb60",
+                    "mandatory": true,
+                    "type": "Number",
+                    "label": "Number of days",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer05ba2d4d-b8ac-492b-bf07-0875a95a7762",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
+                    "decimal_places": 0
+                  }
+                ]
+              },
+              "page_title": "Illness at work - days worked while sick",
+              "routing_rules": [
+                {
+                  "block": "contact-with-other-people-been-inside-a-hospital",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answer442c9269-4f0e-4ea0-8951-d64940b8fb60",
+                        "source": "answers"
+                      },
+                      0
+                    ]
+                  }
+                },
+                {
+                  "block": "illness-at-work-days-worked-from-home"
+                }
+              ],
+              "skip_conditions": {
+                "when": {
+                  "or": [
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerd2413511-4309-436e-8ac3-37ff7385fc3a",
+                              "source": "answers"
+                            },
+                            [
+                              "Employed",
+                              "Self-employed",
+                              "Not in paid work. This includes being unemployed or retired or doing voluntary work"
+                            ]
+                          ]
+                        },
+                        {
+                          "==": [
+                            {
+                              "identifier": "answerf711fc7e-e672-4ff6-834d-2ecf71c14823",
+                              "source": "answers"
+                            },
+                            null
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer50fa146c-9cb0-4d69-a09d-61df4dd50f8a",
+                          "source": "answers"
+                        },
+                        [
+                          "A child below school age and not attending a nursery or pre-school or childminder",
+                          "A child below school age and attending a nursery or a pre-school or childminder",
+                          "A child aged 4 or over at school",
+                          "A child aged 4 or over at home-school"
+                        ]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answercf74f667-76fc-404a-9ae7-7e5dab63a70e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerde357b25-d593-4dba-9b42-b79ae708734c",
+                          "source": "answers"
+                        },
+                        ["No", "Prefer not to say"]
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "illness-at-work-days-worked-from-home",
+              "type": "Question",
+              "question": {
+                "id": "questionillness-at-work-days-worked-from-home",
+                "title": {
+                  "text": "Out of the {number_of_days} days you worked while you were sick with a respiratory infection, how many days did you work from home?",
+                  "placeholders": [
+                    {
+                      "placeholder": "number_of_days",
+                      "transforms": [
+                        {
+                          "transform": "format_number",
+                          "arguments": {
+                            "number": {
+                              "identifier": "answer442c9269-4f0e-4ea0-8951-d64940b8fb60",
+                              "source": "answers"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "description": [
+                  "<p>If you cannot remember exactly, make your best guess.</p>"
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer9762535c-71c6-40db-b920-cbd4eb2b27fb",
+                    "mandatory": false,
+                    "type": "Number",
+                    "label": "Number of days",
+                    "maximum": {
+                      "value": {
+                        "identifier": "answer442c9269-4f0e-4ea0-8951-d64940b8fb60",
+                        "source": "answers"
+                      },
+                      "exclusive": false
+                    },
+                    "decimal_places": 0
+                  },
+                  {
+                    "id": "answer106e2909-d053-4138-ae83-149d4908f5ea",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Work from home not possible for my job",
+                        "value": "Work from home not possible for my job"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Illness at work - days worked from home",
+              "skip_conditions": {
+                "when": {
+                  "or": [
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerd2413511-4309-436e-8ac3-37ff7385fc3a",
+                              "source": "answers"
+                            },
+                            [
+                              "Employed",
+                              "Self-employed",
+                              "Not in paid work. This includes being unemployed or retired or doing voluntary work"
+                            ]
+                          ]
+                        },
+                        {
+                          "==": [
+                            {
+                              "identifier": "answerf711fc7e-e672-4ff6-834d-2ecf71c14823",
+                              "source": "answers"
+                            },
+                            null
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer50fa146c-9cb0-4d69-a09d-61df4dd50f8a",
+                          "source": "answers"
+                        },
+                        [
+                          "A child below school age and not attending a nursery or pre-school or childminder",
+                          "A child below school age and attending a nursery or a pre-school or childminder",
+                          "A child aged 4 or over at school",
+                          "A child aged 4 or over at home-school"
+                        ]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answercf74f667-76fc-404a-9ae7-7e5dab63a70e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerde357b25-d593-4dba-9b42-b79ae708734c",
+                          "source": "answers"
+                        },
+                        ["No", "Prefer not to say"]
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "id": "illness-at-work-ability-to-complete-tasks",
+              "type": "Question",
+              "question": {
+                "id": "questionillness-at-work-ability-to-complete-tasks",
+                "title": "On a scale where 0 is &#x201C;not at all&#x201D; and 10 is &#x201C;as usual&#x201D;, how well were you able to complete your work tasks when you were sick with a respiratory infection?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer97b2b987-8aa2-40b3-bb6d-8982a04a1575",
+                    "mandatory": false,
+                    "type": "Number",
+                    "label": "Please enter a number from 0 to 10 in the box below",
+                    "maximum": {
+                      "value": 10,
+                      "exclusive": false
+                    },
+                    "decimal_places": 0
+                  },
+                  {
+                    "id": "answer67bb343c-7414-4bbf-98b7-dde924fec5d7",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Do not know",
+                        "value": "Do not know"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Illness at work - ability to complete tasks",
+              "skip_conditions": {
+                "when": {
+                  "or": [
+                    {
+                      "and": [
+                        {
+                          "in": [
+                            {
+                              "identifier": "answerd2413511-4309-436e-8ac3-37ff7385fc3a",
+                              "source": "answers"
+                            },
+                            [
+                              "Employed",
+                              "Self-employed",
+                              "Not in paid work. This includes being unemployed or retired or doing voluntary work"
+                            ]
+                          ]
+                        },
+                        {
+                          "==": [
+                            {
+                              "identifier": "answerf711fc7e-e672-4ff6-834d-2ecf71c14823",
+                              "source": "answers"
+                            },
+                            null
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answer50fa146c-9cb0-4d69-a09d-61df4dd50f8a",
+                          "source": "answers"
+                        },
+                        [
+                          "A child below school age and not attending a nursery or pre-school or childminder",
+                          "A child below school age and attending a nursery or a pre-school or childminder",
+                          "A child aged 4 or over at school",
+                          "A child aged 4 or over at home-school"
+                        ]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answercf74f667-76fc-404a-9ae7-7e5dab63a70e",
+                          "source": "answers"
+                        },
+                        ["No"]
+                      ]
+                    },
+                    {
+                      "in": [
+                        {
+                          "identifier": "answerde357b25-d593-4dba-9b42-b79ae708734c",
+                          "source": "answers"
+                        },
+                        ["No", "Prefer not to say"]
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            {
               "id": "contact-with-other-people-been-inside-a-hospital",
               "type": "Question",
               "question": {
@@ -7535,7 +7998,7 @@
                 "id": "questionnhs-questions-introduction",
                 "title": "Accessing GP and National Health Service (NHS) services in England",
                 "description": [
-                  "<p><em>You have now completed all your questions for the Winter CIS.</em></p><p>The next few questions are voluntary. They ask about your experience accessing GP care and waiting for NHS treatment in England. They should take no longer than 2 to 3 minutes to complete.</p><p><em>These questions are separate from the Winter CIS</em>, with new privacy information. Please read the <a href=\"https://www.ons.gov.uk/surveys/informationforhouseholdsandindividuals/householdandindividualsurveys/wintercoronaviruscovid19infectionstudy/dataprivacyandprotection#accessing-gp-and-national-health-service-nhs-services-in-england-section\"target=\"_blank\"rel=\"noopener noreferrer\">data privacy and protection information</a> for these questions.</p><p>Your data collected from these questions will not be shared outside of ONS.</p><p>The questions are about access to these services in England only. <em>If you live in Scotland, please select &quot;No&quot;.</em></p>"
+                  "<p><em>You have now completed all your questions for the Winter CIS.</em></p><p>The next few questions are voluntary. They ask about your experience accessing GP care and waiting for NHS treatment in England. They should take no longer than 2 to 3 minutes to complete.</p><p><em>These questions are separate from the Winter CIS</em>, with new privacy information. Please read the <a href=\"https://www.ons.gov.uk/surveys/informationforhouseholdsandindividuals/householdandindividualsurveys/wintercoronaviruscovid19infectionstudy/dataprivacyandprotection#accessing-gp-and-national-health-service-nhs-services-in-england-section\" target=\"_blank\" rel=\"noopener noreferrer\">data privacy and protection information</a> for these questions.</p><p>Your data collected from these questions will not be shared outside of ONS.</p><p>The questions are about access to these services in England only. <em>If you live in Scotland, please select &quot;No&quot;.</em></p>"
                 ],
                 "type": "General",
                 "answers": [
