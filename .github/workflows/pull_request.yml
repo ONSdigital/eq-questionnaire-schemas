@@ -1,6 +1,6 @@
 name: PR
 
-on: 
+on:
   pull_request:
     branches:
       - main
@@ -9,7 +9,7 @@ jobs:
   lint:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v4
@@ -37,7 +37,7 @@ jobs:
   validate-schemas:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v4
@@ -60,7 +60,7 @@ jobs:
       - name: Install virtual environment
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
         run: poetry install
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Spin up validator
         run: make run-validator
       - name: Validate schemas
@@ -68,7 +68,7 @@ jobs:
   test-translation-templates:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
       - uses: actions/setup-python@v4
