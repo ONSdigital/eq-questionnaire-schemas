@@ -1411,19 +1411,11 @@
           "placeholders": [
             {
               "placeholder": "localunits_name",
-              "transforms": [
-                {
-                  "transform": "concatenate_list",
-                  "arguments": {
-                    "list_to_concatenate": {
-                      "identifier": "local-units",
-                      "source": "supplementary_data",
-                      "selectors": ["name"]
-                    },
-                    "delimiter": ", "
-                  }
-                }
-              ]
+              "value": {
+                "source": "supplementary_data",
+                "identifier": "local-units",
+                "selectors": ["name"]
+              }
             },
             {
               "placeholder": "localunits_address",
@@ -1431,11 +1423,13 @@
                 {
                   "transform": "concatenate_list",
                   "arguments": {
-                    "list_to_concatenate": {
-                      "identifier": "local-units",
-                      "source": "supplementary_data",
-                      "selectors": ["address"]
-                    },
+                    "list_to_concatenate": [
+                      {
+                        "source": "supplementary_data",
+                        "identifier": "local-units",
+                        "selectors": ["address"]
+                      }
+                    ],
                     "delimiter": ", "
                   }
                 }
@@ -1490,35 +1484,19 @@
                   "placeholders": [
                     {
                       "placeholder": "localunits_name",
-                      "transforms": [
-                        {
-                          "transform": "concatenate_list",
-                          "arguments": {
-                            "list_to_concatenate": {
-                              "identifier": "local-units",
-                              "source": "supplementary_data",
-                              "selectors": ["name"]
-                            },
-                            "delimiter": ", "
-                          }
-                        }
-                      ]
+                      "value": {
+                        "source": "supplementary_data",
+                        "identifier": "local-units",
+                        "selectors": ["name"]
+                      }
                     },
                     {
                       "placeholder": "localunits_tradingname",
-                      "transforms": [
-                        {
-                          "transform": "concatenate_list",
-                          "arguments": {
-                            "list_to_concatenate": {
-                              "identifier": "local-units",
-                              "source": "supplementary_data",
-                              "selectors": ["trading_name"]
-                            },
-                            "delimiter": ", "
-                          }
-                        }
-                      ]
+                      "value": {
+                        "source": "supplementary_data",
+                        "identifier": "local-units",
+                        "selectors": ["trading_name"]
+                      }
                     }
                   ]
                 },
@@ -1575,19 +1553,11 @@
                     "placeholders": [
                       {
                         "placeholder": "localunits_name",
-                        "transforms": [
-                          {
-                            "transform": "concatenate_list",
-                            "arguments": {
-                              "list_to_concatenate": {
-                                "identifier": "local-units",
-                                "source": "supplementary_data",
-                                "selectors": ["name"]
-                              },
-                              "delimiter": ", "
-                            }
-                          }
-                        ]
+                        "value": {
+                          "source": "supplementary_data",
+                          "identifier": "local-units",
+                          "selectors": ["name"]
+                        }
                       }
                     ]
                   }
@@ -1629,11 +1599,13 @@
                         {
                           "transform": "concatenate_list",
                           "arguments": {
-                            "list_to_concatenate": {
-                              "identifier": "local-units",
-                              "source": "supplementary_data",
-                              "selectors": ["address"]
-                            },
+                            "list_to_concatenate": [
+                              {
+                                "source": "supplementary_data",
+                                "identifier": "local-units",
+                                "selectors": ["address"]
+                              }
+                            ],
                             "delimiter": ", "
                           }
                         }
@@ -1695,11 +1667,13 @@
                           {
                             "transform": "concatenate_list",
                             "arguments": {
-                              "list_to_concatenate": {
-                                "identifier": "local-units",
-                                "source": "supplementary_data",
-                                "selectors": ["address"]
-                              },
+                              "list_to_concatenate": [
+                                {
+                                  "source": "supplementary_data",
+                                  "identifier": "local-units",
+                                  "selectors": ["address"]
+                                }
+                              ],
                               "delimiter": ", "
                             }
                           }
@@ -2049,19 +2023,11 @@
                     },
                     {
                       "placeholder": "localunits_businessdescription",
-                      "transforms": [
-                        {
-                          "transform": "concatenate_list",
-                          "arguments": {
-                            "list_to_concatenate": {
-                              "identifier": "local-units",
-                              "source": "supplementary_data",
-                              "selectors": ["business_description"]
-                            },
-                            "delimiter": ", "
-                          }
-                        }
-                      ]
+                      "value": {
+                        "source": "supplementary_data",
+                        "identifier": "local-units",
+                        "selectors": ["business_description"]
+                      }
                     }
                   ]
                 },
