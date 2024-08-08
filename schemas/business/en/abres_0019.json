@@ -53,11 +53,11 @@
       "code": "9998"
     },
     {
-      "answer_id": "answerf8197dc4-d625-4d94-a847-a17538c49179",
+      "answer_id": "answerb6f4b65f-2637-49ea-84c0-43242514faeb",
       "code": "9972"
     },
     {
-      "answer_id": "answer6df5abbc-5b82-4905-be7c-12ce76db8c4c",
+      "answer_id": "answer48c5c928-3b44-4e40-98b7-b80e9f0ccea8",
       "code": "9971"
     },
     {
@@ -65,7 +65,7 @@
       "code": "9997"
     },
     {
-      "answer_id": "answer72bddf10-c99e-41e9-8341-e65d3f77d78c",
+      "answer_id": "answer87225c04-018b-4422-bf64-58ccac28e6d8",
       "code": "9970"
     },
     {
@@ -186,7 +186,7 @@
     },
     {
       "answer_id": "answer448e709d-3913-4a67-9a54-825578816c9d",
-      "code": "156c"
+      "code": "c156"
     },
     {
       "answer_id": "answer59486b3a-59cf-4f90-918e-bc17369a004c",
@@ -941,31 +941,24 @@
                     }
                   ]
                 },
+                "description": [
+                  "<p>The <strong>VAT registration number</strong> is 9 numbers, sometimes with &#39;GB&#39; at the start and can be found on your VAT registration certificate. Only enter the 9 numbers.<br><br>If your business is part of a VAT group, the <strong>subsidiary reference number</strong> is the additional 3 numbers after the VAT registration number. Only enter the 3 additional numbers, leave blank if your business is not part of a VAT group.</p>"
+                ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerf8197dc4-d625-4d94-a847-a17538c49179",
+                    "id": "answerb6f4b65f-2637-49ea-84c0-43242514faeb",
                     "mandatory": true,
-                    "type": "Number",
+                    "type": "TextField",
                     "label": "VAT registration number",
-                    "description": "This is 9 numbers, sometimes with &#39;GB&#39; at the start and can be found on your VAT registration certificate. Only enter the 9 numbers",
-                    "maximum": {
-                      "value": 999999999,
-                      "exclusive": false
-                    },
-                    "decimal_places": 0
+                    "max_length": 9
                   },
                   {
-                    "id": "answer6df5abbc-5b82-4905-be7c-12ce76db8c4c",
+                    "id": "answer48c5c928-3b44-4e40-98b7-b80e9f0ccea8",
                     "mandatory": false,
-                    "type": "Number",
+                    "type": "TextField",
                     "label": "Subsidiary reference number",
-                    "description": "If your business is part of a VAT group, this is the additional 3 numbers after the VAT registration number. Leave blank if your business is not part of a VAT group",
-                    "maximum": {
-                      "value": 999,
-                      "exclusive": false
-                    },
-                    "decimal_places": 0
+                    "max_length": 8
                   }
                 ]
               },
@@ -1083,20 +1076,16 @@
                   ]
                 },
                 "description": [
-                  "<p>This consists of a tax office number followed by an employer&#39;s PAYE reference number, which can be found on your paying-in book and form P35.</p>"
+                  "<p>This consists of a tax office number followed by an employer&#39;s PAYE reference number, which can be found on your paying-in book and form P35.<br><br>The <strong>tax office number </strong>is 3 numbers, only enter the 3 numbers. The <strong>employer&#39;s PAYE reference number</strong> can be a combination of up to 10 numbers or characters.</p>"
                 ],
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answer72bddf10-c99e-41e9-8341-e65d3f77d78c",
+                    "id": "answer87225c04-018b-4422-bf64-58ccac28e6d8",
                     "mandatory": true,
-                    "type": "Number",
+                    "type": "TextField",
                     "label": "Tax office number",
-                    "maximum": {
-                      "value": 999,
-                      "exclusive": false
-                    },
-                    "decimal_places": 0
+                    "max_length": 8
                   },
                   {
                     "id": "answer946166c1-88cc-4b8b-bfce-3b31594dba4b",
