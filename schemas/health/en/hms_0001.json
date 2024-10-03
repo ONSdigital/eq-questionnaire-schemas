@@ -17,7 +17,7 @@
     },
     {
       "answer_id": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
-      "code": "HMS_INT_003"
+      "code": "HMS-INT-003"
     },
     {
       "answer_id": "answerdbcb618e-6c8f-491d-91e5-820d15cb282c",
@@ -100,12 +100,36 @@
       "code": "HMS-GPP-009"
     },
     {
+      "answer_id": "answera5a720df-2868-4aec-b99f-10de345df1a2",
+      "code": "HMS-GPP-021"
+    },
+    {
       "answer_id": "answera826470f-5e13-4c38-9872-22582abc3ad0",
       "code": "HMS-GPP-010"
     },
     {
+      "answer_id": "answer342b188f-9b3f-43ba-8dac-2b7fa4cbaab7",
+      "code": "HMS-GPP-022"
+    },
+    {
       "answer_id": "answer65dfd89d-4f31-428e-95ff-246a9604167e",
       "code": "HMS-GPP-011"
+    },
+    {
+      "answer_id": "answer28ba1a13-b3a9-47c2-8cb9-5b1cb3ba6aee",
+      "code": "HMS-GPP-023"
+    },
+    {
+      "answer_id": "answerbaa80034-71a8-428f-848b-b557fb6f0778",
+      "code": "HMS-GPP-024"
+    },
+    {
+      "answer_id": "answer8475a907-2511-440c-a533-3ce2e5a41ffe",
+      "code": "HMS-GPP-025"
+    },
+    {
+      "answer_id": "answer39ce3489-d860-4e96-b638-e98b5346b29a",
+      "code": "HMS-GPP-026"
     },
     {
       "answer_id": "answer5045cf44-3167-4967-bf4c-203ca0d0305c",
@@ -152,10 +176,6 @@
       "code": "HMS-DEN-002"
     },
     {
-      "answer_id": "answer65bbc01e-ea14-43cb-a1c2-604641ebcbd3",
-      "code": "HMS-DEN-003"
-    },
-    {
       "answer_id": "answer8c8e5e2a-ed58-482e-907e-9666c3da974f",
       "code": "HMS-DEN-004"
     },
@@ -166,10 +186,6 @@
     {
       "answer_id": "answer61a69530-a01e-4c23-9d65-62b2e62fec24",
       "code": "HMS-DEN-006"
-    },
-    {
-      "answer_id": "answer6a8cf8b2-af9b-4c55-b19c-f5b676dfb87e",
-      "code": "HMS-DEN-007"
     },
     {
       "answer_id": "answer6d7012e0-b1fa-4705-9d0e-c73b5871f114",
@@ -300,9 +316,7 @@
                         "identifier": "answer039428b9-a54d-4027-8270-1197ea1043de",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -371,9 +385,7 @@
                         "identifier": "answeracadafee-1958-4039-ab53-7eedc1db6b95",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -420,9 +432,9 @@
                 "answers": [
                   {
                     "id": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Checkbox",
-                    "label": "Select to continue to submit",
+                    "label": "Select continue to submit",
                     "options": [
                       {
                         "label": "Continue",
@@ -537,9 +549,7 @@
                   "block": "about-you-your-home-postcode",
                   "when": {
                     "all-in": [
-                      [
-                        "Yes, I have moved house"
-                      ],
+                      ["Yes, I have moved house"],
                       {
                         "identifier": "answerdbcb618e-6c8f-491d-91e5-820d15cb282c",
                         "source": "answers"
@@ -551,9 +561,7 @@
                   "block": "work-and-education-current-status",
                   "when": {
                     "all-in": [
-                      [
-                        "Yes, my work or education status has changed"
-                      ],
+                      ["Yes, my work or education status has changed"],
                       {
                         "identifier": "answerdbcb618e-6c8f-491d-91e5-820d15cb282c",
                         "source": "answers"
@@ -674,10 +682,7 @@
                         "identifier": "answerb7e6d0c6-fb29-4c61-9742-771e46147541",
                         "source": "answers"
                       },
-                      [
-                        "Employed",
-                        "Self-employed"
-                      ]
+                      ["Employed", "Self-employed"]
                     ]
                   }
                 },
@@ -796,9 +801,7 @@
                         "identifier": "answer73ccf278-cb53-4c1b-b05f-42292d2633b4",
                         "source": "answers"
                       },
-                      [
-                        "Retired"
-                      ]
+                      ["Retired"]
                     ]
                   }
                 },
@@ -846,9 +849,7 @@
                         "identifier": "answer14561f81-1af8-4f1a-a4be-e4f1d3ac5efb",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -933,9 +934,7 @@
                         "identifier": "answer57101fe3-33fe-4e01-a88c-610dc5b2066a",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -1100,10 +1099,7 @@
                         "identifier": "answer92f402d4-7fb4-4769-a8e9-e599761705bb",
                         "source": "answers"
                       },
-                      [
-                        "No",
-                        "Do not know"
-                      ]
+                      ["No", "Do not know"]
                     ]
                   }
                 },
@@ -1439,7 +1435,7 @@
               "page_title": "GP practice - next step",
               "routing_rules": [
                 {
-                  "block": "gp-practice-face-to-face-appointment",
+                  "block": "gp-practice-face-to-face-appointment-asked",
                   "when": {
                     "in": [
                       {
@@ -1447,20 +1443,7 @@
                         "source": "answers"
                       },
                       [
-                        "I was given a face-to-face appointment"
-                      ]
-                    ]
-                  }
-                },
-                {
-                  "block": "gp-practice-call-back",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answer45632ec7-df36-4d30-94f9-7364870bab93",
-                        "source": "answers"
-                      },
-                      [
+                        "I was given a face-to-face appointment",
                         "The GP or other healthcare professional called me back"
                       ]
                     ]
@@ -1474,9 +1457,7 @@
                         "identifier": "answer45632ec7-df36-4d30-94f9-7364870bab93",
                         "source": "answers"
                       },
-                      [
-                        "The GP practice asked me to do something else"
-                      ]
+                      ["The GP practice asked me to do something else"]
                     ]
                   }
                 },
@@ -1547,6 +1528,50 @@
               ]
             },
             {
+              "id": "gp-practice-face-to-face-appointment-asked",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-face-to-face-appointment-asked",
+                "title": "Were you <strong>asked</strong> if you wanted a face-to-face appointment?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answera5a720df-2868-4aec-b99f-10de345df1a2",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - face to face appointment asked",
+              "routing_rules": [
+                {
+                  "block": "gp-practice-call-back",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer45632ec7-df36-4d30-94f9-7364870bab93",
+                        "source": "answers"
+                      },
+                      ["The GP or other healthcare professional called me back"]
+                    ]
+                  }
+                },
+                {
+                  "block": "gp-practice-face-to-face-appointment"
+                }
+              ]
+            },
+            {
               "id": "gp-practice-face-to-face-appointment",
               "type": "Question",
               "question": {
@@ -1578,11 +1603,44 @@
               "page_title": "GP practice - face to face appointment"
             },
             {
+              "id": "gp-practice-have-preferred-health-care-professional",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-have-preferred-health-care-professional",
+                "title": "Do you have any healthcare professionals at your GP practice who you prefer to see?",
+                "description": [
+                  "<p>A preferred healthcare professional could be a nurse or doctor who understands your health issues better than others.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer342b188f-9b3f-43ba-8dac-2b7fa4cbaab7",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - have preferred health care professional"
+            },
+            {
               "id": "gp-practice-choice-of-healthcare-professional",
               "type": "Question",
               "question": {
                 "id": "questiongp-practice-choice-of-healthcare-professional",
                 "title": "Were you asked if you wanted to see a preferred healthcare professional?",
+                "description": [
+                  "<p>A preferred healthcare professional could be a nurse or doctor who understands your health issues better than others.</p>"
+                ],
                 "type": "General",
                 "answers": [
                   {
@@ -1605,17 +1663,163 @@
               "page_title": "GP practice - choice of healthcare professional",
               "routing_rules": [
                 {
+                  "block": "gp-practice-see-preferred-healthcare-professional",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer342b188f-9b3f-43ba-8dac-2b7fa4cbaab7",
+                        "source": "answers"
+                      },
+                      ["Yes"]
+                    ]
+                  }
+                },
+                {
+                  "block": "gp-practice-appointment-waiting-time"
+                }
+              ]
+            },
+            {
+              "id": "gp-practice-see-preferred-healthcare-professional",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-see-preferred-healthcare-professional",
+                "title": "Were you able to see your preferred healthcare professional?",
+                "description": [
+                  "<p>A preferred healthcare professional could be a nurse or doctor who understands your health issues better than others.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer28ba1a13-b3a9-47c2-8cb9-5b1cb3ba6aee",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - see preferred healthcare professional",
+              "routing_rules": [
+                {
                   "block": "gp-practice-appointment-waiting-time",
                   "when": {
                     "in": [
                       {
-                        "identifier": "answer65dfd89d-4f31-428e-95ff-246a9604167e",
+                        "identifier": "answer28ba1a13-b3a9-47c2-8cb9-5b1cb3ba6aee",
                         "source": "answers"
                       },
-                      [
-                        "Yes",
-                        "No"
-                      ]
+                      ["Yes"]
+                    ]
+                  }
+                },
+                {
+                  "block": "gp-practice-preferred-healthcare-professional-not-seen"
+                }
+              ]
+            },
+            {
+              "id": "gp-practice-preferred-healthcare-professional-not-seen",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-preferred-healthcare-professional-not-seen",
+                "title": "What was the reason for not seeing your preferred healthcare professional?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerbaa80034-71a8-428f-848b-b557fb6f0778",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "No appointments available within 48 hours",
+                        "value": "No appointments available within 48 hours"
+                      },
+                      {
+                        "label": "No appointments available within 14 days",
+                        "value": "No appointments available within 14 days"
+                      },
+                      {
+                        "label": "Another reason",
+                        "value": "Another reason"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - preferred healthcare professional not seen"
+            },
+            {
+              "id": "gp-practice-preferred-healthcare-professional-appointment-offered",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-preferred-healthcare-professional-appointment-offered",
+                "title": "Were you offered any appointments with your preferred healthcare professional that were not convenient for you?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer8475a907-2511-440c-a533-3ce2e5a41ffe",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - preferred healthcare professional appointment offered"
+            },
+            {
+              "id": "gp-practice-saw-another-healthcare-professional",
+              "type": "Question",
+              "question": {
+                "id": "questiongp-practice-saw-another-healthcare-professional",
+                "title": "Did you see another healthcare professional at your GP practice, rather than wait to see your preferred healthcare professional?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer39ce3489-d860-4e96-b638-e98b5346b29a",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Yes",
+                        "value": "Yes"
+                      },
+                      {
+                        "label": "No",
+                        "value": "No"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "GP practice - saw another healthcare professional",
+              "routing_rules": [
+                {
+                  "block": "gp-practice-appointment-waiting-time",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer39ce3489-d860-4e96-b638-e98b5346b29a",
+                        "source": "answers"
+                      },
+                      ["Yes", "No"]
                     ]
                   }
                 },
@@ -1832,9 +2036,7 @@
                         "identifier": "answerd9788aad-c1d4-4d21-bb6e-28a79957fb87",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -1944,9 +2146,7 @@
                         "identifier": "answerfeb9f663-f6bf-487e-aacd-1215c94f7f3a",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -2069,110 +2269,24 @@
                 {
                   "block": "dental-care-last-nhs-appointment",
                   "when": {
-                    "and": [
+                    "in": [
                       {
-                        "in": [
-                          {
-                            "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
-                            "source": "answers"
-                          },
-                          [
-                            "Yes, an NHS dentist",
-                            "I go to a dental hospital"
-                          ]
-                        ]
+                        "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
+                        "source": "answers"
                       },
-                      {
-                        "==": [
-                          {
-                            "source": "metadata",
-                            "identifier": "PREVIOUS_COMPLETION"
-                          },
-                          "NO"
-                        ]
-                      }
-                    ]
-                  }
-                },
-                {
-                  "block": "dental-care-nhs-appointment-last-28-days",
-                  "when": {
-                    "and": [
-                      {
-                        "in": [
-                          {
-                            "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
-                            "source": "answers"
-                          },
-                          [
-                            "Yes, an NHS dentist",
-                            "I go to a dental hospital"
-                          ]
-                        ]
-                      },
-                      {
-                        "==": [
-                          {
-                            "source": "metadata",
-                            "identifier": "PREVIOUS_COMPLETION"
-                          },
-                          "YES"
-                        ]
-                      }
+                      ["Yes, an NHS dentist", "I go to a dental hospital"]
                     ]
                   }
                 },
                 {
                   "block": "dental-care-last-nhs-attempt",
                   "when": {
-                    "and": [
+                    "in": [
                       {
-                        "in": [
-                          {
-                            "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
-                            "source": "answers"
-                          },
-                          [
-                            "No, I do not have a dentist"
-                          ]
-                        ]
+                        "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
+                        "source": "answers"
                       },
-                      {
-                        "==": [
-                          {
-                            "source": "metadata",
-                            "identifier": "PREVIOUS_COMPLETION"
-                          },
-                          "NO"
-                        ]
-                      }
-                    ]
-                  }
-                },
-                {
-                  "block": "dental-care-nhs-attempt-last-28-days",
-                  "when": {
-                    "and": [
-                      {
-                        "in": [
-                          {
-                            "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
-                            "source": "answers"
-                          },
-                          [
-                            "No, I do not have a dentist"
-                          ]
-                        ]
-                      },
-                      {
-                        "==": [
-                          {
-                            "source": "metadata",
-                            "identifier": "PREVIOUS_COMPLETION"
-                          },
-                          "YES"
-                        ]
-                      }
+                      ["No, I do not have a dentist"]
                     ]
                   }
                 },
@@ -2228,59 +2342,7 @@
                         "identifier": "answer19cd1efc-6bf8-4246-b929-551302e37c6a",
                         "source": "answers"
                       },
-                      [
-                        "Less than 1 month ago",
-                        "1 month but less than 6 months ago",
-                        "6 months but less than 12 months ago",
-                        "12 months but less than 24 months ago",
-                        "24 months ago or over"
-                      ]
-                    ]
-                  }
-                },
-                {
-                  "block": "dental-care-last-nhs-appointment-reason"
-                }
-              ]
-            },
-            {
-              "id": "dental-care-nhs-appointment-last-28-days",
-              "type": "Question",
-              "question": {
-                "id": "questiondental-care-nhs-appointment-last-28-days",
-                "title": "Have you had an NHS dental appointment in the last 28 days?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer65bbc01e-ea14-43cb-a1c2-604641ebcbd3",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Dental care - NHS appointment last 28 days",
-              "routing_rules": [
-                {
-                  "block": "dental-care-last-nhs-appointment-reason",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answer65bbc01e-ea14-43cb-a1c2-604641ebcbd3",
-                        "source": "answers"
-                      },
-                      [
-                        "Yes"
-                      ]
+                      ["Less than 1 month ago"]
                     ]
                   }
                 },
@@ -2433,62 +2495,14 @@
               "page_title": "Dental care - last NHS attempt",
               "routing_rules": [
                 {
-                  "section": "End",
+                  "block": "dental-care-trying-to-access-nhs-care-reason",
                   "when": {
                     "in": [
                       {
                         "identifier": "answer61a69530-a01e-4c23-9d65-62b2e62fec24",
                         "source": "answers"
                       },
-                      [
-                        "Never"
-                      ]
-                    ]
-                  }
-                },
-                {
-                  "block": "dental-care-trying-to-access-nhs-care-reason"
-                }
-              ]
-            },
-            {
-              "id": "dental-care-nhs-attempt-last-28-days",
-              "type": "Question",
-              "question": {
-                "id": "questiondental-care-nhs-attempt-last-28-days",
-                "title": "Have you tried to access NHS dental care in the last 28 days?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answer6a8cf8b2-af9b-4c55-b19c-f5b676dfb87e",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Dental care - NHS attempt last 28 days",
-              "routing_rules": [
-                {
-                  "block": "dental-care-trying-to-access-nhs-care-reason",
-                  "when": {
-                    "in": [
-                      {
-                        "identifier": "answer6a8cf8b2-af9b-4c55-b19c-f5b676dfb87e",
-                        "source": "answers"
-                      },
-                      [
-                        "Yes"
-                      ]
+                      ["Less than 1 month ago"]
                     ]
                   }
                 },
@@ -2615,9 +2629,7 @@
                         "identifier": "answer55b304a7-0228-4eb5-bb82-f4144ce2dad4",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -3031,9 +3043,7 @@
                   "block": "pharmacies-problems-receiving-nhs-prescription",
                   "when": {
                     "all-in": [
-                      [
-                        "Dispensing of prescriptions"
-                      ],
+                      ["Dispensing of prescriptions"],
                       {
                         "identifier": "answerac757159-12c6-4846-8d18-cb64d93984a6",
                         "source": "answers"
@@ -3223,7 +3233,7 @@
           "description": "You will need to click the &quot;leave this page&quot; link below."
         },
         {
-          "description": "They will then need to log in using their unique 16 character access code in the email or letter they were sent."
+          "description": "They will then need to log in using their unique 16 character access code in the email they were sent."
         }
       ]
     }
