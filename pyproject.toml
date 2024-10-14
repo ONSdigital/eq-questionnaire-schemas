@@ -5,15 +5,15 @@ description = "Questionnaire Schemas Repository"
 authors = ["ONSDigital"]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 coloredlogs = "*"
-eq-translations = {git = "https://github.com/ONSDigital/eq-translations.git", rev = "v4.9.2"}
+eq-translations = {git = "https://github.com/ONSDigital/eq-translations.git", rev = "v4.10.0"}
 
 [tool.poetry.dev-dependencies]
 black = "*"
 isort = "*"
 pylint = "*"
-pylint_quotes = "*"
+flake8-quotes = "*"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
