@@ -34,21 +34,28 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {trad_as} ({ru_name})",
+                    "text": "You are completing this for {ru_name} {trad_as}",
                     "placeholders": [
-                      {
-                        "placeholder": "trad_as",
-                        "value": {
-                          "source": "metadata",
-                          "identifier": "trad_as"
-                        }
-                      },
                       {
                         "placeholder": "ru_name",
                         "value": {
                           "source": "metadata",
                           "identifier": "ru_name"
                         }
+                      },
+                      {
+                        "placeholder": "trad_as",
+                        "transforms": [
+                          {
+                            "transform": "conditional_trad_as",
+                            "arguments": {
+                              "trad_as": {
+                                "source": "metadata",
+                                "identifier": "trad_as"
+                              }
+                            }
+                          }
+                        ]
                       }
                     ]
                   },
