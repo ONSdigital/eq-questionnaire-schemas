@@ -5,8 +5,11 @@ on:
     branches:
       - main
 
+
 jobs:
   lint:
+    permissions:
+      contents: read
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -16,7 +19,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
-        uses: snok/install-poetry@v1
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: 1.2.2
           virtualenvs-create: true
@@ -35,6 +38,8 @@ jobs:
       - name: Lint Python
         run: make lint
   validate-schemas:
+    permissions:
+      contents: read
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -44,7 +49,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
-        uses: snok/install-poetry@v1
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: 1.2.2
           virtualenvs-create: true
@@ -66,6 +71,8 @@ jobs:
       - name: Validate schemas
         run: make validate-schemas
   test-translation-templates:
+    permissions:
+      contents: read
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -75,7 +82,7 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
       - name: Install Poetry
-        uses: snok/install-poetry@v1
+        uses: snok/install-poetry@76e04a911780d5b312d89783f7b1cd627778900a
         with:
           version: 1.2.2
           virtualenvs-create: true
