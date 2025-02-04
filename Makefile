@@ -12,7 +12,7 @@ validator-check:
 	poetry run python -m scripts.eq_validator_check
 
 validate-schemas: validator-check
-	./scripts/validate_schemas.sh
+	poetry run python -m scripts.validate_schemas
 
 translations-check:
 	poetry run python -m scripts.eq_translations_check
