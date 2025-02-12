@@ -7,14 +7,14 @@ on:
 jobs:
   add-schemas-to-release:
     permissions:
-      contents: read
+      contents: write
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - name: Zip artifacts
         run: zip -r schemas.zip schemas
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@c95fe1489396fe8a9eb87c0abf8aa5b2ef267fda
         with:
           files: schemas.zip
         env:
