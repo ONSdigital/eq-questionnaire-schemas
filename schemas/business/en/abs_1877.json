@@ -360,7 +360,41 @@
                     "title": "<strong>Reporting period</strong>"
                   },
                   {
-                    "description": "You will be asked to report for  to . If you are unable to provide figures for this period, you will have the option to choose your own dates."
+                    "description": {
+                      "text": "You will be asked to report for {ref_p_start_date} to {ref_p_end_date}. If you are unable to provide figures for this period, you will have the option to choose your own dates.",
+                      "placeholders": [
+                        {
+                          "placeholder": "ref_p_start_date",
+                          "transforms": [
+                            {
+                              "transform": "format_date",
+                              "arguments": {
+                                "date_to_format": {
+                                  "source": "metadata",
+                                  "identifier": "ref_p_start_date"
+                                },
+                                "date_format": "d MMMM yyyy"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "placeholder": "ref_p_end_date",
+                          "transforms": [
+                            {
+                              "transform": "format_date",
+                              "arguments": {
+                                "date_to_format": {
+                                  "source": "metadata",
+                                  "identifier": "ref_p_end_date"
+                                },
+                                "date_format": "d MMMM yyyy"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
                   },
                   {
                     "title": "<strong>What activity to include in this survey</strong>"
