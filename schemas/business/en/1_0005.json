@@ -3,6 +3,7 @@
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
+  "preview_questions": false,
   "survey_id": "134",
   "form_type": "0005",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
@@ -11,7 +12,7 @@
     "type": "Hub",
     "options": {
       "required_completed_sections": [
-        "section29046f28-e128-4c9a-8f6a-09115b6b5fc2",
+        "29046f28-e128-4c9a-8f6a-09115b6b5fc2",
         "section11d6f7d3-4425-4ba1-b1bf-b280b6508104"
       ]
     }
@@ -27,34 +28,34 @@
           "title": "Introduction",
           "blocks": [
             {
-              "id": "introduction-block",
+              "id": "introduction",
               "type": "Introduction",
               "primary_content": [
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
+                    "text": "You are completing this for {ru_name} {trad_as}",
                     "placeholders": [
-                      {
-                        "placeholder": "conditional_trad_as",
-                        "transforms": [
-                          {
-                            "arguments": {
-                              "trad_as": {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              }
-                            },
-                            "transform": "conditional_trad_as"
-                          }
-                        ]
-                      },
                       {
                         "placeholder": "ru_name",
                         "value": {
                           "source": "metadata",
                           "identifier": "ru_name"
                         }
+                      },
+                      {
+                        "placeholder": "trad_as",
+                        "transforms": [
+                          {
+                            "transform": "conditional_trad_as",
+                            "arguments": {
+                              "trad_as": {
+                                "source": "metadata",
+                                "identifier": "trad_as"
+                              }
+                            }
+                          }
+                        ]
                       }
                     ]
                   },
@@ -114,7 +115,7 @@
                 "title": "Information you need",
                 "contents": [
                   {
-                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/monthlywagesandsalariessurvey\"target=\"_blank\"rel=\"noopener noreferrer\">View survey information and questions before you start the survey (this link opens in a new tab)</a>"
+                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/monthlywagesandsalariessurvey\" target=\"_blank\" rel=\"noopener noreferrer\">View survey information and questions before you start the survey (this link opens in a new tab)</a>"
                   },
                   {
                     "description": "<strong>Employee pay frequency</strong>"
@@ -148,7 +149,7 @@
                       {
                         "list": [
                           "trainees or apprentices that were not paid through your payroll for the relevant period",
-                          "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                          "employees working abroad unless paid directly from this business’s GB payroll",
                           "employees in Northern Ireland"
                         ]
                       }
@@ -179,9 +180,9 @@
                         "list": [
                           "any redundancy pay and pay in lieu of notice payments",
                           "trainees or apprentices that were not paid through your payroll for the relevant period",
-                          "directors&#39; fees",
-                          "employer&#x2019;s National Insurance and contribution to pension schemes",
-                          "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                          "directors’ fees",
+                          "employer’s National Insurance and contribution to pension schemes",
+                          "employees working abroad unless paid directly from this business’s GB payroll",
                           "signing on fees, for example, sporting professionals",
                           "accrued holiday pay",
                           "employees in Northern Ireland",
@@ -210,9 +211,9 @@
                         "list": [
                           "any redundancy pay and pay in lieu of notice payments",
                           "trainees or apprentices that were not paid through your payroll for the relevant period",
-                          "directors&#39; fees",
-                          "employer&#x2019;s National Insurance and contribution to pension schemes",
-                          "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                          "directors’ fees",
+                          "employer’s National Insurance and contribution to pension schemes",
+                          "employees working abroad unless paid directly from this business’s GB payroll",
                           "signing on fees, for example, sporting professionals",
                           "accrued holiday pay",
                           "employees in Northern Ireland",
@@ -241,9 +242,9 @@
                       {
                         "list": [
                           "trainees on government schemes",
-                          "directors&#39; fees",
-                          "employer&#39;s National Insurance and contribution to pension schemes",
-                          "employees working abroad unless paid directly from this business&#39;s GB payroll",
+                          "directors’ fees",
+                          "employer’s National Insurance and contribution to pension schemes",
+                          "employees working abroad unless paid directly from this business’s GB payroll",
                           "signing on fees, for example, sporting professionals",
                           "payment in lieu of notice",
                           "redundancy pay both taxable and non-taxable",
@@ -298,18 +299,22 @@
       ]
     },
     {
-      "id": "section29046f28-e128-4c9a-8f6a-09115b6b5fc2",
+      "id": "29046f28-e128-4c9a-8f6a-09115b6b5fc2",
       "title": "Pay pattern",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
           "id": "group29046f28-e128-4c9a-8f6a-09115b6b5fc2",
           "blocks": [
             {
-              "id": "blocke97e3606-b506-4213-b9ef-f73b423d9eda",
+              "id": "payment-frequency-for-employees",
               "type": "Question",
               "question": {
-                "id": "questione97e3606-b506-4213-b9ef-f73b423d9eda",
+                "id": "questionpayment-frequency-for-employees",
                 "title": "How frequently are employees paid?",
                 "description": [
                   "<p>You will be asked to provide information for each of the selected pay patterns.</p>"
@@ -349,18 +354,19 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Payment frequency for employees"
             },
             {
-              "id": "blockconfirmation-page-for-e97e3606-b506-4213-b9ef-f73b423d9eda",
+              "id": "confirmation-of-pay-patterns-used",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-e97e3606-b506-4213-b9ef-f73b423d9eda",
+                "id": "questionconfirmation-of-pay-patterns-used",
                 "title": "Are these all of the pay patterns used?",
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-e97e3606-b506-4213-b9ef-f73b423d9eda",
+                    "id": "answerconfirmation-answer-for-payment-frequency-for-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -397,43 +403,46 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of pay patterns used",
               "routing_rules": [
                 {
-                  "block": "blocke97e3606-b506-4213-b9ef-f73b423d9eda",
+                  "block": "payment-frequency-for-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-e97e3606-b506-4213-b9ef-f73b423d9eda"
+                        "identifier": "answerconfirmation-answer-for-payment-frequency-for-employees",
+                        "source": "answers"
                       },
                       "No, I would like to change the pay patterns"
                     ]
                   }
                 },
                 {
-                  "group": "group1da4e8ee-f4ee-42c4-90ab-485444de2b3e"
+                  "group": "groupweekly-pay-section-summary"
                 }
               ]
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      }
+      ]
     },
     {
-      "id": "section1da4e8ee-f4ee-42c4-90ab-485444de2b3e",
+      "id": "weekly-pay-section-summary",
       "title": "Weekly pay",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "Weekly pay section summary",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group1da4e8ee-f4ee-42c4-90ab-485444de2b3e",
+          "id": "groupweekly-pay-section-summary",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group1da4e8ee-f4ee-42c4-90ab-485444de2b3e-introduction",
+              "id": "weekly-pay-section-introduction",
+              "page_title": "Weekly pay section introduction",
               "content": {
                 "title": "Weekly pay",
                 "contents": [
@@ -454,10 +463,10 @@
               }
             },
             {
-              "id": "block6cef29d1-0d5c-423f-bf1d-e97735f64f3e",
+              "id": "number-of-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question6cef29d1-0d5c-423f-bf1d-e97735f64f3e",
+                "id": "questionnumber-of-weekly-paid-employees",
                 "title": {
                   "text": "What was the <strong>number</strong> of <strong>weekly paid</strong> employees paid in the last week of {period_str}?",
                   "placeholders": [
@@ -490,7 +499,7 @@
                     {
                       "list": [
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "employees in Northern Ireland"
                       ]
                     }
@@ -511,13 +520,14 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of weekly paid employees"
             },
             {
-              "id": "block1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+              "id": "total-gross-weekly-pay-paid-to-employees",
               "type": "Question",
               "question": {
-                "id": "question1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+                "id": "questiontotal-gross-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "What was the <strong>total gross weekly pay</strong> paid to employees in the last week of {period_str}?",
                   "placeholders": [
@@ -551,9 +561,9 @@
                       "list": [
                         "any redundancy pay and pay in lieu of notice payments, taxable and non-taxable",
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "directors&#39; fees",
-                        "employer&#x2019;s National Insurance and contribution to pension schemes",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "directors’ fees",
+                        "employer’s National Insurance and contribution to pension schemes",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "signing on fees, for example, sporting professionals",
                         "accrued holiday pay",
                         "employees in Northern Ireland",
@@ -574,13 +584,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total gross weekly pay paid to employees"
             },
             {
-              "id": "blockconfirmation-page-for-1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+              "id": "confirmation-of-total-gross-weekly-pay-paid-to-employees",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+                "id": "questionconfirmation-of-total-gross-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "The <strong>total gross weekly pay</strong> paid to employees in the last week of {period_str} was <strong>&#xA3;0</strong>, is this correct?",
                   "placeholders": [
@@ -596,7 +607,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+                    "id": "answerconfirmation-answer-for-total-gross-weekly-pay-paid-to-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -612,41 +623,42 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of total gross weekly pay paid to employees",
               "routing_rules": [
                 {
-                  "block": "block1d336f8d-5e66-4692-a00d-8b0ad04b091b",
+                  "block": "total-gross-weekly-pay-paid-to-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-1d336f8d-5e66-4692-a00d-8b0ad04b091b"
+                        "identifier": "answerconfirmation-answer-for-total-gross-weekly-pay-paid-to-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block5bf0ea98-d6d2-46cb-9362-50c17fbf55df",
+                  "block": "significant-changes-to-total-pay-or-number-of-weekly-paid-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "block67b07c1a-a4d1-406c-8b06-2217075805a9"
+                  "block": "other-amounts-paid-to-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                      "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -654,22 +666,22 @@
               }
             },
             {
-              "id": "block67b07c1a-a4d1-406c-8b06-2217075805a9",
+              "id": "other-amounts-paid-to-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question67b07c1a-a4d1-406c-8b06-2217075805a9",
+                "id": "questionother-amounts-paid-to-weekly-paid-employees",
                 "title": {
-                  "text": "Of the {answerc50e5990_5933_456a_bdc9_4cc0a02ca02d} paid to <strong>weekly</strong> paid employees in the last week of {period_str}, what other amounts were paid?",
+                  "text": "Of the {total_gross_weekly_pay} paid to <strong>weekly</strong> paid employees in the last week of {period_str}, what other amounts were paid?",
                   "placeholders": [
                     {
-                      "placeholder": "answerc50e5990_5933_456a_bdc9_4cc0a02ca02d",
+                      "placeholder": "total_gross_weekly_pay",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                              "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                              "source": "answers"
                             }
                           }
                         }
@@ -709,8 +721,8 @@
                     "q_code": "60",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -725,8 +737,8 @@
                     "q_code": "70",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -741,8 +753,8 @@
                     "q_code": "80",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                        "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -759,16 +771,20 @@
                       "answer3dd3d507-f5b6-44a9-863b-f4c47c4ee1fd"
                     ],
                     "conditions": ["less than", "equals"],
-                    "answer_id": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d"
+                    "value": {
+                      "identifier": "answerc50e5990-5933-456a-bdc9-4cc0a02ca02d",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Other amounts paid to weekly paid employees"
             },
             {
-              "id": "block5bf0ea98-d6d2-46cb-9362-50c17fbf55df",
+              "id": "significant-changes-to-total-pay-or-number-of-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question5bf0ea98-d6d2-46cb-9362-50c17fbf55df",
+                "id": "questionsignificant-changes-to-total-pay-or-number-of-weekly-paid-employees",
                 "title": "Did any significant changes occur to the total pay or number of <strong>weekly</strong> paid employees?",
                 "guidance": {
                   "contents": [
@@ -788,10 +804,10 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;a significant change&#39;",
+                    "title": "What we mean by ’a significant change’",
                     "contents": [
                       {
-                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business&#x2019;s figures compared with the previous month."
+                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business’s figures compared with the previous month."
                       },
                       {
                         "description": "Also consider whether there has been a significant change from the same month in the previous year."
@@ -818,13 +834,14 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significant changes to total pay or number of weekly paid employees"
             },
             {
-              "id": "blockeb152780-ab5b-4df1-b8a0-c8ad4f6a2719",
+              "id": "reasons-for-changes-to-total-pay-or-number-of-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questioneb152780-ab5b-4df1-b8a0-c8ad4f6a2719",
+                "id": "questionreasons-for-changes-to-total-pay-or-number-of-weekly-paid-employees",
                 "title": "What were the reasons for the changes to the total pay or number of <strong>weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -877,9 +894,10 @@
                   }
                 ]
               },
+              "page_title": "Reasons for changes to total pay or number of weekly paid employees",
               "routing_rules": [
                 {
-                  "block": "block2dc10237-6cca-4f21-8ac8-2904c758dc63",
+                  "block": "new-pay-rate-information-for-weekly-paid-employees",
                   "when": {
                     "all-in": [
                       ["Pay increase"],
@@ -891,7 +909,7 @@
                   }
                 },
                 {
-                  "block": "block5af76dd4-4648-4d76-b9b7-7c64f42ede50"
+                  "block": "changes-to-total-pay-or-number-of-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
@@ -907,10 +925,10 @@
               }
             },
             {
-              "id": "block2dc10237-6cca-4f21-8ac8-2904c758dc63",
+              "id": "new-pay-rate-information-for-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question2dc10237-6cca-4f21-8ac8-2904c758dc63",
+                "id": "questionnew-pay-rate-information-for-weekly-paid-employees",
                 "title": "If your business has new pay rates, what is the percentage increase?",
                 "type": "General",
                 "answers": [
@@ -937,8 +955,8 @@
                     "q_code": "120",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerb13a5707-e248-4c77-bd57-b4090479565f"
+                        "identifier": "answerb13a5707-e248-4c77-bd57-b4090479565f",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -946,6 +964,7 @@
                   }
                 ]
               },
+              "page_title": "New pay rate information for weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -959,10 +978,10 @@
               }
             },
             {
-              "id": "block5af76dd4-4648-4d76-b9b7-7c64f42ede50",
+              "id": "changes-to-total-pay-or-number-of-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question5af76dd4-4648-4d76-b9b7-7c64f42ede50",
+                "id": "questionchanges-to-total-pay-or-number-of-weekly-paid-employees",
                 "title": "What were the changes to the total pay or number of <strong>weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -976,6 +995,7 @@
                   }
                 ]
               },
+              "page_title": "Changes to total pay or number of weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -1001,23 +1021,25 @@
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
-      "id": "sectionb903c023-4354-46af-87bc-708000c86384",
+      "id": "fortnightly-pay-section-summary",
       "title": "Fortnightly pay",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "Fortnightly pay section summary",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "groupb903c023-4354-46af-87bc-708000c86384",
+          "id": "groupfortnightly-pay-section-summary",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "groupb903c023-4354-46af-87bc-708000c86384-introduction",
+              "id": "fortnightly-pay-section-introduction",
+              "page_title": "Fortnightly pay section introduction",
               "content": {
                 "title": "Fortnightly pay",
                 "contents": [
@@ -1038,10 +1060,10 @@
               }
             },
             {
-              "id": "block1080314d-73c8-47e8-b189-ba84c20bbbc1",
+              "id": "number-of-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question1080314d-73c8-47e8-b189-ba84c20bbbc1",
+                "id": "questionnumber-of-fortnightly-paid-employees",
                 "title": {
                   "text": "What was the <strong>number</strong> of <strong>fortnightly paid</strong> employees paid in the last week of {period_str}?",
                   "placeholders": [
@@ -1074,7 +1096,7 @@
                     {
                       "list": [
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "employees in Northern Ireland"
                       ]
                     }
@@ -1095,13 +1117,14 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of fortnightly paid employees"
             },
             {
-              "id": "block0fe57f5e-f9f9-4988-980c-62edc9af265c",
+              "id": "total-gross-fortnightly-pay-paid-to-employees",
               "type": "Question",
               "question": {
-                "id": "question0fe57f5e-f9f9-4988-980c-62edc9af265c",
+                "id": "questiontotal-gross-fortnightly-pay-paid-to-employees",
                 "title": {
                   "text": "What was the <strong>total gross fortnightly pay</strong> paid to employees in the last week of {period_str}?",
                   "placeholders": [
@@ -1135,9 +1158,9 @@
                       "list": [
                         "any redundancy pay and pay in lieu of notice payments, taxable and non-taxable",
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "directors&#39; fees",
-                        "employer&#x2019;s National Insurance and contribution to pension schemes",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "directors’ fees",
+                        "employer’s National Insurance and contribution to pension schemes",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "signing on fees, for example, sporting professionals",
                         "accrued holiday pay",
                         "employees in Northern Ireland",
@@ -1158,13 +1181,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total gross fortnightly pay paid to employees"
             },
             {
-              "id": "blockconfirmation-page-for-0fe57f5e-f9f9-4988-980c-62edc9af265c",
+              "id": "confirmation-of-total-gross-fortnightly-pay-paid-to-employees",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-0fe57f5e-f9f9-4988-980c-62edc9af265c",
+                "id": "questionconfirmation-of-total-gross-fortnightly-pay-paid-to-employees",
                 "title": {
                   "text": "The <strong>total gross fortnightly pay</strong> paid to employees in the last week of {period_str} was <strong>&#xA3;0</strong>, is this correct?",
                   "placeholders": [
@@ -1180,7 +1204,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-0fe57f5e-f9f9-4988-980c-62edc9af265c",
+                    "id": "answerconfirmation-answer-for-total-gross-fortnightly-pay-paid-to-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -1196,41 +1220,42 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of total gross fortnightly pay paid to employees",
               "routing_rules": [
                 {
-                  "block": "block0fe57f5e-f9f9-4988-980c-62edc9af265c",
+                  "block": "total-gross-fortnightly-pay-paid-to-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-0fe57f5e-f9f9-4988-980c-62edc9af265c"
+                        "identifier": "answerconfirmation-answer-for-total-gross-fortnightly-pay-paid-to-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block91744997-daf2-4a5a-9260-21900d7af0c0",
+                  "block": "significant-changes-to-total-pay-or-number-of-fortnightly-paid-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "block0a92343d-555a-48f7-8614-fd13a6cd1e8e"
+                  "block": "other-amounts-paid-to-fortnightly-paid-employees"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                      "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -1238,22 +1263,22 @@
               }
             },
             {
-              "id": "block0a92343d-555a-48f7-8614-fd13a6cd1e8e",
+              "id": "other-amounts-paid-to-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question0a92343d-555a-48f7-8614-fd13a6cd1e8e",
+                "id": "questionother-amounts-paid-to-fortnightly-paid-employees",
                 "title": {
-                  "text": "Of the {answere2ace0d3_6f49_4c7e_93f4_802d53395f1f} paid to <strong>fortnightly</strong> paid employees in the last week of {period_str}, what other amounts were paid?",
+                  "text": "Of the {total_gross_fortnightly_pay} paid to <strong>fortnightly</strong> paid employees in the last week of {period_str}, what other amounts were paid?",
                   "placeholders": [
                     {
-                      "placeholder": "answere2ace0d3_6f49_4c7e_93f4_802d53395f1f",
+                      "placeholder": "total_gross_fortnightly_pay",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                              "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                              "source": "answers"
                             }
                           }
                         }
@@ -1293,8 +1318,8 @@
                     "q_code": "60f",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1309,8 +1334,8 @@
                     "q_code": "70f",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1325,8 +1350,8 @@
                     "q_code": "80f",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                        "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1343,16 +1368,20 @@
                       "answer7cc7c90d-e61a-43f9-b5b0-74c27c6e696f"
                     ],
                     "conditions": ["less than", "equals"],
-                    "answer_id": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f"
+                    "value": {
+                      "identifier": "answere2ace0d3-6f49-4c7e-93f4-802d53395f1f",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Other amounts paid to fortnightly paid employees"
             },
             {
-              "id": "block91744997-daf2-4a5a-9260-21900d7af0c0",
+              "id": "significant-changes-to-total-pay-or-number-of-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question91744997-daf2-4a5a-9260-21900d7af0c0",
+                "id": "questionsignificant-changes-to-total-pay-or-number-of-fortnightly-paid-employees",
                 "title": "Did any significant changes occur to the total pay or number of <strong>fortnightly</strong> paid employees?",
                 "guidance": {
                   "contents": [
@@ -1372,10 +1401,10 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;a significant change&#39;",
+                    "title": "What we mean by ’a significant change’",
                     "contents": [
                       {
-                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business&#x2019;s figures compared with the previous month."
+                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business’s figures compared with the previous month."
                       },
                       {
                         "description": "Also consider whether there has been a significant change from the same month in the previous year."
@@ -1402,13 +1431,14 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significant changes to total pay or number of fortnightly paid employees"
             },
             {
-              "id": "block9e9823b1-d24d-4305-8c33-597c32dc63c5",
+              "id": "reasons-for-changes-to-total-pay-or-number-of-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question9e9823b1-d24d-4305-8c33-597c32dc63c5",
+                "id": "questionreasons-for-changes-to-total-pay-or-number-of-fortnightly-paid-employees",
                 "title": "What were the reasons for the changes to the total pay or number of <strong>fortnightly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -1461,9 +1491,10 @@
                   }
                 ]
               },
+              "page_title": "Reasons for changes to total pay or number of fortnightly paid employees",
               "routing_rules": [
                 {
-                  "block": "blockd468f012-b7d6-4e2a-9953-7d5fb59fac92",
+                  "block": "new-pay-rate-information-for-fortnightly-paid-employees",
                   "when": {
                     "all-in": [
                       ["Pay increase"],
@@ -1475,7 +1506,7 @@
                   }
                 },
                 {
-                  "block": "block10619c27-01e0-4663-aab3-b154efa37ae8"
+                  "block": "changes-to-total-pay-or-number-of-fortnightly-paid-employees"
                 }
               ],
               "skip_conditions": {
@@ -1491,10 +1522,10 @@
               }
             },
             {
-              "id": "blockd468f012-b7d6-4e2a-9953-7d5fb59fac92",
+              "id": "new-pay-rate-information-for-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questiond468f012-b7d6-4e2a-9953-7d5fb59fac92",
+                "id": "questionnew-pay-rate-information-for-fortnightly-paid-employees",
                 "title": "If your business has new pay rates, what is the percentage increase?",
                 "type": "General",
                 "answers": [
@@ -1521,8 +1552,8 @@
                     "q_code": "120f",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer1d93222d-e3c7-4cd7-8e3c-8ecd0a795409"
+                        "identifier": "answer1d93222d-e3c7-4cd7-8e3c-8ecd0a795409",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1530,6 +1561,7 @@
                   }
                 ]
               },
+              "page_title": "New pay rate information for fortnightly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -1543,10 +1575,10 @@
               }
             },
             {
-              "id": "block10619c27-01e0-4663-aab3-b154efa37ae8",
+              "id": "changes-to-total-pay-or-number-of-fortnightly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question10619c27-01e0-4663-aab3-b154efa37ae8",
+                "id": "questionchanges-to-total-pay-or-number-of-fortnightly-paid-employees",
                 "title": "What were the changes to the total pay or number of <strong>fortnightly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -1560,6 +1592,7 @@
                   }
                 ]
               },
+              "page_title": "Changes to total pay or number of fortnightly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -1585,23 +1618,25 @@
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
-      "id": "section9832eee5-f77a-4d30-87e7-80220310090c",
+      "id": "calendar-monthly-pay-section-summary",
       "title": "Calendar monthly pay",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "Calendar monthly pay section summary",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group9832eee5-f77a-4d30-87e7-80220310090c",
+          "id": "groupcalendar-monthly-pay-section-summary",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group9832eee5-f77a-4d30-87e7-80220310090c-introduction",
+              "id": "calendar-monthly-pay-section-introduction",
+              "page_title": "Calendar monthly pay section introduction",
               "content": {
                 "title": "Calendar monthly pay",
                 "contents": [
@@ -1622,10 +1657,10 @@
               }
             },
             {
-              "id": "blockbb7d7348-bfbd-4f60-a720-220fa4e6de82",
+              "id": "number-of-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questionbb7d7348-bfbd-4f60-a720-220fa4e6de82",
+                "id": "questionnumber-of-calendar-monthly-paid-employees",
                 "title": {
                   "text": "What was the <strong>number</strong> of <strong>calendar monthly</strong> paid employees paid in {period_str}?",
                   "placeholders": [
@@ -1655,7 +1690,7 @@
                     {
                       "list": [
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "employees in Northern Ireland"
                       ]
                     }
@@ -1676,13 +1711,14 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of calendar monthly paid employees"
             },
             {
-              "id": "block37657691-0f39-459a-b509-50611659acef",
+              "id": "total-gross-calendar-monthly-pay-paid-to-employees",
               "type": "Question",
               "question": {
-                "id": "question37657691-0f39-459a-b509-50611659acef",
+                "id": "questiontotal-gross-calendar-monthly-pay-paid-to-employees",
                 "title": {
                   "text": "What was the <strong>total gross calendar monthly pay</strong> paid to employees in {period_str}?",
                   "placeholders": [
@@ -1715,9 +1751,9 @@
                       "list": [
                         "any redundancy pay and pay in lieu of notice payments, taxable and non-taxable",
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "directors&#39; fees",
-                        "employer&#x2019;s National Insurance and contribution to pension schemes",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "directors’ fees",
+                        "employer’s National Insurance and contribution to pension schemes",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "signing on fees, for example, sporting professionals",
                         "accrued holiday pay",
                         "employees in Northern Ireland",
@@ -1738,13 +1774,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total gross calendar monthly pay paid to employees"
             },
             {
-              "id": "blockconfirmation-page-for-37657691-0f39-459a-b509-50611659acef",
+              "id": "confirmation-of-total-gross-calendar-monthly-pay-paid-to-employees",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-37657691-0f39-459a-b509-50611659acef",
+                "id": "questionconfirmation-of-total-gross-calendar-monthly-pay-paid-to-employees",
                 "title": {
                   "text": "The <strong>total gross calendar monthly pay</strong> paid to employees in {period_str} was <strong>&#xA3;0</strong>, is this correct?",
                   "placeholders": [
@@ -1760,7 +1797,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-37657691-0f39-459a-b509-50611659acef",
+                    "id": "answerconfirmation-answer-for-total-gross-calendar-monthly-pay-paid-to-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -1776,41 +1813,42 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of total gross calendar monthly pay paid to employees",
               "routing_rules": [
                 {
-                  "block": "block37657691-0f39-459a-b509-50611659acef",
+                  "block": "total-gross-calendar-monthly-pay-paid-to-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-37657691-0f39-459a-b509-50611659acef"
+                        "identifier": "answerconfirmation-answer-for-total-gross-calendar-monthly-pay-paid-to-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block5f882a69-50f1-4a71-ac4b-f594a5be29fe",
+                  "block": "significant-changes-to-total-pay-or-number-of-calendar-monthly-paid-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "block1fb595fa-05f7-4cc7-95b4-c4671e6abddf"
+                  "block": "other-amounts-paid-to-calendar-monthly-paid-employees"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                      "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -1818,22 +1856,22 @@
               }
             },
             {
-              "id": "block1fb595fa-05f7-4cc7-95b4-c4671e6abddf",
+              "id": "other-amounts-paid-to-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question1fb595fa-05f7-4cc7-95b4-c4671e6abddf",
+                "id": "questionother-amounts-paid-to-calendar-monthly-paid-employees",
                 "title": {
-                  "text": "Of the {answerd77a1a42_5fb5_4097_9e10_dee45c9b2ef7} paid to <strong>calendar monthly</strong> paid employees in {period_str}, what other amounts were paid?",
+                  "text": "Of the {total_gross_calendar_monthly_pay} paid to <strong>calendar monthly</strong> paid employees in {period_str}, what other amounts were paid?",
                   "placeholders": [
                     {
-                      "placeholder": "answerd77a1a42_5fb5_4097_9e10_dee45c9b2ef7",
+                      "placeholder": "total_gross_calendar_monthly_pay",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                              "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                              "source": "answers"
                             }
                           }
                         }
@@ -1873,8 +1911,8 @@
                     "q_code": "171",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1889,8 +1927,8 @@
                     "q_code": "181",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                        "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -1906,16 +1944,20 @@
                       "answer984778ad-9a9f-49cc-80f8-45aa785c6690"
                     ],
                     "conditions": ["less than", "equals"],
-                    "answer_id": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7"
+                    "value": {
+                      "identifier": "answerd77a1a42-5fb5-4097-9e10-dee45c9b2ef7",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Other amounts paid to calendar monthly paid employees"
             },
             {
-              "id": "block5f882a69-50f1-4a71-ac4b-f594a5be29fe",
+              "id": "significant-changes-to-total-pay-or-number-of-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question5f882a69-50f1-4a71-ac4b-f594a5be29fe",
+                "id": "questionsignificant-changes-to-total-pay-or-number-of-calendar-monthly-paid-employees",
                 "title": "Did any significant changes occur to the total pay or number of <strong>calendar monthly</strong> paid employees?",
                 "guidance": {
                   "contents": [
@@ -1935,10 +1977,10 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;a significant change&#39;",
+                    "title": "What we mean by ’a significant change’",
                     "contents": [
                       {
-                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business&#x2019;s figures compared with the previous month."
+                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business’s figures compared with the previous month."
                       },
                       {
                         "description": "Also consider whether there has been a significant change from the same month in the previous year."
@@ -1965,13 +2007,14 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significant changes to total pay or number of calendar monthly paid employees"
             },
             {
-              "id": "blocke00d504c-fd63-4082-a4d6-410bc3691338",
+              "id": "reasons-for-changes-in-total-pay-or-number-of-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questione00d504c-fd63-4082-a4d6-410bc3691338",
+                "id": "questionreasons-for-changes-in-total-pay-or-number-of-calendar-monthly-paid-employees",
                 "title": "What were the reasons for the changes to the total pay or number of <strong>calendar monthly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -2024,9 +2067,10 @@
                   }
                 ]
               },
+              "page_title": "Reasons for changes in total pay or number of calendar monthly paid employees",
               "routing_rules": [
                 {
-                  "block": "block601111a3-05ca-4dcc-ab3f-4d4d483e39a2",
+                  "block": "new-pay-rate-information-for-calendar-monthly-paid-employees",
                   "when": {
                     "all-in": [
                       ["Pay increase"],
@@ -2038,7 +2082,7 @@
                   }
                 },
                 {
-                  "block": "blockd9b1acdc-6d2f-41bb-b913-f6ab3402389b"
+                  "block": "changes-to-total-pay-or-number-of-calendar-monthly-paid-employees"
                 }
               ],
               "skip_conditions": {
@@ -2054,10 +2098,10 @@
               }
             },
             {
-              "id": "block601111a3-05ca-4dcc-ab3f-4d4d483e39a2",
+              "id": "new-pay-rate-information-for-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question601111a3-05ca-4dcc-ab3f-4d4d483e39a2",
+                "id": "questionnew-pay-rate-information-for-calendar-monthly-paid-employees",
                 "title": "If your business has new pay rates, what is the percentage increase?",
                 "type": "General",
                 "answers": [
@@ -2084,8 +2128,8 @@
                     "q_code": "220",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer50a8167d-581f-4548-8759-cfbf2e0af696"
+                        "identifier": "answer50a8167d-581f-4548-8759-cfbf2e0af696",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -2093,6 +2137,7 @@
                   }
                 ]
               },
+              "page_title": "New pay rate information for calendar monthly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -2106,10 +2151,10 @@
               }
             },
             {
-              "id": "blockd9b1acdc-6d2f-41bb-b913-f6ab3402389b",
+              "id": "changes-to-total-pay-or-number-of-calendar-monthly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questiond9b1acdc-6d2f-41bb-b913-f6ab3402389b",
+                "id": "questionchanges-to-total-pay-or-number-of-calendar-monthly-paid-employees",
                 "title": "What were the changes to the total pay or number of <strong>calendar monthly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -2123,6 +2168,7 @@
                   }
                 ]
               },
+              "page_title": "Changes to total pay or number of calendar monthly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -2148,23 +2194,25 @@
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
-      "id": "section9442599d-4b92-4c58-81f2-693ae40b7100",
+      "id": "four-weekly-pay-section-summary",
       "title": "Four weekly pay",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "Four weekly pay section summary",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group9442599d-4b92-4c58-81f2-693ae40b7100",
+          "id": "groupfour-weekly-pay-section-summary",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group9442599d-4b92-4c58-81f2-693ae40b7100-introduction",
+              "id": "four-weekly-pay-section-introduction",
+              "page_title": "Four weekly pay section introduction",
               "content": {
                 "title": "Four weekly pay",
                 "contents": [
@@ -2185,10 +2233,10 @@
               }
             },
             {
-              "id": "block239f5378-d772-46ea-ae35-0b12d3c887ce",
+              "id": "number-of-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question239f5378-d772-46ea-ae35-0b12d3c887ce",
+                "id": "questionnumber-of-four-weekly-paid-employees",
                 "title": {
                   "text": "What was the <strong>number</strong> of <strong>four weekly</strong> paid employees paid in {period_str}?",
                   "placeholders": [
@@ -2218,7 +2266,7 @@
                     {
                       "list": [
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "employees in Northern Ireland"
                       ]
                     }
@@ -2239,13 +2287,14 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of four weekly paid employees"
             },
             {
-              "id": "block205ec5ba-6004-4c87-b7a1-116964667f24",
+              "id": "total-gross-four-weekly-pay-paid-to-employees",
               "type": "Question",
               "question": {
-                "id": "question205ec5ba-6004-4c87-b7a1-116964667f24",
+                "id": "questiontotal-gross-four-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "What was the <strong>total gross four weekly pay</strong> paid to employees in {period_str}?",
                   "placeholders": [
@@ -2278,9 +2327,9 @@
                       "list": [
                         "any redundancy pay and pay in lieu of notice payments, taxable and non-taxable",
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "directors&#39; fees",
-                        "employer&#x2019;s National Insurance and contribution to pension schemes",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "directors’ fees",
+                        "employer’s National Insurance and contribution to pension schemes",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "signing on fees, for example, sporting professionals",
                         "accrued holiday pay",
                         "employees in Northern Ireland",
@@ -2301,13 +2350,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total gross four weekly pay paid to employees"
             },
             {
-              "id": "blockconfirmation-page-for-205ec5ba-6004-4c87-b7a1-116964667f24",
+              "id": "confirmation-of-total-gross-four-weekly-pay-paid-to-employees",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-205ec5ba-6004-4c87-b7a1-116964667f24",
+                "id": "questionconfirmation-of-total-gross-four-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "The <strong>total gross four weekly pay</strong> paid to employees in {period_str} was <strong>&#xA3;0</strong>, is this correct?",
                   "placeholders": [
@@ -2323,7 +2373,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-205ec5ba-6004-4c87-b7a1-116964667f24",
+                    "id": "answerconfirmation-answer-for-total-gross-four-weekly-pay-paid-to-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -2339,41 +2389,42 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of total gross four weekly pay paid to employees",
               "routing_rules": [
                 {
-                  "block": "block205ec5ba-6004-4c87-b7a1-116964667f24",
+                  "block": "total-gross-four-weekly-pay-paid-to-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-205ec5ba-6004-4c87-b7a1-116964667f24"
+                        "identifier": "answerconfirmation-answer-for-total-gross-four-weekly-pay-paid-to-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "blockeec63409-b030-4ea0-a894-34e50549397d",
+                  "block": "significant-changes-to-total-pay-or-number-of-four-weekly-paid-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "blockc35e2043-b393-47f6-983f-ebee763a2145"
+                  "block": "other-amounts-paid-to-four-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                      "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -2381,22 +2432,22 @@
               }
             },
             {
-              "id": "blockc35e2043-b393-47f6-983f-ebee763a2145",
+              "id": "other-amounts-paid-to-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questionc35e2043-b393-47f6-983f-ebee763a2145",
+                "id": "questionother-amounts-paid-to-four-weekly-paid-employees",
                 "title": {
-                  "text": "Of the {answerab7b97dc_541f_4b59_83f0_ca4867bdfcad} paid to <strong>four weekly</strong> paid employees in {period_str}, what other amounts were paid?",
+                  "text": "Of the {total_gross_four_weekly_pay} paid to <strong>four weekly</strong> paid employees in {period_str}, what other amounts were paid?",
                   "placeholders": [
                     {
-                      "placeholder": "answerab7b97dc_541f_4b59_83f0_ca4867bdfcad",
+                      "placeholder": "total_gross_four_weekly_pay",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                              "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                              "source": "answers"
                             }
                           }
                         }
@@ -2436,8 +2487,8 @@
                     "q_code": "172",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -2452,8 +2503,8 @@
                     "q_code": "182",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                        "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -2469,16 +2520,20 @@
                       "answer2e4a2094-e6f1-417b-ba3a-aee9a9689018"
                     ],
                     "conditions": ["less than", "equals"],
-                    "answer_id": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad"
+                    "value": {
+                      "identifier": "answerab7b97dc-541f-4b59-83f0-ca4867bdfcad",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Other amounts paid to four weekly paid employees"
             },
             {
-              "id": "blockeec63409-b030-4ea0-a894-34e50549397d",
+              "id": "significant-changes-to-total-pay-or-number-of-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questioneec63409-b030-4ea0-a894-34e50549397d",
+                "id": "questionsignificant-changes-to-total-pay-or-number-of-four-weekly-paid-employees",
                 "title": "Did any significant changes occur to the total pay or number of <strong>four weekly</strong> paid employees?",
                 "guidance": {
                   "contents": [
@@ -2498,10 +2553,10 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;a significant change&#39;",
+                    "title": "What we mean by ’a significant change’",
                     "contents": [
                       {
-                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business&#x2019;s figures compared with the previous month."
+                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business’s figures compared with the previous month."
                       },
                       {
                         "description": "Also consider whether there has been a significant change from the same month in the previous year."
@@ -2528,13 +2583,14 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significant changes to total pay or number of four weekly paid employees"
             },
             {
-              "id": "block0122b4d1-eff3-40f6-870f-751657f02059",
+              "id": "reasons-for-changes-to-total-pay-or-number-of-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question0122b4d1-eff3-40f6-870f-751657f02059",
+                "id": "questionreasons-for-changes-to-total-pay-or-number-of-four-weekly-paid-employees",
                 "title": "What were the reasons for the changes to the total pay or number of <strong>four weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -2587,9 +2643,10 @@
                   }
                 ]
               },
+              "page_title": "Reasons for changes to total pay or number of four weekly paid employees",
               "routing_rules": [
                 {
-                  "block": "blockc553342f-bbb1-4ae2-8b09-afe46ac2ae97",
+                  "block": "new-pay-rate-information-for-four-weekly-paid-employees",
                   "when": {
                     "all-in": [
                       ["Pay increase"],
@@ -2601,7 +2658,7 @@
                   }
                 },
                 {
-                  "block": "blockf7c4fb33-79b0-4613-a30e-6abe10351ae6"
+                  "block": "changes-to-total-pay-or-number-of-four-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
@@ -2617,10 +2674,10 @@
               }
             },
             {
-              "id": "blockc553342f-bbb1-4ae2-8b09-afe46ac2ae97",
+              "id": "new-pay-rate-information-for-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questionc553342f-bbb1-4ae2-8b09-afe46ac2ae97",
+                "id": "questionnew-pay-rate-information-for-four-weekly-paid-employees",
                 "title": "If your business has new pay rates, what is the percentage increase?",
                 "type": "General",
                 "answers": [
@@ -2647,8 +2704,8 @@
                     "q_code": "220w4",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer82db87fd-dc48-4385-8eee-e49d1fc37c65"
+                        "identifier": "answer82db87fd-dc48-4385-8eee-e49d1fc37c65",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -2656,6 +2713,7 @@
                   }
                 ]
               },
+              "page_title": "New pay rate information for four weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -2669,10 +2727,10 @@
               }
             },
             {
-              "id": "blockf7c4fb33-79b0-4613-a30e-6abe10351ae6",
+              "id": "changes-to-total-pay-or-number-of-four-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questionf7c4fb33-79b0-4613-a30e-6abe10351ae6",
+                "id": "questionchanges-to-total-pay-or-number-of-four-weekly-paid-employees",
                 "title": "What were the changes to the total pay or number of <strong>four weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -2686,6 +2744,7 @@
                   }
                 ]
               },
+              "page_title": "Changes to total pay or number of four weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -2711,23 +2770,25 @@
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
-      "id": "section9747ed13-704c-46f6-8d17-3655314314ca",
+      "id": "five-weekly-pay-section-summary",
       "title": "Five weekly pay",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "Five weekly pay section summary",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
-          "id": "group9747ed13-704c-46f6-8d17-3655314314ca",
+          "id": "groupfive-weekly-pay-section-summary",
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "group9747ed13-704c-46f6-8d17-3655314314ca-introduction",
+              "id": "five-weekly-pay-section-introduction",
+              "page_title": "Five weekly pay section introduction",
               "content": {
                 "title": "Five weekly pay",
                 "contents": [
@@ -2748,10 +2809,10 @@
               }
             },
             {
-              "id": "blockf87befb8-fc95-4ad7-b041-310100116dd4",
+              "id": "number-of-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questionf87befb8-fc95-4ad7-b041-310100116dd4",
+                "id": "questionnumber-of-five-weekly-paid-employees",
                 "title": {
                   "text": "What was the <strong>number</strong> of <strong>five weekly</strong> paid employees paid in {period_str}?",
                   "placeholders": [
@@ -2781,7 +2842,7 @@
                     {
                       "list": [
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "employees in Northern Ireland"
                       ]
                     }
@@ -2802,13 +2863,14 @@
                     "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of five weekly paid employees"
             },
             {
-              "id": "block4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+              "id": "total-gross-five-weekly-pay-paid-to-employees",
               "type": "Question",
               "question": {
-                "id": "question4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+                "id": "questiontotal-gross-five-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "What was the <strong>total gross five weekly pay</strong> paid to employees in {period_str}?",
                   "placeholders": [
@@ -2841,9 +2903,9 @@
                       "list": [
                         "any redundancy pay and pay in lieu of notice payments, taxable and non-taxable",
                         "trainees or apprentices that were not paid through your payroll for the relevant period",
-                        "directors&#39; fees",
-                        "employer&#x2019;s National Insurance and contribution to pension schemes",
-                        "employees working abroad unless paid directly from this business&#x2019;s GB payroll",
+                        "directors’ fees",
+                        "employer’s National Insurance and contribution to pension schemes",
+                        "employees working abroad unless paid directly from this business’s GB payroll",
                         "signing on fees, for example, sporting professionals",
                         "accrued holiday pay",
                         "employees in Northern Ireland",
@@ -2864,13 +2926,14 @@
                     "currency": "GBP"
                   }
                 ]
-              }
+              },
+              "page_title": "Total gross five weekly pay paid to employees"
             },
             {
-              "id": "blockconfirmation-page-for-4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+              "id": "confirmation-of-total-gross-five-weekly-pay-paid-to-employees",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+                "id": "questionconfirmation-of-total-gross-five-weekly-pay-paid-to-employees",
                 "title": {
                   "text": "The <strong>total gross five weekly pay</strong> paid to employees in {period_str} was <strong>&#xA3;0</strong>, is this correct?",
                   "placeholders": [
@@ -2886,7 +2949,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+                    "id": "answerconfirmation-answer-for-total-gross-five-weekly-pay-paid-to-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -2902,41 +2965,42 @@
                   }
                 ]
               },
+              "page_title": "Confirmation of total gross five weekly pay paid to employees",
               "routing_rules": [
                 {
-                  "block": "block4c1c59b1-2a3a-43f7-859b-c95f67312fa4",
+                  "block": "total-gross-five-weekly-pay-paid-to-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-4c1c59b1-2a3a-43f7-859b-c95f67312fa4"
+                        "identifier": "answerconfirmation-answer-for-total-gross-five-weekly-pay-paid-to-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block67abd7a8-49e0-4c7a-95fc-6f57d8f16540",
+                  "block": "significant-changes-to-total-pay-or-number-of-five-weekly-paid-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "block53c7d7a0-099b-4f42-8efb-b4fc4fd2cdf0"
+                  "block": "other-amounts-paid-to-five-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                      "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -2944,22 +3008,22 @@
               }
             },
             {
-              "id": "block53c7d7a0-099b-4f42-8efb-b4fc4fd2cdf0",
+              "id": "other-amounts-paid-to-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question53c7d7a0-099b-4f42-8efb-b4fc4fd2cdf0",
+                "id": "questionother-amounts-paid-to-five-weekly-paid-employees",
                 "title": {
-                  "text": "Of the {answer7f095ddc_e4bd_403d_9cc0_50788063e778} paid to <strong>five weekly paid employees</strong> in {period_str}, what other amounts were paid?",
+                  "text": "Of the {total_gross_five_weekly_pay} paid to <strong>five weekly paid employees</strong> in {period_str}, what other amounts were paid?",
                   "placeholders": [
                     {
-                      "placeholder": "answer7f095ddc_e4bd_403d_9cc0_50788063e778",
+                      "placeholder": "total_gross_five_weekly_pay",
                       "transforms": [
                         {
                           "transform": "format_currency",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                              "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                              "source": "answers"
                             }
                           }
                         }
@@ -2999,8 +3063,8 @@
                     "q_code": "173",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -3015,8 +3079,8 @@
                     "q_code": "183",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                        "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -3032,16 +3096,20 @@
                       "answer89c5abc9-7da4-4ba4-84bb-e88350bed8e4"
                     ],
                     "conditions": ["less than", "equals"],
-                    "answer_id": "answer7f095ddc-e4bd-403d-9cc0-50788063e778"
+                    "value": {
+                      "identifier": "answer7f095ddc-e4bd-403d-9cc0-50788063e778",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Other amounts paid to five weekly paid employees"
             },
             {
-              "id": "block67abd7a8-49e0-4c7a-95fc-6f57d8f16540",
+              "id": "significant-changes-to-total-pay-or-number-of-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question67abd7a8-49e0-4c7a-95fc-6f57d8f16540",
+                "id": "questionsignificant-changes-to-total-pay-or-number-of-five-weekly-paid-employees",
                 "title": "Did any significant changes occur to the total pay or number of <strong>five weekly</strong> paid employees?",
                 "guidance": {
                   "contents": [
@@ -3061,10 +3129,10 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;a significant change&#39;",
+                    "title": "What we mean by ’a significant change’",
                     "contents": [
                       {
-                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business&#x2019;s figures compared with the previous month."
+                        "description": "This is dependent on your own interpretation of whether there has been a significant change in the business’s figures compared with the previous month."
                       },
                       {
                         "description": "Also consider whether there has been a significant change from the same month in the previous year."
@@ -3091,13 +3159,14 @@
                     ]
                   }
                 ]
-              }
+              },
+              "page_title": "Significant changes to total pay or number of five weekly paid employees"
             },
             {
-              "id": "block16aa95d8-c5dd-42bb-b4a9-5b0e442ea380",
+              "id": "reasons-for-changes-to-total-pay-or-number-of-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question16aa95d8-c5dd-42bb-b4a9-5b0e442ea380",
+                "id": "questionreasons-for-changes-to-total-pay-or-number-of-five-weekly-paid-employees",
                 "title": "What were the reasons for the changes to the total pay or number of <strong>five weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -3150,9 +3219,10 @@
                   }
                 ]
               },
+              "page_title": "Reasons for changes to total pay or number of five weekly paid employees",
               "routing_rules": [
                 {
-                  "block": "block0b24b72c-b7ae-4dd3-a450-c6c1b6d2cbf1",
+                  "block": "new-pay-rate-information-for-five-weekly-paid-employees",
                   "when": {
                     "all-in": [
                       ["Pay increase"],
@@ -3164,7 +3234,7 @@
                   }
                 },
                 {
-                  "block": "blockd2c57075-9594-4a5c-8fca-bc5973491f35"
+                  "block": "changes-to-total-pay-or-number-of-five-weekly-paid-employees"
                 }
               ],
               "skip_conditions": {
@@ -3180,10 +3250,10 @@
               }
             },
             {
-              "id": "block0b24b72c-b7ae-4dd3-a450-c6c1b6d2cbf1",
+              "id": "new-pay-rate-information-for-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "question0b24b72c-b7ae-4dd3-a450-c6c1b6d2cbf1",
+                "id": "questionnew-pay-rate-information-for-five-weekly-paid-employees",
                 "title": "If your business has new pay rates, what is the percentage increase?",
                 "type": "General",
                 "answers": [
@@ -3210,8 +3280,8 @@
                     "q_code": "220w5",
                     "maximum": {
                       "value": {
-                        "source": "answers",
-                        "identifier": "answerd4b1c6ce-17f6-4ea9-8b98-c21f36d44efa"
+                        "identifier": "answerd4b1c6ce-17f6-4ea9-8b98-c21f36d44efa",
+                        "source": "answers"
                       },
                       "exclusive": false
                     },
@@ -3219,6 +3289,7 @@
                   }
                 ]
               },
+              "page_title": "New pay rate information for five weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -3232,10 +3303,10 @@
               }
             },
             {
-              "id": "blockd2c57075-9594-4a5c-8fca-bc5973491f35",
+              "id": "changes-to-total-pay-or-number-of-five-weekly-paid-employees",
               "type": "Question",
               "question": {
-                "id": "questiond2c57075-9594-4a5c-8fca-bc5973491f35",
+                "id": "questionchanges-to-total-pay-or-number-of-five-weekly-paid-employees",
                 "title": "What were the changes to the total pay or number of <strong>five weekly</strong> paid employees?",
                 "type": "General",
                 "answers": [
@@ -3249,6 +3320,7 @@
                   }
                 ]
               },
+              "page_title": "Changes to total pay or number of five weekly paid employees",
               "skip_conditions": {
                 "when": {
                   "in": [
@@ -3274,15 +3346,15 @@
             }
           ]
         }
-      },
-      "summary": {
-        "show_on_completion": true,
-        "collapsible": false
       }
     },
     {
-      "id": "sectione30dd07c-2f93-4605-bd45-eb821be27e9e",
+      "id": "e30dd07c-2f93-4605-bd45-eb821be27e9e",
       "title": "General comments",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -3290,7 +3362,8 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "groupe30dd07c-2f93-4605-bd45-eb821be27e9e-introduction",
+              "id": "general-comments",
+              "page_title": "General comments",
               "content": {
                 "title": "General comments",
                 "contents": [
@@ -3301,11 +3374,36 @@
               }
             },
             {
-              "id": "block201ab4ad-4a7d-43bb-8bb3-a0d4d310f20c",
+              "id": "further-details-and-commentary",
               "type": "Question",
               "question": {
-                "id": "question201ab4ad-4a7d-43bb-8bb3-a0d4d310f20c",
-                "title": "Please write any additional comments you would like to make on the information you have provided",
+                "id": "questionfurther-details-and-commentary",
+                "title": "Please provide any further details that will help us to understand your figures and tell an industry story",
+                "description": [
+                  "<p>Explain any changes in your figures from your previous return, if applicable. If you provide comments, we are less likely to contact you with data queries. This question is optional.</p><p><strong>Make sure you continue to the next page and select ’submit answers’ at the bottom.</strong></p>"
+                ],
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "<strong>Please include details of:</strong>"
+                    },
+                    {
+                      "list": ["any zero figures"]
+                    },
+                    {
+                      "description": "Any impacts upon your data resulting from changes to your business. For example:"
+                    },
+                    {
+                      "list": [
+                        "business structure changes",
+                        "pay awards, bonuses and arrears",
+                        "changes in staffing levels",
+                        "seasonal work",
+                        "redundancies"
+                      ]
+                    }
+                  ]
+                },
                 "type": "General",
                 "answers": [
                   {
@@ -3317,42 +3415,31 @@
                     "max_length": 2000
                   }
                 ]
-              }
+              },
+              "page_title": "Further details and commentary"
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      }
+      ]
     }
   ],
-  "theme": "default",
+  "theme": "business",
   "navigation": {
     "visible": false
   },
   "metadata": [
     {
-      "name": "user_id",
-      "type": "string"
-    },
-    {
-      "name": "period_id",
-      "type": "string"
-    },
-    {
       "name": "ru_name",
-      "type": "string"
-    },
-    {
-      "name": "ru_ref",
       "type": "string"
     },
     {
       "name": "trad_as",
       "type": "string",
       "optional": true
+    },
+    {
+      "name": "period_id",
+      "type": "string"
     },
     {
       "name": "ref_p_start_date",
@@ -3365,6 +3452,14 @@
     {
       "name": "period_str",
       "type": "string"
+    },
+    {
+      "name": "ru_ref",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
     }
   ],
   "post_submission": {
@@ -3376,7 +3471,7 @@
           "description": "Your response will help inform decision-makers how best to support the UK population and economy at this challenging time."
         },
         {
-          "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
+          "description": "<a href=\"https://www.ons.gov.uk/surveys\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
         }
       ]
     }
