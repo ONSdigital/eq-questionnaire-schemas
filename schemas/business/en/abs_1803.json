@@ -5592,10 +5592,17 @@
                   "placeholders": [
                     {
                       "placeholder": "value_of_acquisitions_from_construction_work_machinery_and_equipment_and_intellectual_property_assets",
-                      "value": {
-                        "identifier": "total-value-of-work-carried-out-by-own-staff-calculation",
-                        "source": "calculated_summary"
-                      }
+                      "transforms": [
+                        {
+                          "transform": "format_currency",
+                          "arguments": {
+                            "number": {
+                              "identifier": "total-value-of-work-carried-out-by-own-staff-calculation",
+                              "source": "calculated_summary"
+                            }
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
