@@ -84,7 +84,6 @@ def validate_schema(schema_path):
 
 def main():
     # pylint: disable=broad-exception-caught
-    error = False
     passed = 0
     failed = 0
 
@@ -120,13 +119,13 @@ def main():
                         f"\033[31mHTTP Status @ /validate: {result_response}\033[0m"
                     )
                     logging.error(f"\033[31mHTTP Status: {formatted_json}\033[0m")
-                    error = True
                     failed += 1
             except Exception as e:
                 logging.error(f"\033[31mError processing {schema}: {e}\033[0m")
+                failed += 1
 
     logging.info(f"\033[32m{passed} passed\033[0m - \033[31m{failed} failed\033[0m")
-    if error:
+    if passed != len(schemas):
         sys.exit(1)
 
 
