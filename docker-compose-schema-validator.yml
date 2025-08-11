@@ -3,7 +3,7 @@ version: '3'
 
 services:
   ajv-validator:
-    image: europe-west2-docker.pkg.dev/ons-eq-ci/docker-images/eq-questionnaire-validator-ajv:${TAG:-latest}
+    image: europe-west2-docker.pkg.dev/ons-eq-ci/docker-images/eq-questionnaire-validator-ajv:${TAG}
     networks:
       - eq-schema
     ports:
@@ -15,7 +15,7 @@ services:
       retries: 20
 
   py-validator:
-    image: europe-west2-docker.pkg.dev/ons-eq-ci/docker-images/eq-questionnaire-validator:${TAG:-latest}
+    image: europe-west2-docker.pkg.dev/ons-eq-ci/docker-images/eq-questionnaire-validator:${TAG}
     networks:
       - eq-schema
     environment:
