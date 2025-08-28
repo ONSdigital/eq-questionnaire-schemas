@@ -22,7 +22,6 @@ python --version
 Authenticate to make sure Docker can pull from GAR
 ```shell
 gcloud auth login
-gcloud auth application-default login
 ```
 
 ### Install Poetry
