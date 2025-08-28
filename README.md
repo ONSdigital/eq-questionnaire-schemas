@@ -17,6 +17,12 @@ Check the installed version of Python is correct with:
 python --version
 ```
 
+### Authenticate
+
+Authenticate to make sure Docker can pull from GAR
+```shell
+gcloud auth login
+```
 
 ### Install Poetry
 
