@@ -178,7 +178,7 @@
                     {
                       "list": [
                         "The information you provide contributes to Gross Domestic Product (GDP).",
-                        "The information you supply is used to compile the Producer Price Indices, which are a series of economic indicators that measure the price movement of goods bought and sold by UK manufacturers. They help monitor and measure inflation and are used in compiling the National Accounts."
+                        "The information you supply is used to compile the Export Price Indices, which are a series of economic indicators that measure the price movement of goods exported by UK manufacturers. They help monitor and measure inflation and are used in compiling the National Accounts."
                       ]
                     }
                   ]
@@ -628,7 +628,7 @@
                 "answers": [
                   {
                     "id": "answerd6338239-3cea-4003-8a30-a8123c9c95c5",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "options": [
                       {
@@ -841,14 +841,14 @@
                             "be to a specific customer or an agent",
                             "reflects orders placed in that month",
                             "compare <strong>like with like</strong> each month",
-                            "be <strong>representative</strong> of current exports."
+                            "be <strong>representative</strong> of current exports"
                           ]
                         },
                         {
                           "description": "If your business has not sold this product in the specified month, enter the previous price."
                         },
                         {
-                          "description": "Enter the price without any currency symbol. For example, for Pounds Sterling, enter ’1.23’ for ’&#xA3;1.23’. If applicable for the product, provide figures up to 4 decimal places."
+                          "description": "Enter the price without any currency symbol. For example, for Euro, enter ’1.23’ for ’&#x20AC;1.23’. If applicable for the product, provide figures up to 4 decimal places."
                         }
                       ]
                     }
@@ -1050,6 +1050,9 @@
               "question": {
                 "id": "questionproduct-comments",
                 "title": "Please provide any further details that will help us to understand your figures",
+                "description": [
+                  "<p>If you provide comments, we are less likely to contact you with data queries. This question is optional.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
@@ -1068,7 +1071,7 @@
                   }
                 ]
               },
-              "page_title": "Product [comments"
+              "page_title": "Product comments"
             }
           ]
         }
@@ -1171,10 +1174,7 @@
     "guidance": {
       "contents": [
         {
-          "description": "Your response will help inform decision-makers how best to support the UK population and economy at this challenging time."
-        },
-        {
-          "description": "<a href=\"https://www.ons.gov.uk/surveys\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about how we use this data</a>"
+          "description": "<a href=\"https://www.ons.gov.uk/surveys\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
         }
       ]
     }
