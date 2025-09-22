@@ -229,6 +229,255 @@
           "id": "group9e5885db-09d9-4db5-939d-6ac3958995e1",
           "blocks": [
             {
+              "type": "Interstitial",
+              "id": "product-details-and-price-quotes",
+              "page_title": "Product details and price quotes",
+              "content": {
+                "title": "Product details and price quotes",
+                "contents": [
+                  {
+                    "description": "In this section you will be asked about the following <strong>product imported</strong> into the United Kingdom by your business:"
+                  },
+                  {
+                    "description": {
+                      "text": "<strong>ITEM NUMBER</strong>: {item_itemnumber}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemnumber",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_number"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "<strong>SPECIFICATION:</strong>"
+                  },
+                  {
+                    "description": {
+                      "text": "{item_itemspecification1}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemspecification1",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_specification_1"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_itemspecification2}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemspecification2",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_specification_2"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_itemspecification3}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemspecification3",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_specification_3"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_itemspecification4}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemspecification4",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_specification_4"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_itemspecification5}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_itemspecification5",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["item_specification_5"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "<strong>UNIT OF SALE:</strong>"
+                  },
+                  {
+                    "description": {
+                      "text": "{item_unitofsale}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_unitofsale",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["unit_of_sale"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "<strong>TERMS OF SALE:</strong>"
+                  },
+                  {
+                    "description": {
+                      "text": "{item_termsofsale1}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_termsofsale1",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["terms_of_sale_1"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_termsofsale2}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_termsofsale2",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["terms_of_sale_2"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_termsofsale3}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_termsofsale3",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["terms_of_sale_3"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": {
+                      "text": "{item_termsofsale4}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_termsofsale4",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["terms_of_sale_4"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "<strong>CURRENCY:</strong>"
+                  },
+                  {
+                    "description": {
+                      "text": "{item_currency}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_currency",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["currency"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "<strong>COUNTRY OF ORIGIN:</strong>"
+                  },
+                  {
+                    "description": {
+                      "text": "{item_countryoforigin}",
+                      "placeholders": [
+                        {
+                          "placeholder": "item_countryoforigin",
+                          "value": {
+                            "source": "supplementary_data",
+                            "identifier": "item",
+                            "selectors": ["country_of_origin"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "description": "You will be asked to check the information for any errors and provide details of any changes."
+                  },
+                  {
+                    "description": "You will also be asked to provide the following information:"
+                  },
+                  {
+                    "list": [
+                      {
+                        "text": "price paid for the product on, or as close as possible to, the 1st of {currentmonth}",
+                        "placeholders": [
+                          {
+                            "placeholder": "currentmonth",
+                            "value": {
+                              "source": "supplementary_data",
+                              "identifier": "current_month"
+                            }
+                          }
+                        ]
+                      },
+                      "any further details that will help us to understand your figures"
+                    ]
+                  },
+                  {
+                    "description": "All the products listed should be <strong>imported</strong> by your business into the United Kingdom<strong>.</strong>"
+                  }
+                ]
+              }
+            },
+            {
               "id": "confirmation-of-product-details",
               "type": "Question",
               "question": {
@@ -382,7 +631,7 @@
                 "answers": [
                   {
                     "id": "answerc7fcba68-57cc-4b8c-9842-ea049341290f",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Radio",
                     "options": [
                       {
@@ -600,7 +849,7 @@
                           "description": "If your business has not <strong>imported </strong>this product in the specified month, enter the previous price."
                         },
                         {
-                          "description": "Enter the price without any currency symbol. For example, for Pounds Sterling, enter ’1.23’ for ’&#xA3;1.23’. If applicable for the product, provide figures up to 4 decimal places."
+                          "description": "Enter the price without any currency symbol. For example, for Euro, enter ’1.23’ for ’&#x20AC;1.23’. If applicable for the product, provide figures up to 4 decimal places."
                         }
                       ]
                     }
@@ -800,6 +1049,9 @@
               "question": {
                 "id": "questionproduct-comments",
                 "title": "Please provide any further details that will help us to understand your figures",
+                "description": [
+                  "<p>If you provide comments, we are less likely to contact you with data queries. This question is optional.</p>"
+                ],
                 "guidance": {
                   "contents": [
                     {
