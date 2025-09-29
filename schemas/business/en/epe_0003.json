@@ -33,21 +33,14 @@
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
+                    "text": "You are completing this for {trad_as} ({ru_name})",
                     "placeholders": [
                       {
-                        "placeholder": "conditional_trad_as",
-                        "transforms": [
-                          {
-                            "arguments": {
-                              "trad_as": {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              }
-                            },
-                            "transform": "conditional_trad_as"
-                          }
-                        ]
+                        "placeholder": "trad_as",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "trad_as"
+                        }
                       },
                       {
                         "placeholder": "ru_name",
@@ -114,7 +107,7 @@
                 "title": "Information you need",
                 "contents": [
                   {
-                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/surveyofenvironmentalprotectionexpenditure\"target=\"_blank\"rel=\"noopener noreferrer\">View the questions before you start the survey (this link opens in a new tab)</a>"
+                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/surveyofenvironmentalprotectionexpenditure\" target=\"_blank\" rel=\"noopener noreferrer\">View the questions before you start the survey (this link opens in a new tab)</a>"
                   }
                 ],
                 "questions": [
@@ -138,7 +131,7 @@
                       },
                       {
                         "list": [
-                          "operating or running costs to external organisations and the business&#39;s own &#39;in-house&#39; environment management and control activities",
+                          "operating or running costs to external organisations and the business’s own ’in-house’ environment management and control activities",
                           "the purchase price of capital goods, to be recorded for the year in which they were capitalised"
                         ]
                       },
@@ -213,7 +206,7 @@
                   },
                   {
                     "list": [
-                      "operating or running costs to external organisations and the business&#39;s own &#39;in-house&#39; environment management and control activities",
+                      "operating or running costs to external organisations and the business’s own ’in-house’ environment management and control activities",
                       "the purchase price of capital goods, to be recorded for the year in which they were capitalised"
                     ]
                   },
@@ -277,7 +270,7 @@
                   ]
                 },
                 "description": [
-                  "<p>Select &#39;no&#39; if you can only provide figures for part of this period or if you need to provide figures for a different 12 month period.</p>"
+                  "<p>Select ’no’ if you can only provide figures for part of this period or if you need to provide figures for a different 12 month period.</p>"
                 ],
                 "type": "General",
                 "answers": [
@@ -325,7 +318,7 @@
                 "id": "questionalternative-reporting-period-dates",
                 "title": "What dates are you reporting for?",
                 "description": [
-                  "<p>If you can report for a full 12 months, provide dates that end between <strong>6 April 2022</strong> and <strong>5 April 2023</strong>.</p><p>If you traded for only part of the year, please provide the dates for the period in which you were trading.</p>"
+                  "<p>If you can report for a full 12 months, provide dates that end between <strong>1 April 2024</strong> and <strong>31 March 2025</strong>.</p><p>If you traded for only part of the year, please provide the dates for the period in which you were trading.</p>"
                 ],
                 "type": "DateRange",
                 "answers": [
@@ -343,7 +336,7 @@
                     "label": "To",
                     "q_code": "21",
                     "maximum": {
-                      "value": "2023-04-05",
+                      "value": "2025-03-31",
                       "offset_by": {
                         "days": 0
                       }
@@ -385,7 +378,7 @@
                     "description": "This section asks for information about payments to external organisations for environmental protection services."
                   },
                   {
-                    "description": "<strong>What we mean by &#39;external operating expenditure&#39;</strong>"
+                    "description": "<strong>What we mean by ’external operating expenditure’</strong>"
                   },
                   {
                     "description": "This refers to payments made to external organisations for the treatment, disposal or investigation of solid waste, waste water, air and others. Exclude any capital expenditure."
@@ -561,7 +554,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Value of external operating costs",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "32",
                     "decimal_places": 2,
                     "currency": "GBP"
@@ -595,12 +588,12 @@
                   ]
                 },
                 "description": [
-                  "<p>If you had no expenditure enter &#39;0&#39;. Do not leave blank.</p>"
+                  "<p>If you had no expenditure enter ’0’. Do not leave blank.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000"
+                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000"
                     }
                   ]
                 },
@@ -722,13 +715,13 @@
                     "description": "This section asks for information about in-house expenditure associated with the operation of pollution control or abatement equipment."
                   },
                   {
-                    "description": "<strong>What we mean by &#39;in-house&#39;</strong>"
+                    "description": "<strong>What we mean by ’in-house’</strong>"
                   },
                   {
-                    "description": "This refers to operating costs of the business&#39;s own environment management and control activities."
+                    "description": "This refers to operating costs of the business’s own environment management and control activities."
                   },
                   {
-                    "description": "<strong>What we mean by &#39;abatement equipment&#39; </strong>"
+                    "description": "<strong>What we mean by ’abatement equipment’ </strong>"
                   },
                   {
                     "description": "This refers to equipment that is used for the reduction in degree or intensity of pollution."
@@ -814,16 +807,16 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Exclude operating costs paid to external organisations as these should be reported in the section &#39;External Operating Expenditure&#39;"
+                      "description": "Exclude operating costs paid to external organisations as these should be reported in the section ’External Operating Expenditure’"
                     }
                   ]
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;in-house operating costs&#39;",
+                    "title": "What we mean by ’in-house operating costs’",
                     "contents": [
                       {
-                        "description": "This refers to the operating or running costs of the business&#39;s own environmental management and control activities."
+                        "description": "This refers to the operating or running costs of the business’s own environmental management and control activities."
                       },
                       {
                         "description": "<strong>For example:</strong>"
@@ -882,20 +875,20 @@
               "type": "Question",
               "question": {
                 "id": "questionin-house-operating-costs-for-all-environmental-protection-facilities-and-environmental-management",
-                "title": "For the reporting period, what was the value of your business&#39;s in-house operating costs for all environmental protection facilities and environmental management?",
+                "title": "For the reporting period, what was the value of your business’s in-house operating costs for all environmental protection facilities and environmental management?",
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Exclude operating costs paid to external organisations as these should be reported in the section &#39;External Operating Expenditure&#39;"
+                      "description": "Exclude operating costs paid to external organisations as these should be reported in the section ’External Operating Expenditure’"
                     }
                   ]
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;in-house operating costs&#39;",
+                    "title": "What we mean by ’in-house operating costs’",
                     "contents": [
                       {
-                        "description": "This refers to the operating or running costs of the business&#39;s own environmental management and control activities."
+                        "description": "This refers to the operating or running costs of the business’s own environmental management and control activities."
                       },
                       {
                         "description": "<strong>For example:</strong>"
@@ -917,7 +910,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Value of in-house operating costs",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "31",
                     "decimal_places": 2,
                     "currency": "GBP"
@@ -951,12 +944,12 @@
                   ]
                 },
                 "description": [
-                  "<p>If you had no expenditure enter &#39;0&#39;. Do not leave blank.</p>"
+                  "<p>If you had no expenditure enter ’0’. Do not leave blank.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000"
+                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000"
                     }
                   ]
                 },
@@ -1078,7 +1071,7 @@
                     "description": "This section asks for information about fixed assets purchased for environmental protection purposes, including end-of-pipe equipment, integrated equipment and additional costs of environmentally friendly processes."
                   },
                   {
-                    "description": "<strong>What we mean by &#39;capital expenditure&#39;</strong>"
+                    "description": "<strong>What we mean by ’capital expenditure’</strong>"
                   },
                   {
                     "description": "This refers to the purchase of fixed assets, which are items used repeatedly to facilitate production or provide services, for more than one year."
@@ -1163,7 +1156,7 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;end-of-pipe equipment&#39;",
+                    "title": "What we mean by ’end-of-pipe equipment’",
                     "contents": [
                       {
                         "description": "This refers to equipment used to collect and remove pollutants, such as air emissions, effluents, and solid waste, after their creation."
@@ -1218,7 +1211,7 @@
               "type": "Question",
               "question": {
                 "id": "questionvalue-of-expenditure-on-end-of-pipe-pollution-control-equipment",
-                "title": "For the reporting period, what was your business&#39;s capital expenditure on <strong>end-of-pipe pollution control equipment</strong>?",
+                "title": "For the reporting period, what was your business’s capital expenditure on <strong>end-of-pipe pollution control equipment</strong>?",
                 "guidance": {
                   "contents": [
                     {
@@ -1240,7 +1233,7 @@
                 },
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;end-of-pipe pollution control equipment&#39;",
+                    "title": "What we mean by ’end-of-pipe pollution control equipment’",
                     "contents": [
                       {
                         "description": "This refers to equipment used to collect and remove pollutants, such as air emissions, effluents, and solid waste, after their creation."
@@ -1258,7 +1251,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Capital expenditure on end-of-pipe pollution control equipment",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "51",
                     "decimal_places": 2,
                     "currency": "GBP"
@@ -1273,10 +1266,10 @@
               "question": {
                 "id": "questionexpenditure-on-end-of-pipe-pollution-control-equipment-breakdown",
                 "title": {
-                  "text": "Of the {_capital_expenditure_on_endofpipe_pollution_control_equipment}, how much related to the following?",
+                  "text": "Of the {capital_expenditure_on_endofpipe_pollution_control_equipment}, how much related to the following?",
                   "placeholders": [
                     {
-                      "placeholder": "_capital_expenditure_on_endofpipe_pollution_control_equipment",
+                      "placeholder": "capital_expenditure_on_endofpipe_pollution_control_equipment",
                       "transforms": [
                         {
                           "transform": "format_currency",
@@ -1292,12 +1285,12 @@
                   ]
                 },
                 "description": [
-                  "<p>If you had no expenditure enter &#39;0&#39;. Do not leave blank.</p>"
+                  "<p>If you had no expenditure enter ’0’. Do not leave blank.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000"
+                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000"
                     }
                   ]
                 },
@@ -1371,13 +1364,13 @@
                 ],
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;integrated equipment&#39;",
+                    "title": "What we mean by ’integrated equipment’",
                     "contents": [
                       {
                         "description": "This relates to new or modified production facilities, which have been designed so that environmental protection is an integral part of the process."
                       },
                       {
-                        "description": "For example, the purchase of machinery or equipment that is built into the business&#x2019;s processes and designed to minimise production waste."
+                        "description": "For example, the purchase of machinery or equipment that is built into the business’s processes and designed to minimise production waste."
                       }
                     ]
                   }
@@ -1426,19 +1419,19 @@
               "type": "Question",
               "question": {
                 "id": "questionvalue-of-expenditure-on-integrated-equipment",
-                "title": "For the reporting period, what was your business&#39;s capital expenditure on integrated equipment?",
+                "title": "For the reporting period, what was your business’s capital expenditure on integrated equipment?",
                 "description": [
                   "<p>Most new integrated processes are more efficient and contribute to reducing pollution and the use of raw materials in some way.</p>"
                 ],
                 "definitions": [
                   {
-                    "title": "What we mean by &#39;integrated equipment&#39;",
+                    "title": "What we mean by ’integrated equipment’",
                     "contents": [
                       {
                         "description": "This relates to new or modified production facilities, which have been designed so that environmental protection is an integral part of the process."
                       },
                       {
-                        "description": "For example, the purchase of machinery or equipment that is built into the business&#x2019;s processes and designed to minimise production waste."
+                        "description": "For example, the purchase of machinery or equipment that is built into the business’s processes and designed to minimise production waste."
                       }
                     ]
                   }
@@ -1450,7 +1443,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Capital expenditure on integrated equipment",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "71",
                     "decimal_places": 2,
                     "currency": "GBP"
@@ -1554,7 +1547,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Additional cost of environmentally friendly integrated equipment",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "81",
                     "maximum": {
                       "value": {
@@ -1595,12 +1588,12 @@
                   ]
                 },
                 "description": [
-                  "<p>If you had no expenditure enter &#39;0&#39;. Do not leave blank.</p>"
+                  "<p>If you had no expenditure enter ’0’. Do not leave blank.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000"
+                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000"
                     }
                   ]
                 },
@@ -1863,7 +1856,7 @@
                     "mandatory": true,
                     "type": "Currency",
                     "label": "Value of proceeds from disposals of capital assets for environmental protection",
-                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000.",
+                    "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
                     "q_code": "100",
                     "decimal_places": 2,
                     "currency": "GBP"
@@ -1897,12 +1890,12 @@
                   ]
                 },
                 "description": [
-                  "<p>If you had no proceeds enter &#39;0&#39;. Do not leave blank.</p>"
+                  "<p>If you had no proceeds enter ’0’. Do not leave blank.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter &#x2018;56&#x2019; for &#xA3;56,000"
+                      "description": "Enter the full value (e.g. 56,234.33) or a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000"
                     }
                   ]
                 },
@@ -1989,7 +1982,7 @@
                 "title": "Climate change adaptation",
                 "contents": [
                   {
-                    "description": "This section asks for information about your business&#39;s adaptations to address address actual or expected changes in the climate."
+                    "description": "This section asks for information about your business’s adaptations to address actual or expected changes in the climate."
                   }
                 ]
               }
@@ -2218,7 +2211,7 @@
                 "id": "questionadditional-commentary",
                 "title": "Please provide any additional information that will help us understand your figures and to tell an industry story",
                 "description": [
-                  "<p>You have nearly finished! <strong>Make sure you continue to the next page and select &#39;submit answers&#39; at the bottom.</strong></p>"
+                  "<p>You have nearly finished! <strong>Make sure you continue to the next page and select ’submit answers’ at the bottom.</strong></p>"
                 ],
                 "definitions": [
                   {
@@ -2258,10 +2251,6 @@
   },
   "metadata": [
     {
-      "name": "user_id",
-      "type": "string"
-    },
-    {
       "name": "ru_name",
       "type": "string"
     },
@@ -2283,6 +2272,10 @@
       "type": "date"
     },
     {
+      "name": "user_id",
+      "type": "string"
+    },
+    {
       "name": "ru_ref",
       "type": "string"
     }
@@ -2293,7 +2286,7 @@
     "guidance": {
       "contents": [
         {
-          "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
+          "description": "<a href=\"https://www.ons.gov.uk/surveys\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about how we use this data (this link opens in a new tab)</a>"
         }
       ]
     }
