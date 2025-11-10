@@ -3,6 +3,7 @@
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
   "data_version": "0.0.1",
+  "preview_questions": false,
   "survey_id": "139",
   "form_type": "0001",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
@@ -17,7 +18,13 @@
   },
   "sections": [
     {
-      "id": "section7929484a-ce81-45a3-a841-c457bf96dddc",
+      "id": "7929484a-ce81-45a3-a841-c457bf96dddc",
+      "title": "Quarterly Business Survey",
+      "summary": {
+        "show_on_completion": false,
+        "page_title": "Quarterly Business Survey",
+        "collapsible": false
+      },
       "show_on_hub": true,
       "groups": [
         {
@@ -25,27 +32,20 @@
           "title": "Introduction",
           "blocks": [
             {
-              "id": "introduction-block",
+              "id": "introduction",
               "type": "Introduction",
               "primary_content": [
                 {
                   "id": "primary",
                   "title": {
-                    "text": "You are completing this for {ru_name} {conditional_trad_as}",
+                    "text": "You are completing this for {trad_as} ({ru_name})",
                     "placeholders": [
                       {
-                        "placeholder": "conditional_trad_as",
-                        "transforms": [
-                          {
-                            "arguments": {
-                              "trad_as": {
-                                "source": "metadata",
-                                "identifier": "trad_as"
-                              }
-                            },
-                            "transform": "conditional_trad_as"
-                          }
-                        ]
+                        "placeholder": "trad_as",
+                        "value": {
+                          "source": "metadata",
+                          "identifier": "trad_as"
+                        }
                       },
                       {
                         "placeholder": "ru_name",
@@ -112,7 +112,7 @@
                 "title": "Information you need",
                 "contents": [
                   {
-                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/quarterlybusinesssurvey\"target=\"_blank\"rel=\"noopener noreferrer\">View the survey information and questions before you start the survey (this link opens in a new tab)</a>"
+                    "description": "<a href=\"https://www.ons.gov.uk/surveys/informationforbusinesses/businesssurveys/quarterlybusinesssurvey\" target=\"_blank\" rel=\"noopener noreferrer\">View the survey information and questions before you start the survey (this link opens in a new tab)</a>"
                   },
                   {
                     "list": [
@@ -175,10 +175,10 @@
           "id": "group7929484a-ce81-45a3-a841-c457bf96dddc",
           "blocks": [
             {
-              "id": "block2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+              "id": "number-of-employees",
               "type": "Question",
               "question": {
-                "id": "question2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+                "id": "questionnumber-of-employees",
                 "title": {
                   "text": "On {ref_p_start_date}, what was the number of employees for {ru_name}?",
                   "placeholders": [
@@ -240,23 +240,23 @@
                 "answers": [
                   {
                     "id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
-                    "mandatory": false,
+                    "mandatory": true,
                     "type": "Number",
                     "label": "Total number of employees",
                     "q_code": "50",
-                    "decimal_places": 0,
-                    "default": 0
+                    "decimal_places": 0
                   }
                 ]
-              }
+              },
+              "page_title": "Number of employees"
             },
             {
-              "id": "blockconfirmation-page-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+              "id": "number-of-employees-confirmation",
               "type": "ConfirmationQuestion",
               "question": {
-                "id": "questionconfirmation-page-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+                "id": "questionnumber-of-employees-confirmation",
                 "title": {
-                  "text": "On {ref_p_start_date}, the number of employees for {ru_name} was {answer4cb15193_c33d_4e25_8c69_5522219cdb21}, is this correct?",
+                  "text": "On {ref_p_start_date}, the number of employees for {ru_name} was {total_number_of_employees}, is this correct?",
                   "placeholders": [
                     {
                       "placeholder": "ref_p_start_date",
@@ -281,14 +281,14 @@
                       }
                     },
                     {
-                      "placeholder": "answer4cb15193_c33d_4e25_8c69_5522219cdb21",
+                      "placeholder": "total_number_of_employees",
                       "transforms": [
                         {
                           "transform": "format_number",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                              "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
+                              "source": "answers"
                             }
                           }
                         }
@@ -299,7 +299,7 @@
                 "type": "General",
                 "answers": [
                   {
-                    "id": "answerconfirmation-answer-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+                    "id": "answerconfirmation-answer-for-number-of-employees",
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
@@ -315,41 +315,42 @@
                   }
                 ]
               },
+              "page_title": "Number of employees confirmation",
               "routing_rules": [
                 {
-                  "block": "block2a49398c-45bb-4a50-883a-3dab2dfb23b5",
+                  "block": "number-of-employees",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answerconfirmation-answer-for-2a49398c-45bb-4a50-883a-3dab2dfb23b5"
+                        "identifier": "answerconfirmation-answer-for-number-of-employees",
+                        "source": "answers"
                       },
                       "No, I need to change this"
                     ]
                   }
                 },
                 {
-                  "block": "block9380147d-8d77-4fae-a8ff-c3c328150206",
+                  "block": "comments",
                   "when": {
                     "==": [
                       {
-                        "source": "answers",
-                        "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                        "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
+                        "source": "answers"
                       },
                       0
                     ]
                   }
                 },
                 {
-                  "block": "blockc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b"
+                  "block": "male-and-female-working-hours-per-week"
                 }
               ],
               "skip_conditions": {
                 "when": {
                   ">": [
                     {
-                      "source": "answers",
-                      "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                      "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
+                      "source": "answers"
                     },
                     0
                   ]
@@ -357,22 +358,22 @@
               }
             },
             {
-              "id": "blockc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b",
+              "id": "male-and-female-working-hours-per-week",
               "type": "Question",
               "question": {
-                "id": "questionc16a6c5f-5d9f-433d-8a0d-f0ae7a19f55b",
+                "id": "questionmale-and-female-working-hours-per-week",
                 "title": {
-                  "text": "Of the {answer4cb15193_c33d_4e25_8c69_5522219cdb21} total employees employed on {ref_p_start_date}, how many male and female employees worked the following hours?",
+                  "text": "Of the {total_number_of_employees} total employees employed on {ref_p_start_date}, how many male and female employees worked the following hours?",
                   "placeholders": [
                     {
-                      "placeholder": "answer4cb15193_c33d_4e25_8c69_5522219cdb21",
+                      "placeholder": "total_number_of_employees",
                       "transforms": [
                         {
                           "transform": "format_number",
                           "arguments": {
                             "number": {
-                              "source": "answers",
-                              "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                              "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
+                              "source": "answers"
                             }
                           }
                         }
@@ -478,16 +479,20 @@
                       "answer6b20bead-e1ac-45ea-b7d3-eca6086308e7"
                     ],
                     "conditions": ["equals"],
-                    "answer_id": "answer4cb15193-c33d-4e25-8c69-5522219cdb21"
+                    "value": {
+                      "identifier": "answer4cb15193-c33d-4e25-8c69-5522219cdb21",
+                      "source": "answers"
+                    }
                   }
                 ]
-              }
+              },
+              "page_title": "Male and female working hours per week"
             },
             {
-              "id": "block9380147d-8d77-4fae-a8ff-c3c328150206",
+              "id": "comments",
               "type": "Question",
               "question": {
-                "id": "question9380147d-8d77-4fae-a8ff-c3c328150206",
+                "id": "questioncomments",
                 "title": "Please explain any changes in your figures from the previous return, if applicable.",
                 "description": [
                   "<p>If you provide comments we are less likely to contact you with data queries.</p>"
@@ -503,36 +508,21 @@
                     "max_length": 2000
                   }
                 ]
-              }
+              },
+              "page_title": "Comments"
             }
           ]
         }
-      ],
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      }
+      ]
     }
   ],
-  "theme": "default",
+  "theme": "business",
   "navigation": {
     "visible": false
   },
   "metadata": [
     {
-      "name": "user_id",
-      "type": "string"
-    },
-    {
-      "name": "period_id",
-      "type": "string"
-    },
-    {
       "name": "ru_name",
-      "type": "string"
-    },
-    {
-      "name": "ru_ref",
       "type": "string"
     },
     {
@@ -541,12 +531,24 @@
       "optional": true
     },
     {
+      "name": "period_id",
+      "type": "string"
+    },
+    {
       "name": "ref_p_start_date",
       "type": "date"
     },
     {
       "name": "ref_p_end_date",
       "type": "date"
+    },
+    {
+      "name": "ru_ref",
+      "type": "string"
+    },
+    {
+      "name": "user_id",
+      "type": "string"
     }
   ],
   "post_submission": {
@@ -558,7 +560,7 @@
           "description": "Your response will help inform decision-makers how best to support the UK population and economy at this challenging time."
         },
         {
-          "description": "<a href=\"https://www.ons.gov.uk/surveys\"target=\"_blank\"rel=\"noopener noreferrer\">Learn more about how we use this data</a>"
+          "description": "<a href=\"https://www.ons.gov.uk/surveys\" target=\"_blank\" rel=\"noopener noreferrer\">Learn more about how we use this data</a>"
         }
       ]
     }
