@@ -228,6 +228,42 @@
       "code": "HMS-GPP-041"
     },
     {
+      "answer_id": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+      "code": "HMS-CHS-010"
+    },
+    {
+      "answer_id": "answer1904d4cf-481f-4647-b3bb-645456107763",
+      "code": "HMS-CHS-011"
+    },
+    {
+      "answer_id": "answereed6d599-9f28-4734-9b05-80b68365f521",
+      "code": "HMS-CHS-012"
+    },
+    {
+      "answer_id": "answerb0c86cb1-d5dc-4da1-a493-30d348ee67b2",
+      "code": "HMS-CHS-013"
+    },
+    {
+      "answer_id": "answerc1a7c5bc-c89e-4fc3-9e06-a87c7ff49880",
+      "code": "HMS-CHS-014"
+    },
+    {
+      "answer_id": "answer3d5d39a5-2fc3-46ee-96e0-6551ec7d4649",
+      "code": "HMS-CHS-015"
+    },
+    {
+      "answer_id": "answer6af2e63f-1de2-4b86-8ef6-810605950d11",
+      "code": "HMS-CHS-016"
+    },
+    {
+      "answer_id": "answer9d46bde2-12d8-4602-a536-4c8b5e9fa25c",
+      "code": "HMS-CHS-017"
+    },
+    {
+      "answer_id": "answer26acf389-b92c-403a-91ae-ac0fb5aeff20",
+      "code": "HMS-CHS-018"
+    },
+    {
       "answer_id": "answer995cab36-9f81-4e20-a293-6cffcd5f537c",
       "code": "HMS-CHS-001"
     },
@@ -346,6 +382,10 @@
     {
       "answer_id": "answer33bc5fa0-645e-4600-806b-87dfe05afa65",
       "code": "HMS-PCY-008"
+    },
+    {
+      "answer_id": "answer01ccbee1-e563-4066-8a33-ce7901a308f2",
+      "code": "HMS-COC-001"
     }
   ],
   "title": "Health Insight Survey",
@@ -359,7 +399,8 @@
         "nhs-hospital-waiting-list",
         "nhs-community-health-services",
         "dental-care",
-        "pharmacies"
+        "pharmacies",
+        "97331d4f-dd2f-4540-9c35-5385351d3dbb"
       ]
     }
   },
@@ -1464,7 +1505,7 @@
                         "value": "Online through the GP practice website"
                       },
                       {
-                        "label": "Online through the NHS or other app",
+                        "label": "The NHS app",
                         "value": "Online through the NHS or other app"
                       },
                       {
@@ -2698,7 +2739,7 @@
                         "value": "Agree"
                       },
                       {
-                        "label": "Neither agree or disagree",
+                        "label": "Neither agree nor disagree",
                         "value": "Neither agree or disagree"
                       },
                       {
@@ -2949,7 +2990,7 @@
                     "description": "These services provide care for people from birth to the end of their life and are mainly delivered in people’s homes, community clinics or centres, care homes, or community hospitals."
                   },
                   {
-                    "description": "Examples of NHS community health services include district nursing, physiotherapy, palliative care, urgent community response, or intermediate care for people recovering from illness or treatment."
+                    "description": "Examples of NHS community health services include district nursing, physiotherapy, palliative care, end-of-life care, urgent community response, or short-term care designed to help individuals recover and gain independence after a hospital stay or illness."
                   },
                   {
                     "description": "<strong>Exclude: </strong>"
@@ -2965,6 +3006,482 @@
                   }
                 ]
               }
+            },
+            {
+              "id": "community-health-service-wait",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-wait",
+                "title": "Are you waiting to receive care, treatment or advice from one of the following NHS community health services?",
+                "description": [
+                  "<p>If you are waiting for more than one community health service, think about the one that is most important to you.</p>"
+                ],
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "Include waiting to receive care, treatment or advice about how to manage your condition."
+                    },
+                    {
+                      "description": "Exclude waiting for a follow-up appointment."
+                    }
+                  ]
+                },
+                "definitions": [
+                  {
+                    "title": "What do we mean by NHS community health services?",
+                    "contents": [
+                      {
+                        "description": "These services provide care for people from birth to the end of their life and are mainly delivered in people’s homes, community clinics or centres, care homes, or community hospitals."
+                      },
+                      {
+                        "description": "Examples of NHS community health services include district nursing, physiotherapy, palliative care, end-of-life care, urgent community response, or short-term care designed to help individuals recover and gain independence after a hospital stay or illness."
+                      },
+                      {
+                        "description": "<strong>Exclude:</strong>"
+                      },
+                      {
+                        "list": [
+                          "Mental health services",
+                          "Optometry (diagnosis and treatment of eye conditions)",
+                          "Accident and Emergency, walk-in centres or the NHS 111 service",
+                          "GP appointments, dental and pharmacy services",
+                          "Social care, like long-term care packages, home adaptions or arranging care homes"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "District or community nursing service",
+                        "value": "District or community nursing service"
+                      },
+                      {
+                        "label": "Podiatry service",
+                        "value": "Podiatry service"
+                      },
+                      {
+                        "label": "Musculoskeletal service",
+                        "value": "Musculoskeletal service"
+                      },
+                      {
+                        "label": "Physiotherapy service",
+                        "value": "Physiotherapy service"
+                      },
+                      {
+                        "label": "Respiratory service",
+                        "value": "Respiratory service"
+                      },
+                      {
+                        "label": "Weight management service",
+                        "value": "Weight management service"
+                      },
+                      {
+                        "label": "Continence service",
+                        "value": "Continence service"
+                      },
+                      {
+                        "label": "Cardiac service",
+                        "value": "Cardiac service"
+                      },
+                      {
+                        "label": "Diabetes service",
+                        "value": "Diabetes service"
+                      },
+                      {
+                        "label": "Urgent community response service",
+                        "value": "Urgent community response service"
+                      },
+                      {
+                        "label": "Rehabilitation service",
+                        "value": "Rehabilitation service"
+                      },
+                      {
+                        "label": "Other service",
+                        "value": "Other service"
+                      },
+                      {
+                        "label": "I am not waiting to receive care, treatment or advice from an NHS community health service",
+                        "value": "I am not waiting"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - wait",
+              "routing_rules": [
+                {
+                  "block": "community-health-service-service-communication-while-waiting",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                        "source": "answers"
+                      },
+                      ["Other service"]
+                    ]
+                  }
+                },
+                {
+                  "block": "community-health-service-appointment-last-28-days",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                        "source": "answers"
+                      },
+                      ["I am not waiting"]
+                    ]
+                  }
+                },
+                {
+                  "block": "community-health-service-communication-while-waiting"
+                }
+              ]
+            },
+            {
+              "id": "community-health-service-communication-while-waiting",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-communication-while-waiting",
+                "title": {
+                  "text": "While waiting for your first appointment to receive care, treatment or advice from the {untitled_answer}, have you been told about any of the following?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "value": {
+                        "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                        "source": "answers"
+                      }
+                    }
+                  ]
+                },
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer1904d4cf-481f-4647-b3bb-645456107763",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Confirmation that you are on the waiting list",
+                        "value": "Confirmation that you are on the waiting list"
+                      },
+                      {
+                        "label": "The date of your appointment",
+                        "value": "The date of your appointment"
+                      },
+                      {
+                        "label": "How long you will have to wait for an appointment",
+                        "value": "How long you will have to wait for an appointment"
+                      },
+                      {
+                        "label": "How to make or cancel an appointment",
+                        "value": "How to make or cancel an appointment"
+                      },
+                      {
+                        "label": "How to manage your condition",
+                        "value": "How to manage your condition"
+                      },
+                      {
+                        "label": "What to do if your condition gets worse",
+                        "value": "What to do if your condition gets worse"
+                      },
+                      {
+                        "label": "Who to contact if you need more information",
+                        "value": "Who to contact if you need more information"
+                      },
+                      {
+                        "label": "Your Right to Choose a health care provider",
+                        "value": "Your Right to Choose a health care provider"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answereed6d599-9f28-4734-9b05-80b68365f521",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "I have not received any information",
+                        "value": "I have not received any information"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - communication while waiting"
+            },
+            {
+              "id": "community-health-service-wait-communication-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-wait-communication-satisfaction",
+                "title": {
+                  "text": "Overall, how satisfied or dissatisfied are you with the communication about your wait for the {untitled_answer}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "value": {
+                        "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                        "source": "answers"
+                      }
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb0c86cb1-d5dc-4da1-a493-30d348ee67b2",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very satisfied",
+                        "value": "Very satisfied"
+                      },
+                      {
+                        "label": "Satisfied",
+                        "value": "Satisfied"
+                      },
+                      {
+                        "label": "Neither satisfied nor dissatisfied",
+                        "value": "Neither satisfied nor dissatisfied"
+                      },
+                      {
+                        "label": "Dissatisfied",
+                        "value": "Dissatisfied"
+                      },
+                      {
+                        "label": "Very dissatisfied",
+                        "value": "Very dissatisfied"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - wait communication satisfaction"
+            },
+            {
+              "id": "community-health-service-wait-time-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-wait-time-satisfaction",
+                "title": {
+                  "text": "Overall, how satisfied or dissatisfied are you with the length of time you have been waiting for the {untitled_answer}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "value": {
+                        "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                        "source": "answers"
+                      }
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerc1a7c5bc-c89e-4fc3-9e06-a87c7ff49880",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very satisfied",
+                        "value": "Very satisfied"
+                      },
+                      {
+                        "label": "Satisfied",
+                        "value": "Satisfied"
+                      },
+                      {
+                        "label": "Neither satisfied nor dissatisfied",
+                        "value": "Neither satisfied nor dissatisfied"
+                      },
+                      {
+                        "label": "Dissatisfied",
+                        "value": "Dissatisfied"
+                      },
+                      {
+                        "label": "Very dissatisfied",
+                        "value": "Very dissatisfied"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - wait time satisfaction",
+              "routing_rules": [
+                {
+                  "block": "community-health-service-appointment-last-28-days",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answerc1a7c5bc-c89e-4fc3-9e06-a87c7ff49880",
+                        "source": "answers"
+                      },
+                      [
+                        "Very satisfied",
+                        "Satisfied",
+                        "Neither satisfied nor dissatisfied",
+                        "Dissatisfied",
+                        "Very dissatisfied"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "block": "community-health-service-appointment-last-28-days"
+                }
+              ]
+            },
+            {
+              "id": "community-health-service-service-communication-while-waiting",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-service-communication-while-waiting",
+                "title": "While waiting for your first appointment to receive care, treatment or advice from the NHS community health service, have you been told about any of the following?",
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer3d5d39a5-2fc3-46ee-96e0-6551ec7d4649",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Confirmation that you are on the waiting list",
+                        "value": "Confirmation that you are on the waiting list"
+                      },
+                      {
+                        "label": "The date of your appointment",
+                        "value": "The date of your appointment"
+                      },
+                      {
+                        "label": "How long you will have to wait for an appointment",
+                        "value": "How long you will have to wait for an appointment"
+                      },
+                      {
+                        "label": "How to make or cancel an appointment",
+                        "value": "How to make or cancel an appointment"
+                      },
+                      {
+                        "label": "How to manage your condition",
+                        "value": "How to manage your condition"
+                      },
+                      {
+                        "label": "What to do if your condition gets worse",
+                        "value": "What to do if your condition gets worse"
+                      },
+                      {
+                        "label": "Who to contact if you need more information",
+                        "value": "Who to contact if you need more information"
+                      },
+                      {
+                        "label": "Your Right to Choose a health care provider",
+                        "value": "Your Right to Choose a health care provider"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer6af2e63f-1de2-4b86-8ef6-810605950d11",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "I have not received any information",
+                        "value": "I have not received any information"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - service communication while waiting"
+            },
+            {
+              "id": "community-health-service-service-wait-communication-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-service-wait-communication-satisfaction",
+                "title": "Overall, how satisfied or dissatisfied are you with the communication about your wait for the NHS community health service?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer9d46bde2-12d8-4602-a536-4c8b5e9fa25c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very satisfied",
+                        "value": "Very satisfied"
+                      },
+                      {
+                        "label": "Satisfied",
+                        "value": "Satisfied"
+                      },
+                      {
+                        "label": "Neither satisfied nor dissatisfied",
+                        "value": "Neither satisfied nor dissatisfied"
+                      },
+                      {
+                        "label": "Dissatisfied",
+                        "value": "Dissatisfied"
+                      },
+                      {
+                        "label": "Very dissatisfied",
+                        "value": "Very dissatisfied"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - service wait communication satisfaction"
+            },
+            {
+              "id": "community-health-service-service-wait-time-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questioncommunity-health-service-service-wait-time-satisfaction",
+                "title": "Overall, how satisfied or dissatisfied are you with the length of time you have been waiting for the NHS community health service?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer26acf389-b92c-403a-91ae-ac0fb5aeff20",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very satisfied",
+                        "value": "Very satisfied"
+                      },
+                      {
+                        "label": "Satisfied",
+                        "value": "Satisfied"
+                      },
+                      {
+                        "label": "Neither satisfied nor dissatisfied",
+                        "value": "Neither satisfied nor dissatisfied"
+                      },
+                      {
+                        "label": "Dissatisfied",
+                        "value": "Dissatisfied"
+                      },
+                      {
+                        "label": "Very dissatisfied",
+                        "value": "Very dissatisfied"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Community health service - service wait time satisfaction"
             },
             {
               "id": "community-health-service-appointment-last-28-days",
@@ -3006,12 +3523,12 @@
                         "value": "Physiotherapy service"
                       },
                       {
-                        "label": "Speech and language therapy service",
-                        "value": "Speech and language therapy service"
-                      },
-                      {
                         "label": "Respiratory service",
                         "value": "Respiratory service"
+                      },
+                      {
+                        "label": "Weight management service",
+                        "value": "Weight management service"
                       },
                       {
                         "label": "Continence service",
@@ -3038,7 +3555,7 @@
                         "value": "Other service"
                       },
                       {
-                        "label": "I did not have an appointment with an NHS community heath service in the last 28 days",
+                        "label": "I did not have an appointment with an NHS community health service in the last 28 days",
                         "value": "I did not have an appointment"
                       }
                     ]
@@ -4576,6 +5093,272 @@
               "source": "answers"
             },
             null
+          ]
+        }
+      }
+    },
+    {
+      "id": "97331d4f-dd2f-4540-9c35-5385351d3dbb",
+      "title": "Coordination of care",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "group97331d4f-dd2f-4540-9c35-5385351d3dbb",
+          "blocks": [
+            {
+              "id": "coordination-of-care-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questioncoordination-of-care-satisfaction",
+                "title": "Overall, how would you rate the coordination of your care across the NHS?",
+                "description": [
+                  "<p>For example, your healthcare professionals communicating with each other or sharing your information between different parts of the NHS.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer01ccbee1-e563-4066-8a33-ce7901a308f2",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very good",
+                        "value": "Very good"
+                      },
+                      {
+                        "label": "Good",
+                        "value": "Good"
+                      },
+                      {
+                        "label": "Neither good nor poor",
+                        "value": "Neither good nor poor"
+                      },
+                      {
+                        "label": "Poor",
+                        "value": "Poor"
+                      },
+                      {
+                        "label": "Very poor",
+                        "value": "Very poor"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Coordination of care - satisfaction"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "or": [
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer92f402d4-7fb4-4769-a8e9-e599761705bb",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer37845b37-7c93-4885-aba6-c3cd8f1dff87",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerb6f97ee5-2892-43ca-a3ca-a05d7a6364e6",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
+                      "source": "answers"
+                    },
+                    [
+                      "District or community nursing service",
+                      "Podiatry service",
+                      "Musculoskeletal service",
+                      "Physiotherapy service",
+                      "Respiratory service",
+                      "Weight management service",
+                      "Continence service",
+                      "Cardiac service",
+                      "Diabetes service",
+                      "Urgent community response service",
+                      "Rehabilitation service",
+                      "Other service"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer995cab36-9f81-4e20-a293-6cffcd5f537c",
+                      "source": "answers"
+                    },
+                    [
+                      "District or community nursing service",
+                      "Podiatry service",
+                      "Musculoskeletal service",
+                      "Physiotherapy service",
+                      "Respiratory service",
+                      "Weight management service",
+                      "Continence service",
+                      "Cardiac service",
+                      "Diabetes service",
+                      "Urgent community response service",
+                      "Rehabilitation service",
+                      "Other service"
+                    ]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer19cd1efc-6bf8-4246-b929-551302e37c6a",
+                      "source": "answers"
+                    },
+                    ["Less than 1 month ago"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "==": [
+                    {
+                      "identifier": "answer3873b173-a742-40d0-bf97-f02f1d8ea54b",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer55b304a7-0228-4eb5-bb82-f4144ce2dad4",
+                      "source": "answers"
+                    },
+                    ["Yes"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            }
           ]
         }
       }
