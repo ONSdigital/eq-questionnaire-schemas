@@ -352,26 +352,7 @@
                     "question": "Employee details",
                     "contents": [
                       {
-                        "description": {
-                          "text": "You will be asked to confirm if the person named was an employee in the organisation on {reference_date}.",
-                          "placeholders": [
-                            {
-                              "placeholder": "reference_date",
-                              "transforms": [
-                                {
-                                  "transform": "format_date",
-                                  "arguments": {
-                                    "date_to_format": {
-                                      "source": "metadata",
-                                      "identifier": "reference_date"
-                                    },
-                                    "date_format": "d MMMM yyyy"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                        "description": "You will be asked to confirm if the person named was an employee in the organisation on <strong>22 April 2026</strong>."
                       },
                       {
                         "description": "A specific date in April is chosen so that all respondents refer to the same point in time. This reference date is not the same every year."
@@ -444,26 +425,7 @@
                         ]
                       },
                       {
-                        "description": {
-                          "text": "For all questions on pension arrangements, your answers should relate to the pay period that included {reference_date}.",
-                          "placeholders": [
-                            {
-                              "placeholder": "reference_date",
-                              "transforms": [
-                                {
-                                  "transform": "format_date",
-                                  "arguments": {
-                                    "date_to_format": {
-                                      "source": "metadata",
-                                      "identifier": "reference_date"
-                                    },
-                                    "date_format": "d MMMM yyyy"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                        "description": "For all questions on pension arrangements, your answers should relate to the pay period that included <strong>22 April 2026</strong>."
                       },
                       {
                         "description": "Pension information should generally be available on an employee’s pay and/or personnel records. If pension arrangements are organised by an insurance company, you should obtain the details from them."
@@ -474,26 +436,7 @@
                     "question": "Annual earnings",
                     "contents": [
                       {
-                        "description": {
-                          "text": "You will be asked for annual information related to the tax year ending {tax_year_end_date}. This includes:",
-                          "placeholders": [
-                            {
-                              "placeholder": "tax_year_end_date",
-                              "transforms": [
-                                {
-                                  "transform": "format_date",
-                                  "arguments": {
-                                    "date_to_format": {
-                                      "source": "metadata",
-                                      "identifier": "tax_year_end_date"
-                                    },
-                                    "date_format": "d MMMM yyyy"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                        "description": "You will be asked for annual information related to the tax year ending <strong>5 April 2026</strong>. This includes:"
                       },
                       {
                         "list": [
@@ -524,26 +467,7 @@
                     "question": "Employee history",
                     "contents": [
                       {
-                        "description": {
-                          "text": "If the employee was not employed on {reference_date} you will be asked for information on the employee’s history with the organisation.",
-                          "placeholders": [
-                            {
-                              "placeholder": "reference_date",
-                              "transforms": [
-                                {
-                                  "transform": "format_date",
-                                  "arguments": {
-                                    "date_to_format": {
-                                      "source": "metadata",
-                                      "identifier": "reference_date"
-                                    },
-                                    "date_format": "d MMMM yyyy"
-                                  }
-                                }
-                              ]
-                            }
-                          ]
-                        }
+                        "description": "If the employee was not employed on <strong>22 April 2026,</strong> you will be asked for information on the employee’s history with the organisation."
                       }
                     ]
                   }
@@ -694,26 +618,7 @@
               "type": "Question",
               "question": {
                 "id": "questionemployees-status-at-your-organisation",
-                "title": {
-                  "text": "On {reference_date}, was the following person a paid employee in your organisation working in the United Kingdom and receiving a salary or a wage?",
-                  "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "On 22 April 2026, was the following person a paid employee in your organisation working in the United Kingdom and receiving a salary or a wage?",
                 "description": [
                   {
                     "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p>",
@@ -863,23 +768,8 @@
               "question": {
                 "id": "questionemployee-full-and-specific-job-title",
                 "title": {
-                  "text": "On {reference_date}, what was the <strong>full and specific job title</strong> for {employee_employeename}’s main job?",
+                  "text": "On 22 April 2026, what was the <strong>full and specific job title</strong> for {employee_employeename}’s main job?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -977,23 +867,8 @@
               "question": {
                 "id": "questionworked-in-same-job-for-more-than-a-year",
                 "title": {
-                  "text": "On {reference_date}, had {employee_employeename} worked in the <strong>same job</strong> in the organisation for more than a year?",
+                  "text": "On 22 April 2026, had {employee_employeename} worked in the <strong>same job</strong> in the organisation for more than a year?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1041,23 +916,8 @@
               "question": {
                 "id": "questionemployed-on-a-permanent-basis",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename} employed on a permanent basis?",
+                  "text": "On 22 April 2026, was {employee_employeename} employed on a permanent basis?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1105,23 +965,8 @@
               "question": {
                 "id": "questionemployee-minimum-contracted-hours-of-work",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename} on a contract that did not guarantee a minimum number of hours work?",
+                  "text": "On 22 April 2026, was {employee_employeename} on a contract that did not guarantee a minimum number of hours work?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1183,23 +1028,8 @@
               "question": {
                 "id": "questionemployee-pro-rata-pay-basis",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename} paid on a pro rata basis?",
+                  "text": "On 22 April 2026, was {employee_employeename} paid on a pro rata basis?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1257,23 +1087,8 @@
               "question": {
                 "id": "questionemployee-pro-rata-contracted-weeks-per-year",
                 "title": {
-                  "text": "On {reference_date}, what was {employee_employeename}’s pro rata contract in weeks per year?",
+                  "text": "On 22 April 2026, what was {employee_employeename}’s pro rata contract in weeks per year?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1312,23 +1127,8 @@
               "question": {
                 "id": "questionemployee-directory-supervisory-or-managerial-control",
                 "title": {
-                  "text": "On {reference_date}, did {employee_employeename} have direct supervisory or managerial control of other employees?",
+                  "text": "On 22 April 2026, did {employee_employeename} have direct supervisory or managerial control of other employees?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1370,23 +1170,8 @@
               "question": {
                 "id": "questionapprentice",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename} an apprentice?",
+                  "text": "On 22 April 2026, was {employee_employeename} an apprentice?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1481,23 +1266,8 @@
               "question": {
                 "id": "questionworkplace-postcode",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename}’s workplace postcode {employee_workpostcode}?",
+                  "text": "On 22 April 2026, was {employee_employeename}’s workplace postcode {employee_workpostcode}?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1600,7 +1370,7 @@
               "question": {
                 "id": "questioncorrected-workplace-postcode",
                 "title": {
-                  "text": "What was the workplace postcode for {employee_employeename}’s usual local site or office on {reference_date}?",
+                  "text": "What was the workplace postcode for {employee_employeename}’s usual local site or office on 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -1609,21 +1379,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -1674,23 +1429,8 @@
               "question": {
                 "id": "questionhome-postcode",
                 "title": {
-                  "text": "On {reference_date}, was {employee_employeename}’s home postcode {employee_homepostcode}?",
+                  "text": "On 22 April 2026, was {employee_employeename}’s home postcode {employee_homepostcode}?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -1779,7 +1519,7 @@
               "question": {
                 "id": "questioncorrected-home-postcode",
                 "title": {
-                  "text": "What was the home postcode for {employee_employeename} on {reference_date}?",
+                  "text": "What was the home postcode for {employee_employeename} on 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -1788,21 +1528,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -1840,7 +1565,7 @@
               "question": {
                 "id": "questionlength-of-pay-period",
                 "title": {
-                  "text": "What was the length of {employee_employeename}’s pay period that included {reference_date}?",
+                  "text": "What was the length of {employee_employeename}’s pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -1849,27 +1574,12 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
                 "description": [
                   {
-                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on hours and earnings, your answers should relate to the <strong>pay period that included {reference_date}</strong>.<br><br>For example, if you pay the employee monthly, then please give pay and hours for the paid month that included {reference_date}.</p>",
+                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on hours and earnings, your answers should relate to the <strong>pay period that included 22 April 2026</strong>.<br><br>For example, if you pay the employee monthly, then please give pay and hours for the paid month that included 22 April 2026.</p>",
                     "placeholders": [
                       {
                         "placeholder": "employee_employeename",
@@ -1894,36 +1604,6 @@
                           "identifier": "employee",
                           "selectors": ["work_id"]
                         }
-                      },
-                      {
-                        "placeholder": "reference_date",
-                        "transforms": [
-                          {
-                            "transform": "format_date",
-                            "arguments": {
-                              "date_to_format": {
-                                "source": "metadata",
-                                "identifier": "reference_date"
-                              },
-                              "date_format": "d MMMM yyyy"
-                            }
-                          }
-                        ]
-                      },
-                      {
-                        "placeholder": "reference_date",
-                        "transforms": [
-                          {
-                            "transform": "format_date",
-                            "arguments": {
-                              "date_to_format": {
-                                "source": "metadata",
-                                "identifier": "reference_date"
-                              },
-                              "date_format": "d MMMM yyyy"
-                            }
-                          }
-                        ]
                       }
                     ]
                   }
@@ -1986,23 +1666,8 @@
               "question": {
                 "id": "questionpay-period-confirmation",
                 "title": {
-                  "text": "You reported the employee’s pay period that included {reference_date} to be <strong>{untitled_answer}</strong>. Is this correct?",
+                  "text": "You reported the employee’s pay period that included 22 April 2026 to be {untitled_answer}. Is this correct?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "untitled_answer",
                       "value": {
@@ -2056,7 +1721,7 @@
               "question": {
                 "id": "questionstart-date-of-pay-period",
                 "title": {
-                  "text": "What was the start date of {employee_employeename}’s pay period that included {reference_date}?",
+                  "text": "What was the start date of {employee_employeename}’s pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2065,21 +1730,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2113,7 +1763,7 @@
               "question": {
                 "id": "questionbasic-pay-earned-for-work-carried-out-in-pay-period",
                 "title": {
-                  "text": "How much basic pay, before deductions, did {employee_employeename} earn for work carried out in the pay period that included {reference_date}?",
+                  "text": "How much basic pay, before deductions, did {employee_employeename} earn for work carried out in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2122,21 +1772,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2198,23 +1833,8 @@
               "question": {
                 "id": "questionbasic-pay-confirmation",
                 "title": {
-                  "text": "You reported the employee’s basic pay earned for work carried out in the pay period that included {reference_date} to be <strong>{basic_pay_earned_for_work_carried_out_in_the_pay_period}</strong>. Is this correct?",
+                  "text": "You reported the employee’s basic pay earned for work carried out in the pay period that included 22 April 2026 to be <strong>{basic_pay_earned_for_work_carried_out_in_the_pay_period}</strong>. Is this correct?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "basic_pay_earned_for_work_carried_out_in_the_pay_period",
                       "transforms": [
@@ -2275,7 +1895,7 @@
               "question": {
                 "id": "questionbasic-pay-hours-and-minutes",
                 "title": {
-                  "text": "How many hours and minutes does this {basic_pay_earned_for_work_carried_out_in_the_pay_period} basic pay relate to, for work carried out in the pay period that included {reference_date}?",
+                  "text": "How many hours and minutes does this {basic_pay_earned_for_work_carried_out_in_the_pay_period} basic pay relate to, for work carried out in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "basic_pay_earned_for_work_carried_out_in_the_pay_period",
@@ -2287,21 +1907,6 @@
                               "identifier": "answer7b302ce3-32dc-4186-b828-a0b393985d79",
                               "source": "answers"
                             }
-                          }
-                        }
-                      ]
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
                           }
                         }
                       ]
@@ -2365,7 +1970,7 @@
               "question": {
                 "id": "questionovertime-pay-received-for-work-carried-out-in-pay-period",
                 "title": {
-                  "text": "How much <strong>overtime pay</strong> did {employee_employeename} receive for work carried out in the pay period that included {reference_date}?",
+                  "text": "How much <strong>overtime pay</strong> did {employee_employeename} receive for work carried out in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2374,21 +1979,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2433,26 +2023,7 @@
               "type": "Question",
               "question": {
                 "id": "questionovertime-pay-hours-and-minutes",
-                "title": {
-                  "text": "How many hours and minutes does this overtime pay relate to, for work carried out in the pay period that included {reference_date}?",
-                  "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "How many hours and minutes does this overtime pay relate to, for work carried out in the pay period that included 22 April 2026?",
                 "description": [
                   "<p>Answer in full hours and minutes. For example, report 30 minutes instead of 0.5 hours.</p><p>If a decimal clock is used, convert to hours and minutes. For example, 4.3 hours should be recorded as 4 hours 18 minutes (0.3 multiplied by 60 equals 18).</p>"
                 ],
@@ -2513,7 +2084,7 @@
               "question": {
                 "id": "questionshift-premium-pay-received-in-pay-period",
                 "title": {
-                  "text": "How much <strong>shift premium pay</strong> did {employee_employeename} receive in the pay period that included {reference_date}?",
+                  "text": "How much <strong>shift premium pay</strong> did {employee_employeename} receive in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2522,21 +2093,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2595,7 +2151,7 @@
               "question": {
                 "id": "questionbonus-or-incentive-payments-received-in-pay-period",
                 "title": {
-                  "text": "How much <strong>bonus or incentive payments</strong> did {employee_employeename} receive in the pay period that included {reference_date}?",
+                  "text": "How much <strong>bonus or incentive payments</strong> did {employee_employeename} receive in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2604,21 +2160,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2669,26 +2210,7 @@
               "type": "Question",
               "question": {
                 "id": "questionbonus-or-incentive-payments-related-to-work-carried-out-in-pay-period",
-                "title": {
-                  "text": "How much of the bonus or incentive payments related to work carried out in the pay period that included {reference_date}?",
-                  "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "How much of the bonus or incentive payments related to work carried out in the pay period that included 22 April 2026?",
                 "definitions": [
                   {
                     "title": "How you might answer this question",
@@ -2752,7 +2274,7 @@
               "question": {
                 "id": "questionpay-received-for-other-reasons-for-work-carried-out-in-pay-period",
                 "title": {
-                  "text": "How much pay did {employee_employeename} receive for <strong>other reasons</strong> for work carried out in the pay period that included {reference_date}?",
+                  "text": "How much pay did {employee_employeename} receive for <strong>other reasons</strong> for work carried out in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2761,21 +2283,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -2844,7 +2351,7 @@
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Pay received for other reasons comments",
-                    "max_length": 2000
+                    "max_length": 255
                   }
                 ]
               },
@@ -2880,7 +2387,7 @@
               "question": {
                 "id": "questiongross-pay-received-for-work-carried-out-in-pay-period",
                 "title": {
-                  "text": "How much gross pay, before deductions, did {employee_employeename} receive for work carried out in the pay period that included {reference_date}?",
+                  "text": "How much gross pay, before deductions, did {employee_employeename} receive for work carried out in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -2889,21 +2396,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -3019,7 +2511,7 @@
               "question": {
                 "id": "questionhourly-rate-of-pay-in-pay-period",
                 "title": {
-                  "text": "What was {employee_employeename}’s contracted hourly rate of pay in the pay period that included {reference_date}?",
+                  "text": "What was {employee_employeename}’s contracted hourly rate of pay in the pay period that included 22 April 2026?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -3028,21 +2520,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -3075,7 +2552,7 @@
               "question": {
                 "id": "questionless-pay-due-to-absence-in-pay-period",
                 "title": {
-                  "text": "Did {employee_employeename} earn less in the pay period that included {reference_date} due to absence from work?",
+                  "text": "Did {employee_employeename} earn less in the pay period that included 22 April 2026 due to absence from work?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -3084,21 +2561,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -3150,7 +2612,7 @@
               "question": {
                 "id": "questionreduce-rate-of-pay-in-pay-period",
                 "title": {
-                  "text": "Was {employee_employeename} paid at a reduced rate in the pay period that included {reference_date}, for reasons of apprenticeship, training, or age?",
+                  "text": "Was {employee_employeename} paid at a reduced rate in the pay period that included 22 April 2026, for reasons of apprenticeship, training, or age?",
                   "placeholders": [
                     {
                       "placeholder": "employee_employeename",
@@ -3159,21 +2621,6 @@
                         "identifier": "employee",
                         "selectors": ["employee_name"]
                       }
-                    },
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
                     }
                   ]
                 },
@@ -3229,7 +2676,7 @@
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Additional comments",
-                    "max_length": 2000
+                    "max_length": 255
                   }
                 ]
               },
@@ -3241,23 +2688,8 @@
               "question": {
                 "id": "questionmain-type-of-pension-scheme",
                 "title": {
-                  "text": "On {reference_date}, what was {employee_employeename}’s main type of pension scheme?",
+                  "text": "On 22 April 2026, what was {employee_employeename}’s main type of pension scheme?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -3270,7 +2702,7 @@
                 },
                 "description": [
                   {
-                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on pensions, your answer should relate to the <strong>pay period that included {reference_date}.</strong></p>",
+                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on pensions, your answer should relate to the <strong>pay period that included 22 April 2026.</strong></p>",
                     "placeholders": [
                       {
                         "placeholder": "employee_employeename",
@@ -3295,21 +2727,6 @@
                           "identifier": "employee",
                           "selectors": ["work_id"]
                         }
-                      },
-                      {
-                        "placeholder": "reference_date",
-                        "transforms": [
-                          {
-                            "transform": "format_date",
-                            "arguments": {
-                              "date_to_format": {
-                                "source": "metadata",
-                                "identifier": "reference_date"
-                              },
-                              "date_format": "d MMMM yyyy"
-                            }
-                          }
-                        ]
                       }
                     ]
                   }
@@ -3417,23 +2834,8 @@
               "question": {
                 "id": "questionemployer-contribution-to-pension-in-pay-period",
                 "title": {
-                  "text": "For the pay period that included {reference_date}, how much did the employer contribute to {employee_employeename}’s pension?",
+                  "text": "For the pay period that included 22 April 2026, how much did the employer contribute to {employee_employeename}’s pension?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -3514,23 +2916,8 @@
               "question": {
                 "id": "questionemployee-contribution-to-pension-in-pay-period",
                 "title": {
-                  "text": "For the pay period that included {reference_date}, how much did <strong>{employee_employeename}</strong> contribute to their main pension?",
+                  "text": "For the pay period that included 22 April 2026, how much did <strong>{employee_employeename}</strong> contribute to their main pension?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -3616,23 +3003,8 @@
               "question": {
                 "id": "questionpensionable-gross-pay-in-pay-period",
                 "title": {
-                  "text": "For the pay period that included {reference_date}, how much of {employee_employeename}’s pay was pensionable?",
+                  "text": "For the pay period that included 22 April 2026, how much of {employee_employeename}’s pay was pensionable?",
                   "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -3699,26 +3071,7 @@
               "type": "Question",
               "question": {
                 "id": "questionemployee-contributions-through-salary-sacrifice-in-pay-period",
-                "title": {
-                  "text": "For the pay period that included {reference_date}, were employee contributions made through a salary sacrifice arrangement?",
-                  "placeholders": [
-                    {
-                      "placeholder": "reference_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "reference_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "For the pay period that included 22 April 2026, were employee contributions made through a salary sacrifice arrangement?",
                 "description": [
                   "<p>This question is optional. Leave blank if unknown.</p>"
                 ],
@@ -3770,23 +3123,8 @@
               "question": {
                 "id": "questionannual-gross-pay-for-tax-year",
                 "title": {
-                  "text": "For the <strong>tax year ending {tax_year_end_date}</strong>, how much annual gross pay did {employee_employeename} receive in their current job?",
+                  "text": "For the <strong>tax year ending 5 April 2026</strong>, how much annual gross pay did {employee_employeename} receive in their current job?",
                   "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -3799,7 +3137,7 @@
                 },
                 "description": [
                   {
-                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on annual earnings, your answer should relate to the <strong>tax year ending {tax_year_end_date}</strong>.</p>",
+                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on annual earnings, your answer should relate to the <strong>tax year ending 5 April 2026</strong>.</p>",
                     "placeholders": [
                       {
                         "placeholder": "employee_employeename",
@@ -3824,21 +3162,6 @@
                           "identifier": "employee",
                           "selectors": ["work_id"]
                         }
-                      },
-                      {
-                        "placeholder": "tax_year_end_date",
-                        "transforms": [
-                          {
-                            "transform": "format_date",
-                            "arguments": {
-                              "date_to_format": {
-                                "source": "metadata",
-                                "identifier": "tax_year_end_date"
-                              },
-                              "date_format": "d MMMM yyyy"
-                            }
-                          }
-                        ]
                       }
                     ]
                   }
@@ -3892,26 +3215,7 @@
               "type": "Question",
               "question": {
                 "id": "questionannual-pay-relating-to-bonus-or-incentives-in-tax-year",
-                "title": {
-                  "text": "For the tax year ending {tax_year_end_date}, how much of the annual gross pay is related to bonus or incentive payments for their current job?",
-                  "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "For the tax year ending 5 April 2026, how much of the annual gross pay is related to bonus or incentive payments for their current job?",
                 "guidance": {
                   "contents": [
                     {
@@ -3960,23 +3264,8 @@
               "question": {
                 "id": "questionbenefits-in-kind-for-the-tax-year",
                 "title": {
-                  "text": "For the tax year ending {tax_year_end_date}, did {employee_employeename} receive any benefits in kind?",
+                  "text": "For the tax year ending 5 April 2026, did {employee_employeename} receive any benefits in kind?",
                   "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -4048,26 +3337,7 @@
               "type": "Question",
               "question": {
                 "id": "questionvalue-of-benefits-in-kind-for-the-tax-year",
-                "title": {
-                  "text": "For the tax year ending {tax_year_end_date}, what was the value of the benefits in kind received?",
-                  "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    }
-                  ]
-                },
+                "title": "For the tax year ending 5 April 2026, what was the value of the benefits in kind received?",
                 "description": [
                   "<p>If exact figures are not available, please provide informed estimates.</p>"
                 ],
@@ -4178,23 +3448,8 @@
               "question": {
                 "id": "questionpay-agreement-affecting-multiple-employees-for-tax-year",
                 "title": {
-                  "text": "For the tax year ending {tax_year_end_date}, was {employee_employeename}’s pay set with reference to an agreement affecting more than one employee?",
+                  "text": "For the tax year ending 5 April 2026, was {employee_employeename}’s pay set with reference to an agreement affecting more than one employee?",
                   "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -4280,23 +3535,8 @@
               "question": {
                 "id": "questiontype-of-pay-agreement-for-tax-year",
                 "title": {
-                  "text": "For the tax year ending {tax_year_end_date}, what type of pay agreement was made for {employee_employeename}’s pay?",
+                  "text": "For the tax year ending 5 April 2026, what type of pay agreement was made for {employee_employeename}’s pay?",
                   "placeholders": [
-                    {
-                      "placeholder": "tax_year_end_date",
-                      "transforms": [
-                        {
-                          "transform": "format_date",
-                          "arguments": {
-                            "date_to_format": {
-                              "source": "metadata",
-                              "identifier": "tax_year_end_date"
-                            },
-                            "date_format": "d MMMM yyyy"
-                          }
-                        }
-                      ]
-                    },
                     {
                       "placeholder": "employee_employeename",
                       "value": {
@@ -4594,7 +3834,7 @@
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Comments",
-                    "max_length": 2000
+                    "max_length": 255
                   }
                 ]
               },
@@ -4643,7 +3883,7 @@
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Comments",
-                    "max_length": 2000
+                    "max_length": 255
                   }
                 ]
               },
