@@ -1670,10 +1670,18 @@
                   "placeholders": [
                     {
                       "placeholder": "untitled_answer",
-                      "value": {
-                        "identifier": "answerc9e2fabd-5f32-46f7-b2d4-f828a0359a49",
-                        "source": "answers"
-                      }
+                      "transforms": [
+                        {
+                          "transform": "option_label_from_value",
+                          "arguments": {
+                            "value": {
+                              "identifier": "answerc9e2fabd-5f32-46f7-b2d4-f828a0359a49",
+                              "source": "answers"
+                            },
+                            "answer_id": "answerc9e2fabd-5f32-46f7-b2d4-f828a0359a49"
+                          }
+                        }
+                      ]
                     }
                   ]
                 },
