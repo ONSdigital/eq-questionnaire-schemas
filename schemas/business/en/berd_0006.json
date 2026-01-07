@@ -2,11 +2,81 @@
   "language": "en",
   "mime_type": "application/json/ons/eq",
   "schema_version": "0.0.1",
-  "data_version": "0.0.1",
+  "data_version": "0.0.3",
   "preview_questions": false,
   "survey_id": "002",
   "form_type": "0006",
   "legal_basis": "Notice is given under section 1 of the Statistics of Trade Act 1947.",
+  "answer_codes": [
+    {
+      "answer_id": "answer2b88363f-9779-4d2c-885e-523ad8cef31e",
+      "code": "101"
+    },
+    {
+      "answer_id": "answer777ff7c8-5c95-41f9-a914-b94b1582e841from",
+      "code": "103"
+    },
+    {
+      "answer_id": "answer777ff7c8-5c95-41f9-a914-b94b1582e841to",
+      "code": "104"
+    },
+    {
+      "answer_id": "answer45c6a857-bd73-4b41-b445-0a9d5c716428",
+      "code": "604"
+    },
+    {
+      "answer_id": "answerbabc549a-0504-4ebc-94e4-9285443fff8f",
+      "code": "605"
+    },
+    {
+      "answer_id": "answer5e236549-7667-479e-ae36-41c8d0f6d309",
+      "code": "701"
+    },
+    {
+      "answer_id": "answercae2fbeb-38c5-4d0d-8109-38c7d62ba04b",
+      "code": "702"
+    },
+    {
+      "answer_id": "answer4f0ed391-29c0-400e-809d-5d82c26e947f",
+      "code": "713"
+    },
+    {
+      "answer_id": "answer45e10ade-2824-4eb3-a8f5-1d8072989737",
+      "code": "999"
+    },
+    {
+      "answer_id": "answerb35b8ed6-e10a-45e1-82d0-003efa9a3a41",
+      "code": "703"
+    },
+    {
+      "answer_id": "answerd63311d1-c3bd-441f-905c-dec12b94d126",
+      "code": "704"
+    },
+    {
+      "answer_id": "answerbb48f890-569b-4715-9e84-a36dc54a66a1",
+      "code": "714"
+    },
+    {
+      "answer_id": "answer685d8662-7b92-4542-ac6a-16813b02aab3",
+      "code": "705"
+    },
+    {
+      "answer_id": "answerf7bf5c79-1515-4dc5-8aa8-31e8e38cda61",
+      "code": "706"
+    },
+    {
+      "answer_id": "answer94921b6a-4680-45b4-9873-a3d0bbcdfa1c",
+      "code": "707"
+    },
+    {
+      "answer_id": "answerb3e31814-254c-48da-b642-0cbcf0319183",
+      "code": "708"
+    },
+    {
+      "answer_id": "answer483d0965-e0d1-4177-8e91-c0e421782a48",
+      "code": "712"
+    }
+  ],
   "title": "Business Enterprise Research and Development",
   "questionnaire_flow": {
     "type": "Hub",
@@ -131,7 +201,7 @@
                         "description": "This section asks about the period for which your business will be reporting."
                       },
                       {
-                        "description": "Your return period should cover the calendar year 2024. If no figures are available for that 12 month period, your return should relate to a business year that ends between 6 April 2024 and 5 April 2025."
+                        "description": "Your return period should cover the calendar year 2025. If no figures are available for that 12 month period, your return should relate to a business year that ends between 6 April 2025 and 5 April 2026."
                       }
                     ]
                   },
@@ -402,7 +472,7 @@
                   ]
                 },
                 "description": [
-                  "<p>Your return should relate to the calendar year 2024.</p>"
+                  "<p>Your return should relate to the calendar year 2025.</p>"
                 ],
                 "guidance": {
                   "contents": [
@@ -426,7 +496,6 @@
                     "id": "answer2b88363f-9779-4d2c-885e-523ad8cef31e",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "101",
                     "options": [
                       {
                         "label": "Yes, I can report for this period",
@@ -466,7 +535,7 @@
                 "id": "questionalternative-reporting-period",
                 "title": "What dates will you be reporting for?",
                 "description": [
-                  "<p>If figures are not available for the calendar year 2024, your return should relate to a business year that ends between 6 April 2024 and 5 April 2025.</p>"
+                  "<p>If figures are not available for the calendar year 2025, your return should relate to a business year that ends between 6 April 2025 and 5 April 2026.</p>"
                 ],
                 "guidance": {
                   "contents": [
@@ -477,16 +546,16 @@
                       "description": "Please provide figures for the period in which you were trading."
                     },
                     {
-                      "description": "<strong>Only commenced trading during 2024?</strong>"
+                      "description": "<strong>Only commenced trading during 2025?</strong>"
                     },
                     {
-                      "description": "Your return should cover the period from the commencement of your business until 31 December 2024 or, alternatively, any date up to 5 April 2025."
+                      "description": "Your return should cover the period from the commencement of your business until 31 December 2025 or, alternatively, any date up to 5 April 2026."
                     },
                     {
-                      "description": "<strong>Ceased trading during 2024?</strong>"
+                      "description": "<strong>Ceased trading during 2025?</strong>"
                     },
                     {
-                      "description": "Your return should cover the period 1 January 2024 to the date you ceased to trade or, alternatively, from the beginning of your last business year up to the cessation date."
+                      "description": "Your return should cover the period 1 January 2025 to the date you ceased to trade or, alternatively, from the beginning of your last business year up to the cessation date."
                     }
                   ]
                 },
@@ -497,9 +566,8 @@
                     "type": "Date",
                     "mandatory": true,
                     "label": "From",
-                    "q_code": "103",
                     "minimum": {
-                      "value": "2023-01-01",
+                      "value": "2024-01-01",
                       "offset_by": {
                         "days": 0
                       }
@@ -510,9 +578,8 @@
                     "type": "Date",
                     "mandatory": true,
                     "label": "To",
-                    "q_code": "104",
                     "maximum": {
-                      "value": "2025-06-30",
+                      "value": "2026-06-30",
                       "offset_by": {
                         "days": 0
                       }
@@ -558,7 +625,6 @@
                     "id": "answer45c6a857-bd73-4b41-b445-0a9d5c716428",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "604",
                     "options": [
                       {
                         "label": "Yes",
@@ -603,7 +669,6 @@
                     "id": "answerbabc549a-0504-4ebc-94e4-9285443fff8f",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "605",
                     "options": [
                       {
                         "label": "Yes",
@@ -756,7 +821,6 @@
                     "type": "Currency",
                     "label": "Civil Research and Development",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
-                    "q_code": "701",
                     "decimal_places": 0,
                     "currency": "GBP"
                   },
@@ -766,7 +830,6 @@
                     "type": "Currency",
                     "label": "Defence Research and Development",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
-                    "q_code": "702",
                     "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
@@ -845,7 +908,6 @@
                     "id": "answer4f0ed391-29c0-400e-809d-5d82c26e947f",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "713",
                     "options": [
                       {
                         "label": "Yes",
@@ -995,7 +1057,6 @@
                     "id": "answer45e10ade-2824-4eb3-a8f5-1d8072989737",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "999",
                     "options": [
                       {
                         "label": "Yes",
@@ -1042,7 +1103,6 @@
                     "type": "Currency",
                     "label": "Civil Research and Development",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
-                    "q_code": "703",
                     "decimal_places": 0,
                     "currency": "GBP"
                   },
@@ -1052,7 +1112,6 @@
                     "type": "Currency",
                     "label": "Defence Research and Development",
                     "description": "Enter a value to the nearest &#xA3;thousand (e.g. 56,000). Do not enter ’56’ for &#xA3;56,000.",
-                    "q_code": "704",
                     "decimal_places": 0,
                     "currency": "GBP",
                     "guidance": {
@@ -1131,7 +1190,6 @@
                     "id": "answerbb48f890-569b-4715-9e84-a36dc54a66a1",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "714",
                     "options": [
                       {
                         "label": "Yes",
@@ -1198,7 +1256,7 @@
               "type": "Question",
               "question": {
                 "id": "questionemployees-working-on-rd",
-                "title": "On 1 December 2024, how many employees worked on R&amp;D?",
+                "title": "On 1 December 2025, how many employees worked on R&amp;D?",
                 "guidance": {
                   "contents": [
                     {
@@ -1243,7 +1301,6 @@
                     "mandatory": true,
                     "type": "Number",
                     "label": "Number of employees",
-                    "q_code": "705",
                     "decimal_places": 0
                   }
                 ]
@@ -1355,7 +1412,6 @@
                     "mandatory": true,
                     "type": "Number",
                     "label": "Civil Research and Development",
-                    "q_code": "706",
                     "decimal_places": 1
                   },
                   {
@@ -1363,7 +1419,6 @@
                     "mandatory": true,
                     "type": "Number",
                     "label": "Defence Research and Development",
-                    "q_code": "707",
                     "decimal_places": 1
                   }
                 ]
@@ -1434,7 +1489,6 @@
                     "id": "answerb3e31814-254c-48da-b642-0cbcf0319183",
                     "mandatory": true,
                     "type": "Radio",
-                    "q_code": "708",
                     "options": [
                       {
                         "label": "Yes",
@@ -1483,7 +1537,6 @@
                     "mandatory": false,
                     "type": "TextArea",
                     "label": "Comments",
-                    "q_code": "712",
                     "max_length": 2000
                   }
                 ]
