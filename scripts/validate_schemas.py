@@ -87,11 +87,20 @@ def process_schema(future, future_to_schema):
     schema = future_to_schema[future]
     try:
         schema_path, result = future.result()
+        # Extract HTTP body
         http_body = re.sub(r"HTTPSTATUS:.*", "", result)
+
+        # Convert HTTP body to JSON
         http_body_json = json.loads(http_body)
+
+        # Get validator_version and success values
         validator_version = http_body_json.get("validator_version")
         success = http_body_json.get("success")
+
+        # Format JSON
         formatted_json = json.dumps(http_body_json, indent=4)
+
+        # Extract HTTP status code
         result_response = re.search(r"HTTPSTATUS:(\d+)", result)[1]
 
         if "errors" not in http_body_json and all(
