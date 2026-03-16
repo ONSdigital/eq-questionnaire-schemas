@@ -82,6 +82,38 @@ def validate_schema(schema_path):
         return schema_path, None
 
 
+def process_schema(future, future_to_schema):
+    # pylint: disable=broad-exception-caught
+    schema = future_to_schema[future]
+    try:
+        schema_path, result = future.result()
+        http_body = re.sub(r"HTTPSTATUS:.*", "", result)
+        http_body_json = json.loads(http_body)
+        validator_version = http_body_json.get("validator_version")
+        success = http_body_json.get("success")
+        formatted_json = json.dumps(http_body_json, indent=4)
+        result_response = re.search(r"HTTPSTATUS:(\d+)", result)[1]
+
+        if "errors" not in http_body_json and all(
+            [validator_version, success, result_response == "200"]
+        ):
+            logging.info(
+                f"\033[32m{schema_path}: PASSED | validator_version: {validator_version} | success: {success}\033[0m"
+            )
+            return True
+
+        logging.error(
+            f"\033[31m{schema_path}: FAILED | validator_version: {validator_version} | success: {success}\033[0m"
+        )
+        logging.error(f"\033[31mHTTP Status @ /validate: {result_response}\033[0m")
+        logging.error(f"\033[31mHTTP Status: {formatted_json}\033[0m")
+        return False
+
+    except Exception as e:
+        logging.error(f"\033[31mError processing {schema}: {e}\033[0m")
+        return False
+
+
 def main():
     # pylint: disable=broad-exception-caught
     passed = 0
@@ -95,49 +127,9 @@ def main():
             executor.submit(validate_schema, schema): schema for schema in schemas
         }
         for future in as_completed(future_to_schema):
-            schema = future_to_schema[future]
-            try:
-                schema_path, result = future.result()
-                # Extract HTTP body
-                http_body = re.sub(r"HTTPSTATUS:.*", "", result)
-
-                # Convert HTTP body to JSON
-                http_body_json = json.loads(http_body)
-
-                # Get validator_version and success values
-                validator_version = http_body_json.get("validator_version")
-                success = http_body_json.get("success")
-
-                # Format JSON
-                formatted_json = json.dumps(http_body_json, indent=4)
-
-                # Extract HTTP status code
-                result_response = re.search(r"HTTPSTATUS:(\d+)", result)[1]
-
-                if "errors" not in http_body_json and all(
-                    [validator_version, success, result_response == "200"]
-                ):
-                    logging.info(
-                        "\033[32m%s: PASSED | validator_version: %s | success: %s\033[0m",
-                        schema_path,
-                        validator_version,
-                        success,
-                    )
-                    passed += 1
-                else:
-                    logging.error(
-                        "\033[31m%s: FAILED | validator_version: %s | success: %s\033[0m",
-                        schema_path,
-                        validator_version,
-                        success,
-                    )
-                    logging.error(
-                        f"\033[31mHTTP Status @ /validate: {result_response}\033[0m"
-                    )
-                    logging.error(f"\033[31mHTTP Status: {formatted_json}\033[0m")
-                    failed += 1
-            except Exception as e:
-                logging.error(f"\033[31mError processing {schema}: {e}\033[0m")
+            if process_schema(future, future_to_schema):
+                passed += 1
+            else:
                 failed += 1
 
     logging.info(f"\033[32m{passed} passed\033[0m - \033[31m{failed} failed\033[0m")
