@@ -104,17 +104,33 @@ def main():
                 # Convert HTTP body to JSON
                 http_body_json = json.loads(http_body)
 
+                # Get validator_version and success values
+                validator_version = http_body_json.get("validator_version")
+                success = http_body_json.get("success")
+
                 # Format JSON
                 formatted_json = json.dumps(http_body_json, indent=4)
 
                 # Extract HTTP status code
                 result_response = re.search(r"HTTPSTATUS:(\d+)", result)[1]
 
-                if result_response == "200" and http_body_json == {}:
-                    logging.info(f"\033[32m{schema_path}: PASSED\033[0m")
+                if "errors" not in http_body_json and all(
+                    [validator_version, success, result_response == "200"]
+                ):
+                    logging.info(
+                        "\033[32m%s: PASSED | validator_version: %s | success: %s\033[0m",
+                        schema_path,
+                        validator_version,
+                        success,
+                    )
                     passed += 1
                 else:
-                    logging.error(f"\033[31m{schema_path}: FAILED\033[0m")
+                    logging.error(
+                        "\033[31m%s: FAILED | validator_version: %s | success: %s\033[0m",
+                        schema_path,
+                        validator_version,
+                        success,
+                    )
                     logging.error(
                         f"\033[31mHTTP Status @ /validate: {result_response}\033[0m"
                     )
