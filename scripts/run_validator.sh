@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-tag="348-merge"
+tag=`cat .schema-validator-version`
 TAG=${tag} docker compose -f docker-compose-schema-validator.yml up -d
