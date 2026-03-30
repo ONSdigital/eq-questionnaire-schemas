@@ -2691,7 +2691,7 @@
                 },
                 "description": [
                   {
-                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on pensions, your answer should relate to the <strong>pay period that included 22 April 2026.</strong></p>",
+                    "text": "<p>Employee name: {employee_employeename}</p><p>National Insurance Number: {employee_nationalinsurancenumberstarred}</p><p>Works number, branch, department: {employee_workid}</p><p>For all remaining questions on pensions, your answer should relate to the <strong>pay period that included 22 April 2026.</strong></p><p>Leave blank if unknown.</p>",
                     "placeholders": [
                       {
                         "placeholder": "employee_employeename",
@@ -2757,7 +2757,7 @@
                 "answers": [
                   {
                     "id": "answer8c868892-f586-4b3d-90c4-1e84ac638aa2",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Radio",
                     "options": [
                       {
@@ -3409,10 +3409,10 @@
                 "answers": [
                   {
                     "id": "answerce6df956-b418-4f9e-b7dc-ea9976ea1e4e",
-                    "mandatory": true,
+                    "mandatory": false,
                     "type": "Number",
                     "label": "Paid annual leave entitlement in days",
-                    "description": "Enter the number of days to 1 decimal place. For example, if the employee is entitled to 25 days paid annual leave, then enter: 25.0 days.",
+                    "description": "Enter the number of days to 1 decimal place. For example, if the employee is entitled to 25 days paid annual leave, then enter: 25.0 days. If the value is unknown please leave blank.",
                     "minimum": {
                       "value": 0,
                       "exclusive": false
