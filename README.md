@@ -1,6 +1,6 @@
-# eq-questionnaire-schemas
+# census31-eq-questionnaire-schemas
 
-A registry for questionnaire schemas for eq-questionnaire-runner.
+A registry for census questionnaire schemas for [census31-eq-questionnaire-runner](https://github.com/ONSdigital/census31-eq-questionnaire-runner).
 
 
 ## Setup
@@ -90,13 +90,13 @@ To check that translations are up to date use the following command (This check 
 make test-translation-templates
 ```
 
-## Testing built schemas with eq-questionnaire-runner
+## Testing built schemas with census31-eq-questionnaire-runner
 
 In order to test the schemas in this repo you will need to create symbolic links between the `/schemas` directory in runner and the folders in the schemas directory here. 
 
-For example in your local eq-questionnaire-runner repository, running the following command will create a symbolic link between the business folder here and the schemas directory in runner.
+For example in your local census31-eq-questionnaire-runner repository, running the following command will create a symbolic link between the business folder here and the schemas directory in runner.
 ```bash
-ln -s <PATH_TO_REPO>/eq-questionnaire-schemas/schemas/business <PATH_TO_REPO>/eq-questionnaire-runner/schemas
+ln -s <PATH_TO_REPO>/census31-eq-questionnaire-schemas/schemas/business <PATH_TO_REPO>/census31-eq-questionnaire-runner/schemas
 ```
 You should now be able to launch a questionnaire using one of the schemas.
 
