@@ -124,6 +124,10 @@
       "code": "22146"
     },
     {
+      "answer_id": "answer6dc581eb-1353-4c10-bee7-2c3093578e1f",
+      "code": "12811"
+    },
+    {
       "answer_id": "answer1d9bfffb-afe3-43d4-9606-23af36e18bdc",
       "code": "200075"
     },
@@ -372,7 +376,7 @@
                     ]
                   },
                   {
-                    "question": "Supply chains",
+                    "question": "Supply chain risk",
                     "contents": [
                       {
                         "description": "This section asks for information about:"
@@ -380,8 +384,24 @@
                       {
                         "list": [
                           "the availability of materials, goods and services within the UK",
-                          "global supply chain disruption",
-                          "gas and electricity prices"
+                          "global supply chain disruption"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "question": "Energy prices",
+                    "contents": [
+                      {
+                        "description": "This section asks for information about:"
+                      },
+                      {
+                        "list": [
+                          "business’s concern about energy and fuel prices",
+                          "energy supplies directly paid for",
+                          "proportion of gas and electricity prices fixed or hedged",
+                          "current gas and electricity energy contract expiration",
+                          "proportion of business’s total costs spent on energy"
                         ]
                       }
                     ]
@@ -579,7 +599,7 @@
               "question": {
                 "id": "questionturnover-comparison-to-last-month",
                 "title": {
-                  "text": "How did {ru_name}’s turnover in April 2026 compare with the previous calendar month?",
+                  "text": "How did {ru_name}’s turnover in May 2026 compare with the previous calendar month?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -722,7 +742,7 @@
               "type": "Question",
               "question": {
                 "id": "questionturnover-expectations",
-                "title": "What are your business’s expectations for turnover in <strong>June 2026</strong>?",
+                "title": "What are your business’s expectations for turnover in <strong>July 2026</strong>?",
                 "description": [
                   "<p>When considering expectations, compare to your business’s current turnover.</p>"
                 ],
@@ -760,27 +780,17 @@
               "type": "Question",
               "question": {
                 "id": "questiondomestic-demand-for-goods-and-services",
-                "title": "How did your business’s domestic demand for goods and services in <strong>April 2026</strong> compare with the previous calendar month?",
+                "title": "How did your business’s domestic demand for goods and services in <strong>May 2026</strong> compare with the previous calendar month?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "Include the volume of orders in your business’s domestic order book"
                     },
                     {
-                      "list": [
-                        "the volume of orders in your business’s domestic order book"
-                      ]
-                    },
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "seasonal changes"
-                      ]
+                      "description": "Exclude seasonal changes"
                     }
                   ]
                 },
@@ -822,27 +832,17 @@
               "type": "Question",
               "question": {
                 "id": "questioninternational-demand-for-goods-and-services",
-                "title": "How did your business’s <strong>international</strong> demand for goods and services in April 2026 compare with the previous calendar month?",
+                "title": "How did your business’s <strong>international</strong> demand for goods and services in May 2026 compare with the previous calendar month?",
                 "description": [
                   "<p>Informed estimates are acceptable.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "Include the volume of orders in your business’s export order book"
                     },
                     {
-                      "list": [
-                        "the volume of orders in your business’s export order book"
-                      ]
-                    },
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "seasonal changes"
-                      ]
+                      "description": "Exclude seasonal changes"
                     }
                   ]
                 },
@@ -936,7 +936,7 @@
               "question": {
                 "id": "questionprices-of-goods-or-services-bought",
                 "title": {
-                  "text": "How did the prices of goods or services bought by {ru_name} in April 2026 compare with the previous calendar month?",
+                  "text": "How did the prices of goods or services bought by {ru_name} in May 2026 compare with the previous calendar month?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -992,7 +992,7 @@
               "type": "Question",
               "question": {
                 "id": "questionprices-of-goods-or-services-sold",
-                "title": "How did the prices of goods or services <strong>sold</strong> by your business in April 2026 compare with the previous calendar month?",
+                "title": "How did the prices of goods or services <strong>sold</strong> by your business in May 2026 compare with the previous calendar month?",
                 "guidance": {
                   "contents": [
                     {
@@ -1038,7 +1038,7 @@
               "type": "Question",
               "question": {
                 "id": "questionexpectations-for-prices-of-goods-or-services-sold",
-                "title": "What are your business’s expectations for the prices of goods or services sold in <strong>June 2026</strong>?",
+                "title": "What are your business’s expectations for the prices of goods or services sold in <strong>July 2026</strong>?",
                 "description": [
                   "<p>When considering expectations, compare to your business’s current prices of goods or services.</p>"
                 ],
@@ -1087,7 +1087,7 @@
               "type": "Question",
               "question": {
                 "id": "questionfactors-causing-business-to-consider-raising-prices",
-                "title": "Which of the following factors, if any, are causing your business to consider <strong>raising prices</strong> in June 2026?",
+                "title": "Which of the following factors, if any, are causing your business to consider <strong>raising prices</strong> in July 2026?",
                 "type": "MutuallyExclusive",
                 "mandatory": true,
                 "answers": [
@@ -1246,24 +1246,14 @@
               "type": "Question",
               "question": {
                 "id": "questionstock-levels-of-raw-materials",
-                "title": "How did your business’s stock levels of raw materials in April 2026 compare with the previous calendar month?",
+                "title": "How did your business’s stock levels of raw materials in May 2026 compare with the previous calendar month?",
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include:</strong>"
+                      "description": "Include work in progress"
                     },
                     {
-                      "list": [
-                        "work in progress"
-                      ]
-                    },
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
-                    {
-                      "list": [
-                        "seasonal changes"
-                      ]
+                      "description": "Exclude seasonal changes"
                     }
                   ]
                 },
@@ -1315,7 +1305,7 @@
               "type": "Question",
               "question": {
                 "id": "questionstock-levels-of-finished-goods",
-                "title": "How did your business’s stock levels of <strong>finished goods</strong> in April 2026 compare with the previous calendar month?",
+                "title": "How did your business’s stock levels of <strong>finished goods</strong> in May 2026 compare with the previous calendar month?",
                 "guidance": {
                   "contents": [
                     {
@@ -1402,7 +1392,7 @@
     },
     {
       "id": "10d687f5-8643-4c53-95f1-dfdfc448eae0",
-      "title": "Supply chains",
+      "title": "Supply chain risk",
       "summary": {
         "show_on_completion": false,
         "collapsible": false
@@ -1414,10 +1404,10 @@
           "blocks": [
             {
               "type": "Interstitial",
-              "id": "supply-chain-section",
-              "page_title": "Supply chain section",
+              "id": "supply-chain-risk-section",
+              "page_title": "Supply chain risk section",
               "content": {
-                "title": "Supply chains",
+                "title": "Supply chain risk",
                 "contents": [
                   {
                     "description": "This section asks for information about:"
@@ -1425,8 +1415,7 @@
                   {
                     "list": [
                       "the availability of materials, goods and services within the UK",
-                      "global supply chain disruption",
-                      "gas and electricity prices"
+                      "global supply chain disruption"
                     ]
                   }
                 ]
@@ -1438,7 +1427,7 @@
               "question": {
                 "id": "questionmaterials-goods-or-services-from-within-the-uk",
                 "title": {
-                  "text": "Was {ru_name} able to get the materials, goods or services it needed from within the UK in April 2026?",
+                  "text": "Was {ru_name} able to get the materials, goods or services it needed from within the UK in May 2026?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -1483,7 +1472,7 @@
               "type": "Question",
               "question": {
                 "id": "questionglobal-supply-chain-disruption",
-                "title": "Did your business experience any global supply chain disruption in April 2026?",
+                "title": "Did your business experience any global supply chain disruption in May 2026?",
                 "definitions": [
                   {
                     "title": "Examples of global supply chain disruption",
@@ -1529,7 +1518,7 @@
               "page_title": "Global supply chain disruption",
               "routing_rules": [
                 {
-                  "block": "businesss-concern-about-energy-prices",
+                  "section": "End",
                   "when": {
                     "in": [
                       {
@@ -1621,13 +1610,78 @@
                 ]
               },
               "page_title": "Main reason for global supply chain disruption"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "in": [
+            {
+              "identifier": "answer4ec8d01d-485e-4262-80a2-a42289f447d3",
+              "source": "answers"
+            },
+            [
+              "32_1",
+              "32_2",
+              "32_3",
+              "32_4"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "83ae8ef4-e0eb-4efc-9691-3105bd590ead",
+      "title": "Energy prices",
+      "summary": {
+        "show_on_completion": false,
+        "collapsible": false
+      },
+      "show_on_hub": true,
+      "groups": [
+        {
+          "id": "group83ae8ef4-e0eb-4efc-9691-3105bd590ead",
+          "blocks": [
+            {
+              "type": "Interstitial",
+              "id": "energy-prices-section",
+              "page_title": "Energy prices section",
+              "content": {
+                "title": "Energy prices",
+                "contents": [
+                  {
+                    "description": "This section asks for information about:"
+                  },
+                  {
+                    "list": [
+                      "business’s concern about energy and fuel prices",
+                      "energy supplies directly paid for",
+                      "proportion of gas and electricity prices fixed or hedged",
+                      "current gas and electricity energy contract expiration",
+                      "proportion of business’s total costs spent on energy"
+                    ]
+                  }
+                ]
+              }
             },
             {
               "id": "businesss-concern-about-energy-prices",
               "type": "Question",
               "question": {
                 "id": "questionbusinesss-concern-about-energy-prices",
-                "title": "How concerned is your business about energy prices?",
+                "title": {
+                  "text": "How concerned is {ru_name} about energy prices?",
+                  "placeholders": [
+                    {
+                      "placeholder": "ru_name",
+                      "value": {
+                        "source": "metadata",
+                        "identifier": "ru_name"
+                      }
+                    }
+                  ]
+                },
                 "type": "General",
                 "answers": [
                   {
@@ -1908,11 +1962,11 @@
                     "type": "Radio",
                     "options": [
                       {
-                        "label": "By 31st May 2026",
+                        "label": "By 30th June 2026",
                         "value": "23734_1"
                       },
                       {
-                        "label": "Between 1st June and 30th September 2026",
+                        "label": "Between 1st July and 30th September 2026",
                         "value": "23734_2"
                       },
                       {
@@ -1959,7 +2013,7 @@
               "type": "Question",
               "question": {
                 "id": "questioncurrent-electricity-energy-contract-expiration",
-                "title": "When does your business expect your current <strong>electricity </strong>energy contract to end?",
+                "title": "When does your business expect your current <strong>electricity</strong> energy contract to end?",
                 "type": "General",
                 "answers": [
                   {
@@ -1968,11 +2022,11 @@
                     "type": "Radio",
                     "options": [
                       {
-                        "label": "By 31st May 2026",
+                        "label": "By 30th June 2026",
                         "value": "23747_1"
                       },
                       {
-                        "label": "Between 1st June and 30th September 2026",
+                        "label": "Between 1st July and 30th September 2026",
                         "value": "23747_2"
                       },
                       {
@@ -2019,7 +2073,7 @@
               "type": "Question",
               "question": {
                 "id": "questionproportion-of-businesss-total-costs-spent-on-energy",
-                "title": "Approximately, what proportion of your business’s total purchases of energy, materials, goods and services was accounted for by energy in April 2026?",
+                "title": "Approximately, what proportion of your business’s total purchases of energy, materials, goods and services was accounted for by energy in May 2026?",
                 "type": "General",
                 "answers": [
                   {
@@ -2060,6 +2114,51 @@
                 ]
               },
               "page_title": "Proportion of business’s total costs spent on energy"
+            },
+            {
+              "id": "business-concern-about-increases-in-fuel-prices",
+              "type": "Question",
+              "question": {
+                "id": "questionbusiness-concern-about-increases-in-fuel-prices",
+                "title": "How concerned is your business about increases in fuel prices?",
+                "definitions": [
+                  {
+                    "title": "What we mean by ’fuel prices’",
+                    "contents": [
+                      {
+                        "description": "This refers to costs associated with petrol and diesel used in business operations, including for transportation, machinery, and equipment."
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer6dc581eb-1353-4c10-bee7-2c3093578e1f",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Very concerned",
+                        "value": "12811_1"
+                      },
+                      {
+                        "label": "Somewhat concerned",
+                        "value": "12811_2"
+                      },
+                      {
+                        "label": "Not concerned",
+                        "value": "12811_3"
+                      },
+                      {
+                        "label": "Not sure",
+                        "value": "12811_4"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Business concern about increases in fuel prices"
             }
           ]
         }
@@ -2118,7 +2217,7 @@
               "question": {
                 "id": "questionexporting-and-importing",
                 "title": {
-                  "text": "Did {ru_name} export or import any goods or services in April 2026?",
+                  "text": "Did {ru_name} export or import any goods or services in May 2026?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2214,7 +2313,7 @@
               "type": "Question",
               "question": {
                 "id": "questionincrease-in-exporting-challenges",
-                "title": "Did your business experience an increase in any of the following exporting challenges in April 2026, compared with the previous calendar month?",
+                "title": "Did your business experience an increase in any of the following exporting challenges in May 2026, compared with the previous calendar month?",
                 "definitions": [
                   {
                     "title": "What we mean by an ’increase’",
@@ -2314,7 +2413,7 @@
               "type": "Question",
               "question": {
                 "id": "questionincrease-in-importing-challenges",
-                "title": "Did your business experience an increase in any of the following <strong>importing</strong> challenges in April 2026, compared with the previous calendar month?",
+                "title": "Did your business experience an increase in any of the following <strong>importing</strong> challenges in May 2026, compared with the previous calendar month?",
                 "definitions": [
                   {
                     "title": "What we mean by an ’increase’",
@@ -2473,7 +2572,7 @@
               "question": {
                 "id": "questionexpectations-for-businesss-number-of-employees",
                 "title": {
-                  "text": "What are {ru_name}’s expectations for the number of employees in June 2026?",
+                  "text": "What are {ru_name}’s expectations for the number of employees in July 2026?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2563,7 +2662,7 @@
               "type": "Question",
               "question": {
                 "id": "questiondifficulties-in-recruiting-employees",
-                "title": "Did your business experience any difficulties recruiting employees in <strong>April 2026</strong>?",
+                "title": "Did your business experience any difficulties recruiting employees in <strong>May 2026</strong>?",
                 "type": "General",
                 "answers": [
                   {
@@ -2654,7 +2753,7 @@
               "question": {
                 "id": "questionmain-concern-for-your-business",
                 "title": {
-                  "text": "Which of the following, if any, will be the main concern for {ru_name} in June 2026?",
+                  "text": "Which of the following, if any, will be the main concern for {ru_name} in July 2026?",
                   "placeholders": [
                     {
                       "placeholder": "ru_name",
@@ -2746,7 +2845,7 @@
               "type": "Question",
               "question": {
                 "id": "questionbusinesss-overall-performance",
-                "title": "How would you describe your business’s overall performance in <strong>April 2026</strong>, compared with the same calendar month last year?",
+                "title": "How would you describe your business’s overall performance in <strong>May 2026</strong>, compared with the same calendar month last year?",
                 "description": [
                   "<p>Consider <strong>all aspects</strong> of your business contributing to overall performance such as pricing, trading and workforce.</p>"
                 ],
