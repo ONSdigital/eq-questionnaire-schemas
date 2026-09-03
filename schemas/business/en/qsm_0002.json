@@ -173,7 +173,7 @@
                         "You have been selected to complete the Quarterly Survey of Building Materials Sand and Gravel (Marine Dredged).",
                         "This survey is conducted by the Office for National Statistics on behalf of the Department for Business and Trade (DBT).",
                         {
-                          "text": "Data should relate to your business’s local unit <strong>{localunits_name}</strong>, <strong>{localunits_address}</strong>.",
+                          "text": "Data should relate to your business&#39;s local unit <strong>{localunits_name}</strong>, <strong>{localunits_address}</strong>.",
                           "placeholders": [
                             {
                               "placeholder": "localunits_name",
@@ -207,7 +207,7 @@
                         "You cannot appeal your selection. Your business was selected to give us a comprehensive view of the UK economy.",
                         "You still need to complete this survey even if it does not seem relevant. All returns are important as it helps us produce better statistics.",
                         "You can provide informed estimates if actual figures are not available.",
-                        "You can save a copy of your answers at the end of this questionnaire using the ’Download as PDF’ button."
+                        "You can save a copy of your answers at the end of this questionnaire using the &#x2018;Download as PDF&#x2019; button."
                       ]
                     }
                   ]
@@ -225,7 +225,7 @@
                   },
                   {
                     "description": {
-                      "text": "Data you provide should relate to your business’s local unit <strong>{localunits_name}</strong>, <strong>{localunits_address}</strong>.",
+                      "text": "Data you provide should relate to your business&#39;s local unit <strong>{localunits_name}</strong>, <strong>{localunits_address}</strong>.",
                       "placeholders": [
                         {
                           "placeholder": "localunits_name",
@@ -272,7 +272,7 @@
                 ],
                 "questions": [
                   {
-                    "question": "Details of sales for your business’s local unit",
+                    "question": "Details of sales for your business&#39;s local unit",
                     "contents": [
                       {
                         "description": {
@@ -397,9 +397,7 @@
               "value": {
                 "source": "supplementary_data",
                 "identifier": "local-units",
-                "selectors": [
-                  "name"
-                ]
+                "selectors": ["name"]
               }
             }
           ]
@@ -428,9 +426,7 @@
                       "value": {
                         "source": "supplementary_data",
                         "identifier": "local-units",
-                        "selectors": [
-                          "name"
-                        ]
+                        "selectors": ["name"]
                       }
                     }
                   ]
@@ -482,9 +478,7 @@
                           "value": {
                             "source": "supplementary_data",
                             "identifier": "local-units",
-                            "selectors": [
-                              "name"
-                            ]
+                            "selectors": ["name"]
                           }
                         },
                         {
@@ -497,9 +491,7 @@
                                   {
                                     "source": "supplementary_data",
                                     "identifier": "local-units",
-                                    "selectors": [
-                                      "address"
-                                    ]
+                                    "selectors": ["address"]
                                   }
                                 ],
                                 "delimiter": ", "
@@ -599,7 +591,7 @@
                     },
                     {
                       "list": [
-                        "material dredged for your business’s own use",
+                        "material dredged for your business&#39;s own use",
                         "only material actually produced or processed for recycling by your firm",
                         "only material dredged from the sea and from estuaries"
                       ]
@@ -701,9 +693,7 @@
                   "not": [
                     {
                       "any-in": [
-                        [
-                          "Sand"
-                        ],
+                        ["Sand"],
                         {
                           "identifier": "answer5a877663-44a0-4b44-afbe-0344bd430ae3",
                           "source": "answers"
@@ -769,9 +759,7 @@
                   "not": [
                     {
                       "any-in": [
-                        [
-                          "Gravel, Pebbles, Shingle, Flint"
-                        ],
+                        ["Gravel, Pebbles, Shingle, Flint"],
                         {
                           "identifier": "answer5a877663-44a0-4b44-afbe-0344bd430ae3",
                           "source": "answers"
@@ -810,9 +798,7 @@
                   "not": [
                     {
                       "any-in": [
-                        [
-                          "Sand and gravel used for constructional fill"
-                        ],
+                        ["Sand and gravel used for constructional fill"],
                         {
                           "identifier": "answer5a877663-44a0-4b44-afbe-0344bd430ae3",
                           "source": "answers"
@@ -827,7 +813,7 @@
               "id": "calculated-summary-section",
               "type": "CalculatedSummary",
               "page_title": "Calculated summary section",
-              "title": "We have calculated your business’s total quantity of marine dredged materials sold during the reporting period, to be %(total)s. Is this correct?",
+              "title": "We have calculated your business&#39;s total quantity of marine dredged materials sold during the reporting period, to be %(total)s. Is this correct?",
               "calculation": {
                 "operation": {
                   "+": [
@@ -926,9 +912,6 @@
               "question": {
                 "id": "questionnew-ports-of-landing",
                 "title": "Please provide details of any new ports of landing your business has brought into use since your last return",
-                "description": [
-                  "<p>This question is <strong>optional</strong>. Leave blank if not applicable.</p><p>If you provide comments we are less likely to contact you with data queries.</p>"
-                ],
                 "type": "General",
                 "answers": [
                   {
@@ -977,23 +960,26 @@
                 "id": "questioncomments",
                 "title": "Please provide any further details that will help us understand your figures and tell an industry story",
                 "description": [
-                  "<p>This question is <strong>optional</strong>. Leave blank if not applicable.</p><p>If you provide comments we are less likely to contact you with data queries.</p>"
+                  "<p>You have nearly finished. Make sure you continue to the next page and select &#39;submit&#39; at the bottom.</p>"
                 ],
                 "guidance": {
                   "contents": [
                     {
-                      "description": "<strong>Include details of:</strong>"
+                      "description": "Include reasons for any substantial fluctuations compared to your previous return"
+                    },
+                    {
+                      "description": "<strong>For example:</strong>"
                     },
                     {
                       "list": [
-                        "any substantial fluctuations compared to your previous return, if applicable",
                         "site closures",
                         "reason for site closures, such as planning permission or demand pending",
-                        "any sites you are not currently reporting for",
-                        "site maintenance and breakdowns",
+                        "site maintenance",
+                        "site breakdowns",
                         "new contract demands, such as infrastructure",
                         "any change in contacts",
-                        "extreme weather or wildlife restrictions"
+                        "extreme weather or wildlife restrictions",
+                        "any sites you are not currently reporting for"
                       ]
                     }
                   ]
@@ -1052,9 +1038,7 @@
     }
   ],
   "supplementary_data": {
-    "lists": [
-      "local-units"
-    ]
+    "lists": ["local-units"]
   },
   "post_submission": {
     "feedback": true,
