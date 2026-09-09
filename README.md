@@ -5,16 +5,45 @@ A registry for questionnaire schemas for eq-questionnaire-runner.
 
 ## Setup
 
-It is recommended that you use [Pyenv](https://github.com/pyenv/pyenv) to manage your Python installations.
+### Pre-Requisites
 
-Use pyenv to install the Python version specified by the `.python-version` file.
-```bash
-pyenv install
+The following must be installed and working before you start:
+- Miniconda: Python and system package management (install from Self Service)
+
+Verify each is available:
+
+```shell
+conda --version
 ```
 
-Check the installed version of Python is correct with:
-```bash
-python --version
+If `conda` reports `command not found` after installing from Self Service, the installer did not
+write the conda block into `~/.zshrc`. Confirm the install is present and wire it in:
+
+```shell
+ls -d /opt/miniconda3
+/opt/miniconda3/bin/conda init zsh
+```
+
+Open a new terminal tab and re-check `conda --version`.
+
+### Conda environment
+
+Python version is pinned in the committed `environment.yml`, matching
+`.python-version` as closely as conda-forge availability allows:
+
+If `.python-version` change, update `environment.yml` to match.
+
+Create and activate the environment:
+
+```shell
+conda env create -f environment.yml
+conda activate eq-schemas
+```
+
+Version can be changed by editing `environment.yml` and running:
+
+```shell
+conda env update -f environment.yml --prune
 ```
 
 ### Authenticate
@@ -26,14 +55,9 @@ gcloud auth login
 
 ### Install Poetry
 
-We use poetry to manage the dependencies in this repository, to install poetry use:
+With the conda environment active, install the Python dependencies. Add the option `--without dev` to ignore dev dependencies. 
 
-```bash
-curl -sSL https://install.python-poetry.org | python3 - --version 2.1.2
-```
-
-Install the dependencies for this project. Add the option `--without dev` to ignore dev dependencies. 
-```
+```shell
 poetry install
 ```
 
