@@ -4,9 +4,9 @@ services:
     networks:
       - eq-schema
     ports:
-      - 5002:5002
+      - 5005:5005
     healthcheck:
-      test: "curl localhost:5002/status"
+      test: "curl localhost:5005/status"
       interval: 5s
       timeout: 5s
       retries: 20
