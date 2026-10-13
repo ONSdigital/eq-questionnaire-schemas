@@ -148,16 +148,25 @@ function(region_code, census_month_year_date) {
   },
   metadata: [
     {
-      name: 'user_id',
-      type: 'string',
-    },
-    {
-      name: 'period_id',
+      name: 'case_type',
       type: 'string',
     },
     {
       name: 'display_address',
       type: 'string',
+    },
+    {
+      name: 'questionnaire_id',
+      type: 'string',
+    },
+    {
+      name: 'ru_ref',
+      type: 'string',
+    },
+    {
+      name: 'user_id',
+      type: 'string',
+      optional: true,
     },
   ],
   questionnaire_flow: {
