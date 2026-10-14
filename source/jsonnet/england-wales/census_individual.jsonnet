@@ -96,10 +96,10 @@ local workplace_type = import 'individual/blocks/employment/workplace_type.jsonn
 
 local understandWelshBlock(region_code) = if region_code == 'GB-WLS' then [understand_welsh] else [];
 
-function(region_code, census_month_year_date) {
+function(region_code, census_month_year_date, schemas_version=null) {
   mime_type: 'application/json/ons/eq',
   language: 'en',
-  schema_version: '0.0.1',
+  schemas_version: schemas_version,
   data_version: '0.0.3',
   survey_id: 'census',
   form_type: 'I',

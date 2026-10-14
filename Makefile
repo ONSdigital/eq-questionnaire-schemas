@@ -2,7 +2,7 @@ clean:
 	rm -rf schemas
 
 build-schemas:
-	./scripts/build_schemas.sh
+	./scripts/build_schemas.sh $(if $(SCHEMAS_VERSION),--schemas-version $(SCHEMAS_VERSION))
 
 build: build-schemas translate-schemas
 

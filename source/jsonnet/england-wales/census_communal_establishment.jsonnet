@@ -10,10 +10,10 @@ local responsible_for_establishment = import 'communal-establishment/blocks/esta
 local travel_establishment = import 'communal-establishment/blocks/establishment-details/travel_establishment.jsonnet';
 local visitors_in_establishment = import 'communal-establishment/blocks/establishment-details/visitors_in_establishment.jsonnet';
 
-function(region_code, census_month_year_date) {
+function(region_code, census_month_year_date, schemas_version=null) {
   mime_type: 'application/json/ons/eq',
   language: 'en',
-  schema_version: '0.0.1',
+  schemas_version: schemas_version,
   data_version: '0.0.3',
   survey_id: 'census',
   form_type: 'C',
