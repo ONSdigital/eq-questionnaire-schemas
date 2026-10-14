@@ -19,7 +19,7 @@ done
 
 # Validate only if supplied
 if [[ -n "${version:-}" ]]; then
-    if ! [[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+    if ! [[ "$version" =~ ^[0-9]+\.[0-9]+$ ]]; then
         echo "Invalid version: $version"
         exit 1
     fi

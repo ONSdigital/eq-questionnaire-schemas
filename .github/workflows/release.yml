@@ -34,7 +34,7 @@ jobs:
         with:
           version: v0.22.0
       - name: Build schemas
-        run: make build
+        run: make build $RELEASE_TAG
       - name: Zip schemas
         run: zip -r schemas.zip schemas
       - name: Upload release asset
