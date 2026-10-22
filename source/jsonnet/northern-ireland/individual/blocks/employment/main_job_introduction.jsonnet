@@ -13,10 +13,6 @@ local rules = import 'rules.libsonnet';
           {
             description: 'The next set of questions is about your main job. Your main job is the job in which you work the most hours.',
           },
-          {
-            title: 'Coronavirus (COVID-19)',
-            description: 'Your circumstances may have changed during the coronavirus pandemic. Answer all questions based on your situation as it is now.',
-          },
         ],
       },
       when: { and: [rules.isNotProxy, rules.mainJob] },
@@ -30,10 +26,6 @@ local rules = import 'rules.libsonnet';
               text: 'The next set of questions is about <strong>{person_name_possessive}</strong> main job. Their main job is the job in which they work the most hours.',
               placeholders: [placeholders.personNamePossessive],
             },
-          },
-          {
-            title: 'Coronavirus (COVID-19)',
-            description: 'Their circumstances may have changed during the coronavirus pandemic. Answer all questions based on their situation as it is now.',
           },
         ],
       },
