@@ -11,11 +11,6 @@ local questionTitle(isProxy) = (
   else 'In the last seven days, were you doing any of the following?'
 );
 
-local questionDescription(isProxy) = (
-  if isProxy then 'If they have a job but have been off work on <strong>furlough</strong>, in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
-  else 'If you have a job but have been off work on <strong>furlough</strong>, in <strong>quarantine</strong> or <strong>self-isolating</strong>, select “Temporarily away from work ill, on holiday or temporarily laid off”'
-);
-
 local answerDescription(isProxy) = (
   if isProxy then 'Freelance means that they are self-employed and work for different companies or people on particular pieces of work'
   else 'Freelance means that you are self-employed and work for different companies or people on particular pieces of work'
@@ -26,9 +21,6 @@ local question(isProxy) = {
   id: 'employment-status-last-seven-days-question',
   title: questionTitle(isProxy),
   type: 'MutuallyExclusive',
-  description: [
-    questionDescription(isProxy),
-  ],
   mandatory: true,
   guidance: {
     contents: [
