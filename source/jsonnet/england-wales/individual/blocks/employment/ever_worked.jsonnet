@@ -21,9 +21,6 @@ local label(isProxy) = (
 local question(isProxy) = {
   id: 'ever-worked-question',
   title: title(isProxy),
-  description: [
-    '<strong>Furlough</strong> is considered paid work',
-  ],
   type: 'General',
   answers: [
     {
