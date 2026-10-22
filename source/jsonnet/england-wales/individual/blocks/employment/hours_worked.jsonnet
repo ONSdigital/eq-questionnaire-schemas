@@ -11,11 +11,6 @@ local questionTitle(isProxy) = (
   else 'In your main job, how many hours a week do you usually work?'
 );
 
-local questionDescription(isProxy) = (
-  if isProxy then 'If the <strong>coronavirus</strong> pandemic has affected their working hours, select the answer that best describes their <strong>current circumstances</strong>'
-  else 'If the <strong>coronavirus</strong> pandemic has affected your working hours, select the answer that best describes your <strong>current circumstances</strong>'
-);
-
 local question(isProxy) = {
   title: questionTitle(isProxy),
   id: 'hours-worked-question',
@@ -27,9 +22,6 @@ local question(isProxy) = {
     ],
   },
   type: 'General',
-  description: [
-    questionDescription(isProxy),
-  ],
   answers: [
     {
       id: 'hours-worked-answer',
