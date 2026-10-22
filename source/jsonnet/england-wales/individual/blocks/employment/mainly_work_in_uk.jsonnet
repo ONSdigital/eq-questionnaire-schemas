@@ -11,20 +11,10 @@ local questionTitle(isProxy) = (
   else 'Do you mainly work in the UK?'
 );
 
-local questionDescription(isProxy) = (
-  if isProxy then [
-    'If the <strong>coronavirus</strong> pandemic has affected where they mainly work, select the answer that best describes their <strong>current circumstances</strong>',
-  ]
-  else [
-    'If the <strong>coronavirus</strong> pandemic has affected where you mainly work, select the answer that best describes your <strong>current circumstances</strong>',
-  ]
-);
-
 local question(isProxy) = {
   id: 'mainly-work-in-uk-question',
   title: questionTitle(isProxy),
   type: 'General',
-  description: questionDescription(isProxy),
   answers: [
     {
       id: 'mainly-work-in-uk-answer',
