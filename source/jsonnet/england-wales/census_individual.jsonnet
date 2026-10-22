@@ -1,5 +1,4 @@
 // personal details
-local coronavirus_circumstances = import 'household/blocks/who-lives-here/coronavirus_circumstances.jsonnet';
 local accommodation_type = import 'individual/blocks/personal-details/accommodation_type.jsonnet';
 local address_type = import 'individual/blocks/personal-details/address_type.jsonnet';
 local another_address = import 'individual/blocks/personal-details/another_address.jsonnet';
@@ -161,7 +160,6 @@ function(region_code, census_month_year_date) {
           id: 'personal-details-group',
           title: 'Personal details',
           blocks: [
-            coronavirus_circumstances,
             accommodation_type,
             proxy,
             name,
