@@ -72,6 +72,18 @@
       "code": "HMS-HST-004"
     },
     {
+      "answer_id": "answer3971dfce-63e1-4e34-ac72-a40cdd7ea7a0",
+      "code": "HMS-HST-005"
+    },
+    {
+      "answer_id": "answer8303ebf6-be79-44b0-b800-4d400308cdef",
+      "code": "HMS-HST-006"
+    },
+    {
+      "answer_id": "answer46e4d62e-75e6-413d-8419-9e84a08dd58c",
+      "code": "HMS-HST-007"
+    },
+    {
       "answer_id": "answer92f402d4-7fb4-4769-a8e9-e599761705bb",
       "code": "HMS-GPP-001"
     },
@@ -230,6 +242,42 @@
     {
       "answer_id": "answer3c239a8d-112f-4ed9-8a73-369f2ad90456",
       "code": "HMS-GPP-041"
+    },
+    {
+      "answer_id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+      "code": "HMS-CMH-001"
+    },
+    {
+      "answer_id": "answer411f94cd-a8c3-4c97-89b0-6a32ad9553d6",
+      "code": "HMS-CMH-002"
+    },
+    {
+      "answer_id": "answer5921fcdc-a2cb-4b31-bedb-2a0cc97484fb",
+      "code": "HMS-CMH-003"
+    },
+    {
+      "answer_id": "answer4dcd3a50-a2e3-4f29-bb3e-d04f321ada30",
+      "code": "HMS-CMH-004"
+    },
+    {
+      "answer_id": "answer13893afa-9677-4623-a52d-2e31c999b722",
+      "code": "HMS-CMH-005"
+    },
+    {
+      "answer_id": "answer1f0ef5f2-8a8f-438e-bafc-cc5f30f51df6",
+      "code": "HMS-CMH-006"
+    },
+    {
+      "answer_id": "answerb04c9c6e-783f-4c9a-8d81-8b6158410446",
+      "code": "HMS-CMH-007"
+    },
+    {
+      "answer_id": "answer4b989a54-3a06-42f9-96f6-f4ed8d61a063",
+      "code": "HMS-CMH-008"
+    },
+    {
+      "answer_id": "answer608d26ec-1885-4938-985f-34e82068420d",
+      "code": "HMS-CMH-009"
     },
     {
       "answer_id": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
@@ -452,16 +500,16 @@
       "code": "HMS-PCY-002"
     },
     {
+      "answer_id": "answerb1303211-fe2a-4ccd-8672-f9839050a7e6",
+      "code": "HMS-PCY-011"
+    },
+    {
       "answer_id": "answer0143b42a-8907-4b47-a3ba-209572b1e36d",
       "code": "HMS-PCY-009"
     },
     {
       "answer_id": "answer2e532817-253a-48ec-b038-8baa46d0a710",
       "code": "HMS-PCY-010"
-    },
-    {
-      "answer_id": "answerb1303211-fe2a-4ccd-8672-f9839050a7e6",
-      "code": "HMS-PCY-011"
     },
     {
       "answer_id": "answera20e2a61-ae2e-4b67-aae4-f1443cd8c20b",
@@ -501,6 +549,7 @@
         "about-you",
         "your-gp-practice",
         "nhs-hospital-waiting-list-summary",
+        "mhlda-summary",
         "nhs-community-health-services",
         "dental-care",
         "pharmacies",
@@ -512,10 +561,7 @@
     {
       "id": "7b57597a-04ed-44c9-82df-1d863927595a",
       "title": "Introduction",
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      },
+      "summary": { "show_on_completion": false, "collapsible": false },
       "show_on_hub": false,
       "groups": [
         {
@@ -545,14 +591,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -567,15 +607,11 @@
                         "identifier": "answer039428b9-a54d-4027-8270-1197ea1043de",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "block": "introduction-section-completing-for-someone-else"
-                }
+                { "block": "introduction-section-completing-for-someone-else" }
               ]
             },
             {
@@ -616,14 +652,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -638,15 +668,11 @@
                         "identifier": "answeracadafee-1958-4039-ab53-7eedc1db6b95",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "block": "introduction-section-access-error-message"
-                }
+                { "block": "introduction-section-access-error-message" }
               ]
             },
             {
@@ -690,12 +716,7 @@
                     "mandatory": true,
                     "type": "Checkbox",
                     "label": "Select continue to submit",
-                    "options": [
-                      {
-                        "label": "Continue",
-                        "value": "Continue"
-                      }
-                    ]
+                    "options": [{ "label": "Continue", "value": "Continue" }]
                   }
                 ]
               },
@@ -804,9 +825,7 @@
                   "block": "about-you-your-home-postcode",
                   "when": {
                     "all-in": [
-                      [
-                        "Yes, I have moved house"
-                      ],
+                      ["Yes, I have moved house"],
                       {
                         "identifier": "answerdbcb618e-6c8f-491d-91e5-820d15cb282c",
                         "source": "answers"
@@ -818,9 +837,7 @@
                   "block": "work-and-education-current-status",
                   "when": {
                     "all-in": [
-                      [
-                        "Yes, my work or education status has changed"
-                      ],
+                      ["Yes, my work or education status has changed"],
                       {
                         "identifier": "answerdbcb618e-6c8f-491d-91e5-820d15cb282c",
                         "source": "answers"
@@ -923,22 +940,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Employed",
-                        "value": "Employed"
-                      },
-                      {
-                        "label": "Self-employed",
-                        "value": "Self-employed"
-                      },
+                      { "label": "Employed", "value": "Employed" },
+                      { "label": "Self-employed", "value": "Self-employed" },
                       {
                         "label": "Not in paid work. This includes being unemployed or retired or doing voluntary work",
                         "value": "Not in paid work"
                       },
-                      {
-                        "label": "In education",
-                        "value": "In education"
-                      }
+                      { "label": "In education", "value": "In education" }
                     ]
                   }
                 ]
@@ -953,10 +961,7 @@
                         "identifier": "answerb7e6d0c6-fb29-4c61-9742-771e46147541",
                         "source": "answers"
                       },
-                      [
-                        "Employed",
-                        "Self-employed"
-                      ]
+                      ["Employed", "Self-employed"]
                     ]
                   }
                 },
@@ -968,15 +973,11 @@
                         "identifier": "answerb7e6d0c6-fb29-4c61-9742-771e46147541",
                         "source": "answers"
                       },
-                      [
-                        "Not in paid work"
-                      ]
+                      ["Not in paid work"]
                     ]
                   }
                 },
-                {
-                  "block": "work-and-education-any-other-employment"
-                }
+                { "block": "work-and-education-any-other-employment" }
               ]
             },
             {
@@ -1018,9 +1019,7 @@
                         "identifier": "answer0ef4957d-57e9-4ff7-8d4f-d7fd109f3382",
                         "source": "answers"
                       },
-                      [
-                        "Currently working"
-                      ]
+                      ["Currently working"]
                     ]
                   }
                 },
@@ -1057,10 +1056,7 @@
                         "label": "Not looking for paid work for reasons such as looking after the home or family or not wanting a job",
                         "value": "Not looking for paid work for reasons such as looking after the home or family or not wanting a job"
                       },
-                      {
-                        "label": "Retired",
-                        "value": "Retired"
-                      }
+                      { "label": "Retired", "value": "Retired" }
                     ]
                   }
                 ]
@@ -1075,9 +1071,7 @@
                         "identifier": "answer73ccf278-cb53-4c1b-b05f-42292d2633b4",
                         "source": "answers"
                       },
-                      [
-                        "Retired"
-                      ]
+                      ["Retired"]
                     ]
                   }
                 },
@@ -1099,14 +1093,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
                       {
                         "label": "Prefer not to say",
                         "value": "Prefer not to say"
@@ -1125,9 +1113,7 @@
                         "identifier": "answer14561f81-1af8-4f1a-a4be-e4f1d3ac5efb",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -1186,14 +1172,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
                       {
                         "label": "Prefer not to say",
                         "value": "Prefer not to say"
@@ -1212,15 +1192,11 @@
                         "identifier": "answer57101fe3-33fe-4e01-a88c-610dc5b2066a",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "block": "health-status-neurodivergent" }
               ]
             },
             {
@@ -1236,18 +1212,9 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes, a lot",
-                        "value": "Yes, a lot"
-                      },
-                      {
-                        "label": "Yes, a little",
-                        "value": "Yes, a little"
-                      },
-                      {
-                        "label": "Not at all",
-                        "value": "Not at all"
-                      }
+                      { "label": "Yes, a lot", "value": "Yes, a lot" },
+                      { "label": "Yes, a little", "value": "Yes, a little" },
+                      { "label": "Not at all", "value": "Not at all" }
                     ]
                   }
                 ]
@@ -1302,19 +1269,101 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
               },
               "page_title": "Health status - who to contact if unwell"
+            },
+            {
+              "id": "health-status-neurodivergent",
+              "type": "Question",
+              "question": {
+                "id": "questionhealth-status-neurodivergent",
+                "title": "Do you consider yourself to be neurodivergent?",
+                "description": [
+                  "<p>This includes neurodevelopmental conditions like autism, ADHD, learning or intellectual disability, developmental language disorder, dyslexia, dyspraxia, dyscalculia, and tic disorders such as Tourette’s syndrome.</p>"
+                ],
+                "type": "MutuallyExclusive",
+                "mandatory": true,
+                "answers": [
+                  {
+                    "id": "answer3971dfce-63e1-4e34-ac72-a40cdd7ea7a0",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [
+                      {
+                        "label": "Yes, I have received a diagnosis",
+                        "value": "Yes, I have received a diagnosis"
+                      },
+                      {
+                        "label": "Yes, self-identified without a formal diagnosis",
+                        "value": "Yes, self-identified without a formal diagnosis"
+                      },
+                      {
+                        "label": "I am waiting for an assessment",
+                        "value": "I am waiting for an assessment"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "answer8303ebf6-be79-44b0-b800-4d400308cdef",
+                    "mandatory": false,
+                    "type": "Checkbox",
+                    "options": [{ "label": "No", "value": "No" }]
+                  }
+                ]
+              },
+              "page_title": "Health status - neurodivergent"
+            },
+            {
+              "id": "about-you-providing-unpaid-care",
+              "type": "Question",
+              "question": {
+                "id": "questionabout-you-providing-unpaid-care",
+                "title": "Do you look after, or give any help or support to, anyone because they have long-term physical or mental health conditions or illnesses, or problems related to old age?",
+                "guidance": {
+                  "contents": [
+                    {
+                      "description": "Exclude anything you do as part of your paid employment."
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer46e4d62e-75e6-413d-8419-9e84a08dd58c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "Yes, 9 hours a week or less",
+                        "value": "Yes, 9 hours a week or less"
+                      },
+                      {
+                        "label": "Yes, 10 to 19 hours a week",
+                        "value": "Yes, 10 to 19 hours a week"
+                      },
+                      {
+                        "label": "Yes, 20 to 34 hours a week",
+                        "value": "Yes, 20 to 34 hours a week"
+                      },
+                      {
+                        "label": "Yes, 35 to 49 hours a week",
+                        "value": "Yes, 35 to 49 hours a week"
+                      },
+                      {
+                        "label": "Yes, 50 or more hours a week",
+                        "value": "Yes, 50 or more hours a week"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "About you - providing unpaid care"
             }
           ]
         }
@@ -1380,18 +1429,9 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      { "label": "Do not know", "value": "Do not know" }
                     ]
                   }
                 ]
@@ -1406,16 +1446,11 @@
                         "identifier": "answer92f402d4-7fb4-4769-a8e9-e599761705bb",
                         "source": "answers"
                       },
-                      [
-                        "No",
-                        "Do not know"
-                      ]
+                      ["No", "Do not know"]
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-who-was-contact-for"
-                }
+                { "block": "gp-practice-who-was-contact-for" }
               ]
             },
             {
@@ -1431,14 +1466,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Myself",
-                        "value": "Myself"
-                      },
-                      {
-                        "label": "Someone else",
-                        "value": "Someone else"
-                      }
+                      { "label": "Myself", "value": "Myself" },
+                      { "label": "Someone else", "value": "Someone else" }
                     ]
                   }
                 ]
@@ -1475,10 +1504,7 @@
                         "label": "To get a prescription",
                         "value": "To get a prescription"
                       },
-                      {
-                        "label": "Something else",
-                        "value": "Something else"
-                      }
+                      { "label": "Something else", "value": "Something else" }
                     ]
                   }
                 ]
@@ -1539,9 +1565,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-could-not-make-contact"
-                }
+                { "block": "gp-practice-could-not-make-contact" }
               ]
             },
             {
@@ -1562,7 +1586,7 @@
                         "value": "Managed the issue myself"
                       },
                       {
-                        "label": "Contacted 111 for advice",
+                        "label": "Contacted NHS 111 for advice",
                         "value": "Contacted 111 for advice"
                       },
                       {
@@ -1573,18 +1597,9 @@
                         "label": "Went to Accident and Emergency",
                         "value": "Went to Accident and Emergency"
                       },
-                      {
-                        "label": "Called 999",
-                        "value": "Called 999"
-                      },
-                      {
-                        "label": "Something else",
-                        "value": "Something else"
-                      },
-                      {
-                        "label": "Nothing",
-                        "value": "Nothing"
-                      }
+                      { "label": "Called 999", "value": "Called 999" },
+                      { "label": "Something else", "value": "Something else" },
+                      { "label": "Nothing", "value": "Nothing" }
                     ]
                   }
                 ]
@@ -1611,9 +1626,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-overall-experience"
-                }
+                { "block": "gp-practice-overall-experience" }
               ]
             },
             {
@@ -1632,14 +1645,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "In person",
-                        "value": "In person"
-                      },
-                      {
-                        "label": "By telephone",
-                        "value": "By telephone"
-                      },
+                      { "label": "In person", "value": "In person" },
+                      { "label": "By telephone", "value": "By telephone" },
                       {
                         "label": "Online through the GP practice website",
                         "value": "Online through the GP practice website"
@@ -1648,14 +1655,8 @@
                         "label": "The NHS app",
                         "value": "Online through the NHS or other app"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      },
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      }
+                      { "label": "Other", "value": "Other" },
+                      { "label": "Do not know", "value": "Do not know" }
                     ]
                   }
                 ]
@@ -1675,26 +1676,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very easy",
-                        "value": "Very easy"
-                      },
-                      {
-                        "label": "Easy",
-                        "value": "Easy"
-                      },
+                      { "label": "Very easy", "value": "Very easy" },
+                      { "label": "Easy", "value": "Easy" },
                       {
                         "label": "Neither easy nor difficult",
                         "value": "Neither easy nor difficult"
                       },
-                      {
-                        "label": "Difficult",
-                        "value": "Difficult"
-                      },
-                      {
-                        "label": "Very difficult",
-                        "value": "Very difficult"
-                      }
+                      { "label": "Difficult", "value": "Difficult" },
+                      { "label": "Very difficult", "value": "Very difficult" }
                     ]
                   }
                 ]
@@ -1717,10 +1706,7 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "There and then",
-                        "value": "There and then"
-                      },
+                      { "label": "There and then", "value": "There and then" },
                       {
                         "label": "Later on the same day",
                         "value": "Later on the same day"
@@ -1777,12 +1763,9 @@
                       {
                         "label": "The GP practice asked me to do something else",
                         "value": "The GP practice asked me to do something else",
-                        "description": "For example, call again another time, go to a pharmacy, contact 111 or seek urgent treatment"
+                        "description": "For example, call again another time, go to a pharmacy, contact NHS 111 or seek urgent treatment"
                       },
-                      {
-                        "label": "Something else",
-                        "value": "Other"
-                      }
+                      { "label": "Something else", "value": "Other" }
                     ]
                   }
                 ]
@@ -1813,15 +1796,11 @@
                         "identifier": "answer45632ec7-df36-4d30-94f9-7364870bab93",
                         "source": "answers"
                       },
-                      [
-                        "The GP practice asked me to do something else"
-                      ]
+                      ["The GP practice asked me to do something else"]
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-overall-experience"
-                }
+                { "block": "gp-practice-overall-experience" }
               ]
             },
             {
@@ -1841,10 +1820,7 @@
                         "label": "Contact the GP practice again another day",
                         "value": "Contact the GP practice again another day"
                       },
-                      {
-                        "label": "Contact 111",
-                        "value": "Contact 111"
-                      },
+                      { "label": "Contact NHS 111", "value": "Contact 111" },
                       {
                         "label": "Speak to a pharmacist",
                         "value": "Speak to a pharmacist"
@@ -1858,10 +1834,7 @@
                         "value": "Seek urgent treatment",
                         "description": "Including Accident and Emergency and 999 services"
                       },
-                      {
-                        "label": "Something else",
-                        "value": "Something else"
-                      }
+                      { "label": "Something else", "value": "Something else" }
                     ]
                   }
                 ]
@@ -1880,9 +1853,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-overall-experience"
-                }
+                { "block": "gp-practice-overall-experience" }
               ]
             },
             {
@@ -1898,14 +1869,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -1964,14 +1929,8 @@
                         "label": "Very reasonable",
                         "value": "Very reasonable"
                       },
-                      {
-                        "label": "Reasonable",
-                        "value": "Reasonable"
-                      },
-                      {
-                        "label": "Unreasonable",
-                        "value": "Unreasonable"
-                      },
+                      { "label": "Reasonable", "value": "Reasonable" },
+                      { "label": "Unreasonable", "value": "Unreasonable" },
                       {
                         "label": "Very unreasonable",
                         "value": "Very unreasonable"
@@ -1998,14 +1957,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2028,14 +1981,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2050,15 +1997,11 @@
                         "identifier": "answer342b188f-9b3f-43ba-8dac-2b7fa4cbaab7",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-overall-experience"
-                }
+                { "block": "gp-practice-overall-experience" }
               ]
             },
             {
@@ -2077,14 +2020,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
                       {
                         "label": "I did not need to see or speak to my preferred healthcare professional",
                         "value": "I did not need to see or speak to my preferred healthcare professional"
@@ -2136,10 +2073,7 @@
                         "label": "No appointments available within 14 days",
                         "value": "No appointments available within 14 days"
                       },
-                      {
-                        "label": "Another reason",
-                        "value": "Another reason"
-                      }
+                      { "label": "Another reason", "value": "Another reason" }
                     ]
                   }
                 ]
@@ -2159,14 +2093,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2186,26 +2114,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -2220,10 +2136,7 @@
                         "identifier": "answerf87ca9fb-dd1b-4b03-9100-06a1ad146eb8",
                         "source": "answers"
                       },
-                      [
-                        "Very good",
-                        "Good"
-                      ]
+                      ["Very good", "Good"]
                     ]
                   }
                 },
@@ -2235,15 +2148,11 @@
                         "identifier": "answerf87ca9fb-dd1b-4b03-9100-06a1ad146eb8",
                         "source": "answers"
                       },
-                      [
-                        "Neither good nor poor"
-                      ]
+                      ["Neither good nor poor"]
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-overall-experience-poor"
-                }
+                { "block": "gp-practice-overall-experience-poor" }
               ]
             },
             {
@@ -2290,12 +2199,7 @@
                       "identifier": "answerf87ca9fb-dd1b-4b03-9100-06a1ad146eb8",
                       "source": "answers"
                     },
-                    [
-                      "Very good",
-                      "Good",
-                      "Poor",
-                      "Very poor"
-                    ]
+                    ["Very good", "Good", "Poor", "Very poor"]
                   ]
                 }
               }
@@ -2325,11 +2229,7 @@
                       "identifier": "answerf87ca9fb-dd1b-4b03-9100-06a1ad146eb8",
                       "source": "answers"
                     },
-                    [
-                      "Very good",
-                      "Good",
-                      "Neither good nor poor"
-                    ]
+                    ["Very good", "Good", "Neither good nor poor"]
                   ]
                 }
               }
@@ -2347,26 +2247,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Much better",
-                        "value": "Much better"
-                      },
-                      {
-                        "label": "Better",
-                        "value": "Better"
-                      },
+                      { "label": "Much better", "value": "Much better" },
+                      { "label": "Better", "value": "Better" },
                       {
                         "label": "Neither better nor worse",
                         "value": "Neither better nor worse"
                       },
-                      {
-                        "label": "Worse",
-                        "value": "Worse"
-                      },
-                      {
-                        "label": "Much worse",
-                        "value": "Much worse"
-                      },
+                      { "label": "Worse", "value": "Worse" },
+                      { "label": "Much worse", "value": "Much worse" },
                       {
                         "label": "I have not used my GP practice in the last 12 months",
                         "value": "I have not used my GP practice in the last 12 months"
@@ -2437,14 +2325,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2459,15 +2341,11 @@
                         "identifier": "answer37845b37-7c93-4885-aba6-c3cd8f1dff87",
                         "source": "answers"
                       },
-                      [
-                        "No"
-                      ]
+                      ["No"]
                     ]
                   }
                 },
-                {
-                  "block": "gp-practice-specialist-referral-choice"
-                }
+                { "block": "gp-practice-specialist-referral-choice" }
               ]
             },
             {
@@ -2483,14 +2361,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2505,18 +2377,14 @@
                 "title": "Are you on an NHS hospital waiting list?",
                 "guidance": {
                   "contents": [
-                    {
-                      "description": "<strong>Include:</strong>"
-                    },
+                    { "description": "<strong>Include:</strong>" },
                     {
                       "list": [
                         "waiting for a diagnostic test",
                         "waiting for an operation"
                       ]
                     },
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
+                    { "description": "<strong>Exclude:</strong>" },
                     {
                       "list": [
                         "waiting for a further appointment after an operation or procedure"
@@ -2531,18 +2399,9 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      },
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      { "label": "Do not know", "value": "Do not know" }
                     ]
                   }
                 ]
@@ -2557,16 +2416,11 @@
                         "identifier": "answerb6f97ee5-2892-43ca-a3ca-a05d7a6364e6",
                         "source": "answers"
                       },
-                      [
-                        "No",
-                        "Do not know"
-                      ]
+                      ["No", "Do not know"]
                     ]
                   }
                 },
-                {
-                  "block": "hospital-waiting-list-length-of-wait"
-                }
+                { "block": "hospital-waiting-list-length-of-wait" }
               ]
             },
             {
@@ -2597,10 +2451,7 @@
                         "label": "More than 12 months",
                         "value": "More than 12 months"
                       },
-                      {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                      }
+                      { "label": "Do not know", "value": "Do not know" }
                     ]
                   }
                 ]
@@ -2623,14 +2474,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2645,9 +2490,7 @@
                         "identifier": "answerb47f875c-eb44-4cc4-be47-a8aca36c0cb6",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -2661,9 +2504,7 @@
                             "identifier": "answerb47f875c-eb44-4cc4-be47-a8aca36c0cb6",
                             "source": "answers"
                           },
-                          [
-                            "No"
-                          ]
+                          ["No"]
                         ]
                       },
                       {
@@ -2672,18 +2513,13 @@
                             "identifier": "answerf064f92f-87de-48d4-8271-d35f85433d53",
                             "source": "answers"
                           },
-                          [
-                            "Between 3 and 12 months",
-                            "More than 12 months"
-                          ]
+                          ["Between 3 and 12 months", "More than 12 months"]
                         ]
                       }
                     ]
                   }
                 },
-                {
-                  "block": "hospital-waiting-list-communication"
-                }
+                { "block": "hospital-waiting-list-communication" }
               ]
             },
             {
@@ -2699,14 +2535,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -2726,26 +2556,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very easy",
-                        "value": "Very easy"
-                      },
-                      {
-                        "label": "Easy",
-                        "value": "Easy"
-                      },
+                      { "label": "Very easy", "value": "Very easy" },
+                      { "label": "Easy", "value": "Easy" },
                       {
                         "label": "Neither easy nor difficult",
                         "value": "Neither easy nor difficult"
                       },
-                      {
-                        "label": "Difficult",
-                        "value": "Difficult"
-                      },
-                      {
-                        "label": "Very difficult",
-                        "value": "Very difficult"
-                      },
+                      { "label": "Difficult", "value": "Difficult" },
+                      { "label": "Very difficult", "value": "Very difficult" },
                       {
                         "label": "I have not had to amend or cancel my hospital appointment",
                         "value": "I have not had to amend or cancel my hospital appointment"
@@ -2764,10 +2582,7 @@
                         "identifier": "answerf064f92f-87de-48d4-8271-d35f85433d53",
                         "source": "answers"
                       },
-                      [
-                        "Less than 3 months",
-                        "Do not know"
-                      ]
+                      ["Less than 3 months", "Do not know"]
                     ]
                   }
                 },
@@ -2886,9 +2701,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "hospital-waiting-list-communication-satisfaction"
-                }
+                { "block": "hospital-waiting-list-communication-satisfaction" }
               ]
             },
             {
@@ -2904,22 +2717,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Strongly agree",
-                        "value": "Strongly agree"
-                      },
-                      {
-                        "label": "Agree",
-                        "value": "Agree"
-                      },
+                      { "label": "Strongly agree", "value": "Strongly agree" },
+                      { "label": "Agree", "value": "Agree" },
                       {
                         "label": "Neither agree nor disagree",
                         "value": "Neither agree or disagree"
                       },
-                      {
-                        "label": "Disagree",
-                        "value": "Disagree"
-                      },
+                      { "label": "Disagree", "value": "Disagree" },
                       {
                         "label": "Strongly disagree",
                         "value": "Strongly disagree"
@@ -2943,22 +2747,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -2985,26 +2780,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -3024,26 +2807,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -3101,10 +2872,7 @@
                         "label": "Having a choice of when or where my appointments take place",
                         "value": "Having a choice of when or where my appointments take place"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   },
                   {
@@ -3121,6 +2889,508 @@
                 ]
               },
               "page_title": "Hospital waiting list - what would improve experience"
+            }
+          ]
+        }
+      ],
+      "enabled": {
+        "when": {
+          "==": [
+            {
+              "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+              "source": "answers"
+            },
+            null
+          ]
+        }
+      }
+    },
+    {
+      "id": "mhlda-summary",
+      "title": "NHS Community Mental Health, Learning Disability, Autism, or Dementia services",
+      "summary": {
+        "show_on_completion": true,
+        "page_title": "MHLDA summary",
+        "collapsible": false
+      },
+      "show_on_hub": false,
+      "groups": [
+        {
+          "id": "groupmhlda-summary",
+          "blocks": [
+            {
+              "type": "Interstitial",
+              "id": "mhlda-intro-page",
+              "page_title": "MHLDA intro page",
+              "content": {
+                "title": "NHS Community Mental Health, Learning Disability, Autism, or Dementia services",
+                "contents": [
+                  {
+                    "description": "These services provide assessment, treatment and ongoing support. Care is usually delivered in the community, such as in people’s homes, by specialists in GP practices, community hubs, clinics or centres, rather than in hospital."
+                  },
+                  {
+                    "description": "Examples include memory clinics, community mental health teams for adults, community eating disorder services, and learning disability, autism and ADHD services."
+                  },
+                  { "description": "<strong>Exclude:</strong>" },
+                  {
+                    "list": [
+                      "inpatient services",
+                      "Accident and Emergency, urgent treatment centres or the NHS 111 service",
+                      "support provided solely within GP appointments",
+                      "social care services like long-term care packages, supported housing or care homes",
+                      "non-NHS or privately funded services"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "mhlda-appointment-last-28-days",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-appointment-last-28-days",
+                "title": "In the last 28 days, did you have an appointment with one of these NHS Community Mental Health, Learning Disability, Autism, or Dementia services?",
+                "description": [
+                  "<p>This could be in person, including at your home, on the phone, or online. You may know these services by different local names. Please select the option that best fits the service you had contact with. </p><p>If you had more than one appointment in the last 28 days, select the most recent one.</p>"
+                ],
+                "guidance": {
+                  "contents": [
+                    { "description": "Include:" },
+                    {
+                      "list": [
+                        "appointments with a mental health nurse or practitioner based within a GP practice",
+                        "services accessed through Right to Choose"
+                      ]
+                    },
+                    { "description": "Exclude:" },
+                    {
+                      "list": [
+                        "GP appointments",
+                        "calls to NHS 111 or visits to Accident and Emergency departments"
+                      ]
+                    }
+                  ]
+                },
+                "definitions": [
+                  {
+                    "title": "What do we mean by NHS Community Mental Health, Learning Disability, Autism, or Dementia services?",
+                    "contents": [
+                      {
+                        "description": "These services provide assessment, treatment and ongoing support. Care is usually delivered in the community, such as in people’s homes, by specialists in GP practices, community hubs, clinics or centres, rather than in hospital."
+                      },
+                      {
+                        "description": "Examples include memory clinics, community mental health teams for adults, community eating disorder services, and learning disability, autism and ADHD services."
+                      },
+                      { "description": "Exclude:" },
+                      {
+                        "list": [
+                          "inpatient services",
+                          "Accident and Emergency, urgent care centres, or the NHS 111 service",
+                          "support provided solely within GP appointments",
+                          "social care services like long-term care packages, supported housing or care homes",
+                          "non-NHS or privately funded services"
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      {
+                        "label": "Community mental health service",
+                        "value": "Community mental health service"
+                      },
+                      {
+                        "label": "NHS Talking Therapies",
+                        "value": "NHS Talking Therapies"
+                      },
+                      {
+                        "label": "Perinatal mental health service",
+                        "value": "Perinatal mental health service"
+                      },
+                      {
+                        "label": "Mental health crisis service",
+                        "value": "Mental health crisis service"
+                      },
+                      {
+                        "label": "Eating disorder service",
+                        "value": "Eating disorder service"
+                      },
+                      {
+                        "label": "Community learning disability service",
+                        "value": "Community learning disability service"
+                      },
+                      {
+                        "label": "Community autism service",
+                        "value": "Community autism service"
+                      },
+                      { "label": "ADHD service", "value": "ADHD service" },
+                      {
+                        "label": "Community dementia or memory service",
+                        "value": "Community dementia or memory service"
+                      },
+                      { "label": "Gender service", "value": "Gender service" },
+                      { "label": "Other service", "value": "Other service" },
+                      {
+                        "label": "I did not have an appointment with an NHS Community Mental Health, Learning Disability, Autism, or Dementia service in the last 28 days",
+                        "value": "I did not have an appointment"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - appointment last 28 days",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                        "source": "answers"
+                      },
+                      ["I did not have an appointment"]
+                    ]
+                  }
+                },
+                {
+                  "block": "mhlda-other-service-reasonable-adjustments-for-appointment",
+                  "when": {
+                    "in": [
+                      {
+                        "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                        "source": "answers"
+                      },
+                      ["Other service"]
+                    ]
+                  }
+                },
+                {
+                  "block": "mhlda-offered-reasonable-adjustments-for-appointment"
+                }
+              ]
+            },
+            {
+              "id": "mhlda-offered-reasonable-adjustments-for-appointment",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-offered-reasonable-adjustments-for-appointment",
+                "title": {
+                  "text": "Were you told about or offered any reasonable adjustments to help meet your needs at your last appointment with the {untitled_answer}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "transforms": [
+                        {
+                          "transform": "option_label_from_value",
+                          "arguments": {
+                            "value": {
+                              "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                              "source": "answers"
+                            },
+                            "answer_id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "description": [
+                  "<p>Reasonable adjustments help you access care more easily. They could include extra time at appointments, a quiet space while waiting for your appointment, easy-read appointment letters, or communication support like hearing loop systems, BSL interpreters or communication charts.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer411f94cd-a8c3-4c97-89b0-6a32ad9553d6",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "I cannot remember",
+                        "value": "I cannot remember"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - offered reasonable adjustments for appointment"
+            },
+            {
+              "id": "mhlda-appointment-listened-to-agree-disagree",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-appointment-listened-to-agree-disagree",
+                "title": {
+                  "text": "At your last appointment with the {untitled_answer}, to what extent do you agree or disagree that staff listened to you?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "transforms": [
+                        {
+                          "transform": "option_label_from_value",
+                          "arguments": {
+                            "value": {
+                              "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                              "source": "answers"
+                            },
+                            "answer_id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer5921fcdc-a2cb-4b31-bedb-2a0cc97484fb",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Strongly agree", "value": "Strongly agree" },
+                      { "label": "Agree", "value": "Agree" },
+                      {
+                        "label": "Neither agree nor disagree",
+                        "value": "Neither agree nor disagree"
+                      },
+                      { "label": "Disagree", "value": "Disagree" },
+                      {
+                        "label": "Strongly disagree",
+                        "value": "Strongly disagree"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - appointment listened to agree disagree"
+            },
+            {
+              "id": "mhlda-inclusion-of-carer",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-inclusion-of-carer",
+                "title": {
+                  "text": "Were you offered the chance to include a family member or carer in conversations about your care at your last appointment with the {untitled_answer}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "transforms": [
+                        {
+                          "transform": "option_label_from_value",
+                          "arguments": {
+                            "value": {
+                              "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                              "source": "answers"
+                            },
+                            "answer_id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "description": [
+                  "<p>This could include having someone to support you at your appointment, involving them in decisions, discussing future care, or sharing information.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4dcd3a50-a2e3-4f29-bb3e-d04f321ada30",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "I cannot remember",
+                        "value": "I cannot remember"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - inclusion of carer"
+            },
+            {
+              "id": "mhlda-overall-appointment-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-overall-appointment-satisfaction",
+                "title": {
+                  "text": "Overall, how would you describe your experience at your last appointment with the {untitled_answer}?",
+                  "placeholders": [
+                    {
+                      "placeholder": "untitled_answer",
+                      "transforms": [
+                        {
+                          "transform": "option_label_from_value",
+                          "arguments": {
+                            "value": {
+                              "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                              "source": "answers"
+                            },
+                            "answer_id": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer13893afa-9677-4623-a52d-2e31c999b722",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
+                      {
+                        "label": "Neither good nor poor",
+                        "value": "Neither good nor poor"
+                      },
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - overall appointment satisfaction",
+              "routing_rules": [
+                {
+                  "section": "End",
+                  "when": {
+                    "==": [
+                      {
+                        "identifier": "answer13893afa-9677-4623-a52d-2e31c999b722",
+                        "source": "answers"
+                      },
+                      null
+                    ]
+                  }
+                },
+                { "section": "End" }
+              ]
+            },
+            {
+              "id": "mhlda-other-service-reasonable-adjustments-for-appointment",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-other-service-reasonable-adjustments-for-appointment",
+                "title": "Were you told about or offered any reasonable adjustments to help meet your needs at your last appointment with the NHS Community Mental Health, Learning Disability, Autism, or Dementia service?",
+                "description": [
+                  "<p>Reasonable adjustments help you access care more easily. They could include extra time at appointments, a quiet space while waiting for your appointment, easy-read appointment letters, or communication support like hearing loop systems, BSL interpreters or communication charts.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer1f0ef5f2-8a8f-438e-bafc-cc5f30f51df6",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "I cannot remember",
+                        "value": "I cannot remember"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - other service reasonable adjustments for appointment"
+            },
+            {
+              "id": "mhlda-agree-disagree-listened-other-service",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-agree-disagree-listened-other-service",
+                "title": "At your last appointment with the NHS Community Mental Health, Learning Disability, Autism, or Dementia service, to what extent do you agree or disagree that staff listened to you?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb04c9c6e-783f-4c9a-8d81-8b6158410446",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Strongly agree", "value": "Strongly agree" },
+                      { "label": "Agree", "value": "Agree" },
+                      {
+                        "label": "Neither agree nor disagree",
+                        "value": "Neither agree nor disagree"
+                      },
+                      { "label": "Disagree", "value": "Disagree" },
+                      {
+                        "label": "Strongly disagree",
+                        "value": "Strongly disagree"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - agree disagree listened other service"
+            },
+            {
+              "id": "mhlda-other-service-inclusion-of-carer",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-other-service-inclusion-of-carer",
+                "title": "Were you offered the chance to include a family member or carer in conversations about your care at your last appointment with the NHS Community Mental Health, Learning Disability, Autism, or Dementia service?",
+                "description": [
+                  "<p>This could include having someone to support you at your appointment, involving them in decisions, discussing future care, or sharing information.</p>"
+                ],
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer4b989a54-3a06-42f9-96f6-f4ed8d61a063",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "I cannot remember",
+                        "value": "I cannot remember"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - other service inclusion of carer"
+            },
+            {
+              "id": "mhlda-other-service-overall-appointment-satisfaction",
+              "type": "Question",
+              "question": {
+                "id": "questionmhlda-other-service-overall-appointment-satisfaction",
+                "title": "Overall, how would you describe your experience at your last appointment with the NHS Community Mental Health, Learning Disability, Autism, or Dementia service?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answer608d26ec-1885-4938-985f-34e82068420d",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
+                      {
+                        "label": "Neither good nor poor",
+                        "value": "Neither good nor poor"
+                      },
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "MHLDA - other service overall appointment satisfaction"
             }
           ]
         }
@@ -3158,24 +3428,19 @@
                 "title": "NHS community health services",
                 "contents": [
                   {
-                    "description": "This section is about community health services provided by the NHS."
-                  },
-                  {
                     "description": "These services provide care for people from birth to the end of their life and are mainly delivered in people’s homes, community clinics or centres, care homes, or community hospitals."
                   },
                   {
                     "description": "Examples of NHS community health services include community and district nursing, physiotherapy, palliative care, end-of-life care, urgent community response, or short-term care designed to help individuals recover and gain independence after a hospital stay or illness."
                   },
-                  {
-                    "description": "<strong>Exclude: </strong>"
-                  },
+                  { "description": "<strong>Exclude: </strong>" },
                   {
                     "list": [
-                      "Mental health services",
-                      "Optometry (diagnosis and treatment of eye conditions)",
-                      "Accident and Emergency, walk-in centres or the NHS 111 service",
+                      "mental health services",
+                      "optometry (diagnosis and treatment of eye conditions)",
+                      "Accident and Emergency, urgent treatment centres or the NHS 111 service",
                       "GP appointments, dental and pharmacy services",
-                      "Social care, like long-term care packages, home adaptions or arranging care homes"
+                      "social care, like long-term care packages, home adaptions or arranging care homes"
                     ]
                   }
                 ]
@@ -3210,16 +3475,14 @@
                       {
                         "description": "Examples of NHS community health services include community and district nursing, physiotherapy, palliative care, end-of-life care, urgent community response, or short-term care designed to help individuals recover and gain independence after a hospital stay or illness."
                       },
-                      {
-                        "description": "<strong>Exclude:</strong>"
-                      },
+                      { "description": "<strong>Exclude:</strong>" },
                       {
                         "list": [
-                          "Mental health services",
-                          "Optometry (diagnosis and treatment of eye conditions)",
-                          "Accident and Emergency, walk-in centres or the NHS 111 service",
+                          "mental health services",
+                          "optometry (diagnosis and treatment of eye conditions)",
+                          "Accident and Emergency, urgent treatment centres or the NHS 111 service",
                           "GP appointments, dental and pharmacy services",
-                          "Social care, like long-term care packages, home adaptions or arranging care homes"
+                          "social care, like long-term care packages, home adaptions or arranging care homes"
                         ]
                       }
                     ]
@@ -3276,10 +3539,7 @@
                         "label": "Community rehabilitation service",
                         "value": "Rehabilitation service"
                       },
-                      {
-                        "label": "Other service",
-                        "value": "Other service"
-                      },
+                      { "label": "Other service", "value": "Other service" },
                       {
                         "label": "I am not waiting to receive care, treatment or advice from an NHS community health service",
                         "value": "I am not waiting"
@@ -3298,9 +3558,7 @@
                         "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
                         "source": "answers"
                       },
-                      [
-                        "Other service"
-                      ]
+                      ["Other service"]
                     ]
                   }
                 },
@@ -3312,9 +3570,7 @@
                         "identifier": "answerae324235-4700-4053-ab1a-7cd2c70ccc6e",
                         "source": "answers"
                       },
-                      [
-                        "I am not waiting"
-                      ]
+                      ["I am not waiting"]
                     ]
                   }
                 },
@@ -3441,22 +3697,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -3499,22 +3746,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -3587,9 +3825,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "community-health-service-appointment-last-28-days"
-                }
+                { "block": "community-health-service-appointment-last-28-days" }
               ]
             },
             {
@@ -3672,22 +3908,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -3711,22 +3938,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -3780,7 +3998,7 @@
                 "guidance": {
                   "contents": [
                     {
-                      "description": "Exclude GP appointments, calls to 111, or visits to Accident and Emergency departments."
+                      "description": "Exclude GP appointments, calls to NHS 111, or visits to Accident and Emergency departments."
                     }
                   ]
                 },
@@ -3835,10 +4053,7 @@
                         "label": "Community rehabilitation service",
                         "value": "Rehabilitation service"
                       },
-                      {
-                        "label": "Other service",
-                        "value": "Other service"
-                      },
+                      { "label": "Other service", "value": "Other service" },
                       {
                         "label": "I did not have an appointment with an NHS community health service in the last 28 days",
                         "value": "I did not have an appointment"
@@ -3857,9 +4072,7 @@
                         "identifier": "answer995cab36-9f81-4e20-a293-6cffcd5f537c",
                         "source": "answers"
                       },
-                      [
-                        "I did not have an appointment"
-                      ]
+                      ["I did not have an appointment"]
                     ]
                   }
                 },
@@ -3871,9 +4084,7 @@
                         "identifier": "answer995cab36-9f81-4e20-a293-6cffcd5f537c",
                         "source": "answers"
                       },
-                      [
-                        "Other service"
-                      ]
+                      ["Other service"]
                     ]
                   }
                 },
@@ -3914,26 +4125,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -3948,10 +4147,7 @@
                         "identifier": "answera1db404e-ed81-4144-9526-97133a678f39",
                         "source": "answers"
                       },
-                      [
-                        "Very good",
-                        "Good"
-                      ]
+                      ["Very good", "Good"]
                     ]
                   }
                 },
@@ -3963,9 +4159,7 @@
                         "identifier": "answera1db404e-ed81-4144-9526-97133a678f39",
                         "source": "answers"
                       },
-                      [
-                        "Neither good nor poor"
-                      ]
+                      ["Neither good nor poor"]
                     ]
                   }
                 },
@@ -4020,16 +4214,11 @@
                         "identifier": "answera1db404e-ed81-4144-9526-97133a678f39",
                         "source": "answers"
                       },
-                      [
-                        "Very good",
-                        "Good"
-                      ]
+                      ["Very good", "Good"]
                     ]
                   }
                 },
-                {
-                  "block": "community-health-service-parent-or-guardian"
-                }
+                { "block": "community-health-service-parent-or-guardian" }
               ]
             },
             {
@@ -4078,15 +4267,11 @@
                         "identifier": "answera1db404e-ed81-4144-9526-97133a678f39",
                         "source": "answers"
                       },
-                      [
-                        "Neither good nor poor"
-                      ]
+                      ["Neither good nor poor"]
                     ]
                   }
                 },
-                {
-                  "block": "community-health-service-parent-or-guardian"
-                }
+                { "block": "community-health-service-parent-or-guardian" }
               ]
             },
             {
@@ -4135,16 +4320,11 @@
                         "identifier": "answera1db404e-ed81-4144-9526-97133a678f39",
                         "source": "answers"
                       },
-                      [
-                        "Poor",
-                        "Very poor"
-                      ]
+                      ["Poor", "Very poor"]
                     ]
                   }
                 },
-                {
-                  "block": "community-health-service-parent-or-guardian"
-                }
+                { "block": "community-health-service-parent-or-guardian" }
               ]
             },
             {
@@ -4160,26 +4340,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -4194,10 +4362,7 @@
                         "identifier": "answer4103f560-e00e-4304-9efe-effc07a1eac7",
                         "source": "answers"
                       },
-                      [
-                        "Very good",
-                        "Good"
-                      ]
+                      ["Very good", "Good"]
                     ]
                   }
                 },
@@ -4209,15 +4374,11 @@
                         "identifier": "answer4103f560-e00e-4304-9efe-effc07a1eac7",
                         "source": "answers"
                       },
-                      [
-                        "Neither good nor poor"
-                      ]
+                      ["Neither good nor poor"]
                     ]
                   }
                 },
-                {
-                  "block": "community-health-service-poor-last-appointment"
-                }
+                { "block": "community-health-service-poor-last-appointment" }
               ]
             },
             {
@@ -4264,12 +4425,7 @@
                       "identifier": "answer4103f560-e00e-4304-9efe-effc07a1eac7",
                       "source": "answers"
                     },
-                    [
-                      "Very good",
-                      "Good",
-                      "Very poor",
-                      "Poor"
-                    ]
+                    ["Very good", "Good", "Very poor", "Poor"]
                   ]
                 }
               }
@@ -4299,11 +4455,7 @@
                       "identifier": "answer4103f560-e00e-4304-9efe-effc07a1eac7",
                       "source": "answers"
                     },
-                    [
-                      "Very good",
-                      "Good",
-                      "Neither good nor poor"
-                    ]
+                    ["Very good", "Good", "Neither good nor poor"]
                   ]
                 }
               }
@@ -4316,21 +4468,22 @@
                 "title": "Are you a parent or guardian of any children or young people, aged 18 or under, who are waiting to receive care, treatment or advice from an NHS children’s community health service?",
                 "guidance": {
                   "contents": [
-                    {
-                      "description": "<strong>Include:</strong>"
-                    },
+                    { "description": "<strong>Include:</strong>" },
                     {
                       "list": [
                         "waiting to receive care, treatment or advice about how to manage their condition",
+                        "waiting for an assessment, for example, for ADHD, autism, EHCP",
                         "young people aged 19 and over if they have not moved to adult services"
                       ]
                     },
-                    {
-                      "description": "<strong>Exclude:</strong>"
-                    },
+                    { "description": "<strong>Exclude:</strong>" },
                     {
                       "list": [
-                        "waiting for a follow-up appointment"
+                        "waiting for a follow-up appointment",
+                        "CAMHS and other mental health services",
+                        "optometry (diagnosis and treatment of eye conditions)",
+                        "Accident and Emergency, urgent treatment centres or the NHS 111 service",
+                        "GP appointments, dental and pharmacy services, and social care services"
                       ]
                     }
                   ]
@@ -4340,24 +4493,10 @@
                     "title": "What do we mean by children and young people’s community health services?",
                     "contents": [
                       {
-                        "description": "Children and young people’s community health services provide specialist care and support outside of a hospital or GP surgery."
+                        "description": "These services provide specialist care and support outside of a hospital or GP surgery."
                       },
                       {
-                        "description": "They provide care from birth up to the day before their 19th birthday. Some young adults may continue to access these services after their 19th birthday until their move to adult services is completed."
-                      },
-                      {
-                        "description": "Examples include Speech and Language Therapy, Community Paediatrics (including neurodevelopmental services; neurodisability services; Education, Health and Care Needs assessments), Community occupational therapy, Community physiotherapy, Audiology, and children’s community nursing."
-                      },
-                      {
-                        "description": "<strong>Exclude:</strong>"
-                      },
-                      {
-                        "list": [
-                          "Mental health services",
-                          "Optometry (diagnosis and treatment of eye conditions)",
-                          "Accident and Emergency, walk-in centres or the NHS 111 service",
-                          "GP appointments, dental and pharmacy services, and social care services."
-                        ]
+                        "description": "Examples include speech and language therapy, community paediatrics (including neurodevelopmental services, for example, ADHD and autism assessment, SEND, EHCP assessment; neurodisability services), community occupational therapy, community physiotherapy, audiology, and children’s community nursing."
                       }
                     ]
                   }
@@ -4369,14 +4508,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -4391,15 +4524,11 @@
                         "identifier": "answera7f4688f-339b-4f52-b0de-e283511a6892",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -4410,11 +4539,18 @@
                 "title": "Which of the following NHS community health services are your children or young people waiting for?",
                 "guidance": {
                   "contents": [
+                    { "description": "Include:" },
                     {
-                      "description": "Include waiting to receive care, treatment or advice about how to manage their condition."
+                      "list": [
+                        "waiting to receive care, treatment or advice about how to manage their condition"
+                      ]
                     },
+                    { "description": "Exclude:" },
                     {
-                      "description": "Exclude waiting for a follow-up appointment."
+                      "list": [
+                        "waiting for a follow-up appointment",
+                        "CAMHS and other mental health services"
+                      ]
                     }
                   ]
                 },
@@ -4426,13 +4562,13 @@
                     "type": "Checkbox",
                     "options": [
                       {
-                        "label": "Speech and Language Therapy for children and young people",
+                        "label": "Speech and language therapy for children and young people",
                         "value": "Speech and Language Therapy for children and young people"
                       },
                       {
-                        "label": "Community Paediatrics",
+                        "label": "Community paediatrics",
                         "value": "Community Paediatrics",
-                        "description": "including Neurodevelopmental assessment, Neurodisability assessment, Special educational needs and disability (SEND)"
+                        "description": "Including ADHD and autism assessment, neurodisability assessment, special educational needs and disability (SEND), education, health and care plans (EHCP)"
                       },
                       {
                         "label": "Community occupational therapy for children and young people",
@@ -4452,16 +4588,14 @@
                       },
                       {
                         "label": "Special school nursing",
-                        "value": "Special school nursing"
+                        "value": "Special school nursing",
+                        "description": "Nursing care and support delivered within special schools for children and young people with complex health needs"
                       },
                       {
                         "label": "Palliative care and end of life care for infants, children and young people",
                         "value": "Palliative care and end of life care for infants, children and young people"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -4481,22 +4615,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -4520,22 +4645,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -4586,10 +4702,10 @@
                   },
                   {
                     "list": [
-                      "Check-ups",
-                      "Treatment by a dentist",
-                      "Appointments at a dental hospital",
-                      "Appointments with an orthodontist or dental hygienist"
+                      "check-ups",
+                      "treatment by a dentist",
+                      "appointments at a dental hospital",
+                      "appointments with an orthodontist or dental hygienist"
                     ]
                   }
                 ]
@@ -4638,10 +4754,7 @@
                         "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
                         "source": "answers"
                       },
-                      [
-                        "Yes, an NHS dentist",
-                        "I go to a dental hospital"
-                      ]
+                      ["Yes, an NHS dentist", "I go to a dental hospital"]
                     ]
                   }
                 },
@@ -4653,15 +4766,11 @@
                         "identifier": "answer775f1bda-b70b-4b04-a57e-aeef045abf0a",
                         "source": "answers"
                       },
-                      [
-                        "No, I do not have a dentist"
-                      ]
+                      ["No, I do not have a dentist"]
                     ]
                   }
                 },
-                {
-                  "block": "dental-care-last-private-appointment"
-                }
+                { "block": "dental-care-last-private-appointment" }
               ]
             },
             {
@@ -4711,9 +4820,7 @@
                         "identifier": "answer19cd1efc-6bf8-4246-b929-551302e37c6a",
                         "source": "answers"
                       },
-                      [
-                        "Less than 1 month ago"
-                      ]
+                      ["Less than 1 month ago"]
                     ]
                   }
                 },
@@ -4735,10 +4842,7 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Check-up",
-                        "value": "Check-up"
-                      },
+                      { "label": "Check-up", "value": "Check-up" },
                       {
                         "label": "Ongoing treatment",
                         "value": "Ongoing treatment"
@@ -4752,10 +4856,7 @@
                         "value": "Urgent need - I was not in pain",
                         "description": "For example, a broken crown or broken dentures, not causing pain"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -4774,9 +4875,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "dental-care-last-nhs-appointment-satisfaction"
-                }
+                { "block": "dental-care-last-nhs-appointment-satisfaction" }
               ]
             },
             {
@@ -4795,14 +4894,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -4817,15 +4910,11 @@
                         "identifier": "answerf2360bba-280c-4400-b862-7abcf4977844",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -4844,14 +4933,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -4866,15 +4949,11 @@
                         "identifier": "answer4707036e-80a3-41a7-9553-ae2a582d0567",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -4890,14 +4969,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -4912,9 +4985,7 @@
                         "identifier": "answeraac1c169-1834-4561-857a-ea34330f69e7",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -4936,22 +5007,10 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "1",
-                        "value": "1"
-                      },
-                      {
-                        "label": "2 to 3",
-                        "value": "2 to 3"
-                      },
-                      {
-                        "label": "4 to 5",
-                        "value": "4 to 5"
-                      },
-                      {
-                        "label": "More than 5",
-                        "value": "More than 5"
-                      }
+                      { "label": "1", "value": "1" },
+                      { "label": "2 to 3", "value": "2 to 3" },
+                      { "label": "4 to 5", "value": "4 to 5" },
+                      { "label": "More than 5", "value": "More than 5" }
                     ]
                   }
                 ]
@@ -4971,22 +5030,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -5009,9 +5059,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -5044,10 +5092,7 @@
                         "label": "I went to Accident and Emergency",
                         "value": "I went to Accident and Emergency"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5066,9 +5111,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -5118,9 +5161,7 @@
                         "identifier": "answera22d3d61-96ad-4c3a-954e-ea408cc367f0",
                         "source": "answers"
                       },
-                      [
-                        "Less than 1 month ago"
-                      ]
+                      ["Less than 1 month ago"]
                     ]
                   }
                 },
@@ -5157,10 +5198,7 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Check-up",
-                        "value": "Check-up"
-                      },
+                      { "label": "Check-up", "value": "Check-up" },
                       {
                         "label": "Ongoing treatment",
                         "value": "Ongoing treatment"
@@ -5174,10 +5212,7 @@
                         "value": "Urgent need - I was not in pain",
                         "description": "For example, a broken crown or broken dentures, not causing pain"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5199,9 +5234,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "dental-care-why-private-appointment"
-                }
+                { "block": "dental-care-why-private-appointment" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5235,14 +5268,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -5257,15 +5284,11 @@
                         "identifier": "answerabfb9858-7240-4d8e-b430-ab5ca6ea0084",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5299,14 +5322,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -5323,10 +5340,7 @@
                             "identifier": "answer12c47ee4-bf2d-4793-87d3-e6375801a1a2",
                             "source": "answers"
                           },
-                          [
-                            "Yes",
-                            "No"
-                          ]
+                          ["Yes", "No"]
                         ]
                       },
                       {
@@ -5335,9 +5349,7 @@
                             "identifier": "answera22d3d61-96ad-4c3a-954e-ea408cc367f0",
                             "source": "answers"
                           },
-                          [
-                            "Less than 1 month ago"
-                          ]
+                          ["Less than 1 month ago"]
                         ]
                       }
                     ]
@@ -5353,9 +5365,7 @@
                             "identifier": "answer12c47ee4-bf2d-4793-87d3-e6375801a1a2",
                             "source": "answers"
                           },
-                          [
-                            "Yes"
-                          ]
+                          ["Yes"]
                         ]
                       },
                       {
@@ -5375,9 +5385,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5428,10 +5436,7 @@
                         "label": "I contacted a dental practice I had been to before",
                         "value": "I contacted a dental practice I had been to before"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5466,14 +5471,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -5488,9 +5487,7 @@
                         "identifier": "answer6975bb77-485c-4201-a10f-347f9aa84b71",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
@@ -5527,22 +5524,10 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "1",
-                        "value": "1"
-                      },
-                      {
-                        "label": "2 to 3",
-                        "value": "2 to 3"
-                      },
-                      {
-                        "label": "4 to 5",
-                        "value": "4 to 5"
-                      },
-                      {
-                        "label": "More than 5",
-                        "value": "More than 5"
-                      }
+                      { "label": "1", "value": "1" },
+                      { "label": "2 to 3", "value": "2 to 3" },
+                      { "label": "4 to 5", "value": "4 to 5" },
+                      { "label": "More than 5", "value": "More than 5" }
                     ]
                   }
                 ]
@@ -5577,22 +5562,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -5615,9 +5591,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5665,10 +5639,7 @@
                         "label": "I went to Accident and Emergency",
                         "value": "I went to Accident and Emergency"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5687,9 +5658,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5732,10 +5701,7 @@
                         "label": "I chose private dental care on this occasion, but use NHS dental treatment on other occasions",
                         "value": "I chose private dental care on this occasion, but use NHS dental treatment on other occasions"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5770,22 +5736,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -5808,9 +5765,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ],
               "skip_conditions": {
                 "when": {
@@ -5865,10 +5820,7 @@
                         "label": "I cannot remember",
                         "value": "I cannot remember"
                       },
-                      {
-                        "label": "Never",
-                        "value": "Never"
-                      }
+                      { "label": "Never", "value": "Never" }
                     ]
                   }
                 ]
@@ -5883,9 +5835,7 @@
                         "identifier": "answer61a69530-a01e-4c23-9d65-62b2e62fec24",
                         "source": "answers"
                       },
-                      [
-                        "Less than 1 month ago"
-                      ]
+                      ["Less than 1 month ago"]
                     ]
                   }
                 },
@@ -5907,10 +5857,7 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Check-up",
-                        "value": "Check-up"
-                      },
+                      { "label": "Check-up", "value": "Check-up" },
                       {
                         "label": "Ongoing treatment",
                         "value": "Ongoing treatment"
@@ -5924,10 +5871,7 @@
                         "value": "Urgent need - I was not in pain",
                         "description": "For example, a broken crown or broken dentures, not causing pain"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -5946,9 +5890,7 @@
                     ]
                   }
                 },
-                {
-                  "block": "dental-care-how-nhs-practice-was-chosen"
-                }
+                { "block": "dental-care-how-nhs-practice-was-chosen" }
               ]
             },
             {
@@ -5967,14 +5909,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -5989,15 +5925,11 @@
                         "identifier": "answer1beb716c-d2a0-4aca-a184-02623fc0a44b",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6016,14 +5948,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -6038,15 +5964,11 @@
                         "identifier": "answer1952671f-4a62-40c4-af62-4c01b0774bad",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6082,10 +6004,7 @@
                         "label": "I contacted a dental practice I had been to before",
                         "value": "I contacted a dental practice I had been to before"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -6105,14 +6024,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -6127,15 +6040,11 @@
                         "identifier": "answer55b304a7-0228-4eb5-bb82-f4144ce2dad4",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "block": "dental-care-no-nhs-appointment-next-step"
-                }
+                { "block": "dental-care-no-nhs-appointment-next-step" }
               ]
             },
             {
@@ -6151,22 +6060,10 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "1",
-                        "value": "1"
-                      },
-                      {
-                        "label": "2 to 3",
-                        "value": "2 to 3"
-                      },
-                      {
-                        "label": "4 to 5",
-                        "value": "4 to 5"
-                      },
-                      {
-                        "label": "More than 5",
-                        "value": "More than 5"
-                      }
+                      { "label": "1", "value": "1" },
+                      { "label": "2 to 3", "value": "2 to 3" },
+                      { "label": "4 to 5", "value": "4 to 5" },
+                      { "label": "More than 5", "value": "More than 5" }
                     ]
                   }
                 ]
@@ -6186,22 +6083,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -6228,9 +6116,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6263,10 +6149,7 @@
                         "label": "I went to Accident and Emergency",
                         "value": "I went to Accident and Emergency"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -6313,11 +6196,11 @@
                   },
                   {
                     "list": [
-                      "Dispensing of prescriptions",
-                      "Blood pressure checks",
-                      "Vaccinations",
-                      "Oral contraception services",
-                      "Review of medicines",
+                      "dispensing of prescriptions",
+                      "blood pressure checks",
+                      "vaccinations",
+                      "oral contraception services",
+                      "review of medicines",
                       "Pharmacy First (supply of prescription medicines to treat sore throat, urinary tract infections (women), sinusitis, earache, shingles, impetigo, infected insect bites)"
                     ]
                   }
@@ -6369,24 +6252,16 @@
                       {
                         "label": "Pharmacy First",
                         "value": "Pharmacy First",
-                        "description": "This includes supply of prescription medicines to treat sore throat, urinary tract infections (women), sinusitis, earache, shingles, impetigo, infected insect bites."
+                        "description": "This includes supply of prescription medicines to treat sore throat, urinary tract infections (women), sinusitis, earache, shingles, impetigo, infected insect bites"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   },
                   {
                     "id": "answer3873b173-a742-40d0-bf97-f02f1d8ea54b",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "None",
-                        "value": "None"
-                      }
-                    ]
+                    "options": [{ "label": "None", "value": "None" }]
                   }
                 ]
               },
@@ -6396,9 +6271,7 @@
                   "block": "pharmacies-have-usual-pharmacy",
                   "when": {
                     "all-in": [
-                      [
-                        "None"
-                      ],
+                      ["None"],
                       {
                         "identifier": "answer3873b173-a742-40d0-bf97-f02f1d8ea54b",
                         "source": "answers"
@@ -6407,9 +6280,50 @@
                   }
                 },
                 {
-                  "block": "pharmacies-consultation-with-pharmacist"
-                }
+                  "block": "pharmacies-was-concern-resolved",
+                  "when": {
+                    "any-in": [
+                      [
+                        "Blood pressure checks",
+                        "Oral contraception services",
+                        "Discussion with a pharmacist about the medication I am taking",
+                        "Other advice and guidance on a minor condition",
+                        "Pharmacy First"
+                      ],
+                      {
+                        "identifier": "answerac757159-12c6-4846-8d18-cb64d93984a6",
+                        "source": "answers"
+                      }
+                    ]
+                  }
+                },
+                { "block": "pharmacies-consultation-with-pharmacist" }
               ]
+            },
+            {
+              "id": "pharmacies-was-concern-resolved",
+              "type": "Question",
+              "question": {
+                "id": "questionpharmacies-was-concern-resolved",
+                "title": "Did the pharmacy service resolve your health question or concern?",
+                "type": "General",
+                "answers": [
+                  {
+                    "id": "answerb1303211-fe2a-4ccd-8672-f9839050a7e6",
+                    "mandatory": true,
+                    "type": "Radio",
+                    "options": [
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" },
+                      {
+                        "label": "I did not have a health question or concern",
+                        "value": "I did not have a health question or concern"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "page_title": "Pharmacies - was concern resolved"
             },
             {
               "id": "pharmacies-consultation-with-pharmacist",
@@ -6419,13 +6333,11 @@
                 "title": "Did you have a consultation with a pharmacist?",
                 "guidance": {
                   "contents": [
-                    {
-                      "description": "Include:"
-                    },
+                    { "description": "Include:" },
                     {
                       "list": [
-                        "Formal consultations and quick conversations, such as asking a pharmacist for advice at the counter",
-                        "Online and phone consultations"
+                        "formal consultations and quick conversations, such as asking a pharmacist for advice at the counter",
+                        "online and phone consultations"
                       ]
                     }
                   ]
@@ -6437,14 +6349,8 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
@@ -6459,15 +6365,11 @@
                         "identifier": "answer0143b42a-8907-4b47-a3ba-209572b1e36d",
                         "source": "answers"
                       },
-                      [
-                        "Yes"
-                      ]
+                      ["Yes"]
                     ]
                   }
                 },
-                {
-                  "block": "pharmacies-was-concern-resolved"
-                }
+                { "block": "pharmacies-have-usual-pharmacy" }
               ]
             },
             {
@@ -6483,46 +6385,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
+                      { "label": "Yes", "value": "Yes" },
+                      { "label": "No", "value": "No" }
                     ]
                   }
                 ]
               },
               "page_title": "Pharmacies - trust advice of pharmacist"
-            },
-            {
-              "id": "pharmacies-was-concern-resolved",
-              "type": "Question",
-              "question": {
-                "id": "questionpharmacies-was-concern-resolved",
-                "title": "Did the pharmacy resolve your health question or concern?",
-                "type": "General",
-                "answers": [
-                  {
-                    "id": "answerb1303211-fe2a-4ccd-8672-f9839050a7e6",
-                    "mandatory": true,
-                    "type": "Radio",
-                    "options": [
-                      {
-                        "label": "Yes",
-                        "value": "Yes"
-                      },
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
-                    ]
-                  }
-                ]
-              },
-              "page_title": "Pharmacies - was concern resolved"
             },
             {
               "id": "pharmacies-have-usual-pharmacy",
@@ -6549,10 +6418,7 @@
                         "label": "No, I use different pharmacies",
                         "value": "No, I use different pharmacies"
                       },
-                      {
-                        "label": "Other",
-                        "value": "Other"
-                      }
+                      { "label": "Other", "value": "Other" }
                     ]
                   }
                 ]
@@ -6583,10 +6449,7 @@
                         "label": "Several times a month",
                         "value": "Several times a month"
                       },
-                      {
-                        "label": "Once a month",
-                        "value": "Once a month"
-                      },
+                      { "label": "Once a month", "value": "Once a month" },
                       {
                         "label": "Every 2 to 3 months",
                         "value": "Every 2 to 3 months"
@@ -6627,9 +6490,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6645,22 +6506,13 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very satisfied",
-                        "value": "Very satisfied"
-                      },
-                      {
-                        "label": "Satisfied",
-                        "value": "Satisfied"
-                      },
+                      { "label": "Very satisfied", "value": "Very satisfied" },
+                      { "label": "Satisfied", "value": "Satisfied" },
                       {
                         "label": "Neither satisfied nor dissatisfied",
                         "value": "Neither satisfied nor dissatisfied"
                       },
-                      {
-                        "label": "Dissatisfied",
-                        "value": "Dissatisfied"
-                      },
+                      { "label": "Dissatisfied", "value": "Dissatisfied" },
                       {
                         "label": "Very dissatisfied",
                         "value": "Very dissatisfied"
@@ -6675,9 +6527,7 @@
                   "block": "pharmacies-problems-receiving-nhs-prescription",
                   "when": {
                     "all-in": [
-                      [
-                        "Dispensing of prescriptions"
-                      ],
+                      ["Dispensing of prescriptions"],
                       {
                         "identifier": "answerac757159-12c6-4846-8d18-cb64d93984a6",
                         "source": "answers"
@@ -6685,9 +6535,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6727,12 +6575,7 @@
                     "id": "answer122dd7b4-addf-4057-b3a9-a2a55f48a584",
                     "mandatory": false,
                     "type": "Checkbox",
-                    "options": [
-                      {
-                        "label": "No",
-                        "value": "No"
-                      }
-                    ]
+                    "options": [{ "label": "No", "value": "No" }]
                   }
                 ]
               },
@@ -6773,9 +6616,7 @@
                     ]
                   }
                 },
-                {
-                  "section": "End"
-                }
+                { "section": "End" }
               ]
             },
             {
@@ -6799,18 +6640,9 @@
                         "label": "2 - on the next day",
                         "value": "2 - on the next day"
                       },
-                      {
-                        "label": "3 to 4 days",
-                        "value": "3 to 4 days"
-                      },
-                      {
-                        "label": "5 to 6 days",
-                        "value": "5 to 6 days"
-                      },
-                      {
-                        "label": "7 or more days",
-                        "value": "7 or more days"
-                      }
+                      { "label": "3 to 4 days", "value": "3 to 4 days" },
+                      { "label": "5 to 6 days", "value": "5 to 6 days" },
+                      { "label": "7 or more days", "value": "7 or more days" }
                     ]
                   }
                 ]
@@ -6835,10 +6667,7 @@
     {
       "id": "97331d4f-dd2f-4540-9c35-5385351d3dbb",
       "title": "Coordination of care",
-      "summary": {
-        "show_on_completion": false,
-        "collapsible": false
-      },
+      "summary": { "show_on_completion": false, "collapsible": false },
       "show_on_hub": false,
       "groups": [
         {
@@ -6860,26 +6689,14 @@
                     "mandatory": true,
                     "type": "Radio",
                     "options": [
-                      {
-                        "label": "Very good",
-                        "value": "Very good"
-                      },
-                      {
-                        "label": "Good",
-                        "value": "Good"
-                      },
+                      { "label": "Very good", "value": "Very good" },
+                      { "label": "Good", "value": "Good" },
                       {
                         "label": "Neither good nor poor",
                         "value": "Neither good nor poor"
                       },
-                      {
-                        "label": "Poor",
-                        "value": "Poor"
-                      },
-                      {
-                        "label": "Very poor",
-                        "value": "Very poor"
-                      }
+                      { "label": "Poor", "value": "Poor" },
+                      { "label": "Very poor", "value": "Very poor" }
                     ]
                   }
                 ]
@@ -6900,9 +6717,7 @@
                       "identifier": "answer92f402d4-7fb4-4769-a8e9-e599761705bb",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -6924,9 +6739,7 @@
                       "identifier": "answer37845b37-7c93-4885-aba6-c3cd8f1dff87",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -6948,9 +6761,7 @@
                       "identifier": "answerb6f97ee5-2892-43ca-a3ca-a05d7a6364e6",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -7042,9 +6853,7 @@
                       "identifier": "answer19cd1efc-6bf8-4246-b929-551302e37c6a",
                       "source": "answers"
                     },
-                    [
-                      "Less than 1 month ago"
-                    ]
+                    ["Less than 1 month ago"]
                   ]
                 },
                 {
@@ -7088,9 +6897,7 @@
                       "identifier": "answeraac1c169-1834-4561-857a-ea34330f69e7",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -7112,9 +6919,7 @@
                       "identifier": "answer6975bb77-485c-4201-a10f-347f9aa84b71",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -7136,9 +6941,7 @@
                       "identifier": "answer55b304a7-0228-4eb5-bb82-f4144ce2dad4",
                       "source": "answers"
                     },
-                    [
-                      "Yes"
-                    ]
+                    ["Yes"]
                   ]
                 },
                 {
@@ -7160,8 +6963,40 @@
                       "identifier": "answera7f4688f-339b-4f52-b0de-e283511a6892",
                       "source": "answers"
                     },
+                    ["Yes"]
+                  ]
+                },
+                {
+                  "==": [
+                    {
+                      "identifier": "answer0da5bb67-bd65-4a6a-bafc-8e3a3f913143",
+                      "source": "answers"
+                    },
+                    null
+                  ]
+                }
+              ]
+            },
+            {
+              "and": [
+                {
+                  "in": [
+                    {
+                      "identifier": "answer5293515b-45ff-4c25-a4a0-6c6c4fd8919c",
+                      "source": "answers"
+                    },
                     [
-                      "Yes"
+                      "Community mental health service",
+                      "NHS Talking Therapies",
+                      "Perinatal mental health service",
+                      "Mental health crisis service",
+                      "Eating disorder service",
+                      "Community learning disability service",
+                      "Community autism service",
+                      "ADHD service",
+                      "Community dementia or memory service",
+                      "Gender service",
+                      "Other service"
                     ]
                   ]
                 },
@@ -7182,26 +7017,12 @@
     }
   ],
   "theme": "ons-nhs",
-  "navigation": {
-    "visible": false
-  },
+  "navigation": { "visible": false },
   "metadata": [
-    {
-      "name": "FIRST_NAME",
-      "type": "string"
-    },
-    {
-      "name": "WINDOW_START_DATE",
-      "type": "date"
-    },
-    {
-      "name": "WINDOW_CLOSE_DATE",
-      "type": "date"
-    },
-    {
-      "name": "PREVIOUS_COMPLETION",
-      "type": "string"
-    }
+    { "name": "FIRST_NAME", "type": "string" },
+    { "name": "WINDOW_START_DATE", "type": "date" },
+    { "name": "WINDOW_CLOSE_DATE", "type": "date" },
+    { "name": "PREVIOUS_COMPLETION", "type": "string" }
   ],
   "post_submission": {
     "feedback": true,
